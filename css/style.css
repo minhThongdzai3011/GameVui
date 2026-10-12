@@ -19,6 +19,17 @@
   bottom: 28px;
   font-size: 43px;
 }
+.gem-visual {
+  background: linear-gradient(135deg, #7548a7, #e26b9e);
+}
+.gem-preview {
+  position: absolute;
+  left: 34%;
+  top: 35px;
+  color: #fff;
+  font: 700 42px/1.35 "Baloo 2";
+  text-shadow: 0 5px 0 #31215c;
+}
 * {
   box-sizing: border-box;
 }

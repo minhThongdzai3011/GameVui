@@ -1,0 +1,167 @@
+:root {
+  --ink: #20213b;
+  --pink: #ee628c;
+  --violet: #6047a5;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    radial-gradient(circle at 15% 15%, #ffd0e2, transparent 28%),
+    radial-gradient(circle at 90% 90%, #b9dfef, transparent 34%), #f8f4ff;
+  color: var(--ink);
+  font-family: "Space Grotesk", sans-serif;
+}
+.page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 28px 16px;
+}
+.back {
+  position: fixed;
+  top: 22px;
+  left: 24px;
+  color: var(--ink);
+  font-weight: 700;
+  text-decoration: none;
+}
+.game-shell {
+  width: min(570px, 100%);
+  padding: 28px;
+  background: #fffcffcc;
+  border: 1px solid #fff;
+  border-radius: 28px;
+  box-shadow: 0 25px 65px #40295924;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 14px;
+}
+.eyebrow {
+  margin: 0;
+  color: var(--pink);
+  font-size: 10px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+h1 {
+  font: 800 37px/1 "Baloo 2";
+  margin: 3px 0;
+}
+.score-box {
+  padding: 8px 14px;
+  text-align: center;
+  border-radius: 12px;
+  background: var(--violet);
+  color: #ddd7f5;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+.score-box strong {
+  display: block;
+  color: #fff;
+  font-size: 22px;
+  letter-spacing: 0;
+}
+.guide {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #706c80;
+  margin: 16px 0;
+}
+.guide b {
+  color: var(--pink);
+}
+.board {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 5px;
+  padding: 9px;
+  background: #3a3268;
+  border-radius: 18px;
+  aspect-ratio: 1;
+  touch-action: none;
+}
+.gem {
+  display: grid;
+  place-items: center;
+  min-width: 0;
+  border: 0;
+  border-radius: 10px;
+  background: #544a88;
+  box-shadow:
+    inset 0 2px #ffffff3b,
+    0 3px 0 #211c4b;
+  color: #fff;
+  font-size: clamp(20px, 6vw, 38px);
+  cursor: pointer;
+  transition:
+    transform 0.16s,
+    filter 0.16s;
+}
+.gem:hover {
+  filter: brightness(1.15);
+}
+.gem.selected {
+  outline: 3px solid #fff;
+  transform: scale(0.9);
+  filter: brightness(1.35);
+}
+.gem.match {
+  animation: burst 0.25s ease-out forwards;
+}
+@keyframes burst {
+  to {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 18px;
+  font-size: 12px;
+  color: #766e86;
+}
+.footer button {
+  border: 0;
+  border-radius: 10px;
+  padding: 12px 16px;
+  background: var(--pink);
+  color: #fff;
+  font: 700 12px "Space Grotesk";
+  cursor: pointer;
+}
+@media (max-width: 600px) {
+  .page {
+    padding: 18px 12px;
+  }
+  .back {
+    position: static;
+    justify-self: start;
+    margin-bottom: 14px;
+  }
+  .game-shell {
+    padding: 22px 13px;
+  }
+  h1 {
+    font-size: 30px;
+  }
+  .board {
+    gap: 4px;
+    padding: 7px;
+  }
+  .gem {
+    border-radius: 8px;
+  }
+  .guide {
+    margin: 13px 0;
+  }
+}

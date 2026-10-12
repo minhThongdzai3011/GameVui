@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kim Cương Kỳ Diệu — GameVui</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="page">
+      <a class="back" href="../../index.html">← Về GameVui</a>
+      <section class="game-shell">
+        <header>
+          <div>
+            <p class="eyebrow">MATCH 3 PUZZLE</p>
+            <h1>Kim Cương Kỳ Diệu</h1>
+          </div>
+          <div class="score-box">ĐIỂM<strong id="score">0</strong></div>
+        </header>
+        <p class="guide">
+          Chạm hai viên kim cương liền nhau để đổi chỗ. Ghép từ
+          <b>3 viên</b> cùng màu trở lên!
+        </p>
+        <div id="board" class="board" aria-label="Bàn cờ kim cương"></div>
+        <div class="footer">
+          <span id="combo">Sẵn sàng!</span
+          ><button id="restart">↻ Ván mới</button>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
