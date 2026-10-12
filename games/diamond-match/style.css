@@ -2,6 +2,12 @@
   --ink: #20213b;
   --pink: #ee628c;
   --violet: #6047a5;
+  --gem-0: #57dcff;
+  --gem-1: #ff78b5;
+  --gem-2: #ffe16b;
+  --gem-3: #70ea91;
+  --gem-4: #ba8dff;
+  --gem-5: #ff9470;
 }
 * {
   box-sizing: border-box;
@@ -79,6 +85,7 @@ h1 {
   color: var(--pink);
 }
 .board {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   gap: 5px;
@@ -89,21 +96,46 @@ h1 {
   touch-action: none;
 }
 .gem {
+  position: relative;
   display: grid;
   place-items: center;
   min-width: 0;
   border: 0;
   border-radius: 10px;
-  background: #544a88;
+  background: linear-gradient(145deg, #6c5baa, #3b3268);
   box-shadow:
     inset 0 2px #ffffff3b,
     0 3px 0 #211c4b;
   color: #fff;
   font-size: clamp(20px, 6vw, 38px);
   cursor: pointer;
+  overflow: hidden;
   transition:
     transform 0.16s,
-    filter 0.16s;
+    filter 0.16s,
+    opacity 0.16s;
+}
+.gem::before {
+  content: "";
+  position: absolute;
+  inset: 17%;
+  border-radius: 28% 28% 42% 42%;
+  background: currentColor;
+  clip-path: polygon(50% 0, 100% 36%, 76% 100%, 24% 100%, 0 36%);
+  filter: drop-shadow(0 2px 1px #0003);
+  opacity: 0.96;
+}
+.gem::after {
+  position: absolute;
+  top: 24%;
+  left: 28%;
+  width: 22%;
+  height: 14%;
+  content: "";
+  border-radius: 50%;
+  background: #fff;
+  transform: rotate(-28deg);
+  box-shadow: 10px 12px 0 -4px #ffffff88;
 }
 .gem:hover {
   filter: brightness(1.15);
@@ -113,12 +145,40 @@ h1 {
   transform: scale(0.9);
   filter: brightness(1.35);
 }
+.gem.dragging {
+  transform: scale(1.13);
+  filter: brightness(1.28);
+  z-index: 2;
+}
+.gem.type-0 { color:#d3f8ff; background:linear-gradient(145deg,#73edff,#2186d5); box-shadow:inset 0 2px #fff9,0 3px 0 #15568d,0 0 14px #56ddff88; }
+.gem.type-1 { color:#ffe2ef; background:linear-gradient(145deg,#ff8ec2,#cf3f82); box-shadow:inset 0 2px #fff9,0 3px 0 #8b2453,0 0 14px #ff7fb488; }
+.gem.type-2 { color:#fff6bd; background:linear-gradient(145deg,#ffe879,#eaaa1b); box-shadow:inset 0 2px #fff9,0 3px 0 #a36d0e,0 0 14px #ffd95d88; }
+.gem.type-3 { color:#e1ffdb; background:linear-gradient(145deg,#94f18c,#38a95e); box-shadow:inset 0 2px #fff9,0 3px 0 #23723d,0 0 14px #83f89388; }
+.gem.type-4 { color:#f0dfff; background:linear-gradient(145deg,#c79afb,#7548c8); box-shadow:inset 0 2px #fff9,0 3px 0 #4a278e,0 0 14px #bc8cff88; }
+.gem.type-5 { color:#ffe1d0; background:linear-gradient(145deg,#ff9872,#df4c37); box-shadow:inset 0 2px #fff9,0 3px 0 #9b3025,0 0 14px #ff8d7188; }
 .gem.match {
   animation: burst 0.25s ease-out forwards;
 }
 @keyframes burst {
   to {
     transform: scale(0);
+    opacity: 0;
+  }
+}
+.spark {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--spark);
+  box-shadow: 0 0 7px var(--spark);
+  pointer-events: none;
+  z-index: 5;
+  animation: spark 0.48s ease-out forwards;
+}
+@keyframes spark {
+  to {
+    transform: translate(var(--dx), var(--dy)) scale(0);
     opacity: 0;
   }
 }
