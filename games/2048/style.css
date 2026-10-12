@@ -115,7 +115,8 @@ body {
 }
 .tiles-layer {
   position: absolute;
-  inset: 10px;
+  inset: 0;
+  padding: 10px;
   z-index: 2;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
