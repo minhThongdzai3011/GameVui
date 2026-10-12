@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Rắn săn mồi - GameVui</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="game-page">
+      <a class="back" href="../../index.html">← Về GameVui</a>
+      <section class="panel">
+        <p class="eyebrow">ARCADE CLASSIC</p>
+        <h1>Rắn săn mồi</h1>
+        <p class="help">Dùng phím mũi tên hoặc các nút cảm ứng để di chuyển</p>
+        <div class="score">ĐIỂM <strong id="score">0</strong></div>
+        <canvas id="game" width="400" height="400"></canvas>
+        <div class="controls">
+          <button data-dir="up">▲</button>
+          <div>
+            <button data-dir="left">◀</button><button data-dir="down">▼</button
+            ><button data-dir="right">▶</button>
+          </div>
+        </div>
+        <button class="restart" id="restart">Chơi lại</button>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
