@@ -1,0 +1,1 @@
+startStandalone("tic-tac-toe");

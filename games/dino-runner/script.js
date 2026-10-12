@@ -1,0 +1,1 @@
+startStandalone("dino-runner");

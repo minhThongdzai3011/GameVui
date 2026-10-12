@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Breakout - GameVui</title>
+    <link rel="stylesheet" href="../shared/game.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="page">
+      <a class="back" href="../../index.html">← Về GameVui</a>
+      <section class="panel">
+        <p class="eyebrow">GAMEVUI</p>
+        <h1>Breakout</h1>
+        <p class="help"></p>
+        <div class="score">ĐIỂM <strong id="score">0</strong></div>
+        <canvas width="400" height="400"></canvas>
+        <div class="controls">
+          <button data-c="left">◀</button><button data-c="up">▲</button
+          ><button data-c="action">TRÁI</button><button data-c="down">▼</button
+          ><button data-c="right">▶</button>
+        </div>
+        <button class="restart">Chơi lại</button>
+      </section>
+    </main>
+    <script src="../shared/arcade.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

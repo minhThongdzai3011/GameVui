@@ -53,7 +53,7 @@ function renderPage(page) {
 }
 renderPage(currentPage);
 document
-  .querySelectorAll(".play-button")
+  .querySelectorAll(".play-button[data-game]")
   .forEach((b) => b.addEventListener("click", () => openGame(b.dataset.game)));
 document.getElementById("closeGame").addEventListener("click", closeGame);
 document

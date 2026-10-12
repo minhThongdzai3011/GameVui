@@ -1,0 +1,1 @@
+startStandalone("flappy-ufo");

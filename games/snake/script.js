@@ -85,21 +85,19 @@ document.addEventListener("keydown", (e) => {
     setDir(dirs[e.key]);
   }
 });
-document
-  .querySelectorAll("[data-dir]")
-  .forEach((b) =>
-    b.addEventListener("pointerdown", () =>
-      setDir(
-        dirs[
-          {
-            up: "ArrowUp",
-            down: "ArrowDown",
-            left: "ArrowLeft",
-            right: "ArrowRight",
-          }[b.dataset.dir]
-        ],
-      ),
+document.querySelectorAll("[data-dir]").forEach((b) =>
+  b.addEventListener("pointerdown", () =>
+    setDir(
+      dirs[
+        {
+          up: "ArrowUp",
+          down: "ArrowDown",
+          left: "ArrowLeft",
+          right: "ArrowRight",
+        }[b.dataset.dir]
+      ],
     ),
-  );
+  ),
+);
 document.getElementById("restart").addEventListener("click", reset);
 reset();
