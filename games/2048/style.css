@@ -1,1 +1,264 @@
-@import url("../shared/game.css");
+:root {
+  --ink: #252136;
+  --orange: #ff7657;
+  --board: #bbada0;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  min-width: 320px;
+  color: var(--ink);
+  font-family: "Space Grotesk", sans-serif;
+  background:
+    radial-gradient(circle at 15% 15%, #ffe5a5, transparent 28%),
+    radial-gradient(circle at 85% 90%, #c3e8dc, transparent 34%), #fff8ea;
+}
+.page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 32px 18px;
+}
+.back {
+  position: fixed;
+  top: 22px;
+  left: 24px;
+  color: var(--ink);
+  font-weight: 700;
+  text-decoration: none;
+}
+.game-shell {
+  width: min(550px, 100%);
+  padding: 30px;
+  background: #fffdf8cc;
+  border: 1px solid #fff;
+  border-radius: 28px;
+  box-shadow: 0 24px 70px #3d2d1d26;
+}
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 18px;
+}
+.eyebrow {
+  margin: 0;
+  color: var(--orange);
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 10px;
+}
+.game-header h1 {
+  font: 800 50px/1 "Baloo 2";
+  letter-spacing: -2px;
+  margin: 2px 0;
+}
+.scores {
+  display: flex;
+  gap: 7px;
+}
+.score-box {
+  min-width: 77px;
+  padding: 7px 9px;
+  background: #3b3650;
+  border-radius: 10px;
+  color: #ddd8e9;
+  font-size: 9px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+.score-box strong {
+  display: block;
+  color: #fff;
+  font-size: 18px;
+  letter-spacing: 0;
+  margin-top: 2px;
+}
+.guide {
+  font-size: 13px;
+  color: #6f6a78;
+  line-height: 1.55;
+  margin: 16px 0 18px;
+}
+.guide b {
+  color: var(--orange);
+}
+.board-wrap {
+  position: relative;
+}
+.board {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 10px;
+  aspect-ratio: 1;
+  background: var(--board);
+  border-radius: 17px;
+  overflow: hidden;
+}
+.cell {
+  border-radius: 9px;
+  background: #cdc1b4;
+}
+.tile {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: calc((100% - 50px) / 4);
+  height: calc((100% - 50px) / 4);
+  border-radius: 9px;
+  font-weight: 700;
+  font-size: clamp(21px, 7vw, 38px);
+  transition:
+    transform 130ms ease-in-out,
+    background 120ms,
+    color 120ms;
+  z-index: 2;
+}
+.tile.new {
+  animation: appear 180ms ease-out;
+}
+.tile.merged {
+  animation: pop 180ms ease-out;
+}
+@keyframes appear {
+  from {
+    transform: var(--tile-transform) scale(0);
+  }
+  to {
+    transform: var(--tile-transform) scale(1);
+  }
+}
+@keyframes pop {
+  50% {
+    transform: var(--tile-transform) scale(1.13);
+  }
+}
+.n2 {
+  background: #eee4da;
+  color: #776e65;
+}
+.n4 {
+  background: #ede0c8;
+  color: #776e65;
+}
+.n8 {
+  background: #f2b179;
+  color: #fff;
+}
+.n16 {
+  background: #f59563;
+  color: #fff;
+}
+.n32 {
+  background: #f67c5f;
+  color: #fff;
+}
+.n64 {
+  background: #f65e3b;
+  color: #fff;
+}
+.n128 {
+  background: #edcf72;
+  color: #fff;
+  font-size: clamp(18px, 6vw, 32px);
+}
+.n256 {
+  background: #edcc61;
+  color: #fff;
+  font-size: clamp(18px, 6vw, 32px);
+}
+.n512 {
+  background: #edc850;
+  color: #fff;
+  font-size: clamp(18px, 6vw, 32px);
+}
+.n1024,
+.n2048 {
+  background: #edc22e;
+  color: #fff;
+  font-size: clamp(15px, 5vw, 27px);
+}
+.game-message {
+  display: none;
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  place-items: center;
+  background: #fffaf1d9;
+  border-radius: 17px;
+  text-align: center;
+}
+.game-message.show {
+  display: grid;
+}
+.game-message h2 {
+  font: 800 36px "Baloo 2";
+  margin: 0;
+}
+.game-message p {
+  font-size: 13px;
+  color: #716b76;
+}
+.game-message button,
+.actions button {
+  border: 0;
+  border-radius: 10px;
+  padding: 12px 16px;
+  font: 700 12px "Space Grotesk";
+  cursor: pointer;
+}
+.game-message button,
+.primary {
+  background: var(--orange);
+  color: #fff;
+}
+.actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 18px;
+}
+.secondary {
+  background: #f0ece4;
+  color: #67616c;
+}
+.mobile-pad {
+  display: none;
+  text-align: center;
+  margin: 15px auto 0;
+}
+.mobile-pad button {
+  width: 47px;
+  height: 40px;
+  margin: 2px;
+  border: 0;
+  border-radius: 9px;
+  background: var(--ink);
+  color: #fff;
+  font-weight: 700;
+}
+@media (max-width: 600px) {
+  .page {
+    padding: 18px 12px;
+  }
+  .back {
+    position: static;
+    justify-self: start;
+    margin-bottom: 14px;
+  }
+  .game-shell {
+    padding: 22px 14px;
+  }
+  .game-header h1 {
+    font-size: 43px;
+  }
+  .guide {
+    margin-top: 12px;
+  }
+  .mobile-pad {
+    display: block;
+  }
+}

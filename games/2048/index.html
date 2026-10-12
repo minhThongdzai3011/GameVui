@@ -2,29 +2,58 @@
 <html lang="vi">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>2048 - GameVui</title>
-    <link rel="stylesheet" href="../shared/game.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>2048 — GameVui</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <main class="page">
       <a class="back" href="../../index.html">← Về GameVui</a>
-      <section class="panel">
-        <p class="eyebrow">GAMEVUI</p>
-        <h1>2048</h1>
-        <p class="help"></p>
-        <div class="score">ĐIỂM <strong id="score">0</strong></div>
-        <canvas width="400" height="400"></canvas>
-        <div class="controls">
-          <button data-c="left">◀</button><button data-c="up">▲</button
-          ><button data-c="action">▲</button><button data-c="down">▼</button
-          ><button data-c="right">▶</button>
+      <section class="game-shell">
+        <header class="game-header">
+          <div>
+            <p class="eyebrow">NUMBER PUZZLE</p>
+            <h1>2048</h1>
+          </div>
+          <div class="scores">
+            <div class="score-box">ĐIỂM<strong id="score">0</strong></div>
+            <div class="score-box">CAO NHẤT<strong id="best">0</strong></div>
+          </div>
+        </header>
+        <p class="guide">
+          Ghép các ô cùng số để tạo ô <b>2048</b>. Dùng phím mũi tên hoặc vuốt
+          trên điện thoại.
+        </p>
+        <div class="board-wrap">
+          <div class="board" id="board" aria-label="Bàn cờ 2048"></div>
+          <div class="game-message" id="message">
+            <div>
+              <h2 id="messageTitle">Bạn thắng!</h2>
+              <p id="messageText"></p>
+              <button id="keepPlaying">Chơi tiếp</button>
+            </div>
+          </div>
         </div>
-        <button class="restart">Chơi lại</button>
+        <div class="actions">
+          <button class="secondary" id="undo">↶ Hoàn tác</button
+          ><button class="primary" id="restart">↻ Ván mới</button>
+        </div>
+        <div class="mobile-pad" aria-label="Điều khiển 2048">
+          <button data-move="up">▲</button>
+          <div>
+            <button data-move="left">◀</button
+            ><button data-move="down">▼</button
+            ><button data-move="right">▶</button>
+          </div>
+        </div>
       </section>
     </main>
-    <script src="../shared/arcade.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
