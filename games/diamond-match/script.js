@@ -98,28 +98,35 @@ async function animateSwap(first, second) {
   const secondGem = boardEl.querySelector(`[data-row="${second.row}"][data-col="${second.col}"]`);
   if (!firstGem || !secondGem) return;
 
+  const boardRect = boardEl.getBoundingClientRect();
   const firstRect = firstGem.getBoundingClientRect();
   const secondRect = secondGem.getBoundingClientRect();
-  const duration = 210;
-  const easing = "cubic-bezier(.22,.9,.3,1.12)";
+  const duration = 260;
+  const makeGhost = (gem, rect, depth) => {
+    const ghost = gem.cloneNode(true);
+    ghost.classList.add("swap-ghost");
+    ghost.style.left = `${rect.left - boardRect.left}px`;
+    ghost.style.top = `${rect.top - boardRect.top}px`;
+    ghost.style.width = `${rect.width}px`;
+    ghost.style.height = `${rect.height}px`;
+    ghost.style.zIndex = depth;
+    boardEl.append(ghost);
+    return ghost;
+  };
+  const firstGhost = makeGhost(firstGem, firstRect, "8");
+  const secondGhost = makeGhost(secondGem, secondRect, "7");
+  firstGem.style.visibility = "hidden";
+  secondGem.style.visibility = "hidden";
 
-  firstGem.style.zIndex = "4";
-  secondGem.style.zIndex = "3";
-  firstGem.animate(
-    [
-      { transform: "translate(0, 0) scale(1)" },
-      { transform: `translate(${secondRect.left - firstRect.left}px, ${secondRect.top - firstRect.top}px) scale(1.08)` },
-    ],
-    { duration, easing, fill: "forwards" },
-  );
-  secondGem.animate(
-    [
-      { transform: "translate(0, 0) scale(1)" },
-      { transform: `translate(${firstRect.left - secondRect.left}px, ${firstRect.top - secondRect.top}px) scale(1.03)` },
-    ],
-    { duration, easing, fill: "forwards" },
-  );
+  requestAnimationFrame(() => {
+    firstGhost.style.transform = `translate(${secondRect.left - firstRect.left}px, ${secondRect.top - firstRect.top}px) scale(1.08)`;
+    secondGhost.style.transform = `translate(${firstRect.left - secondRect.left}px, ${firstRect.top - secondRect.top}px) scale(1.04)`;
+  });
   await wait(duration);
+  firstGhost.remove();
+  secondGhost.remove();
+  firstGem.style.visibility = "";
+  secondGem.style.visibility = "";
 }
 
 function burst(matches) {

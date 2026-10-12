@@ -119,9 +119,9 @@ h1 {
   content: "";
   position: absolute;
   inset: 17%;
-  border-radius: 28% 28% 42% 42%;
+  border-radius: 16%;
   background: linear-gradient(145deg, #ffffffc7 0 14%, var(--core) 21% 63%, var(--core-shadow) 100%);
-  clip-path: polygon(50% 0, 100% 36%, 76% 100%, 24% 100%, 0 36%);
+  clip-path: var(--shape);
   filter: drop-shadow(0 2px 1px #0003);
   opacity: 0.96;
 }
@@ -150,12 +150,19 @@ h1 {
   filter: brightness(1.28);
   z-index: 2;
 }
-.gem.type-0 { --core:#49dbff; --core-shadow:#0878cf; background:linear-gradient(145deg,#73edff,#2186d5); box-shadow:inset 0 2px #fff9,0 3px 0 #15568d,0 0 14px #56ddff88; }
-.gem.type-1 { --core:#ff6db2; --core-shadow:#bd1e69; background:linear-gradient(145deg,#ff8ec2,#cf3f82); box-shadow:inset 0 2px #fff9,0 3px 0 #8b2453,0 0 14px #ff7fb488; }
-.gem.type-2 { --core:#ffe65f; --core-shadow:#dc9410; background:linear-gradient(145deg,#ffe879,#eaaa1b); box-shadow:inset 0 2px #fff9,0 3px 0 #a36d0e,0 0 14px #ffd95d88; }
-.gem.type-3 { --core:#7cea83; --core-shadow:#269d55; background:linear-gradient(145deg,#94f18c,#38a95e); box-shadow:inset 0 2px #fff9,0 3px 0 #23723d,0 0 14px #83f89388; }
-.gem.type-4 { --core:#bd85ff; --core-shadow:#6739bd; background:linear-gradient(145deg,#c79afb,#7548c8); box-shadow:inset 0 2px #fff9,0 3px 0 #4a278e,0 0 14px #bc8cff88; }
-.gem.type-5 { --core:#ff8566; --core-shadow:#cf392b; background:linear-gradient(145deg,#ff9872,#df4c37); box-shadow:inset 0 2px #fff9,0 3px 0 #9b3025,0 0 14px #ff8d7188; }
+.gem.type-0 { --shape:polygon(50% 0,100% 28%,82% 88%,50% 100%,18% 88%,0 28%); --core:#49dbff; --core-shadow:#0878cf; background:linear-gradient(145deg,#73edff,#2186d5); box-shadow:inset 0 2px #fff9,0 3px 0 #15568d,0 0 14px #56ddff88; }
+.gem.type-1 { --shape:polygon(50% 0,94% 30%,76% 100%,24% 100%,6% 30%); --core:#ff6db2; --core-shadow:#bd1e69; background:linear-gradient(145deg,#ff8ec2,#cf3f82); box-shadow:inset 0 2px #fff9,0 3px 0 #8b2453,0 0 14px #ff7fb488; }
+.gem.type-2 { --shape:polygon(25% 0,75% 0,100% 25%,100% 75%,75% 100%,25% 100%,0 75%,0 25%); --core:#ffe65f; --core-shadow:#dc9410; background:linear-gradient(145deg,#ffe879,#eaaa1b); box-shadow:inset 0 2px #fff9,0 3px 0 #a36d0e,0 0 14px #ffd95d88; }
+.gem.type-3 { --shape:circle(50% at 50% 50%); --core:#7cea83; --core-shadow:#269d55; background:linear-gradient(145deg,#94f18c,#38a95e); box-shadow:inset 0 2px #fff9,0 3px 0 #23723d,0 0 14px #83f89388; }
+.gem.type-4 { --shape:polygon(50% 0,100% 88%,78% 100%,22% 100%,0 88%); --core:#bd85ff; --core-shadow:#6739bd; background:linear-gradient(145deg,#c79afb,#7548c8); box-shadow:inset 0 2px #fff9,0 3px 0 #4a278e,0 0 14px #bc8cff88; }
+.gem.type-5 { --shape:polygon(50% 0,61% 32%,96% 25%,72% 52%,84% 90%,50% 70%,16% 90%,28% 52%,4% 25%,39% 32%); --core:#ff8566; --core-shadow:#cf392b; background:linear-gradient(145deg,#ff9872,#df4c37); box-shadow:inset 0 2px #fff9,0 3px 0 #9b3025,0 0 14px #ff8d7188; }
+.swap-ghost {
+  position: absolute !important;
+  margin: 0;
+  pointer-events: none;
+  transition: transform 260ms cubic-bezier(.22,.9,.3,1.12);
+  will-change: transform;
+}
 .gem.match {
   animation: burst 0.25s ease-out forwards;
 }
