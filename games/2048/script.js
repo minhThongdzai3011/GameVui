@@ -16,6 +16,9 @@ for (let i = 0; i < 16; i++) {
   e.className = "cell";
   boardEl.append(e);
 }
+const tilesLayer = document.createElement("div");
+tilesLayer.className = "tiles-layer";
+boardEl.append(tilesLayer);
 const copy = (b) => b.map((row) => row.map((t) => (t ? { ...t } : null)));
 function empty() {
   const a = [];
@@ -106,17 +109,16 @@ function canMove() {
 function render() {
   scoreEl.textContent = score;
   bestEl.textContent = best;
-  boardEl.querySelectorAll(".tile").forEach((e) => e.remove());
+  tilesLayer.replaceChildren();
   board.forEach((r, y) =>
     r.forEach((t, x) => {
       if (!t) return;
-      const e = document.createElement("div"),
-        pos = `translate(calc(${x} * (100% + 10px)), calc(${y} * (100% + 10px)))`;
+      const e = document.createElement("div");
       e.className = `tile n${t.v}${t.new ? " new" : ""}${t.merged ? " merged" : ""}`;
-      e.style.transform = pos;
-      e.style.setProperty("--tile-transform", pos);
+      e.style.gridColumn = x + 1;
+      e.style.gridRow = y + 1;
       e.textContent = t.v;
-      boardEl.append(e);
+      tilesLayer.append(e);
       t.new = false;
       t.merged = false;
     }),

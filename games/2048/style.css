@@ -104,19 +104,24 @@ body {
   background: #cdc1b4;
 }
 .tile {
-  position: absolute;
   display: grid;
   place-items: center;
-  width: calc((100% - 50px) / 4);
-  height: calc((100% - 50px) / 4);
   border-radius: 9px;
   font-weight: 700;
   font-size: clamp(21px, 7vw, 38px);
   transition:
-    transform 130ms ease-in-out,
     background 120ms,
     color 120ms;
+}
+.tiles-layer {
+  position: absolute;
+  inset: 10px;
   z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 10px;
+  pointer-events: none;
 }
 .tile.new {
   animation: appear 180ms ease-out;
@@ -126,15 +131,15 @@ body {
 }
 @keyframes appear {
   from {
-    transform: var(--tile-transform) scale(0);
+    transform: scale(0);
   }
   to {
-    transform: var(--tile-transform) scale(1);
+    transform: scale(1);
   }
 }
 @keyframes pop {
   50% {
-    transform: var(--tile-transform) scale(1.13);
+    transform: scale(1.13);
   }
 }
 .n2 {
