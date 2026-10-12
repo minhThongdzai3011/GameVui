@@ -1,0 +1,818 @@
+:root {
+  --ink: #192238;
+  --muted: #7b8294;
+  --cream: #fffaf1;
+  --orange: #ff7859;
+}
+.dino-visual {
+  background: linear-gradient(#f8c978, #f5e0a2);
+}
+.dino-preview {
+  position: absolute;
+  left: 28%;
+  top: 54px;
+  font-size: 68px;
+}
+.dino-cactus {
+  position: absolute;
+  right: 22%;
+  bottom: 28px;
+  font-size: 43px;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: "Space Grotesk", sans-serif;
+}
+.page-glow {
+  position: fixed;
+  width: 480px;
+  height: 480px;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.2;
+  pointer-events: none;
+  z-index: -1;
+}
+.glow-one {
+  background: #ffd36e;
+  top: -180px;
+  left: -150px;
+}
+.glow-two {
+  background: #82d9e7;
+  right: -200px;
+  bottom: 0;
+}
+.topbar {
+  max-width: 1160px;
+  margin: auto;
+  height: 88px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 28px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--ink);
+  font-family: "Baloo 2";
+  font-size: 29px;
+  font-weight: 800;
+}
+.brand span span {
+  color: var(--orange);
+}
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 35px;
+  height: 35px;
+  background: var(--ink);
+  color: #ffd66b;
+  border-radius: 12px;
+  font-size: 22px;
+}
+.topbar nav {
+  display: flex;
+  gap: 34px;
+}
+.topbar nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+.status-pill {
+  font-size: 12px;
+  color: #5f7a64;
+  font-weight: 600;
+  background: #eff9e9;
+  border-radius: 30px;
+  padding: 10px 14px;
+}
+.status-pill i {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  background: #71cf7c;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+.hero {
+  max-width: 1160px;
+  margin: 42px auto 0;
+  padding: 30px 28px 75px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: center;
+}
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  color: var(--orange);
+  margin: 0 0 18px;
+}
+.eyebrow span {
+  display: inline-block;
+  width: 23px;
+  height: 2px;
+  background: var(--orange);
+  vertical-align: middle;
+  margin-right: 8px;
+}
+.hero h1 {
+  font-family: "Baloo 2";
+  font-size: 75px;
+  line-height: 0.96;
+  letter-spacing: -2px;
+  margin: 0 0 22px;
+}
+.hero h1 em {
+  font-style: normal;
+  color: var(--orange);
+}
+.hero-text {
+  max-width: 390px;
+  color: var(--muted);
+  line-height: 1.7;
+  font-size: 15px;
+  margin-bottom: 29px;
+}
+.primary-button,
+.play-button {
+  border: 0;
+  background: var(--ink);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 12px;
+  padding: 15px 20px;
+  font: 600 13px "Space Grotesk";
+  cursor: pointer;
+  box-shadow: 0 8px 18px #19223818;
+  transition: 0.2s;
+}
+.primary-button:hover,
+.play-button:hover {
+  transform: translateY(-3px);
+  background: var(--orange);
+}
+.primary-button span,
+.play-button span {
+  color: #ffd66b;
+  margin-left: 9px;
+}
+.hero-art {
+  height: 340px;
+  position: relative;
+  background: #ffedc7;
+  border-radius: 40% 44% 38% 43%;
+  overflow: hidden;
+  transform: rotate(3deg);
+  box-shadow: inset 0 -20px #f7c77b;
+}
+.sun {
+  position: absolute;
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  background: #ffd56e;
+  top: 45px;
+  right: 70px;
+}
+.cloud {
+  position: absolute;
+  width: 90px;
+  height: 26px;
+  border-radius: 30px;
+  background: #fff8e9;
+  opacity: 0.8;
+}
+.cloud:before,
+.cloud:after {
+  content: "";
+  position: absolute;
+  background: inherit;
+  border-radius: 50%;
+}
+.cloud:before {
+  width: 42px;
+  height: 42px;
+  left: 14px;
+  top: -20px;
+}
+.cloud:after {
+  width: 31px;
+  height: 31px;
+  left: 50px;
+  top: -11px;
+}
+.cloud-a {
+  top: 80px;
+  left: 48px;
+}
+.cloud-b {
+  top: 139px;
+  right: 35px;
+  transform: scale(0.7);
+}
+.island-ground {
+  position: absolute;
+  width: 360px;
+  height: 100px;
+  background: #86c9a1;
+  border-radius: 50% 50% 0 0;
+  bottom: 0;
+  left: 50px;
+}
+.island-tree {
+  position: absolute;
+  font-size: 74px;
+  bottom: 42px;
+  left: 92px;
+  z-index: 2;
+}
+.hero-snake {
+  position: absolute;
+  font-size: 73px;
+  bottom: 44px;
+  right: 65px;
+  z-index: 3;
+}
+.hero-bird {
+  position: absolute;
+  top: 113px;
+  left: 177px;
+  font-size: 56px;
+  z-index: 3;
+}
+.spark {
+  position: absolute;
+  color: #ffae48;
+  font-size: 25px;
+}
+.spark-a {
+  top: 48px;
+  left: 172px;
+}
+.spark-b {
+  bottom: 100px;
+  right: 166px;
+}
+.games-section {
+  max-width: 1160px;
+  margin: auto;
+  padding: 0 28px 90px;
+}
+.section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  margin-bottom: 27px;
+}
+.section-heading h2,
+.about h2 {
+  font-family: "Baloo 2";
+  font-size: 37px;
+  line-height: 1;
+  margin: 0;
+}
+.game-count {
+  color: var(--muted);
+  font-size: 13px;
+}
+.game-count span {
+  color: var(--orange);
+  margin: 0 5px;
+}
+.game-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 9px;
+  margin-top: 30px;
+}
+.page-button {
+  width: 38px;
+  height: 38px;
+  border: 1px solid #eadfcd;
+  border-radius: 10px;
+  background: #fff;
+  color: var(--ink);
+  font: 600 13px "Space Grotesk";
+  cursor: pointer;
+  transition: 0.2s;
+}
+.page-button:hover,
+.page-button.active {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: #fff;
+  transform: translateY(-2px);
+}
+.game-card {
+  background: #fff;
+  border: 1px solid #f1eadc;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px #6b53300b;
+}
+.mini-card .card-visual {
+  height: 170px;
+}
+.two-visual {
+  background: #f7c67b;
+}
+.break-visual {
+  background: #8eb8e8;
+}
+.ufo-visual {
+  background: #6b6ab0;
+}
+.catch-visual {
+  background: #f3d28d;
+}
+.number-preview,
+.break-preview,
+.ufo-preview,
+.catch-preview {
+  position: absolute;
+  left: 30%;
+  top: 42px;
+  font: bold 30px "Baloo 2";
+  line-height: 1.35;
+  color: #fff;
+}
+.break-preview {
+  color: #ffed8b;
+}
+.ufo-preview {
+  font-size: 65px;
+}
+.catch-preview {
+  left: 23%;
+  font-size: 40px;
+}
+.mini-visual {
+  position: relative;
+  overflow: hidden;
+}
+.mouse-visual {
+  background: #ffd98a;
+}
+.dodge-visual {
+  background: #b8e8a2;
+}
+.memory-visual {
+  background: #d7c4f1;
+}
+.tic-visual {
+  background: #f6b7a5;
+}
+.mini-emoji,
+.runner {
+  position: absolute;
+  left: 42%;
+  top: 55px;
+  font-size: 58px;
+}
+.target {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #ff7859;
+  border: 5px solid #fff;
+}
+.target-one {
+  top: 57px;
+  left: 20%;
+}
+.target-two {
+  bottom: 25px;
+  right: 20%;
+}
+.obstacle {
+  position: absolute;
+  bottom: 0;
+  right: 22%;
+  width: 35px;
+  height: 65px;
+  background: #ff7859;
+  border-radius: 7px;
+}
+.memory-preview,
+.tic-preview {
+  position: absolute;
+  left: 31%;
+  top: 45px;
+  font: bold 27px "Baloo 2";
+  line-height: 1.5;
+  color: #ff7859;
+  transform: rotate(-5deg);
+}
+.memory-preview {
+  color: #7d5fba;
+}
+.tic-preview i {
+  font-style: normal;
+  color: #379a82;
+}
+.card-visual {
+  height: 214px;
+  position: relative;
+  overflow: hidden;
+}
+.snake-card .card-visual {
+  background: #99dfc1;
+}
+.bird-card .card-visual {
+  background: #a9dcea;
+}
+.visual-label {
+  position: absolute;
+  top: 19px;
+  left: 21px;
+  color: #fff;
+  background: #1922382b;
+  padding: 7px 10px;
+  border-radius: 6px;
+  letter-spacing: 1px;
+  font-size: 9px;
+  font-weight: 700;
+  z-index: 3;
+}
+.grid-lines {
+  position: absolute;
+  inset: 0;
+  opacity: 0.18;
+  background-image:
+    linear-gradient(#fff 1px, transparent 1px),
+    linear-gradient(90deg, #fff 1px, transparent 1px);
+  background-size: 33px 33px;
+}
+.snake-art {
+  position: absolute;
+  left: 30%;
+  top: 72px;
+  display: flex;
+  align-items: center;
+  transform: rotate(-12deg);
+  z-index: 2;
+}
+.snake-art span {
+  background: #217e66;
+  width: 59px;
+  height: 59px;
+  border: 4px solid #12604f;
+  border-radius: 50%;
+  font-size: 0;
+  margin-left: -9px;
+}
+.snake-art span:first-child {
+  background: #ff7859;
+}
+.snake-art b {
+  font-size: 42px;
+  margin-left: 25px;
+}
+.bird-art {
+  font-size: 78px;
+  position: absolute;
+  left: 38%;
+  top: 62px;
+  z-index: 2;
+  animation: float 2.5s ease-in-out infinite;
+}
+.pipe {
+  position: absolute;
+  width: 48px;
+  background: #68b879;
+  border: 5px solid #49995e;
+  border-radius: 6px;
+  right: 65px;
+}
+.pipe-one {
+  height: 99px;
+  top: -7px;
+}
+.pipe-two {
+  height: 84px;
+  bottom: -6px;
+  right: 170px;
+}
+.pipe:after {
+  content: "";
+  position: absolute;
+  left: -10px;
+  width: 60px;
+  height: 17px;
+  background: #78ca89;
+  border: 5px solid #49995e;
+  border-radius: 5px;
+}
+.pipe-one:after {
+  bottom: -8px;
+}
+.pipe-two:after {
+  top: -8px;
+}
+.mini-cloud {
+  top: 56px;
+  left: 43px;
+  transform: scale(0.65);
+}
+@keyframes float {
+  50% {
+    transform: translateY(-9px) rotate(-8deg);
+  }
+}
+.card-content {
+  padding: 23px 24px 21px;
+}
+.card-title {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.game-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: #fff4df;
+  font-size: 23px;
+}
+.bird-card .game-icon {
+  background: #e4f7f8;
+}
+.card-title h3 {
+  font-family: "Baloo 2";
+  font-size: 23px;
+  margin: 0;
+  line-height: 1;
+}
+.card-title p {
+  font-size: 12px;
+  color: var(--muted);
+  margin: 5px 0 0;
+}
+.card-description {
+  font-size: 13px;
+  color: #737b8b;
+  line-height: 1.65;
+  margin: 17px 0 20px;
+  min-height: 43px;
+}
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tag {
+  font-size: 9px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: #a5aab4;
+  background: #f7f4ee;
+  border-radius: 6px;
+  padding: 8px 9px;
+}
+.play-button {
+  padding: 11px 14px;
+  border-radius: 9px;
+  font-size: 12px;
+}
+.about {
+  max-width: 1104px;
+  margin: 0 auto 65px;
+  padding: 25px 35px;
+  background: #f4f9ec;
+  border-radius: 19px;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+.about-icon {
+  font-size: 36px;
+  color: #7fbd79;
+}
+.about h2 {
+  font-size: 25px;
+}
+.about p {
+  color: var(--muted);
+  margin: 7px 0 0;
+  font-size: 13px;
+}
+.about-stars {
+  margin-left: auto;
+  color: #b8d9a2;
+  letter-spacing: 8px;
+}
+footer {
+  border-top: 1px solid #eee5d4;
+  max-width: 1104px;
+  margin: auto;
+  padding: 22px 0 32px;
+  display: flex;
+  justify-content: space-between;
+  color: #a4a3a0;
+  font-size: 11px;
+}
+footer b {
+  color: var(--orange);
+}
+.modal {
+  position: fixed;
+  inset: 0;
+  background: #172138c9;
+  display: none;
+  place-items: center;
+  padding: 20px;
+  z-index: 10;
+}
+.modal.open {
+  display: grid;
+}
+.modal-panel {
+  background: var(--cream);
+  border-radius: 23px;
+  padding: 30px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 20px 70px #0005;
+  max-width: 490px;
+  width: 100%;
+}
+.close-button {
+  position: absolute;
+  right: 16px;
+  top: 12px;
+  border: 0;
+  background: none;
+  font-size: 29px;
+  color: #9da2ac;
+  cursor: pointer;
+}
+.modal-panel h2 {
+  font-family: "Baloo 2";
+  font-size: 32px;
+  margin: 0;
+}
+.modal-panel #modalHelp {
+  color: var(--muted);
+  font-size: 13px;
+  margin: 3px 0 13px;
+}
+.score-line {
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+.score-line strong {
+  color: var(--orange);
+  font-size: 18px;
+  margin-left: 5px;
+}
+.modal canvas {
+  display: block;
+  width: min(400px, 100%);
+  height: auto;
+  background: #1d2840;
+  border-radius: 12px;
+  margin: auto;
+}
+.restart-button {
+  margin-top: 17px;
+  border: 0;
+  border-radius: 10px;
+  background: var(--orange);
+  color: #fff;
+  padding: 12px 20px;
+  font: 600 12px "Space Grotesk";
+  cursor: pointer;
+}
+.touch-controls {
+  display: none;
+  margin: 14px auto 0;
+  user-select: none;
+  touch-action: manipulation;
+}
+.touch-controls > button,
+.touch-controls div button {
+  width: 48px;
+  height: 42px;
+  margin: 3px;
+  border: 0;
+  border-radius: 10px;
+  background: #192238;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.touch-controls button:active {
+  background: var(--orange);
+  transform: scale(0.94);
+}
+@media (max-width: 760px) {
+  .topbar nav {
+    display: none;
+  }
+  .topbar {
+    padding: 0 20px;
+  }
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 40px 20px 65px;
+    margin: 0;
+  }
+  .hero h1 {
+    font-size: 59px;
+  }
+  .hero-art {
+    height: 270px;
+  }
+  .games-section {
+    padding: 0 20px 60px;
+  }
+  .section-heading {
+    align-items: start;
+    gap: 12px;
+    flex-direction: column;
+  }
+  .game-grid {
+    grid-template-columns: 1fr;
+  }
+  .about {
+    margin: 0 20px 45px;
+    padding: 22px;
+    align-items: start;
+  }
+  .about-stars {
+    display: none;
+  }
+  footer {
+    margin: 0 20px;
+  }
+  .card-description {
+    min-height: auto;
+  }
+  body {
+    min-width: 320px;
+  }
+  .topbar {
+    height: 72px;
+  }
+  .brand {
+    font-size: 25px;
+  }
+  .status-pill {
+    padding: 8px 10px;
+    font-size: 10px;
+  }
+  .hero h1 {
+    letter-spacing: -1px;
+  }
+  .hero-art {
+    width: calc(100% - 8px);
+    margin: auto;
+  }
+  .modal {
+    padding: 10px;
+    align-items: start;
+    overflow-y: auto;
+  }
+  .modal-panel {
+    margin: 8px 0;
+    padding: 24px 14px 18px;
+  }
+  .modal-panel h2 {
+    font-size: 28px;
+  }
+  .modal canvas {
+    max-height: 58vh;
+  }
+  .touch-controls {
+    display: block;
+  }
+}

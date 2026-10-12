@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>GameVui — Khu vui chơi mini</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <div class="page-glow glow-one"></div>
+    <div class="page-glow glow-two"></div>
+    <header class="topbar">
+      <a class="brand" href="#top"
+        ><span class="brand-mark">✦</span><span>Game<span>Vui</span></span></a
+      >
+      <nav><a href="#games">Kho game</a><a href="#about">Giới thiệu</a></nav>
+      <div class="status-pill"><i></i> Sẵn sàng chơi</div>
+    </header>
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow"><span></span> BẬT GAME, BẬT NIỀM VUI</p>
+          <h1>Chơi một chút.<br /><em>Vui cả ngày.</em></h1>
+          <p class="hero-text">
+            Những game mini đơn giản, vui mắt và chơi ngay trên trình duyệt.
+            Chọn thử một trò nhé!
+          </p>
+          <a class="primary-button" href="#games"
+            >Khám phá game <span>↓</span></a
+          >
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="sun"></div>
+          <div class="cloud cloud-a"></div>
+          <div class="cloud cloud-b"></div>
+          <div class="island">
+            <span class="island-tree">🌴</span
+            ><span class="island-ground"></span>
+          </div>
+          <div class="hero-snake">🐍</div>
+          <div class="hero-bird">🐤</div>
+          <span class="spark spark-a">✦</span
+          ><span class="spark spark-b">✧</span>
+        </div>
+      </section>
+      <section class="games-section" id="games">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow"><span></span> CHỌN TRÒ CHƠI</p>
+            <h2>Hôm nay chơi gì?</h2>
+          </div>
+          <p class="game-count">02 trò chơi <span>•</span> miễn phí</p>
+        </div>
+        <div class="game-grid">
+          <article class="game-card snake-card">
+            <div class="card-visual">
+              <span class="visual-label">ARCADE CLASSIC</span>
+              <div class="snake-art">
+                <span>●</span><span>●</span><span>●</span><b>🍎</b>
+              </div>
+              <div class="grid-lines"></div>
+            </div>
+            <div class="card-content">
+              <div class="card-title">
+                <span class="game-icon">🐍</span>
+                <div>
+                  <h3>Rắn săn mồi</h3>
+                  <p>Ăn thật nhiều, dài thật lâu</p>
+                </div>
+              </div>
+              <p class="card-description">
+                Điều khiển chú rắn len lỏi qua mê cung và gom thật nhiều thức
+                ăn. Đừng tự cắn vào mình nhé!
+              </p>
+              <div class="card-footer">
+                <span class="tag">BÀN PHÍM</span
+                ><button class="play-button" data-game="snake">
+                  Chơi ngay <span>→</span>
+                </button>
+              </div>
+            </div>
+          </article>
+          <article class="game-card bird-card">
+            <div class="card-visual">
+              <span class="visual-label">SKILL CHALLENGE</span>
+              <div class="bird-art">🐤</div>
+              <div class="pipe pipe-one"></div>
+              <div class="pipe pipe-two"></div>
+              <div class="cloud mini-cloud"></div>
+            </div>
+            <div class="card-content">
+              <div class="card-title">
+                <span class="game-icon">🐤</span>
+                <div>
+                  <h3>Flappy Bird</h3>
+                  <p>Bay cao, né ống thật khéo</p>
+                </div>
+              </div>
+              <p class="card-description">
+                Giữ nhịp đôi cánh và bay qua những đường ống xanh. Bạn có thể
+                đạt điểm cao đến đâu?
+              </p>
+              <div class="card-footer">
+                <span class="tag">SPACE / CLICK</span
+                ><button class="play-button" data-game="bird">
+                  Chơi ngay <span>→</span>
+                </button>
+              </div>
+            </div>
+          </article>
+          <article class="game-card mini-card">
+            <div class="card-visual mini-visual mouse-visual">
+              <span class="visual-label">SPEED GAME</span>
+              <div class="mini-emoji">🐭</div>
+              <div class="target target-one"></div>
+              <div class="target target-two"></div>
+            </div>
+            <div class="card-content">
+              <div class="card-title">
+                <span class="game-icon">🎯</span>
+                <div>
+                  <h3>Đập chuột</h3>
+                  <p>Click thật nhanh, ghi điểm cao</p>
+                </div>
+              </div>
+              <p class="card-description">
+                Bắt những chú chuột xuất hiện ngẫu nhiên trong thời gian giới
+                hạn.
+              </p>
+              <div class="card-footer">
+                <span class="tag">CLICK / CHẠM</span
+                ><button class="play-button" data-game="mouse">
+                  Chơi ngay <span>→</span>
+                </button>
+              </div>
+            </div>
+          </article>
+          <article class="game-card mini-card">
+            <div class="card-visual mini-visual dodge-visual">
+              <span class="visual-label">ENDLESS RUN</span>
+              <div class="runner">🏃</div>
+              <div class="obstacle"></div>
+            </div>
+            <div class="card-content">
+              <div class="card-title">
+                <span class="game-icon">🏃</span>
+                <div>
+                  <h3>Né vật cản</h3>
+                  <p>Chạy xa nhất có thể</p>
+                </div>
+              </div>
+              <p class="card-description">
+                Điều khiển nhân vật và né các khối vật cản đang lao tới.
+              </p>
+              <div class="card-footer">
+                <span class="tag">MŨI TÊN / CHẠM</span
+                ><button class="play-button" data-game="dodge">
+                  Chơi ngay <span>→</span>
+                </button>
+              </div>
+            </div>
+          </article>
+          <article class="game-card mini-card">
+            <div class="card-visual mini-visual memory-visual">
+              <span class="visual-label">BRAIN GAME</span>
+              <div class="memory-preview">🦊 🐸<br />🐸 🦊</div>
+            </div>
+            <div class="card-content">
+              <div class="card-title">
+                <span class="game-icon">🧠</span>
+                <div>
+                  <h3>Memory Card</h3>
+                  <p>Tìm đúng cặp hình giống nhau</p>
+                </div>
+              </div>
+              <p class="card-description">
+                Lật thẻ và ghi nhớ vị trí để tìm đủ các cặp hình.
+              </p>
+              <div class="card-footer">
+                <span class="tag">CLICK / CHẠM</span
+                ><button class="play-button" data-game="memory">
+                  Chơi ngay <span>→</span>
+                </button>
+              </div>
+            </div>
+          </article>
+          <article class="game-card mini-card">
+            <div class="card-visual mini-visual tic-visual">
+              <span class="visual-label">2 PLAYERS</span>
+              <div class="tic-preview">
+                X <i>O</i> X<br /><i>O</i> X <i>O</i>
+              </div>
+            </div>
+            <div class="card-content">
+              <div class="card-title">
+                <span class="game-icon">⭕</span>
+                <div>
+                  <h3>Tic Tac Toe</h3>
+                  <p>Đấu trí 3 ô liên tiếp</p>
+                </div>
+              </div>
+              <p class="card-description">
+                Chơi cùng bạn bè và trở thành người đầu tiên nối đủ ba biểu
+                tượng.
+              </p>
+              <div class="card-footer">
+                <span class="tag">CLICK / CHẠM</span
+                ><button class="play-button" data-game="tic">
+                  Chơi ngay <span>→</span>
+                </button>
+              </div>
+            </div>
+          </article>
+          <article class="game-card mini-card">
+            <div class="card-visual mini-visual two-visual">
+              <span class="visual-label">PUZZLE</span>
+              <div class="number-preview">2 4<br />8 16</div>
+            </div>
+            <div class="card-content">
+              <div class="card-title">
+                <span class="game-icon">🔢</span>
+                <div>
+                  <h3>2048</h3>
+                  <p>Ghép số để đạt 2048</p>
+                </div>
+              </div>
+              <p class="card-description">
+                Trượt các ô số và ghép chúng thành những con số lớn hơn.
+              </p>
+              <div class="card-footer">
+                <span class="tag">MŨI TÊN / CHẠM</span
+                ><button class="play-button" data-game="2048">
+                  Chơi ngay <span>→</span>
+                </button>
+              </div>
+            </div>
+          </article>
+          <article class="game-card mini-card">
+            <div class="card-visual mini-visual break-visual">
+              <span class="visual-label">ARCADE</span>
+              <div class="break-preview">◼ ◼ ◼<br />◼ ◼ ◼</div>
+            </div>
+            <div class="card-content">
+              <div class="card-title">
+                <span class="game-icon">🧱</span>
+                <div>
+                  <h3>Breakout</h3>
+                  <p>Phá gạch, giữ bóng</p>
+                </div>
+              </div>
+              <p class="card-description">
+                Điều khiển thanh đỡ để phá tan toàn bộ những viên gạch.
+              </p>
+              <div class="card-footer">
+                <span class="tag">BÀN PHÍM / CHẠM</span
+                ><button class="play-button" data-game="breakout">
+                  Chơi ngay <span>→</span>
+                </button>
+              </div>
+            </div>
+          </article>
+          <article class="game-card mini-card">
+            <div class="card-visual mini-visual ufo-visual">
+              <span class="visual-label">FLYING GAME</span>
+              <div class="ufo-preview">🛸</div>
+            </div>
+            <div class="card-content">
+              <div class="card-title">
+                <span class="game-icon">🛸</span>
+                <div>
+                  <h3>Flappy UFO</h3>
+                  <p>Bay giữa các vì sao</p>
+                </div>
+              </div>
+              <p class="card-description">
+                Giữ chiếc UFO bay qua các cổng không gian mà không va chạm.
+              </p>
+              <div class="card-footer">
+                <span class="tag">SPACE / CHẠM</span
+                ><button class="play-button" data-game="ufo">
+                  Chơi ngay <span>→</span>
+                </button>
+              </div>
+            </div>
+          </article>
+          <article class="game-card mini-card">
+            <div class="card-visual mini-visual catch-visual">
+              <span class="visual-label">CATCH GAME</span>
+              <div class="catch-preview">🧺 ⭐ 🍎</div>
+            </div>
+            <div class="card-content">
+              <div class="card-title">
+                <span class="game-icon">🧺</span>
+                <div>
+                  <h3>Bắt vật phẩm</h3>
+                  <p>Hứng đồ tốt, né bom</p>
+                </div>
+              </div>
+              <p class="card-description">
+                Di chuyển chiếc giỏ để bắt vật phẩm tốt và tránh những quả bom.
+              </p>
+              <div class="card-footer">
+                <span class="tag">MŨI TÊN / CHẠM</span
+                ><button class="play-button" data-game="catch">
+                  Chơi ngay <span>→</span>
+                </button>
+              </div>
+            </div>
+          </article>
+          <article class="game-card mini-card">
+            <div class="card-visual mini-visual dino-visual">
+              <span class="visual-label">NEW GAME</span>
+              <div class="dino-preview">🦖</div>
+              <div class="dino-cactus">🌵</div>
+            </div>
+            <div class="card-content">
+              <div class="card-title">
+                <span class="game-icon">🦖</span>
+                <div>
+                  <h3>Dino Runner</h3>
+                  <p>Chạy xuyên sa mạc</p>
+                </div>
+              </div>
+              <p class="card-description">
+                Nhảy qua xương rồng, cúi né chim bay và chạy xa nhất có thể.
+              </p>
+              <div class="card-footer">
+                <span class="tag">SPACE / ↑ / ↓</span
+                ><button class="play-button" data-game="dino">
+                  Chơi ngay <span>→</span>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div
+          class="pagination"
+          id="pagination"
+          aria-label="Phân trang game"
+        ></div>
+      </section>
+      <section class="about" id="about">
+        <div class="about-icon">⌁</div>
+        <div>
+          <h2>Nhỏ gọn, vui hết cỡ</h2>
+          <p>
+            GameVui được tạo ra để bạn mở lên là chơi — không cần cài đặt, không
+            cần chờ đợi.
+          </p>
+        </div>
+        <div class="about-stars">✦ ✧ ✦</div>
+      </section>
+    </main>
+    <footer>
+      <span>© 2026 GameVui</span
+      ><span>Made by <b>Minh Thong</b> <span aria-hidden="true">♥</span></span>
+    </footer>
+    <div class="modal" id="gameModal" aria-hidden="true">
+      <div class="modal-panel">
+        <button class="close-button" id="closeGame" aria-label="Đóng">×</button>
+        <p class="eyebrow"><span></span> MINI GAME</p>
+        <h2 id="modalTitle">Rắn săn mồi</h2>
+        <p id="modalHelp">Dùng các phím mũi tên để di chuyển</p>
+        <div class="score-line">ĐIỂM <strong id="score">0</strong></div>
+        <canvas id="gameCanvas" width="400" height="400"></canvas>
+        <div
+          class="touch-controls"
+          id="touchControls"
+          aria-label="Điều khiển rắn"
+        >
+          <button data-direction="up" aria-label="Đi lên">▲</button>
+          <div>
+            <button data-direction="left" aria-label="Đi sang trái">◀</button>
+            <button data-direction="down" aria-label="Đi xuống">▼</button>
+            <button data-direction="right" aria-label="Đi sang phải">▶</button>
+          </div>
+        </div>
+        <button class="restart-button" id="restartGame">Chơi lại</button>
+      </div>
+    </div>
+    <script src="../js/script.js"></script>
+  </body>
+</html>
