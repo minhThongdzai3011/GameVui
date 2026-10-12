@@ -80,6 +80,30 @@ function startGame(g) {
   score = 0;
   scoreEl.textContent = 0;
   touchControls.style.display = g === "snake" ? "block" : "none";
+  const mobileControls = document.getElementById("mobileGameControls");
+  mobileControls.dataset.game = g;
+  mobileControls.style.display = ["snake", "mouse", "memory", "tic"].includes(g)
+    ? "none"
+    : "grid";
+  mobileControls.querySelector('[data-mobile-control="action"]').textContent = [
+    "dodge",
+    "dino",
+  ].includes(g)
+    ? "▲"
+    : "●";
+  mobileControls.querySelector('[data-mobile-control="up"]').style.display =
+    g === "2048" ? "block" : "none";
+  mobileControls.querySelector('[data-mobile-control="down"]').style.display =
+    g === "2048" || g === "dino" ? "block" : "none";
+  mobileControls.querySelector('[data-mobile-control="left"]').style.display = [
+    "2048",
+    "breakout",
+    "catch",
+  ].includes(g)
+    ? "block"
+    : "none";
+  mobileControls.querySelector('[data-mobile-control="right"]').style.display =
+    ["2048", "breakout", "catch"].includes(g) ? "block" : "none";
   if (g === "snake") startSnake();
   else if (g === "bird") startBird();
   else if (g === "mouse") startMouse();
@@ -572,6 +596,47 @@ document.addEventListener("keyup", (e) => {
 });
 canvas.addEventListener("pointerdown", () => {
   if (activeGame === "dino") dinoJump();
+});
+document.querySelectorAll("[data-mobile-control]").forEach((button) => {
+  button.addEventListener("pointerdown", (event) => {
+    event.preventDefault();
+    const control = button.dataset.mobileControl;
+    if (activeGame === "bird" || activeGame === "ufo") {
+      if (control === "action") flap();
+      return;
+    }
+    if (activeGame === "dodge" && control === "action") {
+      if (!jumping) {
+        jumping = true;
+        jumpY = 330;
+        jumpVelocity = -10;
+      }
+      return;
+    }
+    if (activeGame === "dino") {
+      if (control === "action") dinoJump();
+      if (control === "down") dino.duck = true;
+      return;
+    }
+    if (activeGame === "2048") {
+      const map = { up: 0, left: 1, down: 2, right: 3 };
+      if (control in map) move2048(map[control]);
+      return;
+    }
+    if (activeGame === "breakout") {
+      if (control === "left") paddle = Math.max(0, paddle - 30);
+      if (control === "right") paddle = Math.min(312, paddle + 30);
+      return;
+    }
+    if (activeGame === "catch") {
+      if (control === "left") basket = Math.max(0, basket - 35);
+      if (control === "right") basket = Math.min(300, basket + 35);
+    }
+  });
+  button.addEventListener("pointerup", () => {
+    if (activeGame === "dino" && button.dataset.mobileControl === "down")
+      dino.duck = false;
+  });
 });
 // Keep the polished renderer as the final draw function used by Neon Runner.
 function drawDodge() {

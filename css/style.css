@@ -717,6 +717,29 @@ footer b {
   user-select: none;
   touch-action: manipulation;
 }
+.mobile-game-controls {
+  display: none;
+  grid-template-columns: repeat(5, 44px);
+  justify-content: center;
+  gap: 6px;
+  margin: 14px auto 0;
+  touch-action: manipulation;
+}
+.mobile-game-controls button {
+  width: 44px;
+  height: 40px;
+  border: 0;
+  border-radius: 10px;
+  background: #192238;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.mobile-game-controls button:active {
+  background: var(--orange);
+  transform: scale(0.94);
+}
 .touch-controls > button,
 .touch-controls div button {
   width: 48px;
@@ -814,5 +837,8 @@ footer b {
   }
   .touch-controls {
     display: block;
+  }
+  .mobile-game-controls {
+    display: grid;
   }
 }
