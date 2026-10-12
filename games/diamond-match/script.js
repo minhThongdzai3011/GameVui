@@ -93,6 +93,35 @@ function dropGems() {
   }
 }
 
+async function animateSwap(first, second) {
+  const firstGem = boardEl.querySelector(`[data-row="${first.row}"][data-col="${first.col}"]`);
+  const secondGem = boardEl.querySelector(`[data-row="${second.row}"][data-col="${second.col}"]`);
+  if (!firstGem || !secondGem) return;
+
+  const firstRect = firstGem.getBoundingClientRect();
+  const secondRect = secondGem.getBoundingClientRect();
+  const duration = 210;
+  const easing = "cubic-bezier(.22,.9,.3,1.12)";
+
+  firstGem.style.zIndex = "4";
+  secondGem.style.zIndex = "3";
+  firstGem.animate(
+    [
+      { transform: "translate(0, 0) scale(1)" },
+      { transform: `translate(${secondRect.left - firstRect.left}px, ${secondRect.top - firstRect.top}px) scale(1.08)` },
+    ],
+    { duration, easing, fill: "forwards" },
+  );
+  secondGem.animate(
+    [
+      { transform: "translate(0, 0) scale(1)" },
+      { transform: `translate(${firstRect.left - secondRect.left}px, ${firstRect.top - secondRect.top}px) scale(1.03)` },
+    ],
+    { duration, easing, fill: "forwards" },
+  );
+  await wait(duration);
+}
+
 function burst(matches) {
   matches.forEach((key) => {
     const [row, col] = key.split(",").map(Number);
@@ -170,12 +199,14 @@ async function pick(row, col) {
 async function resolveSwap(origin, next) {
   if (busy) return;
   busy = true;
+  await animateSwap(origin, next);
   swap(origin, next);
+  render();
   let matches = findMatches();
 
   if (!matches.size) {
-    render();
-    await wait(130);
+    await wait(160);
+    await animateSwap(origin, next);
     swap(origin, next);
     render();
     comboEl.textContent = "Nước đi này chưa tạo được match";
