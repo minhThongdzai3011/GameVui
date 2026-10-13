@@ -4,66 +4,175 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Tic Tac Toe - GameVui</title>
-    <link rel="stylesheet" href="style.css?v=2" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Open+Sans:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css?v=3" />
   </head>
   <body>
     <main class="page">
       <a class="back" href="../../index.html">← Về GameVui</a>
-      <section class="panel">
-        <p class="eyebrow">GAMEVUI · 2 PLAYERS</p>
-        <h1>Tic Tac Toe</h1>
-        <p class="help">
-          Nối 3 ô liên tiếp để thắng · bấm vào <b>X</b> hoặc <b>O</b> trước khi
-          đi để chọn phe · phím <kbd>1</kbd>–<kbd>9</kbd> để đánh nhanh
-        </p>
 
-        <div class="ttt">
-          <div class="bar">
-            <button id="btnSound" class="icon" type="button" aria-label="Tắt âm thanh">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path class="on" d="M3 9v6h4l5 5V4L7 9H3zm13.5 3A4.5 4.5 0 0 0 14 7.97v8.05A4.47 4.47 0 0 0 16.5 12zM14 3.23v2.06a7 7 0 0 1 0 13.42v2.06a9 9 0 0 0 0-17.54z"/><path class="off" d="M16.5 12A4.5 4.5 0 0 0 14 7.97v2.21l2.45 2.45c.03-.2.05-.41.05-.63zM19 12c0 .94-.2 1.82-.54 2.64l1.51 1.51A8.8 8.8 0 0 0 21 12a9 9 0 0 0-7-8.77v2.06A7 7 0 0 1 19 12zM4.27 3 3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06a9 9 0 0 0 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4 9.91 6.09 12 8.18V4z"/></svg>
-            </button>
-            <select id="mode" aria-label="Chế độ chơi">
-              <option value="easy">Dễ</option>
-              <option value="medium" selected>Trung bình</option>
-              <option value="hard">Không thể thắng</option>
-              <option value="friend">Chơi với bạn bè</option>
-            </select>
-            <button id="btnRestart" class="icon" type="button" aria-label="Chơi lại từ đầu">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.65 6.35A7.96 7.96 0 0 0 12 4a8 8 0 1 0 7.73 10h-2.08A6 6 0 1 1 12 6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"/></svg>
-            </button>
-          </div>
+      <div class="stage" id="stage">
+        <!-- ===== Màn chính: bàn làm việc ===== -->
+        <section class="scr" data-screen="title">
+          <svg class="scene" viewBox="0 0 760 900" aria-hidden="true">
+            <defs>
+              <pattern id="plaid" width="120" height="120" patternUnits="userSpaceOnUse">
+                <rect width="120" height="120" fill="#f1f0ea" />
+                <rect width="60" height="120" fill="#e5e4dc" />
+                <rect width="120" height="60" fill="#e5e4dc" opacity=".7" />
+                <rect width="60" height="60" fill="#d8d7ce" />
+              </pattern>
+              <linearGradient id="wallShade" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#000" stop-opacity="0" />
+                <stop offset=".45" stop-color="#000" stop-opacity=".12" />
+                <stop offset="1" stop-color="#000" stop-opacity=".72" />
+              </linearGradient>
+              <filter id="corkDark" x="0" y="0" width="100%" height="100%">
+                <feTurbulence type="fractalNoise" baseFrequency=".3" numOctaves="2" seed="4" />
+                <feColorMatrix values="0 0 0 0 .52  0 0 0 0 .31  0 0 0 0 .13  0 0 0 -3.2 1.75" />
+              </filter>
+              <filter id="corkLight" x="0" y="0" width="100%" height="100%">
+                <feTurbulence type="fractalNoise" baseFrequency=".45" numOctaves="1" seed="11" />
+                <feColorMatrix values="0 0 0 0 .95  0 0 0 0 .74  0 0 0 0 .46  0 0 0 -4 2.1" />
+              </filter>
+              <linearGradient id="titleBlue" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#3fb6ff" />
+                <stop offset="1" stop-color="#5a34f0" />
+              </linearGradient>
+            </defs>
 
-          <div class="scores">
-            <button type="button" class="tab" data-side="X" aria-label="Chọn phe X">
-              <svg viewBox="0 0 40 40" class="mini x" aria-hidden="true"><path d="M10 10 30 30M30 10 10 30"/></svg>
-              <span class="who" id="whoX">Bạn</span>
-              <b id="scoreX">–</b>
-            </button>
-            <div class="tie"><span>Hòa</span><b id="scoreT">–</b></div>
-            <button type="button" class="tab" data-side="O" aria-label="Chọn phe O">
-              <svg viewBox="0 0 40 40" class="mini o" aria-hidden="true"><circle cx="20" cy="20" r="11"/></svg>
-              <span class="who" id="whoO">Máy</span>
-              <b id="scoreO">–</b>
-            </button>
-          </div>
+            <rect width="760" height="900" fill="url(#plaid)" />
+            <rect width="760" height="700" fill="url(#wallShade)" />
 
-          <div class="board-wrap">
-            <svg id="board" viewBox="0 0 300 300" aria-hidden="true">
-              <g class="grid">
-                <line x1="100" y1="8" x2="100" y2="292" />
-                <line x1="200" y1="8" x2="200" y2="292" />
-                <line x1="8" y1="100" x2="292" y2="100" />
-                <line x1="8" y1="200" x2="292" y2="200" />
-              </g>
-              <g id="marks"></g>
-              <g id="win"></g>
-            </svg>
-            <div class="cells" id="cells"></div>
+            <!-- Dây treo bảng -->
+            <path d="M296 70 L380 28 L464 70" fill="none" stroke="#8d8d8d" stroke-width="9" stroke-dasharray="5 3" stroke-linecap="round" />
+            <circle cx="380" cy="32" r="13" fill="#333" />
+
+            <!-- Bảng gỗ bần -->
+            <rect x="74" y="60" width="612" height="478" rx="10" fill="#5b4333" stroke="#3c2b20" stroke-width="3" />
+            <rect x="96" y="82" width="568" height="434" fill="#c98b48" />
+            <rect x="96" y="82" width="568" height="434" filter="url(#corkDark)" />
+            <rect x="96" y="82" width="568" height="434" filter="url(#corkLight)" />
+            <rect x="99" y="85" width="562" height="428" fill="none" stroke="#000" stroke-opacity=".22" stroke-width="6" />
+
+            <!-- Tên game -->
+            <g font-family="Fredoka, 'Open Sans', sans-serif" font-weight="700" text-anchor="middle" stroke-linejoin="round">
+              <text x="385" y="208" font-size="56" fill="#3b1608" stroke="#3b1608" stroke-width="16">GAMEVUI</text>
+              <text x="380" y="203" font-size="56" fill="#f4551e" stroke="#fff" stroke-width="10" paint-order="stroke">GAMEVUI</text>
+              <text x="387" y="332" font-size="132" fill="#17123f" stroke="#17123f" stroke-width="18">TIC TAC</text>
+              <text x="380" y="325" font-size="132" fill="url(#titleBlue)" stroke="#fff" stroke-width="16" paint-order="stroke">TIC TAC</text>
+              <text x="387" y="447" font-size="132" fill="#17123f" stroke="#17123f" stroke-width="18">TOE</text>
+              <text x="380" y="440" font-size="132" fill="url(#titleBlue)" stroke="#fff" stroke-width="16" paint-order="stroke">TOE</text>
+            </g>
+
+            <!-- Mặt bàn -->
+            <rect x="0" y="672" width="760" height="132" fill="#ebbb88" />
+            <rect x="0" y="672" width="760" height="6" fill="#f7d4ad" />
+            <rect x="0" y="804" width="760" height="34" fill="#c27f45" />
+            <rect x="0" y="838" width="760" height="62" fill="#3b2a1e" />
+            <rect x="198" y="838" width="344" height="40" fill="#7c4b27" />
+
+            <!-- Tờ giấy -->
+            <polygon points="256,760 440,744 448,778 262,792" fill="#fff" opacity=".92" />
+
+            <!-- Đèn bàn -->
+            <ellipse cx="70" cy="702" rx="60" ry="15" fill="#6d8a5c" />
+            <ellipse cx="70" cy="696" rx="56" ry="13" fill="#7fa06c" />
+            <path d="M58 694 L46 600 L128 498" fill="none" stroke="#6f8c5f" stroke-width="11" stroke-linecap="round" stroke-linejoin="round" />
+            <circle cx="46" cy="600" r="9" fill="#5d7a4e" />
+            <circle cx="128" cy="498" r="11" fill="#5d7a4e" />
+            <path d="M118 488 L222 506 L196 552 L120 520 Z" fill="#86a874" />
+            <path d="M120 520 L196 552 L222 506" fill="none" stroke="#6b8a5b" stroke-width="5" stroke-linejoin="round" />
+            <circle cx="178" cy="540" r="17" fill="#fff" />
+
+            <!-- Cốc bút -->
+            <rect x="132" y="590" width="10" height="44" fill="#f2c230" transform="rotate(-14 137 612)" />
+            <rect x="150" y="582" width="9" height="50" fill="#e04a3a" transform="rotate(4 154 607)" />
+            <rect x="160" y="588" width="9" height="46" fill="#3a7bd5" transform="rotate(12 164 611)" />
+            <rect x="146" y="596" width="8" height="40" fill="#f08fb0" transform="rotate(-4 150 616)" />
+            <path d="M116 618 H182 L175 690 H123 Z" fill="#2f8fd8" />
+            <rect x="113" y="614" width="72" height="9" rx="3" fill="#5aaef0" />
+
+            <!-- Chậu cây -->
+            <path d="M652 612 C640 560 628 520 650 478 C660 530 668 560 664 612 Z" fill="#4caf50" />
+            <path d="M660 612 C676 556 700 520 740 500 C716 548 690 580 676 614 Z" fill="#6cc35e" />
+            <path d="M648 612 C622 572 596 552 566 546 C594 574 618 596 632 616 Z" fill="#5dbb57" />
+            <path d="M662 612 C668 560 684 520 670 470 C690 520 690 570 674 614 Z" fill="#8fd77a" />
+            <path d="M604 612 H712 L700 682 H616 Z" fill="#d93a5f" />
+            <rect x="598" y="604" width="120" height="16" rx="4" fill="#e85a7a" />
+
+            <!-- Cốc cà phê mặt cười -->
+            <path d="M706 690 a20 20 0 1 1 0 34" fill="none" stroke="#f4f4f4" stroke-width="9" />
+            <rect x="640" y="666" width="68" height="78" rx="9" fill="#fbfbfb" />
+            <ellipse cx="674" cy="671" rx="30" ry="7" fill="#5a3a22" />
+            <circle cx="662" cy="704" r="3.5" fill="#333" />
+            <circle cx="686" cy="704" r="3.5" fill="#333" />
+            <ellipse cx="655" cy="714" rx="6" ry="3.5" fill="#f7a8b8" />
+            <ellipse cx="693" cy="714" rx="6" ry="3.5" fill="#f7a8b8" />
+            <path d="M668 712 q6 6 12 0" fill="none" stroke="#333" stroke-width="2.5" stroke-linecap="round" />
+          </svg>
+
+          <button class="round gear" data-open="settings" aria-label="Cài đặt"></button>
+          <button class="pill" style="top: 62%" data-act="one">Một người chơi</button>
+          <button class="pill" style="top: 74.1%" data-act="two">Hai người chơi</button>
+          <button class="pill" style="top: 86.2%" data-act="exit">Thoát</button>
+        </section>
+
+        <!-- ===== Màn chọn độ khó ===== -->
+        <section class="scr light" data-screen="diff" hidden>
+          <button class="round backbtn" data-act="home" aria-label="Quay lại"></button>
+          <h2 class="scr-title">ĐỘ KHÓ</h2>
+          <button class="round gear" data-open="settings" aria-label="Cài đặt"></button>
+          <button class="pill" style="top: 14.2%" data-level="easy">Dễ</button>
+          <button class="pill" style="top: 27.6%" data-level="medium">Trung bình</button>
+          <button class="pill" style="top: 40.9%" data-level="hard">Khó</button>
+          <button class="pill" style="top: 54.2%" data-level="expert">Chuyên gia</button>
+        </section>
+
+        <!-- ===== Màn chơi ===== -->
+        <section class="scr light" data-screen="game" hidden>
+          <svg class="board" id="board" viewBox="0 0 760 900">
+            <g id="turnTitle" class="turn-title">
+              <g id="turnIcon"></g>
+              <text id="turnText" x="404" y="70">Lượt đi</text>
+            </g>
+            <g id="grid"></g>
+            <g id="marks"></g>
+            <g id="winLine"></g>
+            <g id="cells"></g>
+            <g id="scoreboard"></g>
+          </svg>
+          <button class="round menu" data-open="menu" aria-label="Menu"></button>
+          <button class="round gear" data-open="settings" aria-label="Cài đặt"></button>
+          <div class="band banner" id="banner"><b id="bannerText"></b></div>
+          <div class="band result" id="result">
+            <b id="resultText"></b>
+            <span>Chạm vào bất kỳ đâu để chơi lại.</span>
           </div>
-          <p class="hint" id="hint">Bắt đầu, hoặc chọn phe</p>
-        </div>
-      </section>
+        </section>
+
+        <!-- ===== Ngăn kéo ===== -->
+        <div class="shade" id="shade"></div>
+        <aside class="drawer left" id="drawer-menu" aria-label="Menu">
+          <header><button class="close" aria-label="Đóng"></button><h3>Menu</h3></header>
+          <button class="row" data-act="reset">Đặt lại điểm</button>
+          <button class="row" data-act="mainmenu">Về menu chính</button>
+        </aside>
+        <aside class="drawer right" id="drawer-settings" aria-label="Cài đặt">
+          <header><h3>Cài đặt</h3><button class="close" aria-label="Đóng"></button></header>
+          <button class="row" data-act="sound">
+            Âm thanh
+            <span class="switch" id="soundSwitch"><i>BẬT</i></span>
+          </button>
+          <a class="row" href="../../index.html">Về trang GameVui</a>
+        </aside>
+      </div>
     </main>
-    <script src="script.js?v=2"></script>
+    <script src="script.js?v=3"></script>
   </body>
 </html>
