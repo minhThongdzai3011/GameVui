@@ -20,7 +20,21 @@
         ><span class="brand-mark">✦</span><span>Game<span>Vui</span></span></a
       >
       <nav><a href="#games">Kho game</a><a href="#about">Giới thiệu</a></nav>
-      <div class="status-pill"><i></i> Sẵn sàng chơi</div>
+      <div class="topbar-actions">
+        <div class="theme-switcher">
+          <button class="theme-toggle" id="themeToggle" type="button" aria-expanded="false" aria-controls="themeMenu">
+            <span id="themeIcon">☀</span><span id="themeName">Sáng</span><span class="theme-arrow">⌄</span>
+          </button>
+          <div class="theme-menu" id="themeMenu" hidden>
+            <button type="button" data-theme-choice="light"><span>☀</span><b>Sáng</b><small>Trong trẻo</small></button>
+            <button type="button" data-theme-choice="dark"><span>☾</span><b>Tối</b><small>Neon đêm</small></button>
+            <button type="button" data-theme-choice="halloween"><span>🎃</span><b>Halloween</b><small>Bí ẩn ma mị</small></button>
+            <button type="button" data-theme-choice="christmas"><span>🎄</span><b>Giáng Sinh</b><small>Tuyết và sắc đỏ</small></button>
+            <button type="button" data-theme-choice="tet"><span>🧧</span><b>Tết</b><small>Mai vàng, lộc xuân</small></button>
+          </div>
+        </div>
+        <div class="status-pill"><i></i> Sẵn sàng chơi</div>
+      </div>
     </header>
     <main id="top">
       <section class="hero">

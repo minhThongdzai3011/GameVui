@@ -1,3 +1,56 @@
+const themeToggle = document.getElementById("themeToggle");
+const themeMenu = document.getElementById("themeMenu");
+const themeIcon = document.getElementById("themeIcon");
+const themeName = document.getElementById("themeName");
+const themes = {
+  light: { icon: "☀", name: "Sáng" },
+  dark: { icon: "☾", name: "Tối" },
+  halloween: { icon: "🎃", name: "Halloween" },
+  christmas: { icon: "🎄", name: "Giáng Sinh" },
+  tet: { icon: "🧧", name: "Tết" },
+};
+
+function applyTheme(theme) {
+  const selected = themes[theme] ? theme : "light";
+  document.documentElement.dataset.theme = selected;
+  themeIcon.textContent = themes[selected].icon;
+  themeName.textContent = themes[selected].name;
+  document.querySelectorAll("[data-theme-choice]").forEach((button) => {
+    button.classList.toggle("active", button.dataset.themeChoice === selected);
+  });
+  try { localStorage.setItem("gamevui-theme", selected); } catch (_) {}
+}
+
+if (themeToggle && themeMenu) {
+  let savedTheme = "light";
+  try { savedTheme = localStorage.getItem("gamevui-theme") || "light"; } catch (_) {}
+  applyTheme(savedTheme);
+  themeToggle.addEventListener("click", () => {
+    const open = themeMenu.hidden;
+    themeMenu.hidden = !open;
+    themeToggle.setAttribute("aria-expanded", String(open));
+  });
+  document.querySelectorAll("[data-theme-choice]").forEach((button) => {
+    button.addEventListener("click", () => {
+      applyTheme(button.dataset.themeChoice);
+      themeMenu.hidden = true;
+      themeToggle.setAttribute("aria-expanded", "false");
+    });
+  });
+  document.addEventListener("click", (event) => {
+    if (!event.target.closest(".theme-switcher")) {
+      themeMenu.hidden = true;
+      themeToggle.setAttribute("aria-expanded", "false");
+    }
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      themeMenu.hidden = true;
+      themeToggle.setAttribute("aria-expanded", "false");
+    }
+  });
+}
+
 const modal = document.getElementById("gameModal"),
   canvas = document.getElementById("gameCanvas"),
   ctx = canvas.getContext("2d"),
