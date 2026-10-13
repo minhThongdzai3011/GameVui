@@ -4,27 +4,67 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Breakout - GameVui</title>
-    <link rel="stylesheet" href="../shared/game.css" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css?v=2" />
   </head>
   <body>
-    <main class="page">
-      <a class="back" href="../../index.html">← Về GameVui</a>
-      <section class="panel">
-        <p class="eyebrow">GAMEVUI</p>
-        <h1>Breakout</h1>
-        <p class="help"></p>
-        <div class="score">ĐIỂM <strong id="score">0</strong></div>
-        <canvas width="400" height="400"></canvas>
-        <div class="controls">
-          <button data-c="left">◀</button><button data-c="up">▲</button
-          ><button data-c="action">TRÁI</button><button data-c="down">▼</button
-          ><button data-c="right">▶</button>
+    <div class="shell">
+      <header class="topbar">
+        <span class="title">🕹️ Breakout</span>
+        <div class="top-actions">
+          <button id="btnSound" type="button" aria-label="Tắt âm thanh">🔊</button>
+          <a class="exit" href="../../index.html">✕ Thoát</a>
         </div>
-        <button class="restart">Chơi lại</button>
-      </section>
-    </main>
-    <script src="../shared/arcade.js"></script>
-    <script src="script.js"></script>
+      </header>
+
+      <div class="arena">
+        <div class="board-area">
+          <canvas id="game" aria-label="Màn chơi Breakout"></canvas>
+        </div>
+        <aside class="side" id="side">
+          <span class="pill" id="statusPill">STARTING</span>
+          <span class="side-label" id="sideLabel">Sẵn sàng!</span>
+          <span class="side-score" id="sideScore" hidden>⭐ <b id="score">0</b></span>
+          <span class="side-level" id="sideLevel" hidden>Cấp <b id="level">1</b></span>
+        </aside>
+
+        <!-- Lớp phủ: bắt đầu / thua / tạm dừng -->
+        <div class="overlay" id="overlay">
+          <div class="card-wrap">
+            <span class="card-pill" id="ovPill">SẴN SÀNG</span>
+            <div class="card">
+              <div class="emoji">🎮</div>
+              <h2 id="ovTitle">Breakout!</h2>
+              <p id="ovText">Phá hết gạch để lên cấp tiếp theo!</p>
+              <div class="final" id="ovFinal" hidden>
+                <small>ĐIỂM CUỐI</small>
+                <b id="ovScore">0</b>
+                <span id="ovBest"></span>
+              </div>
+              <button type="button" class="cta" id="ovBtn">Bắt đầu</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Thông báo nhanh khi rơi bóng -->
+        <div class="toast" id="toast" hidden>
+          <div class="emoji">🎮</div>
+          <h2>Bóng rơi rồi!</h2>
+          <p>Điểm <b id="toastScore">0</b></p>
+          <u id="toastPraise">Khá lắm!</u>
+          <small>Thử lại nhé — bạn làm được mà!</small>
+        </div>
+      </div>
+      <p class="help">
+        Di chuột / kéo ngón tay hoặc <kbd>←</kbd> <kbd>→</kbd> để di chuyển thanh đỡ ·
+        <kbd>P</kbd> tạm dừng
+      </p>
+    </div>
+    <script src="script.js?v=2"></script>
   </body>
 </html>
