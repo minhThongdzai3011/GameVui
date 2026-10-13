@@ -4,27 +4,51 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Rắn săn mồi - GameVui</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css?v=2" />
   </head>
   <body>
     <main class="game-page">
       <a class="back" href="../../index.html">← Về GameVui</a>
       <section class="panel">
-        <p class="eyebrow">ARCADE CLASSIC</p>
+        <p class="eyebrow">ARCADE CLASSIC · SNAKE II</p>
         <h1>Rắn săn mồi</h1>
-        <p class="help">Dùng phím mũi tên hoặc các nút cảm ứng để di chuyển</p>
-        <div class="score">ĐIỂM <strong id="score">0</strong></div>
-        <canvas id="game" width="400" height="400"></canvas>
-        <div class="controls">
-          <button data-dir="up">▲</button>
-          <div>
-            <button data-dir="left">◀</button><button data-dir="down">▼</button
-            ><button data-dir="right">▶</button>
+        <p class="help">
+          <kbd>2</kbd><kbd>4</kbd><kbd>6</kbd><kbd>8</kbd> / mũi tên để đi ·
+          <kbd>5</kbd> / <kbd>Enter</kbd> chọn · <kbd>C</kbd> / <kbd>Esc</kbd>
+          quay lại, tạm dừng
+        </p>
+
+        <div class="phone">
+          <div class="screen">
+            <canvas id="lcd" aria-label="Màn hình Rắn săn mồi"></canvas>
+          </div>
+          <div class="softkeys">
+            <button type="button" data-key="ok" class="soft">Chọn</button>
+            <button type="button" data-key="back" class="soft">C</button>
+          </div>
+          <div class="keypad">
+            <button type="button" data-key="none">1</button>
+            <button type="button" data-key="up">2<small>▲</small></button>
+            <button type="button" data-key="none">3</button>
+            <button type="button" data-key="left">4<small>◀</small></button>
+            <button type="button" data-key="ok">5<small>OK</small></button>
+            <button type="button" data-key="right">6<small>▶</small></button>
+            <button type="button" data-key="none">7</button>
+            <button type="button" data-key="down">8<small>▼</small></button>
+            <button type="button" data-key="none">9</button>
+            <button type="button" data-key="none">*</button>
+            <button type="button" data-key="none">0</button>
+            <button type="button" data-key="none">#</button>
           </div>
         </div>
-        <button class="restart" id="restart">Chơi lại</button>
+
+        <div class="controls">
+          <button id="btnSound" type="button" aria-pressed="true">
+            🔊 Âm thanh: Bật
+          </button>
+        </div>
       </section>
     </main>
-    <script src="script.js"></script>
+    <script src="script.js?v=2"></script>
   </body>
 </html>
