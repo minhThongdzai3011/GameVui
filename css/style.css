@@ -801,6 +801,56 @@ footer b {
   top: 92px;
   background: #073c43;
 }
+
+/* Preview trên trang chủ: cùng bảng màu/cảm giác với màn chơi thật của từng game. */
+.snake-card .card-visual { background: #a3a02a; }
+.snake-card .grid-lines { opacity: .3; background-image: linear-gradient(#5a6120 1px, transparent 1px), linear-gradient(90deg, #5a6120 1px, transparent 1px); }
+.snake-art span { width: 43px; height: 43px; border-radius: 7px; border-color: #26384a; background: #2c3a52; margin-left: -4px; }
+.snake-art span:first-child { background: #f3bd35; }
+.snake-art b { font-size: 0; width: 20px; height: 20px; margin-left: 24px; border-radius: 50%; background: #d94f41; box-shadow: 0 0 0 4px #832e29; }
+.bird-card .card-visual { background: #078e9c; image-rendering: pixelated; }
+.bird-card .card-visual::after { content: ""; position: absolute; inset: auto 0 0; height: 55px; background: linear-gradient(90deg, #07536a 0 7%, transparent 7% 10%, #07536a 10% 17%, transparent 17% 20%, #07536a 20% 29%, transparent 29% 32%, #07536a 32% 41%, transparent 41% 44%, #07536a 44% 54%, transparent 54% 58%, #07536a 58% 70%, transparent 70% 73%, #07536a 73% 82%, transparent 82% 86%, #07536a 86% 100%); border-top: 7px solid #087689; z-index: 1; }
+.bird-art { font-size: 0; width: 38px; height: 27px; border: 4px solid #75301e; border-radius: 52% 45% 48% 42%; background: #ffbb33; transform: rotate(8deg); box-shadow: inset -7px -5px #e8702e; }
+.bird-art::after { content: ""; position: absolute; width: 7px; height: 7px; border-radius: 50%; top: 4px; right: 5px; background: #fff; box-shadow: inset 2px 2px #202b47, 14px 8px 0 -1px #f26b32; }
+.pipe { border-radius: 0; border-color: #336e3f; background: repeating-linear-gradient(90deg, #76ca1b 0 8px, #5fa616 8px 11px); box-shadow: inset 5px 0 #a7ed35; z-index: 2; }
+.pipe:after { border-radius: 0; border-color: #336e3f; background: #78c81e; }
+.mouse-visual { background: #1d2840; }
+.mouse-visual::after { content: ""; position: absolute; inset: auto 0 0; height: 38px; background: #273650; }
+.mini-emoji { font-size: 0; width: 47px; height: 38px; left: 42%; top: 63px; border-radius: 52% 48% 46% 44%; background: #a2afc6; box-shadow: -12px -13px 0 -2px #d3dcef, 13px -13px 0 -2px #d3dcef; z-index: 2; }
+.mini-emoji::after { content: ""; position: absolute; width: 25px; height: 3px; right: -21px; bottom: 3px; background: #a2afc6; transform: rotate(18deg); }
+.target { border-color: #65e0f3; background: #f6c94c; box-shadow: 0 0 0 4px #273650; z-index: 2; }
+.dodge-visual { background: linear-gradient(#151d45 0 54%, #4359a1 54% 76%, #f59b79 76%); }
+.dodge-visual::after { content: ""; position: absolute; inset: auto 0 0; height: 29px; background: #18213e; }
+.runner { font-size: 44px; top: 58px; z-index: 2; filter: drop-shadow(0 3px #192238); }
+.obstacle { background: #ff506f; box-shadow: 0 -10px #ff7890; z-index: 2; }
+.memory-visual { background: #1a120c; }
+.memory-preview { left: 25%; top: 38px; padding: 7px 12px; border-radius: 10px; background: #efe7da; color: #795a3d; box-shadow: 63px 18px 0 #efe7da, 0 76px 0 #efe7da, 63px 94px 0 #efe7da; font-size: 0; width: 48px; height: 58px; transform: none; }
+.memory-preview::after { content: "?"; position: absolute; inset: 8px; display: grid; place-items: center; color: #c9b8a0; font: 800 30px "Baloo 2"; }
+.tic-visual { background: radial-gradient(circle at top, #d7f0ee, #fff7e8 78%); }
+.tic-preview { color: #f2355b; text-shadow: 68px 0 #3ea8d8, 0 60px #3ea8d8, 68px 60px #f2355b; font-size: 0; left: 34%; top: 35px; width: 110px; height: 110px; border: 5px solid #192238; transform: none; background: linear-gradient(90deg, transparent 47%, #192238 47% 53%, transparent 53%), linear-gradient(transparent 47%, #192238 47% 53%, transparent 53%); }
+.tic-preview i { display: none; }
+.tic-preview::before, .tic-preview::after { position: absolute; display: grid; place-items: center; width: 45px; height: 45px; font: 800 42px/1 Arial; }
+.tic-preview::before { content: "×"; left: 3px; top: 1px; color: #f2355b; }
+.tic-preview::after { content: "○"; right: 2px; bottom: 0; color: #3ea8d8; }
+.two-visual { background: #fff8ea; }
+.number-preview { left: 27%; top: 30px; display: grid; grid-template-columns: repeat(2, 58px); gap: 8px; color: #776e65; font: 800 22px "Baloo 2"; text-align: center; }
+.number-preview::first-line { background: #eee4da; }
+.break-visual { background: #1e293b; }
+.break-preview { left: 20%; top: 27px; width: 61%; padding: 10px; color: #fbbf24; font-size: 25px; letter-spacing: 8px; background: repeating-linear-gradient(90deg, #f05023 0 33px, #fbbf24 33px 66px, #38bdf8 66px 99px); line-height: 1.25; }
+.break-visual::after { content: ""; position: absolute; width: 80px; height: 8px; left: calc(50% - 40px); bottom: 22px; border-radius: 8px; background: #f8fafc; box-shadow: 28px -28px 0 -9px #fbbf24; }
+.ufo-visual { background: radial-gradient(circle at 23% 28%, #fff 0 2px, transparent 3px), radial-gradient(circle at 75% 48%, #fff 0 2px, transparent 3px), linear-gradient(145deg, #171c47, #6b6ab0); }
+.ufo-preview { font-size: 0; width: 74px; height: 29px; left: 39%; top: 70px; border-radius: 50%; background: #8ee0c0; border: 4px solid #234d7a; box-shadow: inset 0 8px #d5ffff; }
+.catch-visual { background: linear-gradient(#f3d28d 0 76%, #e0b56c 76%); }
+.catch-preview { left: 29%; top: 52px; font-size: 0; width: 135px; height: 70px; border-bottom: 9px solid #bd6f43; border-left: 9px solid transparent; border-right: 9px solid transparent; }
+.catch-preview::before { content: ""; position: absolute; width: 12px; height: 12px; border-radius: 50%; left: 30px; top: -23px; background: #ff7657; box-shadow: 45px 10px #ffd66b, 86px -5px #5eb575; }
+.dino-visual { background: linear-gradient(#8ed9eb 0 68%, #f5d18a 68%); }
+.dino-visual::after { content: ""; position: absolute; inset: auto 0 0; height: 35px; background: #c99c59; }
+.dino-preview { font-size: 48px; position: absolute; z-index: 2; left: 31%; top: 63px; filter: grayscale(.35); }
+.dino-cactus { font-size: 42px; position: absolute; z-index: 2; right: 25%; bottom: 22px; }
+.rapid-visual { background: #74e3e2 !important; }
+.gem-visual { background: #3a3268; }
+.gem-preview { left: 25%; top: 31px; display: grid; grid-template-columns: repeat(2, 58px); gap: 10px; font-size: 0; width: 126px; height: 126px; padding: 9px; border-radius: 12px; background: #27204d; }
+.gem-preview::before, .gem-preview::after { content: ""; width: 49px; height: 49px; border-radius: 10px; background: linear-gradient(145deg, #73edff, #2186d5); box-shadow: 59px 0 #ff8ec2, 0 59px #ffe879, 59px 59px #94f18c; }
 @media (max-width: 760px) {
   .topbar nav {
     display: none;
