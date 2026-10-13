@@ -1,1 +1,296 @@
-@import url("../shared/game.css");
+:root {
+  --ink: #192238;
+  --cream: #fffaf1;
+  --orange: #ff7859;
+  --teal: #14bdac;
+  --teal-dark: #0da192;
+  --x: #545454;
+  --o: #f2ebd3;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: radial-gradient(circle at top, #d7f0ee, #fff7e8 60%);
+  font-family: Arial, sans-serif;
+  color: var(--ink);
+}
+.page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px 16px;
+}
+.back {
+  position: fixed;
+  top: 22px;
+  left: 24px;
+  color: var(--ink);
+  font-weight: 700;
+  text-decoration: none;
+}
+.panel {
+  width: min(480px, 100%);
+  padding: 24px;
+  background: var(--cream);
+  border-radius: 26px;
+  text-align: center;
+  box-shadow: 0 20px 60px #19223824;
+}
+.eyebrow {
+  margin: 0;
+  color: var(--orange);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.panel h1 {
+  margin: 6px 0;
+  font-size: 32px;
+}
+.help {
+  margin: 0 0 16px;
+  color: #788096;
+  font-size: 13px;
+  line-height: 1.7;
+}
+kbd {
+  display: inline-block;
+  padding: 0 5px;
+  border: 1px solid #c9cedb;
+  border-bottom-width: 2px;
+  border-radius: 5px;
+  background: #fff;
+  font: 700 12px Arial, sans-serif;
+}
+
+/* Khung game kiểu "tic tac toe" quen thuộc trên trình duyệt */
+.ttt {
+  width: min(100%, 400px);
+  margin: 0 auto;
+  padding: 14px 18px 16px;
+  border-radius: 18px;
+  background: var(--teal);
+  box-shadow: 0 12px 28px #0da19240;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.icon {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+}
+.icon:hover {
+  background: #ffffff26;
+}
+.icon svg {
+  width: 24px;
+  height: 24px;
+  fill: #fff;
+}
+#btnSound .off,
+#btnSound.muted .on {
+  display: none;
+}
+#btnSound.muted .off {
+  display: inline;
+}
+#mode {
+  appearance: none;
+  -webkit-appearance: none;
+  padding: 8px 34px 8px 14px;
+  border: 1px solid #ffffff80;
+  border-radius: 8px;
+  background: transparent
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23fff' d='M7 10l5 5 5-5z'/%3E%3C/svg%3E")
+    no-repeat right 8px center / 20px;
+  color: #fff;
+  font: 700 14px Arial, sans-serif;
+  cursor: pointer;
+}
+#mode option {
+  color: var(--ink);
+}
+
+.scores {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 10px;
+  margin: 14px 0 16px;
+}
+.tab {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 44px;
+  padding: 0 12px;
+  border: 0;
+  border-radius: 8px;
+  background: #fff;
+  color: var(--x);
+  font: 700 14px Arial, sans-serif;
+  box-shadow: 0 2px 6px #0003;
+  cursor: pointer;
+  overflow: hidden;
+}
+.tab::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+  background: var(--teal-dark);
+  transform: scaleX(0);
+  transition: transform 0.25s;
+}
+.tab.turn::after {
+  transform: scaleX(1);
+}
+.tab b {
+  margin-left: auto;
+  font-size: 18px;
+}
+.tab .who {
+  color: #8a8a8a;
+  font-size: 13px;
+}
+.mini {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke-width: 6;
+  stroke-linecap: round;
+}
+.mini.x {
+  stroke: var(--x);
+}
+.mini.o {
+  stroke: #d6c99c;
+}
+.tie {
+  display: grid;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  min-width: 42px;
+}
+.tie b {
+  font-size: 18px;
+}
+
+.board-wrap {
+  position: relative;
+  aspect-ratio: 1;
+}
+#board {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+.grid line {
+  stroke: var(--teal-dark);
+  stroke-width: 9;
+  stroke-linecap: round;
+}
+.mark {
+  fill: none;
+  stroke-width: 15;
+  stroke-linecap: round;
+  transition: opacity 0.4s;
+}
+.mark.x {
+  stroke: var(--x);
+}
+.mark.o {
+  stroke: var(--o);
+}
+.mark.dim {
+  opacity: 0.25;
+}
+.draw {
+  animation: draw 0.22s ease-out forwards;
+}
+.draw.second {
+  animation-delay: 0.14s;
+}
+.draw.circle {
+  animation-duration: 0.3s;
+}
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+.winline {
+  fill: none;
+  stroke-width: 9;
+  stroke-linecap: round;
+  animation: draw 0.35s ease-out 0.2s forwards;
+}
+.cells {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+.cells button {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 12px;
+}
+.cells button:focus-visible {
+  outline: 3px solid #ffffffb0;
+  outline-offset: -8px;
+}
+.cells button:disabled {
+  cursor: default;
+}
+.board-wrap.over .cells button {
+  cursor: pointer;
+}
+.hint {
+  min-height: 20px;
+  margin: 14px 0 0;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+}
+@media (max-width: 560px) {
+  .back {
+    position: static;
+    margin-bottom: 14px;
+  }
+  .panel {
+    padding: 18px 12px;
+  }
+  .ttt {
+    padding: 12px 12px 14px;
+  }
+  .tab {
+    padding: 0 8px;
+    gap: 5px;
+  }
+  .tab .who {
+    font-size: 11px;
+  }
+}
