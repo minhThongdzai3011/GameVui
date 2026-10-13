@@ -2,29 +2,102 @@
 <html lang="vi">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Memory Card - GameVui</title>
-    <link rel="stylesheet" href="../shared/game.css" />
-    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+    <title>Memory Cards - GameVui</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css?v=2" />
   </head>
   <body>
-    <main class="page">
-      <a class="back" href="../../index.html">← Về GameVui</a>
-      <section class="panel">
-        <p class="eyebrow">GAMEVUI</p>
-        <h1>Memory Card</h1>
-        <p class="help"></p>
-        <div class="score">ĐIỂM <strong id="score">0</strong></div>
-        <canvas width="400" height="400"></canvas>
-        <div class="controls">
-          <button data-c="left">◀</button><button data-c="up">▲</button
-          ><button data-c="action">CHẠM</button><button data-c="down">▼</button
-          ><button data-c="right">▶</button>
+    <div class="app" id="app">
+      <div class="bg" id="bg"></div>
+
+      <!-- Thanh trên: tạm dừng, sao, giới hạn, màn tiếp, cấp độ -->
+      <div class="hud">
+        <button class="sq" id="btnPause" aria-label="Tạm dừng">
+          <svg viewBox="0 0 24 24"><rect x="6" y="5" width="4" height="14" rx="1.2" /><rect x="14" y="5" width="4" height="14" rx="1.2" /></svg>
+        </button>
+        <div class="pill stars" id="stars"><i>★</i><i>★</i><i>★</i></div>
+        <div class="pill limit" id="limit" hidden></div>
+        <button class="next-btn" id="btnNext" hidden>Màn tiếp <span>→</span></button>
+        <div class="pill lvl" id="lvl">Màn 1</div>
+      </div>
+
+      <div class="board" id="board"></div>
+
+      <button class="booster" id="btnFlash" aria-label="Đèn pin: soi tất cả thẻ">
+        <span class="ico">🔦</span><b id="flashCount">3</b>
+      </button>
+      <div class="tip" id="tip" hidden>
+        <b>Đèn pin</b>
+        <p>Phép màu của ánh sáng! Soi nhanh mọi thẻ trong chốc lát để chọn đúng hơn.</p>
+      </div>
+
+      <div class="tutorial" id="tut" hidden>
+        <span class="tag">ⓘ Hướng dẫn</span>
+        <p id="tutText"></p>
+        <button id="tutOk" class="cream" hidden>OK, sẵn sàng!</button>
+      </div>
+      <div class="hand" id="hand" hidden>👆</div>
+      <div class="fx" id="fx"></div>
+
+      <!-- Danh sách màn -->
+      <section class="map" id="map" hidden>
+        <div class="map-panel">
+          <header>
+            <a class="sq back" href="../../index.html" aria-label="Về GameVui">←</a>
+            <h1>Memory Cards</h1>
+            <button class="sq" id="btnSoundMap" aria-label="Âm thanh">🔊</button>
+          </header>
+          <p class="map-sub">Lật thẻ, ghi nhớ và ghép các cặp giống nhau!</p>
+          <div class="levels" id="levels"></div>
         </div>
-        <button class="restart">Chơi lại</button>
       </section>
-    </main>
-    <script src="../shared/arcade.js"></script>
-    <script src="script.js"></script>
+
+      <!-- Giới thiệu màn -->
+      <div class="modal" id="intro" hidden>
+        <div class="panel">
+          <div class="badge">
+            <span class="num" id="introNum">1</span>
+            <span class="word">MÀN</span>
+            <span class="diff" id="introDiff">DỄ</span>
+          </div>
+          <div class="info">
+            <span class="info-ico" id="introIco">∞</span>
+            <b id="introTitle">Không giới hạn!</b>
+            <p id="introText">Cứ thong thả ghép hết các cặp nhé.</p>
+          </div>
+          <button class="cream big" id="introStart">Bắt đầu</button>
+          <button class="link" data-act="levels">Về danh sách màn</button>
+        </div>
+      </div>
+
+      <!-- Tạm dừng -->
+      <div class="modal" id="pauseM" hidden>
+        <div class="panel">
+          <h2>Tạm dừng</h2>
+          <button class="cream big" data-act="resume">Tiếp tục</button>
+          <button class="cream" data-act="restart">Chơi lại màn</button>
+          <button class="cream" data-act="sound" id="btnSound">🔊 Âm thanh: Bật</button>
+          <button class="link" data-act="levels">Về danh sách màn</button>
+        </div>
+      </div>
+
+      <!-- Thua (hết giờ / hết lượt) -->
+      <div class="modal" id="failM" hidden>
+        <div class="panel">
+          <div class="fail-ico" id="failIco">⏱️</div>
+          <h2 id="failTitle">Hết giờ!</h2>
+          <p class="fail-text" id="failText">Đừng nản, thử lại nhé!</p>
+          <button class="cream big" data-act="restart">Thử lại</button>
+          <button class="link" data-act="levels">Về danh sách màn</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js?v=2"></script>
   </body>
 </html>
