@@ -770,6 +770,14 @@ html[data-theme="tet"] { --ink:#761b2d; --muted:#966567; --cream:#fff2da; --oran
 html[data-theme="tet"] body { background:radial-gradient(circle at 12% 12%,#ffe594,transparent 24%),radial-gradient(circle at 88% 76%,#f6b54d,transparent 29%),#fff1d6; } html[data-theme="tet"] body::before { content:"✿  ✦  ✿  ✦  ✿"; position:fixed; top:105px; right:5vw; color:#db9a22; font-size:29px; letter-spacing:17px; opacity:.6; pointer-events:none; animation:seasonFloat 5s ease-in-out infinite; } html[data-theme="tet"] .game-card { border-color:#f4d28a; box-shadow:0 18px 42px #b23b181a; } html[data-theme="tet"] .about { background:#ffe6a7; } html[data-theme="tet"] .hero-art { filter:hue-rotate(335deg) saturate(1.12); } html[data-theme="tet"] .primary-button,html[data-theme="tet"] .play-button { background:linear-gradient(135deg,#d7331b,#9c192e); } html[data-theme="tet"] .theme-toggle,html[data-theme="tet"] .theme-menu { background:#fff9ecf2; border-color:#efcf80; } html[data-theme="tet"] .theme-menu button:hover,html[data-theme="tet"] .theme-menu button.active { background:#fff0cb; } html[data-theme="tet"] .status-pill { background:#ffead0; color:#a42c25; }
 @keyframes seasonFloat { 50% { transform:translateY(13px) rotate(5deg); } }
 @media (max-width: 560px) { .topbar-actions .status-pill { display:none; } .theme-toggle { min-height:35px; padding:6px 9px; } .theme-menu { right:-4px; } }
+
+/* Fix theme control alignment and preserve contrast in dark palettes. */
+.theme-arrow { width:8px; height:8px; margin:-4px 1px 0 2px; border-right:2px solid currentColor; border-bottom:2px solid currentColor; font-size:0; transform:rotate(45deg); transition:transform .2s; }
+.theme-toggle[aria-expanded="true"] .theme-arrow { transform:rotate(225deg); margin-top:4px; }
+html[data-theme="dark"] .primary-button,html[data-theme="dark"] .play-button { background:linear-gradient(135deg,#8d76ff,#6250cd); color:#fff; box-shadow:0 9px 22px #5b4be455; }
+html[data-theme="dark"] .page-button:hover,html[data-theme="dark"] .page-button.active { background:#806ce9; border-color:#806ce9; color:#fff; }
+html[data-theme="halloween"] .primary-button,html[data-theme="halloween"] .play-button { color:#fff; box-shadow:0 9px 22px #e1541c4d; }
+html[data-theme="halloween"] .page-button:hover,html[data-theme="halloween"] .page-button.active { background:#f36f22; border-color:#f36f22; color:#fff; }
 .touch-controls > button,
 .touch-controls div button {
   width: 48px;
