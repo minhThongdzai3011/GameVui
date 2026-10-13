@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rapid Roll — GameVui</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="page">
+      <a class="back" href="../../index.html">← Về GameVui</a>
+      <section class="lcd-shell">
+        <header class="lcd-header">
+          <span class="lives" id="lives">×3</span>
+          <span class="brand">RAPID ROLL</span>
+          <span class="score">000000</span>
+        </header>
+        <div class="game-frame" id="gameFrame">
+          <canvas id="game" width="270" height="450" aria-label="Màn chơi Rapid Roll"></canvas>
+          <div class="message" id="message">
+            <strong id="messageTitle">READY</strong>
+            <span id="messageText">Bấm bắt đầu để lăn!</span>
+            <button id="start" type="button">BẮT ĐẦU</button>
+          </div>
+        </div>
+        <p class="help">← → / A D để di chuyển · Chạm giữ nút trên điện thoại</p>
+        <div class="controls" aria-label="Điều khiển Rapid Roll">
+          <button class="control" id="left" type="button" aria-label="Di chuyển sang trái">←</button>
+          <button class="control" id="right" type="button" aria-label="Di chuyển sang phải">→</button>
+        </div>
+        <button class="restart" id="restart" type="button">↻ Chơi lại</button>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

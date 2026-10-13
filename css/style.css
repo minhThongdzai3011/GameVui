@@ -768,6 +768,39 @@ footer b {
   background: var(--orange);
   transform: scale(0.94);
 }
+.rapid-visual {
+  background: linear-gradient(145deg, #70dbd8, #319c9f) !important;
+  overflow: hidden;
+}
+.rapid-preview {
+  position: absolute;
+  inset: 32px 24px 22px;
+  border: 3px solid #073c43;
+  background: #98eeea;
+}
+.rapid-preview::before,
+.rapid-preview::after,
+.rapid-preview i,
+.rapid-preview b,
+.rapid-preview em {
+  position: absolute;
+  display: block;
+  height: 5px;
+  background: repeating-linear-gradient(90deg, #073c43 0 3px, transparent 3px 5px);
+  content: "";
+}
+.rapid-preview::before { width: 52px; left: 12px; top: 28px; }
+.rapid-preview::after { width: 65px; right: 13px; top: 68px; }
+.rapid-preview i { width: 44px; left: 52px; top: 112px; }
+.rapid-preview b { width: 58px; right: 30px; top: 150px; }
+.rapid-preview em {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  left: 42%;
+  top: 92px;
+  background: #073c43;
+}
 @media (max-width: 760px) {
   .topbar nav {
     display: none;
