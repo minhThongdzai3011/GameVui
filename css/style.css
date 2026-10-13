@@ -772,6 +772,10 @@ footer b {
   background: linear-gradient(145deg, #70dbd8, #319c9f) !important;
   overflow: hidden;
 }
+.block-visual { background: radial-gradient(circle at 50% 20%, #354dba, #111733 70%); }
+.block-preview { position:absolute; left:calc(50% - 61px); top:29px; width:122px; height:132px; border:4px solid #252d59; border-radius:8px; background:repeating-linear-gradient(0deg,#ffffff0a 0 1px,transparent 1px 17px),repeating-linear-gradient(90deg,#ffffff0a 0 1px,transparent 1px 17px),#151b3b; }
+.block-preview i,.block-preview b,.block-preview em,.block-preview strong { position:absolute; display:block; width:17px; height:17px; background:#39d8e6; box-shadow:18px 0 #39d8e6,36px 0 #39d8e6; }
+.block-preview i { left:16px; top:80px; }.block-preview b { left:52px; top:63px; background:#f26175; box-shadow:18px 0 #f26175,0 18px #f26175; }.block-preview em { left:70px; top:98px; background:#ffd34d; box-shadow:18px 0 #ffd34d,0 -18px #ffd34d,18px -18px #ffd34d; }.block-preview strong { left:34px; top:28px; background:#ad72ec; box-shadow:18px 0 #ad72ec,36px 0 #ad72ec,18px 18px #ad72ec; }
 .rapid-preview {
   position: absolute;
   inset: 32px 24px 22px;
