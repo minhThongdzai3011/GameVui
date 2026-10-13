@@ -32,12 +32,13 @@ function makePlatform(y, previous) {
 }
 
 function resetRound() {
-  ball = { x: WIDTH / 2, y: 128, radius: 9, vx: 0, vy: 0 };
+  ball = { x: WIDTH / 2, y: 88, radius: 9, vx: 0, vy: 0 };
   platforms = [];
-  const base = { x: 83, y: 185, w: 95, h: 7 };
+  // Bệ đầu luôn rộng và ở ngay dưới bóng: người chơi có hơn nửa giây để làm quen sau khi spawn.
+  const base = { x: 63, y: 245, w: 144, h: 7 };
   platforms.push(base);
   let previous = base;
-  for (let y = 265; y < HEIGHT + 100; y += 78) {
+  for (let y = 344; y < HEIGHT + 100; y += 82) {
     previous = makePlatform(y, previous);
     platforms.push(previous);
   }
