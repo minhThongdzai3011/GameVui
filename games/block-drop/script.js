@@ -11,9 +11,9 @@ const copy = (shape) => shape.map((row) => [...row]);
 function randomBag() { return Object.keys(SHAPES).sort(() => Math.random() - .5); }
 function refill() { while (queue.length < 6) queue.push(...randomBag()); }
 function fresh(type) { const matrix = copy(SHAPES[type]); return { type, matrix, x:Math.floor((COLS - matrix[0].length) / 2), y:-1 }; }
-function reset() { grid = Array.from({length:ROWS}, () => Array(COLS).fill("")); bag=[]; queue=[]; refill(); active=null; held=null; holdUsed=false; score=0; lines=0; level=1; running=false; paused=false; drawAll(); show("BLOCK DROP", "Xếp kín hàng để xoá chúng!", "BẮT ĐẦU"); }
+function reset() { grid = Array.from({length:ROWS}, () => Array(COLS).fill("")); bag=[]; queue=[]; refill(); active=null; held=null; holdUsed=false; score=0; lines=0; level=1; running=false; paused=false; dropTimer=0; drawAll(); show("BLOCK DROP", "Xếp kín hàng để xoá chúng!", "BẮT ĐẦU"); }
 function show(title,text,button) { overlayTitle.textContent=title; overlayText.textContent=text; document.querySelector("#start").textContent=button; overlay.hidden=false; }
-function start() { if (running) return; running=true; paused=false; overlay.hidden=true; if (!active) spawn(); last=performance.now(); animation=requestAnimationFrame(loop); }
+function start() { if (running) return; running=true; paused=false; dropTimer=0; overlay.hidden=true; if (!active) spawn(); last=performance.now(); animation=requestAnimationFrame(loop); }
 function spawn(type) { refill(); active=fresh(type || queue.shift()); refill(); holdUsed=false; if (collides(active)) gameOver(); }
 function collides(piece, dx=0, dy=0, matrix=piece.matrix) { return matrix.some((row,y) => row.some((cell,x) => { if (!cell) return false; const px=piece.x+x+dx, py=piece.y+y+dy; return px<0 || px>=COLS || py>=ROWS || (py>=0 && grid[py][px]); })); }
 function move(dx,dy) { if (!running || paused || !active || collides(active,dx,dy)) return false; active.x+=dx; active.y+=dy; return true; }
