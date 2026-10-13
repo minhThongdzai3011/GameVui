@@ -184,7 +184,8 @@ function draw() {
   });
   drawBall();
   scoreEl.textContent = String(score).padStart(6, "0");
-  livesEl.textContent = `×${lives}`;
+  livesEl.textContent = "♥".repeat(lives);
+  livesEl.setAttribute("aria-label", `${lives} mạng còn lại`);
 }
 
 function setKey(name, value) {
