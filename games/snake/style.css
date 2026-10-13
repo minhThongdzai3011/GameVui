@@ -2,7 +2,7 @@
   --ink: #192238;
   --cream: #fffaf1;
   --orange: #ff7859;
-  --lcd: #c7f0d8;
+  --lcd: #a3a02a;
   --body: #2c3a52;
   --body-dark: #1e293d;
 }
@@ -93,12 +93,12 @@ kbd {
   display: block;
   width: 100%;
   margin: 0 auto;
-  aspect-ratio: 84 / 48;
+  aspect-ratio: 96 / 68;
   border-radius: 4px;
   background: var(--lcd);
   image-rendering: pixelated;
   box-shadow:
-    inset 0 0 18px #6aa58450,
+    inset 0 0 18px #5c5a1050,
     0 0 0 1px #0006;
   touch-action: none;
 }

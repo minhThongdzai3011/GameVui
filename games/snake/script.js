@@ -1,22 +1,23 @@
-// Rắn săn mồi — tái hiện Snake II trên điện thoại "cục gạch" (màn LCD 84×48).
-// Lưới chơi 20×9 ô, mỗi ô 4×4 điểm ảnh; 9 cấp tốc độ; 6 mê cung; mồi thưởng
-// xuất hiện sau mỗi 5 mồi; rắn nuốt mồi tạo chỗ phình chạy dọc thân và chỉ dài
-// thêm khi chỗ phình tới đuôi; "Không mê cung" thì đi xuyên qua mép màn hình.
+// Rắn săn mồi — tái hiện Snake Xenzia trên điện thoại "cục gạch" (màn LCD 96×68
+// vàng xanh). Lưới chơi 24×14 ô, mỗi ô 4×4 điểm ảnh; thân rắn dạng vảy so le có
+// chấm sáng ở mỗi đốt; điểm hiển thị ở đáy màn hình; 9 cấp tốc độ; 6 mê cung;
+// mồi thưởng sau mỗi 5 mồi; nuốt mồi tạo chỗ phình chạy dọc thân và rắn chỉ dài
+// thêm khi chỗ phình tới đuôi; đi ra mép (nếu không có tường) thì xuyên sang bên kia.
 (() => {
   "use strict";
 
   // ---------- Màn hình LCD ----------
-  const LW = 84;
-  const LH = 48;
-  const COLS = 20;
-  const ROWS = 9;
-  const FX = 2; // gốc toạ độ ô (0,0) trên LCD
-  const FY = 9;
-  const LCD_BG = "#c7f0d8";
-  const LCD_ON = "#43523d";
-  const LCD_OFF = "rgba(67,82,61,0.07)";
+  const LW = 96;
+  const LH = 68;
+  const COLS = 24;
+  const ROWS = 14;
+  const HUD_Y = 57; // vạch kẻ phía trên điểm số
+  const CX = LW / 2;
+  const LCD_BG = "#a3a02a";
+  const LCD_ON = "#2f2a0c";
+  const LCD_OFF = "rgba(47,42,12,0.06)";
   const FONT = "bold 9px Tahoma, Verdana, Geneva, sans-serif";
-  const FONT_BIG = "bold 11px Tahoma, Verdana, Geneva, sans-serif";
+  const FONT_BIG = "bold 12px Tahoma, Verdana, Geneva, sans-serif";
 
   // Mili-giây cho mỗi bước đi theo cấp độ 1..9
   const SPEED = [0, 500, 420, 350, 290, 235, 190, 150, 115, 85];
@@ -96,7 +97,27 @@
     for (let i = 0; i < t.bits.length; i += 2) dot(ox + t.bits[i], baseline + t.bits[i + 1], v);
   }
 
-  // Số 3×5 dùng cho bảng điểm, phóng to được
+  // Số 4×7 nét mảnh cho điểm ở đáy màn hình
+  const DIGITS7 = {
+    0: [".##.", "#..#", "#..#", "#..#", "#..#", "#..#", ".##."],
+    1: ["..#.", ".##.", "..#.", "..#.", "..#.", "..#.", ".###"],
+    2: [".##.", "#..#", "...#", "..#.", ".#..", "#...", "####"],
+    3: [".##.", "#..#", "...#", "..#.", "...#", "#..#", ".##."],
+    4: ["..#.", ".##.", "#.#.", "#.#.", "####", "..#.", "..#."],
+    5: ["####", "#...", "###.", "...#", "...#", "#..#", ".##."],
+    6: [".##.", "#...", "###.", "#..#", "#..#", "#..#", ".##."],
+    7: ["####", "...#", "..#.", "..#.", ".#..", ".#..", ".#.."],
+    8: [".##.", "#..#", "#..#", ".##.", "#..#", "#..#", ".##."],
+    9: [".##.", "#..#", "#..#", ".###", "...#", "...#", ".##."],
+  };
+  function digits7(str, x, y) {
+    for (const ch of str) {
+      if (DIGITS7[ch]) blit(DIGITS7[ch], x, y);
+      x += 5;
+    }
+  }
+
+  // Số 3×5 phóng to cho các màn điểm / cấp độ
   const DIGITS = {
     0: ["###", "#.#", "#.#", "#.#", "###"],
     1: [".#.", "##.", ".#.", ".#.", "###"],
@@ -122,11 +143,10 @@
 
   // ---------- Sprite (ô 4×4) ----------
   // Đầu rắn hướng sang phải, thân nối ở bên trái
-  const HEAD = [".##.", "##.#", "####", ".##."];
-  const HEAD_OPEN = [".#.#", "##..", "##..", ".#.#"];
-  const TAIL = ["....", "..##", "..##", "...."]; // thân nối ở bên phải
-  const BULGE = [".##.", "####", "####", ".##."];
-  const FOOD = [".#..", "#.#.", ".#..", "...."];
+  const HEAD = ["###.", "#.##", "####", "###."];
+  const HEAD_OPEN = ["####", "#.#.", "##..", "####"];
+  const TAIL = ["....", "..##", "####", "...."]; // thon dần, thân nối ở bên phải
+  const FOOD = [".##.", "##.#", "####", ".##."];
   const BONUS = [
     ["#..##..#", ".######.", "#.#..#.#", ".#....#."],
     [".##..##.", "#..##..#", ".######.", "#.#..#.#"],
@@ -153,78 +173,48 @@
       }
   }
 
-  // ---------- Mê cung (22×11, vòng ngoài là mép màn hình) ----------
-  // '#' = tường, '.' = trống; ô mép trống nghĩa là đi xuyên sang phía đối diện.
-  const ring = (top, side) => (inner) => [
-    top,
-    ...inner.map((r, i) => side[i] + r + side[i]),
-    top,
-  ];
-  const OPEN_TOP = ".".repeat(22);
-  const WALL_TOP = "#".repeat(22);
-  const EMPTY = Array(9).fill(".".repeat(20));
+  // ---------- Mê cung 24×14 ('#' = tường) ----------
+  // Ra khỏi mép lưới thì xuyên sang phía đối diện, nên mép nào có tường mới chặn.
+  const grid = (wall) =>
+    Array.from({ length: ROWS }, (_, r) =>
+      Array.from({ length: COLS }, (_, c) => (wall(c, r) ? "#" : ".")).join(""),
+    );
+  const edge = (c, r) => c === 0 || r === 0 || c === COLS - 1 || r === ROWS - 1;
   const MAZES = [
-    { name: "Không có", map: ring(OPEN_TOP, ".........")(EMPTY) },
-    { name: "Hộp", map: ring(WALL_TOP, "#########")(EMPTY) },
+    { name: "Không có", map: grid(() => false) },
+    { name: "Hộp", map: grid(edge) },
     {
       name: "Đường hầm",
-      map: ring("######..........######", "###...###")([
-        "....................",
-        "....................",
-        "......########......",
-        "....................",
-        "....................",
-        "....................",
-        "......########......",
-        "....................",
-        "....................",
-      ]),
+      map: grid(
+        (c, r) =>
+          (edge(c, r) && !((r === 0 || r === ROWS - 1) && c >= 9 && c <= 14) && !((c === 0 || c === COLS - 1) && r >= 5 && r <= 8)) ||
+          ((r === 4 || r === 9) && c >= 7 && c <= 16),
+      ),
     },
     {
       name: "Cối xay",
-      map: ring(OPEN_TOP, ".........")([
-        "..........#.........",
-        "..........#.........",
-        "..........#######...",
-        "....................",
-        "....................",
-        "....................",
-        "...#######..........",
-        ".........#..........",
-        ".........#..........",
-      ]),
+      map: grid(
+        (c, r) =>
+          (c === 12 && r <= 3) ||
+          (r === 3 && c >= 12 && c <= 19) ||
+          (c === 11 && r >= 10) ||
+          (r === 10 && c >= 4 && c <= 11),
+      ),
     },
     {
       name: "Đường ray",
-      map: ring(OPEN_TOP, "#########")([
-        "....................",
-        "..################..",
-        "....................",
-        "....................",
-        "....................",
-        "....................",
-        "....................",
-        "..################..",
-        "....................",
-      ]),
+      map: grid(
+        (c, r) => c === 0 || c === COLS - 1 || ((r === 3 || r === 10) && c >= 3 && c <= 20),
+      ),
     },
     {
       name: "Căn hộ",
-      map: ring(WALL_TOP, "#########")([
-        "......#......#......",
-        "......#......#......",
-        "......#......#......",
-        "....................",
-        "....................",
-        "....................",
-        "......#......#......",
-        "......#......#......",
-        "......#......#......",
-      ]),
+      map: grid(
+        (c, r) => edge(c, r) || ((c === 8 || c === 15) && ((r >= 1 && r <= 4) || (r >= 9 && r <= 12))),
+      ),
     },
   ];
-  // c, r tính theo lưới trong (−1 và 20/9 là vòng mép)
-  const mazeAt = (c, r) => MAZES[maze].map[r + 1][c + 1] === "#";
+  const mazeAt = (c, r) => MAZES[maze].map[r][c] === "#";
 
   // ---------- Âm thanh: tiếng bíp sóng vuông như loa điện thoại cũ ----------
   let actx = null;
@@ -311,19 +301,19 @@
   let diedAt = 0;
   let newTop = false;
 
+  const VISIBLE = 4; // số dòng hiện được trong danh sách
   const HELP = [
-    "Dùng 2, 4, 6, 8",
-    "hoặc mũi tên để",
-    "điều khiển rắn.",
-    "Ăn mồi để lớn",
-    "lên, ghi điểm.",
-    "Cứ 5 mồi sẽ có",
-    "một mồi thưởng,",
-    "ăn càng nhanh",
-    "càng nhiều điểm.",
-    "Đừng cắn vào",
-    "thân hay đâm",
-    "vào tường!",
+    "Dùng 2, 4, 6, 8 hoặc",
+    "mũi tên để điều",
+    "khiển rắn.",
+    "Ăn mồi để lớn lên",
+    "và ghi điểm.",
+    "Cứ 5 mồi sẽ có một",
+    "mồi thưởng, ăn càng",
+    "nhanh càng nhiều",
+    "điểm.",
+    "Đừng cắn vào thân",
+    "hay đâm vào tường!",
     "C: tạm dừng.",
   ];
 
@@ -343,11 +333,12 @@
 
   // ---------- Logic rắn ----------
   const same = (a, b) => a.x === b.x && a.y === b.y;
+  const onBonus = (p) => bonus && p.y === bonus.y && (p.x === bonus.x || p.x === bonus.x + 1);
   const occupied = (x, y) =>
     mazeAt(x, y) ||
     snake.some((s) => s.x === x && s.y === y) ||
     (food && food.x === x && food.y === y) ||
-    (bonus && bonus.y === y && (bonus.x === x || bonus.x + 1 === x));
+    onBonus({ x, y });
 
   function randomFree(width = 1) {
     const free = [];
@@ -362,7 +353,7 @@
 
   function newGame() {
     snake = [];
-    for (let i = 0; i < 5; i++) snake.push({ x: 7 - i, y: 4, full: false });
+    for (let i = 0; i < 6; i++) snake.push({ x: 9 - i, y: 7, full: false });
     dir = { x: 1, y: 0 };
     queue = [];
     bonus = null;
@@ -384,17 +375,11 @@
     if (queue.length < 2) queue.push(d);
   }
 
-  // Ô phía trước (có tính đi xuyên mép), null nếu là tường mép
-  function ahead(from, d) {
-    let x = from.x + d.x;
-    let y = from.y + d.y;
-    if (x < 0 || y < 0 || x >= COLS || y >= ROWS) {
-      if (mazeAt(x, y)) return null;
-      x = (x + COLS) % COLS;
-      y = (y + ROWS) % ROWS;
-    }
-    return { x, y };
-  }
+  // Ô phía trước, xuyên mép sang phía đối diện
+  const ahead = (from, d) => ({
+    x: (from.x + d.x + COLS) % COLS,
+    y: (from.y + d.y + ROWS) % ROWS,
+  });
 
   function die() {
     state = "dying";
@@ -410,7 +395,7 @@
   function step() {
     if (queue.length) dir = queue.shift();
     const next = ahead(snake[0], dir);
-    if (!next || mazeAt(next.x, next.y)) return die();
+    if (mazeAt(next.x, next.y)) return die();
     const tail = snake[snake.length - 1];
     const grow = tail.full;
     const body = grow ? snake : snake.slice(0, -1);
@@ -438,7 +423,7 @@
           sfx.bonusShow();
         } else sfx.eat();
       } else sfx.eat();
-    } else if (bonus && next.y === bonus.y && (next.x === bonus.x || next.x === bonus.x + 1)) {
+    } else if (onBonus(next)) {
       score += 5 * level + bonus.time;
       snake[0].full = true;
       bonus = null;
@@ -459,123 +444,128 @@
   }
 
   // ---------- Vẽ màn chơi ----------
-  function drawField() {
+  function drawWalls() {
     const m = MAZES[maze].map;
-    // Viền: nét mảnh luôn có, ô mép là tường thì vẽ dày
-    frame(0, 7, LW, 40);
-    for (let c = 0; c < COLS; c++) {
-      if (m[0][c + 1] === "#") rect(FX + c * 4, 8, 4, 1);
-      if (m[10][c + 1] === "#") rect(FX + c * 4, 45, 4, 1);
-    }
-    for (let r = 0; r < ROWS; r++) {
-      if (m[r + 1][0] === "#") rect(1, FY + r * 4, 1, 4);
-      if (m[r + 1][21] === "#") rect(82, FY + r * 4, 1, 4);
-    }
-    if (m[0][0] === "#") dot(1, 8);
-    if (m[0][21] === "#") dot(82, 8);
-    if (m[10][0] === "#") dot(1, 45);
-    if (m[10][21] === "#") dot(82, 45);
     for (let r = 0; r < ROWS; r++)
-      for (let c = 0; c < COLS; c++) if (m[r + 1][c + 1] === "#") rect(FX + c * 4, FY + r * 4, 4, 4);
+      for (let c = 0; c < COLS; c++)
+        if (m[r][c] === "#") {
+          rect(c * 4, r * 4, 4, 4);
+          dot(c * 4 + 1 + ((c + r) & 1), r * 4 + 1 + ((c + r) & 1), 0);
+        }
+  }
+
+  // Đốt thân: dải dày 4px, lệch lên/xuống 1px xen kẽ (tạo vảy lượn sóng),
+  // cách một đốt có một chấm sáng.
+  function drawBody(s, conns, ox, oy) {
+    const p = (s.x + s.y) & 1; // 0: dải nằm gọn trong ô, 1: lệch xuống/phải 1px
+    if (conns.some((d) => d.x !== 0)) {
+      const x0 = conns.some((d) => d.x === -1) ? 0 : 1;
+      const x1 = conns.some((d) => d.x === 1) ? 3 : 2;
+      rect(ox + x0, oy + p, x1 - x0 + 1, 4);
+    }
+    if (conns.some((d) => d.y !== 0)) {
+      const y0 = conns.some((d) => d.y === -1) ? 0 : 1;
+      const y1 = conns.some((d) => d.y === 1) ? 3 : 2;
+      rect(ox + p, oy + y0, 4, y1 - y0 + 1);
+    }
+    if (s.full) {
+      // Chỗ phình khi vừa nuốt mồi
+      rect(ox, oy, 4, 4);
+    }
+    if (!p) dot(ox + 1, oy + 1, 0);
+    else dot(ox + 2, oy + 2, 0);
   }
 
   function drawSnake() {
     const n = snake.length;
     const front = ahead(snake[0], dir);
-    const mouth =
-      state === "run" &&
-      front &&
-      ((food && same(food, front)) ||
-        (bonus && front.y === bonus.y && (front.x === bonus.x || front.x === bonus.x + 1)));
+    const mouth = state === "run" && ((food && same(food, front)) || onBonus(front));
     for (let i = n - 1; i >= 0; i--) {
       const s = snake[i];
-      const ox = FX + s.x * 4;
-      const oy = FY + s.y * 4;
-      if (i === 0) {
-        blitDir(mouth ? HEAD_OPEN : HEAD, ox, oy, dirTo(snake[1], s));
-      } else if (s.full) {
-        blit(BULGE, ox, oy);
-      } else if (i === n - 1) {
-        // Sprite đuôi nối bên phải → xoay theo hướng về phía đốt trước
-        blitDir(TAIL, ox, oy, dirTo(s, snake[i - 1]));
-      } else {
-        rect(ox + 1, oy + 1, 2, 2);
-        for (const d of [dirTo(s, snake[i - 1]), dirTo(s, snake[i + 1])]) {
-          if (d.x === 1) rect(ox + 3, oy + 1, 1, 2);
-          if (d.x === -1) rect(ox, oy + 1, 1, 2);
-          if (d.y === 1) rect(ox + 1, oy + 3, 2, 1);
-          if (d.y === -1) rect(ox + 1, oy, 2, 1);
-        }
+      const ox = s.x * 4;
+      const oy = s.y * 4;
+      if (i === 0) blitDir(mouth ? HEAD_OPEN : HEAD, ox, oy, dirTo(snake[1], s));
+      else if (i === n - 1 && !s.full) blitDir(TAIL, ox, oy, dirTo(s, snake[i - 1]));
+      else {
+        const conns = [dirTo(s, snake[i - 1])];
+        if (i < n - 1) conns.push(dirTo(s, snake[i + 1]));
+        drawBody(s, conns, ox, oy);
       }
     }
   }
 
   function drawGame(now) {
-    digits(String(score).padStart(4, "0"), 1, 1);
-    if (bonus) {
-      blit(BONUS[bonus.kind], 60, 1);
-      digits(String(bonus.time).padStart(2, "0"), 76, 1);
-    }
-    drawField();
-    if (food) blit(FOOD, FX + food.x * 4, FY + food.y * 4);
+    drawWalls();
+    if (food) blit(FOOD, food.x * 4, food.y * 4);
     if (bonus && (bonus.time > 6 || Math.floor(now / 150) % 2 === 0))
-      blit(BONUS[bonus.kind], FX + bonus.x * 4, FY + bonus.y * 4);
+      blit(BONUS[bonus.kind], bonus.x * 4, bonus.y * 4);
     const visible = state !== "dying" || Math.floor((now - diedAt) / 220) % 2 === 1;
     if (visible) drawSnake();
+
+    // Thanh điểm ở đáy màn hình
+    rect(0, HUD_Y, LW, 1);
+    digits7(String(score).padStart(4, "0"), 1, 60);
+    if (bonus) {
+      blit(BONUS[bonus.kind], 72, 62);
+      digits7(String(bonus.time).padStart(2, "0"), 86, 60);
+    }
   }
 
   // ---------- Vẽ menu kiểu điện thoại ----------
   function drawScrollbar(total, first, shown) {
     if (total <= shown) return;
-    rect(82, 12, 1, 36);
-    const h = Math.max(4, Math.round((36 * shown) / total));
-    const y = 12 + Math.round(((36 - h) * first) / (total - shown));
-    rect(81, y, 3, h);
+    rect(94, 13, 1, 55);
+    const h = Math.max(5, Math.round((55 * shown) / total));
+    const y = 13 + Math.round(((55 - h) * first) / (total - shown));
+    rect(93, y, 3, h);
+  }
+
+  function drawHeader(title) {
+    text(title, CX, 10, { align: "center" });
   }
 
   function drawList(title, items, sel, scroll, marker) {
-    text(title, 41, 9, { align: "center" });
-    for (let k = 0; k < 3; k++) {
+    drawHeader(title);
+    for (let k = 0; k < VISIBLE; k++) {
       const i = scroll + k;
       if (i >= items.length) break;
-      const y = 12 + k * 12;
+      const y = 13 + k * 13;
       const on = i === sel;
-      if (on) rect(0, y, 80, 12);
-      text(items[i], 2, y + 9, { v: on ? 0 : 1 });
+      if (on) rect(0, y, 92, 13);
+      text(items[i], 2, y + 10, { v: on ? 0 : 1 });
       if (marker) marker(i, y, on ? 0 : 1);
     }
-    drawScrollbar(items.length, scroll, 3);
+    drawScrollbar(items.length, scroll, VISIBLE);
   }
 
   function keepVisible(sel, scroll) {
     if (sel < scroll) return sel;
-    if (sel > scroll + 2) return sel - 2;
+    if (sel > scroll + VISIBLE - 1) return sel - VISIBLE + 1;
     return scroll;
   }
 
+  // Màn chào: chú rắn vảy uốn lượn đi về phía mồi
   function drawSplash(now) {
-    text("Rắn săn mồi", 42, 13, { font: FONT_BIG, align: "center" });
-    // Chú rắn uốn lượn
-    const t = now / 120;
-    for (let x = 8; x < 66; x += 2) {
-      const y = 28 + Math.round(Math.sin((x + t * 2) / 7) * 4);
-      rect(x, y, 2, 2);
+    text("Rắn săn mồi", CX, 16, { font: FONT_BIG, align: "center" });
+    const t = now / 90;
+    for (let x = 6; x < 74; x += 2) {
+      const y = 34 + Math.round(Math.sin((x + t) / 8) * 5);
+      rect(x, y + ((x >> 1) & 1), 2, 3);
+      if (x % 4 === 2) dot(x, y + 1 + ((x >> 1) & 1), 0);
     }
-    const hy = 28 + Math.round(Math.sin((66 + t * 2) / 7) * 4);
-    rect(66, hy - 1, 4, 4);
-    dot(68, hy, 0);
-    dot(71, hy + 1);
-    blit(FOOD, 76, 27);
-    if (Math.floor(now / 500) % 2 === 0) text("Bấm để chơi", 42, 46, { align: "center" });
+    const hy = 34 + Math.round(Math.sin((74 + t) / 8) * 5);
+    blit(HEAD, 74, hy);
+    blit(FOOD, 84, 35);
+    if (Math.floor(now / 500) % 2 === 0) text("Bấm để chơi", CX, 62, { align: "center" });
   }
 
   function drawLevel() {
-    text("Cấp độ", 41, 9, { align: "center" });
-    digits(String(levelPick), 42 - 4, 13, 3);
+    drawHeader("Cấp độ");
+    digits(String(levelPick), CX - 6, 16, 4);
     for (let i = 0; i < 9; i++) {
-      const x = 7 + i * 8;
-      if (i < levelPick) rect(x, 36, 6, 7);
-      else frame(x, 36, 6, 7);
+      const x = 4 + i * 10;
+      if (i < levelPick) rect(x, 46, 8, 10);
+      else frame(x, 46, 8, 10);
     }
   }
 
@@ -586,33 +576,33 @@
       listSel,
       listScroll,
       (i, y, v) => {
-        frame(73, y + 3, 6, 6, v);
-        if (i === maze) rect(75, y + 5, 2, 2, v);
+        frame(84, y + 3, 7, 7, v);
+        if (i === maze) rect(86, y + 5, 3, 3, v);
       },
     );
   }
 
   function drawTop() {
-    text("Điểm cao nhất", 41, 9, { align: "center" });
+    drawHeader("Điểm cao nhất");
     const s = String(top);
-    digits(s, 42 - Math.floor(digitsWidth(s, 3) / 2), 20, 3);
+    digits(s, CX - Math.floor(digitsWidth(s, 4) / 2), 24, 4);
   }
 
   function drawHelp() {
-    text("Hướng dẫn", 41, 9, { align: "center" });
-    for (let k = 0; k < 3; k++) {
+    drawHeader("Hướng dẫn");
+    for (let k = 0; k < VISIBLE; k++) {
       const line = HELP[listScroll + k];
-      if (line) text(line, 1, 21 + k * 12);
+      if (line) text(line, 1, 24 + k * 13);
     }
-    drawScrollbar(HELP.length, listScroll, 3);
+    drawScrollbar(HELP.length, listScroll, VISIBLE);
   }
 
   function drawOver() {
-    text("Kết thúc!", 42, 10, { align: "center" });
-    text("Điểm của bạn:", 42, 23, { align: "center" });
+    text("Kết thúc!", CX, 13, { font: FONT_BIG, align: "center" });
+    text("Điểm của bạn:", CX, 29, { align: "center" });
     const s = String(score);
-    digits(s, 42 - Math.floor(digitsWidth(s, 2) / 2), 27, 2);
-    if (newTop) text("Kỷ lục mới!", 42, 47, { align: "center" });
+    digits(s, CX - Math.floor(digitsWidth(s, 3) / 2), 34, 3);
+    if (newTop) text("Kỷ lục mới!", CX, 65, { align: "center" });
   }
 
   // ---------- Điều khiển ----------
@@ -655,7 +645,7 @@
             go("level");
           } else if (act === "maze") {
             listSel = maze;
-            listScroll = keepVisible(maze, Math.max(0, maze - 2));
+            listScroll = keepVisible(maze, 0);
             go("maze");
           } else if (act === "top") go("top");
           else if (act === "help") {
@@ -697,7 +687,7 @@
         break;
       case "help":
         if (k === "up") listScroll = Math.max(0, listScroll - 1);
-        else if (k === "down") listScroll = Math.min(HELP.length - 3, listScroll + 1);
+        else if (k === "down") listScroll = Math.min(HELP.length - VISIBLE, listScroll + 1);
         else if (k === "ok" || k === "back" || k === "left") go("menu");
         break;
       case "game":
