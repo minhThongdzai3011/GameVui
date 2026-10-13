@@ -9,48 +9,43 @@ const startButton = document.querySelector("#start");
 
 const WIDTH = canvas.width;
 const HEIGHT = canvas.height;
+const TOP_SPIKES_Y = 14;
 const keys = { left: false, right: false };
-let ball;
-let platforms;
-let score;
-let lives;
-let speed;
-let running = false;
-let lastTime = 0;
-let animation = 0;
+let ball, platforms, score, lives, speed, running, lastTime, animation, platformNumber, elapsed;
 
-function makePlatform(y, previous) {
-  const width = 48 + Math.random() * 42;
-  const gap = previous ? Math.min(105, 64 + score * 0.25) : 0;
-  let x = 12 + Math.random() * (WIDTH - width - 24);
-  if (previous) {
-    const min = Math.max(12, previous.x - gap);
-    const max = Math.min(WIDTH - width - 12, previous.x + previous.w + gap - width);
-    x = max > min ? min + Math.random() * (max - min) : x;
-  }
-  return { x, y, w: width, h: 7 };
+function spikeChance() {
+  return Math.min(0.42, 0.12 + elapsed / 90000);
+}
+
+function makePlatform(y, previous, safe = false) {
+  const width = 52 + Math.random() * 43;
+  const range = previous ? 108 : WIDTH - width - 24;
+  const center = previous ? previous.x + previous.w / 2 + (Math.random() - 0.5) * range : WIDTH / 2;
+  const x = Math.max(12, Math.min(WIDTH - width - 12, center - width / 2));
+  platformNumber++;
+  return { x, y, w: width, h: 7, spikes: !safe && platformNumber > 4 && Math.random() < spikeChance(), scored: false };
 }
 
 function resetRound() {
-  ball = { x: WIDTH / 2, y: 88, radius: 9, vx: 0, vy: 0 };
-  platforms = [];
-  // Bệ đầu luôn rộng và ở ngay dưới bóng: người chơi có hơn nửa giây để làm quen sau khi spawn.
-  const base = { x: 63, y: 245, w: 144, h: 7 };
-  platforms.push(base);
-  let previous = base;
-  for (let y = 344; y < HEIGHT + 100; y += 82) {
-    previous = makePlatform(y, previous);
+  platformNumber = 0;
+  const spawn = { x: 57, y: 236, w: 156, h: 7, spikes: false, scored: true };
+  ball = { x: WIDTH / 2, y: spawn.y - 9, radius: 9, vx: 0, vy: 0, on: spawn };
+  platforms = [spawn];
+  let previous = spawn;
+  for (let y = 326; y < HEIGHT + 110; y += 82) {
+    previous = makePlatform(y, previous, platformNumber < 3);
     platforms.push(previous);
   }
-  speed = 1.18;
+  speed = 0.92;
 }
 
 function newGame() {
   score = 0;
   lives = 3;
+  elapsed = 0;
   resetRound();
   draw();
-  showMessage("READY", "Bấm bắt đầu để lăn!", "BẮT ĐẦU");
+  showMessage("READY", "Rời bệ để rơi xuống, tránh hàng gai!", "BẮT ĐẦU");
 }
 
 function showMessage(title, text, buttonText) {
@@ -68,40 +63,65 @@ function start() {
   animation = requestAnimationFrame(loop);
 }
 
+function landOn(platform) {
+  if (platform.spikes) return loseLife();
+  ball.on = platform;
+  ball.y = platform.y - ball.radius;
+  ball.vy = 0;
+  if (!platform.scored) {
+    platform.scored = true;
+    score += 10;
+  }
+}
+
 function move(delta) {
   const factor = delta / 16.67;
-  ball.vx += (keys.left ? -0.46 : 0) + (keys.right ? 0.46 : 0);
-  ball.vx *= Math.pow(0.82, factor);
-  ball.vx = Math.max(-4.2, Math.min(4.2, ball.vx));
+  elapsed += delta;
+  speed = Math.min(3.1, 0.92 + Math.floor(elapsed / 20000) * 0.24);
+  ball.vx += (keys.left ? -0.42 : 0) + (keys.right ? 0.42 : 0);
+  ball.vx *= Math.pow(0.79, factor);
+  ball.vx = Math.max(-3.8, Math.min(3.8, ball.vx));
   ball.x += ball.vx * factor;
   ball.x = Math.max(ball.radius + 5, Math.min(WIDTH - ball.radius - 5, ball.x));
-  ball.vy += 0.2 * factor;
-  ball.vy = Math.min(ball.vy, 5.5);
-  const oldBottom = ball.y + ball.radius;
-  ball.y += ball.vy * factor;
-
-  speed = Math.min(3.25, 1.18 + score / 620);
   platforms.forEach((platform) => (platform.y -= speed * factor));
-  for (const platform of platforms) {
-    const overlaps = ball.x + ball.radius > platform.x && ball.x - ball.radius < platform.x + platform.w;
-    const crossesTop = oldBottom <= platform.y + speed * factor + 2 && ball.y + ball.radius >= platform.y;
-    if (ball.vy > 0 && overlaps && crossesTop) {
+
+  if (ball.on) {
+    const platform = ball.on;
+    const stillOnPlatform = platforms.includes(platform) && ball.x + ball.radius > platform.x && ball.x - ball.radius < platform.x + platform.w;
+    if (stillOnPlatform) {
       ball.y = platform.y - ball.radius;
-      ball.vy = -4.05;
-      score += 5;
-      break;
+    } else {
+      ball.on = null;
+      ball.vy = 0.5;
     }
   }
-  while (platforms.length && platforms[0].y < -20) platforms.shift();
-  while (platforms.length < 9) {
-    const last = platforms[platforms.length - 1];
-    platforms.push(makePlatform(last.y + 72 + Math.random() * 21, last));
+
+  if (!ball.on) {
+    const oldBottom = ball.y + ball.radius;
+    ball.vy = Math.min(5.8, ball.vy + 0.2 * factor);
+    ball.y += ball.vy * factor;
+    for (const platform of platforms) {
+      const overlaps = ball.x + ball.radius > platform.x && ball.x - ball.radius < platform.x + platform.w;
+      const crossesTop = oldBottom <= platform.y + speed * factor + 2 && ball.y + ball.radius >= platform.y;
+      if (ball.vy > 0 && overlaps && crossesTop) {
+        landOn(platform);
+        break;
+      }
+    }
   }
-  if (ball.y - ball.radius > HEIGHT + 4) loseLife();
+
+  if (ball.y - ball.radius <= TOP_SPIKES_Y + 11 || ball.y - ball.radius > HEIGHT + 5) return loseLife();
+  while (platforms.length && platforms[0].y < -28) platforms.shift();
+  while (platforms.length < 9) {
+    const previous = platforms[platforms.length - 1];
+    platforms.push(makePlatform(previous.y + 70 + Math.random() * 24, previous));
+  }
 }
 
 function loseLife() {
   lives--;
+  keys.left = false;
+  keys.right = false;
   if (lives <= 0) {
     running = false;
     cancelAnimationFrame(animation);
@@ -125,6 +145,17 @@ function dotsLine(x, y, width) {
   for (let dot = x; dot < x + width; dot += 5) context.fillRect(dot, y, 3, 3);
 }
 
+function drawSpikes(x, y, width) {
+  context.fillStyle = "#073c43";
+  for (let point = x; point < x + width; point += 7) {
+    context.beginPath();
+    context.moveTo(point, y + 7);
+    context.lineTo(point + 3.5, y);
+    context.lineTo(point + 7, y + 7);
+    context.fill();
+  }
+}
+
 function drawBall() {
   context.fillStyle = "#073c43";
   context.beginPath();
@@ -141,12 +172,16 @@ function draw() {
   context.strokeStyle = "#073c43";
   context.lineWidth = 3;
   context.strokeRect(7, 7, WIDTH - 14, HEIGHT - 14);
-  for (let y = 12; y < HEIGHT - 10; y += 25) {
+  drawSpikes(10, TOP_SPIKES_Y, WIDTH - 20);
+  for (let y = 32; y < HEIGHT - 10; y += 25) {
     context.fillStyle = "#073c43";
     context.fillRect(8, y, 4, 10);
     context.fillRect(WIDTH - 12, y, 4, 10);
   }
-  platforms.forEach((platform) => dotsLine(Math.round(platform.x), Math.round(platform.y), platform.w));
+  platforms.forEach((platform) => {
+    dotsLine(Math.round(platform.x), Math.round(platform.y), platform.w);
+    if (platform.spikes) drawSpikes(Math.round(platform.x), Math.round(platform.y - 8), platform.w);
+  });
   drawBall();
   scoreEl.textContent = String(score).padStart(6, "0");
   livesEl.textContent = `×${lives}`;
