@@ -4,27 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Dino Runner - GameVui</title>
-    <link rel="stylesheet" href="../shared/game.css" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css?v=3" />
   </head>
   <body>
     <main class="page">
       <a class="back" href="../../index.html">← Về GameVui</a>
       <section class="panel">
-        <p class="eyebrow">GAMEVUI</p>
+        <p class="eyebrow">GAMEVUI · ENDLESS RUNNER</p>
         <h1>Dino Runner</h1>
-        <p class="help"></p>
-        <div class="score">ĐIỂM <strong id="score">0</strong></div>
-        <canvas width="400" height="400"></canvas>
-        <div class="controls">
-          <button data-c="left">◀</button><button data-c="up">▲</button
-          ><button data-c="action">NHẢY</button><button data-c="down">▼</button
-          ><button data-c="right">▶</button>
+        <p class="help">
+          <kbd>Space</kbd> / <kbd>↑</kbd> hoặc chạm màn hình để nhảy ·
+          <kbd>↓</kbd> để cúi hoặc rơi nhanh
+        </p>
+        <div class="stage" id="stage">
+          <canvas id="game" aria-label="Màn chơi Dino Runner"></canvas>
+          <p class="start-hint">Nhấn Space hoặc chạm để bắt đầu</p>
         </div>
-        <button class="restart">Chơi lại</button>
+        <div class="controls">
+          <button id="btnJump" type="button">▲ NHẢY</button>
+          <button id="btnDuck" type="button">▼ CÚI</button>
+        </div>
+        <button class="restart" id="restart" type="button">Chơi lại</button>
       </section>
     </main>
-    <script src="../shared/arcade.js"></script>
-    <script src="script.js"></script>
+    <script src="script.js?v=3"></script>
   </body>
 </html>
