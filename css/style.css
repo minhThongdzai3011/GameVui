@@ -478,6 +478,33 @@ body {
   font-style: normal;
   color: #379a82;
 }
+.sudoku-visual {
+  background: #b9cdee;
+}
+.sudoku-preview {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: grid;
+  grid-template-columns: repeat(3, 34px);
+  grid-auto-rows: 34px;
+  border: 3px solid #344861;
+  background: #fff;
+  transform: translate(-50%, -42%) rotate(-5deg);
+  font: bold 20px "Baloo 2", sans-serif;
+  color: #344861;
+}
+.sudoku-preview span,
+.sudoku-preview i {
+  display: grid;
+  place-items: center;
+  border: 1px solid #c9d3e3;
+}
+.sudoku-preview i {
+  font-style: normal;
+  color: #325aaf;
+  background: #bbdefb;
+}
 .card-visual {
   height: 214px;
   position: relative;

@@ -766,7 +766,8 @@
 
   // ---------- Cày điểm: hệ Elo, máy mạnh dần theo điểm người chơi ----------
   const RANK_KEY = "gamevui-chess-rank";
-  let rank = { rating: 900, games: 0, w: 0, d: 0, l: 0, peak: 900, bot: null, lastBot: null, side: "w" };
+  const RANK_START = { rating: 900, games: 0, w: 0, d: 0, l: 0, peak: 900, bot: null, lastBot: null, side: "w" };
+  let rank = { ...RANK_START };
   try {
     rank = { ...rank, ...JSON.parse(localStorage.getItem(RANK_KEY) || "{}") };
   } catch {
@@ -1606,6 +1607,12 @@
   $("#btnNew").addEventListener("click", () => leaveRanked() && newGame());
   $("#resNew").addEventListener("click", newGame);
   $("#btnResign").addEventListener("click", resign);
+  $("#btnRankReset").addEventListener("click", () => {
+    if (!confirm(`Đặt lại điểm về ${RANK_START.rating} và xoá toàn bộ thành tích xếp hạng?`)) return;
+    rank = { ...RANK_START };
+    saveRank();
+    newGame(); // ván đang dở (nếu có) bỏ luôn, không tính điểm
+  });
   $("#resView").addEventListener("click", () => ($("#result").hidden = true));
   $("#btnUndo").addEventListener("click", undo);
   $("#btnHint").addEventListener("click", hint);

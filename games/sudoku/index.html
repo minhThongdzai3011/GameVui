@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Sudoku - GameVui</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css?v=1" />
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="top">
+        <a class="back" href="../../index.html">← Về GameVui</a>
+        <h1>Sudoku</h1>
+        <div class="levels" id="levels" role="tablist" aria-label="Độ khó">
+          <button data-lv="easy">Dễ</button><button data-lv="medium">Vừa</button
+          ><button data-lv="hard">Khó</button><button data-lv="expert">Chuyên gia</button>
+        </div>
+      </header>
+
+      <main class="layout">
+        <section class="game">
+          <div class="info">
+            <span>Độ khó: <b id="lvName">Dễ</b></span>
+            <span>Lỗi: <b id="mistakes">0/3</b></span>
+            <span class="timer"><b id="timer">00:00</b>
+              <button id="btnPause" class="pause" aria-label="Tạm dừng">❚❚</button></span>
+          </div>
+          <div class="board-wrap">
+            <div class="board" id="board" role="grid" aria-label="Bảng Sudoku"></div>
+            <div class="cover" id="pauseCover" hidden>
+              <button class="play" id="btnResume" aria-label="Tiếp tục">▶</button>
+            </div>
+            <div class="cover result" id="result" hidden>
+              <div class="card">
+                <div class="ico" id="resIco">🎉</div>
+                <h2 id="resTitle">Xuất sắc!</h2>
+                <p id="resText"></p>
+                <div class="stats" id="resStats"></div>
+                <div class="btns">
+                  <button class="btn primary" id="resNew">Ván mới</button>
+                  <button class="btn" id="resSecond" hidden>Cơ hội thứ hai</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <aside class="side">
+          <div class="tools">
+            <button class="tool" id="btnUndo"><span class="ti">↶</span>Hoàn tác</button>
+            <button class="tool" id="btnErase"><span class="ti">⌫</span>Xoá</button>
+            <button class="tool" id="btnNotes">
+              <span class="ti">✎<i class="badge" id="notesBadge">TẮT</i></span>Ghi chú
+            </button>
+            <button class="tool" id="btnHint">
+              <span class="ti">💡<i class="badge num" id="hintBadge">3</i></span>Gợi ý
+            </button>
+          </div>
+          <div class="pad" id="pad"></div>
+          <button class="btn primary new" id="btnNew">Ván mới</button>
+          <p class="help">
+            Điền số 1–9 sao cho mỗi hàng, mỗi cột và mỗi ô 3×3 đều có đủ 9 số khác nhau.<br />
+            Bàn phím: <kbd>1</kbd>–<kbd>9</kbd> điền · <kbd>N</kbd> ghi chú · <kbd>Del</kbd> xoá ·
+            <kbd>Ctrl</kbd>+<kbd>Z</kbd> hoàn tác · mũi tên di chuyển
+          </p>
+        </aside>
+      </main>
+    </div>
+    <script src="script.js?v=1"></script>
+  </body>
+</html>

@@ -543,6 +543,19 @@ button {
   color: #bdb8ae;
   text-align: center;
 }
+.rank-reset {
+  justify-self: center;
+  padding: 2px 8px;
+  border: 0;
+  background: none;
+  color: #8f8a82;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: underline;
+}
+.rank-reset:hover {
+  color: #e05b4b;
+}
 .up {
   color: #81b64c;
 }
