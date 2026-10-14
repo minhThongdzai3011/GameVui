@@ -155,6 +155,29 @@ button {
     transform 0.15s,
     opacity 0.2s;
 }
+.tile img {
+  width: 84%;
+  height: 84%;
+  object-fit: contain;
+  pointer-events: none;
+  -webkit-user-drag: none;
+}
+/* bộ hình gốc đã có sẵn khung ô kem → hình phủ kín ô, bỏ khung tự vẽ */
+.tile.pic {
+  background: none;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.tile.pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  image-rendering: pixelated;
+}
+.tile.pic.sel {
+  filter: brightness(0.55);
+}
 .tile span {
   pointer-events: none;
   filter: drop-shadow(0 1px 0 rgba(0, 0, 0, 0.15));

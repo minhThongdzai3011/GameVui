@@ -1,8 +1,10 @@
 // Pikachu cổ điển (Onet) — nối 2 ô giống nhau bằng đường gấp khúc tối đa 3 đoạn
 // (2 lần rẽ), được đi vòng ra ngoài mép bàn. Mỗi bàn một kiểu dồn ô: đứng yên,
 // dồn xuống/lên/trái/phải, dồn vào giữa, tách ra hai bên... Hết nước thì tự đổi
-// vị trí (tốn 1 lượt đổi); hết lượt đổi hoặc hết giờ là thua. Hình con vật thay
-// cho hình Pokémon gốc (có bản quyền).
+// vị trí (tốn 1 lượt đổi); hết lượt đổi hoặc hết giờ là thua. Luật theo bản
+// 2003: 4 giây/ô, 9 bàn, mỗi bàn 720 điểm + thưởng thời gian tối đa 576, qua bàn
+// +1 lượt đổi, 3 gợi ý cho cả ván. Có đủ assets/tiles/1..36.png thì dùng bộ hình
+// đó (chỉ dùng ở máy cá nhân), không thì dùng hình con vật.
 (() => {
   "use strict";
 
@@ -27,7 +29,11 @@
     { id: "vout", name: "Tách lên xuống" },
   ];
   const START_SHUFFLES = 10;
-  const START_HINTS = 3;
+  const START_HINTS = 3; // cho CẢ ván, không cộng thêm mỗi bàn (như bản 2003)
+  const LEVELS = 9; // qua hết 9 bàn là hoàn thành
+  const SEC_PER_PIECE = 4; // 16×9 → 576 giây mỗi bàn, như bản gốc
+  const PTS_LEVEL = 720; // ăn hết một bàn luôn được 720 điểm, mọi cỡ bàn
+  const PTS_TIME = 576; // thưởng thời gian tối đa khi qua bàn
 
   const $ = (s) => document.querySelector(s);
   const boardEl = $("#board");
@@ -110,6 +116,9 @@
   let timerId = 0;
   let running = false;
   let hintPair = null;
+  let pairsDone = 0;
+  let levelAwarded = 0;
+  let tileImages = null; // danh sách đường dẫn hình riêng (assets/tiles), null = dùng hình con vật
 
   const mode = () => MODES[(level - 1) % MODES.length];
 
@@ -122,7 +131,7 @@
     // bàn có thêm viền 1 ô mỗi bên cho đường nối đi vòng
     const tw = Math.floor(Math.min(availW / (C + 1), (availH / (R + 1)) * 0.84));
     TW = Math.max(20, Math.min(52, tw));
-    TH = Math.round(TW * 1.2);
+    TH = Math.round(TW * (tileImages ? 1.25 : 1.2)); // hình gốc 40×50
     document.documentElement.style.setProperty("--tw", TW + "px");
     document.documentElement.style.setProperty("--th", TH + "px");
     boardEl.style.width = (C + 1) * TW + "px";
@@ -164,9 +173,11 @@
     for (let r = 0; r < R; r++)
       for (let c = 0; c < C; c++) {
         const t = { id: id++, type: types[r * C + c], r, c, el: document.createElement("button") };
-        t.el.className = "tile";
-        t.el.innerHTML = `<span>${ICONS[t.type]}</span>`;
-        t.el.setAttribute("aria-label", "Ô " + ICONS[t.type]);
+        t.el.className = tileImages ? "tile pic" : "tile";
+        t.el.innerHTML = tileImages
+          ? `<img src="${tileImages[t.type]}" alt="" draggable="false">`
+          : `<span>${ICONS[t.type]}</span>`;
+        t.el.setAttribute("aria-label", "Ô loại " + (t.type + 1));
         t.el.addEventListener("pointerdown", (e) => {
           e.preventDefault();
           pick(t);
@@ -284,7 +295,11 @@
     drawLink(path);
     a.el.classList.add("sel");
     b.el.classList.add("sel");
-    setScore(score + 10);
+    // cộng theo tỉ lệ đã ăn để hết bàn đúng bằng 720 điểm, không lệch vì làm tròn
+    pairsDone++;
+    const target = Math.round((PTS_LEVEL * pairsDone) / ((R * C) / 2));
+    setScore(score + target - levelAwarded);
+    levelAwarded = target;
     setTimeout(() => {
       linkEl.innerHTML = "";
       for (const t of [a, b]) {
@@ -426,9 +441,9 @@
   // ---------- Luồng chơi ----------
   function startLevel() {
     buildBoard();
-    const pairs = (R * C) / 2;
-    // bàn sau ít thời gian hơn: ~4.5 giây mỗi cặp ở bàn 1, tối thiểu 2.5 giây
-    timeMax = Math.round(pairs * Math.max(2.5, 4.5 - (level - 1) * 0.2));
+    timeMax = R * C * SEC_PER_PIECE;
+    pairsDone = 0;
+    levelAwarded = 0;
     timeLeft = timeMax;
     renderTime();
     $("#stLevel").textContent = level;
@@ -450,23 +465,32 @@
   function levelClear() {
     running = false;
     clearInterval(timerId);
-    const bonus = Math.ceil(timeLeft) * 2;
+    const bonus = Math.round((PTS_TIME * Math.max(0, timeLeft)) / timeMax);
     setScore(score + bonus);
     sfx.clear();
-    modal("🎉", `Qua bàn ${level}!`, `Thưởng thời gian còn lại: <b>+${bonus}</b> điểm.<br>Bàn tiếp theo: <b>${MODES[level % MODES.length].name}</b> · thêm 1 lượt gợi ý.`, [
+    if (level >= LEVELS) {
+      modal("🏆", "Hoàn thành!", `Bạn đã qua hết ${LEVELS} bàn.<br>Tổng điểm: <b>${score}</b> · Kỷ lục: <b>${best}</b>`, [
+        ["Chơi lại", newGame, true],
+      ]);
+      return;
+    }
+    setShuffles(shuffles + 1); // qua bàn được thêm 1 lượt đổi
+    modal(
+      "🎉",
+      `Qua bàn ${level}!`,
+      `Thưởng thời gian: <b>+${bonus}</b> điểm · thêm 1 lượt đổi.<br>Bàn tiếp theo: <b>${MODES[level % MODES.length].name}</b>`,
       [
-        "Bàn tiếp theo",
-        () => {
-          closeModal();
-          level++;
-          hints++;
-          $("#hintCount").textContent = hints;
-          $("#btnHint").disabled = false;
-          startLevel();
-        },
-        true,
+        [
+          "Bàn tiếp theo",
+          () => {
+            closeModal();
+            level++;
+            startLevel();
+          },
+          true,
+        ],
       ],
-    ]);
+    );
   }
   function gameOver(title, text) {
     running = false;
@@ -562,5 +586,24 @@
   });
 
   $("#stBest").textContent = best;
-  newGame();
+
+  // Bộ hình riêng: nếu có đủ assets/tiles/1.png … 36.png thì dùng thay cho hình con vật
+  function loadTileImages() {
+    const urls = Array.from({ length: ICONS.length }, (_, i) => `assets/tiles/${i + 1}.png`);
+    return Promise.all(
+      urls.map(
+        (u) =>
+          new Promise((ok) => {
+            const img = new Image();
+            img.onload = () => ok(true);
+            img.onerror = () => ok(false);
+            img.src = u;
+          }),
+      ),
+    ).then((res) => (res.every(Boolean) ? urls : null));
+  }
+  loadTileImages().then((urls) => {
+    tileImages = urls;
+    newGame();
+  });
 })();
