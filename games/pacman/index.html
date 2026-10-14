@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+    <title>Pac-Man - GameVui</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Be+Vietnam+Pro:wght@600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css?v=1" />
+  </head>
+  <body>
+    <a class="back" href="../../index.html">← GameVui</a>
+    <button class="icon" id="btnSound" aria-label="Tắt âm thanh">🔊</button>
+
+    <main class="stage">
+      <div class="screen">
+        <canvas id="game" aria-label="Màn chơi Pac-Man"></canvas>
+
+        <div class="overlay" id="start">
+          <h1>PAC-MAN</h1>
+          <ul class="cast">
+            <li><i class="g blinky"></i><b style="color: #ff0000">BLINKY</b><span>Đuổi thẳng theo bạn</span></li>
+            <li><i class="g pinky"></i><b style="color: #ffb8ff">PINKY</b><span>Chặn đầu phía trước</span></li>
+            <li><i class="g inky"></i><b style="color: #00ffff">INKY</b><span>Phối hợp kẹp bạn</span></li>
+            <li><i class="g clyde"></i><b style="color: #ffb852">CLYDE</b><span>Thất thường khó đoán</span></li>
+          </ul>
+          <p class="pts"><span class="dot"></span> 10 <span class="pellet"></span> 50</p>
+          <button class="play" id="btnPlay">▶ CHƠI</button>
+          <p class="keys">Mũi tên / WASD · Vuốt trên điện thoại · P tạm dừng</p>
+        </div>
+
+        <div class="overlay dim" id="pause" hidden>
+          <h2>TẠM DỪNG</h2>
+          <button class="play" id="btnResume">▶ TIẾP TỤC</button>
+        </div>
+      </div>
+
+      <div class="dpad" id="dpad" aria-label="Phím điều hướng">
+        <button data-d="up" aria-label="Lên">▲</button>
+        <button data-d="left" aria-label="Trái">◀</button>
+        <button data-d="down" aria-label="Xuống">▼</button>
+        <button data-d="right" aria-label="Phải">▶</button>
+      </div>
+    </main>
+    <script src="script.js?v=1"></script>
+  </body>
+</html>

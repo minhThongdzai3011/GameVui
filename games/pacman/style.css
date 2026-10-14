@@ -1,0 +1,245 @@
+* {
+  box-sizing: border-box;
+}
+[hidden] {
+  display: none !important;
+}
+html,
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  background: #000;
+  color: #fff;
+  font-family: "Press Start 2P", monospace;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: none;
+}
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+.back {
+  position: fixed;
+  top: 10px;
+  left: 12px;
+  z-index: 5;
+  color: #888;
+  font-size: 13px;
+  text-decoration: none;
+}
+.icon {
+  position: fixed;
+  top: 6px;
+  right: 10px;
+  z-index: 5;
+  border: 0;
+  background: none;
+  font-size: 18px;
+  opacity: 0.7;
+}
+
+.stage {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 30px 6px 10px;
+}
+.screen {
+  position: relative;
+}
+#game {
+  display: block;
+  image-rendering: pixelated;
+}
+
+/* ---------- Màn mở đầu / tạm dừng ---------- */
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 10px;
+  background: #000;
+  text-align: center;
+}
+.overlay.dim {
+  background: rgba(0, 0, 0, 0.75);
+}
+.overlay h1 {
+  margin: 0 0 6px;
+  font-size: clamp(22px, 7vw, 40px);
+  color: #ffff00;
+  text-shadow:
+    3px 3px 0 #ff8800,
+    6px 6px 0 #c03000;
+  letter-spacing: 2px;
+}
+.overlay h2 {
+  margin: 0;
+  font-size: 18px;
+  color: #ffff00;
+}
+.cast {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: clamp(8px, 2.4vw, 11px);
+  text-align: left;
+}
+.cast li {
+  display: grid;
+  grid-template-columns: 22px 70px auto;
+  align-items: center;
+  gap: 8px;
+}
+/* font pixel không có dấu tiếng Việt → chữ tiếng Việt dùng font thường */
+.cast span,
+.keys,
+.play,
+.overlay h2,
+.back {
+  font-family: "Be Vietnam Pro", Arial, sans-serif;
+  font-weight: 800;
+}
+.cast span {
+  color: #bbb;
+  font-size: 1.25em;
+  font-weight: 600;
+  line-height: 1.5;
+}
+/* con ma mini vẽ bằng CSS */
+.g {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px 10px 2px 2px;
+  background: var(--c);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 83% 82%, 67% 100%, 50% 82%, 33% 100%, 17% 82%, 0 100%);
+}
+.g::before,
+.g::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  width: 6px;
+  height: 7px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 70% 55%, #2121ff 0 1.6px, #fff 1.8px);
+}
+.g::before {
+  left: 3px;
+}
+.g::after {
+  right: 3px;
+}
+.blinky {
+  --c: #ff0000;
+}
+.pinky {
+  --c: #ffb8ff;
+}
+.inky {
+  --c: #00ffff;
+}
+.clyde {
+  --c: #ffb852;
+}
+.pts {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  font-size: 10px;
+  color: #ffb8ae;
+}
+.pts .dot {
+  width: 4px;
+  height: 4px;
+  background: #ffb8ae;
+}
+.pts .pellet {
+  width: 12px;
+  height: 12px;
+  margin-left: 14px;
+  border-radius: 50%;
+  background: #ffb8ae;
+}
+.play {
+  padding: 12px 20px;
+  border: 3px solid #ffff00;
+  border-radius: 6px;
+  background: #000;
+  color: #ffff00;
+  font-size: 18px;
+  letter-spacing: 1px;
+  animation: blink 1s steps(2) infinite;
+}
+.play:hover {
+  background: #ffff00;
+  color: #000;
+  animation: none;
+}
+@keyframes blink {
+  50% {
+    border-color: #886600;
+  }
+}
+.keys {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 600;
+  color: #777;
+  line-height: 1.6;
+}
+
+/* ---------- Phím điều hướng cảm ứng ---------- */
+.dpad {
+  display: none;
+  grid-template-columns: repeat(3, 58px);
+  grid-template-rows: repeat(2, 50px);
+  gap: 6px;
+}
+@media (pointer: coarse) {
+  .dpad {
+    display: grid;
+  }
+}
+.dpad button {
+  border: 2px solid #2121ff;
+  border-radius: 10px;
+  background: #0a0a2a;
+  color: #8888ff;
+  font-size: 18px;
+  touch-action: none;
+}
+.dpad button:active,
+.dpad button.on {
+  background: #2121ff;
+  color: #fff;
+}
+.dpad [data-d="up"] {
+  grid-column: 2;
+}
+.dpad [data-d="left"] {
+  grid-column: 1;
+  grid-row: 2;
+}
+.dpad [data-d="down"] {
+  grid-column: 2;
+  grid-row: 2;
+}
+.dpad [data-d="right"] {
+  grid-column: 3;
+  grid-row: 2;
+}
