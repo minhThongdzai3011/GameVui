@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Cờ Tướng - GameVui</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- chỉ tải đúng các chữ Hán cần dùng (tham số text) cho nhẹ -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@900&text=%E5%B8%A5%E4%BB%95%E7%9B%B8%E5%82%8C%E4%BF%A5%E7%82%AE%E5%85%B5%E5%B0%87%E5%A3%AB%E8%B1%A1%E9%A6%AC%E8%BB%8A%E7%A0%B2%E5%8D%92%E6%A5%9A%E6%B2%B3%E6%BC%A2%E7%95%8C&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css?v=1" />
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="top">
+        <a class="back" href="../../index.html">← Về GameVui</a>
+        <h1>Cờ Tướng</h1>
+        <span class="sub">象棋</span>
+      </header>
+
+      <main class="layout">
+        <section class="board-col">
+          <div class="player" id="pTop">
+            <span class="avatar"></span>
+            <div class="pinfo"><b class="pname"></b><span class="pcap"></span></div>
+            <span class="pturn">Đang đi</span>
+          </div>
+
+          <div class="board-frame">
+            <div class="board" id="board">
+              <svg id="grid" viewBox="0 0 580 640" aria-hidden="true"></svg>
+              <div class="layer" id="marks"></div>
+              <div class="layer" id="pieces"></div>
+              <div class="result" id="result" hidden>
+                <div class="result-card">
+                  <div class="result-ico" id="resIco">🏆</div>
+                  <h2 id="resTitle">Bạn thắng!</h2>
+                  <p id="resText">Chiếu bí</p>
+                  <div class="result-btns">
+                    <button class="btn primary" id="resNew">Ván mới</button>
+                    <button class="btn" id="resView">Xem bàn cờ</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="player" id="pBottom">
+            <span class="avatar"></span>
+            <div class="pinfo"><b class="pname"></b><span class="pcap"></span></div>
+            <span class="pturn">Đang đi</span>
+          </div>
+        </section>
+
+        <aside class="panel">
+          <div class="status" id="status"><span class="dot" id="statusDot"></span><span id="statusText"></span></div>
+
+          <div class="group">
+            <label>Chế độ</label>
+            <div class="seg" data-set="mode">
+              <button data-v="ai">Chơi với máy</button><button data-v="pvp">Hai người</button>
+            </div>
+          </div>
+          <div class="group" id="grpLevel">
+            <label>Độ khó</label>
+            <div class="seg" data-set="level">
+              <button data-v="easy">Dễ</button><button data-v="medium">Vừa</button
+              ><button data-v="hard">Khó</button>
+            </div>
+          </div>
+          <div class="group" id="grpSide">
+            <label>Bạn cầm quân</label>
+            <div class="seg" data-set="side">
+              <button data-v="red">Đỏ · đi trước</button><button data-v="black">Đen</button>
+            </div>
+          </div>
+
+          <div class="actions">
+            <button class="btn primary" id="btnNew">Ván mới</button>
+            <button class="btn" id="btnUndo">↶ Đi lại</button>
+            <button class="btn" id="btnHint">💡 Gợi ý</button>
+            <button class="btn" id="btnFlip">⇅ Xoay bàn</button>
+            <button class="btn" id="btnLabels">Chữ: Hán</button>
+            <button class="btn" id="btnSound">🔊 Âm thanh</button>
+          </div>
+
+          <div class="moves">
+            <h3>Biên bản ván cờ</h3>
+            <ol id="moveList"></ol>
+          </div>
+        </aside>
+      </main>
+    </div>
+    <script src="script.js?v=1"></script>
+  </body>
+</html>

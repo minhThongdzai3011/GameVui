@@ -441,6 +441,22 @@ body {
 .memory-preview {
   color: #7d5fba;
 }
+.xq-visual {
+  background: #e8c48a;
+}
+.xq-preview {
+  position: absolute;
+  left: 31%;
+  top: 42px;
+  font: 900 34px "KaiTi", "STKaiti", "SimSun", serif;
+  line-height: 1.45;
+  color: #2a2a2a;
+  transform: rotate(-5deg);
+}
+.xq-preview i {
+  font-style: normal;
+  color: #b8231a;
+}
 .tic-preview i {
   font-style: normal;
   color: #379a82;
