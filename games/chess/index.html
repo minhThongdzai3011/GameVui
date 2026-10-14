@@ -15,7 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css?v=1" />
+    <link rel="stylesheet" href="style.css?v=2" />
   </head>
   <body>
     <div class="wrap">
@@ -50,6 +50,7 @@
                 <div class="result-ico" id="resIco">🏆</div>
                 <h2 id="resTitle">Bạn thắng!</h2>
                 <p id="resText">Chiếu hết</p>
+                <p class="res-elo" id="resElo" hidden></p>
                 <div class="result-btns">
                   <button class="btn primary" id="resNew">Ván mới</button>
                   <button class="btn" id="resView">Xem bàn cờ</button>
@@ -71,8 +72,24 @@
           <div class="group">
             <label>Chế độ</label>
             <div class="seg" data-set="mode">
-              <button data-v="ai">Chơi với máy</button><button data-v="pvp">Hai người</button>
+              <button data-v="ranked">🏆 Cày điểm</button><button data-v="ai">Luyện tập</button
+              ><button data-v="pvp">Hai người</button>
             </div>
+          </div>
+
+          <div class="rank" id="rankCard" hidden>
+            <div class="rank-top">
+              <span class="rank-ico" id="rkIco">♙</span>
+              <div class="rank-name"><b id="rkTitle">Nghiệp dư</b><small>Điểm Elo của bạn</small></div>
+              <strong id="rkElo">800</strong>
+            </div>
+            <div class="rank-bar"><i id="rkBar"></i></div>
+            <small class="rank-next" id="rkNext"></small>
+            <div class="rank-stats">
+              <span>Thắng<b id="rkW">0</b></span><span>Hòa<b id="rkD">0</b></span><span>Thua<b id="rkL">0</b></span
+              ><span>Cao nhất<b id="rkPeak">800</b></span>
+            </div>
+            <div class="rank-stake" id="rkStake"></div>
           </div>
           <div class="group" id="grpLevel">
             <label>Độ khó</label>
@@ -95,6 +112,7 @@
             <button class="btn" id="btnFlip">⇅ Xoay bàn</button>
             <button class="btn" id="btnTheme">🎨 Màu bàn</button>
             <button class="btn" id="btnSound">🔊 Âm thanh</button>
+            <button class="btn wide" id="btnResign">🏳️ Xin thua</button>
           </div>
 
           <div class="moves">
@@ -104,6 +122,6 @@
         </aside>
       </main>
     </div>
-    <script src="script.js?v=1"></script>
+    <script src="script.js?v=2"></script>
   </body>
 </html>

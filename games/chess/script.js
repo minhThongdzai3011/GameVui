@@ -262,7 +262,9 @@
       return out;
     }
 
-    // ---------- Đánh giá thế cờ (bảng vị trí của Tomasz Michniewski) ----------
+    // ---------- Đánh giá thế cờ ----------
+    // Nền: bảng vị trí của Tomasz Michniewski; thêm cấu trúc tốt, xe cột mở,
+    // độ linh hoạt của quân, lá chắn tốt quanh vua và dồn vua khi tàn cuộc.
     const VAL = { p: 100, n: 320, b: 330, r: 500, q: 900, k: 0 };
     /* prettier-ignore */
     const PST = {
@@ -281,11 +283,67 @@
       ke: [-50,-40,-30,-20,-20,-30,-40,-50, -30,-20,-10,0,0,-10,-20,-30, -30,-10,20,30,30,20,-10,-30, -30,-10,30,40,40,30,-10,-30,
            -30,-10,30,40,40,30,-10,-30, -30,-10,20,30,30,20,-10,-30, -30,-30,0,0,0,0,-30,-30, -50,-30,-30,-30,-30,-30,-30,-50],
     };
+    // thưởng tốt thông theo hàng (chỉ số hàng nhìn từ phía Trắng, 1 = sắp phong cấp)
+    const PASSED = [0, 110, 75, 45, 28, 16, 10, 0];
+    const MOB = { n: 4, b: 5, r: 3, q: 1 };
+
+    function mobility(b, i, t, w) {
+      const r = i >> 3;
+      const c = i & 7;
+      let n = 0;
+      if (t === "n") {
+        for (const [dr, dc] of N_OFF) {
+          if (!on(r + dr, c + dc)) continue;
+          const q = b[(r + dr) * 8 + c + dc];
+          if (!q || isW(q) !== w) n++;
+        }
+        return n;
+      }
+      const dirs = t === "b" ? DIAG : t === "r" ? ORTH : K_OFF;
+      for (const [dr, dc] of dirs) {
+        let rr = r + dr;
+        let cc = c + dc;
+        while (on(rr, cc)) {
+          const q = b[rr * 8 + cc];
+          if (q) {
+            if (isW(q) !== w) n++;
+            break;
+          }
+          n++;
+          rr += dr;
+          cc += dc;
+        }
+      }
+      return n;
+    }
+    function isPassed(b, i, w) {
+      const r = i >> 3;
+      const c = i & 7;
+      const e = w ? "p" : "P";
+      for (let rr = w ? r - 1 : r + 1; w ? rr >= 1 : rr <= 6; rr += w ? -1 : 1)
+        for (let cc = Math.max(0, c - 1); cc <= Math.min(7, c + 1); cc++) if (b[rr * 8 + cc] === e) return false;
+      return true;
+    }
+    // lá chắn tốt trước vua (chỉ khi vua còn ở hai hàng cuối)
+    function shield(b, k, w) {
+      if (k < 0) return 0;
+      const kr = k >> 3;
+      const kc = k & 7;
+      if (w ? kr < 6 : kr > 1) return -20;
+      const P = w ? "P" : "p";
+      let s = 0;
+      for (let cc = Math.max(0, kc - 1); cc <= Math.min(7, kc + 1); cc++) {
+        if (on(kr + (w ? -1 : 1), cc) && b[(kr + (w ? -1 : 1)) * 8 + cc] === P) s += 14;
+        else if (on(kr + (w ? -2 : 2), cc) && b[(kr + (w ? -2 : 2)) * 8 + cc] === P) s += 6;
+        else s -= 10;
+      }
+      return s;
+    }
 
     function evaluate(s) {
       const b = s.b;
-      let mat = 0;
-      let score = 0;
+      const pf = [new Int8Array(8), new Int8Array(8)];
+      let npm = 0;
       let wb = 0;
       let bb = 0;
       let wk = -1;
@@ -295,31 +353,44 @@
       for (let i = 0; i < 64; i++) {
         const p = b[i];
         if (!p) continue;
-        const t = p.toLowerCase();
-        if (t !== "p" && t !== "k") mat += VAL[t];
-        if (isW(p)) {
-          if (t === "b") wb++;
-          if (t === "k") wk = i;
-          else wMat += VAL[t];
-        } else {
-          if (t === "b") bb++;
-          if (t === "k") bk = i;
-          else bMat += VAL[t];
-        }
+        const w = isW(p);
+        const t = w ? p.toLowerCase() : p;
+        if (t === "p") pf[w ? 0 : 1][i & 7]++;
+        else if (t !== "k") npm += VAL[t];
+        if (t === "b") w ? wb++ : bb++;
+        if (t === "k") w ? (wk = i) : (bk = i);
+        else if (w) wMat += VAL[t];
+        else bMat += VAL[t];
       }
-      const endgame = mat <= 1400;
+      const endgame = npm <= 1400;
+      let score = 0;
       for (let i = 0; i < 64; i++) {
         const p = b[i];
         if (!p) continue;
-        const t = p.toLowerCase();
         const w = isW(p);
+        const t = w ? p.toLowerCase() : p;
         const idx = w ? i : i ^ 56;
+        const c = i & 7;
         let v = VAL[t] + (t === "k" && endgame ? PST.ke[idx] : PST[t][idx]);
-        if (t === "p" && endgame) v += (7 - (idx >> 3)) * 8; // tốt tàn cuộc càng tiến càng quý
+        if (t === "p") {
+          const own = pf[w ? 0 : 1];
+          if (own[c] > 1) v -= 12;
+          if ((c === 0 || !own[c - 1]) && (c === 7 || !own[c + 1])) v -= 14;
+          if (isPassed(b, i, w)) v += endgame ? PASSED[idx >> 3] * 1.7 : PASSED[idx >> 3];
+          if (endgame) v += (7 - (idx >> 3)) * 6;
+        } else if (t !== "k") {
+          v += mobility(b, i, t, w) * MOB[t];
+          if (t === "r") {
+            const own = pf[w ? 0 : 1];
+            const opp = pf[w ? 1 : 0];
+            if (!own[c]) v += opp[c] ? 12 : 24;
+          }
+        }
         score += w ? v : -v;
       }
       if (wb >= 2) score += 30;
       if (bb >= 2) score -= 30;
+      if (!endgame) score += shield(b, wk, true) - shield(b, bk, false);
       // tàn cuộc thắng thế: dồn vua đối phương ra mép và áp sát để chiếu hết
       if (endgame && wk >= 0 && bk >= 0 && Math.abs(wMat - bMat) >= 300) {
         const strongW = wMat > bMat;
@@ -331,7 +402,69 @@
         const bonus = edge * 12 + (14 - dist) * 5;
         score += strongW ? bonus : -bonus;
       }
-      return score;
+      return score + (s.w ? 10 : -10); // lợi thế được đi
+    }
+
+    // ---------- Băm Zobrist: mỗi thế cờ có một "dấu vân tay" 64-bit ----------
+    let seed = 0x2f6b4a1d;
+    const rnd = () => {
+      seed ^= seed << 13;
+      seed ^= seed >>> 17;
+      seed ^= seed << 5;
+      return seed | 0;
+    };
+    const PIDX = { P: 0, N: 1, B: 2, R: 3, Q: 4, K: 5, p: 6, n: 7, b: 8, r: 9, q: 10, k: 11 };
+    const ZA = Int32Array.from({ length: 768 }, rnd);
+    const ZB = Int32Array.from({ length: 768 }, rnd);
+    const CA = Int32Array.from({ length: 16 }, rnd);
+    const CB = Int32Array.from({ length: 16 }, rnd);
+    const EA = Int32Array.from({ length: 8 }, rnd);
+    const EB = Int32Array.from({ length: 8 }, rnd);
+    const SA = rnd();
+    const SB = rnd();
+    let hB = 0; // nửa thứ hai của khoá băm, trả kèm qua biến
+    function hash(s) {
+      let a = 0;
+      let bb = 0;
+      for (let i = 0; i < 64; i++) {
+        const p = s.b[i];
+        if (!p) continue;
+        const k = PIDX[p] * 64 + i;
+        a ^= ZA[k];
+        bb ^= ZB[k];
+      }
+      if (!s.w) {
+        a ^= SA;
+        bb ^= SB;
+      }
+      a ^= CA[s.c];
+      bb ^= CB[s.c];
+      if (s.ep >= 0) {
+        a ^= EA[s.ep & 7];
+        bb ^= EB[s.ep & 7];
+      }
+      hB = bb;
+      return a;
+    }
+    const key = (s) => hash(s) + ":" + hB;
+
+    // ---------- Bảng ghi nhớ (transposition table) ----------
+    const TT_SIZE = 1 << 19;
+    const TT_MASK = TT_SIZE - 1;
+    let ttA = null;
+    let ttB;
+    let ttS;
+    let ttM;
+    let ttD;
+    let ttF; // 1 chính xác, 2 cận dưới, 3 cận trên
+    function allocTT() {
+      if (ttA) return;
+      ttA = new Int32Array(TT_SIZE);
+      ttB = new Int32Array(TT_SIZE);
+      ttS = new Int32Array(TT_SIZE);
+      ttM = new Int32Array(TT_SIZE);
+      ttD = new Int8Array(TT_SIZE);
+      ttF = new Int8Array(TT_SIZE);
     }
 
     // ---------- Tìm kiếm ----------
@@ -342,11 +475,16 @@
     let stop = false;
     let hist = new Int32Array(1 << 18);
     let killers = [];
+    const pathA = new Int32Array(256);
+    const pathB = new Int32Array(256);
+    let gameKeys = new Set();
 
-    function order(s, ms, ply) {
+    const isCap = (s, m) => !!s.b[(m >> 6) & 63] || (m >> 15) & 1;
+    function order(s, ms, ply, ttMove = 0) {
       const b = s.b;
       const k = killers[ply] || [];
       const sc = ms.map((m) => {
+        if (m === ttMove) return 1e7;
         const t = (m >> 6) & 63;
         const pr = (m >> 12) & 7;
         if (b[t]) return 1e6 + VAL[b[t].toLowerCase()] * 10 - VAL[b[m & 63].toLowerCase()] / 10;
@@ -367,8 +505,12 @@
       const stand = evaluate(s) * (s.w ? 1 : -1);
       if (stand >= beta) return stand;
       if (stand > alpha) alpha = stand;
-      if (ply > 30) return stand;
+      if (ply > 40) return stand;
       for (const m of order(s, gen(s, true), ply)) {
+        // bỏ qua nước ăn quân chắc chắn không đủ kéo điểm lên alpha (delta pruning)
+        const t = (m >> 6) & 63;
+        const gain = s.b[t] ? VAL[s.b[t].toLowerCase()] : 100;
+        if (stand + gain + 200 < alpha && !((m >> 12) & 7)) continue;
         const u = make(s, m);
         if (inCheck(s, !s.w)) {
           unmake(s, m, u);
@@ -383,30 +525,91 @@
       return alpha;
     }
 
-    function negamax(s, depth, alpha, beta, ply) {
+    function hasPieces(s, w) {
+      for (const p of s.b) if (p && isW(p) === w && "nbrqNBRQ".includes(p)) return true;
+      return false;
+    }
+
+    function negamax(s, depth, alpha, beta, ply, allowNull) {
       if ((++nodes & 2047) === 0 && Date.now() > deadline) stop = true;
       if (stop) return 0;
+      const a = hash(s);
+      const bkey = hB;
+      pathA[ply] = a;
+      pathB[ply] = bkey;
       if (s.h >= 100) return 0;
+      // lặp lại thế cờ → coi như hòa
+      for (let p = ply - 2; p >= 0; p -= 2) if (pathA[p] === a && pathB[p] === bkey) return 0;
+      if (gameKeys.has(a + ":" + bkey)) return 0;
+
       const chk = inCheck(s, s.w);
-      if (chk && ply < 16) depth++; // gia hạn khi bị chiếu
+      if (chk && ply < 60) depth++; // gia hạn khi bị chiếu
       if (depth <= 0) return qs(s, alpha, beta, ply);
+
+      // tra bảng ghi nhớ
+      const idx = a & TT_MASK;
+      let ttMove = 0;
+      if (ttF[idx] && ttA[idx] === a && ttB[idx] === bkey) {
+        ttMove = ttM[idx];
+        if (ttD[idx] >= depth) {
+          let v = ttS[idx];
+          if (v > MATE - 1000) v -= ply;
+          else if (v < -MATE + 1000) v += ply;
+          const f = ttF[idx];
+          if (f === 1 || (f === 2 && v >= beta) || (f === 3 && v <= alpha)) return v;
+        }
+      }
+
+      const pvNode = beta - alpha > 1;
+      if (!chk && !pvNode) {
+        const ev = evaluate(s) * (s.w ? 1 : -1);
+        // điểm tĩnh đã vượt xa beta ở độ sâu nhỏ → cắt luôn
+        if (depth <= 3 && ev - 110 * depth >= beta) return ev;
+        // nước bỏ lượt: cho đối thủ đi 2 lần mà vẫn ≥ beta thì nhánh này quá tốt
+        if (allowNull && depth >= 3 && ev >= beta && hasPieces(s, s.w)) {
+          const ep = s.ep;
+          s.w = !s.w;
+          s.ep = -1;
+          const v = -negamax(s, depth - 1 - (depth > 6 ? 3 : 2), -beta, -beta + 1, ply + 1, false);
+          s.w = !s.w;
+          s.ep = ep;
+          if (stop) return 0;
+          if (v >= beta) return v > MATE - 1000 ? beta : v;
+        }
+      }
+
+      const alpha0 = alpha;
       let best = -INF;
+      let bestMove = 0;
       let count = 0;
-      for (const m of order(s, gen(s, false), ply)) {
+      for (const m of order(s, gen(s, false), ply, ttMove)) {
+        const quiet = !isCap(s, m) && !((m >> 12) & 7);
         const u = make(s, m);
         if (inCheck(s, !s.w)) {
           unmake(s, m, u);
           continue;
         }
         count++;
-        const v = -negamax(s, depth - 1, -beta, -alpha, ply + 1);
+        const givesCheck = inCheck(s, s.w);
+        let v;
+        if (count === 1) v = -negamax(s, depth - 1, -beta, -alpha, ply + 1, true);
+        else {
+          // nước xếp sau, im lặng → tính nông hơn trước (late move reduction)
+          const R = depth >= 3 && count > 3 && quiet && !chk && !givesCheck ? (count > 10 ? 2 : 1) : 0;
+          v = -negamax(s, depth - 1 - R, -alpha - 1, -alpha, ply + 1, true);
+          if (v > alpha && R && !stop) v = -negamax(s, depth - 1, -alpha - 1, -alpha, ply + 1, true);
+          if (v > alpha && v < beta && !stop) v = -negamax(s, depth - 1, -beta, -alpha, ply + 1, true);
+        }
         unmake(s, m, u);
         if (stop) return 0;
-        if (v > best) best = v;
+        if (v > best) {
+          best = v;
+          bestMove = m;
+        }
         if (v > alpha) {
           alpha = v;
           if (alpha >= beta) {
-            if (!u.cap) {
+            if (quiet) {
               const k = killers[ply] || (killers[ply] = []);
               if (k[0] !== m) {
                 k[1] = k[0];
@@ -419,6 +622,19 @@
         }
       }
       if (!count) return chk ? -MATE + ply : 0; // chiếu hết / hết nước (hòa)
+
+      // ghi vào bảng (điểm chiếu hết lưu theo khoảng cách từ nút này)
+      if (depth >= ttD[idx] || ttA[idx] !== a) {
+        let v = best;
+        if (v > MATE - 1000) v += ply;
+        else if (v < -MATE + 1000) v -= ply;
+        ttA[idx] = a;
+        ttB[idx] = bkey;
+        ttS[idx] = v;
+        ttM[idx] = bestMove;
+        ttD[idx] = Math.min(depth, 127);
+        ttF[idx] = best >= beta ? 2 : best > alpha0 ? 1 : 3;
+      }
       return best;
     }
 
@@ -449,25 +665,35 @@
 
     const LEVELS = {
       easy: { depth: 1, time: 500, noise: 160, book: false },
-      medium: { depth: 3, time: 1500, noise: 30, book: true },
-      hard: { depth: 12, time: 3000, noise: 0, book: true },
+      medium: { depth: 3, time: 1200, noise: 30, book: true },
+      hard: { depth: 64, time: 3000, noise: 0, book: true },
     };
 
-    function search(state, level, line = null) {
+    // opts: { level | cfg: {depth, time, noise, blunder, book}, line, keys }
+    function search(state, opts = {}) {
+      if (typeof opts === "string") opts = { level: opts };
+      const cfg = opts.cfg || LEVELS[opts.level] || LEVELS.medium;
       const s = { ...state, b: state.b.slice() };
-      const cfg = LEVELS[level] || LEVELS.medium;
-      let root = order(s, legal(s), 0);
+      allocTT();
+      let root = legal(s);
       if (!root.length) return -1;
       if (root.length === 1) return root[0];
-      if (cfg.book && line !== null && BOOK[line] !== undefined) {
-        const opts = BOOK[line].map((u) => root.find((m) => uci(m) === u)).filter((m) => m !== undefined);
-        if (opts.length) return opts[Math.floor(Math.random() * opts.length)];
+      if (cfg.book && opts.line != null && BOOK[opts.line] !== undefined) {
+        const opts2 = BOOK[opts.line].map((u) => root.find((m) => uci(m) === u)).filter((m) => m !== undefined);
+        if (opts2.length) return opts2[Math.floor(Math.random() * opts2.length)];
       }
+      if (cfg.blunder && Math.random() < cfg.blunder) return root[Math.floor(Math.random() * root.length)];
+      gameKeys = new Set(opts.keys || []);
       nodes = 0;
       stop = false;
       deadline = Date.now() + cfg.time;
       hist = new Int32Array(1 << 18);
       killers = [];
+      const ra = hash(s);
+      pathA[0] = ra;
+      pathB[0] = hB;
+      const ttm = ttA[ra & TT_MASK] === ra ? ttM[ra & TT_MASK] : 0;
+      root = order(s, root, 0, ttm);
       let best = root[0];
       let scores = null;
       for (let d = 1; d <= cfg.depth; d++) {
@@ -476,8 +702,12 @@
         let cur = -1;
         for (const m of root) {
           const u = make(s, m);
-          const lo = cfg.noise ? -INF : alpha; // có nhiễu cần điểm chính xác của mọi nước
-          const v = -negamax(s, d - 1, -INF, -lo, 1);
+          let v;
+          if (cfg.noise || cur < 0) v = -negamax(s, d - 1, -INF, cfg.noise ? INF : -alpha, 1, true);
+          else {
+            v = -negamax(s, d - 1, -alpha - 1, -alpha, 1, true);
+            if (v > alpha && !stop) v = -negamax(s, d - 1, -INF, -alpha, 1, true);
+          }
           unmake(s, m, u);
           if (stop) break;
           sc.set(m, v);
@@ -487,20 +717,22 @@
           }
         }
         if (stop) {
-          if (cur >= 0 && scores && sc.get(cur) > scores.get(best)) best = cur;
+          // nước đầu luôn là nước tốt nhất vòng trước; nước khác chỉ thay khi đã chứng minh hơn
+          if (cur >= 0 && !cfg.noise) best = cur;
           break;
         }
         best = cur;
         scores = sc;
-        root = root.slice().sort((a, c) => (sc.get(c) ?? -INF) - (sc.get(a) ?? -INF));
-        if (Math.abs(alpha) > MATE - 500) break;
+        root = root.slice().sort((x, y) => (sc.get(y) ?? -INF) - (sc.get(x) ?? -INF));
+        if (Math.abs(alpha) > MATE - 1000) break;
+        if (Date.now() > deadline - cfg.time * 0.45) break; // không kịp xong vòng sau
       }
       if (cfg.noise && scores) {
         let pick = best;
         let top = -INF;
         const bestScore = scores.get(best);
         for (const [m, v] of scores) {
-          if (v < -MATE + 500 && bestScore > -MATE + 500) continue; // không tự đi vào thế bị chiếu hết
+          if (v < -MATE + 1000 && bestScore > -MATE + 1000) continue; // không tự đi vào thế bị chiếu hết
           const r = v + Math.random() * cfg.noise;
           if (r > top) {
             top = r;
@@ -512,7 +744,7 @@
       return best;
     }
 
-    return { START, parseFEN, isW, sqName, uci, legal, make, unmake, inCheck, search, gen };
+    return { START, parseFEN, isW, sqName, uci, legal, make, unmake, inCheck, search, gen, key };
   }
 
   // =====================================================================
@@ -531,6 +763,78 @@
   const LEVEL_NAME = { easy: "Dễ", medium: "Vừa", hard: "Khó" };
   const THEMES = ["green", "wood", "blue"];
   const VAL = { p: 1, n: 3, b: 3, r: 5, q: 9, k: 0 };
+
+  // ---------- Cày điểm: hệ Elo, máy mạnh dần theo điểm người chơi ----------
+  const RANK_KEY = "gamevui-chess-rank";
+  let rank = { rating: 900, games: 0, w: 0, d: 0, l: 0, peak: 900, bot: null, lastBot: null, side: "w" };
+  try {
+    rank = { ...rank, ...JSON.parse(localStorage.getItem(RANK_KEY) || "{}") };
+  } catch {
+    /* dữ liệu hỏng: dùng mặc định */
+  }
+  const saveRank = () => {
+    try {
+      localStorage.setItem(RANK_KEY, JSON.stringify(rank));
+    } catch {
+      /* bỏ qua */
+    }
+  };
+  const TITLES = [
+    [0, "Tập sự", "🌱"],
+    [800, "Nghiệp dư", "♙"],
+    [1100, "Kỳ thủ", "♘"],
+    [1400, "Cao thủ", "♗"],
+    [1700, "Kiện tướng", "♖"],
+    [2000, "Đại kiện tướng", "♕"],
+    [2300, "Huyền thoại", "♔"],
+  ];
+  const BOTS = [
+    [0, "Bé Tập Đi", "🐣"],
+    [700, "Gấu Con", "🐻"],
+    [1000, "Cáo Lanh Lợi", "🦊"],
+    [1300, "Sói Xám", "🐺"],
+    [1600, "Đại Bàng", "🦅"],
+    [1900, "Rồng Lửa", "🐉"],
+    [2200, "Thần Cờ", "👑"],
+  ];
+  const tierOf = (list, r) => list.filter((t) => r >= t[0]).pop();
+  const kFactor = () => (rank.games < 20 ? 40 : 24); // 20 ván đầu lên/xuống nhanh hơn
+  const expected = (me, opp) => 1 / (1 + 10 ** ((opp - me) / 400));
+  const eloDelta = (score) => Math.round(kFactor() * (score - expected(rank.rating, rank.bot)));
+  // Sức máy theo Elo: tính càng sâu, càng lâu, càng ít "lơ đễnh" khi điểm càng cao
+  function botCfg(elo) {
+    const t = Math.min(1, Math.max(0, (elo - 300) / 1900));
+    return {
+      depth: elo < 600 ? 1 : elo < 900 ? 2 : elo < 1200 ? 3 : elo < 1500 ? 4 : elo < 1800 ? 6 : 64,
+      time: Math.min(6000, Math.round(250 + 3750 * t * t + Math.max(0, elo - 2200) * 5)),
+      noise: Math.round(260 * (1 - t) ** 2),
+      blunder: elo < 900 ? (0.18 * (900 - elo)) / 600 : 0,
+      book: elo >= 900,
+    };
+  }
+  function pickBot() {
+    // đối thủ ngang điểm bạn, lệch ngẫu nhiên ±60; luân phiên cầm Trắng/Đen
+    rank.bot = Math.max(250, Math.round(rank.rating + Math.random() * 120 - 60));
+    rank.side = rank.games % 2 ? "b" : "w";
+    saveRank();
+  }
+  // ghi kết quả ván xếp hạng; score theo phía người chơi: 1 thắng, 0.5 hòa, 0 thua
+  function settleRank(score) {
+    const before = rank.rating;
+    const d = eloDelta(score);
+    const oldTitle = tierOf(TITLES, before);
+    rank.rating = Math.max(100, before + d);
+    rank.games++;
+    if (score === 1) rank.w++;
+    else if (score === 0) rank.l++;
+    else rank.d++;
+    rank.peak = Math.max(rank.peak, rank.rating);
+    rank.lastBot = rank.bot; // giữ để vẫn hiện tên đối thủ sau ván
+    rank.bot = null;
+    saveRank();
+    const newTitle = tierOf(TITLES, rank.rating);
+    return { before, after: rank.rating, d, up: newTitle[0] > oldTitle[0] ? newTitle : null, down: newTitle[0] < oldTitle[0] };
+  }
 
   // ---------- Lưu trữ ----------
   const KEY = "gamevui-chess";
@@ -630,8 +934,12 @@
   let thinkId = 0;
   let thinking = false;
 
-  const vsAI = () => settings.mode === "ai";
-  const humanW = () => settings.side === "w";
+  let keys = []; // khoá băm của các thế cờ đã qua (để máy tránh lặp lại)
+  const ranked = () => settings.mode === "ranked";
+  const vsAI = () => settings.mode !== "pvp";
+  const humanW = () => (ranked() ? rank.side === "w" : settings.side === "w");
+  // ván xếp hạng đang dở (đã có nước đi, chưa kết thúc)
+  const rankedInProgress = () => ranked() && !over && history.length > 0 && rank.bot != null;
   const aiTurn = () => vsAI() && !over && state.w !== humanW();
   const posKey = () => state.b.join(",") + (state.w ? "w" : "b") + state.c + "," + state.ep;
   const from = (m) => m & 63;
@@ -800,7 +1108,41 @@
   // ---------- Bảng / người chơi ----------
   function sideName(w) {
     if (!vsAI()) return w ? "Quân Trắng" : "Quân Đen";
+    if (ranked()) {
+      if (w === humanW()) return `Bạn · ${rank.rating}`;
+      const elo = rank.bot ?? rank.lastBot ?? rank.rating;
+      const b = tierOf(BOTS, elo);
+      return `${b[2]} ${b[1]} · ${elo}`;
+    }
     return w === humanW() ? "Bạn" : `Máy · ${LEVEL_NAME[settings.level]}`;
+  }
+  function renderRank() {
+    const card = $("#rankCard");
+    card.hidden = !ranked();
+    if (!ranked()) return;
+    const t = tierOf(TITLES, rank.rating);
+    const next = TITLES.find((x) => x[0] > rank.rating);
+    $("#rkIco").textContent = t[2];
+    $("#rkTitle").textContent = t[1];
+    $("#rkElo").textContent = rank.rating;
+    $("#rkW").textContent = rank.w;
+    $("#rkD").textContent = rank.d;
+    $("#rkL").textContent = rank.l;
+    $("#rkPeak").textContent = rank.peak;
+    if (next) {
+      const pct = ((rank.rating - t[0]) / (next[0] - t[0])) * 100;
+      $("#rkBar").style.width = Math.max(3, Math.min(100, pct)) + "%";
+      $("#rkNext").textContent = `Còn ${next[0] - rank.rating} điểm để lên ${next[2]} ${next[1]}`;
+    } else {
+      $("#rkBar").style.width = "100%";
+      $("#rkNext").textContent = "Bạn đã ở hạng cao nhất!";
+    }
+    if (rank.bot != null && !over) {
+      const sign = (n) => (n > 0 ? "+" + n : n < 0 ? "−" + -n : "±0");
+      $("#rkStake").innerHTML = `Ván này: thắng <b class="up">${sign(eloDelta(1))}</b> · hòa <b>${sign(
+        eloDelta(0.5),
+      )}</b> · thua <b class="down">${sign(eloDelta(0))}</b>`;
+    } else $("#rkStake").textContent = "Bấm “Ván mới” để tìm đối thủ ngang sức";
   }
   function material(w) {
     let s = 0;
@@ -868,13 +1210,16 @@
       const key = seg.dataset.set;
       seg.querySelectorAll("button").forEach((b) => b.classList.toggle("on", b.dataset.v === settings[key]));
     });
-    $("#grpLevel").hidden = !vsAI();
-    $("#grpSide").hidden = !vsAI();
+    // xếp hạng: máy tự chọn theo điểm, phe luân phiên, không được đi lại / gợi ý
+    $("#grpLevel").hidden = settings.mode !== "ai";
+    $("#grpSide").hidden = settings.mode !== "ai";
     $("#btnSound").textContent = settings.muted ? "🔇 Âm thanh" : "🔊 Âm thanh";
-    $("#btnUndo").disabled = !history.length || thinking;
-    $("#btnHint").disabled = !!over || thinking || aiTurn();
+    $("#btnUndo").disabled = !history.length || thinking || ranked();
+    $("#btnHint").disabled = !!over || thinking || aiTurn() || ranked();
+    $("#btnResign").disabled = !!over || !history.length || !vsAI();
   }
   function renderAll() {
+    renderRank();
     renderPlayers();
     renderStatus();
     renderMoves();
@@ -927,7 +1272,45 @@
     $("#resIco").textContent = ico;
     $("#resTitle").textContent = title;
     $("#resText").textContent = over.reason;
+    const eloEl = $("#resElo");
+    eloEl.hidden = !over.rank;
+    if (over.rank) {
+      const r = over.rank;
+      const cls = r.d > 0 ? "up" : r.d < 0 ? "down" : "";
+      eloEl.innerHTML =
+        `Điểm Elo: ${r.before} → <b>${r.after}</b> <span class="${cls}">(${r.d > 0 ? "+" : ""}${r.d})</span>` +
+        (r.up ? `<br><span class="up">🎉 Lên hạng ${r.up[2]} ${r.up[1]}!</span>` : "") +
+        (r.down ? `<br><span class="down">Xuống hạng ${tierOf(TITLES, r.after)[1]}</span>` : "");
+    }
     setTimeout(() => ($("#result").hidden = false), 450);
+  }
+  // Ván kết thúc: ghi điểm xếp hạng (một lần) rồi hiện kết quả
+  function finishGame() {
+    if (ranked() && rank.bot != null && !over.rank) {
+      const score = !over.winner ? 0.5 : (over.winner === "w") === humanW() ? 1 : 0;
+      over.rank = settleRank(score);
+    }
+    renderAll();
+    persist();
+    showResult();
+  }
+  function resign() {
+    if (over || !history.length || !vsAI()) return;
+    if (!confirm(ranked() ? "Xin thua ván này? Bạn sẽ bị trừ điểm." : "Xin thua ván này?")) return;
+    thinkId++;
+    thinking = false;
+    over = { winner: humanW() ? "b" : "w", reason: "Bạn xin thua" };
+    finishGame();
+  }
+  // Rời ván xếp hạng đang dở (ván mới / đổi chế độ) = tính thua
+  function leaveRanked() {
+    if (!rankedInProgress()) return true;
+    if (!confirm("Ván xếp hạng đang dở. Bỏ ván bây giờ sẽ bị tính là THUA. Tiếp tục?")) return false;
+    thinkId++;
+    thinking = false;
+    over = { winner: humanW() ? "b" : "w", reason: "Bỏ ván" };
+    over.rank = settleRank(0);
+    return true;
   }
 
   // ---------- Đi quân ----------
@@ -941,6 +1324,7 @@
     E.make(state, m);
     history.push({ m, san: note, piece, cap });
     positions.set(posKey(), (positions.get(posKey()) || 0) + 1);
+    keys.push(E.key(state));
     legalNow = E.legal(state);
     selected = -1;
     hintMove = -1;
@@ -952,16 +1336,17 @@
     else if (cap) sfx.capture();
     else sfx.move();
     if (!over && E.inCheck(state, state.w)) sfx.check();
+    if (over) return finishGame();
     renderAll();
     persist();
-    if (over) showResult();
-    else maybeAI();
+    maybeAI();
   }
 
   function resetState() {
     state = E.parseFEN(E.START);
     history = [];
     positions = new Map([[posKey(), 1]]);
+    keys = [E.key(state)];
     legalNow = E.legal(state);
     over = null;
     selected = -1;
@@ -971,6 +1356,7 @@
     thinkId++;
     thinking = false;
     resetState();
+    if (ranked()) pickBot();
     flipped = vsAI() && !humanW();
     $("#result").hidden = true;
     $("#promo").hidden = true;
@@ -991,7 +1377,7 @@
     renderAll();
   }
   function undo() {
-    if (!history.length) return;
+    if (!history.length || ranked()) return; // ván xếp hạng không được đi lại
     thinkId++;
     thinking = false;
     let n = 1;
@@ -1017,7 +1403,7 @@
   let worker = null;
   const pending = new Map();
   try {
-    const src = `const E=(${Engine.toString()})();onmessage=(e)=>{const d=e.data;postMessage({id:d.id,move:E.search(d.s,d.level,d.line)});};`;
+    const src = `const E=(${Engine.toString()})();onmessage=(e)=>{const d=e.data;postMessage({id:d.id,move:E.search(d.s,d.opts)});};`;
     worker = new Worker(URL.createObjectURL(new Blob([src], { type: "text/javascript" })));
     worker.onmessage = (e) => {
       const job = pending.get(e.data.id);
@@ -1033,21 +1419,28 @@
   } catch {
     worker = null;
   }
-  function think(level, cb) {
+  // who: "bot" (máy đang đấu) hoặc "hint" (gợi ý cho người chơi)
+  function think(who, cb) {
     const id = ++thinkId;
     const s = { ...state, b: state.b.slice() };
-    const line = history.map((h) => E.uci(h.m)).join(" ");
+    const opts = {
+      line: history.map((h) => E.uci(h.m)).join(" "),
+      keys: keys.slice(0, -1),
+    };
+    if (who === "hint") opts.level = "medium";
+    else if (ranked()) opts.cfg = botCfg(rank.bot ?? rank.rating);
+    else opts.level = settings.level;
     const done = (move) => {
       if (id === thinkId) cb(move);
     };
     const run = () => {
-      if (id === thinkId) done(E.search(s, level, line));
+      if (id === thinkId) done(E.search(s, opts));
     };
     if (worker) {
       const job = (move) => done(move);
       job.run = run;
       pending.set(id, job);
-      worker.postMessage({ id, s, level, line });
+      worker.postMessage({ id, s, opts });
     } else setTimeout(run, 30);
   }
   function maybeAI() {
@@ -1056,7 +1449,7 @@
     renderStatus();
     renderControls();
     const start = performance.now();
-    think(settings.level, (m) => {
+    think("bot", (m) => {
       const id = thinkId;
       setTimeout(
         () => {
@@ -1075,7 +1468,7 @@
     renderStatus();
     renderControls();
     $("#statusText").textContent = "Đang tìm nước hay…";
-    think("medium", (m) => {
+    think("hint", (m) => {
       thinking = false;
       hintMove = m;
       renderAll();
@@ -1201,6 +1594,7 @@
     seg.addEventListener("click", (e) => {
       const b = e.target.closest("button");
       if (!b || settings[seg.dataset.set] === b.dataset.v) return;
+      if (seg.dataset.set !== "level" && !leaveRanked()) return;
       settings[seg.dataset.set] = b.dataset.v;
       sfx.select();
       if (seg.dataset.set === "level") {
@@ -1209,8 +1603,9 @@
       } else newGame();
     }),
   );
-  $("#btnNew").addEventListener("click", newGame);
+  $("#btnNew").addEventListener("click", () => leaveRanked() && newGame());
   $("#resNew").addEventListener("click", newGame);
+  $("#btnResign").addEventListener("click", resign);
   $("#resView").addEventListener("click", () => ($("#result").hidden = true));
   $("#btnUndo").addEventListener("click", undo);
   $("#btnHint").addEventListener("click", hint);
@@ -1243,7 +1638,7 @@
   // ---------- Khởi động: khôi phục ván dở ----------
   flipped = vsAI() && !humanW();
   renderSquares();
-  if (Array.isArray(saved.moves) && saved.moves.length) {
+  if (Array.isArray(saved.moves) && saved.moves.length && !(ranked() && rank.bot == null)) {
     replay(saved.moves);
     maybeAI();
   } else newGame();
