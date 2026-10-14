@@ -4,29 +4,38 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Dino Runner - GameVui</title>
-    <link rel="stylesheet" href="style.css?v=3" />
+    <link rel="stylesheet" href="style.css?v=4" />
   </head>
   <body>
-    <main class="page">
+    <header class="top">
       <a class="back" href="../../index.html">← Về GameVui</a>
-      <section class="panel">
-        <p class="eyebrow">GAMEVUI · ENDLESS RUNNER</p>
-        <h1>Dino Runner</h1>
-        <p class="help">
-          <kbd>Space</kbd> / <kbd>↑</kbd> hoặc chạm màn hình để nhảy ·
-          <kbd>↓</kbd> để cúi hoặc rơi nhanh
-        </p>
-        <div class="stage" id="stage">
-          <canvas id="game" aria-label="Màn chơi Dino Runner"></canvas>
-          <p class="start-hint">Nhấn Space hoặc chạm để bắt đầu</p>
+    </header>
+    <main class="page">
+      <h1>T-Rex Khủng Long</h1>
+      <p class="desc">
+        Trò chơi khủng long chạy quen thuộc của trình duyệt khi mất mạng. Nhấn <b>phím cách</b> để bắt đầu, nhảy
+        qua xương rồng bằng phím cách hoặc mũi tên lên, và <b>mũi tên xuống (↓)</b> để cúi né thằn lằn bay.
+      </p>
+
+      <div class="game" id="game">
+        <canvas id="canvas" aria-label="Màn chơi T-Rex"></canvas>
+        <button class="start" id="btnStart">BẮT ĐẦU TRÒ CHƠI</button>
+      </div>
+
+      <div class="keys">
+        <span>sử dụng</span>
+        <div class="arrows">
+          <button class="k" id="kUp" aria-label="Nhảy">↑</button>
+          <span class="k off">←</span><button class="k" id="kDown" aria-label="Cúi">↓</button><span class="k off">→</span>
         </div>
-        <div class="controls">
-          <button id="btnJump" type="button">▲ NHẢY</button>
-          <button id="btnDuck" type="button">▼ CÚI</button>
-        </div>
-        <button class="restart" id="restart" type="button">Chơi lại</button>
-      </section>
+        <span>hoặc</span>
+        <button class="k space" id="kSpace">Phím cách</button>
+        <button class="mute" id="btnSound" aria-label="Tắt âm thanh">🔊</button>
+      </div>
+      <p class="credit">
+        Hình ảnh và luật chơi theo trò T-Rex của trình duyệt Chromium · © The Chromium Authors (giấy phép BSD)
+      </p>
     </main>
-    <script src="script.js?v=3"></script>
+    <script src="script.js?v=4"></script>
   </body>
 </html>
