@@ -20,7 +20,21 @@
         ><span class="brand-mark">✦</span><span>Game<span>Vui</span></span></a
       >
       <nav><a href="#games">Kho game</a><a href="#about">Giới thiệu</a></nav>
-      <div class="status-pill"><i></i> Sẵn sàng chơi</div>
+      <div class="topbar-actions">
+        <div class="theme-switcher">
+          <button class="theme-toggle" id="themeToggle" type="button" aria-expanded="false" aria-controls="themeMenu">
+            <span id="themeIcon">☀</span><span id="themeName">Sáng</span><span class="theme-arrow">⌄</span>
+          </button>
+          <div class="theme-menu" id="themeMenu" hidden>
+            <button type="button" data-theme-choice="light"><span>☀</span><b>Sáng</b><small>Trong trẻo</small></button>
+            <button type="button" data-theme-choice="dark"><span>☾</span><b>Tối</b><small>Neon đêm</small></button>
+            <button type="button" data-theme-choice="halloween"><span>🎃</span><b>Halloween</b><small>Bí ẩn ma mị</small></button>
+            <button type="button" data-theme-choice="christmas"><span>🎄</span><b>Giáng Sinh</b><small>Tuyết và sắc đỏ</small></button>
+            <button type="button" data-theme-choice="tet"><span>🧧</span><b>Tết</b><small>Mai vàng, lộc xuân</small></button>
+          </div>
+        </div>
+        <div class="status-pill"><i></i> Sẵn sàng chơi</div>
+      </div>
     </header>
     <main id="top">
       <section class="hero">
@@ -359,6 +373,54 @@
                 ><a class="play-button" href="games/dino-runner/index.html">
                   Chơi ngay <span>→</span>
                 </a>
+              </div>
+            </div>
+          </article>
+          <article class="game-card mini-card">
+            <div class="card-visual mini-visual block-visual">
+              <span class="visual-label">FALLING BLOCKS</span>
+              <div class="block-preview"><i></i><b></b><em></em><strong></strong></div>
+            </div>
+            <div class="card-content">
+              <div class="card-title">
+                <span class="game-icon">▦</span>
+                <div>
+                  <h3>Block Drop</h3>
+                  <p>Xếp khối, xoá hàng, tăng level</p>
+                </div>
+              </div>
+              <p class="card-description">
+                Xoay và thả các khối rơi để lấp đầy hàng ngang. Có next, hold và hard drop.
+              </p>
+              <div class="card-footer">
+                <span class="tag">← → / XOAY / CHẠM</span
+                ><a class="play-button" href="games/block-drop/index.html"
+                  >Chơi ngay <span>→</span></a
+                >
+              </div>
+            </div>
+          </article>
+          <article class="game-card mini-card">
+            <div class="card-visual mini-visual rapid-visual">
+              <span class="visual-label">LCD CLASSIC</span>
+              <div class="rapid-preview"><i></i><b></b><em></em></div>
+            </div>
+            <div class="card-content">
+              <div class="card-title">
+                <span class="game-icon">●</span>
+                <div>
+                  <h3>Rapid Roll</h3>
+                  <p>Lăn bóng qua những bệ đỡ</p>
+                </div>
+              </div>
+              <p class="card-description">
+                Điều khiển quả bóng rơi qua các bệ đang cuộn lên. Giữ thăng bằng và sống sót lâu nhất có thể.
+              </p>
+              <div class="card-footer">
+                <span class="tag">← → / CHẠM</span
+                ><a class="play-button" href="games/rapid-roll/index.html"
+                  >Chơi ngay <span>→</span></a
+                >
               </div>
             </div>
           </article>
