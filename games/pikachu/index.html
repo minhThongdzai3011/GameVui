@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Pikachu Cổ Điển - GameVui</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Be+Vietnam+Pro:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css?v=1" />
+  </head>
+  <body>
+    <a class="back" href="../../index.html">← Về GameVui</a>
+
+    <main class="app">
+      <section class="stats">
+        <div class="stat"><small>BÀN</small><b id="stLevel" class="c-blue">1</b></div>
+        <div class="stat"><small>LƯỢT ĐỔI</small><b id="stShuffles" class="c-purple">10</b></div>
+        <div class="stat"><small>ĐIỂM</small><b id="stScore" class="c-yellow">0</b></div>
+        <div class="stat"><small>KỶ LỤC</small><b id="stBest" class="c-green">0</b></div>
+        <div class="stat mode"><small>KIỂU BÀN</small><b id="stMode">Đứng yên</b></div>
+      </section>
+
+      <div class="timebar"><i id="timeFill"></i></div>
+
+      <div class="board-wrap" id="boardWrap">
+        <div class="board" id="board">
+          <svg class="link" id="link"></svg>
+        </div>
+        <div class="toast" id="toast" hidden></div>
+
+        <div class="modal" id="modal" hidden>
+          <div class="card">
+            <div class="m-ico" id="mIco">🎉</div>
+            <h2 id="mTitle">Chơi lại?</h2>
+            <p id="mText"></p>
+            <div class="m-btns" id="mBtns"></div>
+          </div>
+        </div>
+      </div>
+
+      <nav class="tools">
+        <button class="tool" id="btnSound"><span>🔊</span>Âm thanh</button>
+        <button class="tool" id="btnShuffle"><span>🔀</span>Đổi vị trí</button>
+        <button class="tool hint" id="btnHint"><span>💡</span>Gợi ý<i id="hintCount">3</i></button>
+        <button class="tool" id="btnSize"><span>▦</span>Cỡ bàn</button>
+        <button class="tool" id="btnRestart"><span>↻</span>Chơi lại</button>
+      </nav>
+    </main>
+    <script src="script.js?v=1"></script>
+  </body>
+</html>

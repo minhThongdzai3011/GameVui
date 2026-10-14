@@ -478,6 +478,29 @@ body {
   font-style: normal;
   color: #379a82;
 }
+.pika-visual {
+  background: #1b2f66;
+}
+.pika-preview {
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  display: grid;
+  grid-template-columns: repeat(4, 36px);
+  gap: 3px;
+  transform: translate(-50%, -50%) rotate(-4deg);
+}
+.pika-preview span {
+  display: grid;
+  place-items: center;
+  height: 42px;
+  border-radius: 5px;
+  background: linear-gradient(160deg, #fffaf0, #fde2c4 60%, #f6caa0);
+  box-shadow:
+    inset -2px -2px 0 #d9965d,
+    inset 2px 2px 0 #fffdf6;
+  font-size: 22px;
+}
 .pac-visual {
   background: #14143a;
 }
