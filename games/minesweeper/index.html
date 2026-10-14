@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Dò Mìn - GameVui</title>
+    <link rel="stylesheet" href="style.css?v=1" />
+  </head>
+  <body>
+    <a class="back" href="../../index.html">← Về GameVui</a>
+
+    <div class="window" id="win">
+      <div class="titlebar">
+        <span class="t-ico" aria-hidden="true"></span>
+        <span class="t-text">Dò Mìn</span>
+        <a class="t-btn" href="../../index.html" aria-label="Đóng">✕</a>
+      </div>
+
+      <nav class="menubar">
+        <div class="menu">
+          <button class="m-top" id="menuGame"><u>T</u>rò chơi</button>
+          <div class="m-list" id="menuList" hidden>
+            <button data-act="new">Ván mới<kbd>F2</kbd></button>
+            <hr />
+            <button data-lv="beginner" class="chk">Sơ cấp</button>
+            <button data-lv="intermediate" class="chk">Trung cấp</button>
+            <button data-lv="expert" class="chk">Cao cấp</button>
+            <button data-lv="custom" class="chk">Tuỳ chỉnh…</button>
+            <hr />
+            <button data-act="marks" class="chk" id="optMarks">Dấu (?)</button>
+            <hr />
+            <button data-act="best">Kỷ lục…</button>
+            <hr />
+            <button data-act="exit">Thoát</button>
+          </div>
+        </div>
+        <button class="m-top" id="menuHelp"><u>H</u>ướng dẫn</button>
+      </nav>
+
+      <div class="body">
+        <div class="panel sunken top">
+          <div class="led" id="ledMines" aria-label="Số mìn còn lại"></div>
+          <button class="face" id="face" aria-label="Ván mới"></button>
+          <div class="led" id="ledTime" aria-label="Thời gian"></div>
+        </div>
+        <div class="field-scroll">
+          <div class="field sunken" id="field" role="grid"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Nút cắm cờ cho màn hình cảm ứng -->
+    <div class="touchbar">
+      <button id="btnFlagMode" aria-pressed="false"><span class="mini-flag"></span> Chế độ cắm cờ: TẮT</button>
+      <span class="tip">Mẹo: chạm giữ một ô để cắm cờ</span>
+    </div>
+
+    <!-- Hộp thoại kiểu Windows -->
+    <div class="dlg-wrap" id="dlgWrap" hidden>
+      <div class="window dlg" id="dlg">
+        <div class="titlebar">
+          <span class="t-text" id="dlgTitle">Tuỳ chỉnh</span>
+          <button class="t-btn" data-close aria-label="Đóng">✕</button>
+        </div>
+        <div class="dlg-body" id="dlgBody"></div>
+      </div>
+    </div>
+
+    <script src="script.js?v=1"></script>
+  </body>
+</html>

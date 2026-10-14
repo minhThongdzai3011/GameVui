@@ -1,0 +1,400 @@
+/* Phong cách Windows 98 cổ điển */
+:root {
+  --gray: #c0c0c0;
+  --light: #ffffff;
+  --shadow: #808080;
+  --dark: #000000;
+  --cell: 26px;
+  --ui: "Tahoma", "MS Sans Serif", "Segoe UI", Arial, sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+[hidden] {
+  display: none !important;
+}
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 48px 10px 20px;
+  background: #008080; /* nền xanh ngọc của Windows 98 */
+  font: 12px var(--ui);
+  color: #000;
+  -webkit-tap-highlight-color: transparent;
+}
+button {
+  font: inherit;
+  color: inherit;
+}
+.back {
+  position: fixed;
+  top: 12px;
+  left: 14px;
+  color: #fff;
+  font: bold 14px var(--ui);
+  text-decoration: none;
+  text-shadow: 1px 1px 0 #004040;
+}
+
+/* ---------- Cửa sổ ---------- */
+.window {
+  max-width: 100%;
+  padding: 3px;
+  background: var(--gray);
+  box-shadow:
+    inset -1px -1px var(--dark),
+    inset 1px 1px #dfdfdf,
+    inset -2px -2px var(--shadow),
+    inset 2px 2px var(--light),
+    4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+.titlebar {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  height: 22px;
+  padding: 0 3px 0 4px;
+  background: linear-gradient(90deg, #000080, #1084d0);
+  color: #fff;
+  font-weight: bold;
+  user-select: none;
+}
+.t-text {
+  flex: 1;
+  white-space: nowrap;
+}
+.t-ico {
+  width: 16px;
+  height: 16px;
+  background: radial-gradient(circle at 40% 40%, #fff 0 10%, #000 12% 55%, transparent 57%);
+}
+.t-btn {
+  width: 18px;
+  height: 16px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  background: var(--gray);
+  color: #000;
+  font: bold 11px var(--ui);
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow:
+    inset -1px -1px var(--dark),
+    inset 1px 1px var(--light),
+    inset -2px -2px var(--shadow);
+}
+.t-btn:active {
+  box-shadow:
+    inset 1px 1px var(--dark),
+    inset -1px -1px var(--light),
+    inset 2px 2px var(--shadow);
+}
+
+/* ---------- Menu ---------- */
+.menubar {
+  display: flex;
+  height: 20px;
+  margin-top: 1px;
+  user-select: none;
+}
+.menu {
+  position: relative;
+}
+.m-top {
+  height: 20px;
+  padding: 0 7px;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+.m-top.open,
+.m-top:hover {
+  background: #000080;
+  color: #fff;
+}
+.m-list {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  z-index: 20;
+  min-width: 170px;
+  padding: 2px;
+  background: var(--gray);
+  box-shadow:
+    inset -1px -1px var(--dark),
+    inset 1px 1px #dfdfdf,
+    inset -2px -2px var(--shadow),
+    inset 2px 2px var(--light),
+    2px 2px 0 rgba(0, 0, 0, 0.3);
+}
+.m-list button {
+  display: flex;
+  width: 100%;
+  padding: 3px 18px 3px 20px;
+  border: 0;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+  position: relative;
+}
+.m-list button:hover {
+  background: #000080;
+  color: #fff;
+}
+.m-list button.on::before {
+  content: "✓";
+  position: absolute;
+  left: 6px;
+}
+.m-list kbd {
+  margin-left: auto;
+  padding-left: 18px;
+  font: inherit;
+}
+.m-list hr {
+  margin: 3px 1px;
+  border: 0;
+  border-top: 1px solid var(--shadow);
+  border-bottom: 1px solid var(--light);
+}
+
+/* ---------- Thân ---------- */
+.body {
+  padding: 6px;
+  border-left: 3px solid var(--light);
+  border-top: 3px solid var(--light);
+  margin-top: 2px;
+}
+.sunken {
+  border: 3px solid;
+  border-color: var(--shadow) var(--light) var(--light) var(--shadow);
+}
+.panel.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 5px;
+  margin-bottom: 6px;
+  border-width: 2px;
+}
+.led {
+  display: flex;
+  gap: 1px;
+  height: 29px;
+  padding: 1px;
+  background: #000;
+  border: 1px solid;
+  border-color: var(--shadow) var(--light) var(--light) var(--shadow);
+}
+.led svg {
+  width: 15px;
+  height: 27px;
+}
+.led .on {
+  fill: #ff0000;
+}
+.led .off {
+  fill: #2a0000;
+}
+.face {
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: 1px solid var(--shadow);
+  background: var(--gray);
+  cursor: pointer;
+  box-shadow:
+    inset -2px -2px var(--shadow),
+    inset 2px 2px var(--light);
+}
+.face.down {
+  box-shadow: inset 2px 2px var(--shadow);
+}
+.face svg {
+  display: block;
+  width: 22px;
+  height: 22px;
+  margin: auto;
+}
+.face.down svg {
+  transform: translate(1px, 1px);
+}
+
+/* ---------- Bãi mìn ---------- */
+.field-scroll {
+  max-width: calc(100vw - 40px);
+  overflow-x: auto;
+}
+.field {
+  display: grid;
+  grid-template-columns: repeat(var(--cols), var(--cell));
+  grid-auto-rows: var(--cell);
+  width: max-content;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+.c {
+  display: grid;
+  place-items: center;
+  background: var(--gray);
+  font: bold calc(var(--cell) * 0.62) / 1 "Courier New", var(--ui);
+  cursor: default;
+  box-shadow:
+    inset -2px -2px var(--shadow),
+    inset 2px 2px var(--light);
+}
+.c.open,
+.c.press {
+  box-shadow: none;
+  border-left: 1px solid var(--shadow);
+  border-top: 1px solid var(--shadow);
+}
+.c.boom {
+  background: #ff0000;
+}
+.c svg {
+  width: 72%;
+  height: 72%;
+  pointer-events: none;
+}
+.c.q::after {
+  content: "?";
+  font-family: var(--ui);
+}
+.n1 {
+  color: #0000ff;
+}
+.n2 {
+  color: #008000;
+}
+.n3 {
+  color: #ff0000;
+}
+.n4 {
+  color: #000080;
+}
+.n5 {
+  color: #800000;
+}
+.n6 {
+  color: #008080;
+}
+.n7 {
+  color: #000000;
+}
+.n8 {
+  color: #808080;
+}
+
+/* ---------- Thanh cảm ứng ---------- */
+.touchbar {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  color: #e0ffff;
+}
+@media (pointer: coarse) {
+  .touchbar {
+    display: flex;
+  }
+}
+#btnFlagMode {
+  color: #000;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 34px;
+  padding: 0 14px;
+  border: 0;
+  background: var(--gray);
+  font-weight: bold;
+  box-shadow:
+    inset -1px -1px var(--dark),
+    inset 1px 1px var(--light),
+    inset -2px -2px var(--shadow),
+    inset 2px 2px #dfdfdf;
+}
+#btnFlagMode[aria-pressed="true"] {
+  box-shadow:
+    inset 1px 1px var(--dark),
+    inset -1px -1px var(--light),
+    inset 2px 2px var(--shadow);
+  background: #d8d8d8;
+}
+.mini-flag {
+  width: 14px;
+  height: 14px;
+  background: linear-gradient(135deg, #ff0000 0 50%, transparent 50%) 0 0 / 9px 8px no-repeat,
+    linear-gradient(#000, #000) 7px 0 / 2px 14px no-repeat;
+}
+
+/* ---------- Hộp thoại ---------- */
+.dlg-wrap {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: grid;
+  place-items: center;
+  background: rgba(0, 0, 0, 0.15);
+}
+.dlg {
+  width: min(300px, 92vw);
+}
+.dlg-body {
+  padding: 14px 12px 12px;
+  line-height: 1.6;
+}
+.dlg-body table {
+  border-collapse: collapse;
+  margin: 0 auto 12px;
+}
+.dlg-body td {
+  padding: 3px 8px;
+}
+.dlg-body input {
+  width: 64px;
+  padding: 2px 4px;
+  border: 2px solid;
+  border-color: var(--shadow) var(--light) var(--light) var(--shadow);
+  font: inherit;
+}
+.dlg-btns {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+.btn98 {
+  min-width: 76px;
+  height: 24px;
+  border: 0;
+  background: var(--gray);
+  cursor: pointer;
+  box-shadow:
+    inset -1px -1px var(--dark),
+    inset 1px 1px var(--light),
+    inset -2px -2px var(--shadow),
+    inset 2px 2px #dfdfdf;
+}
+.btn98:active {
+  box-shadow:
+    inset 1px 1px var(--dark),
+    inset -1px -1px var(--light),
+    inset 2px 2px var(--shadow);
+}
+.btn98:focus-visible {
+  outline: 1px dotted #000;
+  outline-offset: -5px;
+}
