@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>Nông Trại Vui - GameVui</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css?v=1" />
+  </head>
+  <body>
+    <canvas id="cv"></canvas>
+
+    <div id="ui" hidden>
+      <div class="hud">
+        <div class="pill p-cash"><i class="ic">💰</i><b id="tCash">$0</b></div>
+        <div class="pill p-idle"><i class="ic">⏱️</i><b id="tIdle">$0 /s</b></div>
+        <div class="pill p-seed">
+          <i class="ic">🌱</i><b id="tSeed">0</b><button class="info" id="btnInfo" title="Thưởng hạt giống" hidden>?</button>
+        </div>
+      </div>
+
+      <button class="ibtn b-set" id="btnSet" title="Cài đặt"><span>⚙️</span></button>
+
+      <div class="bl">
+        <button class="ibtn b-shop" id="btnShop" title="Cửa hàng nâng cấp">
+          <span>🛒</span><i class="notif" id="shopNotif" hidden>⬆</i>
+        </button>
+        <button class="ibtn b-up" id="btnUp" title="Chế độ nâng cấp"><span>⛏️</span></button>
+      </div>
+
+      <button class="ibtn b-ach" id="btnAch" title="Thành tựu" hidden><span>🏆</span><i class="bang" id="achBang" hidden>!</i></button>
+
+      <div class="mults" id="mults" hidden>
+        <button data-m="0">1X</button><button data-m="1">10X</button><button data-m="2" title="Tới mốc thưởng kế tiếp">★</button
+        ><button data-m="3">MAX</button>
+      </div>
+
+      <div class="uptitle" id="upTitle" hidden>
+        <span>CHẾ ĐỘ NÂNG CẤP</span><button class="x" id="btnUpClose" title="Đóng">✕</button>
+      </div>
+
+      <div class="tut" id="tut" hidden></div>
+      <div class="finger" id="finger" hidden><span>👆</span></div>
+      <div class="notifs" id="notifs"></div>
+      <div class="toasts" id="toasts"></div>
+    </div>
+
+    <div class="modal" id="modal" hidden></div>
+
+    <div class="title" id="title">
+      <div class="logo" id="logo"><b>NÔNG TRẠI</b><b>VUI</b></div>
+      <button class="play" id="btnPlay" title="Chơi"><i></i></button>
+      <a class="back" href="../../index.html">← Về GameVui</a>
+    </div>
+
+    <script src="script.js?v=1"></script>
+  </body>
+</html>
