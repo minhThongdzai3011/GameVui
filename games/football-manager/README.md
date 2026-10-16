@@ -8,6 +8,8 @@ A football management game for V.League 1 and V.League 2 with real 2026/27 squad
 - Home: next match, board confidence, inbox (results, injuries, suspensions, monthly finances), mini table.
 - Squad: six formations, pitch view with slots and a 9-player bench, player profiles (25 attributes, stats, contract). At most 4 foreign-slot players on the pitch.
 - Tactics: mentality, pressing, tempo, passing.
+- Transfers (tab "Thị trường"): summer window (pre-season to two weeks after round 1) and mid-season window (Tết break); free agents any time. Search by position, league, age and price; bid (the selling club accepts, counters or rejects with a hint of what they want); negotiate wage and length with the player (who can refuse, e.g. a V.League 1 star will not drop to V.League 2). AI clubs bid for your players (more when you transfer-list them), buy and sell among themselves and sign free agents. Wage bill capped by the board.
+- Contracts: end on 30 June; reminders in January, March and May; renew from the player profile or the Contracts list; expired contracts leave as free agents; releasing a player costs half the remaining wages.
 - Matches: live text commentary with live stats, speed control, substitutions (5) and tactic changes during the match, injuries, cards, player ratings; or quick simulation.
 - Season: 26 rounds per league, play-off (V.League 1 13th vs V.League 2 2nd), promotion and relegation (V.League 2 bottom drops to the Second Division and is replaced by a generated club), then a new season with ageing, development, retirements and youth intake. Missing the board's objective badly gets you sacked.
 - Saves: automatic in the browser (IndexedDB); "Xuất mã save" gives a compressed code (`GVFM1:…`, about 40 KB) to continue in another browser.
@@ -20,6 +22,7 @@ Code (plain scripts sharing `window.FM`, because ES modules and `fetch` do not w
 | `js/core.js` | Seeded RNG, dates, money, formations, attribute and role weights |
 | `js/engine.js` | Match engine and automatic team selection |
 | `js/world.js` | New game, fixtures, daily simulation, results, tables, season end and new season |
+| `js/transfers.js` | Transfer windows, valuation, bids, contract talks, AI transfers, contract expiry |
 | `js/save.js` | IndexedDB saves and save codes |
 | `js/ui.js` | All screens |
 

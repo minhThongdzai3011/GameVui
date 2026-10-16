@@ -17,7 +17,9 @@
   const ui = { view: "start", tab: "home", sel: null, pickLeague: V1, pickClub: null, tableTab: V1, fxTab: "mine", fxRound: null, live: null };
 
   // ---------- Mẩu giao diện dùng chung ----------
-  const club = (id) => W.baseClub(S, id);
+  const FREE_CLUB = { id: "free", name: "Tự do", code: "TD", colors: ["#4a5a52", "#dfe9e3"], venue: "" };
+  const club = (id) => (id === "free" ? FREE_CLUB : W.baseClub(S, id));
+  const T = FM.Transfers;
   function crest(id, size = "") {
     const c = S ? club(id) : D.clubs.find((x) => x.id === id);
     const [c1, c2] = c.colors || ["#1fa865", "#fff"];
@@ -90,15 +92,18 @@
   const TABS = {
     home: { icon: "🏠", label: "Trang chủ", view: viewHome },
     squad: { icon: "👕", label: "Đội hình", view: viewSquad },
-    tactics: { icon: "🧠", label: "Chiến thuật", view: viewTactics },
+    tactics: { icon: "🧠", label: "Lối chơi", view: viewTactics },
+    market: { icon: "💸", label: "Thị trường", view: viewMarket },
     fixtures: { icon: "📅", label: "Lịch", view: viewFixtures },
     table: { icon: "🏆", label: "BXH", view: viewTable },
     club: { icon: "🏟️", label: "CLB", view: viewClub },
   };
   function viewNav() {
     const unread = S.inbox.filter((m) => !m.r).length;
+    const offers = S.tr ? S.tr.offers.filter((o) => o.status === "open").length : 0;
+    const badge = (k) => (k === "home" && unread ? `<b class="badge">${unread}</b>` : k === "market" && offers ? `<b class="badge">${offers}</b>` : "");
     return `<nav class="nav">${Object.entries(TABS)
-      .map(([k, t]) => `<button data-act="tab" data-t="${k}" class="${ui.tab === k ? "on" : ""}"><span>${t.icon}</span>${t.label}${k === "home" && unread ? `<b class="badge">${unread}</b>` : ""}</button>`)
+      .map(([k, t]) => `<button data-act="tab" data-t="${k}" class="${ui.tab === k ? "on" : ""}"><span>${t.icon}</span>${t.label}${badge(k)}</button>`)
       .join("")}</nav>`;
   }
 
@@ -188,7 +193,7 @@
       ${S.inbox.length ? S.inbox.slice(0, 25).map(mailRow).join("") : `<div class="card-b muted">Chưa có thư.</div>`}
     </div>`;
   }
-  const MAIL_ICON = { board: "🏛️", result: "⚽", medical: "🚑", discipline: "🟥", finance: "💰", league: "🏆" };
+  const MAIL_ICON = { board: "🏛️", result: "⚽", medical: "🚑", discipline: "🟥", finance: "💰", league: "🏆", transfer: "🔁", contract: "📝", news: "📰" };
   function mailRow(m) {
     const body = esc(m.b).replace(/\*\*(.+?)\*\*/g, "<b>$1</b>");
     return `<details class="mail ${m.r ? "" : "unread"}" data-mail="${m.id}">
@@ -361,6 +366,159 @@
     </tr>`;
   }
 
+  // ---------- Thị trường chuyển nhượng ----------
+  ui.mk = { tab: "search", group: "", where: "all", sort: "ca", maxAge: "", maxFee: "", limit: 40 };
+  function viewMarket() {
+    T.ensure(S);
+    const win = T.window(S);
+    const c = S.clubs[S.user];
+    const bill = T.wageBill(S, S.user);
+    const open = S.tr.offers.filter((o) => o.status === "open");
+    const tab = (k, label) => `<button data-act="mk-tab" data-t="${k}" class="${ui.mk.tab === k ? "on" : ""}">${label}</button>`;
+    const head = `<div class="card"><div class="card-b kv">
+        <div><small>Kỳ chuyển nhượng</small><b style="color:${win.open ? "var(--accent)" : "var(--orange)"}">${win.open ? `Mở đến ${FM.fmtDate(win.until, false)}` : `Đóng${win.next ? ` · mở ${FM.fmtDate(win.next, false)}` : ""}`}</b></div>
+        <div><small>Số dư</small><b>${FM.fmtMoney(c.bal)}</b></div>
+        <div><small>Quỹ lương / tháng</small><b style="color:${bill > c.wageCap ? "var(--red)" : "var(--text)"}">${FM.fmtWage(bill)} / ${FM.fmtWage(c.wageCap)}</b></div>
+      </div>${win.open ? "" : `<div class="card-b small muted" style="padding-top:0">Ngoài kỳ chuyển nhượng vẫn ký được cầu thủ tự do.</div>`}</div>
+      <div class="tabs">${tab("search", "Tìm cầu thủ")}${tab("offers", `Đề nghị${open.length ? ` (${open.length})` : ""}`)}${tab("contracts", "Hợp đồng")}${tab("news", "Tin tức")}</div>`;
+    if (ui.mk.tab === "offers") return head + viewOffers();
+    if (ui.mk.tab === "contracts") return head + viewContracts();
+    if (ui.mk.tab === "news") return head + viewTransferNews();
+    const f = ui.mk;
+    const list = T.search(S, { group: f.group, where: f.where === "listed" ? "all" : f.where, listed: f.where === "listed", sort: f.sort, maxAge: +f.maxAge || 0, maxFee: +f.maxFee || 0 });
+    const groups = [["", "Tất cả"], ["GK", "Thủ môn"], ["DF", "Hậu vệ"], ["MF", "Tiền vệ"], ["FW", "Tiền đạo"]];
+    const sel = (name, opts, cur) => `<select data-change="mk" data-k="${name}" class="btn sm">${opts.map(([v, l]) => `<option value="${v}" ${String(cur) === v ? "selected" : ""}>${l}</option>`).join("")}</select>`;
+    return (
+      head +
+      `<div class="card"><div class="card-b" style="display:grid;gap:8px">
+        <div class="seg">${groups.map(([g, l]) => `<button class="${f.group === g ? "on" : ""}" data-act="mk-group" data-g="${g}">${l}</button>`).join("")}</div>
+        <div class="row wrap">
+          ${sel("where", [["all", "Mọi CLB"], ["v1", "V.League 1"], ["v2", "V.League 2"], ["free", "Cầu thủ tự do"], ["listed", "Đang rao bán"]], f.where)}
+          ${sel("sort", [["ca", "Năng lực cao"], ["pot", "Tiềm năng cao"], ["value", "Giá trị cao"], ["age", "Trẻ nhất"]], f.sort)}
+          ${sel("maxAge", [["", "Mọi tuổi"], ["21", "≤ 21 tuổi"], ["23", "≤ 23 tuổi"], ["27", "≤ 27 tuổi"], ["30", "≤ 30 tuổi"]], f.maxAge)}
+          ${sel("maxFee", [["", "Mọi mức giá"], ["1", "≤ 1 tỷ"], ["3", "≤ 3 tỷ"], ["5", "≤ 5 tỷ"], ["10", "≤ 10 tỷ"]], f.maxFee)}
+        </div>
+      </div>
+      <div class="scroll-x"><table class="plist"><thead><tr><th>VT</th><th class="l">Cầu thủ</th><th>Năng lực · giá trị</th></tr></thead><tbody>${
+        list
+          .slice(0, f.limit)
+          .map(
+            (p) => `<tr class="click" data-act="info" data-id="${p.id}"><td>${posTag(p.pos)}</td><td class="l" style="white-space:normal"><b>${esc(p.sn)}</b>${flags(p)} ${status(p)}${S.p[p.id].listed ? ' <span class="pill gold">Rao bán</span>' : ""}<div class="small muted">${p.age} tuổi · ${esc(club(p.c).name)}${p.ce ? ` · HĐ ${p.ce.slice(0, 4)}` : ""}</div></td><td>${stars(p.ca)}<div class="small muted">TN ${stars(p.pa)}</div><b class="small">${FM.fmtMoney(p.val)}</b></td></tr>`,
+          )
+          .join("") || `<tr><td class="muted">Không có cầu thủ phù hợp.</td></tr>`
+      }</tbody></table></div>
+      ${list.length > f.limit ? `<div class="card-b"><button class="btn block sm" data-act="mk-more">Xem thêm (${list.length - f.limit})</button></div>` : ""}</div>`
+    );
+  }
+  function viewOffers() {
+    const open = S.tr.offers.filter((o) => o.status === "open");
+    const past = S.tr.offers.filter((o) => o.status !== "open").slice(-8).reverse();
+    const neg = S.tr.neg && W.player(S, S.tr.neg.pid);
+    return `${
+      neg
+        ? `<div class="card"><h3>Đang đàm phán</h3><div class="card-b row">${posTag(neg.pos)}<div class="grow"><b>${esc(neg.n)}</b><div class="small muted">Đã thống nhất phí ${FM.fmtMoney(S.tr.neg.fee)} với ${esc(club(neg.c).name)} — còn hợp đồng cá nhân</div></div><button class="btn sm primary" data-act="contract" data-id="${neg.id}" data-kind="sign">Đàm phán lương</button></div></div>`
+        : ""
+    }
+    <div class="card"><h3>Đề nghị mua cầu thủ của bạn</h3>${
+      open.length
+        ? open
+            .map((o) => {
+              const p = W.player(S, o.pid);
+              return `<div class="card-b" style="border-top:1px solid var(--line);display:grid;gap:8px"><div class="row">${crest(o.from, "sm")}<div class="grow"><b>${esc(club(o.from).name)}</b> muốn mua <b class="link" data-act="info" data-id="${p.id}">${esc(p.sn)}</b><div class="small muted">Giá trị ${FM.fmtMoney(p.val)} · hết hạn ${FM.fmtDate(o.exp, false)}</div></div><b style="font-size:16px">${FM.fmtMoney(o.fee)}</b></div>
+              <div class="row wrap"><button class="btn sm primary" data-act="offer-accept" data-id="${o.id}">Đồng ý bán</button><button class="btn sm" data-act="offer-counter" data-id="${o.id}">Ra giá</button><button class="btn sm danger" data-act="offer-reject" data-id="${o.id}">Từ chối</button></div></div>`;
+            })
+            .join("")
+        : `<div class="card-b muted">Chưa có đề nghị nào. Rao bán cầu thủ (trong hồ sơ cầu thủ) để thu hút người mua.</div>`
+    }</div>
+    ${past.length ? `<div class="card"><h3>Đã xử lý</h3><table><tbody>${past.map((o) => `<tr><td class="l">${esc(W.player(S, o.pid)?.sn || "?")}</td><td class="l small">${esc(club(o.from).name)}</td><td>${FM.fmtMoney(o.fee)}</td><td class="small">${{ accepted: "Đã bán", rejected: "Từ chối", expired: "Hết hạn" }[o.status] || o.status}</td></tr>`).join("")}</tbody></table></div>` : ""}`;
+  }
+  function viewContracts() {
+    const end = `${S.season + 1}-06-30`;
+    const squad = W.squad(S, S.user).sort((a, b) => (a.ce || "").localeCompare(b.ce || "") || b.ca - a.ca);
+    return `<div class="card"><h3>Hợp đồng (${squad.length} cầu thủ)</h3><div class="scroll-x"><table class="plist"><thead><tr><th>VT</th><th class="l">Cầu thủ</th><th>Lương</th><th>Hết hạn</th><th></th></tr></thead><tbody>${squad
+      .map(
+        (p) => `<tr><td>${posTag(p.pos)}</td><td class="l click" data-act="info" data-id="${p.id}"><b>${esc(p.sn)}</b>${flags(p)}${S.p[p.id].listed ? ' <span class="pill gold">Rao bán</span>' : ""}<div class="small muted">${p.age} tuổi · ${T.ROLE_LABEL[T.role(S, p)]}</div></td><td class="small">${FM.fmtWage(p.wage)}</td><td class="small" style="color:${p.ce <= end ? "var(--red)" : "var(--text)"}">${FM.fmtDate(p.ce, false)}</td><td><button class="btn sm" data-act="renew" data-id="${p.id}">Gia hạn</button></td></tr>`,
+      )
+      .join("")}</tbody></table></div><div class="card-b small muted">Hợp đồng hết hạn ngày 30/6 (màu đỏ: hết hạn cuối mùa này). Không gia hạn thì cầu thủ ra đi tự do.</div></div>`;
+  }
+  function viewTransferNews() {
+    const log = S.tr.log.slice(0, 60);
+    return `<div class="card"><h3>Chuyển nhượng gần đây</h3><table><tbody>${
+      log
+        .map((e) => `<tr class="${e.from === S.user || e.to === S.user ? "me" : ""} ${S.p[e.pid] ? "click" : ""}" ${S.p[e.pid] ? `data-act="info" data-id="${e.pid}"` : ""}><td class="small muted">${FM.fmtShortDate(e.d)}</td><td class="l"><b>${esc(e.name)}</b><div class="small muted">${esc(club(e.from).name)} → ${esc(club(e.to).name)}</div></td><td class="nowrap">${e.to === "free" ? "Thanh lý" : e.fee ? FM.fmtMoney(e.fee) : "Tự do"}</td></tr>`)
+        .join("") || `<tr><td class="muted">Chưa có vụ chuyển nhượng nào.</td></tr>`
+    }</tbody></table></div>`;
+  }
+
+  // ---------- Hộp thoại đàm phán ----------
+  const stepper = (id, value, steps, unit) =>
+    `<div class="row wrap">${steps.filter((x) => x < 0).map((x) => `<button class="btn sm" data-act="adj" data-for="${id}" data-step="${x}">${x}</button>`).join("")}
+     <input id="${id}" type="number" step="any" value="${value}" class="btn" style="width:110px;text-align:center"> <span class="small muted">${unit}</span>
+     ${steps.filter((x) => x > 0).map((x) => `<button class="btn sm" data-act="adj" data-for="${id}" data-step="${x}">+${x}</button>`).join("")}</div>`;
+  function bidModal(pid, fee) {
+    const p = W.player(S, pid);
+    openModal(`<div class="sheet-h">${crest(p.c)}<div class="grow"><div class="t" style="font-size:20px">Hỏi mua ${esc(p.sn)}</div><div class="small muted">${esc(club(p.c).name)} · ${T.ROLE_LABEL[T.role(S, p)]} · HĐ đến ${FM.fmtDate(p.ce, false)}</div></div><button class="x" data-act="close">✕</button></div>
+      <div class="sheet-b">
+        <div class="kv"><div><small>Giá trị ước tính</small><b>${FM.fmtMoney(p.val)}</b></div><div><small>Số dư của bạn</small><b>${FM.fmtMoney(S.clubs[S.user].bal)}</b></div><div><small>Lương hiện tại</small><b>${FM.fmtWage(p.wage)}</b></div></div>
+        <label class="small muted">Phí chuyển nhượng đề nghị (tỷ VND)</label>
+        ${stepper("feeIn", fee ?? p.val, [-1, -0.5, -0.1, 0.1, 0.5, 1], "tỷ")}
+        <div id="negMsg" class="small"></div>
+        <button class="btn primary block" data-act="bid-send" data-id="${pid}">Gửi đề nghị</button>
+      </div>`);
+  }
+  function contractModal(pid, kind) {
+    const p = W.player(S, pid);
+    const dem = T.demand(S, p, S.user, kind);
+    const c = S.clubs[S.user];
+    const title = kind === "renew" ? `Gia hạn với ${p.sn}` : `Hợp đồng với ${p.sn}`;
+    if (dem.refuse) {
+      openModal(`<div class="sheet-h"><div class="grow t" style="font-size:20px">${esc(title)}</div><button class="x" data-act="close">✕</button></div><div class="sheet-b"><div class="pill red" style="white-space:normal">${esc(dem.refuse)}</div><button class="btn block" data-act="close">Đóng</button></div>`);
+      return;
+    }
+    const bill = T.wageBill(S, S.user) - (kind === "renew" ? p.wage : 0);
+    openModal(`<div class="sheet-h">${crest(p.c)}<div class="grow"><div class="t" style="font-size:20px">${esc(title)}</div><div class="small muted">${p.age} tuổi · ${FM.POS_NAME[p.pos]} · lương hiện tại ${p.free ? "—" : FM.fmtWage(p.wage)}</div></div><button class="x" data-act="close">✕</button></div>
+      <div class="sheet-b">
+        <div class="kv"><div><small>Cầu thủ mong muốn</small><b>${FM.fmtWage(dem.wage)} · ${dem.years} năm</b></div><div><small>Quỹ lương còn trống</small><b style="color:${c.wageCap - bill > 0 ? "var(--accent)" : "var(--red)"}">${FM.fmtWage(c.wageCap - bill)}</b></div>${kind === "sign" && S.tr.neg && S.tr.neg.pid === pid ? `<div><small>Phí đã thống nhất</small><b>${FM.fmtMoney(S.tr.neg.fee)}</b></div>` : ""}</div>
+        <label class="small muted">Lương đề nghị (triệu VND / tháng)</label>
+        ${stepper("wageIn", Math.round(dem.wage * 0.9), [-10, -5, -1, 1, 5, 10], "tr/tháng")}
+        <label class="small muted">Thời hạn</label>
+        <div class="seg">${[1, 2, 3, 4, 5].map((y) => `<button data-act="years" data-y="${y}" class="${y === dem.years ? "on" : ""}">${y} năm</button>`).join("")}</div>
+        <div id="negMsg" class="small"></div>
+        <button class="btn primary block" data-act="contract-send" data-id="${pid}" data-kind="${kind}">Đề nghị hợp đồng</button>
+        <div class="small muted">Cầu thủ chỉ chấp nhận tối đa 3 lần trả giá.</div>
+      </div>`);
+    ui.years = dem.years;
+  }
+  function counterModal(offerId) {
+    const o = S.tr.offers.find((x) => x.id === offerId);
+    const p = W.player(S, o.pid);
+    openModal(`<div class="sheet-h"><div class="grow t" style="font-size:20px">Ra giá ${esc(p.sn)}</div><button class="x" data-act="close">✕</button></div>
+      <div class="sheet-b"><div class="small muted">${esc(club(o.from).name)} đang đề nghị ${FM.fmtMoney(o.fee)}. Giá trị ước tính ${FM.fmtMoney(p.val)}. Đòi quá cao họ sẽ rút lui.</div>
+      ${stepper("feeIn", Math.round(o.fee * 12) / 10, [-1, -0.5, -0.1, 0.1, 0.5, 1], "tỷ")}
+      <button class="btn primary block" data-act="counter-send" data-id="${offerId}">Gửi mức giá</button></div>`);
+  }
+  function listModal(pid) {
+    const p = W.player(S, pid);
+    openModal(`<div class="sheet-h"><div class="grow t" style="font-size:20px">Rao bán ${esc(p.sn)}</div><button class="x" data-act="close">✕</button></div>
+      <div class="sheet-b"><div class="small muted">Giá trị ước tính ${FM.fmtMoney(p.val)}. Cầu thủ đang rao bán được các CLB chú ý hơn trong kỳ chuyển nhượng.</div>
+      <label class="small muted">Giá chào bán (tỷ VND)</label>${stepper("feeIn", Math.round(p.val * 11) / 10, [-1, -0.5, -0.1, 0.1, 0.5, 1], "tỷ")}
+      <button class="btn primary block" data-act="list-send" data-id="${pid}">Rao bán</button></div>`);
+  }
+  function releaseModal(pid) {
+    const p = W.player(S, pid);
+    const cost = T.releaseCost(S, p);
+    openModal(`<div class="sheet-h"><div class="grow t" style="font-size:20px">Thanh lý ${esc(p.sn)}?</div><button class="x" data-act="close">✕</button></div>
+      <div class="sheet-b"><div>${esc(p.n)} sẽ trở thành cầu thủ tự do. CLB phải đền bù một nửa số lương còn lại của hợp đồng: <b>${FM.fmtMoney(cost)}</b>.</div>
+      <div class="row"><button class="btn" data-act="close">Huỷ</button><span class="grow"></span><button class="btn danger" data-act="release-send" data-id="${pid}">Thanh lý</button></div></div>`);
+  }
+  function negMsg(text, ok) {
+    const el = $("#negMsg");
+    if (el) {
+      el.textContent = text;
+      el.style.color = ok ? "var(--accent)" : "var(--orange)";
+    }
+  }
+
   // ---------- Bảng xếp hạng ----------
   function viewTable() {
     const tabs = `<div class="tabs"><button data-act="table-tab" data-t="${V1}" class="${ui.tableTab === V1 ? "on" : ""}">V.League 1</button><button data-act="table-tab" data-t="${V2}" class="${ui.tableTab === V2 ? "on" : ""}">V.League 2</button><button data-act="table-tab" data-t="scorers" class="${ui.tableTab === "scorers" ? "on" : ""}">Vua phá lưới</button></div>`;
@@ -426,6 +584,7 @@
     const p = W.player(S, id);
     if (!p) return;
     const c = club(p.c);
+    T.ensure(S);
     const cls = (v) => (v >= 16 ? "a4" : v >= 12 ? "a3" : v >= 8 ? "a2" : "a1");
     const groups = FM.ATTR_GROUPS.filter(([g]) => (p.pos === "GK" ? g !== "Kỹ thuật" : g !== "Thủ môn"))
       .map(([g, keys]) => `<div><h4>${g}</h4>${keys.map((k) => `<div class="attr"><span>${FM.ATTR_LABEL[k]}</span><b class="${cls(p.a[FM.A[k]])}">${p.a[FM.A[k]]}</b></div>`).join("")}</div>`)
@@ -445,8 +604,9 @@
           <div><small>Chiều cao / cân nặng</small><b>${p.h || "?"} cm · ${p.w || "?"} kg</b></div>
           <div><small>Chân thuận</small><b>${{ right: "Phải", left: "Trái", both: "Hai chân" }[p.ft]}</b></div>
           <div><small>Giá trị</small><b>${FM.fmtMoney(p.val)}</b></div>
-          <div><small>Lương</small><b>${FM.fmtWage(p.wage)}</b></div>
-          <div><small>Hợp đồng đến</small><b>${FM.fmtDate(p.ce, false)}</b></div>
+          <div><small>Lương</small><b>${p.free ? "—" : FM.fmtWage(p.wage)}</b></div>
+          <div><small>Hợp đồng đến</small><b>${p.ce ? FM.fmtDate(p.ce, false) : "Tự do"}</b></div>
+          ${p.free ? "" : `<div><small>Vai trò ở CLB</small><b>${T.ROLE_LABEL[T.role(S, p)]}${S.p[id].listed ? " · đang rao bán" : ""}</b></div>`}
           <div><small>Thể lực · tâm lý</small><b>${Math.round(p.fit)}% · ${moraleIcon(p.mor)}</b></div>
         </div>
         ${alt ? `<div class="small muted">Vị trí khác: ${esc(alt)}</div>` : ""}
@@ -458,7 +618,20 @@
           <div><small>Điểm TB · cầu thủ hay nhất</small><b>${avg} · ${st.mm} lần</b></div>
           ${p.ls ? `<div><small>V.League 2025/26 (thật)</small><b>${p.ls.apps} trận · ${p.ls.goals} bàn</b></div>` : ""}
         </div>
+        ${playerActions(p)}
       </div>`);
+  }
+  // nút chuyển nhượng / hợp đồng trong hồ sơ cầu thủ
+  function playerActions(p) {
+    const win = T.window(S);
+    if (p.c === S.user) {
+      const listed = S.p[p.id].listed;
+      return `<div class="row wrap"><button class="btn sm primary" data-act="renew" data-id="${p.id}">📝 Gia hạn hợp đồng</button><button class="btn sm" data-act="${listed ? "unlist" : "list"}" data-id="${p.id}">${listed ? "Bỏ rao bán" : "🏷️ Rao bán"}</button><button class="btn sm danger" data-act="release" data-id="${p.id}">Thanh lý</button></div>`;
+    }
+    if (p.free) return `<button class="btn primary block" data-act="sign-free" data-id="${p.id}">✍️ Ký hợp đồng (cầu thủ tự do)</button>`;
+    return win.open
+      ? `<button class="btn primary block" data-act="bid" data-id="${p.id}">💸 Hỏi mua (giá trị ước tính ${FM.fmtMoney(p.val)})</button>`
+      : `<div class="small muted center">Kỳ chuyển nhượng đang đóng${win.next ? ` — mở lại ${FM.fmtDate(win.next, false)}` : ""}.</div>`;
   }
   function clubModal(id) {
     const c = W.club(S, id);
@@ -922,6 +1095,102 @@
         $("#codeMsg").textContent = err.message;
       }
     },
+    // ---- thị trường ----
+    "mk-tab": (d) => {
+      ui.mk.tab = d.t;
+      render();
+    },
+    "mk-group": (d) => {
+      ui.mk.group = d.g;
+      ui.mk.limit = 40;
+      render();
+    },
+    "mk-more": () => {
+      ui.mk.limit += 40;
+      render();
+    },
+    adj: (d) => {
+      const el = $("#" + d.for);
+      el.value = Math.max(0, Math.round((+el.value + +d.step) * 10) / 10);
+    },
+    years: (d, el) => {
+      ui.years = +d.y;
+      el.parentElement.querySelectorAll("button").forEach((b) => b.classList.toggle("on", b === el));
+    },
+    bid: (d) => bidModal(d.id),
+    "bid-send": (d) => {
+      const fee = Math.round(+$("#feeIn").value * 10) / 10;
+      const r = T.bid(S, d.id, fee);
+      if (r.result === "accepted") {
+        persist();
+        contractModal(d.id, "sign");
+        toast("CLB chủ quản đồng ý! Giờ đàm phán hợp đồng với cầu thủ.");
+      } else if (r.result === "countered") {
+        $("#feeIn").value = r.counter;
+        negMsg(`${r.reason} Bấm Gửi đề nghị lần nữa để đồng ý mức này.`);
+      } else negMsg(r.reason);
+    },
+    contract: (d) => contractModal(d.id, d.kind),
+    renew: (d) => contractModal(d.id, "renew"),
+    "sign-free": (d) => contractModal(d.id, "sign"),
+    "contract-send": (d) => {
+      const wage = Math.round(+$("#wageIn").value);
+      const r = T.offerContract(S, d.id, wage, ui.years, d.kind);
+      if (r.result === "accepted") {
+        persist(true);
+        closeModal();
+        toast(d.kind === "renew" ? "Đã gia hạn hợp đồng." : "Ký hợp đồng thành công!");
+        render();
+      } else if (r.result === "countered") {
+        $("#wageIn").value = r.counterWage;
+        negMsg(r.reason);
+      } else {
+        negMsg(r.reason);
+        persist();
+        render();
+      }
+    },
+    list: (d) => listModal(d.id),
+    "list-send": (d) => {
+      T.setListed(S, d.id, true, Math.round(+$("#feeIn").value * 10) / 10);
+      persist();
+      closeModal();
+      toast("Đã rao bán.");
+      render();
+    },
+    unlist: (d) => {
+      T.setListed(S, d.id, false);
+      persist();
+      playerModal(d.id);
+      render();
+    },
+    release: (d) => releaseModal(d.id),
+    "release-send": (d) => {
+      T.release(S, d.id);
+      persist(true);
+      closeModal();
+      toast("Đã thanh lý hợp đồng.");
+      render();
+    },
+    "offer-accept": (d) => {
+      const r = T.respond(S, +d.id, "accept");
+      persist(true);
+      toast(r.result === "accepted" ? `Đã bán với giá ${FM.fmtMoney(r.fee)}.` : r.reason || "Đề nghị không còn hiệu lực.");
+      render();
+    },
+    "offer-reject": (d) => {
+      T.respond(S, +d.id, "reject");
+      persist();
+      render();
+    },
+    "offer-counter": (d) => counterModal(+d.id),
+    "counter-send": (d) => {
+      const r = T.respond(S, +d.id, "counter", Math.round(+$("#feeIn").value * 10) / 10);
+      persist(true);
+      closeModal();
+      toast(r.result === "accepted" ? `Họ đồng ý! Đã bán với giá ${FM.fmtMoney(r.fee)}.` : r.reason || "Họ không đồng ý.");
+      render();
+    },
     "save-now": async () => {
       await persist(true);
       toast("Đã lưu.");
@@ -961,6 +1230,15 @@
     }
     // bấm ra ngoài hộp thoại thì đóng
     if (e.target.id === "modal") closeModal();
+  });
+  // bộ lọc dạng ô chọn ở thị trường
+  document.addEventListener("change", (e) => {
+    const el = e.target.closest("[data-change]");
+    if (el && el.dataset.change === "mk") {
+      ui.mk[el.dataset.k] = el.value;
+      ui.mk.limit = 40;
+      render();
+    }
   });
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && !$("#modal").hidden) closeModal();

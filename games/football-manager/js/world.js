@@ -28,6 +28,8 @@
     const p = { ...base, ...dyn, a: dyn.a || base.a };
     p.age = FM.ageOn(p, s.date);
     p.available = !dyn.inj && !dyn.sus;
+    p.free = dyn.c === "free"; // cầu thủ tự do
+    if (FM.Transfers) p.val = FM.Transfers.value(s, p);
     return p;
   };
   W.squad = (s, clubId) => Object.keys(s.p).filter((id) => s.p[id].c === clubId).map((id) => W.player(s, id));
@@ -150,7 +152,7 @@
       genCounter: 0,
       msgCounter: 0,
     };
-    for (const c of D.clubs) s.clubs[c.id] = { league: c.league, bal: Math.round(c.budget * 2.5 * 10) / 10, conf: 60, form: [], formation: null, tactics: { ...FM.DEFAULT_TACTICS }, lineup: null, bench: null, gate: 0 };
+    for (const c of D.clubs) s.clubs[c.id] = { league: c.league, bal: Math.round(c.budget * 2.5 * 10) / 10, conf: 60, form: [], formation: null, tactics: { ...FM.DEFAULT_TACTICS }, lineup: null, bench: null, gate: 0, wageCap: Math.round(c.wageBudget * 1.15) };
     for (const p of D.players) s.p[p.id] = newDyn(p.c, p.ca);
     startSeason(s);
     return s;
@@ -422,7 +424,7 @@
       const today = s.fx.find((f) => !f.done && f.d === s.date && (f.h === s.user || f.a === s.user));
       if (today) return { kind: "match", fixture: today };
       // dừng khi có thư quan trọng mới (chấn thương, treo giò…) trong lần bấm này
-      if (s.inbox.some((m) => m.id > startMsg && !m.r && m.k !== "finance")) return { kind: "mail" };
+      if (s.inbox.some((m) => m.id > startMsg && !m.r && m.k !== "finance" && m.k !== "news")) return { kind: "mail" };
     }
     return { kind: "idle" };
   };
@@ -446,6 +448,7 @@
       }
     }
     if (s.date.endsWith("-01")) monthly(s);
+    if (FM.Transfers) FM.Transfers.daily(s);
   }
   function monthly(s) {
     for (const id of Object.keys(s.clubs)) {
@@ -525,6 +528,8 @@
     delete s.clubs[out];
     for (const id of Object.keys(s.p)) if (s.p[id].c === out) delete s.p[id];
     const newId = newLowerClub(s, rnd);
+    // hợp đồng hết hạn 30/6: đội máy gia hạn người còn dùng được, còn lại thành cầu thủ tự do
+    if (FM.Transfers) FM.Transfers.endOfSeason(s);
     // già đi, phát triển, giải nghệ
     s.season++;
     s.date = `${s.season}-07-01`;
@@ -577,7 +582,11 @@
         const extra = W.squad(s, id)
           .filter((p) => p.age > 23)
           .sort((a, b) => a.ca - b.ca);
-        while (W.squad(s, id).length > 30 && extra.length) delete s.p[extra.shift().id];
+        while (W.squad(s, id).length > 30 && extra.length) {
+          const p = extra.shift();
+          if (FM.Transfers) FM.Transfers.toFree(s, p.id);
+          else delete s.p[p.id];
+        }
       }
     }
     s.inbox = s.inbox.slice(0, 20);

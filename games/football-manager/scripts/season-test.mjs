@@ -16,7 +16,7 @@ const args = Object.fromEntries(process.argv.slice(2).map((a) => a.replace(/^--/
 const ctx = { window: {}, console };
 ctx.window.window = ctx.window;
 vm.createContext(ctx);
-for (const f of ["data/game-data.js", "js/core.js", "js/engine.js", "js/world.js"]) vm.runInContext(await readFile(join(root, f), "utf8"), ctx, { filename: f });
+for (const f of ["data/game-data.js", "js/core.js", "js/engine.js", "js/world.js", "js/transfers.js"]) vm.runInContext(await readFile(join(root, f), "utf8"), ctx, { filename: f });
 const { FM } = ctx.window;
 const W = FM.World;
 
@@ -48,6 +48,11 @@ for (let guard = 0; guard < 5000; guard++) {
     console.log(`  ${userMatches} trận của bạn, ${Date.now() - t0} ms, save ${(JSON.stringify(s).length / 1024).toFixed(0)} KB`);
     seasonsDone++;
     if (seasonsDone >= wanted) break;
+    const tr = s.tr ? s.tr.log : [];
+    const paid = tr.filter((e) => e.fee > 0);
+    console.log(`  Chuyển nhượng mùa này: ${tr.length} vụ (${paid.length} có phí, tổng ${paid.reduce((a, e) => a + e.fee, 0).toFixed(1)} tỷ), tự do: ${Object.values(s.p).filter((d) => d.c === "free").length}`);
+    console.log("  Vụ lớn nhất: " + [...paid].sort((a, b) => b.fee - a.fee).slice(0, 4).map((e) => `${e.name} ${W.baseClub(s, e.from).code}→${W.baseClub(s, e.to).code} ${e.fee}`).join(" | "));
+    console.log("  Đề nghị cho đội bạn: " + (s.tr ? s.tr.offers.length : 0) + " · số dư các đội: " + Object.keys(s.clubs).map((id) => W.baseClub(s, id).code + ":" + s.clubs[id].bal.toFixed(1)).join(" "));
     const res = W.newSeason(s);
     if (res.sacked) {
       console.log("  BỊ SA THẢI: " + res.reason);
