@@ -4,27 +4,50 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Né vật cản - GameVui</title>
-    <link rel="stylesheet" href="../shared/game.css" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Be+Vietnam+Pro:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css?v=2" />
   </head>
   <body>
-    <main class="page">
-      <a class="back" href="../../index.html">← Về GameVui</a>
-      <section class="panel">
-        <p class="eyebrow">GAMEVUI</p>
-        <h1>Né vật cản</h1>
-        <p class="help"></p>
-        <div class="score">ĐIỂM <strong id="score">0</strong></div>
-        <canvas width="400" height="400"></canvas>
-        <div class="controls">
-          <button data-c="left">◀</button><button data-c="up">▲</button
-          ><button data-c="action">NHẢY</button><button data-c="down">▼</button
-          ><button data-c="right">▶</button>
-        </div>
-        <button class="restart">Chơi lại</button>
+    <a class="back" href="../../index.html">← Về GameVui</a>
+
+    <main class="app">
+      <section class="stats">
+        <div class="stat"><small>THỜI GIAN</small><b id="stTime">0.0</b></div>
+        <div class="stat"><small>ĐIỂM</small><b id="stScore">0</b></div>
+        <div class="stat"><small>MẠNG</small><b id="stLives" class="lives">♥♥♥</b></div>
+        <div class="stat"><small>KỶ LỤC</small><b id="stBest">0</b></div>
       </section>
+
+      <div class="arena-wrap">
+        <canvas id="arena" aria-label="Đấu trường né vật cản"></canvas>
+      </div>
+
+      <nav class="tools">
+        <button class="tool dash" id="btnDash"><span>⚡</span>Lướt</button>
+        <button class="tool" id="btnPause" title="Tạm dừng (P / Esc)">⏸ Tạm dừng</button>
+        <button class="tool" id="btnSound">🔊 Âm thanh</button>
+        <button class="tool" id="btnRestart">↻ Chơi lại</button>
+      </nav>
+      <p class="keys">
+        <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> / mũi tên hoặc rê chuột để di chuyển ·
+        <kbd>Space</kbd> lướt · <kbd>P</kbd> / <kbd>Esc</kbd> tạm dừng
+      </p>
     </main>
-    <script src="../shared/arcade.js"></script>
-    <script src="script.js"></script>
+
+    <div class="overlay" id="overlay" hidden>
+      <div class="card">
+        <div class="ico" id="cIco"></div>
+        <h2 id="cTitle"></h2>
+        <div id="cBody"></div>
+        <div class="btns" id="cBtns"></div>
+      </div>
+    </div>
+
+    <script src="script.js?v=2"></script>
   </body>
 </html>

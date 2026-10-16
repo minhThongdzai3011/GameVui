@@ -1,1 +1,393 @@
-@import url("../shared/game.css");
+:root {
+  --font: "Be Vietnam Pro", Arial, sans-serif;
+  --title: "Baloo 2", "Be Vietnam Pro", sans-serif;
+  --cyan: #4de8ff;
+  --pink: #ff4fa3;
+  /* đấu trường vuông, vừa cả chiều ngang lẫn chiều cao màn hình */
+  --size: min(600px, 94vw, max(260px, calc(100vh - 200px)));
+}
+* {
+  box-sizing: border-box;
+}
+[hidden] {
+  display: none !important;
+}
+html,
+body {
+  margin: 0;
+}
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: radial-gradient(ellipse at 50% 0%, #1b2257, #0b0f2a 55%, #05060f);
+  color: #e6ecff;
+  font-family: var(--font);
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+button {
+  font-family: var(--font);
+  color: inherit;
+  cursor: pointer;
+}
+kbd {
+  padding: 0 5px;
+  border: 1px solid rgba(160, 185, 255, 0.35);
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.06);
+  font: 700 11px var(--font);
+}
+.back {
+  position: fixed;
+  top: 12px;
+  left: 14px;
+  z-index: 5;
+  color: #9fb0e0;
+  font-weight: 700;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 8px 14px;
+}
+
+/* ---------- Chỉ số ---------- */
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+.stat {
+  min-width: 84px;
+  padding: 5px 12px 3px;
+  border: 1px solid rgba(120, 150, 255, 0.25);
+  border-radius: 12px;
+  background: rgba(25, 32, 80, 0.75);
+  text-align: center;
+}
+.stat small {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: #8f9fd6;
+}
+.stat b {
+  display: block;
+  font: 800 26px/1.15 var(--title);
+}
+#stTime {
+  color: var(--cyan);
+}
+#stScore {
+  color: #ffd23f;
+}
+#stBest {
+  color: #52e3a4;
+}
+.stat b.lives {
+  min-width: 60px;
+  color: #ff5470;
+  font-size: 20px;
+  line-height: 1.6;
+  letter-spacing: 1px;
+}
+.lives s {
+  color: rgba(255, 255, 255, 0.18);
+  text-decoration: none;
+}
+.bump {
+  animation: bump 0.3s ease;
+}
+@keyframes bump {
+  40% {
+    transform: scale(1.25);
+  }
+}
+
+/* ---------- Đấu trường ---------- */
+.arena-wrap {
+  position: relative;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 18px;
+  box-shadow:
+    0 0 0 1px rgba(110, 140, 255, 0.35),
+    0 0 40px rgba(77, 232, 255, 0.15),
+    0 20px 50px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+}
+
+/* ---------- Nút ---------- */
+.tools {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+.tool {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 42px;
+  padding: 0 14px;
+  border: 1px solid rgba(120, 150, 255, 0.28);
+  border-radius: 12px;
+  background: rgba(30, 40, 95, 0.8);
+  font-weight: 700;
+  font-size: 14px;
+}
+.tool:hover {
+  background: rgba(45, 60, 130, 0.9);
+}
+.tool.dash {
+  position: relative;
+  overflow: hidden;
+  border-color: var(--cyan);
+  color: var(--cyan);
+}
+/* thanh hồi lướt chạy ngang nút */
+.tool.dash::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: var(--cd, 100%);
+  background: var(--cyan);
+}
+.tool.dash.cooling {
+  opacity: 0.55;
+}
+.keys {
+  margin: 0;
+  font-size: 12px;
+  color: #8f9fd6;
+  text-align: center;
+}
+@media (hover: none) {
+  .keys {
+    display: none;
+  }
+}
+
+/* ---------- Hộp thoại ---------- */
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+  background: rgba(3, 6, 20, 0.55);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+.card {
+  width: min(460px, 100%);
+  max-height: calc(100vh - 32px);
+  overflow: auto;
+  padding: 18px 22px;
+  border: 1px solid rgba(120, 150, 255, 0.3);
+  border-radius: 20px;
+  background: linear-gradient(180deg, #1a2160, #10143a);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55);
+  text-align: center;
+  animation: cardIn 0.3s cubic-bezier(0.3, 1.5, 0.5, 1);
+}
+@keyframes cardIn {
+  from {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+}
+.ico {
+  font-size: 40px;
+  line-height: 1;
+}
+.card h2 {
+  margin: 4px 0 10px;
+  font: 800 30px/1.1 var(--title);
+  color: var(--cyan);
+  text-shadow: 0 0 18px rgba(77, 232, 255, 0.45);
+}
+.card p {
+  margin: 0 0 14px;
+  color: #c9d3f5;
+  line-height: 1.55;
+}
+.seg {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 12px;
+  padding: 4px;
+  border-radius: 14px;
+  background: rgba(0, 0, 0, 0.3);
+}
+.seg button {
+  flex: 1;
+  padding: 6px 4px;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  font-weight: 800;
+  font-size: 15px;
+  color: #aab6e8;
+}
+.seg button small {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  opacity: 0.8;
+}
+.seg button.on {
+  background: rgba(77, 232, 255, 0.16);
+  color: var(--cyan);
+  box-shadow: inset 0 0 0 1px rgba(77, 232, 255, 0.5);
+}
+.legend {
+  margin: 0 0 10px;
+  padding: 0;
+  list-style: none;
+  text-align: left;
+}
+.legend li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 4px 6px;
+  border-bottom: 1px dashed rgba(120, 150, 255, 0.2);
+  font-size: 13.5px;
+  color: #d5ddff;
+}
+.legend li > span {
+  flex: none;
+  width: 30px;
+  font-size: 20px;
+  text-align: center;
+}
+.legend li em {
+  margin-left: auto;
+  font-style: normal;
+  font-size: 12px;
+  color: #8f9fd6;
+  white-space: nowrap;
+}
+.legend .laser {
+  display: inline-block;
+  width: 26px;
+  height: 4px;
+  border-radius: 2px;
+  background: #ff3b5c;
+  box-shadow: 0 0 8px #ff3b5c;
+  vertical-align: middle;
+}
+.legend .meteor {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #ffd08a, #ff7a2f 55%, #b8360f);
+  box-shadow: 0 0 8px #ff7a2f;
+  vertical-align: middle;
+}
+.card p.tip {
+  font-size: 12.5px;
+  color: #aab6e8;
+}
+.btns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+.btn {
+  min-width: 110px;
+  height: 46px;
+  padding: 0 18px;
+  border: 1px solid rgba(120, 150, 255, 0.35);
+  border-radius: 14px;
+  background: rgba(40, 52, 120, 0.9);
+  font-weight: 800;
+  font-size: 16px;
+}
+.btn.primary {
+  border-color: var(--cyan);
+  background: linear-gradient(#5cf0ff, #18b7d8);
+  color: #062a35;
+  box-shadow: 0 0 20px rgba(77, 232, 255, 0.35);
+}
+.final {
+  font: 800 60px/1 var(--title);
+  color: #ffd23f;
+}
+.final-sub {
+  margin-top: 2px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #8f9fd6;
+}
+.results {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin: 12px 0 16px;
+}
+.results div {
+  padding: 7px 6px;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.25);
+}
+.results small {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: #8f9fd6;
+}
+.results b {
+  font: 800 22px/1.2 var(--title);
+}
+
+@media (max-width: 520px) {
+  :root {
+    --size: min(600px, 96vw, max(260px, calc(100vh - 210px)));
+  }
+  .back {
+    position: static;
+    align-self: flex-start;
+  }
+  .stats {
+    gap: 6px;
+  }
+  .stat {
+    min-width: 0;
+    padding: 4px 9px 2px;
+  }
+  .stat small {
+    font-size: 9px;
+  }
+  .stat b {
+    font-size: 21px;
+  }
+  .stat b.lives {
+    font-size: 16px;
+  }
+  .tool {
+    padding: 0 10px;
+    font-size: 13px;
+  }
+}

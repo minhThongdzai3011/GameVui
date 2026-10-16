@@ -1,1 +1,356 @@
-@import url("../shared/game.css");
+:root {
+  --font: "Be Vietnam Pro", Arial, sans-serif;
+  --title: "Baloo 2", "Be Vietnam Pro", sans-serif;
+  --ink: #3b2a1a;
+  --brown: #8a4b14;
+  --muted: #9a7a55;
+  /* sân chơi tỉ lệ 7:8, vừa cả chiều ngang lẫn chiều cao màn hình */
+  --w: min(560px, 94vw, max(250px, calc((100vh - 195px) * 0.875)));
+}
+* {
+  box-sizing: border-box;
+}
+[hidden] {
+  display: none !important;
+}
+html,
+body {
+  margin: 0;
+}
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: linear-gradient(#ffe9c7, #fff6e6 45%, #f3fbe6);
+  color: var(--ink);
+  font-family: var(--font);
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+button {
+  font-family: var(--font);
+  color: inherit;
+  cursor: pointer;
+}
+kbd {
+  padding: 0 5px;
+  border: 1px solid #d8c4a2;
+  border-radius: 4px;
+  background: #fffdf6;
+  font: 700 11px var(--font);
+}
+.back {
+  position: fixed;
+  top: 12px;
+  left: 14px;
+  z-index: 5;
+  color: var(--brown);
+  font-weight: 700;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 8px 14px;
+}
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+.stat {
+  position: relative;
+  min-width: 84px;
+  padding: 5px 12px 3px;
+  border-radius: 14px;
+  background: #fffdf6;
+  box-shadow:
+    0 3px 0 #ecd6b0,
+    0 6px 14px rgba(80, 50, 20, 0.12);
+  text-align: center;
+}
+.stat small {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+.stat b {
+  display: block;
+  font: 800 26px/1.15 var(--title);
+}
+#stScore {
+  color: #e8590c;
+}
+#stCombo {
+  color: #ae3ec9;
+}
+#stBest {
+  color: #2b8a3e;
+}
+.stat b.lives {
+  min-width: 60px;
+  color: #f03e3e;
+  font-size: 20px;
+  line-height: 1.6;
+  letter-spacing: 1px;
+}
+.lives s {
+  color: rgba(0, 0, 0, 0.13);
+  text-decoration: none;
+}
+.mult {
+  position: absolute;
+  top: -9px;
+  right: -9px;
+  padding: 0 7px;
+  border-radius: 10px;
+  background: #ae3ec9;
+  color: #fff;
+  font: 700 12px/20px var(--font);
+  font-style: normal;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.field-wrap {
+  width: var(--w);
+  height: calc(var(--w) * 8 / 7);
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow:
+    0 0 0 4px #fffdf6,
+    0 12px 30px rgba(90, 60, 20, 0.25);
+}
+canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+}
+
+.tools {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+.tool {
+  height: 40px;
+  padding: 0 16px;
+  border: 0;
+  border-radius: 12px;
+  background: #fffdf6;
+  box-shadow: 0 3px 0 #ecd6b0;
+  font-weight: 700;
+  font-size: 14px;
+  color: #7a5a35;
+}
+.tool:active {
+  transform: translateY(2px);
+  box-shadow: 0 1px 0 #ecd6b0;
+}
+.keys {
+  margin: 0;
+  font-size: 12px;
+  color: #7a6a55;
+  text-align: center;
+}
+@media (hover: none) {
+  .keys {
+    display: none;
+  }
+}
+
+/* ---------- Hộp thoại ---------- */
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+  background: rgba(60, 35, 10, 0.35);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+.card {
+  width: min(450px, 100%);
+  max-height: calc(100vh - 32px);
+  overflow: auto;
+  padding: 18px 22px;
+  border-radius: 22px;
+  background: #fffdf6;
+  box-shadow:
+    0 6px 0 #ecd6b0,
+    0 20px 50px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  animation: cardIn 0.3s cubic-bezier(0.3, 1.5, 0.5, 1);
+}
+@keyframes cardIn {
+  from {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+}
+.ico {
+  font-size: 42px;
+  line-height: 1;
+}
+.card h2 {
+  margin: 4px 0 10px;
+  font: 800 30px/1.1 var(--title);
+  color: var(--brown);
+}
+.card p {
+  margin: 0 0 14px;
+  color: #6b5a45;
+  line-height: 1.55;
+}
+.seg {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 12px;
+  padding: 4px;
+  border-radius: 14px;
+  background: #f4e6cc;
+}
+.seg button {
+  flex: 1;
+  padding: 6px 4px;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  font-weight: 800;
+  font-size: 15px;
+  color: #7a5a35;
+}
+.seg button small {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  opacity: 0.8;
+}
+.seg button.on {
+  background: #fff;
+  color: #e8590c;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
+}
+.legend {
+  margin: 0 0 10px;
+  padding: 0;
+  list-style: none;
+  text-align: left;
+}
+.legend li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 4px 6px;
+  border-bottom: 1px dashed #ecdcc0;
+  font-size: 13.5px;
+}
+.legend li > span {
+  flex: none;
+  width: 58px;
+  font-size: 18px;
+  text-align: center;
+  white-space: nowrap;
+}
+.legend li b {
+  margin-left: auto;
+  color: #2b8a3e;
+  white-space: nowrap;
+}
+.legend li b.bad {
+  color: #e03131;
+}
+.card p.tip {
+  font-size: 12.5px;
+}
+.btns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+.btn {
+  min-width: 110px;
+  height: 46px;
+  padding: 0 18px;
+  border: 0;
+  border-radius: 14px;
+  background: #f4e6cc;
+  box-shadow: 0 3px 0 #dcc6a0;
+  font-weight: 800;
+  font-size: 16px;
+  color: #7a5a35;
+}
+.btn.primary {
+  background: linear-gradient(#ffa94d, #f76707);
+  box-shadow: 0 3px 0 #c2410c;
+  color: #fff;
+}
+.btn:active {
+  transform: translateY(2px);
+  box-shadow: none;
+}
+.final {
+  font: 800 60px/1 var(--title);
+  color: #e8590c;
+}
+.final-sub {
+  margin-top: 2px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--muted);
+}
+.results {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin: 12px 0 16px;
+}
+.results div {
+  padding: 7px 6px;
+  border-radius: 12px;
+  background: #f8efdd;
+}
+.results small {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--muted);
+}
+.results b {
+  font: 800 22px/1.2 var(--title);
+}
+
+@media (max-width: 520px) {
+  .back {
+    position: static;
+    align-self: flex-start;
+  }
+  .stats {
+    gap: 6px;
+  }
+  .stat {
+    min-width: 0;
+    padding: 4px 9px 2px;
+  }
+  .stat small {
+    font-size: 9px;
+  }
+  .stat b {
+    font-size: 21px;
+  }
+  .stat b.lives {
+    font-size: 16px;
+  }
+}

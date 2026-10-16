@@ -1,1 +1,341 @@
-@import url("../shared/game.css");
+:root {
+  --font: "Be Vietnam Pro", Arial, sans-serif;
+  --title: "Baloo 2", "Be Vietnam Pro", sans-serif;
+  --green: #7dff8a;
+  --violet: #b48cff;
+  /* màn chơi dọc tỉ lệ 2:3, vừa chiều cao màn hình */
+  --h: min(720px, max(330px, calc(100vh - 175px)), calc(94vw * 1.5));
+}
+* {
+  box-sizing: border-box;
+}
+[hidden] {
+  display: none !important;
+}
+html,
+body {
+  margin: 0;
+}
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: radial-gradient(ellipse at 50% 0%, #2a1b5e, #110b2e 55%, #05040f);
+  color: #ece6ff;
+  font-family: var(--font);
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+button {
+  font-family: var(--font);
+  color: inherit;
+  cursor: pointer;
+}
+kbd {
+  padding: 0 5px;
+  border: 1px solid rgba(190, 160, 255, 0.35);
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.06);
+  font: 700 11px var(--font);
+}
+.back {
+  position: fixed;
+  top: 12px;
+  left: 14px;
+  z-index: 5;
+  color: #b4a6e6;
+  font-weight: 700;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 8px 14px;
+}
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+.stat {
+  min-width: 84px;
+  padding: 5px 12px 3px;
+  border: 1px solid rgba(180, 140, 255, 0.25);
+  border-radius: 12px;
+  background: rgba(40, 25, 90, 0.7);
+  text-align: center;
+}
+.stat small {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: #a898dd;
+}
+.stat b {
+  display: block;
+  font: 800 26px/1.15 var(--title);
+}
+#stScore {
+  color: var(--green);
+}
+#stGems {
+  color: #6fe7ff;
+}
+#stBest {
+  color: #ffd23f;
+}
+
+.sky-wrap {
+  width: calc(var(--h) * 2 / 3);
+  height: var(--h);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow:
+    0 0 0 1px rgba(180, 140, 255, 0.35),
+    0 0 40px rgba(125, 255, 138, 0.1),
+    0 20px 50px rgba(0, 0, 0, 0.5);
+}
+canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+  cursor: pointer;
+}
+
+.tools {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+.tool {
+  height: 40px;
+  padding: 0 14px;
+  border: 1px solid rgba(180, 140, 255, 0.28);
+  border-radius: 12px;
+  background: rgba(45, 30, 100, 0.8);
+  font-weight: 700;
+  font-size: 14px;
+}
+.tool:hover {
+  background: rgba(65, 45, 135, 0.9);
+}
+.keys {
+  margin: 0;
+  font-size: 12px;
+  color: #a898dd;
+  text-align: center;
+}
+@media (hover: none) {
+  .keys {
+    display: none;
+  }
+}
+
+/* ---------- Hộp thoại ---------- */
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+  background: rgba(8, 4, 25, 0.5);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+.card {
+  width: min(430px, 100%);
+  max-height: calc(100vh - 32px);
+  overflow: auto;
+  padding: 18px 22px;
+  border: 1px solid rgba(180, 140, 255, 0.3);
+  border-radius: 20px;
+  background: linear-gradient(180deg, #2b1c66, #170f3d);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55);
+  text-align: center;
+  animation: cardIn 0.3s cubic-bezier(0.3, 1.5, 0.5, 1);
+}
+@keyframes cardIn {
+  from {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+}
+.ico {
+  font-size: 40px;
+  line-height: 1;
+}
+.card h2 {
+  margin: 4px 0 10px;
+  font: 800 30px/1.1 var(--title);
+  color: var(--green);
+  text-shadow: 0 0 18px rgba(125, 255, 138, 0.4);
+}
+.card p {
+  margin: 0 0 14px;
+  color: #d6ccff;
+  line-height: 1.55;
+}
+.seg {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 12px;
+  padding: 4px;
+  border-radius: 14px;
+  background: rgba(0, 0, 0, 0.3);
+}
+.seg button {
+  flex: 1;
+  padding: 6px 4px;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  font-weight: 800;
+  font-size: 15px;
+  color: #b9adea;
+}
+.seg button small {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  opacity: 0.8;
+}
+.seg button.on {
+  background: rgba(125, 255, 138, 0.14);
+  color: var(--green);
+  box-shadow: inset 0 0 0 1px rgba(125, 255, 138, 0.5);
+}
+.legend {
+  margin: 0 0 10px;
+  padding: 0;
+  list-style: none;
+  text-align: left;
+}
+.legend li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 4px 6px;
+  border-bottom: 1px dashed rgba(180, 140, 255, 0.2);
+  font-size: 13.5px;
+  color: #ddd5ff;
+}
+.legend li > span {
+  flex: none;
+  width: 30px;
+  font-size: 20px;
+  text-align: center;
+}
+.legend li em {
+  margin-left: auto;
+  font-style: normal;
+  font-size: 12px;
+  color: #a898dd;
+  white-space: nowrap;
+}
+.legend .gate {
+  display: inline-block;
+  width: 10px;
+  height: 20px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #3a4a8a, #6b7fd0);
+  box-shadow: inset 0 -4px 0 #7dff8a;
+  vertical-align: middle;
+}
+.legend .gate.moving {
+  box-shadow: inset 0 -4px 0 #ffb347;
+}
+.legend .portal {
+  display: inline-block;
+  width: 8px;
+  height: 22px;
+  border-radius: 4px;
+  background: linear-gradient(#b48cff, #4de8ff, #b48cff);
+  box-shadow: 0 0 10px #b48cff;
+  vertical-align: middle;
+}
+.card p.tip {
+  font-size: 12.5px;
+  color: #b9adea;
+}
+.btns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+.btn {
+  min-width: 110px;
+  height: 46px;
+  padding: 0 18px;
+  border: 1px solid rgba(180, 140, 255, 0.35);
+  border-radius: 14px;
+  background: rgba(60, 40, 130, 0.9);
+  font-weight: 800;
+  font-size: 16px;
+}
+.btn.primary {
+  border-color: var(--green);
+  background: linear-gradient(#9dffa6, #3fcf5a);
+  color: #08330f;
+  box-shadow: 0 0 20px rgba(125, 255, 138, 0.3);
+}
+.medal {
+  font-size: 54px;
+  line-height: 1;
+}
+.final {
+  font: 800 60px/1 var(--title);
+  color: var(--green);
+}
+.final-sub {
+  margin-top: 2px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #a898dd;
+}
+.results {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin: 12px 0 16px;
+}
+.results div {
+  padding: 7px 6px;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.25);
+}
+.results small {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: #a898dd;
+}
+.results b {
+  font: 800 20px/1.2 var(--title);
+}
+
+@media (max-width: 520px) {
+  .back {
+    position: static;
+    align-self: flex-start;
+  }
+  .stat {
+    min-width: 0;
+    padding: 4px 10px 2px;
+  }
+  .stat small {
+    font-size: 9px;
+  }
+  .stat b {
+    font-size: 21px;
+  }
+}
