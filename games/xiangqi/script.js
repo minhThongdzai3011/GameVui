@@ -339,6 +339,7 @@
     }
 
     const LEVELS = {
+      veryeasy: { depth: 0, noise: 400, random: 0.35 },
       easy: { depth: 1, time: 500, noise: 140 },
       medium: { depth: 3, time: 1500, noise: 25 },
       hard: { depth: 8, time: 2800, noise: 0 },
@@ -350,6 +351,29 @@
       let root = order(b, legal(b, red), 0);
       if (!root.length) return -1;
       if (root.length === 1) return root[0];
+      if (!cfg.depth) {
+        // cực dễ: chỉ nhìn thế cờ ngay sau nước của mình, không tính nước đáp lại
+        // (không có qs) → hay để quân bị ăn, nhiễu lớn nên cũng hay bỏ qua quân
+        // hở; thỉnh thoảng đi hẳn nước ngẫu nhiên như người mới tập
+        if (Math.random() < cfg.random) return root[(Math.random() * root.length) | 0];
+        let pick = root[0];
+        let top = -INF;
+        for (const m of root) {
+          const f = (m / 90) | 0;
+          const t = m % 90;
+          const cap = b[t];
+          b[t] = b[f];
+          b[f] = "";
+          const v = evaluate(b) * (red ? 1 : -1) + Math.random() * cfg.noise;
+          b[f] = b[t];
+          b[t] = cap;
+          if (v > top) {
+            top = v;
+            pick = m;
+          }
+        }
+        return pick;
+      }
       nodes = 0;
       stop = false;
       deadline = Date.now() + cfg.time;
@@ -435,7 +459,7 @@
   };
   const VI = { K: "Tướng", A: "Sĩ", B: "Tượng", N: "Mã", R: "Xe", C: "Pháo", P: "Tốt" };
   const VI_SHORT = { K: "Tg", A: "S", B: "T", N: "M", R: "X", C: "P", P: "B" };
-  const LEVEL_NAME = { easy: "Dễ", medium: "Vừa", hard: "Khó" };
+  const LEVEL_NAME = { veryeasy: "Cực dễ", easy: "Dễ", medium: "Vừa", hard: "Khó" };
 
   // ---------- Lưu trữ ----------
   const KEY = "gamevui-xiangqi";

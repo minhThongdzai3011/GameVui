@@ -80,6 +80,9 @@ const pagination = document.getElementById("pagination");
 const gamesPerPage = 4;
 let currentPage = 1;
 const totalPages = Math.ceil(gameCards.length / gamesPerPage);
+// số trò chơi đếm theo số thẻ game, thêm game mới là tự đúng
+document.querySelector(".game-count").firstChild.textContent =
+  String(gameCards.length).padStart(2, "0") + " trò chơi ";
 function renderPage(page) {
   currentPage = page;
   gameCards.forEach((card, index) => {

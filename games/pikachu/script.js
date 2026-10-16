@@ -55,6 +55,14 @@
       /* bỏ qua */
     }
   };
+  const SAVE_KEY = "gamevui-pikachu-save";
+  const dropSave = () => {
+    try {
+      localStorage.removeItem(SAVE_KEY);
+    } catch {
+      /* bỏ qua */
+    }
+  };
   let sizeKey = load("gamevui-pikachu-size", "large");
   if (!SIZES[sizeKey]) sizeKey = "large";
   let best = load("gamevui-pikachu-best", 0);
@@ -115,6 +123,7 @@
   let timeLeft = 300;
   let timerId = 0;
   let running = false;
+  let paused = false;
   let hintPair = null;
   let pairsDone = 0;
   let levelAwarded = 0;
@@ -155,23 +164,32 @@
     }
     return a;
   };
-  function buildBoard() {
-    const sz = SIZES[sizeKey];
-    // màn hình dọc: xoay bàn cho vừa
-    const portrait = window.innerHeight > window.innerWidth * 1.15;
-    C = portrait ? sz.r : sz.c;
-    R = portrait ? sz.c : sz.r;
-    const n = R * C;
-    const kinds = Math.min(ICONS.length, n / 4); // mỗi loại 4 ô như bản gốc
-    const types = [];
-    for (let i = 0; types.length < n; i++) types.push(i % kinds, i % kinds);
-    shuffleArr(types);
+  // cells (từ ván đã lưu): cells[r][c] = loại ô hoặc null; không có thì xếp bàn mới
+  function buildBoard(cells) {
+    let types;
+    if (cells) {
+      R = cells.length;
+      C = cells[0].length;
+      types = cells.flat();
+    } else {
+      const sz = SIZES[sizeKey];
+      // màn hình dọc: xoay bàn cho vừa
+      const portrait = window.innerHeight > window.innerWidth * 1.15;
+      C = portrait ? sz.r : sz.c;
+      R = portrait ? sz.c : sz.r;
+      const n = R * C;
+      const kinds = Math.min(ICONS.length, n / 4); // mỗi loại 4 ô như bản gốc
+      types = [];
+      for (let i = 0; types.length < n; i++) types.push(i % kinds, i % kinds);
+      shuffleArr(types);
+    }
     boardEl.querySelectorAll(".tile").forEach((e) => e.remove());
     tiles = new Map();
     grid = Array.from({ length: R }, () => Array(C).fill(null));
     let id = 0;
     for (let r = 0; r < R; r++)
       for (let c = 0; c < C; c++) {
+        if (types[r * C + c] == null) continue;
         const t = { id: id++, type: types[r * C + c], r, c, el: document.createElement("button") };
         t.el.className = tileImages ? "tile pic" : "tile";
         t.el.innerHTML = tileImages
@@ -310,6 +328,7 @@
       }
       gravity();
       busy = false;
+      saveGame(); // lưu trước afterMove: hết bàn thì levelClear tự lưu sang bàn sau
       afterMove();
     }, 260);
   }
@@ -382,6 +401,7 @@
       sel = null;
     }
     clearHint();
+    if (cost) saveGame();
   }
 
   // ---------- Gợi ý ----------
@@ -394,9 +414,8 @@
     const pair = findAnyMove();
     if (!pair) return;
     clearHint();
-    hints--;
-    $("#hintCount").textContent = hints;
-    $("#btnHint").disabled = hints <= 0;
+    setHints(hints - 1);
+    saveGame();
     hintPair = pair;
     pair.forEach((t) => t.el.classList.add("hint"));
   }
@@ -420,6 +439,11 @@
     $("#stShuffles").textContent = shuffles;
     $("#btnShuffle").disabled = shuffles <= 0;
   }
+  function setHints(v) {
+    hints = v;
+    $("#hintCount").textContent = hints;
+    $("#btnHint").disabled = hints <= 0;
+  }
   function renderTime() {
     const k = Math.max(0, timeLeft / timeMax);
     const fill = $("#timeFill");
@@ -434,34 +458,88 @@
       timeLeft -= 0.25;
       renderTime();
       if (timeLeft <= 10 && timeLeft > 0 && timeLeft % 1 === 0) sfx.tick();
+      if (timeLeft > 0 && timeLeft % 2 === 0) saveGame();
       if (timeLeft <= 0) gameOver("Hết giờ!", `Bạn dừng lại ở bàn ${level}.`);
     }, 250);
   }
 
   // ---------- Luồng chơi ----------
-  function startLevel() {
-    buildBoard();
-    timeMax = R * C * SEC_PER_PIECE;
-    pairsDone = 0;
-    levelAwarded = 0;
-    timeLeft = timeMax;
+  // saved: ván đã lưu đang chơi dở giữa bàn → dựng lại đúng bàn, giờ và điểm của bàn đó
+  function startLevel(saved) {
+    paused = false;
+    $("#boardWrap").classList.remove("paused");
+    buildBoard(saved && saved.cells);
+    timeMax = saved ? saved.timeMax : R * C * SEC_PER_PIECE;
+    pairsDone = saved ? saved.pairsDone : 0;
+    levelAwarded = saved ? saved.levelAwarded : 0;
+    timeLeft = saved ? saved.timeLeft : timeMax;
     renderTime();
     $("#stLevel").textContent = level;
     $("#stMode").textContent = mode().name;
     running = true;
     startTimer();
-    toast(`Bàn ${level}`, mode().name);
+    toast(`Bàn ${level}`, saved ? "Chơi tiếp ván đã lưu" : mode().name);
+    saveGame();
   }
   function newGame() {
     closeModal();
     level = 1;
     setScore(0);
     setShuffles(START_SHUFFLES);
-    hints = START_HINTS;
-    $("#hintCount").textContent = hints;
-    $("#btnHint").disabled = false;
+    setHints(START_HINTS);
     startLevel();
   }
+
+  // ---------- Lưu ván ----------
+  // Lưu sau mỗi cặp ăn được, mỗi lần đổi vị trí / gợi ý, mỗi 2 giây và khi rời trang.
+  // Lưu cả bàn (không chỉ số bàn) để không thể thoát ra vào lại lấy bàn mới, giờ mới.
+  // next: vừa qua bàn → lưu sang đầu bàn sau. Thua hoặc phá đảo thì xoá.
+  function saveGame(next = false) {
+    save(SAVE_KEY, {
+      v: 1,
+      size: sizeKey,
+      level: next ? level + 1 : level,
+      score,
+      shuffles,
+      hints,
+      cells: next ? null : grid.map((row) => row.map((id) => (id == null ? null : tiles.get(id).type))),
+      timeMax,
+      timeLeft,
+      pairsDone,
+      levelAwarded,
+    });
+  }
+  function loadSave() {
+    const s = load(SAVE_KEY, null);
+    const count = (v) => Number.isInteger(v) && v >= 0;
+    if (!s || s.v !== 1 || !(s.level >= 1 && s.level <= LEVELS) || !count(s.score) || !count(s.shuffles) || !count(s.hints))
+      return null;
+    if (s.cells) {
+      const w = Array.isArray(s.cells[0]) && s.cells[0].length;
+      const ok =
+        w &&
+        s.cells.every((row) => Array.isArray(row) && row.length === w && row.every((t) => t === null || (count(t) && t < ICONS.length))) &&
+        s.cells.flat().some((t) => t !== null) &&
+        s.timeLeft > 0 &&
+        s.timeMax >= s.timeLeft &&
+        count(s.pairsDone) &&
+        count(s.levelAwarded);
+      if (!ok) return null;
+    }
+    return s;
+  }
+  function continueGame(s) {
+    closeModal();
+    if (SIZES[s.size]) sizeKey = s.size;
+    level = s.level;
+    setScore(s.score);
+    setShuffles(s.shuffles);
+    setHints(s.hints);
+    startLevel(s.cells ? s : null);
+  }
+  window.addEventListener("pagehide", () => {
+    if (running || paused) saveGame();
+  });
   function levelClear() {
     running = false;
     clearInterval(timerId);
@@ -469,12 +547,14 @@
     setScore(score + bonus);
     sfx.clear();
     if (level >= LEVELS) {
+      dropSave();
       modal("🏆", "Hoàn thành!", `Bạn đã qua hết ${LEVELS} bàn.<br>Tổng điểm: <b>${score}</b> · Kỷ lục: <b>${best}</b>`, [
         ["Chơi lại", newGame, true],
       ]);
       return;
     }
     setShuffles(shuffles + 1); // qua bàn được thêm 1 lượt đổi
+    saveGame(true); // thoát ở hộp "Qua bàn" thì lần sau vào thẳng bàn tiếp theo
     modal(
       "🎉",
       `Qua bàn ${level}!`,
@@ -495,6 +575,7 @@
   function gameOver(title, text) {
     running = false;
     clearInterval(timerId);
+    dropSave();
     sfx.over();
     modal("😵", title, `${text}<br>Điểm: <b>${score}</b> · Kỷ lục: <b>${best}</b>`, [["Chơi lại", newGame, true]]);
   }
@@ -526,6 +607,39 @@
     $("#modal").hidden = false;
   }
   const closeModal = () => ($("#modal").hidden = true);
+
+  // ---------- Tạm dừng ----------
+  // đồng hồ đứng (timer chỉ chạy khi running) và bàn bị giấu; gợi ý đang hiện
+  // vẫn giữ nguyên sau khi chơi tiếp. Không dừng giữa lúc đang ăn cặp (busy) vì
+  // ăn xong có thể qua bàn, hộp thoại qua bàn sẽ đè lên hộp tạm dừng.
+  function pauseGame() {
+    if (!running || busy || paused) return;
+    paused = true;
+    running = false;
+    saveGame();
+    $("#boardWrap").classList.add("paused");
+    modal("⏸", "Tạm dừng", `Bàn ${level} · Điểm: <b>${score}</b><br>Bấm <b>P</b> hoặc <b>Esc</b> để chơi tiếp.`, [
+      ["Chơi tiếp", resumeGame, true],
+      ["Chơi lại", newGame],
+    ]);
+  }
+  function resumeGame() {
+    if (!paused) return;
+    paused = false;
+    closeModal();
+    $("#boardWrap").classList.remove("paused");
+    running = true;
+  }
+  $("#btnPause").addEventListener("click", pauseGame);
+  window.addEventListener("keydown", (e) => {
+    if (e.repeat || (e.key !== "Escape" && e.key.toLowerCase() !== "p")) return;
+    if (paused) resumeGame();
+    else pauseGame();
+  });
+  // chuyển tab / thu nhỏ cửa sổ thì tự tạm dừng
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) pauseGame();
+  });
 
   // ---------- Nút ----------
   function pauseThen(fn) {
@@ -604,6 +718,17 @@
   }
   loadTileImages().then((urls) => {
     tileImages = urls;
-    newGame();
+    const s = loadSave();
+    if (!s) return newGame();
+    modal(
+      "💾",
+      "Chơi tiếp?",
+      `Bạn đang có ván chơi dở ở <b>bàn ${s.level}</b> · Điểm: <b>${s.score}</b><br>` +
+        `Còn ${s.shuffles} lượt đổi · ${s.hints} gợi ý.`,
+      [
+        ["Chơi tiếp", () => continueGame(s), true],
+        ["Ván mới", newGame],
+      ],
+    );
   });
 })();
