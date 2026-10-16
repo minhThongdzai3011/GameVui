@@ -1,0 +1,5478 @@
+[
+  {
+    "clubId": "bac-ninh",
+    "playerId": "tran-van-thanh",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": null
+  },
+  {
+    "clubId": "bac-ninh",
+    "playerId": "nguyen-van-cong",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 1
+  },
+  {
+    "clubId": "bac-ninh",
+    "playerId": "dinh-van-truong",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 2
+  },
+  {
+    "clubId": "bac-ninh",
+    "playerId": "nguyen-ngoc-thang-3",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 3
+  },
+  {
+    "clubId": "bac-ninh",
+    "playerId": "vu-hong-quan-2",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 5
+  },
+  {
+    "clubId": "bac-ninh",
+    "playerId": "rosa-nascimento-vitor-hugo",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 8
+  },
+  {
+    "clubId": "bac-ninh",
+    "playerId": "brenner-marlos-varanda-de-oliveira",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 9
+  },
+  {
+    "clubId": "bac-ninh",
+    "playerId": "david-fisher-2",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 10
+  },
+  {
+    "clubId": "bac-ninh",
+    "playerId": "le-tien-anh",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 11
+  },
+  {
+    "clubId": "bac-ninh",
+    "playerId": "nguyen-hai-huy",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 14
+  },
+  {
+    "clubId": "bac-ninh",
+    "playerId": "nguyen-van-viet-6",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 15
+  },
+  {
+    "clubId": "bac-ninh",
+    "playerId": "nguyen-van-dat",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 16
+  },
+  {
+    "clubId": "bac-ninh",
+    "playerId": "mai-xuan-quyet",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 18
+  },
+  {
+    "clubId": "bac-ninh",
+    "playerId": "recce-minh-kai-gaylor",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 19
+  },
+  {
+    "clubId": "bac-ninh",
+    "playerId": "phan-the-hung",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 21
+  },
+  {
+    "clubId": "bac-ninh",
+    "playerId": "doan-huy-hoang",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 25
+  },
+  {
+    "clubId": "bac-ninh",
+    "playerId": "le-thang-long",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 27
+  },
+  {
+    "clubId": "bac-ninh",
+    "playerId": "ngan-van-dai",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 29
+  },
+  {
+    "clubId": "bac-ninh",
+    "playerId": "luong-hoang-nam",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 30
+  },
+  {
+    "clubId": "bac-ninh",
+    "playerId": "nguyen-chinh-dang",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 31
+  },
+  {
+    "clubId": "bac-ninh",
+    "playerId": "nguyen-minh-tung",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 36
+  },
+  {
+    "clubId": "bac-ninh",
+    "playerId": "le-van-hung",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 37
+  },
+  {
+    "clubId": "bac-ninh",
+    "playerId": "nguyen-trong-kiet",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 43
+  },
+  {
+    "clubId": "bac-ninh",
+    "playerId": "le-van-xuan",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 45
+  },
+  {
+    "clubId": "bac-ninh",
+    "playerId": "tran-van-trung",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 68
+  },
+  {
+    "clubId": "bac-ninh",
+    "playerId": "pierre",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 80
+  },
+  {
+    "clubId": "bac-ninh",
+    "playerId": "vu-tien-long",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 86
+  },
+  {
+    "clubId": "bac-ninh",
+    "playerId": "pham-van-thanh",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 88
+  },
+  {
+    "clubId": "bac-ninh",
+    "playerId": "rafael-santos-de-sousa",
+    "position": "DF",
+    "positionName": null,
+    "number": 99,
+    "positionDetail": "trung vệ"
+  },
+  {
+    "clubId": "cong-an-ha-noi",
+    "playerId": "filip-nguyen",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 1
+  },
+  {
+    "clubId": "cong-an-ha-noi",
+    "playerId": "phan-ngoc-tin",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 4
+  },
+  {
+    "clubId": "cong-an-ha-noi",
+    "playerId": "doan-van-hau",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 5
+  },
+  {
+    "clubId": "cong-an-ha-noi",
+    "playerId": "mauk-stefan-ingo",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 6
+  },
+  {
+    "clubId": "cong-an-ha-noi",
+    "playerId": "jason-quang-vinh-pendant",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 7
+  },
+  {
+    "clubId": "cong-an-ha-noi",
+    "playerId": "henen-david-boris-philippe",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 8
+  },
+  {
+    "clubId": "cong-an-ha-noi",
+    "playerId": "nguyen-dinh-bac",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 9
+  },
+  {
+    "clubId": "cong-an-ha-noi",
+    "playerId": "leonardo-artur-de-melo",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 10
+  },
+  {
+    "clubId": "cong-an-ha-noi",
+    "playerId": "le-pham-thanh-long",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 11
+  },
+  {
+    "clubId": "cong-an-ha-noi",
+    "playerId": "hoang-van-toan",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 12
+  },
+  {
+    "clubId": "cong-an-ha-noi",
+    "playerId": "sabater-tous-damia",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 14
+  },
+  {
+    "clubId": "cong-an-ha-noi",
+    "playerId": "bui-xuan-thinh",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 15
+  },
+  {
+    "clubId": "cong-an-ha-noi",
+    "playerId": "vu-van-thanh",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 17
+  },
+  {
+    "clubId": "cong-an-ha-noi",
+    "playerId": "dinh-thanh-binh",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 18
+  },
+  {
+    "clubId": "cong-an-ha-noi",
+    "playerId": "nguyen-quang-hai",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 19
+  },
+  {
+    "clubId": "cong-an-ha-noi",
+    "playerId": "tran-dinh-trong",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 21
+  },
+  {
+    "clubId": "cong-an-ha-noi",
+    "playerId": "vu-thanh-vinh",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 23
+  },
+  {
+    "clubId": "cong-an-ha-noi",
+    "playerId": "ha-van-phuong",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 26
+  },
+  {
+    "clubId": "cong-an-ha-noi",
+    "playerId": "y-eli-nie",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 30
+  },
+  {
+    "clubId": "cong-an-ha-noi",
+    "playerId": "adou-leygley-minh",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 38
+  },
+  {
+    "clubId": "cong-an-ha-noi",
+    "playerId": "putros-frans-dhia-jirjis",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 55
+  },
+  {
+    "clubId": "cong-an-ha-noi",
+    "playerId": "bui-hoang-viet-anh",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 68
+  },
+  {
+    "clubId": "cong-an-ha-noi",
+    "playerId": "alan-sebastiao-alexandre",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 72
+  },
+  {
+    "clubId": "cong-an-ha-noi",
+    "playerId": "le-van-do",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 88
+  },
+  {
+    "clubId": "cong-an-ha-noi",
+    "playerId": "perea-vargas-brayan-andres",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 90
+  },
+  {
+    "clubId": "cong-an-ha-noi",
+    "playerId": "kevin-pham-ba",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 93
+  },
+  {
+    "clubId": "cong-an-tphcm",
+    "playerId": "tran-lenn-minh-quang",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 2
+  },
+  {
+    "clubId": "cong-an-tphcm",
+    "playerId": "dirk-abels",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 4
+  },
+  {
+    "clubId": "cong-an-tphcm",
+    "playerId": "dinh",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 5
+  },
+  {
+    "clubId": "cong-an-tphcm",
+    "playerId": "dang-van-tram",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 6
+  },
+  {
+    "clubId": "cong-an-tphcm",
+    "playerId": "olaha-michael-onyedikachi",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 7
+  },
+  {
+    "clubId": "cong-an-tphcm",
+    "playerId": "narvaez-solarte-juan-jose",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 8
+  },
+  {
+    "clubId": "cong-an-tphcm",
+    "playerId": "cummings-jason-steven",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 9
+  },
+  {
+    "clubId": "cong-an-tphcm",
+    "playerId": "caputa-ferreira-aldair",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 10
+  },
+  {
+    "clubId": "cong-an-tphcm",
+    "playerId": "nguyen-phi-hoang",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 11
+  },
+  {
+    "clubId": "cong-an-tphcm",
+    "playerId": "da-silva-gomes-leonardo",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 12
+  },
+  {
+    "clubId": "cong-an-tphcm",
+    "playerId": "khong-minh-gia-bao",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 13
+  },
+  {
+    "clubId": "cong-an-tphcm",
+    "playerId": "nguyen-hoang-minh-nhat",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 16
+  },
+  {
+    "clubId": "cong-an-tphcm",
+    "playerId": "vo-minh-trong",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 17
+  },
+  {
+    "clubId": "cong-an-tphcm",
+    "playerId": "nguyen-thai-quoc-cuong",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 19
+  },
+  {
+    "clubId": "cong-an-tphcm",
+    "playerId": "phan-van-duc",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 20
+  },
+  {
+    "clubId": "cong-an-tphcm",
+    "playerId": "dao-quoc-gia",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 21
+  },
+  {
+    "clubId": "cong-an-tphcm",
+    "playerId": "nguyen-tien-linh",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 22
+  },
+  {
+    "clubId": "cong-an-tphcm",
+    "playerId": "ngo-dang-khoa",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 26
+  },
+  {
+    "clubId": "cong-an-tphcm",
+    "playerId": "nguyen-nhat-minh-2",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 27
+  },
+  {
+    "clubId": "cong-an-tphcm",
+    "playerId": "tran-hoang-phuc",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 28
+  },
+  {
+    "clubId": "cong-an-tphcm",
+    "playerId": "phan-van-bieu",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 32
+  },
+  {
+    "clubId": "cong-an-tphcm",
+    "playerId": "williams-lee-oliver-grant",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 33
+  },
+  {
+    "clubId": "cong-an-tphcm",
+    "playerId": "le-quang-hung",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 34
+  },
+  {
+    "clubId": "cong-an-tphcm",
+    "playerId": "nguyen-duc-phu",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 39
+  },
+  {
+    "clubId": "cong-an-tphcm",
+    "playerId": "hoa-xuan-tin",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 56
+  },
+  {
+    "clubId": "cong-an-tphcm",
+    "playerId": "yamga-tientcheu-arthur-kevin",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 58
+  },
+  {
+    "clubId": "cong-an-tphcm",
+    "playerId": "patrik-le-giang",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 89
+  },
+  {
+    "clubId": "ha-noi",
+    "playerId": "quan-van-chuan",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 1
+  },
+  {
+    "clubId": "ha-noi",
+    "playerId": "le-van-ha",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 3
+  },
+  {
+    "clubId": "ha-noi",
+    "playerId": "nguyen-van-hoang",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 5
+  },
+  {
+    "clubId": "ha-noi",
+    "playerId": "felida-kevin-antonio",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 6,
+    "positionDetail": "tiền vệ phòng ngự"
+  },
+  {
+    "clubId": "ha-noi",
+    "playerId": "pham-xuan-manh",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 7
+  },
+  {
+    "clubId": "ha-noi",
+    "playerId": "nguyen-van-truong",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 8
+  },
+  {
+    "clubId": "ha-noi",
+    "playerId": "faurand-tournaire-aymeric",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 9
+  },
+  {
+    "clubId": "ha-noi",
+    "playerId": "nguyen-van-quyet",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 10
+  },
+  {
+    "clubId": "ha-noi",
+    "playerId": "do-hoang-hen",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 11
+  },
+  {
+    "clubId": "ha-noi",
+    "playerId": "nguyen-hai-long",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 14
+  },
+  {
+    "clubId": "ha-noi",
+    "playerId": "pham-duc-huy",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 15
+  },
+  {
+    "clubId": "ha-noi",
+    "playerId": "nguyen-thanh-chung",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 16
+  },
+  {
+    "clubId": "ha-noi",
+    "playerId": "ho-thanh-minh",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 17
+  },
+  {
+    "clubId": "ha-noi",
+    "playerId": "bui-ngoc-long",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 18
+  },
+  {
+    "clubId": "ha-noi",
+    "playerId": "le-xuan-tu",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 19
+  },
+  {
+    "clubId": "ha-noi",
+    "playerId": "dau-hong-phong",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 20
+  },
+  {
+    "clubId": "ha-noi",
+    "playerId": "vu-dinh-hai-2",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 21
+  },
+  {
+    "clubId": "ha-noi",
+    "playerId": "nguyen-cong-nhat",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 22
+  },
+  {
+    "clubId": "ha-noi",
+    "playerId": "nguyen-van-tung-2",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 23
+  },
+  {
+    "clubId": "ha-noi",
+    "playerId": "chu-ngoc-nguyen-luc",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 24
+  },
+  {
+    "clubId": "ha-noi",
+    "playerId": "nguyen-duc-anh",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 29
+  },
+  {
+    "clubId": "ha-noi",
+    "playerId": "nguyen-anh-tiep",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 33
+  },
+  {
+    "clubId": "ha-noi",
+    "playerId": "ferreira-da-silva-adriel-tadeu",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 35
+  },
+  {
+    "clubId": "ha-noi",
+    "playerId": "sade-iuval",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 36
+  },
+  {
+    "clubId": "ha-noi",
+    "playerId": "cyrus-sylvester-frederick",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 44
+  },
+  {
+    "clubId": "ha-noi",
+    "playerId": "pham-dinh-hai",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 66
+  },
+  {
+    "clubId": "ha-noi",
+    "playerId": "tran-van-thang",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 86
+  },
+  {
+    "clubId": "ha-noi",
+    "playerId": "do-hung-dung",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 88
+  },
+  {
+    "clubId": "ha-noi",
+    "playerId": "jung-andrew",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 90
+  },
+  {
+    "clubId": "hai-phong",
+    "playerId": "ndiaye-guy-olivier",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": null
+  },
+  {
+    "clubId": "hai-phong",
+    "playerId": "hua-quoc-thang",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 2
+  },
+  {
+    "clubId": "hai-phong",
+    "playerId": "dang-tuan-phong",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 5
+  },
+  {
+    "clubId": "hai-phong",
+    "playerId": "hoang-trong-duy-khang",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 7
+  },
+  {
+    "clubId": "hai-phong",
+    "playerId": "milan-makaric",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 9
+  },
+  {
+    "clubId": "hai-phong",
+    "playerId": "camilo-minh-vasconcelos",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 10
+  },
+  {
+    "clubId": "hai-phong",
+    "playerId": "ho-minh-di",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 11
+  },
+  {
+    "clubId": "hai-phong",
+    "playerId": "nguyen-anh-tuan-2",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 14
+  },
+  {
+    "clubId": "hai-phong",
+    "playerId": "nguyen-ngoc-tu",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 15
+  },
+  {
+    "clubId": "hai-phong",
+    "playerId": "nguyen-thai-hoc",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 17
+  },
+  {
+    "clubId": "hai-phong",
+    "playerId": "le-manh-dung",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 19
+  },
+  {
+    "clubId": "hai-phong",
+    "playerId": "tran-dinh-minh-hoang",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 20
+  },
+  {
+    "clubId": "hai-phong",
+    "playerId": "tran-gia-hung",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 21
+  },
+  {
+    "clubId": "hai-phong",
+    "playerId": "hoang-van-tuyen",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 27
+  },
+  {
+    "clubId": "hai-phong",
+    "playerId": "huynh-tuan-vu",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 28
+  },
+  {
+    "clubId": "hai-phong",
+    "playerId": "nguyen-van-toan-3",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 30
+  },
+  {
+    "clubId": "hai-phong",
+    "playerId": "nguyen-huu-thai-bao",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 31
+  },
+  {
+    "clubId": "hai-phong",
+    "playerId": "pham-thanh-long",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 32
+  },
+  {
+    "clubId": "hai-phong",
+    "playerId": "nguyen-cong-phuong-2",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 36
+  },
+  {
+    "clubId": "hai-phong",
+    "playerId": "nguyen-vu-tin",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 39
+  },
+  {
+    "clubId": "hai-phong",
+    "playerId": "nguyen-thanh-dong",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 45
+  },
+  {
+    "clubId": "hai-phong",
+    "playerId": "nguyen-van-minh",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 68
+  },
+  {
+    "clubId": "hai-phong",
+    "playerId": "nguyen-huu-son",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 77
+  },
+  {
+    "clubId": "hai-phong",
+    "playerId": "nguyen-van-anh",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 91
+  },
+  {
+    "clubId": "hai-phong",
+    "playerId": "tagueu-tadjo-diederrick-joel",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 95
+  },
+  {
+    "clubId": "hai-phong",
+    "playerId": "esteban-orozco-fernandez",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 97
+  },
+  {
+    "clubId": "hai-phong",
+    "playerId": "hoang-the-tai",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 98
+  },
+  {
+    "clubId": "hai-phong",
+    "playerId": "mpande-joseph-mbolimbo",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 99
+  },
+  {
+    "clubId": "hoang-anh-gia-lai",
+    "playerId": "huynh-tran-bao-duy",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 1
+  },
+  {
+    "clubId": "hoang-anh-gia-lai",
+    "playerId": "ha-chau-phi",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 3
+  },
+  {
+    "clubId": "hoang-anh-gia-lai",
+    "playerId": "nguyen-quoc-quang-huy",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 4
+  },
+  {
+    "clubId": "hoang-anh-gia-lai",
+    "playerId": "basilo-da-silva-julio-cesar",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 5
+  },
+  {
+    "clubId": "hoang-anh-gia-lai",
+    "playerId": "tran-thanh-son",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 6
+  },
+  {
+    "clubId": "hoang-anh-gia-lai",
+    "playerId": "nguyen-thanh-nhan",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 7
+  },
+  {
+    "clubId": "hoang-anh-gia-lai",
+    "playerId": "vo-dinh-lam",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 8
+  },
+  {
+    "clubId": "hoang-anh-gia-lai",
+    "playerId": "jacintho-ferreira-matheus-lucas",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 9
+  },
+  {
+    "clubId": "hoang-anh-gia-lai",
+    "playerId": "luaan-augusto-xavier-boy",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 10
+  },
+  {
+    "clubId": "hoang-anh-gia-lai",
+    "playerId": "nguyen-minh-tam",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 12
+  },
+  {
+    "clubId": "hoang-anh-gia-lai",
+    "playerId": "nguyen-van-trieu",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 15
+  },
+  {
+    "clubId": "hoang-anh-gia-lai",
+    "playerId": "tran-gia-bao",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 16
+  },
+  {
+    "clubId": "hoang-anh-gia-lai",
+    "playerId": "phan-tri-dung",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 18
+  },
+  {
+    "clubId": "hoang-anh-gia-lai",
+    "playerId": "nguyen-duy-tam",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 19
+  },
+  {
+    "clubId": "hoang-anh-gia-lai",
+    "playerId": "cao-hoang-minh",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 20
+  },
+  {
+    "clubId": "hoang-anh-gia-lai",
+    "playerId": "nguyen-chi-huong",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 21
+  },
+  {
+    "clubId": "hoang-anh-gia-lai",
+    "playerId": "nay-di-dan",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 22
+  },
+  {
+    "clubId": "hoang-anh-gia-lai",
+    "playerId": "hoang-vinh-nguyen",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 23
+  },
+  {
+    "clubId": "hoang-anh-gia-lai",
+    "playerId": "tran-trung-kien",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 25
+  },
+  {
+    "clubId": "hoang-anh-gia-lai",
+    "playerId": "moi-se",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 26
+  },
+  {
+    "clubId": "hoang-anh-gia-lai",
+    "playerId": "phan-nhat-thanh-long",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 27
+  },
+  {
+    "clubId": "hoang-anh-gia-lai",
+    "playerId": "nguyen-huu-anh-tai",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 28
+  },
+  {
+    "clubId": "hoang-anh-gia-lai",
+    "playerId": "robson-alves-reis",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 33,
+    "positionDetail": "trung vệ"
+  },
+  {
+    "clubId": "hoang-anh-gia-lai",
+    "playerId": "vo-phuoc-bao",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 38
+  },
+  {
+    "clubId": "hoang-anh-gia-lai",
+    "playerId": "nguyen-thanh-loi-2",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 39
+  },
+  {
+    "clubId": "hoang-anh-gia-lai",
+    "playerId": "nguyen-vu-khang",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 69
+  },
+  {
+    "clubId": "hoang-anh-gia-lai",
+    "playerId": "dung-quang-vinh",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 86
+  },
+  {
+    "clubId": "hong-linh-ha-tinh",
+    "playerId": "nguyen-thanh-tung-2",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 1
+  },
+  {
+    "clubId": "hong-linh-ha-tinh",
+    "playerId": "vuong-van-huy",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 2
+  },
+  {
+    "clubId": "hong-linh-ha-tinh",
+    "playerId": "thai-ba-sang",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 3
+  },
+  {
+    "clubId": "hong-linh-ha-tinh",
+    "playerId": "le-quang-truong",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 4
+  },
+  {
+    "clubId": "hong-linh-ha-tinh",
+    "playerId": "vu-viet-trieu",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 5
+  },
+  {
+    "clubId": "hong-linh-ha-tinh",
+    "playerId": "helerson-mateus-do-nascimento",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 6,
+    "positionDetail": "trung vệ"
+  },
+  {
+    "clubId": "hong-linh-ha-tinh",
+    "playerId": "bui-duy-thuong",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 7
+  },
+  {
+    "clubId": "hong-linh-ha-tinh",
+    "playerId": "nguyen-trong-hoang",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 8
+  },
+  {
+    "clubId": "hong-linh-ha-tinh",
+    "playerId": "floro-da-silva-daniel",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 9
+  },
+  {
+    "clubId": "hong-linh-ha-tinh",
+    "playerId": "nguyen-van-hiep-2",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 11
+  },
+  {
+    "clubId": "hong-linh-ha-tinh",
+    "playerId": "pham-van-long",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 16
+  },
+  {
+    "clubId": "hong-linh-ha-tinh",
+    "playerId": "tran-van-buu",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 17
+  },
+  {
+    "clubId": "hong-linh-ha-tinh",
+    "playerId": "vu-quang-nam",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 18
+  },
+  {
+    "clubId": "hong-linh-ha-tinh",
+    "playerId": "ngo-van-luong",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 19
+  },
+  {
+    "clubId": "hong-linh-ha-tinh",
+    "playerId": "huynh-tien-dat",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 20
+  },
+  {
+    "clubId": "hong-linh-ha-tinh",
+    "playerId": "nguyen-van-huy",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 21
+  },
+  {
+    "clubId": "hong-linh-ha-tinh",
+    "playerId": "thoan-jacob-ian-mai",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 22
+  },
+  {
+    "clubId": "hong-linh-ha-tinh",
+    "playerId": "nguyen-hoang-trung-nguyen",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 24
+  },
+  {
+    "clubId": "hong-linh-ha-tinh",
+    "playerId": "tran-van-tien",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 25
+  },
+  {
+    "clubId": "hong-linh-ha-tinh",
+    "playerId": "bui-van-duc",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 26
+  },
+  {
+    "clubId": "hong-linh-ha-tinh",
+    "playerId": "nguyen-huu-hau",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 30
+  },
+  {
+    "clubId": "hong-linh-ha-tinh",
+    "playerId": "moreau-nguyen-ranhi-van-tam",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 33
+  },
+  {
+    "clubId": "hong-linh-ha-tinh",
+    "playerId": "vo-quoc-dan",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 38
+  },
+  {
+    "clubId": "hong-linh-ha-tinh",
+    "playerId": "huynh-tan-tai",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 39
+  },
+  {
+    "clubId": "hong-linh-ha-tinh",
+    "playerId": "nguyen-van-khanh",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 87
+  },
+  {
+    "clubId": "hong-linh-ha-tinh",
+    "playerId": "luiz-antonio-de-souza-soares",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 88
+  },
+  {
+    "clubId": "hong-linh-ha-tinh",
+    "playerId": "atshimene-charles",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 90
+  },
+  {
+    "clubId": "ninh-binh",
+    "playerId": "dang-van-lam",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 1
+  },
+  {
+    "clubId": "ninh-binh",
+    "playerId": "hoang-thai-binh",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 2
+  },
+  {
+    "clubId": "ninh-binh",
+    "playerId": "ho-tan-tai",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 4
+  },
+  {
+    "clubId": "ninh-binh",
+    "playerId": "imoh-fred-friday",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 5
+  },
+  {
+    "clubId": "ninh-binh",
+    "playerId": "do-thanh-thinh",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 6
+  },
+  {
+    "clubId": "ninh-binh",
+    "playerId": "nguyen-duc-chien",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 7
+  },
+  {
+    "clubId": "ninh-binh",
+    "playerId": "tran-thanh-trung",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 8
+  },
+  {
+    "clubId": "ninh-binh",
+    "playerId": "goncalves-silva-lucas-vinicius",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 9
+  },
+  {
+    "clubId": "ninh-binh",
+    "playerId": "le-van-thuan",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 11
+  },
+  {
+    "clubId": "ninh-binh",
+    "playerId": "nguyen-duc-viet",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 14
+  },
+  {
+    "clubId": "ninh-binh",
+    "playerId": "tran-bao-toan",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 15
+  },
+  {
+    "clubId": "ninh-binh",
+    "playerId": "nguyen-le-phat",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 16
+  },
+  {
+    "clubId": "ninh-binh",
+    "playerId": "le-ngoc-bao",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 17
+  },
+  {
+    "clubId": "ninh-binh",
+    "playerId": "pham-gia-hung",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 18
+  },
+  {
+    "clubId": "ninh-binh",
+    "playerId": "nguyen-ngoc-my",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 24
+  },
+  {
+    "clubId": "ninh-binh",
+    "playerId": "quang-the-tai",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 25
+  },
+  {
+    "clubId": "ninh-binh",
+    "playerId": "le-hai-duc",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 26
+  },
+  {
+    "clubId": "ninh-binh",
+    "playerId": "nguyen-hoang-duc",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 28
+  },
+  {
+    "clubId": "ninh-binh",
+    "playerId": "nguyen-quoc-khanh",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 33
+  },
+  {
+    "clubId": "ninh-binh",
+    "playerId": "do-van-thuan",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 41
+  },
+  {
+    "clubId": "ninh-binh",
+    "playerId": "martins-de-resende-romeu",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 55
+  },
+  {
+    "clubId": "ninh-binh",
+    "playerId": "truong-tien-anh",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 66
+  },
+  {
+    "clubId": "ninh-binh",
+    "playerId": "dung-quang-nho",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 86
+  },
+  {
+    "clubId": "ninh-binh",
+    "playerId": "nguyen-minh-duc",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 88
+  },
+  {
+    "clubId": "ninh-binh",
+    "playerId": "geovane-mango",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 94
+  },
+  {
+    "clubId": "ninh-binh",
+    "playerId": "lucas-henrique-turci",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 96,
+    "positionDetail": "trung vệ"
+  },
+  {
+    "clubId": "ninh-binh",
+    "playerId": "nguyen-quoc-viet",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 99
+  },
+  {
+    "clubId": "shb-da-nang",
+    "playerId": "tran-ngoc-hiep",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 2
+  },
+  {
+    "clubId": "shb-da-nang",
+    "playerId": "matias-fracchia-moreira",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 3
+  },
+  {
+    "clubId": "shb-da-nang",
+    "playerId": "y-vo-nahuel-calleros-rebori",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 5
+  },
+  {
+    "clubId": "shb-da-nang",
+    "playerId": "que-ngoc-hai",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 8
+  },
+  {
+    "clubId": "shb-da-nang",
+    "playerId": "ivan-saponjic",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 9
+  },
+  {
+    "clubId": "shb-da-nang",
+    "playerId": "kalvin-luong",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 10
+  },
+  {
+    "clubId": "shb-da-nang",
+    "playerId": "phan-van-long",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 11
+  },
+  {
+    "clubId": "shb-da-nang",
+    "playerId": "tran-van-hoa",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 14
+  },
+  {
+    "clubId": "shb-da-nang",
+    "playerId": "pham-van-huu",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 16
+  },
+  {
+    "clubId": "shb-da-nang",
+    "playerId": "vo-huu-vie%cc%a3t-hoang",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 17
+  },
+  {
+    "clubId": "shb-da-nang",
+    "playerId": "pham-dinh-duy",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 18
+  },
+  {
+    "clubId": "shb-da-nang",
+    "playerId": "joel-brandon-lopez-pissano",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 19,
+    "positionDetail": "tiền vệ tấn công"
+  },
+  {
+    "clubId": "shb-da-nang",
+    "playerId": "luong-duy-cuong",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 20
+  },
+  {
+    "clubId": "shb-da-nang",
+    "playerId": "le-vu-quoc-nhat",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 22
+  },
+  {
+    "clubId": "shb-da-nang",
+    "playerId": "nguyen-hong-phuc",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 23
+  },
+  {
+    "clubId": "shb-da-nang",
+    "playerId": "vo-huy-toan",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 26
+  },
+  {
+    "clubId": "shb-da-nang",
+    "playerId": "bryan-ly",
+    "position": "MF",
+    "positionName": null,
+    "number": 27,
+    "positionDetail": "tiền vệ trung tâm"
+  },
+  {
+    "clubId": "shb-da-nang",
+    "playerId": "vo-nguyen-hoang",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 28
+  },
+  {
+    "clubId": "shb-da-nang",
+    "playerId": "le-van-quang-duyet",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 32
+  },
+  {
+    "clubId": "shb-da-nang",
+    "playerId": "do-sy-huy",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 33
+  },
+  {
+    "clubId": "shb-da-nang",
+    "playerId": "nguyen-tien-manh",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 34
+  },
+  {
+    "clubId": "shb-da-nang",
+    "playerId": "nguyen-minh-quang",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 36
+  },
+  {
+    "clubId": "shb-da-nang",
+    "playerId": "vu-van-son",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 37
+  },
+  {
+    "clubId": "shb-da-nang",
+    "playerId": "vo-van-toan",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 58
+  },
+  {
+    "clubId": "shb-da-nang",
+    "playerId": "ngo-hong-phuoc",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 67
+  },
+  {
+    "clubId": "shb-da-nang",
+    "playerId": "nguyen-trung-nguyen",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 72
+  },
+  {
+    "clubId": "shb-da-nang",
+    "playerId": "mai-sy-hoang",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 79
+  },
+  {
+    "clubId": "shb-da-nang",
+    "playerId": "nguyen-duy-thang",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 81
+  },
+  {
+    "clubId": "shb-da-nang",
+    "playerId": "bui-tien-dung-1",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 91
+  },
+  {
+    "clubId": "song-lam-nghe-an",
+    "playerId": "cao-van-binh",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 1
+  },
+  {
+    "clubId": "song-lam-nghe-an",
+    "playerId": "cittadini-roberto",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 2
+  },
+  {
+    "clubId": "song-lam-nghe-an",
+    "playerId": "nguyen-mai-hoang",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 3
+  },
+  {
+    "clubId": "song-lam-nghe-an",
+    "playerId": "onoja-joseph",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 5
+  },
+  {
+    "clubId": "song-lam-nghe-an",
+    "playerId": "phan-van-thanh",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 6
+  },
+  {
+    "clubId": "song-lam-nghe-an",
+    "playerId": "ho-van-cuong",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 7
+  },
+  {
+    "clubId": "song-lam-nghe-an",
+    "playerId": "nguyen-xuan-binh",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 8
+  },
+  {
+    "clubId": "song-lam-nghe-an",
+    "playerId": "karim-tran-phi-long",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 10,
+    "positionDetail": "tiền vệ cánh phải"
+  },
+  {
+    "clubId": "song-lam-nghe-an",
+    "playerId": "bui-thanh-duc",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 12
+  },
+  {
+    "clubId": "song-lam-nghe-an",
+    "playerId": "le-nguyen-hoang",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 15
+  },
+  {
+    "clubId": "song-lam-nghe-an",
+    "playerId": "nguyen-quang-vinh",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 16
+  },
+  {
+    "clubId": "song-lam-nghe-an",
+    "playerId": "le-dinh-long-vu",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 18
+  },
+  {
+    "clubId": "song-lam-nghe-an",
+    "playerId": "phan-ba-quyen",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 19
+  },
+  {
+    "clubId": "song-lam-nghe-an",
+    "playerId": "le-van-quy",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 20
+  },
+  {
+    "clubId": "song-lam-nghe-an",
+    "playerId": "phan-xuan-dai",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 21
+  },
+  {
+    "clubId": "song-lam-nghe-an",
+    "playerId": "ngo-van-bac",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 22
+  },
+  {
+    "clubId": "song-lam-nghe-an",
+    "playerId": "hoang-minh-hoi",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 23
+  },
+  {
+    "clubId": "song-lam-nghe-an",
+    "playerId": "trinh-hoang-canh",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 24
+  },
+  {
+    "clubId": "song-lam-nghe-an",
+    "playerId": "nguyen-bao-ngoc",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 25
+  },
+  {
+    "clubId": "song-lam-nghe-an",
+    "playerId": "dang-van-lam-2",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 27
+  },
+  {
+    "clubId": "song-lam-nghe-an",
+    "playerId": "tran-van-dat-2",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 28
+  },
+  {
+    "clubId": "song-lam-nghe-an",
+    "playerId": "dang-quang-tu",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 29
+  },
+  {
+    "clubId": "song-lam-nghe-an",
+    "playerId": "ho-khac-ngoc",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 32
+  },
+  {
+    "clubId": "song-lam-nghe-an",
+    "playerId": "jairo-rodrigues-peixoto-filho",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 33
+  },
+  {
+    "clubId": "song-lam-nghe-an",
+    "playerId": "hoang-van-khanh",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 55
+  },
+  {
+    "clubId": "song-lam-nghe-an",
+    "playerId": "luiz-guilherme-vieira-da-silva",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 77
+  },
+  {
+    "clubId": "song-lam-nghe-an",
+    "playerId": "bruno-pereira-de-albuquerque",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 83
+  },
+  {
+    "clubId": "song-lam-nghe-an",
+    "playerId": "abdel-amine-tran-duc-vinh",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 87
+  },
+  {
+    "clubId": "dong-a-thanh-hoa",
+    "playerId": "nguyen-huu-dung",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 2
+  },
+  {
+    "clubId": "dong-a-thanh-hoa",
+    "playerId": "luc-xuan-hung",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 5
+  },
+  {
+    "clubId": "dong-a-thanh-hoa",
+    "playerId": "nguyen-ba-tien",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 7
+  },
+  {
+    "clubId": "dong-a-thanh-hoa",
+    "playerId": "ngo-duc-hoang",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 8
+  },
+  {
+    "clubId": "dong-a-thanh-hoa",
+    "playerId": "saliou-guindo",
+    "position": "FW",
+    "positionName": null,
+    "number": 9,
+    "positionDetail": "tiền đạo"
+  },
+  {
+    "clubId": "dong-a-thanh-hoa",
+    "playerId": "le-van-thang",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 10
+  },
+  {
+    "clubId": "dong-a-thanh-hoa",
+    "playerId": "nguyen-ngoc-tinh",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 11
+  },
+  {
+    "clubId": "dong-a-thanh-hoa",
+    "playerId": "nguyen-van-dung-3",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 12
+  },
+  {
+    "clubId": "dong-a-thanh-hoa",
+    "playerId": "truong-thanh-nam",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 14
+  },
+  {
+    "clubId": "dong-a-thanh-hoa",
+    "playerId": "trinh-van-loi",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 15
+  },
+  {
+    "clubId": "dong-a-thanh-hoa",
+    "playerId": "nguyen-dinh-huyen",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 16
+  },
+  {
+    "clubId": "dong-a-thanh-hoa",
+    "playerId": "nguyen-van-tung",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 17
+  },
+  {
+    "clubId": "dong-a-thanh-hoa",
+    "playerId": "le-ba-nam",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 19
+  },
+  {
+    "clubId": "dong-a-thanh-hoa",
+    "playerId": "lai-van-tu",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 20
+  },
+  {
+    "clubId": "dong-a-thanh-hoa",
+    "playerId": "tran-ngoc-quy",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 21
+  },
+  {
+    "clubId": "dong-a-thanh-hoa",
+    "playerId": "damoth-thongkhamsavath",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 22
+  },
+  {
+    "clubId": "dong-a-thanh-hoa",
+    "playerId": "vu-tuyen-quang",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 23
+  },
+  {
+    "clubId": "dong-a-thanh-hoa",
+    "playerId": "nguyen-thanh-diep",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 25
+  },
+  {
+    "clubId": "dong-a-thanh-hoa",
+    "playerId": "ha-duc-minh",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 26
+  },
+  {
+    "clubId": "dong-a-thanh-hoa",
+    "playerId": "ha-van-kiet",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 28
+  },
+  {
+    "clubId": "dong-a-thanh-hoa",
+    "playerId": "doan-ngoc-ha",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 29
+  },
+  {
+    "clubId": "dong-a-thanh-hoa",
+    "playerId": "ho-tung-han",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 30
+  },
+  {
+    "clubId": "dong-a-thanh-hoa",
+    "playerId": "di-mateo-lovric",
+    "position": "MF",
+    "positionName": null,
+    "number": 35,
+    "positionDetail": "tiền vệ phòng ngự"
+  },
+  {
+    "clubId": "dong-a-thanh-hoa",
+    "playerId": "doan-tuan-canh",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 39
+  },
+  {
+    "clubId": "dong-a-thanh-hoa",
+    "playerId": "truong-duc-manh",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 58
+  },
+  {
+    "clubId": "dong-a-thanh-hoa",
+    "playerId": "le-van-hoan",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 75
+  },
+  {
+    "clubId": "dong-a-thanh-hoa",
+    "playerId": "abdurakhmanov-odilzhon-alisherovich",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 77
+  },
+  {
+    "clubId": "dong-a-thanh-hoa",
+    "playerId": "nguyen-trong-phu",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 89
+  },
+  {
+    "clubId": "dong-a-thanh-hoa",
+    "playerId": "nguyen-duc-tung",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 90
+  },
+  {
+    "clubId": "dong-a-thanh-hoa",
+    "playerId": "le-anh-tuan",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 93
+  },
+  {
+    "clubId": "dong-a-thanh-hoa",
+    "playerId": "matheus-monteiro-martins",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 98
+  },
+  {
+    "clubId": "binh-phuoc",
+    "playerId": "bui-tan-truong",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 1
+  },
+  {
+    "clubId": "binh-phuoc",
+    "playerId": "duong-van-khoa",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 2
+  },
+  {
+    "clubId": "binh-phuoc",
+    "playerId": "huynh-tan-sinh",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 3
+  },
+  {
+    "clubId": "binh-phuoc",
+    "playerId": "nguyen-thanh-loc",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 5
+  },
+  {
+    "clubId": "binh-phuoc",
+    "playerId": "luong-xuan-truong",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 6
+  },
+  {
+    "clubId": "binh-phuoc",
+    "playerId": "vulic-milos",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 7
+  },
+  {
+    "clubId": "binh-phuoc",
+    "playerId": "ivan-virgil-adrei",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 9
+  },
+  {
+    "clubId": "binh-phuoc",
+    "playerId": "nguyen-cong-phuong",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 10
+  },
+  {
+    "clubId": "binh-phuoc",
+    "playerId": "majdevac-andrija",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 11
+  },
+  {
+    "clubId": "binh-phuoc",
+    "playerId": "uong-ngoc-tien",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 12
+  },
+  {
+    "clubId": "binh-phuoc",
+    "playerId": "nguyen-thanh-thao",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 13
+  },
+  {
+    "clubId": "binh-phuoc",
+    "playerId": "nguyen-quoc-loc",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 14
+  },
+  {
+    "clubId": "binh-phuoc",
+    "playerId": "nguyen-huu-tuan-3",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 15
+  },
+  {
+    "clubId": "binh-phuoc",
+    "playerId": "le-van-son",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 16
+  },
+  {
+    "clubId": "binh-phuoc",
+    "playerId": "pham-van-phong",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 17
+  },
+  {
+    "clubId": "binh-phuoc",
+    "playerId": "nguyen-van-duc-2",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 18
+  },
+  {
+    "clubId": "binh-phuoc",
+    "playerId": "luong-thanh-ngoc-lam",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 19
+  },
+  {
+    "clubId": "binh-phuoc",
+    "playerId": "luu-tu-nhan",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 20
+  },
+  {
+    "clubId": "binh-phuoc",
+    "playerId": "chu-van-kien-2",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 21
+  },
+  {
+    "clubId": "binh-phuoc",
+    "playerId": "jovic-filip",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 22
+  },
+  {
+    "clubId": "binh-phuoc",
+    "playerId": "tran-trong-hieu",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 23
+  },
+  {
+    "clubId": "binh-phuoc",
+    "playerId": "pham-huu-nghia",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 25
+  },
+  {
+    "clubId": "binh-phuoc",
+    "playerId": "doan-hai-quan",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 27
+  },
+  {
+    "clubId": "binh-phuoc",
+    "playerId": "nguyen-duc-cuong",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 30
+  },
+  {
+    "clubId": "binh-phuoc",
+    "playerId": "ho-tuan-tai",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 66
+  },
+  {
+    "clubId": "binh-phuoc",
+    "playerId": "bui-tien-dung-2",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 68
+  },
+  {
+    "clubId": "binh-phuoc",
+    "playerId": "sam-ngoc-duc",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 77
+  },
+  {
+    "clubId": "binh-phuoc",
+    "playerId": "le-thanh-binh",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 91
+  },
+  {
+    "clubId": "the-cong-viettel",
+    "playerId": "lawrence-robbie-caruso",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 1
+  },
+  {
+    "clubId": "the-cong-viettel",
+    "playerId": "colonna-kyle-nino",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 2
+  },
+  {
+    "clubId": "the-cong-viettel",
+    "playerId": "bui-tien-dung-3",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 4
+  },
+  {
+    "clubId": "the-cong-viettel",
+    "playerId": "andre-luiz-guimares-siqueira-junior",
+    "position": "MF",
+    "positionName": null,
+    "number": 5,
+    "positionDetail": "tiền vệ phòng ngự"
+  },
+  {
+    "clubId": "the-cong-viettel",
+    "playerId": "tran-danh-trung",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 6
+  },
+  {
+    "clubId": "the-cong-viettel",
+    "playerId": "wesley-nata-wachholz",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 7
+  },
+  {
+    "clubId": "the-cong-viettel",
+    "playerId": "nguyen-huu-thang",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 8
+  },
+  {
+    "clubId": "the-cong-viettel",
+    "playerId": "lucas-ribamar-lopes-dos-santos-bibiano",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 9
+  },
+  {
+    "clubId": "the-cong-viettel",
+    "playerId": "hernandes-rodrigues-da-silva",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 10
+  },
+  {
+    "clubId": "the-cong-viettel",
+    "playerId": "khuat-van-khang",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 11
+  },
+  {
+    "clubId": "the-cong-viettel",
+    "playerId": "phan-tuan-tai",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 12
+  },
+  {
+    "clubId": "the-cong-viettel",
+    "playerId": "rimario-gordon-allando",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 13
+  },
+  {
+    "clubId": "the-cong-viettel",
+    "playerId": "paulo-tapeu-viana-martins",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 14
+  },
+  {
+    "clubId": "the-cong-viettel",
+    "playerId": "lucas-alves-de-araujo",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 15
+  },
+  {
+    "clubId": "the-cong-viettel",
+    "playerId": "pham-trung-hieu",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 16
+  },
+  {
+    "clubId": "the-cong-viettel",
+    "playerId": "nguyen-duc-hoang-minh",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 17
+  },
+  {
+    "clubId": "the-cong-viettel",
+    "playerId": "dinh-viet-tu",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 18
+  },
+  {
+    "clubId": "the-cong-viettel",
+    "playerId": "dinh-xuan-tien",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 19
+  },
+  {
+    "clubId": "the-cong-viettel",
+    "playerId": "dao-van-nam",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 20
+  },
+  {
+    "clubId": "the-cong-viettel",
+    "playerId": "nguyen-hoang-khanh",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 22
+  },
+  {
+    "clubId": "the-cong-viettel",
+    "playerId": "nham-manh-dung",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 23
+  },
+  {
+    "clubId": "the-cong-viettel",
+    "playerId": "nguyen-van-viet-5",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 28
+  },
+  {
+    "clubId": "the-cong-viettel",
+    "playerId": "phi-minh-long",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 33
+  },
+  {
+    "clubId": "the-cong-viettel",
+    "playerId": "doan-ngoc-tan",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 34
+  },
+  {
+    "clubId": "the-cong-viettel",
+    "playerId": "nguyen-huu-nam",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 86
+  },
+  {
+    "clubId": "the-cong-viettel",
+    "playerId": "nguyen-van-tu",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 88
+  },
+  {
+    "clubId": "the-cong-viettel",
+    "playerId": "le-quoc-nhat-nam",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 89
+  },
+  {
+    "clubId": "the-cong-viettel",
+    "playerId": "brandao-goncalves-junior",
+    "position": "FW",
+    "positionName": null,
+    "number": 95,
+    "positionDetail": "tiền đạo"
+  },
+  {
+    "clubId": "the-cong-viettel",
+    "playerId": "trieu-viet-hung",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 97
+  },
+  {
+    "clubId": "thep-xanh-nam-dinh",
+    "playerId": "dam-tien-dung",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 4
+  },
+  {
+    "clubId": "thep-xanh-nam-dinh",
+    "playerId": "dang-van-toi",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 5
+  },
+  {
+    "clubId": "thep-xanh-nam-dinh",
+    "playerId": "a-mit",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 6
+  },
+  {
+    "clubId": "thep-xanh-nam-dinh",
+    "playerId": "nguyen-phong-hong-duy",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 7
+  },
+  {
+    "clubId": "thep-xanh-nam-dinh",
+    "playerId": "ezequiel-santos-da-silva",
+    "position": "MF",
+    "positionName": null,
+    "number": 8,
+    "positionDetail": "tiền vệ tấn công"
+  },
+  {
+    "clubId": "thep-xanh-nam-dinh",
+    "playerId": "caio-cesar-da-silva-silveira",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 10
+  },
+  {
+    "clubId": "thep-xanh-nam-dinh",
+    "playerId": "nguyen-tuan-anh",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 11
+  },
+  {
+    "clubId": "thep-xanh-nam-dinh",
+    "playerId": "tran-van-kien",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 13
+  },
+  {
+    "clubId": "thep-xanh-nam-dinh",
+    "playerId": "rafaelson-bezerra-fernandes",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 14
+  },
+  {
+    "clubId": "thep-xanh-nam-dinh",
+    "playerId": "nguyen-van-vi",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 17
+  },
+  {
+    "clubId": "thep-xanh-nam-dinh",
+    "playerId": "tran-van-dat",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 19
+  },
+  {
+    "clubId": "thep-xanh-nam-dinh",
+    "playerId": "tyler-james-thai-crawford",
+    "position": "DF",
+    "positionName": null,
+    "number": 20,
+    "positionDetail": "hậu vệ trái"
+  },
+  {
+    "clubId": "thep-xanh-nam-dinh",
+    "playerId": "tran-manh-quynh",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 22
+  },
+  {
+    "clubId": "thep-xanh-nam-dinh",
+    "playerId": "le-vu-phong",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 23
+  },
+  {
+    "clubId": "thep-xanh-nam-dinh",
+    "playerId": "tran-nguyen-manh",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 26
+  },
+  {
+    "clubId": "thep-xanh-nam-dinh",
+    "playerId": "tran-ngoc-son-2",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 27
+  },
+  {
+    "clubId": "thep-xanh-nam-dinh",
+    "playerId": "to-van-vu",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 28
+  },
+  {
+    "clubId": "thep-xanh-nam-dinh",
+    "playerId": "ngo-duc-huy",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 32
+  },
+  {
+    "clubId": "thep-xanh-nam-dinh",
+    "playerId": "nguyen-cong-son",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 34
+  },
+  {
+    "clubId": "thep-xanh-nam-dinh",
+    "playerId": "lam-ti-phong",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 39
+  },
+  {
+    "clubId": "thep-xanh-nam-dinh",
+    "playerId": "trinh-xuan-hoang",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 67
+  },
+  {
+    "clubId": "thep-xanh-nam-dinh",
+    "playerId": "romulo-da-silva-machado",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 72
+  },
+  {
+    "clubId": "thep-xanh-nam-dinh",
+    "playerId": "van-alessandro-nguyen-skyriotis",
+    "position": "MF",
+    "positionName": null,
+    "number": 77,
+    "positionDetail": "tiền vệ"
+  },
+  {
+    "clubId": "thep-xanh-nam-dinh",
+    "playerId": "le-van-thanh",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 79
+  },
+  {
+    "clubId": "thep-xanh-nam-dinh",
+    "playerId": "ly-cong-hoang-anh",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 88
+  },
+  {
+    "clubId": "thep-xanh-nam-dinh",
+    "playerId": "pham-tuan-hai",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 90
+  },
+  {
+    "clubId": "thep-xanh-nam-dinh",
+    "playerId": "felix-junior-gustave-eboa-eboa",
+    "position": "DF",
+    "positionName": null,
+    "number": 93,
+    "positionDetail": "trung vệ"
+  },
+  {
+    "clubId": "thep-xanh-nam-dinh",
+    "playerId": "giap-tuan-duong",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 98
+  },
+  {
+    "clubId": "becamex-tphcm",
+    "playerId": "ngo-tung-quoc",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 2
+  },
+  {
+    "clubId": "becamex-tphcm",
+    "playerId": "nguyen-van-hanh",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 5
+  },
+  {
+    "clubId": "becamex-tphcm",
+    "playerId": "nguyen-thanh-khoi",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 6
+  },
+  {
+    "clubId": "becamex-tphcm",
+    "playerId": "nguyen-tran-viet-cuong",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 7
+  },
+  {
+    "clubId": "becamex-tphcm",
+    "playerId": "phan-thanh-hau",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 8
+  },
+  {
+    "clubId": "becamex-tphcm",
+    "playerId": "ha-duc-chinh",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 9
+  },
+  {
+    "clubId": "becamex-tphcm",
+    "playerId": "vo-hoang-minh-khoa",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 10
+  },
+  {
+    "clubId": "becamex-tphcm",
+    "playerId": "tran-hoang-hung",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 12
+  },
+  {
+    "clubId": "becamex-tphcm",
+    "playerId": "nguyen-thanh-nhan-2",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 16
+  },
+  {
+    "clubId": "becamex-tphcm",
+    "playerId": "bui-van-binh",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 17
+  },
+  {
+    "clubId": "becamex-tphcm",
+    "playerId": "dang-anh-tuan",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 18
+  },
+  {
+    "clubId": "becamex-tphcm",
+    "playerId": "adriano-schmidt",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 19
+  },
+  {
+    "clubId": "becamex-tphcm",
+    "playerId": "nguyen-trong-hung",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 20
+  },
+  {
+    "clubId": "becamex-tphcm",
+    "playerId": "tran-dinh-khuong",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 21
+  },
+  {
+    "clubId": "becamex-tphcm",
+    "playerId": "cao-van-trien",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 23
+  },
+  {
+    "clubId": "becamex-tphcm",
+    "playerId": "tran-minh-toan",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 25
+  },
+  {
+    "clubId": "becamex-tphcm",
+    "playerId": "nguyen-khac-vu",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 27
+  },
+  {
+    "clubId": "becamex-tphcm",
+    "playerId": "nguyen-hung-thien-duc",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 28
+  },
+  {
+    "clubId": "becamex-tphcm",
+    "playerId": "nguyen-thanh-kien",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 33
+  },
+  {
+    "clubId": "becamex-tphcm",
+    "playerId": "tran-nhu-tan",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 34
+  },
+  {
+    "clubId": "becamex-tphcm",
+    "playerId": "tran-van-cong",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 37
+  },
+  {
+    "clubId": "becamex-tphcm",
+    "playerId": "nguyen-trong-son",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 38
+  },
+  {
+    "clubId": "becamex-tphcm",
+    "playerId": "hoang-vu-samson",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 39
+  },
+  {
+    "clubId": "becamex-tphcm",
+    "playerId": "phan-minh-thanh",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 46
+  },
+  {
+    "clubId": "becamex-tphcm",
+    "playerId": "nguyen-huu-loi",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 48
+  },
+  {
+    "clubId": "becamex-tphcm",
+    "playerId": "chau-ngoc-quang",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 89
+  },
+  {
+    "clubId": "becamex-tphcm",
+    "playerId": "daniel-da-silva-dos-anjos",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 99
+  },
+  {
+    "clubId": "dong-thap",
+    "playerId": "doan-thanh-nha",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 1
+  },
+  {
+    "clubId": "dong-thap",
+    "playerId": "vo-nhat-tan",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 5
+  },
+  {
+    "clubId": "dong-thap",
+    "playerId": "bui-duy-nam",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 6
+  },
+  {
+    "clubId": "dong-thap",
+    "playerId": "vo-cong-minh",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 7
+  },
+  {
+    "clubId": "dong-thap",
+    "playerId": "hoang-thanh-tung",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 8
+  },
+  {
+    "clubId": "dong-thap",
+    "playerId": "tran-thanh",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 9
+  },
+  {
+    "clubId": "dong-thap",
+    "playerId": "cao-quoc-khanh-2",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 10
+  },
+  {
+    "clubId": "dong-thap",
+    "playerId": "nguyen-tuan-em",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 11
+  },
+  {
+    "clubId": "dong-thap",
+    "playerId": "pham-van-soan",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 12
+  },
+  {
+    "clubId": "dong-thap",
+    "playerId": "nguyen-hoang-quoc-chi",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 13
+  },
+  {
+    "clubId": "dong-thap",
+    "playerId": "nguyen-duc-quyen",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 15
+  },
+  {
+    "clubId": "dong-thap",
+    "playerId": "nguyen-minh-trung",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 16
+  },
+  {
+    "clubId": "dong-thap",
+    "playerId": "ho-minh-quyen-2",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 17
+  },
+  {
+    "clubId": "dong-thap",
+    "playerId": "nguyen-huu-lam",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 18
+  },
+  {
+    "clubId": "dong-thap",
+    "playerId": "tran-huu-nghia",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 19
+  },
+  {
+    "clubId": "dong-thap",
+    "playerId": "trinh-van-ha",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 20
+  },
+  {
+    "clubId": "dong-thap",
+    "playerId": "tran-thanh-vuong",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 22
+  },
+  {
+    "clubId": "dong-thap",
+    "playerId": "bui-ngoc-thinh-2",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 23
+  },
+  {
+    "clubId": "dong-thap",
+    "playerId": "pham-quoc-tuan",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 24
+  },
+  {
+    "clubId": "dong-thap",
+    "playerId": "nguyen-vo-chi-cuong",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 26
+  },
+  {
+    "clubId": "dong-thap",
+    "playerId": "nguyen-hai-nam",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 27
+  },
+  {
+    "clubId": "dong-thap",
+    "playerId": "truong-thanh-vuong",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 28
+  },
+  {
+    "clubId": "dong-thap",
+    "playerId": "do-minh-quang",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 29
+  },
+  {
+    "clubId": "dong-thap",
+    "playerId": "jok-atem-dor",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 30
+  },
+  {
+    "clubId": "dong-thap",
+    "playerId": "tran-nhat-dong",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 31
+  },
+  {
+    "clubId": "dong-thap",
+    "playerId": "nguyen-quang-truong",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 35
+  },
+  {
+    "clubId": "dong-thap",
+    "playerId": "le-van-dat",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 36
+  },
+  {
+    "clubId": "pvf-cand",
+    "playerId": "nguyen-dinh-trieu",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 1
+  },
+  {
+    "clubId": "pvf-cand",
+    "playerId": "luong-thanh-hong-lac",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 2
+  },
+  {
+    "clubId": "pvf-cand",
+    "playerId": "duong-thanh-hao",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 3
+  },
+  {
+    "clubId": "pvf-cand",
+    "playerId": "doan-anh-viet",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 5
+  },
+  {
+    "clubId": "pvf-cand",
+    "playerId": "dau-van-toan",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 6
+  },
+  {
+    "clubId": "pvf-cand",
+    "playerId": "tran-dinh-tien",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 7
+  },
+  {
+    "clubId": "pvf-cand",
+    "playerId": "nguyen-xuan-bac",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 9
+  },
+  {
+    "clubId": "pvf-cand",
+    "playerId": "mach-ngoc-ha",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 10
+  },
+  {
+    "clubId": "pvf-cand",
+    "playerId": "nguyen-thanh-nhan-3",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 11
+  },
+  {
+    "clubId": "pvf-cand",
+    "playerId": "nguyen-bao-long",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 12
+  },
+  {
+    "clubId": "pvf-cand",
+    "playerId": "nguyen-van-son",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 14
+  },
+  {
+    "clubId": "pvf-cand",
+    "playerId": "ho-khac-luong",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 15
+  },
+  {
+    "clubId": "pvf-cand",
+    "playerId": "thai-ba-dat",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 17
+  },
+  {
+    "clubId": "pvf-cand",
+    "playerId": "pham-van-luan-2",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 21
+  },
+  {
+    "clubId": "pvf-cand",
+    "playerId": "pham-minh-phuc",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 22
+  },
+  {
+    "clubId": "pvf-cand",
+    "playerId": "viktor-le",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 23
+  },
+  {
+    "clubId": "pvf-cand",
+    "playerId": "tong-duc-an",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 26
+  },
+  {
+    "clubId": "pvf-cand",
+    "playerId": "nguyen-trong-long",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 29
+  },
+  {
+    "clubId": "pvf-cand",
+    "playerId": "nguyen-tien-dinh",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 32
+  },
+  {
+    "clubId": "pvf-cand",
+    "playerId": "pham-ly-duc",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 33
+  },
+  {
+    "clubId": "pvf-cand",
+    "playerId": "nguyen-vadim",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 61
+  },
+  {
+    "clubId": "pvf-cand",
+    "playerId": "huynh-minh-doan",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 66
+  },
+  {
+    "clubId": "pvf-cand",
+    "playerId": "nguyen-hoang-anh",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 68
+  },
+  {
+    "clubId": "pvf-cand",
+    "playerId": "gonzalo-schnorr-fornari",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 86
+  },
+  {
+    "clubId": "pvf-cand",
+    "playerId": "huynh-cong-den",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 88
+  },
+  {
+    "clubId": "pvf-cand",
+    "playerId": "nguyen-van-dung",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 94
+  },
+  {
+    "clubId": "pvf-cand",
+    "playerId": "gustavo-santana-santos",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 95
+  },
+  {
+    "clubId": "dai-hoc-van-hien",
+    "playerId": "nguyen-van-nhuan",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 2
+  },
+  {
+    "clubId": "dai-hoc-van-hien",
+    "playerId": "dinh-quy",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 3
+  },
+  {
+    "clubId": "dai-hoc-van-hien",
+    "playerId": "nguyen-bao-chung",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 4
+  },
+  {
+    "clubId": "dai-hoc-van-hien",
+    "playerId": "le-vuong-minh-nhat",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 6
+  },
+  {
+    "clubId": "dai-hoc-van-hien",
+    "playerId": "doan-cao-danh",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 7
+  },
+  {
+    "clubId": "dai-hoc-van-hien",
+    "playerId": "nguyen-van-dan-2",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 8
+  },
+  {
+    "clubId": "dai-hoc-van-hien",
+    "playerId": "phu-trung-phong",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 10
+  },
+  {
+    "clubId": "dai-hoc-van-hien",
+    "playerId": "nguyen-van-quy-2",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 11
+  },
+  {
+    "clubId": "dai-hoc-van-hien",
+    "playerId": "nguyen-ngoc-hau",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 12
+  },
+  {
+    "clubId": "dai-hoc-van-hien",
+    "playerId": "nguyen-huu-trong",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 13
+  },
+  {
+    "clubId": "dai-hoc-van-hien",
+    "playerId": "nguyen-van-van",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 16
+  },
+  {
+    "clubId": "dai-hoc-van-hien",
+    "playerId": "lam-thuan",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 17
+  },
+  {
+    "clubId": "dai-hoc-van-hien",
+    "playerId": "luong-quoc-thang",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 18
+  },
+  {
+    "clubId": "dai-hoc-van-hien",
+    "playerId": "nguyen-trong-nam",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 21
+  },
+  {
+    "clubId": "dai-hoc-van-hien",
+    "playerId": "truong-van-thai-quy",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 23
+  },
+  {
+    "clubId": "dai-hoc-van-hien",
+    "playerId": "nguyen-van-ka",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 24
+  },
+  {
+    "clubId": "dai-hoc-van-hien",
+    "playerId": "nguyen-thanh-tuan",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 25
+  },
+  {
+    "clubId": "dai-hoc-van-hien",
+    "playerId": "vu-ngoc-manh",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 28
+  },
+  {
+    "clubId": "dai-hoc-van-hien",
+    "playerId": "namli-ilias",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 29
+  },
+  {
+    "clubId": "dai-hoc-van-hien",
+    "playerId": "dao-van-chuong",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 30
+  },
+  {
+    "clubId": "dai-hoc-van-hien",
+    "playerId": "tran-anh-thi",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 31
+  },
+  {
+    "clubId": "dai-hoc-van-hien",
+    "playerId": "truong-du-dat-2",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 32
+  },
+  {
+    "clubId": "dai-hoc-van-hien",
+    "playerId": "nguyen-le-nhat-quang",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 37
+  },
+  {
+    "clubId": "dai-hoc-van-hien",
+    "playerId": "nguyen-van-ngoc-2",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 77
+  },
+  {
+    "clubId": "dai-hoc-van-hien",
+    "playerId": "nguyen-khac-khiem",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 99
+  },
+  {
+    "clubId": "hue",
+    "playerId": "le-viet-minh-tri",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 1
+  },
+  {
+    "clubId": "hue",
+    "playerId": "le-xuan-dang",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 2
+  },
+  {
+    "clubId": "hue",
+    "playerId": "vi-dinh-thuong",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 3
+  },
+  {
+    "clubId": "hue",
+    "playerId": "nguyen-luong-tuan-khai",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 5
+  },
+  {
+    "clubId": "hue",
+    "playerId": "duong-anh-vu",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 7
+  },
+  {
+    "clubId": "hue",
+    "playerId": "nguyen-huu-tuan-5",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 9
+  },
+  {
+    "clubId": "hue",
+    "playerId": "nguyen-dang-khoa",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 10
+  },
+  {
+    "clubId": "hue",
+    "playerId": "hoang-cong-hau",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 11
+  },
+  {
+    "clubId": "hue",
+    "playerId": "nguyen-ba-duc",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 14
+  },
+  {
+    "clubId": "hue",
+    "playerId": "nguyen-quoc-hoang-3",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 16
+  },
+  {
+    "clubId": "hue",
+    "playerId": "ngo-hoang-quan",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 17
+  },
+  {
+    "clubId": "hue",
+    "playerId": "vo-van-tuan-kiet",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 18
+  },
+  {
+    "clubId": "hue",
+    "playerId": "bui-cong-chinh",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 19
+  },
+  {
+    "clubId": "hue",
+    "playerId": "le-quang-vu",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 20
+  },
+  {
+    "clubId": "hue",
+    "playerId": "nguyen-huu-nhat-long",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 21
+  },
+  {
+    "clubId": "hue",
+    "playerId": "nguyen-dinh-binh",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 22
+  },
+  {
+    "clubId": "hue",
+    "playerId": "nguyen-tien-quyen",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 23
+  },
+  {
+    "clubId": "hue",
+    "playerId": "vu-tung-duong",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 26
+  },
+  {
+    "clubId": "hue",
+    "playerId": "vo-duc-bao",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 28
+  },
+  {
+    "clubId": "hue",
+    "playerId": "le-viet-hieu",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 32
+  },
+  {
+    "clubId": "hue",
+    "playerId": "tran-van-quang",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 36
+  },
+  {
+    "clubId": "hue",
+    "playerId": "nguyen-thanh-binh-3",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 37
+  },
+  {
+    "clubId": "hue",
+    "playerId": "tran-dinh-suu",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 42
+  },
+  {
+    "clubId": "hue",
+    "playerId": "tran-dinh-thanh-phong",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 64
+  },
+  {
+    "clubId": "hue",
+    "playerId": "nguyen-dinh-doi",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 68
+  },
+  {
+    "clubId": "hue",
+    "playerId": "truong-ngoc-bao-long",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 74
+  },
+  {
+    "clubId": "hue",
+    "playerId": "nguyen-manh-lam-son",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 77
+  },
+  {
+    "clubId": "hue",
+    "playerId": "hoang-quang-dung",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 88
+  },
+  {
+    "clubId": "tre-pvfcand",
+    "playerId": "tran-hai-anh",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 3
+  },
+  {
+    "clubId": "tre-pvfcand",
+    "playerId": "nguyen-manh-hung",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 4
+  },
+  {
+    "clubId": "tre-pvfcand",
+    "playerId": "tran-duc-nam",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 5
+  },
+  {
+    "clubId": "tre-pvfcand",
+    "playerId": "huynh-the-hieu",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 7
+  },
+  {
+    "clubId": "tre-pvfcand",
+    "playerId": "mac-hong-quan",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 8
+  },
+  {
+    "clubId": "tre-pvfcand",
+    "playerId": "vu-minh-hieu",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 9
+  },
+  {
+    "clubId": "tre-pvfcand",
+    "playerId": "nguyen-trong-duc-vu",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 10
+  },
+  {
+    "clubId": "tre-pvfcand",
+    "playerId": "joseph-shaqkeem-jaylon-khalio",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 11
+  },
+  {
+    "clubId": "tre-pvfcand",
+    "playerId": "nguyen-gia-bao",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 13
+  },
+  {
+    "clubId": "tre-pvfcand",
+    "playerId": "le-tan-dung",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 15
+  },
+  {
+    "clubId": "tre-pvfcand",
+    "playerId": "nguyen-nhu-tuan-2",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 16
+  },
+  {
+    "clubId": "tre-pvfcand",
+    "playerId": "nguyen-trong-hieu",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 17
+  },
+  {
+    "clubId": "tre-pvfcand",
+    "playerId": "nguyen-trong-tuan",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 18
+  },
+  {
+    "clubId": "tre-pvfcand",
+    "playerId": "ta-xuan-truong",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 19
+  },
+  {
+    "clubId": "tre-pvfcand",
+    "playerId": "nguyen-dang-duong",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 20
+  },
+  {
+    "clubId": "tre-pvfcand",
+    "playerId": "vu-van-quyet",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 21
+  },
+  {
+    "clubId": "tre-pvfcand",
+    "playerId": "nguyen-ngoc-toan",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 22
+  },
+  {
+    "clubId": "tre-pvfcand",
+    "playerId": "hoang-trung-anh",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 23
+  },
+  {
+    "clubId": "tre-pvfcand",
+    "playerId": "dang-tuan-hung",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 25
+  },
+  {
+    "clubId": "tre-pvfcand",
+    "playerId": "huynh-tuan-linh",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 26
+  },
+  {
+    "clubId": "tre-pvfcand",
+    "playerId": "nguyen-anh-tuan-3",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 28
+  },
+  {
+    "clubId": "tre-pvfcand",
+    "playerId": "tieu-trung-hieu",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 29
+  },
+  {
+    "clubId": "tre-pvfcand",
+    "playerId": "trinh-duc-loi",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 31
+  },
+  {
+    "clubId": "tre-pvfcand",
+    "playerId": "duong-tung-lam",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 33
+  },
+  {
+    "clubId": "tre-pvfcand",
+    "playerId": "le-van-hung-3",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 43
+  },
+  {
+    "clubId": "tre-pvfcand",
+    "playerId": "le-minh-binh",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 68
+  },
+  {
+    "clubId": "tre-pvfcand",
+    "playerId": "duong-thanh-tung",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 77
+  },
+  {
+    "clubId": "tre-pvfcand",
+    "playerId": "bui-long-nhat",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 88
+  },
+  {
+    "clubId": "tre-pvfcand",
+    "playerId": "mac-duc-viet-anh",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 97
+  },
+  {
+    "clubId": "khatoco-khanh-hoa",
+    "playerId": "bui-nguyen-tan-kiet",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 2
+  },
+  {
+    "clubId": "khatoco-khanh-hoa",
+    "playerId": "doan-cong-thanh",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 3
+  },
+  {
+    "clubId": "khatoco-khanh-hoa",
+    "playerId": "truong-quoc-minh",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 7
+  },
+  {
+    "clubId": "khatoco-khanh-hoa",
+    "playerId": "tran-van-tung-2",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 8
+  },
+  {
+    "clubId": "khatoco-khanh-hoa",
+    "playerId": "le-truong-quoc-thang",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 9
+  },
+  {
+    "clubId": "khatoco-khanh-hoa",
+    "playerId": "oleksandr-kurakin",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 10
+  },
+  {
+    "clubId": "khatoco-khanh-hoa",
+    "playerId": "pham-trum-tinh",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 11
+  },
+  {
+    "clubId": "khatoco-khanh-hoa",
+    "playerId": "nguyen-minh-loi",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 13
+  },
+  {
+    "clubId": "khatoco-khanh-hoa",
+    "playerId": "nguyen-van-son-4",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 17
+  },
+  {
+    "clubId": "khatoco-khanh-hoa",
+    "playerId": "ho-3",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 18
+  },
+  {
+    "clubId": "khatoco-khanh-hoa",
+    "playerId": "duong-doan-cong-hau",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 19
+  },
+  {
+    "clubId": "khatoco-khanh-hoa",
+    "playerId": "nguyen-hoang-thien",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 21
+  },
+  {
+    "clubId": "khatoco-khanh-hoa",
+    "playerId": "nguyen-thanh-tay",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 22
+  },
+  {
+    "clubId": "khatoco-khanh-hoa",
+    "playerId": "do-truong-tran",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 23
+  },
+  {
+    "clubId": "khatoco-khanh-hoa",
+    "playerId": "tran-vuong",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 24
+  },
+  {
+    "clubId": "khatoco-khanh-hoa",
+    "playerId": "hoang-minh-kien",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 25
+  },
+  {
+    "clubId": "khatoco-khanh-hoa",
+    "playerId": "tran-khanh-dung",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 27
+  },
+  {
+    "clubId": "khatoco-khanh-hoa",
+    "playerId": "lam-le-phuoc-tien-dung",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 28
+  },
+  {
+    "clubId": "khatoco-khanh-hoa",
+    "playerId": "tran-huu-dang",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 29
+  },
+  {
+    "clubId": "khatoco-khanh-hoa",
+    "playerId": "nguyen-huu-khoi",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 33
+  },
+  {
+    "clubId": "khatoco-khanh-hoa",
+    "playerId": "vo-ngoc-hai",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 35
+  },
+  {
+    "clubId": "khatoco-khanh-hoa",
+    "playerId": "ngo-hoang-anh",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 39
+  },
+  {
+    "clubId": "khatoco-khanh-hoa",
+    "playerId": "trinh-van-quang",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 43
+  },
+  {
+    "clubId": "khatoco-khanh-hoa",
+    "playerId": "nguyen-nhat-tan",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 52
+  },
+  {
+    "clubId": "khatoco-khanh-hoa",
+    "playerId": "huynh-thanh-tuan",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 71
+  },
+  {
+    "clubId": "khatoco-khanh-hoa",
+    "playerId": "nguyen-dinh-manh",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 88
+  },
+  {
+    "clubId": "khatoco-khanh-hoa",
+    "playerId": "vo-ngoc-cuong",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 93
+  },
+  {
+    "clubId": "lam-dong",
+    "playerId": "truong-hai-dang",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 4
+  },
+  {
+    "clubId": "lam-dong",
+    "playerId": "le-cao-hoai-an",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 5
+  },
+  {
+    "clubId": "lam-dong",
+    "playerId": "vo-ngoc-tinh-2",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 6
+  },
+  {
+    "clubId": "lam-dong",
+    "playerId": "nguyen-anh-thi",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 7
+  },
+  {
+    "clubId": "lam-dong",
+    "playerId": "le-hoang-luan",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 8
+  },
+  {
+    "clubId": "lam-dong",
+    "playerId": "nguyen-van-dinh",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 9
+  },
+  {
+    "clubId": "lam-dong",
+    "playerId": "vu-hung-manh",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 10
+  },
+  {
+    "clubId": "lam-dong",
+    "playerId": "tran-hoang-phuong",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 11
+  },
+  {
+    "clubId": "lam-dong",
+    "playerId": "phung-khac-nhat",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 12
+  },
+  {
+    "clubId": "lam-dong",
+    "playerId": "tran-duy-quoc-hoang",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 15
+  },
+  {
+    "clubId": "lam-dong",
+    "playerId": "le-anh-duc",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 16
+  },
+  {
+    "clubId": "lam-dong",
+    "playerId": "k-toan",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 18
+  },
+  {
+    "clubId": "lam-dong",
+    "playerId": "dinh-thanh-dat",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 19
+  },
+  {
+    "clubId": "lam-dong",
+    "playerId": "huynh",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 20
+  },
+  {
+    "clubId": "lam-dong",
+    "playerId": "nguyen-the-thang",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 21
+  },
+  {
+    "clubId": "lam-dong",
+    "playerId": "nguyen-thanh-phu",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 23
+  },
+  {
+    "clubId": "lam-dong",
+    "playerId": "truong-lam-nhat",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 24
+  },
+  {
+    "clubId": "lam-dong",
+    "playerId": "truong-le-hai-tuan",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 26
+  },
+  {
+    "clubId": "lam-dong",
+    "playerId": "nguyen-dinh-duc-2",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 27
+  },
+  {
+    "clubId": "lam-dong",
+    "playerId": "do-van-chi-2",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 30
+  },
+  {
+    "clubId": "lam-dong",
+    "playerId": "nguyen-xuan-nam",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 36
+  },
+  {
+    "clubId": "lam-dong",
+    "playerId": "phung-van-nam",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 37
+  },
+  {
+    "clubId": "lam-dong",
+    "playerId": "le-anh-toan",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 40
+  },
+  {
+    "clubId": "lam-dong",
+    "playerId": "nguyen-thanh-khai",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 43
+  },
+  {
+    "clubId": "lam-dong",
+    "playerId": "nguyen-thanh-vinh",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 63
+  },
+  {
+    "clubId": "lam-dong",
+    "playerId": "phan-duy-hao",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 79
+  },
+  {
+    "clubId": "lam-dong",
+    "playerId": "bui-xuan-loc",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 88
+  },
+  {
+    "clubId": "lam-dong",
+    "playerId": "khuc-trung-hieu",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 89
+  },
+  {
+    "clubId": "lam-dong",
+    "playerId": "le-hoang-ty",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 94
+  },
+  {
+    "clubId": "lam-dong",
+    "playerId": "nguyen-doan-duy-anh",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 95
+  },
+  {
+    "clubId": "lam-dong",
+    "playerId": "k-mis",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 99
+  },
+  {
+    "clubId": "long-an",
+    "playerId": "tran-tan-loc",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 1
+  },
+  {
+    "clubId": "long-an",
+    "playerId": "tran-hoang-bao",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 2
+  },
+  {
+    "clubId": "long-an",
+    "playerId": "tran-dam-phuc-thinh",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 3
+  },
+  {
+    "clubId": "long-an",
+    "playerId": "tran-pham-bao-tuan",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 4
+  },
+  {
+    "clubId": "long-an",
+    "playerId": "mai-tran-nhat-minh",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 5
+  },
+  {
+    "clubId": "long-an",
+    "playerId": "nguyen-cong-tien-3",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 6
+  },
+  {
+    "clubId": "long-an",
+    "playerId": "vo-hoang-uy",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 8
+  },
+  {
+    "clubId": "long-an",
+    "playerId": "do-tan-thanh",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 9
+  },
+  {
+    "clubId": "long-an",
+    "playerId": "ha-vu-em",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 10
+  },
+  {
+    "clubId": "long-an",
+    "playerId": "cu-nguyen-khanh",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 11
+  },
+  {
+    "clubId": "long-an",
+    "playerId": "hoang-minh-tam",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 12
+  },
+  {
+    "clubId": "long-an",
+    "playerId": "nguyen-chinh-tinh",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 14
+  },
+  {
+    "clubId": "long-an",
+    "playerId": "tieu-e-san",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 15
+  },
+  {
+    "clubId": "long-an",
+    "playerId": "quach-cong-dinh-2",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 16
+  },
+  {
+    "clubId": "long-an",
+    "playerId": "le-nguyen-quoc-trung",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 17
+  },
+  {
+    "clubId": "long-an",
+    "playerId": "nguyen-tai-loc",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 24
+  },
+  {
+    "clubId": "long-an",
+    "playerId": "nguyen-cong-tuyen",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 26
+  },
+  {
+    "clubId": "long-an",
+    "playerId": "tran-van-anh-vu",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 27
+  },
+  {
+    "clubId": "long-an",
+    "playerId": "tran-minh-hieu",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 28
+  },
+  {
+    "clubId": "long-an",
+    "playerId": "nguyen-loc",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 30
+  },
+  {
+    "clubId": "long-an",
+    "playerId": "nguyen-hoang-minh-duy",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 35
+  },
+  {
+    "clubId": "long-an",
+    "playerId": "nguyen-thanh-tai",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 59
+  },
+  {
+    "clubId": "long-an",
+    "playerId": "romario-reginaldo-alves",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 62
+  },
+  {
+    "clubId": "long-an",
+    "playerId": "nguyen-manh-cuong",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 67
+  },
+  {
+    "clubId": "long-an",
+    "playerId": "nguyen-kim-nhat-2",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 80
+  },
+  {
+    "clubId": "long-an",
+    "playerId": "le-huu-phuoc",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 81
+  },
+  {
+    "clubId": "binh-dinh",
+    "playerId": "le-minh-nhat",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 2
+  },
+  {
+    "clubId": "binh-dinh",
+    "playerId": "le-nguyen-quoc-kien",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 5
+  },
+  {
+    "clubId": "binh-dinh",
+    "playerId": "mai-viet-hoang",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 6
+  },
+  {
+    "clubId": "binh-dinh",
+    "playerId": "duong-quang-trung-hieu",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 7
+  },
+  {
+    "clubId": "binh-dinh",
+    "playerId": "nguyen-vo-minh-hieu",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 8
+  },
+  {
+    "clubId": "binh-dinh",
+    "playerId": "dao-gia-viet",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 9
+  },
+  {
+    "clubId": "binh-dinh",
+    "playerId": "nguyen-hai-chi-nguyen-2",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 10
+  },
+  {
+    "clubId": "binh-dinh",
+    "playerId": "dinh-thanh-luan",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 11
+  },
+  {
+    "clubId": "binh-dinh",
+    "playerId": "pham-ngo-minh-quang",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 12
+  },
+  {
+    "clubId": "binh-dinh",
+    "playerId": "nguyen-anh-tuan-4",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 13
+  },
+  {
+    "clubId": "binh-dinh",
+    "playerId": "le-nguyen-thanh-vi",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 14
+  },
+  {
+    "clubId": "binh-dinh",
+    "playerId": "luong-van-phuong",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 15
+  },
+  {
+    "clubId": "binh-dinh",
+    "playerId": "trieu-duc-anh",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 17
+  },
+  {
+    "clubId": "binh-dinh",
+    "playerId": "tran-van-thai",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 18
+  },
+  {
+    "clubId": "binh-dinh",
+    "playerId": "nguyen-thanh-thu",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 20
+  },
+  {
+    "clubId": "binh-dinh",
+    "playerId": "quach-quang-huy",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 21
+  },
+  {
+    "clubId": "binh-dinh",
+    "playerId": "nguyen-the-hung-4",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 24
+  },
+  {
+    "clubId": "binh-dinh",
+    "playerId": "ha-manh-truong",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 25
+  },
+  {
+    "clubId": "binh-dinh",
+    "playerId": "nguyen-dang-tho",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 27
+  },
+  {
+    "clubId": "binh-dinh",
+    "playerId": "nguyen-quoc-toan",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 32
+  },
+  {
+    "clubId": "binh-dinh",
+    "playerId": "pham-trong-hoa",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 36
+  },
+  {
+    "clubId": "binh-dinh",
+    "playerId": "cao-hoang-truong-long",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 68
+  },
+  {
+    "clubId": "binh-dinh",
+    "playerId": "le-thanh-phong-3",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 77
+  },
+  {
+    "clubId": "binh-dinh",
+    "playerId": "trinh-long-vu",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 88
+  },
+  {
+    "clubId": "binh-dinh",
+    "playerId": "tran-manh-cuong",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 90
+  },
+  {
+    "clubId": "binh-dinh",
+    "playerId": "vo-van-son-2",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 97
+  },
+  {
+    "clubId": "binh-dinh",
+    "playerId": "tran-le-duy",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 98
+  },
+  {
+    "clubId": "thai-nguyen",
+    "playerId": "nguyen-xuan-kien-2",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 5
+  },
+  {
+    "clubId": "thai-nguyen",
+    "playerId": "pham-anh-tuan-2",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 6
+  },
+  {
+    "clubId": "thai-nguyen",
+    "playerId": "doan-phu-quy",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 7
+  },
+  {
+    "clubId": "thai-nguyen",
+    "playerId": "bui-anh-tuan",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 8
+  },
+  {
+    "clubId": "thai-nguyen",
+    "playerId": "nguyen-sy-duc-2",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 9
+  },
+  {
+    "clubId": "thai-nguyen",
+    "playerId": "nguyen-trung-thanh-2",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 10
+  },
+  {
+    "clubId": "thai-nguyen",
+    "playerId": "nguyen-van-trang",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 11
+  },
+  {
+    "clubId": "thai-nguyen",
+    "playerId": "le-tri-phong",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 12
+  },
+  {
+    "clubId": "thai-nguyen",
+    "playerId": "cao-tran-hoang-hung",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 15
+  },
+  {
+    "clubId": "thai-nguyen",
+    "playerId": "dinh-tuan-tai",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 16
+  },
+  {
+    "clubId": "thai-nguyen",
+    "playerId": "nguyen-dinh-thinh",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 17
+  },
+  {
+    "clubId": "thai-nguyen",
+    "playerId": "nguyen-anh-tu",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 18
+  },
+  {
+    "clubId": "thai-nguyen",
+    "playerId": "nguyen-thien-phu",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 19
+  },
+  {
+    "clubId": "thai-nguyen",
+    "playerId": "duong-van-hao",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 20
+  },
+  {
+    "clubId": "thai-nguyen",
+    "playerId": "vi-van-dung",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 21
+  },
+  {
+    "clubId": "thai-nguyen",
+    "playerId": "nguyen-van-tam",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 22
+  },
+  {
+    "clubId": "thai-nguyen",
+    "playerId": "phan-dinh-vu-hai",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 24
+  },
+  {
+    "clubId": "thai-nguyen",
+    "playerId": "khuc-quang-hieu",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 25
+  },
+  {
+    "clubId": "thai-nguyen",
+    "playerId": "le-van-dai",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 26
+  },
+  {
+    "clubId": "thai-nguyen",
+    "playerId": "nguyen-ha-anh-tuan",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 27
+  },
+  {
+    "clubId": "thai-nguyen",
+    "playerId": "nguyen-canh-tai",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 28
+  },
+  {
+    "clubId": "thai-nguyen",
+    "playerId": "do-minh-quan",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 29
+  },
+  {
+    "clubId": "thai-nguyen",
+    "playerId": "do-thanh-dat-2",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 30
+  },
+  {
+    "clubId": "thai-nguyen",
+    "playerId": "tran-trung-hieu",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 39
+  },
+  {
+    "clubId": "thai-nguyen",
+    "playerId": "chu",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 68
+  },
+  {
+    "clubId": "thai-nguyen",
+    "playerId": "nguyen-xuan-toan",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 69
+  },
+  {
+    "clubId": "thai-nguyen",
+    "playerId": "duong-dinh-nguyen",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 74
+  },
+  {
+    "clubId": "thai-nguyen",
+    "playerId": "mansaray-victor-nabay-2",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 88
+  },
+  {
+    "clubId": "thai-nguyen",
+    "playerId": "ngo-xuan-son",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 97
+  },
+  {
+    "clubId": "thai-nguyen",
+    "playerId": "nguyen-tien-dat",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 98
+  },
+  {
+    "clubId": "quang-ninh",
+    "playerId": "kieu-minh-duc",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 3
+  },
+  {
+    "clubId": "quang-ninh",
+    "playerId": "dang-khanh-duy",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 4
+  },
+  {
+    "clubId": "quang-ninh",
+    "playerId": "bui-van-hieu",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 6
+  },
+  {
+    "clubId": "quang-ninh",
+    "playerId": "nguyen-van-do",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 7
+  },
+  {
+    "clubId": "quang-ninh",
+    "playerId": "vu-minh-tuan",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 8
+  },
+  {
+    "clubId": "quang-ninh",
+    "playerId": "bui-anh-thong",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 9
+  },
+  {
+    "clubId": "quang-ninh",
+    "playerId": "duong-van-loi",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 12
+  },
+  {
+    "clubId": "quang-ninh",
+    "playerId": "le-tuan-tu-2",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 14
+  },
+  {
+    "clubId": "quang-ninh",
+    "playerId": "dao-nhat-minh",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 15
+  },
+  {
+    "clubId": "quang-ninh",
+    "playerId": "dang-tuan-nghia",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 16
+  },
+  {
+    "clubId": "quang-ninh",
+    "playerId": "pham-ba-thao-2",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 17
+  },
+  {
+    "clubId": "quang-ninh",
+    "playerId": "vu-manh-duy",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 19
+  },
+  {
+    "clubId": "quang-ninh",
+    "playerId": "pham-nguyen-quoc-trung",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 20
+  },
+  {
+    "clubId": "quang-ninh",
+    "playerId": "doan-van-quy-2",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 21
+  },
+  {
+    "clubId": "quang-ninh",
+    "playerId": "tran-tien-anh",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 22
+  },
+  {
+    "clubId": "quang-ninh",
+    "playerId": "ho-long-vu",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 23
+  },
+  {
+    "clubId": "quang-ninh",
+    "playerId": "duong-van-cuong",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 26
+  },
+  {
+    "clubId": "quang-ninh",
+    "playerId": "pham-van-son",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 27
+  },
+  {
+    "clubId": "quang-ninh",
+    "playerId": "nguyen-trong-bao",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 29
+  },
+  {
+    "clubId": "quang-ninh",
+    "playerId": "dinh-hoang-quy",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 32
+  },
+  {
+    "clubId": "quang-ninh",
+    "playerId": "ta-viet-son",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 33
+  },
+  {
+    "clubId": "quang-ninh",
+    "playerId": "tran-quang-thinh",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 71
+  },
+  {
+    "clubId": "quang-ninh",
+    "playerId": "bui-quang-huy",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 73
+  },
+  {
+    "clubId": "quang-ninh",
+    "playerId": "nguyen-van-vinh-2",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 77
+  },
+  {
+    "clubId": "quang-ninh",
+    "playerId": "nguyen-van-vinh",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 77
+  },
+  {
+    "clubId": "quang-ninh",
+    "playerId": "ha-van-viet",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 79
+  },
+  {
+    "clubId": "quang-ninh",
+    "playerId": "nguyen-huu-thuc",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 88
+  },
+  {
+    "clubId": "quang-ninh",
+    "playerId": "nguyen-hung-khang",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 94
+  },
+  {
+    "clubId": "quang-ninh",
+    "playerId": "nguyen-vu-linh",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 97
+  },
+  {
+    "clubId": "quang-ninh",
+    "playerId": "de-santana-santos-thaileon",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 99
+  },
+  {
+    "clubId": "ba-ria-vung-tau",
+    "playerId": "nguyen-thanh-thang",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 1
+  },
+  {
+    "clubId": "ba-ria-vung-tau",
+    "playerId": "nguyen-the-dung",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 2
+  },
+  {
+    "clubId": "ba-ria-vung-tau",
+    "playerId": "quan-huynh-thanh-quy",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 3
+  },
+  {
+    "clubId": "ba-ria-vung-tau",
+    "playerId": "trinh-quang-truong",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 4
+  },
+  {
+    "clubId": "ba-ria-vung-tau",
+    "playerId": "dao-tan-loc",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 6
+  },
+  {
+    "clubId": "ba-ria-vung-tau",
+    "playerId": "nguyen-zan-hoyt-le-cao",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 7
+  },
+  {
+    "clubId": "ba-ria-vung-tau",
+    "playerId": "ngo-hoang-gia-huy",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 8
+  },
+  {
+    "clubId": "ba-ria-vung-tau",
+    "playerId": "bui-huy-hoang",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 11
+  },
+  {
+    "clubId": "ba-ria-vung-tau",
+    "playerId": "ho-duc-tuan",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 13
+  },
+  {
+    "clubId": "ba-ria-vung-tau",
+    "playerId": "to-phuong-thinh",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 15
+  },
+  {
+    "clubId": "ba-ria-vung-tau",
+    "playerId": "truong-nhac-minh",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 16
+  },
+  {
+    "clubId": "ba-ria-vung-tau",
+    "playerId": "dieu-quy",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 18
+  },
+  {
+    "clubId": "ba-ria-vung-tau",
+    "playerId": "nguyen-quoc-hoang-2",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 19
+  },
+  {
+    "clubId": "ba-ria-vung-tau",
+    "playerId": "nguyen-cong-thanh",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 20
+  },
+  {
+    "clubId": "ba-ria-vung-tau",
+    "playerId": "dau-quang-hung",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 21
+  },
+  {
+    "clubId": "ba-ria-vung-tau",
+    "playerId": "vo-tuan-phong",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 23
+  },
+  {
+    "clubId": "ba-ria-vung-tau",
+    "playerId": "nguyen-nhat-nguyen",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 26
+  },
+  {
+    "clubId": "ba-ria-vung-tau",
+    "playerId": "tran-lam-hao",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 28
+  },
+  {
+    "clubId": "ba-ria-vung-tau",
+    "playerId": "nguyen-ha-long",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 29
+  },
+  {
+    "clubId": "ba-ria-vung-tau",
+    "playerId": "nguyen-hong-quang",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 35
+  },
+  {
+    "clubId": "ba-ria-vung-tau",
+    "playerId": "vo-ngoc-duc",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 37
+  },
+  {
+    "clubId": "ba-ria-vung-tau",
+    "playerId": "vu-duc-duy",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 39
+  },
+  {
+    "clubId": "ba-ria-vung-tau",
+    "playerId": "a-san-2",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 42
+  },
+  {
+    "clubId": "ba-ria-vung-tau",
+    "playerId": "jermie-dwayne-lynch",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 91
+  },
+  {
+    "clubId": "ba-ria-vung-tau",
+    "playerId": "ho-sy-giap",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 93
+  },
+  {
+    "clubId": "ba-ria-vung-tau",
+    "playerId": "hoang-minh-tuan",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 99
+  },
+  {
+    "clubId": "xuan-thien-phu-tho",
+    "playerId": "chu-van-tan",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 1
+  },
+  {
+    "clubId": "xuan-thien-phu-tho",
+    "playerId": "dinh-xuan-khai",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 2
+  },
+  {
+    "clubId": "xuan-thien-phu-tho",
+    "playerId": "vo-tien-thang",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 5
+  },
+  {
+    "clubId": "xuan-thien-phu-tho",
+    "playerId": "nguyen-nam-truong",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 6
+  },
+  {
+    "clubId": "xuan-thien-phu-tho",
+    "playerId": "nguyen-van-thuy",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 7
+  },
+  {
+    "clubId": "xuan-thien-phu-tho",
+    "playerId": "dang-ngoc-duc",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 8
+  },
+  {
+    "clubId": "xuan-thien-phu-tho",
+    "playerId": "tran-khanh-hung",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 9
+  },
+  {
+    "clubId": "xuan-thien-phu-tho",
+    "playerId": "ly-brandon-micheal",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 10
+  },
+  {
+    "clubId": "xuan-thien-phu-tho",
+    "playerId": "nguyen-dinh-son",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 12
+  },
+  {
+    "clubId": "xuan-thien-phu-tho",
+    "playerId": "nguyen-tien-dung",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 14
+  },
+  {
+    "clubId": "xuan-thien-phu-tho",
+    "playerId": "nguyen-duy-thanh",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 17
+  },
+  {
+    "clubId": "xuan-thien-phu-tho",
+    "playerId": "richmond-nji",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 18
+  },
+  {
+    "clubId": "xuan-thien-phu-tho",
+    "playerId": "pham-hoai-duong",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 19
+  },
+  {
+    "clubId": "xuan-thien-phu-tho",
+    "playerId": "bui-anh-duc-2",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 21
+  },
+  {
+    "clubId": "xuan-thien-phu-tho",
+    "playerId": "hoang-xuan-tan",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 22
+  },
+  {
+    "clubId": "xuan-thien-phu-tho",
+    "playerId": "pham-van-luan",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 25
+  },
+  {
+    "clubId": "xuan-thien-phu-tho",
+    "playerId": "tran-quoc-thanh-3",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 26
+  },
+  {
+    "clubId": "xuan-thien-phu-tho",
+    "playerId": "duong-van-kien",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 27
+  },
+  {
+    "clubId": "xuan-thien-phu-tho",
+    "playerId": "truong-van-tuyen",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 37
+  },
+  {
+    "clubId": "xuan-thien-phu-tho",
+    "playerId": "nguyen-van-duc-4",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 68
+  },
+  {
+    "clubId": "xuan-thien-phu-tho",
+    "playerId": "tran-gia-kien",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 73
+  },
+  {
+    "clubId": "xuan-thien-phu-tho",
+    "playerId": "nguyen-hoang-chien",
+    "position": "FW",
+    "positionName": "Tiền đạo",
+    "number": 77
+  },
+  {
+    "clubId": "xuan-thien-phu-tho",
+    "playerId": "tran-manh-hung",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 79
+  },
+  {
+    "clubId": "xuan-thien-phu-tho",
+    "playerId": "doan-thanh-truong",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 81
+  },
+  {
+    "clubId": "xuan-thien-phu-tho",
+    "playerId": "tran-gia-huy",
+    "position": "MF",
+    "positionName": "Tiền vệ",
+    "number": 86
+  },
+  {
+    "clubId": "xuan-thien-phu-tho",
+    "playerId": "nguyen-tan-minh",
+    "position": "DF",
+    "positionName": "Hậu vệ",
+    "number": 88
+  },
+  {
+    "clubId": "xuan-thien-phu-tho",
+    "playerId": "nguyen-tien-tao",
+    "position": "GK",
+    "positionName": "Thủ môn",
+    "number": 91
+  }
+]

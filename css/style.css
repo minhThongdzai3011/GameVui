@@ -384,6 +384,28 @@ body {
   position: relative;
   overflow: hidden;
 }
+.fm-visual {
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25)) 50% 50% / 100% 2px no-repeat,
+    radial-gradient(circle at 50% 50%, transparent 22%, rgba(255, 255, 255, 0.3) 23%, transparent 25%),
+    repeating-linear-gradient(90deg, #2f9a57 0 12%, #2a8c4f 12% 24%);
+}
+.fm-preview {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 2px;
+  font-size: 44px;
+  line-height: 1;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+}
+.fm-preview b {
+  font-size: 14px;
+  letter-spacing: 0.2em;
+  color: #fff;
+}
 .mouse-visual {
   background: #ffd98a;
 }

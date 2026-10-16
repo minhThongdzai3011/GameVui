@@ -1,0 +1,321 @@
+{
+  "_comment": "Danh sách tập trung đội tuyển gần nhất (tra cứu 2026-10-16). id = slug cầu thủ trên vpf.vn; null = không đăng ký V.League mùa này. build-ratings.mjs cộng năng lực cho cầu thủ có tên ở đây.",
+  "teams": [
+    {
+      "team": "ĐT Việt Nam",
+      "event": "FIFA ASEAN Cup 2026",
+      "announced": "2026-09-18",
+      "source": "https://baolaocai.vn/danh-sach-tuyen-viet-nam-du-fifa-asean-cup-2026-nhung-thay-doi-dang-chu-y-nhat-post909727.html",
+      "players": [
+        {
+          "name": "Patrik Lê Giang",
+          "id": "patrik-le-giang"
+        },
+        {
+          "name": "Trần Trung Kiên",
+          "id": "tran-trung-kien"
+        },
+        {
+          "name": "Nguyễn Văn Việt",
+          "id": "nguyen-van-viet-5"
+        },
+        {
+          "name": "Lê Ngọc Bảo",
+          "id": "le-ngoc-bao"
+        },
+        {
+          "name": "Cao Pendant Quang Vinh",
+          "id": "jason-quang-vinh-pendant"
+        },
+        {
+          "name": "Nguyễn Adou Leygley Minh",
+          "id": "adou-leygley-minh"
+        },
+        {
+          "name": "Nguyễn Nhật Minh",
+          "id": "nguyen-nhat-minh-2"
+        },
+        {
+          "name": "Phạm Xuân Mạnh",
+          "id": "pham-xuan-manh"
+        },
+        {
+          "name": "Trương Tiến Anh",
+          "id": "truong-tien-anh"
+        },
+        {
+          "name": "Nguyễn Thành Chung",
+          "id": "nguyen-thanh-chung"
+        },
+        {
+          "name": "Bùi Hoàng Việt Anh",
+          "id": "bui-hoang-viet-anh"
+        },
+        {
+          "name": "Phan Tuấn Tài",
+          "id": "phan-tuan-tai"
+        },
+        {
+          "name": "Lê Văn Đô",
+          "id": "le-van-do"
+        },
+        {
+          "name": "Lê Phạm Thành Long",
+          "id": "le-pham-thanh-long"
+        },
+        {
+          "name": "Đỗ Hoàng Hên",
+          "id": "do-hoang-hen"
+        },
+        {
+          "name": "Nguyễn Tài Lộc",
+          "id": "geovane-mango"
+        },
+        {
+          "name": "Nguyễn Hoàng Đức",
+          "id": "nguyen-hoang-duc"
+        },
+        {
+          "name": "Nguyễn Hai Long",
+          "id": "nguyen-hai-long"
+        },
+        {
+          "name": "Nguyễn Quang Hải",
+          "id": "nguyen-quang-hai"
+        },
+        {
+          "name": "Nguyễn Đình Bắc",
+          "id": "nguyen-dinh-bac"
+        },
+        {
+          "name": "Williams Minh Hoàng",
+          "id": "williams-lee-oliver-grant"
+        },
+        {
+          "name": "Nguyễn Xuân Son",
+          "id": "rafaelson-bezerra-fernandes"
+        },
+        {
+          "name": "Phạm Gia Hưng",
+          "id": "pham-gia-hung"
+        },
+        {
+          "name": "Ngô Đăng Khoa",
+          "id": "ngo-dang-khoa"
+        }
+      ]
+    },
+    {
+      "team": "ĐT Việt Nam",
+      "event": "AFF Cup 2026 (vô địch)",
+      "announced": "2026-07-14",
+      "source": "https://baohatinh.vn/26-tuyen-thu-viet-nam-du-asean-cup-2026-post313906.html",
+      "players": [
+        {
+          "name": "Trần Trung Kiên",
+          "id": "tran-trung-kien"
+        },
+        {
+          "name": "Đặng Văn Lâm",
+          "id": "dang-van-lam"
+        },
+        {
+          "name": "Patrik Lê Giang",
+          "id": "patrik-le-giang"
+        },
+        {
+          "name": "Phan Tuấn Tài",
+          "id": "phan-tuan-tai"
+        },
+        {
+          "name": "Nguyễn Thành Chung",
+          "id": "nguyen-thanh-chung"
+        },
+        {
+          "name": "Đỗ Duy Mạnh",
+          "id": null
+        },
+        {
+          "name": "Phạm Xuân Mạnh",
+          "id": "pham-xuan-manh"
+        },
+        {
+          "name": "Trương Tiến Anh",
+          "id": "truong-tien-anh"
+        },
+        {
+          "name": "Đoàn Văn Hậu",
+          "id": "doan-van-hau"
+        },
+        {
+          "name": "Bùi Hoàng Việt Anh",
+          "id": "bui-hoang-viet-anh"
+        },
+        {
+          "name": "Nguyễn Văn Vĩ",
+          "id": "nguyen-van-vi"
+        },
+        {
+          "name": "Nguyễn Nhật Minh",
+          "id": "nguyen-nhat-minh-2"
+        },
+        {
+          "name": "Đinh Quang Kiệt",
+          "id": "dinh"
+        },
+        {
+          "name": "Khuất Văn Khang",
+          "id": "khuat-van-khang"
+        },
+        {
+          "name": "Nguyễn Hai Long",
+          "id": "nguyen-hai-long"
+        },
+        {
+          "name": "Đỗ Hoàng Hên",
+          "id": "do-hoang-hen"
+        },
+        {
+          "name": "Nguyễn Hoàng Đức",
+          "id": "nguyen-hoang-duc"
+        },
+        {
+          "name": "Nguyễn Ngọc Mỹ",
+          "id": "nguyen-ngoc-my"
+        },
+        {
+          "name": "Lê Phạm Thành Long",
+          "id": "le-pham-thanh-long"
+        },
+        {
+          "name": "Lê Văn Đô",
+          "id": "le-van-do"
+        },
+        {
+          "name": "Nguyễn Quang Hải",
+          "id": "nguyen-quang-hai"
+        },
+        {
+          "name": "Phạm Gia Hưng",
+          "id": "pham-gia-hung"
+        },
+        {
+          "name": "Nguyễn Tài Lộc",
+          "id": "geovane-mango"
+        },
+        {
+          "name": "Nguyễn Đình Bắc",
+          "id": "nguyen-dinh-bac"
+        },
+        {
+          "name": "Nguyễn Xuân Son",
+          "id": "rafaelson-bezerra-fernandes"
+        },
+        {
+          "name": "Nguyễn Trần Việt Cường",
+          "id": "nguyen-tran-viet-cuong"
+        }
+      ]
+    },
+    {
+      "team": "U23 Việt Nam",
+      "event": "ASIAD 2026",
+      "announced": "2026-09-09",
+      "source": "https://baolaocai.vn/danh-sach-u23-viet-nam-du-asiad-2026-vi-sao-dinh-bac-trung-kien-vang-mat-post909030.html",
+      "players": [
+        {
+          "name": "Phạm Đình Hải",
+          "id": "pham-dinh-hai"
+        },
+        {
+          "name": "Hoa Xuân Tín",
+          "id": "hoa-xuan-tin"
+        },
+        {
+          "name": "Cao Văn Bình",
+          "id": "cao-van-binh"
+        },
+        {
+          "name": "Lê Nguyên Hoàng",
+          "id": "le-nguyen-hoang"
+        },
+        {
+          "name": "Phạm Lý Đức",
+          "id": "pham-ly-duc"
+        },
+        {
+          "name": "Đinh Quang Kiệt",
+          "id": "dinh"
+        },
+        {
+          "name": "Đặng Tuấn Phong",
+          "id": "dang-tuan-phong"
+        },
+        {
+          "name": "Nguyễn Đức Anh",
+          "id": "nguyen-duc-anh"
+        },
+        {
+          "name": "Nguyễn Lương Tuấn Khải",
+          "id": "nguyen-luong-tuan-khai"
+        },
+        {
+          "name": "Nguyễn Quốc Toản",
+          "id": "nguyen-quoc-toan"
+        },
+        {
+          "name": "Lê Đình Long Vũ",
+          "id": "le-dinh-long-vu"
+        },
+        {
+          "name": "Nguyễn Quang Vinh",
+          "id": "nguyen-quang-vinh"
+        },
+        {
+          "name": "Phạm Minh Phúc",
+          "id": "pham-minh-phuc"
+        },
+        {
+          "name": "Nguyễn Xuân Bắc",
+          "id": "nguyen-xuan-bac"
+        },
+        {
+          "name": "Lê Văn Thuận",
+          "id": "le-van-thuan"
+        },
+        {
+          "name": "Nguyễn Thái Quốc Cường",
+          "id": "nguyen-thai-quoc-cuong"
+        },
+        {
+          "name": "Nguyễn Phi Hoàng",
+          "id": "nguyen-phi-hoang"
+        },
+        {
+          "name": "Nguyễn Công Phương",
+          "id": "nguyen-cong-phuong-2"
+        },
+        {
+          "name": "Nguyễn Hoàng Khanh",
+          "id": "nguyen-hoang-khanh"
+        },
+        {
+          "name": "Nguyễn Thanh Nhàn",
+          "id": "nguyen-thanh-nhan-3"
+        },
+        {
+          "name": "Nguyễn Lê Phát",
+          "id": "nguyen-le-phat"
+        },
+        {
+          "name": "Nguyễn Quốc Việt",
+          "id": "nguyen-quoc-viet"
+        },
+        {
+          "name": "Nguyễn Ngọc Mỹ",
+          "id": "nguyen-ngoc-my"
+        }
+      ]
+    }
+  ]
+}

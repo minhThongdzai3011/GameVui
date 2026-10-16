@@ -1,0 +1,180 @@
+// Lõi dùng chung: không gian tên FM, ngẫu nhiên có hạt giống, ngày tháng, định dạng tiền,
+// sơ đồ chiến thuật và cách tính "điểm vai trò" của cầu thủ ở từng vị trí trên sân.
+// Script thường (không phải module) vì game chạy được cả khi mở thẳng file://.
+(function () {
+  "use strict";
+  const FM = (window.FM = window.FM || {});
+  const D = window.FM_DATA;
+
+  // ---------- Ngẫu nhiên có hạt giống (để trận đấu / sinh cầu thủ lặp lại được) ----------
+  FM.rng = function (seed) {
+    let a = seed >>> 0 || 1;
+    const next = () => {
+      a = (a + 0x6d2b79f5) | 0;
+      let t = Math.imul(a ^ (a >>> 15), 1 | a);
+      t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+      return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+    };
+    next.range = (lo, hi) => lo + next() * (hi - lo);
+    next.int = (lo, hi) => Math.floor(lo + next() * (hi - lo + 1));
+    next.pick = (arr) => arr[Math.floor(next() * arr.length)];
+    next.weighted = (items, weight) => {
+      const ws = items.map(weight);
+      let r = next() * ws.reduce((s, w) => s + w, 0);
+      for (let i = 0; i < items.length; i++) if ((r -= ws[i]) <= 0) return items[i];
+      return items[items.length - 1];
+    };
+    next.normal = (sd = 1) => Math.sqrt(-2 * Math.log(Math.max(1e-9, next()))) * Math.cos(2 * Math.PI * next()) * sd;
+    next.state = () => a;
+    return next;
+  };
+  FM.hash = function (s) {
+    let h = 2166136261;
+    for (let i = 0; i < s.length; i++) h = Math.imul(h ^ s.charCodeAt(i), 16777619);
+    return h >>> 0;
+  };
+  FM.clamp = (v, lo, hi) => Math.max(lo, Math.min(hi, v));
+
+  // ---------- Ngày tháng (chuỗi "YYYY-MM-DD", tính theo UTC cho khỏi lệch múi giờ) ----------
+  FM.addDays = (iso, n) => new Date(Date.parse(iso + "T00:00:00Z") + n * 86400000).toISOString().slice(0, 10);
+  FM.daysBetween = (a, b) => Math.round((Date.parse(b + "T00:00:00Z") - Date.parse(a + "T00:00:00Z")) / 86400000);
+  FM.weekday = (iso) => new Date(iso + "T00:00:00Z").getUTCDay();
+  const WD = ["CN", "T2", "T3", "T4", "T5", "T6", "T7"];
+  FM.fmtDate = (iso, withDay = true) => {
+    const [y, m, d] = iso.split("-");
+    return `${withDay ? WD[FM.weekday(iso)] + ", " : ""}${+d}/${+m}/${y}`;
+  };
+  FM.fmtShortDate = (iso) => {
+    const [, m, d] = iso.split("-");
+    return `${+d}/${+m}`;
+  };
+  // tiền: lương tính bằng triệu VND, giá trị / ngân sách bằng tỷ VND
+  FM.fmtMoney = (ty) => {
+    const v = Math.abs(ty);
+    const s = v >= 1 ? `${(Math.round(v * 10) / 10).toLocaleString("vi-VN")} tỷ` : `${Math.round(v * 1000).toLocaleString("vi-VN")} triệu`;
+    return (ty < 0 ? "−" : "") + s;
+  };
+  FM.fmtWage = (tr) => `${Math.round(tr).toLocaleString("vi-VN")} tr/th`;
+  FM.esc = (s) =>
+    String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
+
+  // ---------- Dữ liệu gốc ----------
+  FM.ATTRS = D.meta.attrs;
+  FM.A = Object.fromEntries(FM.ATTRS.map((k, i) => [k, i])); // tên thuộc tính → chỉ số trong mảng a[]
+  FM.ATTR_LABEL = {
+    finishing: "Dứt điểm",
+    longShots: "Sút xa",
+    passing: "Chuyền bóng",
+    crossing: "Tạt bóng",
+    dribbling: "Rê bóng",
+    firstTouch: "Khống chế",
+    tackling: "Tắc bóng",
+    marking: "Kèm người",
+    heading: "Đánh đầu",
+    vision: "Nhãn quan",
+    decisions: "Quyết định",
+    positioning: "Chọn vị trí",
+    offTheBall: "Di chuyển",
+    composure: "Bình tĩnh",
+    workRate: "Năng nổ",
+    pace: "Tốc độ",
+    stamina: "Thể lực",
+    strength: "Sức mạnh",
+    agility: "Nhanh nhẹn",
+    jumping: "Bật nhảy",
+    reflexes: "Phản xạ",
+    handling: "Bắt bóng",
+    oneOnOne: "Đối mặt",
+    aerial: "Không chiến",
+    kicking: "Phát bóng",
+  };
+  FM.ATTR_GROUPS = [
+    ["Kỹ thuật", ["finishing", "longShots", "passing", "crossing", "dribbling", "firstTouch", "tackling", "marking", "heading"]],
+    ["Tinh thần", ["vision", "decisions", "positioning", "offTheBall", "composure", "workRate"]],
+    ["Thể chất", ["pace", "stamina", "strength", "agility", "jumping"]],
+    ["Thủ môn", ["reflexes", "handling", "oneOnOne", "aerial", "kicking"]],
+  ];
+  FM.POS_LABEL = { GK: "TM", CB: "TV", LB: "HVT", RB: "HVP", DM: "TVPN", CM: "TVTT", AM: "TVTC", LM: "TVT", RM: "TVP", LW: "TĐT", RW: "TĐP", ST: "TĐ" };
+  FM.POS_NAME = {
+    GK: "Thủ môn",
+    CB: "Trung vệ",
+    LB: "Hậu vệ trái",
+    RB: "Hậu vệ phải",
+    DM: "Tiền vệ phòng ngự",
+    CM: "Tiền vệ trung tâm",
+    AM: "Tiền vệ tấn công",
+    LM: "Tiền vệ trái",
+    RM: "Tiền vệ phải",
+    LW: "Tiền đạo cánh trái",
+    RW: "Tiền đạo cánh phải",
+    ST: "Tiền đạo cắm",
+  };
+  FM.POS_LABEL.CB = "TrV";
+  FM.POS_GROUP = { GK: "GK", CB: "DF", LB: "DF", RB: "DF", DM: "MF", CM: "MF", AM: "MF", LM: "MF", RM: "MF", LW: "FW", RW: "FW", ST: "FW" };
+
+  // ---------- Sơ đồ: vị trí từng ô, x 0→100 trái→phải, y 0→100 khung thành nhà → khung thành bạn ----------
+  FM.FORMATIONS = {
+    "4-4-2": [["GK", 50, 4], ["RB", 86, 24], ["CB", 62, 18], ["CB", 38, 18], ["LB", 14, 24], ["RM", 86, 52], ["CM", 62, 46], ["CM", 38, 46], ["LM", 14, 52], ["ST", 62, 80], ["ST", 38, 80]],
+    "4-3-3": [["GK", 50, 4], ["RB", 86, 24], ["CB", 62, 18], ["CB", 38, 18], ["LB", 14, 24], ["DM", 50, 38], ["CM", 70, 50], ["CM", 30, 50], ["RW", 84, 76], ["ST", 50, 84], ["LW", 16, 76]],
+    "4-2-3-1": [["GK", 50, 4], ["RB", 86, 24], ["CB", 62, 18], ["CB", 38, 18], ["LB", 14, 24], ["DM", 62, 38], ["DM", 38, 38], ["RM", 84, 62], ["AM", 50, 62], ["LM", 16, 62], ["ST", 50, 84]],
+    "4-1-4-1": [["GK", 50, 4], ["RB", 86, 24], ["CB", 62, 18], ["CB", 38, 18], ["LB", 14, 24], ["DM", 50, 36], ["RM", 86, 56], ["CM", 62, 52], ["CM", 38, 52], ["LM", 14, 56], ["ST", 50, 82]],
+    "3-5-2": [["GK", 50, 4], ["CB", 74, 20], ["CB", 50, 16], ["CB", 26, 20], ["RM", 88, 50], ["DM", 50, 36], ["CM", 68, 50], ["CM", 32, 50], ["LM", 12, 50], ["ST", 62, 80], ["ST", 38, 80]],
+    "5-3-2": [["GK", 50, 4], ["RB", 88, 30], ["CB", 70, 18], ["CB", 50, 15], ["CB", 30, 18], ["LB", 12, 30], ["CM", 70, 48], ["DM", 50, 40], ["CM", 30, 48], ["ST", 62, 78], ["ST", 38, 78]],
+  };
+  FM.DEFAULT_TACTICS = { mentality: 2, pressing: 1, tempo: 1, passing: 1 }; // chỉ số trong TACTIC_OPTIONS
+  FM.TACTIC_OPTIONS = {
+    mentality: ["Phòng ngự", "Thận trọng", "Cân bằng", "Tấn công", "Tổng tấn công"],
+    pressing: ["Lùi sâu", "Vừa phải", "Pressing tầm cao"],
+    tempo: ["Chậm, chắc", "Bình thường", "Nhanh"],
+    passing: ["Ngắn", "Kết hợp", "Dài, bóng bổng"],
+  };
+  FM.TACTIC_LABEL = { mentality: "Lối chơi", pressing: "Pressing", tempo: "Nhịp độ", passing: "Chuyền bóng" };
+  FM.MAX_FOREIGN_ON_PITCH = 4;
+  FM.MAX_SUBS = 5;
+  FM.BENCH_SIZE = 9;
+
+  // tầm quan trọng của thuộc tính theo vai trò (giống mô hình chỉ số, mặc định 0,8)
+  const PROFILE = {
+    GK: { reflexes: 1.6, handling: 1.5, oneOnOne: 1.4, aerial: 1.3, kicking: 1, positioning: 1.4, decisions: 1.2, composure: 1.2, agility: 1.1, jumping: 1, passing: 0.6, finishing: 0, longShots: 0, crossing: 0, dribbling: 0, tackling: 0, marking: 0, heading: 0, offTheBall: 0, vision: 0.4, workRate: 0.4, pace: 0.4, stamina: 0.3, strength: 0.4 },
+    CB: { tackling: 1.5, marking: 1.5, heading: 1.5, positioning: 1.4, strength: 1.3, jumping: 1.3, decisions: 1.1, composure: 1, passing: 0.8, pace: 0.9, finishing: 0.1, longShots: 0.1, crossing: 0.2, dribbling: 0.3, offTheBall: 0.2, vision: 0.5 },
+    LB: { pace: 1.4, stamina: 1.4, crossing: 1.3, tackling: 1.3, marking: 1.2, positioning: 1.1, workRate: 1.3, dribbling: 1, passing: 1, heading: 0.6, finishing: 0.3, strength: 0.8 },
+    DM: { tackling: 1.4, positioning: 1.4, passing: 1.2, decisions: 1.3, stamina: 1.3, workRate: 1.4, marking: 1.2, strength: 1.1, composure: 1.1, vision: 1, finishing: 0.3, dribbling: 0.6, crossing: 0.4 },
+    CM: { passing: 1.5, vision: 1.3, decisions: 1.3, firstTouch: 1.3, stamina: 1.3, workRate: 1.2, composure: 1.1, tackling: 1, longShots: 1, dribbling: 1, offTheBall: 1, finishing: 0.7 },
+    AM: { vision: 1.5, passing: 1.4, dribbling: 1.4, firstTouch: 1.4, offTheBall: 1.3, composure: 1.2, finishing: 1.1, longShots: 1.2, decisions: 1.2, agility: 1.2, tackling: 0.3, marking: 0.2, heading: 0.5 },
+    LM: { crossing: 1.5, pace: 1.4, dribbling: 1.3, stamina: 1.4, workRate: 1.3, passing: 1.1, offTheBall: 1.1, agility: 1.2, tackling: 0.7, finishing: 0.8 },
+    LW: { pace: 1.5, dribbling: 1.5, agility: 1.3, finishing: 1.2, offTheBall: 1.3, crossing: 1.2, firstTouch: 1.2, composure: 1, tackling: 0.3, marking: 0.2, heading: 0.5 },
+    ST: { finishing: 1.6, offTheBall: 1.5, composure: 1.3, firstTouch: 1.2, heading: 1.2, strength: 1.1, pace: 1.1, dribbling: 1, agility: 1, tackling: 0.2, marking: 0.2, crossing: 0.4, passing: 0.7 },
+  };
+  PROFILE.RB = PROFILE.LB;
+  PROFILE.RM = PROFILE.LM;
+  PROFILE.RW = PROFILE.LW;
+  // trọng số dạng mảng theo thứ tự FM.ATTRS cho nhanh
+  FM.PROFILE_W = {};
+  for (const role in PROFILE) FM.PROFILE_W[role] = FM.ATTRS.map((k) => (PROFILE[role][k] ?? (role === "GK" ? 0 : FM.ATTRS.indexOf(k) >= FM.A.reflexes ? 0 : 0.8)));
+
+  // điểm vai trò 1–20: trung bình có trọng số các thuộc tính theo vai trò
+  FM.roleScore = function (attrs, role) {
+    const w = FM.PROFILE_W[role];
+    let s = 0;
+    let t = 0;
+    for (let i = 0; i < w.length; i++) {
+      s += attrs[i] * w[i];
+      t += w[i];
+    }
+    return s / t;
+  };
+  // mức quen vị trí → hệ số hiệu quả
+  FM.familiarity = function (p, role) {
+    if (p.pos === role) return 1;
+    const fam = p.alt && p.alt[role];
+    if (fam) return 0.72 + 0.28 * (fam / 20);
+    if (role === "GK" || p.pos === "GK") return 0.25;
+    return FM.POS_GROUP[role] === FM.POS_GROUP[p.pos] ? 0.82 : 0.66;
+  };
+
+  FM.ageOn = (p, iso) => {
+    if (p.bd) return Math.floor((Date.parse(iso) - Date.parse(p.bd)) / 31557600000);
+    return +iso.slice(0, 4) - p.by - (iso.slice(5) < "07-01" ? 1 : 0);
+  };
+  FM.stars = (ca) => Math.max(0.5, Math.min(5, Math.round(((ca - 30) / 55) * 10) / 2)); // 0,5–5 sao
+})();

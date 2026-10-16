@@ -1,0 +1,74 @@
+[
+  {
+    "clubId": "cong-an-ha-noi",
+    "name": "Lê Xuân Hải",
+    "role": "Quan chức",
+    "slug": "truong-doan-le-xuan-hai"
+  },
+  {
+    "clubId": "ha-noi",
+    "name": "Dương Hồng Sơn",
+    "role": "Trợ lý HLV",
+    "slug": "duong-hong-son-cbkt"
+  },
+  {
+    "clubId": "hai-phong",
+    "name": "Bùi Vinh Quang",
+    "role": "Trợ lý HLV",
+    "slug": "tl-hlv-bui-vinh-quang"
+  },
+  {
+    "clubId": "hoang-anh-gia-lai",
+    "name": "Vũ Tiến Thành",
+    "role": "Quan chức",
+    "slug": "hlv-truong-vu-tien-thanh"
+  },
+  {
+    "clubId": "shb-da-nang",
+    "name": "Trần Văn Thọ",
+    "role": "Trợ lý HLV",
+    "slug": "tran-van-tho"
+  },
+  {
+    "clubId": "the-cong-viettel",
+    "name": "Nguyễn Huy Toàn",
+    "role": "Cán bộ",
+    "slug": "cbptkt-nguyen-huy-toan"
+  },
+  {
+    "clubId": "becamex-tphcm",
+    "name": "Albadalejo Castano Gerard",
+    "role": "Huấn luyện viên",
+    "slug": "hlv-truong-albadalejo-castano-gerard"
+  },
+  {
+    "clubId": "tre-pvfcand",
+    "name": "Nguyễn Lương Phúc",
+    "role": "Trợ lý HLV",
+    "slug": "tro-ly-hlv-nguyen-luong-phuc"
+  },
+  {
+    "clubId": "tre-pvfcand",
+    "name": "Bùi Đoàn Quang Huy",
+    "role": "Huấn luyện viên",
+    "slug": "tro-ly-hlv-bui-doan-quang-huy"
+  },
+  {
+    "clubId": "quang-ninh",
+    "name": "Hàn Văn Tuấn",
+    "role": "Trợ lý HLV",
+    "slug": "tro-ly-hlv-han-van-tuan"
+  },
+  {
+    "clubId": "ba-ria-vung-tau",
+    "name": "Trương Hoàng Đoan Duy",
+    "role": "Cán bộ",
+    "slug": "nvpv-truong-hoang-doan-duy"
+  },
+  {
+    "clubId": "ha-noi",
+    "name": "Stock Brian Benjamin",
+    "role": "Trợ lý HLV",
+    "slug": "stock-brian-benjamin"
+  }
+]

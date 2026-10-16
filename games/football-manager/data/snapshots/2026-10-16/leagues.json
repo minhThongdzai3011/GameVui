@@ -1,0 +1,24 @@
+[
+  {
+    "id": "vietnam-v-league-1",
+    "key": "vietnam-v-league-1",
+    "name": "V.League 1",
+    "officialName": "Vô địch Quốc gia LPBank 2026/27",
+    "tier": 1,
+    "country": "Vietnam",
+    "season": 2026,
+    "seasonLabel": "2026/27",
+    "vpfSid": 154439
+  },
+  {
+    "id": "vietnam-v-league-2",
+    "key": "vietnam-v-league-2",
+    "name": "V.League 2",
+    "officialName": "Sacombank V.League 2 2026/27",
+    "tier": 2,
+    "country": "Vietnam",
+    "season": 2026,
+    "seasonLabel": "2026/27",
+    "vpfSid": 154445
+  }
+]

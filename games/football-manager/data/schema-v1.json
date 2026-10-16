@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "GameVui Football Manager Snapshot v1",
+  "description": "A dated real-world roster snapshot. Simulation state never modifies this source data.",
+  "type": "object",
+  "required": ["meta", "leagues", "clubs", "players", "squads"],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["schemaVersion", "snapshotDate", "season", "source"],
+      "properties": {
+        "schemaVersion": { "const": 1 },
+        "snapshotDate": { "type": "string", "format": "date" },
+        "season": { "type": "integer" },
+        "source": { "type": "string" }
+      }
+    },
+    "leagues": { "type": "array" },
+    "clubs": { "type": "array" },
+    "players": { "type": "array" },
+    "squads": { "type": "array" },
+    "stats": { "type": "array", "description": "Optional. Per player, season and club: apps, starts, subsIn, subsOut, goals, yellow, red." },
+    "staff": { "type": "array", "description": "Optional. Non-player squad members: clubId, name, role." }
+  }
+}

@@ -1,0 +1,310 @@
+[
+  {
+    "id": "bac-ninh",
+    "leagueId": "vietnam-v-league-1",
+    "name": "Bắc Ninh",
+    "code": "BNFC",
+    "coach": "Paulo Foiani",
+    "venue": {
+      "name": "SVĐ Việt Yên",
+      "capacity": 7500
+    }
+  },
+  {
+    "id": "cong-an-ha-noi",
+    "leagueId": "vietnam-v-league-1",
+    "name": "Công an Hà Nội",
+    "code": "CAHN",
+    "coach": "Polking Alexandre",
+    "venue": {
+      "name": "SVĐ Hàng Đẫy",
+      "capacity": 19500
+    }
+  },
+  {
+    "id": "cong-an-tphcm",
+    "leagueId": "vietnam-v-league-1",
+    "name": "Công an TP. Hồ Chí Minh",
+    "code": "CATPHCM",
+    "coach": "Diles Athanasios Arthur",
+    "venue": {
+      "name": "SVĐ Thống Nhất",
+      "capacity": 15000
+    }
+  },
+  {
+    "id": "ha-noi",
+    "leagueId": "vietnam-v-league-1",
+    "name": "Hà Nội",
+    "code": "HNFC",
+    "coach": "Harry Kewell",
+    "venue": {
+      "name": "SVĐ Hàng Đẫy",
+      "capacity": 19500
+    }
+  },
+  {
+    "id": "hai-phong",
+    "leagueId": "vietnam-v-league-1",
+    "name": "Hải Phòng",
+    "code": "HPFC",
+    "coach": "Đặng Văn Thành",
+    "venue": {
+      "name": "SVĐ Lạch Tray",
+      "capacity": 30000
+    }
+  },
+  {
+    "id": "hoang-anh-gia-lai",
+    "leagueId": "vietnam-v-league-1",
+    "name": "Hoàng Anh Gia Lai",
+    "code": "HAGL",
+    "coach": "Lê Quang Trãi",
+    "venue": {
+      "name": "SVĐ Pleiku",
+      "capacity": 10000
+    }
+  },
+  {
+    "id": "hong-linh-ha-tinh",
+    "leagueId": "vietnam-v-league-1",
+    "name": "Hồng Lĩnh Hà Tĩnh",
+    "code": "HLHT",
+    "coach": "Phan Như Thuật",
+    "venue": {
+      "name": "SVĐ Hà Tĩnh",
+      "capacity": 10000
+    }
+  },
+  {
+    "id": "ninh-binh",
+    "leagueId": "vietnam-v-league-1",
+    "name": "Ninh Bình",
+    "code": "NBFC",
+    "coach": "Chu Đình Nghiêm",
+    "venue": {
+      "name": "SVĐ Ninh Bình",
+      "capacity": 15000
+    }
+  },
+  {
+    "id": "shb-da-nang",
+    "leagueId": "vietnam-v-league-1",
+    "name": "SHB Đà Nẵng",
+    "code": "SHBĐN",
+    "coach": "Lê Đức Tuấn",
+    "venue": {
+      "name": "SVĐ Chi Lăng",
+      "capacity": 20000
+    }
+  },
+  {
+    "id": "song-lam-nghe-an",
+    "leagueId": "vietnam-v-league-1",
+    "name": "Sông Lam Nghệ An",
+    "code": "SLNA",
+    "coach": "Văn Sỹ Sơn",
+    "venue": {
+      "name": "SVĐ Vinh",
+      "capacity": 20000
+    }
+  },
+  {
+    "id": "dong-a-thanh-hoa",
+    "leagueId": "vietnam-v-league-1",
+    "name": "Thanh Hóa",
+    "code": "THFC",
+    "coach": "Mai Xuân Hợp (Tạm quyền)",
+    "venue": {
+      "name": "SVĐ Thanh Hóa",
+      "capacity": 14000
+    }
+  },
+  {
+    "id": "binh-phuoc",
+    "leagueId": "vietnam-v-league-1",
+    "name": "Thành Phố Đồng Nai",
+    "code": "ĐNFC",
+    "coach": "Nguyễn Việt Thắng",
+    "venue": {
+      "name": "SVĐ Bình Phước",
+      "capacity": 10000
+    }
+  },
+  {
+    "id": "the-cong-viettel",
+    "leagueId": "vietnam-v-league-1",
+    "name": "Thể Công – Viettel",
+    "code": "TCVT",
+    "coach": "Velizar Emilov Popov",
+    "venue": {
+      "name": "SVĐ Mỹ Đình",
+      "capacity": 40000
+    }
+  },
+  {
+    "id": "thep-xanh-nam-dinh",
+    "leagueId": "vietnam-v-league-1",
+    "name": "Thép Xanh Nam Định",
+    "code": "TXND",
+    "coach": "Vũ Hồng Việt",
+    "venue": {
+      "name": "SVĐ Thiên Trường",
+      "capacity": 25000
+    }
+  },
+  {
+    "id": "becamex-tphcm",
+    "leagueId": "vietnam-v-league-2",
+    "name": "Becamex TP. Hồ Chí Minh",
+    "code": "BHCMC",
+    "coach": "Albadalejo Castano Gerard",
+    "venue": {
+      "name": "SVĐ Bình Dương",
+      "capacity": 15000
+    }
+  },
+  {
+    "id": "dong-thap",
+    "leagueId": "vietnam-v-league-2",
+    "name": "Bình Minh Sài Gòn",
+    "code": "ASU",
+    "coach": "Ngô Quang Sang",
+    "venue": {
+      "name": "SVĐ Thống Nhất",
+      "capacity": 15000
+    }
+  },
+  {
+    "id": "pvf-cand",
+    "leagueId": "vietnam-v-league-2",
+    "name": "Công An Nhân Dân",
+    "code": "CAND",
+    "coach": "Nguyễn Đức Thắng",
+    "venue": {
+      "name": "SVĐ PVF",
+      "capacity": 4500
+    }
+  },
+  {
+    "id": "dai-hoc-van-hien",
+    "leagueId": "vietnam-v-league-2",
+    "name": "Đại Học Văn Hiến",
+    "code": "VHU",
+    "coach": "Nguyễn Đình Hưng",
+    "venue": {
+      "name": "SVĐ Thống Nhất",
+      "capacity": 15000
+    }
+  },
+  {
+    "id": "hue",
+    "leagueId": "vietnam-v-league-2",
+    "name": "Huế",
+    "code": "HUE",
+    "coach": "Lê Chí Nguyện",
+    "venue": {
+      "name": "SVĐ Tự Do",
+      "capacity": 16000
+    }
+  },
+  {
+    "id": "tre-pvfcand",
+    "leagueId": "vietnam-v-league-2",
+    "name": "Hưng Yên",
+    "code": "HYFC",
+    "coach": "Bùi Đoàn Quang Huy",
+    "venue": {
+      "name": "SVĐ PVF",
+      "capacity": 4500
+    }
+  },
+  {
+    "id": "khatoco-khanh-hoa",
+    "leagueId": "vietnam-v-league-2",
+    "name": "Khatoco Khánh Hòa",
+    "code": "KKH",
+    "coach": "Võ Đình Tân",
+    "venue": {
+      "name": "SVĐ 19/8 Nha Trang",
+      "capacity": 18000
+    }
+  },
+  {
+    "id": "lam-dong",
+    "leagueId": "vietnam-v-league-2",
+    "name": "Lâm Đồng",
+    "code": "LDFC",
+    "coach": "Nguyễn Xuân Hiếu",
+    "venue": {
+      "name": "SVĐ Đà Lạt",
+      "capacity": 20000
+    }
+  },
+  {
+    "id": "long-an",
+    "leagueId": "vietnam-v-league-2",
+    "name": "Long An",
+    "code": "LAFC",
+    "coach": "Trịnh Văn Hậu",
+    "venue": {
+      "name": "SVĐ Long An",
+      "capacity": 20000
+    }
+  },
+  {
+    "id": "binh-dinh",
+    "leagueId": "vietnam-v-league-2",
+    "name": "Quy Nhơn United",
+    "code": "QNU",
+    "coach": "Trịnh Duy Quang",
+    "venue": {
+      "name": "SVĐ Quy Nhơn",
+      "capacity": 16000
+    }
+  },
+  {
+    "id": "thai-nguyen",
+    "leagueId": "vietnam-v-league-2",
+    "name": "Thái Nguyên",
+    "code": "TNFC",
+    "coach": "Phạm Minh Đức",
+    "venue": {
+      "name": "SVĐ Thái Nguyên",
+      "capacity": 22000
+    }
+  },
+  {
+    "id": "quang-ninh",
+    "leagueId": "vietnam-v-league-2",
+    "name": "Thép Cần Thơ",
+    "code": "CFC",
+    "coach": "Nguyễn Văn Đàn",
+    "venue": {
+      "name": "SVĐ Cần Thơ",
+      "capacity": 30000
+    }
+  },
+  {
+    "id": "ba-ria-vung-tau",
+    "leagueId": "vietnam-v-league-2",
+    "name": "TP. Hồ Chí Minh",
+    "code": "HCMC",
+    "coach": "Nguyễn Minh Phương",
+    "venue": {
+      "name": "SVĐ Bà Rịa",
+      "capacity": null
+    }
+  },
+  {
+    "id": "xuan-thien-phu-tho",
+    "leagueId": "vietnam-v-league-2",
+    "name": "Xuân Thiện Phú Thọ",
+    "code": "XTPT",
+    "coach": "Lê Quốc Vượng",
+    "venue": {
+      "name": "SVĐ Việt Trì",
+      "capacity": 18000
+    }
+  }
+]

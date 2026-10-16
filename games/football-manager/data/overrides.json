@@ -1,0 +1,44 @@
+{
+  "_comment": "Sửa tay dữ liệu VPF, áp sau cùng khi chạy scripts/import-vpf.mjs. players: <slug> → trường cần điền (position GK|DF|MF|FW, positionDetail, birthDate, birthYear, nationality, name, height, weight) kèm sources. merge: gộp cầu thủ bị VPF đăng ký trùng. toStaff: người VPF xếp vào bảng cầu thủ nhưng là ban huấn luyện. Tra cứu ngày 2026-10-16; 'unconfirmed' = chỉ thấy ở một nguồn dữ liệu (Wikipedia/Soccerway/FotMob), chưa có báo Việt Nam xác nhận.",
+  "players": {
+    "rafael-santos-de-sousa": { "position": "DF", "positionDetail": "trung vệ", "birthDate": "1998-02-02", "nationality": "Brazil", "sources": ["https://vov.vn/the-thao/chuyen-nhuong-v-league-20262027-cuu-tuyen-thu-u16-brazil-gia-nhap-bac-ninh-post1318772.vov"] },
+    "bryan-ly": { "position": "MF", "positionDetail": "tiền vệ trung tâm", "birthDate": "2003-05-27", "nationality": "Ireland", "sources": ["https://danviet.vn/anh-trai-tien-ve-viet-kieu-brandon-ly-thu-viec-o-shb-da-nang-d1450107.html"], "note": "sinh ở Ireland, bố Việt mẹ Ireland; chưa thấy tin có quốc tịch Việt Nam" },
+    "saliou-guindo": { "position": "FW", "positionDetail": "tiền đạo", "birthDate": "1996-09-12", "nationality": "Mali", "sources": ["https://en.wikipedia.org/wiki/Saliou_Guindo", "https://baovanhoa.vn/the-thao/var-tao-buoc-ngoat-thanh-hoa-thang-nghet-tho-da-nang-262883.html"] },
+    "di-mateo-lovric": { "name": "Di Mateo Lovrić", "position": "MF", "positionDetail": "tiền vệ phòng ngự", "birthDate": "2000-01-08", "nationality": "Croatia", "sources": ["https://baovanhoa.vn/the-thao/sau-cuu-tuyen-thu-ai-cap-clb-thanh-hoa-thu-viec-tien-ve-croatia-cao-187-m-257871.html"] },
+    "andre-luiz-guimares-siqueira-junior": { "name": "Andre Luiz Guimarães Siqueira Junior", "position": "MF", "positionDetail": "tiền vệ phòng ngự", "birthDate": "1995-08-22", "nationality": "Brazil", "sources": ["https://vietbao.vn/chuyen-nhuong-v-league-20262027-the-cong-viettel-cong-bo-3-ngoai-binh-602861.html", "https://www.fotmob.com/fi/players/1180676"], "note": "Vietbao gọi là trung vệ, FotMob/ESPN/Dân Việt ghi tiền vệ" },
+    "brandao-goncalves-junior": { "position": "FW", "positionDetail": "tiền đạo", "birthDate": "1995-01-07", "nationality": "Brazil", "sources": ["https://en.wikipedia.org/wiki/J%C3%BAnior_Brand%C3%A3o"], "note": "unconfirmed: chưa có báo Việt Nam xác nhận" },
+    "ezequiel-santos-da-silva": { "position": "MF", "positionDetail": "tiền vệ tấn công", "birthDate": "1998-03-09", "nationality": "Brazil", "sources": ["https://vov.vn/the-thao/chuyen-nhuong-v-league-20262027-nam-dinh-no-them-bom-tan-post1317564.vov"] },
+    "tyler-james-thai-crawford": { "position": "DF", "positionDetail": "hậu vệ trái", "birthDate": "2004-03-09", "nationality": "Canada", "sources": ["https://www.cplsoccer.com/news/vancouver-fc-transfers-tyler-crawford-to-nam-dinh-football-club", "https://vov.vn/the-thao/clb-nam-dinh-no-bom-tan-viet-kieu-my-trong-dem-post1318005.vov"], "note": "Việt kiều, chưa rõ có quốc tịch Việt Nam" },
+    "van-alessandro-nguyen-skyriotis": { "position": "MF", "positionDetail": "tiền vệ", "birthDate": "2006-03-31", "nationality": "Áo", "sources": ["https://vov.vn/the-thao/chuyen-nhuong-v-league-hom-nay-287-nam-dinh-chieu-mo-cau-thu-viet-kieu-post1319348.vov"], "note": "Việt kiều Áo; ngày sinh chỉ có trên Soccerway" },
+    "felix-junior-gustave-eboa-eboa": { "name": "Félix Eboa Eboa", "position": "DF", "positionDetail": "trung vệ", "birthDate": "1997-04-19", "nationality": "Pháp", "sources": ["https://vov.vn/the-thao/chuyen-nhuong-v-league-20262027-moi-nhat-nam-dinh-ky-trung-ve-tung-da-cho-psg-post1317422.vov"], "note": "hai quốc tịch Pháp và Cameroon" },
+    "david-fisher-2": { "nationality": "Anh", "sources": ["https://vov.vn/the-thao/cuu-ngoai-binh-ha-noi-fc-gia-nhap-tan-binh-v-league-202627-post1329680.vov"] },
+    "felida-kevin-antonio": { "birthDate": "1999-11-11", "nationality": "Curaçao", "positionDetail": "tiền vệ phòng ngự", "sources": ["https://vov.vn/the-thao/chuyen-nhuong-v-league-202627-ha-noi-fc-ra-mat-tien-ve-du-world-cup-2026-post1337440.vov"] },
+    "robson-alves-reis": { "nationality": "Brazil", "positionDetail": "trung vệ", "sources": ["https://vov.vn/the-thao/chuyen-nhuong-v-league-20262027-bat-ngo-voi-ngoai-binh-moi-cua-hagl-post1329813.vov"] },
+    "helerson-mateus-do-nascimento": { "nationality": "Brazil", "positionDetail": "trung vệ", "sources": ["https://baohatinh.vn/hong-linh-ha-tinh-cong-bo-3-ngoai-binh-mua-giai-moi-post272510.html"] },
+    "kalvin-luong": { "birthDate": "2002-04-13", "nationality": "Pháp", "sources": ["https://vov.vn/the-thao/chuyen-nhuong-v-league-20262027-moi-nhat-nam-dinh-gay-bat-ngo-lon-post1320157.vov"], "note": "Việt kiều Pháp, chưa rõ có quốc tịch Việt Nam" },
+    "luiz-guilherme-vieira-da-silva": { "nationality": "Brazil", "sources": ["https://en.wikipedia.org/wiki/Luiz%C3%A3o_(footballer,_born_2003)"], "note": "unconfirmed" },
+    "bruno-pereira-de-albuquerque": { "nationality": "Brazil", "sources": ["https://en.wikipedia.org/wiki/Bruno_Para%C3%ADba"] },
+    "lawrence-robbie-caruso": { "vietHeritage": true, "birthDate": "2004-09-15", "nationality": "Úc", "sources": ["https://vov.vn/the-thao/the-cong-viettel-chieu-mo-hon-da-tang-v-league-va-thu-mon-viet-kieu-post1322786.vov"], "note": "Việt kiều Úc, chưa rõ có quốc tịch Việt Nam" },
+    "rimario-gordon-allando": { "nationality": "Jamaica", "sources": ["https://tuoitre.vn/clb-the-cong-viettel-co-hoa-luc-dang-gom-100260806113248123.htm"] },
+    "lucas-henrique-turci": { "birthDate": "1996-08-23", "nationality": "Brazil", "positionDetail": "trung vệ", "sources": ["https://en.wikipedia.org/wiki/Lucas_Turci"] },
+    "joel-brandon-lopez-pissano": { "birthDate": "1997-01-06", "nationality": "Argentina", "positionDetail": "tiền vệ tấn công", "sources": ["https://baolamdong.vn/shb-da-nang-thu-viec-joel-lopez-pissano-so-10-argentina-ky-vong-giai-bai-toan-sang-tao-417295.html"] },
+    "karim-tran-phi-long": { "birthDate": "2004-03-27", "nationality": "Pháp", "positionDetail": "tiền vệ cánh phải", "sources": ["https://baonghean.vn/en/song-lam-nghe-an-chieu-mo-thanh-cong-cau-thu-viet-kieu-phap-phi-long-karim-tran-10321892.html"], "note": "Việt kiều Pháp (bố Việt, mẹ Algeria), đầu 2026 chưa có quốc tịch Việt Nam" },
+    "jok-atem-dor": { "name": "Dor Jok", "position": "FW", "birthDate": "2001-02-27", "nationality": "Nam Sudan", "sources": ["https://en.wikipedia.org/wiki/Dor_Jok"] },
+    "gonzalo-schnorr-fornari": { "birthDate": "1999-12-09", "nationality": "Brazil", "sources": ["https://en.wikipedia.org/wiki/Gonzalo_(footballer,_born_1999)"] },
+    "namli-ilias": { "birthDate": "2004-04-23", "nationality": "Đan Mạch", "sources": ["https://www.fotmob.com/en-GB/players/1539116/ilias-namli"] },
+    "oleksandr-kurakin": { "nationality": "Ukraina", "sources": ["https://en.wikipedia.org/wiki/Khatoco_Khanh_Hoa_FC"], "note": "unconfirmed: chỉ có trên Wikipedia" },
+    "k-mis": { "nationality": "Việt Nam", "note": "không tìm được nguồn; họ K' là tên người K'Ho ở Lâm Đồng" },
+    "romario-reginaldo-alves": { "nationality": "Brazil", "sources": ["https://en.wikipedia.org/wiki/Long_An_FC"], "note": "unconfirmed: chỉ có trên Wikipedia" },
+    "mansaray-victor-nabay-2": { "name": "Victor Mansaray", "birthYear": 1997, "nationality": "Mỹ", "sources": ["https://en.wikipedia.org/wiki/Victor_Mansaray"], "note": "sinh ở Sierra Leone, từng đá U18/U20 Mỹ" },
+    "nguyen-zan-hoyt-le-cao": { "name": "Zan Nguyễn", "birthDate": "2006-04-24", "nationality": "Mỹ", "sources": ["https://vietnamnews.vn/sports/1716237/zan-nguyen-commits-to-vietnamese-football.html"], "note": "Việt kiều Mỹ, chưa thấy tin đã nhập quốc tịch Việt Nam" },
+    "ho-tung-han": { "birthDate": "2003-05-10", "sources": ["https://en.wikipedia.org/wiki/H%E1%BB%93_T%C3%B9ng_H%C3%A2n"] },
+    "matheus-monteiro-martins": { "birthDate": "1998-04-01", "nationality": "Brazil", "sources": ["https://us.soccerway.com/player/matheus-martins/WMFQZHh9/transfers"], "note": "unconfirmed" }
+  },
+  "merge": [
+    { "keep": "matheus-monteiro-martins", "drop": "matheus-moteiro-martins", "note": "Thanh Hóa đăng ký 2 lần cùng số áo 98; 'Moteiro' gõ sai tên" },
+    { "keep": "kalvin-luong", "drop": "kavil-luong", "note": "SHB Đà Nẵng đăng ký 2 lần cùng số áo 10; 'Kavil' gõ sai tên" }
+  ],
+  "toStaff": [
+    { "slug": "stock-brian-benjamin", "role": "Trợ lý HLV", "note": "Brian Stock (sinh 1981, cựu tuyển thủ xứ Wales), trợ lý của Harry Kewell từ 1/2026 theo Wikipedia" }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "snapshotDate": "2026-10-16",
+  "season": 2026,
+  "seasonLabel": "2026/27",
+  "source": "VPF (vpf.vn)",
+  "importedAt": "2026-10-16T09:41:55.536Z",
+  "vpfSeasonIds": {
+    "current": {
+      "vietnam-v-league-1": 154439,
+      "vietnam-v-league-2": 154445
+    },
+    "history": {
+      "2025/26": {
+        "vietnam-v-league-1": 121994,
+        "vietnam-v-league-2": 123011
+      },
+      "2024/25": {
+        "vietnam-v-league-1": 90366,
+        "vietnam-v-league-2": 92760
+      }
+    }
+  },
+  "notes": "VPF không ghi số phút thi đấu. Thống kê mùa hiện tại lấy từ trang đội (chỉ bàn thắng và thẻ)."
+}
