@@ -27,12 +27,23 @@ function shortName(p) {
   return p.name.length <= 16 ? p.name : words.slice(0, 2).join(" ");
 }
 // màu áo: chưa có dữ liệu thật → màu cố định theo mã CLB
+// màu áo thật (data/club-colors.json, tra cứu tay); CLB chưa có thì sinh màu từ mã CLB
+const realColors = JSON.parse(await readFile(join(root, "data", "club-colors.json"), "utf8"));
+// cúp châu Á (scripts/afc-source.mjs → data/afc.json)
+const afc = JSON.parse(await readFile(join(root, "data", "afc.json"), "utf8"));
 function colors(code) {
   let h = 0;
   for (const ch of code) h = (h * 31 + ch.codePointAt(0)) % 360;
   return [`hsl(${h},62%,42%)`, `hsl(${(h + 180) % 360},70%,92%)`];
 }
 
+// sự nghiệp thật trước khi vào game: [mùa, CLB, giải 1/2, trận, bàn]
+const realHistory = {};
+for (const s of stats) {
+  if (s.season === meta.seasonLabel || !s.apps) continue;
+  (realHistory[s.playerId] ||= []).push([s.season, s.club, s.leagueId === "vietnam-v-league-1" ? 1 : 2, s.apps, s.goals]);
+}
+for (const rows of Object.values(realHistory)) rows.sort((a, b) => a[0].localeCompare(b[0]));
 const lastSeason = {};
 for (const s of stats) {
   if (s.season !== "2025/26" || !s.apps) continue;
@@ -58,7 +69,7 @@ const out = {
       strength: r.strength,
       budget: r.transferBudget,
       wageBudget: r.wageBudget,
-      colors: colors(c.code || c.id),
+      colors: realColors[c.id]?.colors || colors(c.code || c.id),
     };
   }),
   players: squads.map((s) => {
@@ -89,8 +100,10 @@ const out = {
       val: r.value,
       ce: r.contractEnd,
       ls: lastSeason[p.id] || null,
+      hs: realHistory[p.id] || undefined,
     };
   }),
+  afc,
 };
 const js = `// Sinh tự động bởi scripts/build-game-data.mjs từ snapshot ${snapshot}. Không sửa tay.\nwindow.FM_DATA = ${JSON.stringify(out)};\n`;
 await writeFile(join(root, "data", "game-data.js"), js, "utf8");

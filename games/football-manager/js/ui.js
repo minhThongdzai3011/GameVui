@@ -20,28 +20,61 @@
   const FREE_CLUB = { id: "free", name: "Tự do", code: "TD", colors: ["#4a5a52", "#dfe9e3"], venue: "" };
   const club = (id) => (id === "free" ? FREE_CLUB : W.baseClub(S, id));
   const T = FM.Transfers;
+  const AF = FM.AFC;
+  // trạng thái CLB: đội Việt Nam trong S.clubs, đội nước ngoài trong S.afc
+  const cstate = (id) => S.clubs[id] || { form: [], ...(AF.state(S, id) || {}), formation: AF.isForeign(id) ? AF.side(S, id).formation : "?" };
+  // độ sáng tương đối (#rrggbb) để chữ trên huy hiệu luôn đọc được
+  function lum(hex) {
+    const m = /^#([0-9a-f]{6})$/i.exec(hex || "");
+    if (!m) return null;
+    const [r, g, b] = [0, 2, 4].map((i) => parseInt(m[1].slice(i, i + 2), 16) / 255).map((v) => (v <= 0.03928 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4));
+    return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+  }
   function crest(id, size = "") {
     const c = S ? club(id) : D.clubs.find((x) => x.id === id);
-    const [c1, c2] = c.colors || ["#1fa865", "#fff"];
+    let [c1, c2] = c.colors || ["#1fa865", "#fff"];
+    const l1 = lum(c1);
+    const l2 = lum(c2);
+    if (l1 != null && l2 != null && (Math.max(l1, l2) + 0.05) / (Math.min(l1, l2) + 0.05) < 2.2) c2 = l1 > 0.35 ? "#111111" : "#ffffff";
     return `<span class="crest ${size}" style="--c1:${c1};--c2:${c2}">${esc((c.code || "").replace(/FC$/, "").slice(0, 5))}</span>`;
   }
-  function stars(ca) {
+  function stars(ca, est) {
     const v = FM.stars(ca);
     let h = "";
     for (let i = 1; i <= 5; i++) h += v >= i ? "★" : v >= i - 0.5 ? '<span class="half">★</span>' : '<span class="off">★</span>';
-    return `<span class="stars" title="Năng lực ${ca}">${h}</span>`;
+    return `<span class="stars${est ? " est" : ""}" title="${est ? "Ước tính của tuyển trạch" : `Năng lực ${ca}`}">${h}</span>`;
   }
+  // những gì người chơi thấy về cầu thủ đội khác phụ thuộc vào độ hiểu biết (tuyển trạch)
+  const SC = FM.Scout;
+  const kn = (p) => SC.know(S, p);
+  const caStars = (p, k = kn(p)) => (k >= SC.EXACT ? stars(p.ca) : stars(SC.estCa(S, p, k), true));
+  const paStars = (p, k = kn(p)) => (k < SC.HIDDEN ? '<span class="stars est" title="Chưa rõ — cần tuyển trạch">?</span>' : k >= SC.EXACT ? stars(p.pa) : stars(SC.estPa(S, p, k), true));
+  const valText = (p, k = kn(p)) => (k >= SC.EXACT ? FM.fmtMoney(p.val) : `≈ ${FM.fmtMoney(SC.estVal(S, p, k))}`);
+  // chỉ số tổng (năng lực 1–100); cầu thủ đội khác là ước tính theo tuyển trạch
+  const ovrCls = (v) => (v >= 75 ? "o4" : v >= 65 ? "o3" : v >= 55 ? "o2" : "o1");
+  function ovr(p, k = p.c === S.user ? 100 : kn(p)) {
+    if (k >= SC.EXACT) return `<b class="ovr ${ovrCls(p.ca)}" title="Chỉ số tổng">${p.ca}</b>`;
+    const e = SC.estCa(S, p, k);
+    return `<b class="ovr est ${ovrCls(e)}" title="Chỉ số tổng — ước tính của tuyển trạch">~${e}</b>`;
+  }
+  const gradePill = (id) => {
+    const r = SC.ensure(S).reports[id];
+    return r ? ` <span class="pill grade g${r.grade}" title="Báo cáo tuyển trạch ${FM.fmtDate(r.d, false)}">${r.grade}</span>` : "";
+  };
   const posTag = (pos) => `<span class="pos ${FM.POS_GROUP[pos]}">${FM.POS_LABEL[pos]}</span>`;
   const formIcons = (form) => `<span class="form">${form.map((r) => `<i class="${r}">${{ W: "T", D: "H", L: "B" }[r]}</i>`).join("")}</span>`;
   function flags(p) {
     let h = "";
     if (p.fs) h += ` <span class="flag fs" title="Chiếm suất ngoại binh">NB</span>`;
     else if (p.vk) h += ` <span class="flag" title="Việt kiều">VK</span>`;
+    if (p.loan) h += ` <span class="flag loan" title="Cầu thủ mượn từ ${esc(club(p.loan.from).name)}">MƯỢN</span>`;
     if (p.nt === "senior") h += ` <span class="flag" title="Tuyển Việt Nam">🇻🇳</span>`;
     else if (p.nt === "u23") h += ` <span class="flag" title="U23 Việt Nam">U23</span>`;
     return h;
   }
   function status(p) {
+    if (p.wantsOut) return `<span title="Đòi ra đi">📤</span>`;
+    if (p.c === S?.user && (p.unhappy || 0) >= 4) return `<span title="Muốn được ra sân nhiều hơn">😤</span>`;
     if (p.inj) return `<span class="status-inj" title="Chấn thương đến ${FM.fmtDate(p.inj, false)}">✚</span>`;
     if (p.sus) return `<span class="status-sus" title="Treo giò ${p.sus} trận">⛔</span>`;
     return "";
@@ -165,14 +198,14 @@
     let next = `<div class="card-b muted">Không còn trận nào trong mùa.</div>`;
     if (f) {
       const opp = f.h === S.user ? f.a : f.h;
-      const tH = f.po ? null : W.table(S, f.lg);
-      const posOf = (id) => (tH ? `hạng ${tH.findIndex((r) => r.id === id) + 1}` : "");
+      const tH = f.lg === V1 || f.lg === V2 ? W.table(S, f.lg) : null;
+      const posOf = (id) => (tH ? `hạng ${tH.findIndex((r) => r.id === id) + 1}` : AF.isForeign(id) ? esc(AF.club(id).country) : "");
       next = `<div class="next">
-        <div class="team">${crest(f.h, "lg")}<span>${esc(club(f.h).name)}</span><span class="small muted">${posOf(f.h)}</span>${formIcons(S.clubs[f.h].form.slice(-5))}</div>
-        <div><div class="vs">VS</div><div class="small muted">${FM.fmtDate(f.d)}</div><div class="pill ${f.po ? "gold" : ""}">${f.po ? "Play-off" : `Vòng ${f.rd}`}</div></div>
-        <div class="team">${crest(f.a, "lg")}<span>${esc(club(f.a).name)}</span><span class="small muted">${posOf(f.a)}</span>${formIcons(S.clubs[f.a].form.slice(-5))}</div>
+        <div class="team">${crest(f.h, "lg")}<span>${esc(club(f.h).name)}</span><span class="small muted">${posOf(f.h)}</span>${formIcons(cstate(f.h).form.slice(-5))}</div>
+        <div><div class="vs">VS</div><div class="small muted">${FM.fmtDate(f.d)}</div><div class="pill ${f.po || f.ko ? "gold" : ""}">${esc(W.fxLabel(S, f))}</div></div>
+        <div class="team">${crest(f.a, "lg")}<span>${esc(club(f.a).name)}</span><span class="small muted">${posOf(f.a)}</span>${formIcons(cstate(f.a).form.slice(-5))}</div>
       </div>
-      <div class="card-b row" style="border-top:1px solid var(--line)"><span class="small muted grow">${f.h === S.user ? "Sân nhà" : "Sân khách"} · ${esc(club(f.h).venue || "")} · ${FM.daysBetween(S.date, f.d) === 0 ? "<b>Hôm nay!</b>" : `còn ${FM.daysBetween(S.date, f.d)} ngày`}</span><button class="btn sm" data-act="club-view" data-id="${opp}">Xem đối thủ</button></div>`;
+      <div class="card-b row" style="border-top:1px solid var(--line)"><span class="small muted grow">${f.neutral ? "Sân trung lập" : f.h === S.user ? "Sân nhà" : "Sân khách"} · ${f.neutral ? "" : esc(club(f.h).venue || "")} · ${FM.daysBetween(S.date, f.d) === 0 ? "<b>Hôm nay!</b>" : `còn ${FM.daysBetween(S.date, f.d)} ngày`}</span><button class="btn sm" data-act="club-view" data-id="${opp}">Xem đối thủ</button></div>`;
     }
     const pos = W.position(S, S.user);
     const conf = Math.round(c.conf);
@@ -189,11 +222,43 @@
       </div></div>
       <div class="card"><h3>${W.leagueName(c.league)}</h3>${miniTable(table.slice(from, from + 5), from)}</div>
     </div>
+    ${viewDressingRoom()}
     <div class="card"><h3>Hộp thư <span class="grow"></span>${S.inbox.some((m) => !m.r) ? `<button class="link small" data-act="read-all">Đánh dấu đã đọc</button>` : ""}</h3>
       ${S.inbox.length ? S.inbox.slice(0, 25).map(mailRow).join("") : `<div class="card-b muted">Chưa có thư.</div>`}
     </div>`;
   }
-  const MAIL_ICON = { board: "🏛️", result: "⚽", medical: "🚑", discipline: "🟥", finance: "💰", league: "🏆", transfer: "🔁", contract: "📝", news: "📰" };
+  const MAIL_ICON = { board: "🏛️", result: "⚽", medical: "🚑", discipline: "🟥", finance: "💰", league: "🏆", transfer: "🔁", contract: "📝", news: "📰", cup: "🏆", scout: "🔍", training: "🏋️", morale: "💬", afc: "🌏" };
+  // ---------- Phòng thay đồ (tâm lý) ----------
+  const MO = FM.Morale;
+  const moraleText = (m) => (m >= 75 ? "Rất vui" : m >= 58 ? "Vui vẻ" : m >= 42 ? "Bình thường" : m >= 28 ? "Không vui" : "Rất tệ");
+  function viewDressingRoom() {
+    const mood = MO.squadMood(S);
+    const who = (list) => list.map((p) => `<b class="link" data-act="info" data-id="${p.id}">${esc(p.sn)}</b>`).join(", ");
+    const issues = [
+      mood.wantsOut.length ? `<div>📤 Đòi ra đi: ${who(mood.wantsOut)}</div>` : "",
+      mood.unhappy.length ? `<div>😤 Muốn được ra sân nhiều hơn: ${who(mood.unhappy)}</div>` : "",
+      mood.promises.length ? `<div>🤝 Đang chờ bạn giữ lời hứa: ${who(mood.promises)}</div>` : "",
+    ].join("");
+    const can = MO.canMeet(S);
+    return `<div class="card"><h3>Phòng thay đồ</h3><div class="card-b" style="display:grid;gap:8px">
+      <div class="row"><span style="font-size:22px">${moraleIcon(mood.avg)}</span><span class="grow">Tinh thần toàn đội: <b>${moraleText(mood.avg)}</b></span><span class="small muted">${Math.round(mood.avg)}/100</span></div>
+      ${issues ? `<div class="small" style="display:grid;gap:4px">${issues}</div>` : `<div class="small muted">Không có vấn đề gì trong phòng thay đồ.</div>`}
+      <div class="row wrap">${MO.MEETINGS.map((x) => `<button class="btn sm" data-act="meeting" data-k="${x.k}" title="${esc(x.desc)}" ${can ? "" : "disabled"}>${x.label}</button>`).join("")}</div>
+      <div class="small muted">${can ? "Họp đội: khen khi đang thắng, đòi hỏi khi đang thua, giải toả khi nhiều người buồn. 14 ngày họp một lần." : `Vừa họp đội ngày ${FM.fmtDate(S.meet, false)} — họp lại sau 14 ngày.`}</div>
+    </div></div>`;
+  }
+  function moraleBox(p) {
+    const d = S.p[p.id];
+    const reasons = MO.reasons(S, p);
+    const col = { good: "var(--accent)", bad: "var(--red)", info: "var(--muted)" };
+    const can = MO.canTalk(S, d);
+    return `<div class="scoutbox"><div class="row"><span style="font-size:20px">${moraleIcon(p.mor)}</span><b class="grow">Tâm lý: ${moraleText(p.mor)}</b><span class="small muted">${Math.round(p.mor)}/100</span></div>
+      <div class="bar"><i style="width:${Math.round(p.mor)}%;background:${p.mor >= 58 ? "var(--accent)" : p.mor >= 42 ? "var(--gold)" : "var(--red)"}"></i></div>
+      ${reasons.length ? `<div class="small" style="display:grid;gap:2px">${reasons.map(([k, t]) => `<div style="color:${col[k]}">• ${esc(t)}</div>`).join("")}</div>` : ""}
+      ${ui.talkMsg && ui.talkMsg.id === p.id ? `<div class="pill ${ui.talkMsg.delta > 0 ? "green" : ui.talkMsg.delta < 0 ? "red" : ""}" style="white-space:normal">${esc(ui.talkMsg.text)}</div>` : ""}
+      ${can ? `<div class="row wrap">${MO.talkOptions(S, p).map((o) => `<button class="btn sm" data-act="talk" data-id="${p.id}" data-k="${o.k}">${o.label}</button>`).join("")}</div>` : `<div class="small muted">Đã nói chuyện ngày ${FM.fmtDate(d.talk, false)} — chờ 14 ngày.</div>`}
+    </div>`;
+  }
   function mailRow(m) {
     const body = esc(m.b).replace(/\*\*(.+?)\*\*/g, "<b>$1</b>");
     return `<details class="mail ${m.r ? "" : "unread"}" data-mail="${m.id}">
@@ -241,15 +306,53 @@
       return `<button class="benchslot ${sel ? "sel" : ""}" data-act="slot" data-t="bench" data-i="${i}">${p ? `${posTag(p.pos)} <b class="ellipsis">${esc(p.sn)}</b>` : `<span class="muted">+ Dự bị ${i + 1}</span>`}</button>`;
     }).join("");
     const order = ["GK", "CB", "LB", "RB", "DM", "CM", "AM", "LM", "RM", "LW", "RW", "ST"];
-    const rows = [...squad]
-      .sort((a, b) => order.indexOf(a.pos) - order.indexOf(b.pos) || b.ca - a.ca)
+    const f = ui.sq;
+    const selRole = ui.sel && ui.sel.t === "xi" ? slots[ui.sel.i][0] : null;
+    const canPlay = (p, role) => p.pos === role || !!(p.alt && p.alt[role]);
+    const STATUS = {
+      xi: (p) => c.lineup.includes(p.id),
+      bench: (p) => c.bench.includes(p.id),
+      out: (p) => !c.lineup.includes(p.id) && !c.bench.includes(p.id),
+      ready: (p) => p.available && p.fit >= 75,
+      unavail: (p) => !p.available,
+      tired: (p) => p.available && p.fit < 75,
+      fs: (p) => p.fs,
+      young: (p) => p.age <= 23,
+      unhappy: (p) => p.wantsOut || (p.unhappy || 0) >= 4 || p.mor < 42,
+    };
+    const SORT = {
+      pos: (a, b) => order.indexOf(a.pos) - order.indexOf(b.pos) || b.ca - a.ca,
+      ovr: (a, b) => b.ca - a.ca,
+      fit: (a, b) => b.fit - a.fit,
+      mor: (a, b) => b.mor - a.mor,
+      age: (a, b) => a.age - b.age,
+      role: (a, b) => FM.effective(b, f.pos, b.fit, b.mor) - FM.effective(a, f.pos, a.fit, a.mor),
+    };
+    const list = squad
+      .filter((p) => !f.g || FM.POS_GROUP[p.pos] === f.g)
+      .filter((p) => !f.pos || canPlay(p, f.pos))
+      .filter((p) => !f.st || STATUS[f.st](p))
+      .sort(SORT[f.pos && f.sort === "pos" ? "role" : f.sort] || SORT.pos);
+    const groups = [["", "Tất cả"], ["GK", "GK"], ["DF", "DF"], ["MF", "MF"], ["FW", "FW"]];
+    const sqSel = (k, opts) => `<select data-change="sq" data-k="${k}" class="btn sm">${opts.map(([v, l]) => `<option value="${v}" ${f[k] === v ? "selected" : ""}>${l}</option>`).join("")}</select>`;
+    const filterBar = `<div class="card-b" style="display:grid;gap:8px;padding-bottom:4px">
+        <div class="seg">${groups.map(([g, l]) => `<button class="${f.g === g ? "on" : ""}" data-act="sq" data-k="g" data-v="${g}">${l}</button>`).join("")}</div>
+        <div class="row wrap">
+          ${sqSel("pos", [["", "Mọi vị trí"], ...order.map((r) => [r, `Đá được ${r} – ${FM.POS_NAME[r]}`])])}
+          ${sqSel("st", [["", "Mọi trạng thái"], ["xi", "Đá chính"], ["bench", "Dự bị"], ["out", "Ngoài đội hình"], ["ready", "Sẵn sàng (thể lực ≥ 75%)"], ["tired", "Đang mệt"], ["unavail", "Chấn thương / treo giò"], ["fs", "Ngoại binh"], ["young", "≤ 23 tuổi"], ["unhappy", "Đang không vui"]])}
+          ${sqSel("sort", [["pos", "Xếp theo vị trí"], ["ovr", "Chỉ số tổng"], ["fit", "Thể lực"], ["mor", "Tâm lý"], ["age", "Trẻ nhất"]])}
+          ${f.g || f.pos || f.st || f.sort !== "pos" ? `<button class="btn sm" data-act="sq-reset">✕ Bỏ lọc</button>` : ""}
+        </div>
+        ${selRole && f.pos !== selRole ? `<button class="btn sm primary" data-act="sq" data-k="pos" data-v="${selRole}">Chỉ hiện người đá được ${selRole} (ô đang chọn)</button>` : ""}
+      </div>`;
+    const rows = list
       .map((p) => {
         const inXI = c.lineup.includes(p.id);
         const onB = c.bench.includes(p.id);
         return `<tr class="click ${inXI ? "inxi" : onB ? "onbench" : ""}" data-act="prow" data-id="${p.id}">
           <td>${posTag(p.pos)}</td>
           <td class="l"><b>${esc(p.sn)}</b>${flags(p)} ${status(p)}<div class="small muted">${p.no ?? "–"} · ${p.age} tuổi${inXI ? " · đá chính" : onB ? " · dự bị" : ""}</div></td>
-          <td>${stars(p.ca)}</td>
+          <td class="nowrap">${ovr(p)} ${stars(p.ca)}${f.pos && p.pos !== f.pos ? `<div class="small muted">${f.pos}: ${FM.famLevel(p.alt[f.pos])}</div>` : ""}</td>
           <td class="small" style="color:${p.fit > 75 ? "var(--accent)" : p.fit > 55 ? "var(--orange)" : "var(--red)"}">${Math.round(p.fit)}%</td>
           <td>${moraleIcon(p.mor)}</td>
           <td><button class="btn sm" data-act="info" data-id="${p.id}">ⓘ</button></td>
@@ -265,8 +368,9 @@
         <div class="small muted">Dự bị (tối đa ${FM.BENCH_SIZE}, thay được ${FM.MAX_SUBS} người mỗi trận)</div>
         <div class="bench">${bench}</div>
       </div></div>
-    <div class="card"><h3>Cầu thủ (${squad.length})</h3><div class="scroll-x"><table class="plist"><thead><tr><th>VT</th><th class="l">Tên</th><th>Năng lực</th><th>Thể lực</th><th>Tâm lý</th><th></th></tr></thead><tbody>${rows}</tbody></table></div></div>`;
+    <div class="card"><h3>Cầu thủ (${list.length === squad.length ? squad.length : `${list.length}/${squad.length}`})</h3>${filterBar}<div class="scroll-x"><table class="plist"><thead><tr><th>VT</th><th class="l">Tên</th><th>Tổng</th><th>Thể lực</th><th>Tâm lý</th><th></th></tr></thead><tbody>${rows || `<tr><td class="muted" colspan="6">Không có cầu thủ phù hợp.</td></tr>`}</tbody></table></div></div>`;
   }
+  ui.sq = { g: "", pos: "", st: "", sort: "pos" };
   function formationSeg(cur) {
     return `<div class="seg">${Object.keys(FM.FORMATIONS)
       .map((f) => `<button class="${f === cur ? "on" : ""}" data-act="formation" data-f="${f}">${f}</button>`)
@@ -312,7 +416,10 @@
   };
   function viewTactics() {
     const c = S.clubs[S.user];
-    return `<div class="card"><h3>Sơ đồ</h3><div class="card-b">${formationSeg(c.formation)}<p class="small muted" style="margin:8px 0 0">Đổi sơ đồ sẽ tự xếp lại đội hình hợp nhất; bạn có thể chỉnh lại ở mục Đội hình.</p></div></div>
+    const fam = TRN.familiarity(S, S.user);
+    return `<div class="card"><h3>Sơ đồ</h3><div class="card-b">${formationSeg(c.formation)}<p class="small muted" style="margin:8px 0 0">Đổi sơ đồ sẽ tự xếp lại đội hình hợp nhất; bạn có thể chỉnh lại ở mục Đội hình.</p>
+      <div class="row small" style="margin-top:8px"><span class="grow">Độ ăn ý với ${c.formation}</span><b>${fam}%</b></div><div class="bar"><i style="width:${fam}%;background:${fam >= 75 ? "var(--accent)" : fam >= 50 ? "var(--gold)" : "var(--orange)"}"></i></div>
+      <p class="small muted" style="margin:6px 0 0">Sơ đồ càng quen đội càng chơi tốt (sơ đồ mới yếu hơn tới 6%). Tập dần mỗi tuần; bỏ lâu thì quên.</p></div></div>
     <div class="card"><h3>Chỉ đạo chiến thuật</h3>
       ${Object.entries(FM.TACTIC_OPTIONS)
         .map(
@@ -322,6 +429,7 @@
         )
         .join("")}
     </div>
+    ${viewTraining()}
     <div class="card"><h3>Luật cần nhớ</h3><div class="card-b small muted" style="display:grid;gap:4px">
       <div>• Tối đa ${FM.MAX_FOREIGN_ON_PITCH} ngoại binh có mặt trên sân cùng lúc (Việt kiều, cầu thủ nhập tịch không tính).</div>
       <div>• Thẻ đỏ: nghỉ 1–2 trận. Tích đủ 4 thẻ vàng: nghỉ 1 trận.</div>
@@ -329,9 +437,38 @@
     </div></div>`;
   }
 
+  // ---------- Tập luyện ----------
+  const TRN = FM.Training;
+  function viewTraining() {
+    TRN.ensure(S);
+    const t = S.clubs[S.user].train;
+    const plan = TRN.plan(S, S.user);
+    const x = (v) => (v === 1 ? "bình thường" : `×${v.toFixed(2).replace(/0$/, "")}`);
+    const prog = W.squad(S, S.user)
+      .filter((p) => p.dg > 0)
+      .sort((a, b) => b.dg - a.dg || a.age - b.age)
+      .slice(0, 10);
+    const others = Object.entries(S.clubs[S.user].fam || {}).filter(([f]) => f !== S.clubs[S.user].formation && f in FM.FORMATIONS);
+    return `<div class="card"><h3>Tập luyện</h3><div class="card-b" style="display:grid;gap:10px">
+      <div class="field"><label>Giáo án</label><div class="seg">${TRN.FOCUS.map((f, i) => `<button class="${t.focus === i ? "on" : ""}" data-act="train" data-k="focus" data-v="${i}">${f.name}</button>`).join("")}</div><div class="small muted">${TRN.FOCUS[t.focus].desc}</div></div>
+      <div class="field"><label>Cường độ</label><div class="seg">${TRN.INTENSITY.map((f, i) => `<button class="${t.int === i ? "on" : ""}" data-act="train" data-k="int" data-v="${i}">${f.name}</button>`).join("")}</div></div>
+      <div class="kv"><div><small>Phát triển</small><b>${x(plan.dev)}</b></div><div><small>Hồi thể lực</small><b>${x(plan.rec)}</b></div><div><small>Nguy cơ chấn thương khi tập</small><b style="color:${plan.inj > 1.2 ? "var(--red)" : plan.inj < 0.8 ? "var(--accent)" : "var(--text)"}">${x(plan.inj)}</b></div><div><small>Độ ăn ý sơ đồ</small><b>${plan.fam > 1 ? "tăng gấp đôi" : "bình thường"}</b></div></div>
+      <div class="small muted">Cầu thủ đến 27 tuổi còn khoảng cách tới tiềm năng sẽ tiến bộ dần mỗi tuần, nhanh nhất là cầu thủ trẻ, được ra sân nhiều và chuyên nghiệp. Cầu thủ từ khoảng 29 tuổi sa sút dần khi sang mùa mới. Đội máy tập cân bằng, cường độ vừa.</div>
+    </div>
+    ${others.length ? `<div class="card-b small muted" style="border-top:1px solid var(--line)">Sơ đồ đã tập: ${others.map(([f, v]) => `<b>${f}</b>: ${Math.round(v)}%`).join(" · ")}</div>` : ""}
+    </div>
+    <div class="card"><h3>Tiến bộ mùa này</h3>${
+      prog.length
+        ? `<table class="plist"><tbody>${prog.map((p) => `<tr class="click" data-act="info" data-id="${p.id}"><td>${posTag(p.pos)}</td><td class="l"><b>${esc(p.sn)}</b><div class="small muted">${p.age} tuổi</div></td><td class="nowrap">${ovr(p)} ${stars(p.ca)}</td><td><b style="color:var(--accent)">+${p.dg}</b></td></tr>`).join("")}</tbody></table>`
+        : `<div class="card-b small muted">Chưa ai tiến bộ — chờ vài tuần tập luyện.</div>`
+    }</div>`;
+  }
+
   // ---------- Lịch thi đấu ----------
   function viewFixtures() {
-    const tabs = `<div class="tabs"><button data-act="fx-tab" data-t="mine" class="${ui.fxTab === "mine" ? "on" : ""}">Đội của tôi</button><button data-act="fx-tab" data-t="${V1}" class="${ui.fxTab === V1 ? "on" : ""}">V.League 1</button><button data-act="fx-tab" data-t="${V2}" class="${ui.fxTab === V2 ? "on" : ""}">V.League 2</button></div>`;
+    const tabs = `<div class="tabs"><button data-act="fx-tab" data-t="mine" class="${ui.fxTab === "mine" ? "on" : ""}">Đội của tôi</button><button data-act="fx-tab" data-t="${V1}" class="${ui.fxTab === V1 ? "on" : ""}">V.League 1</button><button data-act="fx-tab" data-t="${V2}" class="${ui.fxTab === V2 ? "on" : ""}">V.League 2</button><button data-act="fx-tab" data-t="cup" class="${ui.fxTab === "cup" ? "on" : ""}">Cúp QG</button>${S.afc ? `<button data-act="fx-tab" data-t="afc" class="${ui.fxTab === "afc" ? "on" : ""}">Châu Á</button>` : ""}</div>`;
+    if (ui.fxTab === "cup") return tabs + viewCup();
+    if (ui.fxTab === "afc") return tabs + viewAsia();
     if (ui.fxTab === "mine") {
       const list = S.fx.filter((f) => f.h === S.user || f.a === S.user).sort((a, b) => a.d.localeCompare(b.d));
       return tabs + `<div class="card"><table><tbody>${list.map((f) => fixtureRow(f, true)).join("")}</tbody></table></div>`;
@@ -349,6 +486,78 @@
       <table><tbody>${list.map((f) => fixtureRow(f, false)).join("")}</tbody></table></div>`
     );
   }
+  function viewAsia() {
+    if (!S.afc) return `<div class="card"><div class="card-b muted">Mùa này không có giải châu Á.</div></div>`;
+    const comp = ui.afcTab || (S.afc.vn.acl2.includes(S.user) ? "acl2" : "acle");
+    const st = S.afc.comps[comp];
+    const fx = (id) => S.fx.find((f) => f.id === id);
+    const nm = (id) => `<span class="tclub">${crest(id, "sm")}<span class="ellipsis link" data-act="club-view" data-id="${id}">${esc(club(id).name)}</span></span>`;
+    const vn = S.afc.vn[comp] || [];
+    const head = `<div class="seg" style="margin-bottom:10px">${Object.entries(AF.COMPS).map(([k, c]) => `<button class="${comp === k ? "on" : ""}" data-act="afc-tab" data-t="${k}">${c.short} · ${esc(c.name.replace("AFC ", ""))}</button>`).join("")}</div>
+      <div class="card"><div class="card-b" style="display:grid;gap:6px">
+        <div class="small muted">Đại diện Việt Nam</div>
+        ${vn.length ? vn.map((id) => `<div class="row">${crest(id, "sm")}<b class="grow">${esc(club(id).name)}</b><span class="small">${esc(AF.result(S, comp, id))}</span></div>`).join("") : `<div class="small muted">Không có.</div>`}
+        ${st.winner ? `<div class="row"><span style="font-size:20px">🏆</span><span class="grow">Vô địch: <b>${esc(club(st.winner).name)}</b></span></div>` : `<div class="small muted">Giai đoạn hiện tại: ${AF.STAGE_NAME[st.stage] || ""}</div>`}
+      </div></div>`;
+    // các vòng loại trực tiếp (mới nhất trước)
+    const ko = ["f", "sf", "qf", "r16"]
+      .map((stage) => {
+        const ties = st.ties.filter((t) => t.stage === stage);
+        if (!ties.length) return "";
+        return `<div class="card"><h3>${AF.STAGE_NAME[stage]}</h3><table><tbody>${ties
+          .map((t) => {
+            const legs = t.legs.map(fx);
+            const last = legs[legs.length - 1];
+            let score;
+            if (legs.length === 1) score = last.done ? `<b>${last.h === t.a ? last.hg : last.ag} – ${last.h === t.a ? last.ag : last.hg}</b>${last.pens ? `<div class="small muted">pen</div>` : ""}` : `<span class="small muted">${FM.fmtShortDate(last.d)}</span>`;
+            else score = t.agg ? `<b>${t.agg[0]} – ${t.agg[1]}</b><div class="small muted">${legs.map((f) => `${f.h === t.a ? f.hg : f.ag}-${f.h === t.a ? f.ag : f.hg}`).join(", ")}${t.pens ? " · pen" : ""}</div>` : `<span class="small muted">${legs.map((f) => (f.done ? `${f.h === t.a ? f.hg : f.ag}-${f.h === t.a ? f.ag : f.hg}` : FM.fmtShortDate(f.d))).join(" / ")}</span>`;
+            const me = t.a === S.user || t.b === S.user;
+            return `<tr class="${me ? "me" : ""}"><td class="right" style="${t.w && t.w !== t.a ? "opacity:.55" : ""}">${nm(t.a)}</td><td class="center nowrap">${score}</td><td class="l" style="${t.w && t.w !== t.b ? "opacity:.55" : ""}">${nm(t.b)}</td></tr>`;
+          })
+          .join("")}</tbody></table></div>`;
+      })
+      .join("");
+    const mini = (title, teams, filter, cut) => {
+      const rows = AF.table(S, comp, teams, filter);
+      return `<div class="card"><h3>${title}</h3><table><thead><tr><th>#</th><th class="l">CLB</th><th>Tr</th><th>HS</th><th>Đ</th></tr></thead><tbody>${rows
+        .map((r, i) => `<tr class="${r.id === S.user ? "me" : ""} ${i < cut ? "zone-up" : ""}"><td>${i + 1}</td><td class="l">${nm(r.id)}<div class="small muted" style="margin-left:32px">${esc(AF.isForeign(r.id) ? AF.club(r.id).country : "Việt Nam")}</div></td><td>${r.p}</td><td>${r.gf - r.ga > 0 ? "+" : ""}${r.gf - r.ga}</td><td><b>${r.pts}</b></td></tr>`)
+        .join("")}</tbody></table></div>`;
+    };
+    let tables = "";
+    if (comp === "acle") tables = ["East", "West"].map((r) => mini(`Vòng phân hạng · Khu vực ${r === "East" ? "Đông" : "Tây"}`, st.regions[r], (f) => f.stage === "ls", 8)).join("");
+    else {
+      const order = Object.keys(st.groups).sort((a, b) => (vn.some((id) => st.groups[b].includes(id)) - vn.some((id) => st.groups[a].includes(id))) || (b >= "E") - (a >= "E") || a.localeCompare(b));
+      tables = order.map((g) => mini(`Bảng ${g} · ${g >= "E" ? "Đông" : "Tây"}`, st.groups[g], (f) => f.grp === g, 2)).join("");
+    }
+    const mine = S.fx.filter((f) => f.lg === comp && vn.some((id) => f.h === id || f.a === id)).sort((a, b) => a.d.localeCompare(b.d));
+    return head + ko + `<div class="card"><h3>Lịch đội Việt Nam</h3><table><tbody>${mine.map((f) => fixtureRow(f, false)).join("") || `<tr><td class="muted">—</td></tr>`}</tbody></table></div>` + tables;
+  }
+  function viewCup() {
+    if (!S.cup) return `<div class="card"><div class="card-b muted">Chưa có Cúp mùa này.</div></div>`;
+    const sc = S.fx.find((f) => f.lg === "super");
+    const rounds = FM.Cups.rounds(S);
+    return `<div class="card"><div class="card-b row"><span class="grow">Đội của bạn: <b>${esc(FM.Cups.userStatus(S))}</b></span>${S.cup.winner ? `<span class="pill gold">Vô địch: ${esc(club(S.cup.winner).name)}</span>` : ""}</div></div>
+      ${sc ? `<div class="card"><h3>Siêu Cúp Quốc gia</h3><table><tbody>${fixtureRow(sc, false)}</tbody></table></div>` : ""}
+      ${rounds
+        .slice()
+        .reverse()
+        .map((R) => `<div class="card"><h3>${R.name}<span class="grow"></span><span class="small muted">${FM.fmtDate(R.ties[0].d)}</span></h3><table><tbody>${R.ties.map((f) => fixtureRow(f, false)).join("")}</tbody></table></div>`)
+        .join("")}
+      ${S.cup.round === 0 && S.cup.byes.length ? `<div class="card"><div class="card-b small muted">Miễn vòng loại: ${S.cup.byes.map((id) => esc(club(id).name)).join(", ")}</div></div>` : ""}`;
+  }
+  function trophies() {
+    const list = [];
+    for (const h of S.history) {
+      if (h.champions[V1] === S.user) list.push(["🏆", "Vô địch V.League 1", h.season]);
+      if (h.champions[V2] === S.user) list.push(["🥇", "Vô địch V.League 2", h.season]);
+      if (h.cup && h.cup.winner === S.user) list.push(["🏆", "Cúp Quốc gia", h.season]);
+      if (h.cup && h.cup.superWinner === S.user) list.push(["🛡️", "Siêu Cúp Quốc gia", h.season]);
+      if (h.promoted.includes(S.user)) list.push(["⬆️", "Lên hạng V.League 1", h.season]);
+      for (const [k, c] of Object.entries(AF.COMPS)) if (h.afc && h.afc[k] && h.afc[k].winner === S.user) list.push(["🌏", c.name, h.season]);
+    }
+    if (S.cup && S.cup.superWinner === S.user && !S.history.some((h) => h.season === W.label(S))) list.push(["🛡️", "Siêu Cúp Quốc gia", W.label(S)]);
+    return list;
+  }
   function fixtureRow(f, mine) {
     const score = f.done ? `<b>${f.hg} – ${f.ag}</b>${f.pens ? `<div class="small muted">pen ${f.pens[0]}–${f.pens[1]}</div>` : ""}` : `<span class="muted small">${FM.fmtShortDate(f.d)}</span>`;
     let res = "";
@@ -358,7 +567,7 @@
       res = my > op ? '<span class="pill green">T</span>' : my < op ? '<span class="pill red">B</span>' : '<span class="pill">H</span>';
     }
     return `<tr class="${f.h === S.user || f.a === S.user ? "me" : ""} ${f.done ? "click" : ""}" ${f.done ? `data-act="fx-detail" data-id="${f.id}"` : ""}>
-      ${mine ? `<td class="small muted">${f.po ? "PO" : `V${f.rd}`}</td>` : ""}
+      ${mine ? `<td class="small muted">${f.po ? "PO" : AF.isAfc(f) ? AF.COMPS[f.lg].short : f.lg === "super" ? "SC" : f.lg === "cup" ? "CQG" : `V${f.rd}`}</td>` : ""}
       <td class="right"><span class="tclub" style="justify-content:flex-end;margin-left:auto"><span class="ellipsis">${esc(club(f.h).name)}</span>${crest(f.h, "sm")}</span></td>
       <td>${score}</td>
       <td class="l"><span class="tclub">${crest(f.a, "sm")}<span class="ellipsis">${esc(club(f.a).name)}</span></span></td>
@@ -380,10 +589,11 @@
         <div><small>Số dư</small><b>${FM.fmtMoney(c.bal)}</b></div>
         <div><small>Quỹ lương / tháng</small><b style="color:${bill > c.wageCap ? "var(--red)" : "var(--text)"}">${FM.fmtWage(bill)} / ${FM.fmtWage(c.wageCap)}</b></div>
       </div>${win.open ? "" : `<div class="card-b small muted" style="padding-top:0">Ngoài kỳ chuyển nhượng vẫn ký được cầu thủ tự do.</div>`}</div>
-      <div class="tabs">${tab("search", "Tìm cầu thủ")}${tab("offers", `Đề nghị${open.length ? ` (${open.length})` : ""}`)}${tab("contracts", "Hợp đồng")}${tab("news", "Tin tức")}</div>`;
+      <div class="tabs">${tab("search", "Tìm kiếm")}${tab("offers", `Đề nghị${open.length ? ` (${open.length})` : ""}`)}${tab("scout", `Tuyển trạch${SC.ensure(S).jobs.length ? ` (${S.sc.jobs.length})` : ""}`)}${tab("contracts", "Hợp đồng")}${tab("news", "Tin tức")}</div>`;
     if (ui.mk.tab === "offers") return head + viewOffers();
     if (ui.mk.tab === "contracts") return head + viewContracts();
     if (ui.mk.tab === "news") return head + viewTransferNews();
+    if (ui.mk.tab === "scout") return head + viewScouting();
     const f = ui.mk;
     const list = T.search(S, { group: f.group, where: f.where === "listed" ? "all" : f.where, listed: f.where === "listed", sort: f.sort, maxAge: +f.maxAge || 0, maxFee: +f.maxFee || 0 });
     const groups = [["", "Tất cả"], ["GK", "Thủ môn"], ["DF", "Hậu vệ"], ["MF", "Tiền vệ"], ["FW", "Tiền đạo"]];
@@ -403,7 +613,7 @@
         list
           .slice(0, f.limit)
           .map(
-            (p) => `<tr class="click" data-act="info" data-id="${p.id}"><td>${posTag(p.pos)}</td><td class="l" style="white-space:normal"><b>${esc(p.sn)}</b>${flags(p)} ${status(p)}${S.p[p.id].listed ? ' <span class="pill gold">Rao bán</span>' : ""}<div class="small muted">${p.age} tuổi · ${esc(club(p.c).name)}${p.ce ? ` · HĐ ${p.ce.slice(0, 4)}` : ""}</div></td><td>${stars(p.ca)}<div class="small muted">TN ${stars(p.pa)}</div><b class="small">${FM.fmtMoney(p.val)}</b></td></tr>`,
+            (p) => `<tr class="click" data-act="info" data-id="${p.id}"><td>${posTag(p.pos)}</td><td class="l" style="white-space:normal"><b>${esc(p.sn)}</b>${flags(p)} ${status(p)}${S.p[p.id].listed ? ' <span class="pill gold">Rao bán</span>' : ""}${gradePill(p.id)}<div class="small muted">${p.age} tuổi · ${esc(club(p.c).name)}${p.ce ? ` · HĐ ${p.ce.slice(0, 4)}` : ""}</div></td><td>${ovr(p)} ${caStars(p)}<div class="small muted">TN ${paStars(p)}</div><b class="small">${valText(p)}</b></td></tr>`,
           )
           .join("") || `<tr><td class="muted">Không có cầu thủ phù hợp.</td></tr>`
       }</tbody></table></div>
@@ -424,22 +634,66 @@
         ? open
             .map((o) => {
               const p = W.player(S, o.pid);
+              if (o.type === "loan")
+                return `<div class="card-b" style="border-top:1px solid var(--line);display:grid;gap:8px"><div class="row">${crest(o.from, "sm")}<div class="grow"><b>${esc(club(o.from).name)}</b> muốn mượn <b class="link" data-act="info" data-id="${p.id}">${esc(p.sn)}</b><div class="small muted">Đến hết mùa · vai trò dự kiến: ${FM.Loans.ROLE_LABEL[o.role].toLowerCase()} · hết hạn ${FM.fmtDate(o.exp, false)}</div></div><b style="font-size:15px">${Math.round(o.share * 100)}% lương</b></div>
+              <div class="row wrap"><button class="btn sm primary" data-act="loan-accept" data-id="${o.id}">Đồng ý cho mượn</button><button class="btn sm danger" data-act="offer-reject" data-id="${o.id}">Từ chối</button></div></div>`;
               return `<div class="card-b" style="border-top:1px solid var(--line);display:grid;gap:8px"><div class="row">${crest(o.from, "sm")}<div class="grow"><b>${esc(club(o.from).name)}</b> muốn mua <b class="link" data-act="info" data-id="${p.id}">${esc(p.sn)}</b><div class="small muted">Giá trị ${FM.fmtMoney(p.val)} · hết hạn ${FM.fmtDate(o.exp, false)}</div></div><b style="font-size:16px">${FM.fmtMoney(o.fee)}</b></div>
               <div class="row wrap"><button class="btn sm primary" data-act="offer-accept" data-id="${o.id}">Đồng ý bán</button><button class="btn sm" data-act="offer-counter" data-id="${o.id}">Ra giá</button><button class="btn sm danger" data-act="offer-reject" data-id="${o.id}">Từ chối</button></div></div>`;
             })
             .join("")
-        : `<div class="card-b muted">Chưa có đề nghị nào. Rao bán cầu thủ (trong hồ sơ cầu thủ) để thu hút người mua.</div>`
+        : `<div class="card-b muted">Chưa có đề nghị nào. Rao bán hoặc đánh dấu cho mượn (trong hồ sơ cầu thủ) để các CLB khác chú ý.</div>`
     }</div>
-    ${past.length ? `<div class="card"><h3>Đã xử lý</h3><table><tbody>${past.map((o) => `<tr><td class="l">${esc(W.player(S, o.pid)?.sn || "?")}</td><td class="l small">${esc(club(o.from).name)}</td><td>${FM.fmtMoney(o.fee)}</td><td class="small">${{ accepted: "Đã bán", rejected: "Từ chối", expired: "Hết hạn" }[o.status] || o.status}</td></tr>`).join("")}</tbody></table></div>` : ""}`;
+    ${past.length ? `<div class="card"><h3>Đã xử lý</h3><table><tbody>${past.map((o) => `<tr><td class="l">${esc(W.player(S, o.pid)?.sn || "?")}</td><td class="l small">${esc(club(o.from).name)}</td><td>${o.type === "loan" ? `Mượn ${Math.round(o.share * 100)}%` : FM.fmtMoney(o.fee)}</td><td class="small">${{ accepted: o.type === "loan" ? "Đã cho mượn" : "Đã bán", rejected: "Từ chối", expired: "Hết hạn" }[o.status] || o.status}</td></tr>`).join("")}</tbody></table></div>` : ""}`;
   }
   function viewContracts() {
     const end = `${S.season + 1}-06-30`;
-    const squad = W.squad(S, S.user).sort((a, b) => (a.ce || "").localeCompare(b.ce || "") || b.ca - a.ca);
+    const squad = W.squad(S, S.user)
+      .filter((p) => !p.loan)
+      .sort((a, b) => (a.ce || "").localeCompare(b.ce || "") || b.ca - a.ca);
     return `<div class="card"><h3>Hợp đồng (${squad.length} cầu thủ)</h3><div class="scroll-x"><table class="plist"><thead><tr><th>VT</th><th class="l">Cầu thủ</th><th>Lương</th><th>Hết hạn</th><th></th></tr></thead><tbody>${squad
       .map(
         (p) => `<tr><td>${posTag(p.pos)}</td><td class="l click" data-act="info" data-id="${p.id}"><b>${esc(p.sn)}</b>${flags(p)}${S.p[p.id].listed ? ' <span class="pill gold">Rao bán</span>' : ""}<div class="small muted">${p.age} tuổi · ${T.ROLE_LABEL[T.role(S, p)]}</div></td><td class="small">${FM.fmtWage(p.wage)}</td><td class="small" style="color:${p.ce <= end ? "var(--red)" : "var(--text)"}">${FM.fmtDate(p.ce, false)}</td><td><button class="btn sm" data-act="renew" data-id="${p.id}">Gia hạn</button></td></tr>`,
       )
-      .join("")}</tbody></table></div><div class="card-b small muted">Hợp đồng hết hạn ngày 30/6 (màu đỏ: hết hạn cuối mùa này). Không gia hạn thì cầu thủ ra đi tự do.</div></div>`;
+      .join("")}</tbody></table></div><div class="card-b small muted">Hợp đồng hết hạn ngày 30/6 (màu đỏ: hết hạn cuối mùa này). Không gia hạn thì cầu thủ ra đi tự do.</div></div>${viewLoans()}`;
+  }
+  function viewLoans() {
+    const all = Object.keys(S.p).filter((id) => S.p[id].loan).map((id) => W.player(S, id));
+    const out = all.filter((p) => p.loan.from === S.user);
+    const inn = all.filter((p) => p.c === S.user);
+    const stat = (p) => `${p.st.ap} trận · ${p.st.g} bàn${p.st.ap ? ` · TB ${(p.st.rs / p.st.ap).toFixed(1)}` : ""}${p.dg ? ` · <b style="color:var(--accent)">+${p.dg}</b>` : ""}`;
+    const end = FM.fmtDate(`${S.season + 1}-06-30`, false);
+    return `<div class="card"><h3>Đang cho mượn (${out.length})</h3>${
+      out.length
+        ? `<table class="plist"><tbody>${out.map((p) => `<tr class="click" data-act="info" data-id="${p.id}"><td>${posTag(p.pos)}</td><td class="l" style="white-space:normal"><b>${esc(p.sn)}</b><div class="small muted">${p.age} tuổi · ${esc(club(p.c).name)} · họ trả ${Math.round(p.loan.share * 100)}% lương</div></td><td class="small">${stat(p)}</td></tr>`).join("")}</tbody></table>`
+        : `<div class="card-b small muted">Chưa cho mượn ai. Cầu thủ trẻ ít được đá có thể cho mượn để có trận và phát triển nhanh hơn: mở hồ sơ cầu thủ → "Cho mượn", các CLB cần người sẽ gửi đề nghị trong kỳ chuyển nhượng.</div>`
+    }</div>
+    <div class="card"><h3>Đang mượn (${inn.length})</h3>${
+      inn.length
+        ? `<table class="plist"><tbody>${inn.map((p) => `<tr><td>${posTag(p.pos)}</td><td class="l click" data-act="info" data-id="${p.id}" style="white-space:normal"><b>${esc(p.sn)}</b><div class="small muted">từ ${esc(club(p.loan.from).name)} · bạn trả ${Math.round(p.loan.share * 100)}% lương (${FM.fmtWage(p.wage * p.loan.share)})</div></td><td>${p.loan.buy ? `<button class="btn sm primary" data-act="loan-exercise" data-id="${p.id}">Mua đứt ${FM.fmtMoney(p.loan.buy)}</button>` : `<span class="small muted">${stat(p)}</span>`}</td></tr>`).join("")}</tbody></table>`
+        : `<div class="card-b small muted">Chưa mượn ai. Mở hồ sơ cầu thủ đội khác → "Hỏi mượn" khi kỳ chuyển nhượng mở.</div>`
+    }<div class="card-b small muted" style="border-top:1px solid var(--line)">Mọi hợp đồng cho mượn kết thúc ngày ${end}, cầu thủ trở về CLB chủ quản.</div></div>`;
+  }
+  function viewScouting() {
+    const sc = SC.ensure(S);
+    const slots = SC.slots(S);
+    const jobName = (j) => (j.kind === "club" ? `CLB ${esc(club(j.target).name)}` : esc(W.player(S, j.target)?.n || "?"));
+    const jobs = sc.jobs
+      .map(
+        (j) => `<div class="card-b" style="border-top:1px solid var(--line);display:grid;gap:6px"><div class="row"><span style="font-size:18px">${j.kind === "club" ? "🏟️" : "🔍"}</span><b class="grow link" data-act="${j.kind === "club" ? "club-view" : "info"}" data-id="${j.target}">${jobName(j)}</b><span class="small muted">xong ${FM.fmtDate(j.end, false)}</span><button class="btn sm danger" data-act="scout-cancel" data-id="${j.id}">Huỷ</button></div><div class="bar"><i style="width:${Math.round(SC.progress(S, j) * 100)}%"></i></div></div>`,
+      )
+      .join("");
+    const reps = Object.entries(sc.reports)
+      .map(([id, r]) => [W.player(S, id), r])
+      .filter(([p]) => p && p.c !== S.user)
+      .sort((a, b) => a[1].grade.localeCompare(b[1].grade) || b[1].d.localeCompare(a[1].d));
+    return `<div class="card"><h3>Tuyển trạch viên (${sc.jobs.length}/${slots} đang bận)</h3>${
+      jobs || `<div class="card-b muted small">Chưa giao việc nào. Mở hồ sơ một cầu thủ đội khác và bấm "Cử tuyển trạch", hoặc mở trang một CLB để theo dõi cả đội.</div>`
+    }<div class="card-b small muted" style="border-top:1px solid var(--line)">Một cầu thủ: 5–8 ngày, ${FM.fmtMoney(SC.COST.player)}, biết chính xác mọi chỉ số kèm báo cáo. Cả CLB: 14–18 ngày, ${FM.fmtMoney(SC.COST.club)}, biết khá rõ cả đội. Khác giải thì lâu hơn. Cầu thủ đối thủ đã ra sân gặp đội bạn cũng được biết thêm.</div></div>
+    <div class="card"><h3>Báo cáo (${reps.length})</h3>${
+      reps.length
+        ? `<table class="plist"><tbody>${reps.map(([p, r]) => `<tr class="click" data-act="info" data-id="${p.id}"><td><span class="pill grade g${r.grade}">${r.grade}</span></td><td>${posTag(p.pos)}</td><td class="l" style="white-space:normal"><b>${esc(p.sn)}</b>${flags(p)}<div class="small muted">${p.age} tuổi · ${esc(club(p.c).name)}${r.season !== S.season ? " · báo cáo mùa trước" : ""}</div></td><td>${ovr(p)} ${caStars(p)}<div class="small"><b>${valText(p)}</b></div></td></tr>`).join("")}</tbody></table>`
+        : `<div class="card-b muted small">Chưa có báo cáo nào.</div>`
+    }</div>`;
   }
   function viewTransferNews() {
     const log = S.tr.log.slice(0, 60);
@@ -455,13 +709,29 @@
     `<div class="row wrap">${steps.filter((x) => x < 0).map((x) => `<button class="btn sm" data-act="adj" data-for="${id}" data-step="${x}">${x}</button>`).join("")}
      <input id="${id}" type="number" step="any" value="${value}" class="btn" style="width:110px;text-align:center"> <span class="small muted">${unit}</span>
      ${steps.filter((x) => x > 0).map((x) => `<button class="btn sm" data-act="adj" data-for="${id}" data-step="${x}">+${x}</button>`).join("")}</div>`;
+  function loanModal(pid) {
+    const p = W.player(S, pid);
+    const t = FM.Loans.terms(S, p);
+    const role = FM.Loans.roleAt(S, p, S.user);
+    const share = ui.loanShare ?? 0.5;
+    openModal(`<div class="sheet-h">${crest(p.c)}<div class="grow"><div class="t" style="font-size:20px">Hỏi mượn ${esc(p.sn)}</div><div class="small muted">${esc(club(p.c).name)} · ${T.ROLE_LABEL[T.role(S, p)]} · đến ${FM.fmtDate(`${S.season + 1}-06-30`, false)}</div></div><button class="x" data-act="close">✕</button></div>
+      <div class="sheet-b">
+        <div class="kv"><div><small>Lương cầu thủ</small><b>${FM.fmtWage(p.wage)}</b></div><div><small>Bạn trả</small><b>${FM.fmtWage(p.wage * share)}</b></div><div><small>Ở đội bạn sẽ</small><b>${role ? FM.Loans.ROLE_LABEL[role] : "khó có suất"}</b></div><div><small>Quỹ lương</small><b>${FM.fmtWage(T.wageBill(S, S.user))} / ${FM.fmtWage(S.clubs[S.user].wageCap)}</b></div></div>
+        ${t.refuse ? `<div class="pill red" style="white-space:normal">${esc(t.refuse)}</div>` : ""}
+        <label class="small muted">Phần lương bạn trả</label>
+        <div class="seg">${FM.Loans.SHARES.map((x) => `<button class="${share === x ? "on" : ""}" data-act="loan-share" data-id="${pid}" data-v="${x}">${Math.round(x * 100)}%</button>`).join("")}</div>
+        ${t.buy ? `<button class="btn ${ui.loanBuy ? "primary" : ""}" data-act="loan-buy-toggle" data-id="${pid}">${ui.loanBuy ? "☑" : "☐"} Kèm điều khoản mua đứt: ${FM.fmtMoney(t.buy)}</button>` : `<div class="small muted">Không thể kèm điều khoản mua đứt cho cầu thủ này.</div>`}
+        <div id="negMsg" class="small"></div>
+        <button class="btn primary block" data-act="loan-send" data-id="${pid}" ${t.refuse ? "disabled" : ""}>Gửi đề nghị mượn</button>
+      </div>`);
+  }
   function bidModal(pid, fee) {
     const p = W.player(S, pid);
     openModal(`<div class="sheet-h">${crest(p.c)}<div class="grow"><div class="t" style="font-size:20px">Hỏi mua ${esc(p.sn)}</div><div class="small muted">${esc(club(p.c).name)} · ${T.ROLE_LABEL[T.role(S, p)]} · HĐ đến ${FM.fmtDate(p.ce, false)}</div></div><button class="x" data-act="close">✕</button></div>
       <div class="sheet-b">
-        <div class="kv"><div><small>Giá trị ước tính</small><b>${FM.fmtMoney(p.val)}</b></div><div><small>Số dư của bạn</small><b>${FM.fmtMoney(S.clubs[S.user].bal)}</b></div><div><small>Lương hiện tại</small><b>${FM.fmtWage(p.wage)}</b></div></div>
+        <div class="kv"><div><small>Giá trị ước tính</small><b>${valText(p)}</b></div><div><small>Số dư của bạn</small><b>${FM.fmtMoney(S.clubs[S.user].bal)}</b></div><div><small>Lương hiện tại</small><b>${FM.fmtWage(p.wage)}</b></div></div>
         <label class="small muted">Phí chuyển nhượng đề nghị (tỷ VND)</label>
-        ${stepper("feeIn", fee ?? p.val, [-1, -0.5, -0.1, 0.1, 0.5, 1], "tỷ")}
+        ${stepper("feeIn", fee ?? SC.estVal(S, p), [-1, -0.5, -0.1, 0.1, 0.5, 1], "tỷ")}
         <div id="negMsg" class="small"></div>
         <button class="btn primary block" data-act="bid-send" data-id="${pid}">Gửi đề nghị</button>
       </div>`);
@@ -483,12 +753,15 @@
         ${stepper("wageIn", Math.round(dem.wage * 0.9), [-10, -5, -1, 1, 5, 10], "tr/tháng")}
         <label class="small muted">Thời hạn</label>
         <div class="seg">${[1, 2, 3, 4, 5].map((y) => `<button data-act="years" data-y="${y}" class="${y === dem.years ? "on" : ""}">${y} năm</button>`).join("")}</div>
+        <button class="btn ${ui.promise ? "primary" : ""}" data-act="promise-toggle">${ui.promise ? "☑" : "☐"} Hứa suất đá chính (cầu thủ bớt 10% lương đòi hỏi)</button>
+        <div class="small muted">Đã hứa thì trong 6 tuần cầu thủ cần đá khoảng 2/6 trận, thất hứa cậu ấy sẽ đòi ra đi.</div>
         <div id="negMsg" class="small"></div>
         <button class="btn primary block" data-act="contract-send" data-id="${pid}" data-kind="${kind}">Đề nghị hợp đồng</button>
         <div class="small muted">Cầu thủ chỉ chấp nhận tối đa 3 lần trả giá.</div>
       </div>`);
     ui.years = dem.years;
   }
+  ui.promise = false;
   function counterModal(offerId) {
     const o = S.tr.offers.find((x) => x.id === offerId);
     const p = W.player(S, o.pid);
@@ -562,7 +835,17 @@
       <div><small>Tiền vé mùa này</small><b>${FM.fmtMoney(c.gate)}</b></div>
       <div><small>Giá trị đội hình</small><b>${FM.fmtMoney(value)}</b></div>
     </div></div>
+    ${(() => {
+      const t = trophies();
+      return `<div class="card"><h3>Phòng danh hiệu</h3>${t.length ? `<table><tbody>${t.map(([i, n, ss]) => `<tr><td style="font-size:20px">${i}</td><td class="l"><b>${n}</b></td><td class="small muted">${ss}</td></tr>`).join("")}</tbody></table>` : `<div class="card-b muted small">Chưa có danh hiệu nào dưới thời bạn. Vô địch giải, Cúp Quốc gia hoặc Siêu Cúp để ghi tên ở đây.</div>`}</div>`;
+    })()}
     ${hist ? `<div class="card"><h3>Lịch sử</h3><table><tbody>${hist}</tbody></table></div>` : ""}
+    ${S.history.some((h) => h.awards) ? `<div class="card"><h3>Giải thưởng các mùa</h3>${S.history
+      .slice()
+      .reverse()
+      .filter((h) => h.awards)
+      .map((h) => [V1, V2].map((lg) => `<div class="card-b" style="border-top:1px solid var(--line);display:grid;gap:6px"><b class="small">${h.season} · ${W.leagueName(lg)}</b>${awardsBox(h.awards, lg, true)}</div>`).join(""))
+      .join("")}</div>` : ""}
     <div class="card"><h3>Lưu game</h3><div class="card-b" style="display:grid;gap:8px">
       <div class="small muted">Ván chơi tự lưu trong trình duyệt sau mỗi lần bấm Tiếp tục và sau mỗi trận. Để chơi tiếp trên trình duyệt / máy khác, xuất mã save rồi dán vào màn hình mở đầu ở bên kia.</div>
       <div class="row wrap"><button class="btn sm primary" data-act="export">Xuất mã save</button><button class="btn sm" data-act="import">Nhập mã save</button><button class="btn sm" data-act="save-now">Lưu ngay</button><button class="btn sm danger" data-act="quit">Về màn hình chính</button></div>
@@ -586,60 +869,154 @@
     const c = club(p.c);
     T.ensure(S);
     const cls = (v) => (v >= 16 ? "a4" : v >= 12 ? "a3" : v >= 8 ? "a2" : "a1");
+    const k = kn(p);
+    const cell = (i) => {
+      const r = SC.attrRange(S, p, i, k);
+      if (!r) return `<b class="fog">?</b>`;
+      const up = r[0] === r[1] && p.up && p.up[i] && FM.daysBetween(p.up[i], S.date) <= 30 ? `<i class="up" title="Tăng ngày ${FM.fmtDate(p.up[i], false)}">▲</i>` : "";
+      return r[0] === r[1] ? `<b class="${cls(r[0])}">${up}${r[0]}</b>` : `<b class="${cls((r[0] + r[1]) / 2)} range">${r[0]}–${r[1]}</b>`;
+    };
     const groups = FM.ATTR_GROUPS.filter(([g]) => (p.pos === "GK" ? g !== "Kỹ thuật" : g !== "Thủ môn"))
-      .map(([g, keys]) => `<div><h4>${g}</h4>${keys.map((k) => `<div class="attr"><span>${FM.ATTR_LABEL[k]}</span><b class="${cls(p.a[FM.A[k]])}">${p.a[FM.A[k]]}</b></div>`).join("")}</div>`)
+      .map(([g, keys]) => `<div><h4>${g}</h4>${keys.map((key) => `<div class="attr"><span>${FM.ATTR_LABEL[key]}</span>${cell(FM.A[key])}</div>`).join("")}</div>`)
       .join("");
     const st = p.st;
     const avg = st.ap ? (st.rs / st.ap).toFixed(2) : "–";
     const alt = Object.keys(p.alt || {})
       .filter((k) => k !== p.pos)
-      .map((k) => FM.POS_NAME[k])
+      .sort((a, b) => p.alt[b] - p.alt[a])
+      .map((k) => `${FM.POS_LABEL[k]} – ${FM.POS_NAME[k]} (${FM.famLevel(p.alt[k])})`)
       .join(", ");
-    openModal(`<div class="sheet-h">${crest(p.c)}<div class="grow"><div class="t" style="font-size:22px">${esc(p.n)}</div><div class="small muted">${esc(c.name)} · số ${p.no ?? "–"} · ${FM.POS_NAME[p.pos]}</div></div><button class="x" data-act="close">✕</button></div>
+    openModal(`<div class="sheet-h">${crest(p.c)}<div class="grow"><div class="t" style="font-size:22px">${esc(p.n)}</div><div class="small muted">${esc(c.name)} · số ${p.no ?? "–"} · ${FM.POS_LABEL[p.pos]} – ${FM.POS_NAME[p.pos]}</div></div><button class="x" data-act="close">✕</button></div>
       <div class="sheet-b">
-        <div class="row wrap">${posTag(p.pos)} ${stars(p.ca)} <span class="small muted">tiềm năng</span> ${stars(p.pa)} ${flags(p)} ${status(p)}</div>
+        <div class="row wrap">${posTag(p.pos)} ${ovr(p, k)} ${caStars(p, k)} <span class="small muted">tiềm năng</span> ${paStars(p, k)} ${flags(p)} ${status(p)}${gradePill(p.id)}</div>
+        ${p.c === S.user ? (p.loan ? "" : moraleBox(p)) : scoutBox(p, k)}
         <div class="kv">
           <div><small>Tuổi</small><b>${p.age}</b></div>
           <div><small>Quốc tịch</small><b>${esc(p.nat)}</b></div>
           <div><small>Chiều cao / cân nặng</small><b>${p.h || "?"} cm · ${p.w || "?"} kg</b></div>
           <div><small>Chân thuận</small><b>${{ right: "Phải", left: "Trái", both: "Hai chân" }[p.ft]}</b></div>
-          <div><small>Giá trị</small><b>${FM.fmtMoney(p.val)}</b></div>
+          <div><small>Giá trị</small><b>${valText(p, k)}</b></div>
           <div><small>Lương</small><b>${p.free ? "—" : FM.fmtWage(p.wage)}</b></div>
           <div><small>Hợp đồng đến</small><b>${p.ce ? FM.fmtDate(p.ce, false) : "Tự do"}</b></div>
-          ${p.free ? "" : `<div><small>Vai trò ở CLB</small><b>${T.ROLE_LABEL[T.role(S, p)]}${S.p[id].listed ? " · đang rao bán" : ""}</b></div>`}
+          ${p.free || p.foreignClub ? "" : `<div><small>Vai trò ở CLB</small><b>${p.c === S.user && !p.loan ? MO.ROLE_LABEL[MO.role(S, p)] : T.ROLE_LABEL[T.role(S, p)]}${S.p[id].listed ? " · đang rao bán" : ""}</b></div>`}
+          ${p.dg && kn(p) >= SC.EXACT ? `<div><small>Tiến bộ mùa này</small><b style="color:var(--accent)">+${p.dg} năng lực</b></div>` : ""}
           <div><small>Thể lực · tâm lý</small><b>${Math.round(p.fit)}% · ${moraleIcon(p.mor)}</b></div>
         </div>
         ${alt ? `<div class="small muted">Vị trí khác: ${esc(alt)}</div>` : ""}
         ${p.inj ? `<div class="pill red">Chấn thương: ${esc(p.injName)} · đến ${FM.fmtDate(p.inj, false)}</div>` : ""}
         ${p.sus ? `<div class="pill gold">Treo giò ${p.sus} trận</div>` : ""}
         <div class="attrs">${groups}</div>
+        ${p.c !== S.user && k >= SC.EXACT && SC.ensure(S).reports[p.id] ? reportBox(p) : k >= SC.EXACT ? `<div class="small muted">Tính cách: ${esc(SC.traits(p).join(", "))}</div>` : ""}
         <div class="kv">
           <div><small>Mùa này</small><b>${st.ap} trận · ${st.g} bàn · ${st.as} kiến tạo</b></div>
           <div><small>Điểm TB · cầu thủ hay nhất</small><b>${avg} · ${st.mm} lần</b></div>
-          ${p.ls ? `<div><small>V.League 2025/26 (thật)</small><b>${p.ls.apps} trận · ${p.ls.goals} bàn</b></div>` : ""}
+          ${p.ast ? `<div><small>Châu Á mùa này</small><b>${p.ast.ap} trận · ${p.ast.g} bàn · ${p.ast.as} kiến tạo</b></div>` : ""}
+          ${p.cst ? `<div><small>Cúp mùa này</small><b>${p.cst.ap} trận · ${p.cst.g} bàn · ${p.cst.as} kiến tạo</b></div>` : ""}
         </div>
+        ${p.foreignClub ? "" : careerBox(p)}
         ${playerActions(p)}
       </div>`);
   }
+  // độ hiểu biết + nút cử tuyển trạch trong hồ sơ cầu thủ đội khác
+  function scoutBox(p, k) {
+    const job = SC.jobFor(S, "player", p.id) || SC.jobFor(S, "club", p.c);
+    const msg = k >= 100 ? "Đã nắm rõ cầu thủ này." : k >= SC.EXACT ? "Biết khá chính xác." : k < SC.HIDDEN ? "Chưa có thông tin — chỉ số chưa hiện." : "Chỉ số là khoảng ước tính.";
+    const btn = job
+      ? `<span class="small muted">${job.kind === "club" ? "🏟️ Đang theo dõi cả đội" : "🔍 Đang theo dõi"} · xong ${FM.fmtDate(job.end, false)}</span>`
+      : k < 100 && !p.foreignClub
+        ? `<button class="btn sm" data-act="scout-player" data-id="${p.id}">🔍 Cử tuyển trạch (${SC.duration(S, "player", p.id)} ngày, ${FM.fmtMoney(SC.COST.player)})</button>`
+        : "";
+    return `<div class="scoutbox"><div class="small">Độ hiểu biết <b>${k}%</b> · <span class="muted">${msg}</span></div><div class="bar"><i style="width:${k}%;background:${k >= SC.EXACT ? "var(--accent)" : k >= 50 ? "var(--gold)" : "var(--orange)"}"></i></div>${btn ? `<div class="row wrap">${btn}</div>` : ""}</div>`;
+  }
+  function reportBox(p) {
+    const r = SC.report(S, p);
+    return `<div class="scoutbox"><div class="row"><span class="pill grade g${r.grade}">${r.grade}</span><b class="grow">Báo cáo tuyển trạch</b><span class="small muted">${FM.fmtDate(S.sc.reports[p.id].d, false)}</span></div><div class="small" style="white-space:pre-line">${esc(r.lines.join("\n"))}</div></div>`;
+  }
+  // sự nghiệp: các mùa thật (vpf.vn) + các mùa trong game + mùa đang đá
+  function careerBox(p) {
+    const HI = FM.History;
+    const rows = HI.career(S, p);
+    const curClubs = (p.sc && p.sc.length ? p.sc : [p.c]).map((id) => club(id).name);
+    if (curClubs[curClubs.length - 1] !== club(p.c).name) curClubs.push(club(p.c).name);
+    const lgNow = S.clubs[p.c]?.league;
+    rows.push({ s: `${W.label(S)}*`, clubs: curClubs, loan: !!p.loan, lg: lgNow === V1 ? 1 : lgNow === V2 ? 2 : 0, ap: p.st.ap, g: p.st.g, as: p.st.as, r: p.st.ap ? Math.round((p.st.rs / p.st.ap) * 10) / 10 : null, cap: (p.cst ? p.cst.ap : 0) + (p.ast ? p.ast.ap : 0), cg: (p.cst ? p.cst.g : 0) + (p.ast ? p.ast.g : 0) });
+    const aw = (p.aw || []).slice().reverse();
+    return `<div><h4 class="small muted" style="margin:4px 0;letter-spacing:.06em">SỰ NGHIỆP</h4><div class="scroll-x"><table class="career"><thead><tr><th class="l">Mùa</th><th class="l">CLB</th><th>Giải</th><th>Trận</th><th>Bàn</th><th>KT</th><th>Điểm</th><th>Cúp</th></tr></thead><tbody>${rows
+      .slice()
+      .reverse()
+      .map(
+        (r) => `<tr><td class="l nowrap">${esc(r.s)}</td><td class="l">${r.clubs.map(esc).join(" → ")}${r.loan ? ' <span class="flag loan">MƯỢN</span>' : ""}</td><td>${r.lg ? `V${r.lg}` : "–"}</td><td>${r.ap ?? "–"}</td><td>${r.g ?? "–"}</td><td>${r.real ? "–" : r.as}</td><td>${r.r ?? "–"}</td><td>${r.real ? "–" : r.cap ? `${r.cap}/${r.cg}` : "–"}</td></tr>`,
+      )
+      .join("")}</tbody></table></div>
+      <div class="small muted">* mùa đang đá. Các mùa trước khi vào game lấy từ số liệu thật vpf.vn (không có kiến tạo / điểm). Cúp: trận/bàn.</div>
+      ${aw.length ? `<div style="display:grid;gap:2px;margin-top:6px">${aw.map(([ss, t]) => `<div class="small">🏅 <b>${esc(t)}</b> <span class="muted">${esc(ss)}</span></div>`).join("")}</div>` : ""}</div>`;
+  }
+  // khối giải thưởng một mùa (màn tổng kết và tab CLB)
+  function awardsBox(aw, lg, compact) {
+    const a = aw && aw[lg];
+    if (!a) return "";
+    const HI = FM.History;
+    const pl = (id) => {
+      const p = id && W.player(S, id);
+      if (!p) return "—";
+      return `<b class="link" data-act="info" data-id="${p.id}">${esc(p.sn)}</b> <span class="small muted">${esc(club(p.c).name)}</span>`;
+    };
+    const top = a.top && W.player(S, a.top);
+    const team = a.team.map((id) => W.player(S, id)).filter(Boolean);
+    return `<div class="kv">
+      <div><small>${HI.AWARD_LABEL.mvp}</small><span>${pl(a.mvp)}</span></div>
+      <div><small>${HI.AWARD_LABEL.top}</small><span>${pl(a.top)}${top && !compact ? ` <span class="small">${top.st.g} bàn</span>` : ""}</span></div>
+      <div><small>${HI.AWARD_LABEL.young}</small><span>${pl(a.young)}</span></div>
+      <div><small>${HI.AWARD_LABEL.gk}</small><span>${pl(a.gk)}</span></div>
+      <div><small>HLV xuất sắc nhất</small><span><b>${esc(a.coachName)}</b> <span class="small muted">${esc(club(a.coach).name)}</span></span></div>
+    </div>${compact || !team.length ? "" : `<div class="small"><span class="muted">Đội hình tiêu biểu (4-3-3):</span> ${team.map((p) => `<span class="link" data-act="info" data-id="${p.id}">${posTag(p.pos)} ${esc(p.sn)}</span>`).join(" · ")}</div>`}`;
+  }
   // nút chuyển nhượng / hợp đồng trong hồ sơ cầu thủ
   function playerActions(p) {
+    if (p.foreignClub) return `<div class="small muted center">Cầu thủ CLB nước ngoài (đội hình do game sinh ra) — không chuyển nhượng được.</div>`;
     const win = T.window(S);
+    const end = FM.fmtDate(`${S.season + 1}-06-30`, false);
+    if (p.loan && p.loan.from === S.user)
+      return `<div class="pill blue" style="white-space:normal">Đang cho mượn tại ${esc(club(p.c).name)} đến ${end} · họ trả ${Math.round(p.loan.share * 100)}% lương</div><button class="btn sm primary" data-act="renew" data-id="${p.id}">📝 Gia hạn hợp đồng</button>`;
+    if (p.loan && p.c === S.user)
+      return `<div class="pill blue" style="white-space:normal">Đang mượn từ ${esc(club(p.loan.from).name)} đến ${end} · bạn trả ${Math.round(p.loan.share * 100)}% lương</div>${p.loan.buy ? `<button class="btn primary block" data-act="loan-exercise" data-id="${p.id}">Kích hoạt mua đứt (${FM.fmtMoney(p.loan.buy)})</button>` : ""}`;
     if (p.c === S.user) {
       const listed = S.p[p.id].listed;
-      return `<div class="row wrap"><button class="btn sm primary" data-act="renew" data-id="${p.id}">📝 Gia hạn hợp đồng</button><button class="btn sm" data-act="${listed ? "unlist" : "list"}" data-id="${p.id}">${listed ? "Bỏ rao bán" : "🏷️ Rao bán"}</button><button class="btn sm danger" data-act="release" data-id="${p.id}">Thanh lý</button></div>`;
+      const loanListed = S.p[p.id].loanListed;
+      return `<div class="row wrap"><button class="btn sm primary" data-act="renew" data-id="${p.id}">📝 Gia hạn hợp đồng</button><button class="btn sm" data-act="${listed ? "unlist" : "list"}" data-id="${p.id}">${listed ? "Bỏ rao bán" : "🏷️ Rao bán"}</button><button class="btn sm" data-act="loan-list" data-id="${p.id}">${loanListed ? "Bỏ cho mượn" : "🔁 Cho mượn"}</button><button class="btn sm danger" data-act="release" data-id="${p.id}">Thanh lý</button></div>${loanListed ? `<div class="small muted">Đang tìm CLB mượn — đề nghị đến trong kỳ chuyển nhượng, từ những đội có chỗ cho cầu thủ này đá chính hoặc dự bị.</div>` : ""}`;
     }
     if (p.free) return `<button class="btn primary block" data-act="sign-free" data-id="${p.id}">✍️ Ký hợp đồng (cầu thủ tự do)</button>`;
+    if (p.loan) return `<div class="small muted center">Đang được ${esc(club(p.loan.from).name)} cho mượn đến ${end} — chưa thể hỏi mua.</div>`;
     return win.open
-      ? `<button class="btn primary block" data-act="bid" data-id="${p.id}">💸 Hỏi mua (giá trị ước tính ${FM.fmtMoney(p.val)})</button>`
+      ? `<div class="row wrap"><button class="btn primary grow" data-act="bid" data-id="${p.id}">💸 Hỏi mua (giá trị ${valText(p)})</button><button class="btn grow" data-act="loan" data-id="${p.id}">🤝 Hỏi mượn</button></div>`
       : `<div class="small muted center">Kỳ chuyển nhượng đang đóng${win.next ? ` — mở lại ${FM.fmtDate(win.next, false)}` : ""}.</div>`;
   }
+  function afcClubModal(id) {
+    const c = AF.club(id);
+    const squad = W.squad(S, id)
+      .map((p) => [p, kn(p)])
+      .sort((a, b) => SC.estCa(S, b[0], b[1]) - SC.estCa(S, a[0], a[1]));
+    const job = SC.jobFor(S, "club", id);
+    const st = cstate(id);
+    openModal(`<div class="sheet-h">${crest(id)}<div class="grow"><div class="t" style="font-size:22px">${esc(c.name)}</div><div class="small muted">${esc(c.country)} · khu vực ${c.region === "East" ? "Đông" : "Tây"} · ${esc(c.venue || "")}</div></div><button class="x" data-act="close">✕</button></div>
+      <div class="sheet-b"><div class="row small">${formIcons(st.form.slice(-5))}<span class="grow"></span>Trình độ ${stars(AF.strengthOf(id))} · ${st.formation}</div>
+      <div class="small muted">Đội hình do game sinh ra theo trình độ thật của CLB; chỉ số là ước tính cho tới khi tuyển trạch.</div>
+      <div class="row wrap">${job ? `<span class="small muted">🏟️ Đang theo dõi cả đội · xong ${FM.fmtDate(job.end, false)}</span>` : `<button class="btn sm" data-act="scout-club" data-id="${id}">🏟️ Tuyển trạch cả đội (${SC.duration(S, "club", id)} ngày, ${FM.fmtMoney(SC.COST.club)})</button>`}</div>
+      <table class="plist"><tbody>${squad.map(([p, k]) => `<tr class="click" data-act="info" data-id="${p.id}"><td>${posTag(p.pos)}</td><td class="l"><b>${esc(p.sn)}</b> <span class="small muted">${esc(p.nat)}</span><div class="small muted">${p.age} tuổi</div></td><td class="nowrap">${ovr(p, k)} ${caStars(p, k)}</td></tr>`).join("")}</tbody></table></div>`);
+  }
   function clubModal(id) {
+    if (AF.isForeign(id)) return afcClubModal(id);
     const c = W.club(S, id);
-    const squad = W.squad(S, id).sort((a, b) => b.ca - a.ca);
+    const squad = W.squad(S, id)
+      .map((p) => [p, kn(p)])
+      .sort((a, b) => SC.estCa(S, b[0], b[1]) - SC.estCa(S, a[0], a[1]));
     const pos = W.position(S, id);
+    const job = id !== S.user && SC.jobFor(S, "club", id);
+    const scoutBtn = id === S.user ? "" : job ? `<span class="small muted">🏟️ Đang theo dõi cả đội · xong ${FM.fmtDate(job.end, false)}</span>` : `<button class="btn sm" data-act="scout-club" data-id="${id}">🏟️ Tuyển trạch cả đội (${SC.duration(S, "club", id)} ngày, ${FM.fmtMoney(SC.COST.club)})</button>`;
     openModal(`<div class="sheet-h">${crest(id)}<div class="grow"><div class="t" style="font-size:22px">${esc(c.name)}</div><div class="small muted">${W.leagueName(c.league)} · hạng ${pos} · ${c.formation} · ${esc(c.venue || "")}</div></div><button class="x" data-act="close">✕</button></div>
       <div class="sheet-b"><div class="row small">${formIcons(c.form.slice(-5))}<span class="grow"></span>Sức mạnh ${W.strength(S, id).toFixed(1)}</div>
-      <table class="plist"><tbody>${squad.map((p) => `<tr class="click" data-act="info" data-id="${p.id}"><td>${posTag(p.pos)}</td><td class="l"><b>${esc(p.sn)}</b>${flags(p)} ${status(p)}<div class="small muted">${p.age} tuổi</div></td><td>${stars(p.ca)}</td></tr>`).join("")}</tbody></table></div>`);
+      ${scoutBtn ? `<div class="row wrap">${scoutBtn}</div>` : ""}
+      <table class="plist"><tbody>${squad.map(([p, k]) => `<tr class="click" data-act="info" data-id="${p.id}"><td>${posTag(p.pos)}</td><td class="l"><b>${esc(p.sn)}</b>${flags(p)} ${status(p)}${gradePill(p.id)}<div class="small muted">${p.age} tuổi</div></td><td class="nowrap">${ovr(p, k)} ${caStars(p, k)}</td></tr>`).join("")}</tbody></table></div>`);
   }
   function fixtureModal(fid) {
     const f = S.fx.find((x) => x.id === fid);
@@ -649,7 +1026,7 @@
         .map((x) => `${esc(W.player(S, x.id)?.sn || "?")} ${x.min}'`)
         .join(", ") || "—";
     const motm = f.motm && W.player(S, f.motm);
-    openModal(`<div class="sheet-h"><div class="grow t" style="font-size:20px">${f.po ? "Play-off" : `Vòng ${f.rd}`} · ${FM.fmtDate(f.d)}</div><button class="x" data-act="close">✕</button></div>
+    openModal(`<div class="sheet-h"><div class="grow t" style="font-size:20px">${esc(W.fxLabel(S, f))} · ${FM.fmtDate(f.d)}</div><button class="x" data-act="close">✕</button></div>
       <div class="sheet-b"><div class="next" style="padding:6px 0"><div class="team">${crest(f.h, "lg")}${esc(club(f.h).name)}</div><div class="vs" style="color:var(--text)">${f.hg} – ${f.ag}${f.pens ? `<div class="small muted">pen ${f.pens.join("–")}</div>` : ""}</div><div class="team">${crest(f.a, "lg")}${esc(club(f.a).name)}</div></div>
       <div class="kv"><div><small>⚽ ${esc(club(f.h).name)}</small><b>${line(0)}</b></div><div><small>⚽ ${esc(club(f.a).name)}</small><b>${line(1)}</b></div>${motm ? `<div><small>Cầu thủ hay nhất</small><b>${esc(motm.sn)}</b></div>` : ""}${f.att ? `<div><small>Khán giả</small><b>${f.att.toLocaleString("vi-VN")}</b></div>` : ""}</div></div>`);
   }
@@ -661,10 +1038,10 @@
     const c = S.clubs[S.user];
     const changed = fix.changed.map((id) => W.player(S, id).sn);
     const missing = W.squad(S, S.user).filter((p) => !p.available && c.lineup.includes(p.id));
-    openModal(`<div class="sheet-h"><div class="grow"><div class="t" style="font-size:22px">Ngày thi đấu</div><div class="small muted">${f.po ? "Play-off lên/xuống hạng · sân trung lập" : `${W.leagueName(f.lg)} · Vòng ${f.rd}`}</div></div><button class="x" data-act="close">✕</button></div>
+    openModal(`<div class="sheet-h"><div class="grow"><div class="t" style="font-size:22px">Ngày thi đấu</div><div class="small muted">${f.po ? "Play-off lên/xuống hạng · sân trung lập" : f.lg === V1 || f.lg === V2 ? `${W.leagueName(f.lg)} · Vòng ${f.rd}` : AF.isAfc(f) ? `${esc(AF.COMPS[f.lg].name)} · ${esc(W.fxLabel(S, f))}${f.neutral ? " · sân trung lập" : ""}${f.ko ? " · hoà đá luân lưu" : f.leg === 2 ? " · lượt về, tính tổng tỉ số" : ""}` : `${esc(W.fxLabel(S, f))}${f.neutral ? " · sân trung lập" : ""} · loại trực tiếp, hoà đá luân lưu`}</div></div><button class="x" data-act="close">✕</button></div>
       <div class="sheet-b">
         <div class="next" style="padding:4px 0"><div class="team">${crest(f.h, "lg")}${esc(club(f.h).name)}</div><div class="vs">VS</div><div class="team">${crest(f.a, "lg")}${esc(club(f.a).name)}</div></div>
-        <div class="kv"><div><small>Sơ đồ của bạn</small><b>${c.formation}</b></div><div><small>Lối chơi</small><b>${FM.TACTIC_OPTIONS.mentality[c.tactics.mentality]}</b></div><div><small>Đối thủ</small><b>${S.clubs[opp].formation} · ${formIcons(S.clubs[opp].form.slice(-5))}</b></div></div>
+        <div class="kv"><div><small>Sơ đồ của bạn</small><b>${c.formation}</b></div><div><small>Lối chơi</small><b>${FM.TACTIC_OPTIONS.mentality[c.tactics.mentality]}</b></div><div><small>Đối thủ</small><b>${cstate(opp).formation} · ${formIcons(cstate(opp).form.slice(-5))}</b></div></div>
         ${missing.length ? `<div class="pill red" style="white-space:normal">Không thể ra sân: ${missing.map((p) => esc(p.sn)).join(", ")} → tự thay bằng ${changed.map(esc).join(", ") || "người phù hợp"}.</div>` : ""}
         <div class="row wrap"><button class="btn" data-act="edit-lineup">Chỉnh đội hình</button><span class="grow"></span><button class="btn" data-act="quick">⏩ Mô phỏng nhanh</button><button class="btn primary" data-act="live">▶ Đá trực tiếp</button></div>
       </div>`);
@@ -677,7 +1054,7 @@
     closeModal();
     const fix = W.fixLineup(S, S.user);
     S.clubs[S.user].lineup = fix.lineup;
-    const m = FM.createMatch(W.sideFor(S, f.h, f.h !== S.user), W.sideFor(S, f.a, f.a !== S.user), { seed: W.matchSeed(S, f) + (live ? 99 : 0), live, neutral: !!f.po });
+    const m = FM.createMatch(W.sideFor(S, f.h, f.h !== S.user), W.sideFor(S, f.a, f.a !== S.user), { seed: W.matchSeed(S, f) + (live ? 99 : 0), live, neutral: !!(f.po || f.neutral) });
     const me = f.h === S.user ? 0 : 1;
     if (!live) {
       m.runToEnd();
@@ -829,7 +1206,10 @@
         <div><small>Lên V.League 1</small><b>${s.promoted.map(name).join(", ")}</b></div>
         <div><small>Xuống V.League 2</small><b>${s.relegated.map(name).join(", ")}</b></div>
         <div><small>Xuống Hạng Nhì</small><b>${name(s.outOfGame)}</b></div>
+        ${S.cup ? `<div><small>Vô địch Cúp Quốc gia</small><b>${S.cup.winner ? name(S.cup.winner) : "—"}</b></div><div><small>Siêu Cúp Quốc gia</small><b>${S.cup.superWinner ? name(S.cup.superWinner) : "—"}</b></div><div><small>Đội bạn ở Cúp</small><b>${esc(FM.Cups.userStatus(S))}</b></div>` : ""}
+        ${S.afc ? Object.entries(AF.COMPS).map(([k, c]) => `<div><small>Vô địch ${c.short} (${esc(c.name)})</small><b>${S.afc.comps[k].winner ? name(S.afc.comps[k].winner) : "—"}</b></div>${(S.afc.vn[k] || []).map((id) => `<div><small>${name(id)} ở ${c.short}</small><b>${esc(AF.result(S, k, id))}</b></div>`).join("")}`).join("") : ""}
       </div></div>
+      ${s.awards ? [V1, V2].map((lg) => `<div class="card"><h3>Giải thưởng ${W.leagueName(lg)}</h3><div class="card-b" style="display:grid;gap:8px">${awardsBox(s.awards, lg)}</div></div>`).join("") : ""}
       <button class="btn primary block" data-act="next-season">Sang mùa giải mới ▶</button>
       <button class="btn block" data-act="see-table">Xem lại bảng xếp hạng</button>
     </div>`;
@@ -923,10 +1303,19 @@
     formation: (d) => {
       const c = S.clubs[S.user];
       c.formation = d.f;
+      TRN.formationChanged(S);
       autoLineup();
       ui.sel = null;
       render();
       toast(`Đã chuyển sang ${d.f} và tự xếp lại đội hình.`);
+    },
+    sq: (d) => {
+      ui.sq[d.k] = d.v;
+      render();
+    },
+    "sq-reset": () => {
+      ui.sq = { g: "", pos: "", st: "", sort: "pos" };
+      render();
     },
     auto: () => {
       autoLineup();
@@ -967,7 +1356,10 @@
         render();
       } else playerModal(d.id);
     },
-    info: (d) => playerModal(d.id),
+    info: (d) => {
+      ui.talkMsg = null;
+      playerModal(d.id);
+    },
     tac: (d) => {
       S.clubs[S.user].tactics[d.k] = +d.v;
       persist();
@@ -1096,6 +1488,10 @@
       }
     },
     // ---- thị trường ----
+    "afc-tab": (d) => {
+      ui.afcTab = d.t;
+      render();
+    },
     "mk-tab": (d) => {
       ui.mk.tab = d.t;
       render();
@@ -1118,11 +1514,36 @@
       el.parentElement.querySelectorAll("button").forEach((b) => b.classList.toggle("on", b === el));
     },
     bid: (d) => bidModal(d.id),
+    "scout-player": (d) => {
+      const r = SC.start(S, "player", d.id);
+      if (r.error) return toast(r.error);
+      persist();
+      toast(`Đã cử tuyển trạch viên — báo cáo sau ${r.days} ngày.`);
+      playerModal(d.id);
+    },
+    "scout-club": (d) => {
+      const r = SC.start(S, "club", d.id);
+      if (r.error) return toast(r.error);
+      persist();
+      toast(`Đã cử tuyển trạch viên theo dõi cả đội — báo cáo sau ${r.days} ngày.`);
+      clubModal(d.id);
+    },
+    train: (d) => {
+      TRN.set(S, d.k, +d.v);
+      persist();
+      render();
+    },
+    "scout-cancel": (d) => {
+      SC.cancel(S, +d.id);
+      persist();
+      render();
+    },
     "bid-send": (d) => {
       const fee = Math.round(+$("#feeIn").value * 10) / 10;
       const r = T.bid(S, d.id, fee);
       if (r.result === "accepted") {
         persist();
+        ui.promise = false;
         contractModal(d.id, "sign");
         toast("CLB chủ quản đồng ý! Giờ đàm phán hợp đồng với cầu thủ.");
       } else if (r.result === "countered") {
@@ -1130,12 +1551,39 @@
         negMsg(`${r.reason} Bấm Gửi đề nghị lần nữa để đồng ý mức này.`);
       } else negMsg(r.reason);
     },
-    contract: (d) => contractModal(d.id, d.kind),
-    renew: (d) => contractModal(d.id, "renew"),
-    "sign-free": (d) => contractModal(d.id, "sign"),
+    contract: (d) => {
+      ui.promise = false;
+      contractModal(d.id, d.kind);
+    },
+    renew: (d) => {
+      ui.promise = false;
+      contractModal(d.id, "renew");
+    },
+    "sign-free": (d) => {
+      ui.promise = false;
+      contractModal(d.id, "sign");
+    },
+    "promise-toggle": (d, el) => {
+      ui.promise = !ui.promise;
+      el.classList.toggle("primary", ui.promise);
+      el.textContent = `${ui.promise ? "☑" : "☐"} Hứa suất đá chính (cầu thủ bớt 10% lương đòi hỏi)`;
+    },
+    talk: (d) => {
+      const r = MO.talk(S, d.id, d.k);
+      ui.talkMsg = { id: d.id, text: r.text, delta: Math.round(r.delta) };
+      persist();
+      playerModal(d.id);
+      render();
+    },
+    meeting: (d) => {
+      const r = MO.meeting(S, d.k);
+      persist();
+      render();
+      toast(r.up != null ? `${r.text} (${r.up} người vui hơn${r.down ? `, ${r.down} người không vui` : ""})` : r.text);
+    },
     "contract-send": (d) => {
       const wage = Math.round(+$("#wageIn").value);
-      const r = T.offerContract(S, d.id, wage, ui.years, d.kind);
+      const r = T.offerContract(S, d.id, wage, ui.years, d.kind, ui.promise);
       if (r.result === "accepted") {
         persist(true);
         closeModal();
@@ -1176,6 +1624,53 @@
       const r = T.respond(S, +d.id, "accept");
       persist(true);
       toast(r.result === "accepted" ? `Đã bán với giá ${FM.fmtMoney(r.fee)}.` : r.reason || "Đề nghị không còn hiệu lực.");
+      render();
+    },
+    loan: (d) => {
+      ui.loanShare = 0.5;
+      ui.loanBuy = false;
+      loanModal(d.id);
+    },
+    "loan-share": (d) => {
+      ui.loanShare = +d.v;
+      loanModal(d.id);
+    },
+    "loan-buy-toggle": (d) => {
+      ui.loanBuy = !ui.loanBuy;
+      loanModal(d.id);
+    },
+    "loan-send": (d) => {
+      const r = FM.Loans.request(S, d.id, ui.loanShare, ui.loanBuy);
+      if (r.result === "accepted") {
+        persist(true);
+        closeModal();
+        toast("Đã mượn thành công!");
+        render();
+      } else if (r.result === "countered") {
+        ui.loanShare = r.share;
+        loanModal(d.id);
+        negMsg(`${r.reason} Bấm gửi lần nữa để đồng ý.`);
+      } else negMsg(r.reason);
+    },
+    "loan-list": (d) => {
+      FM.Loans.setListed(S, d.id, !S.p[d.id].loanListed);
+      persist();
+      toast(S.p[d.id].loanListed ? "Đã đánh dấu cho mượn — chờ đề nghị trong kỳ chuyển nhượng." : "Đã bỏ cho mượn.");
+      playerModal(d.id);
+      render();
+    },
+    "loan-accept": (d) => {
+      const r = FM.Loans.respond(S, +d.id, true);
+      persist(true);
+      toast(r.result === "accepted" ? "Đã cho mượn." : r.reason || "Đề nghị không còn hiệu lực.");
+      render();
+    },
+    "loan-exercise": (d) => {
+      const r = FM.Loans.exercise(S, d.id);
+      if (r.error) return toast(r.error);
+      persist(true);
+      closeModal();
+      toast(`Đã mua đứt với giá ${FM.fmtMoney(r.fee)}.`);
       render();
     },
     "offer-reject": (d) => {
@@ -1234,6 +1729,11 @@
   // bộ lọc dạng ô chọn ở thị trường
   document.addEventListener("change", (e) => {
     const el = e.target.closest("[data-change]");
+    if (el && el.dataset.change === "sq") {
+      ui.sq[el.dataset.k] = el.value;
+      render();
+      return;
+    }
     if (el && el.dataset.change === "mk") {
       ui.mk[el.dataset.k] = el.value;
       ui.mk.limit = 40;

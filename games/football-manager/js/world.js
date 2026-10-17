@@ -18,10 +18,11 @@
   const W = (FM.World = {});
 
   // ---------- Truy cập ----------
-  W.baseClub = (s, id) => s.extraClubs[id] || BASE_CLUB.get(id);
+  W.baseClub = (s, id) => s.extraClubs[id] || BASE_CLUB.get(id) || (FM.AFC && FM.AFC.club(id));
   W.club = (s, id) => ({ ...W.baseClub(s, id), ...s.clubs[id], id });
   W.clubsIn = (s, league) => Object.keys(s.clubs).filter((id) => s.clubs[id].league === league);
   W.player = (s, id) => {
+    if (FM.AFC && typeof id === "string" && id.startsWith("afc-")) return FM.AFC.player(s, id); // cầu thủ CLB nước ngoài (sinh ra)
     const base = s.extraPlayers[id] || BASE.get(id);
     const dyn = s.p[id];
     if (!base || !dyn) return null;
@@ -32,7 +33,7 @@
     if (FM.Transfers) p.val = FM.Transfers.value(s, p);
     return p;
   };
-  W.squad = (s, clubId) => Object.keys(s.p).filter((id) => s.p[id].c === clubId).map((id) => W.player(s, id));
+  W.squad = (s, clubId) => (FM.AFC && FM.AFC.isForeign(clubId) ? FM.AFC.squad(s, clubId) : null) || Object.keys(s.p).filter((id) => s.p[id].c === clubId).map((id) => W.player(s, id));
 
   // ---------- Tên người Việt cho cầu thủ trẻ / đội mới ----------
   const HO = ["Nguyễn", "Nguyễn", "Nguyễn", "Trần", "Trần", "Lê", "Lê", "Phạm", "Hoàng", "Huỳnh", "Phan", "Vũ", "Võ", "Đặng", "Bùi", "Đỗ", "Hồ", "Ngô", "Dương", "Lý", "Đinh", "Trịnh", "Mai", "Cao"];
@@ -178,6 +179,9 @@
       const ranked = W.clubsIn(s, league).sort((a, b) => W.strength(s, b) - W.strength(s, a));
       ranked.forEach((id, i) => (s.clubs[id].obj = objective(league, i + 1)));
     }
+    if (FM.Training) FM.Training.startSeason(s);
+    if (FM.Cups) FM.Cups.start(s);
+    if (FM.AFC) FM.AFC.start(s);
     const uc = W.club(s, s.user);
     mail(s, "board", `Chào mừng HLV mới của ${uc.name}`, `Ban lãnh đạo ${uc.name} chào mừng bạn đến với mùa giải ${label(s)} tại ${leagueName(uc.league)}.\n\nMục tiêu của CLB: **${uc.obj.label}** (xếp hạng ${uc.obj.target} trở lên).\nNgân sách hiện có: ${FM.fmtMoney(uc.bal)}.\n\nTrận đầu tiên: ${nextFixtureText(s)}. Chúc may mắn!`);
   }
@@ -219,6 +223,7 @@
   W.mail = mail;
 
   // ---------- Truy vấn lịch / BXH ----------
+  W.fxLabel = (s, f) => (FM.AFC && FM.AFC.isAfc(f) ? FM.AFC.label(f) : f.po ? "Play-off" : f.lg === "super" ? "Siêu Cúp Quốc gia" : f.lg === "cup" ? `Cúp QG · ${FM.Cups ? FM.Cups.roundName(f.rd) : ""}` : `Vòng ${f.rd}`);
   W.nextFixture = (s, clubId) => s.fx.filter((f) => !f.done && (f.h === clubId || f.a === clubId)).sort((a, b) => a.d.localeCompare(b.d))[0] || null;
   W.table = function (s, league) {
     const rows = {};
@@ -269,6 +274,7 @@
 
   // ---------- Chuẩn bị đội cho một trận ----------
   W.sideFor = function (s, clubId, ai) {
+    if (FM.AFC && FM.AFC.isForeign(clubId)) return FM.AFC.side(s, clubId);
     const c = s.clubs[clubId];
     const squad = W.squad(s, clubId);
     const byId = Object.fromEntries(squad.map((p) => [p.id, p]));
@@ -288,7 +294,8 @@
       bench = bench.slice(0, FM.BENCH_SIZE);
     }
     const base = W.baseClub(s, clubId);
-    return { clubId, name: base.name, code: base.code, formation: c.formation, tactics: { ...c.tactics }, lineup, bench, players: byId, ai };
+    const fam = FM.Training ? FM.Training.famMult(s, clubId) : 1;
+    return { clubId, name: base.name, code: base.code, formation: c.formation, tactics: { ...c.tactics }, lineup, bench, players: byId, ai, fam };
   };
   // sửa đội hình người chơi: thay người chấn thương/treo giò, đảm bảo ≤ 4 ngoại binh
   W.fixLineup = function (s, clubId) {
@@ -321,7 +328,8 @@
   // ---------- Đá một trận và áp kết quả ----------
   W.matchSeed = (s, f) => FM.hash(`${f.id}-${s.seed}`);
   W.playAI = function (s, f) {
-    const m = FM.createMatch(W.sideFor(s, f.h, true), W.sideFor(s, f.a, true), { seed: W.matchSeed(s, f), neutral: !!f.po }).runToEnd();
+    if (FM.AFC && FM.AFC.quickPlay(s, f)) return null; // hai đội nước ngoài: tính nhanh
+    const m = FM.createMatch(W.sideFor(s, f.h, true), W.sideFor(s, f.a, true), { seed: W.matchSeed(s, f), neutral: !!(f.po || f.neutral) }).runToEnd();
     W.applyResult(s, f, m);
     return m;
   };
@@ -329,8 +337,8 @@
     const [H, A2] = m.sides;
     f.hg = H.goals;
     f.ag = A2.goals;
-    // play-off hoà → đá luân lưu
-    if (f.po && f.hg === f.ag) {
+    // play-off / cúp hoà → đá luân lưu
+    if ((f.po || f.ko) && f.hg === f.ag) {
       const rnd = FM.rng(W.matchSeed(s, f) + 7);
       const ph = rnd.int(3, 5);
       let pa = rnd.int(2, 5);
@@ -344,26 +352,39 @@
     for (const side of m.sides) {
       const res = Math.sign(side.goals - m.sides[1 - side.idx].goals);
       const club = s.clubs[side.clubId];
+      if (!club) {
+        // CLB nước ngoài (cúp châu Á): chỉ ghi phong độ
+        const st = FM.AFC && FM.AFC.state(s, side.clubId);
+        if (st) {
+          st.form.push(res > 0 ? "W" : res < 0 ? "L" : "D");
+          if (st.form.length > 6) st.form.shift();
+        }
+        continue;
+      }
       club.form.push(res > 0 ? "W" : res < 0 ? "L" : "D");
       if (club.form.length > 6) club.form.shift();
       // ban lãnh đạo: thắng đội mạnh hơn được nhiều điểm tin tưởng hơn
       const gap = W.strength(s, m.sides[1 - side.idx].clubId) - W.strength(s, side.clubId);
       club.conf = FM.clamp(club.conf + (res > 0 ? 2 + Math.max(0, gap) * 0.15 : res < 0 ? -2.5 + Math.max(0, gap) * 0.15 : 0.3), 0, 100);
+      const afcGame = f.lg === "acle" || f.lg === "acl2";
+      const cupGame = f.lg === "cup" || f.lg === "super" || afcGame;
       for (const L of Object.values(side.live)) {
         const d = s.p[L.id];
         if (L.from === null) continue;
-        d.st.ap++;
-        d.st.g += L.g;
-        d.st.as += L.as;
-        d.st.yc += L.yc && !L.rc ? 1 : 0;
-        d.st.rc += L.rc;
-        d.st.rs += L.rating;
-        if (m.motm === L.id) d.st.mm++;
-        if (m.sides[1 - side.idx].goals === 0 && L.played >= 60 && ["GK", "CB", "LB", "RB"].includes(L.p.pos)) d.st.cs++;
+        // thống kê cúp để riêng, không cộng vào vua phá lưới giải
+        const st = afcGame ? (d.ast ||= blankStats()) : cupGame ? (d.cst ||= blankStats()) : d.st;
+        st.ap++;
+        st.g += L.g;
+        st.as += L.as;
+        st.yc += L.yc && !L.rc ? 1 : 0;
+        st.rc += L.rc;
+        st.rs += L.rating;
+        if (m.motm === L.id) st.mm++;
+        if (m.sides[1 - side.idx].goals === 0 && L.played >= 60 && ["GK", "CB", "LB", "RB"].includes(L.p.pos)) st.cs++;
         d.fit = Math.round(L.fit);
         d.mor = FM.clamp(d.mor + (res > 0 ? 6 : res < 0 ? -5 : 1) + (L.rating >= 7.5 ? 3 : L.rating < 6 ? -3 : 0), 0, 100);
         if (L.rc) d.sus = Math.max(d.sus, L.yc >= 2 ? 1 : 2);
-        else if (L.yc) {
+        else if (L.yc && !cupGame) {
           d.ycs++;
           if (d.ycs % YELLOW_BAN === 0) d.sus = Math.max(d.sus, 1);
         }
@@ -384,7 +405,7 @@
         if (side.clubId === s.user && d.sus > 0 && L.from !== null) mail(s, "discipline", `${L.p.sn} bị treo giò`, `${L.p.n} sẽ vắng mặt ${d.sus} trận tới vì ${L.rc ? "thẻ đỏ" : `tích đủ ${YELLOW_BAN} thẻ vàng`}.`);
       }
       // tiền vé cho đội chủ nhà
-      if (side.idx === 0 && !f.po) {
+      if (side.idx === 0 && !f.po && !f.neutral) {
         const base = W.baseClub(s, side.clubId);
         const fill = FM.clamp(0.25 + base.rep / 160 + (club.form.filter((x) => x === "W").length - 2) * 0.04, 0.15, 0.95);
         const gate = Math.round(base.capacity * fill * 60000) / 1e9;
@@ -393,7 +414,11 @@
         f.att = Math.round(base.capacity * fill);
       }
     }
-    if (f.h === s.user || f.a === s.user) userReport(s, f, m);
+    if (f.h === s.user || f.a === s.user) {
+      userReport(s, f, m);
+      if (FM.Scout) FM.Scout.afterMatch(s, m.sides[f.h === s.user ? 1 : 0]);
+      if (FM.Morale) FM.Morale.afterMatch(s, m.sides[f.h === s.user ? 0 : 1]);
+    }
   };
   function userReport(s, f, m) {
     const home = f.h === s.user;
@@ -406,7 +431,7 @@
       s,
       "result",
       `${res} ${me.goals}–${op.goals} trước ${op.name}`,
-      `${home ? "Sân nhà" : "Sân khách"} · ${f.po ? "Play-off" : `Vòng ${f.rd}`}\nGhi bàn: ${scorers.join(", ") || "không"}\nKiểm soát bóng ${me.st.poss}% · Sút ${me.st.shots} (trúng ${me.st.on}) · xG ${me.st.xg.toFixed(2)}\nXuất sắc nhất đội: ${best.p.sn} (${best.rating})`,
+      `${f.neutral ? "Sân trung lập" : home ? "Sân nhà" : "Sân khách"} · ${W.fxLabel(s, f)}${f.pens ? ` · luân lưu ${home ? f.pens[0] : f.pens[1]}–${home ? f.pens[1] : f.pens[0]}` : ""}\nGhi bàn: ${scorers.join(", ") || "không"}\nKiểm soát bóng ${me.st.poss}% · Sút ${me.st.shots} (trúng ${me.st.on}) · xG ${me.st.xg.toFixed(2)}\nXuất sắc nhất đội: ${best.p.sn} (${best.rating})`,
     );
   }
 
@@ -424,22 +449,25 @@
       const today = s.fx.find((f) => !f.done && f.d === s.date && (f.h === s.user || f.a === s.user));
       if (today) return { kind: "match", fixture: today };
       // dừng khi có thư quan trọng mới (chấn thương, treo giò…) trong lần bấm này
-      if (s.inbox.some((m) => m.id > startMsg && !m.r && m.k !== "finance" && m.k !== "news")) return { kind: "mail" };
+      if (s.inbox.some((m) => m.id > startMsg && !m.r && m.k !== "finance" && m.k !== "news" && m.k !== "training")) return { kind: "mail" };
     }
     return { kind: "idle" };
   };
   function playDay(s) {
     for (const f of s.fx) if (!f.done && f.d === s.date && f.h !== s.user && f.a !== s.user) W.playAI(s, f);
+    if (FM.Cups) FM.Cups.progress(s);
+    if (FM.AFC) FM.AFC.progress(s);
     checkSeasonEnd(s);
   }
   function nextDay(s) {
     s.date = FM.addDays(s.date, 1);
+    const rec = FM.Training ? FM.Training.recovery(s) : 1; // giáo án ảnh hưởng tốc độ hồi thể lực
     for (const id in s.p) {
       const d = s.p[id];
       const base = s.extraPlayers[id] || BASE.get(id);
       const stamina = (d.a || base.a)[A.stamina];
-      d.fit = Math.min(100, d.fit + 7 + stamina * 0.45);
-      d.mor += (55 - d.mor) * 0.03;
+      d.fit = Math.min(100, d.fit + (7 + stamina * 0.45) * (d.c === s.user ? rec : 1));
+      d.mor += ((FM.Morale ? FM.Morale.target(d) : 55) - d.mor) * 0.03; // người đòi ra đi / bất mãn thì buồn dần
       if (d.inj && d.inj <= s.date) {
         d.inj = null;
         d.fit = Math.min(d.fit, 80);
@@ -447,13 +475,19 @@
         d.injName = null;
       }
     }
-    if (s.date.endsWith("-01")) monthly(s);
+    if (FM.Training && FM.weekday(s.date) === 1) FM.Training.weekly(s);
+    if (FM.Morale && FM.weekday(s.date) === 1) FM.Morale.weekly(s);
+    if (s.date.endsWith("-01")) {
+      monthly(s);
+      if (FM.Training) FM.Training.monthly(s);
+    }
     if (FM.Transfers) FM.Transfers.daily(s);
+    if (FM.Scout) FM.Scout.daily(s);
   }
   function monthly(s) {
     for (const id of Object.keys(s.clubs)) {
       const c = s.clubs[id];
-      const wages = W.squad(s, id).reduce((a, p) => a + p.wage, 0) / 1000; // tỷ / tháng
+      const wages = (FM.Transfers ? FM.Transfers.wageBill(s, id) : W.squad(s, id).reduce((a, p) => a + p.wage, 0)) / 1000; // tỷ / tháng
       const base = W.baseClub(s, id);
       const sponsor = wages * 0.92 + base.rep / 120; // chủ sở hữu + nhà tài trợ bù phần lớn quỹ lương
       c.bal = Math.round((c.bal + sponsor - wages) * 100) / 100;
@@ -465,6 +499,8 @@
   // ---------- Cuối mùa ----------
   function checkSeasonEnd(s) {
     if (s.phase !== "season" || s.fx.some((f) => !f.done)) return;
+    if (FM.Cups && !FM.Cups.finished(s)) return;
+    if (FM.AFC && !FM.AFC.finished(s)) return;
     if (!s.playoff) {
       // play-off: đội thứ 13 V.League 1 gặp đội thứ 2 V.League 2, sân trung lập
       const t1 = W.table(s, V1);
@@ -499,6 +535,7 @@
       topScorer: { [V1]: W.topScorers(s, V1, 1)[0]?.id || null, [V2]: W.topScorers(s, V2, 1)[0]?.id || null },
       // mục tiêu lên hạng: lên qua play-off cũng tính là đạt
       user: { league: userLeague, pos, obj, achieved: pos <= obj.target || (!!obj.promote && promoted.includes(s.user)), conf: s.clubs[s.user].conf },
+      awards: FM.History ? FM.History.awards(s) : null,
     };
   }
 
@@ -514,12 +551,17 @@
       s.phase = "sacked";
       return { sacked: true, reason: sum.outOfGame === s.user ? "CLB xuống Hạng Nhì" : "Không đạt mục tiêu ban lãnh đạo giao" };
     }
+    if (FM.Cups) FM.Cups.endOfSeason(s, sum);
+    if (FM.AFC) FM.AFC.endOfSeason(s, sum);
+    if (FM.History) FM.History.record(s, sum); // ghi sự nghiệp trước khi cầu thủ mượn trở về
     // tiền thưởng theo thứ hạng
     for (const league of [V1, V2])
       W.table(s, league).forEach((r, i) => {
         s.clubs[r.id].bal += (league === V1 ? 5 : 1.5) * Math.max(0.1, 1 - i / 13);
         s.clubs[r.id].gate = 0;
       });
+    // cầu thủ cho mượn trở về CLB chủ quản (trước khi có đội bị loại khỏi giải)
+    if (FM.Loans) FM.Loans.returnAll(s);
     // lên / xuống hạng
     for (const id of sum.relegated) s.clubs[id].league = V2;
     for (const id of sum.promoted) s.clubs[id].league = V1;
@@ -540,7 +582,9 @@
       const age = s.season - base.by;
       const apps = d.st.ap;
       let delta;
-      if (age <= 23) delta = Math.round(rnd.range(0.3, 1) * Math.min(Math.max(0, base.pa - d.ca), (24 - age) * 1.5 + 2) * (0.5 + 0.5 * Math.min(1, apps / 15)));
+      // cầu thủ trẻ phát triển dần trong mùa qua tập luyện (training.js); ở đây chỉ còn biến động nhỏ
+      if (FM.Training && age <= 28) delta = age <= 23 ? 0 : rnd.int(-1, 1);
+      else if (age <= 23) delta = Math.round(rnd.range(0.3, 1) * Math.min(Math.max(0, base.pa - d.ca), (24 - age) * 1.5 + 2) * (0.5 + 0.5 * Math.min(1, apps / 15)));
       else if (age <= 28) delta = rnd.int(-1, 2);
       else if (age <= 31) delta = rnd.int(-2, 1);
       else if (age <= 33) delta = rnd.int(-4, 0);
@@ -560,6 +604,8 @@
       d.a = attrs;
       d.ca = FM.clamp(d.ca + delta, 20, 95);
       d.st = blankStats();
+      d.cst = null;
+      d.ast = null;
       d.ycs = 0;
       d.sus = 0;
       d.fit = 100;
@@ -590,6 +636,8 @@
       }
     }
     s.inbox = s.inbox.slice(0, 20);
+    if (FM.Scout) FM.Scout.newSeason(s);
+    if (FM.Training) FM.Training.newSeason(s);
     startSeason(s);
     const uc2 = W.club(s, s.user);
     mail(

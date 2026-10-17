@@ -94,7 +94,8 @@
     ["Thể chất", ["pace", "stamina", "strength", "agility", "jumping"]],
     ["Thủ môn", ["reflexes", "handling", "oneOnOne", "aerial", "kicking"]],
   ];
-  FM.POS_LABEL = { GK: "TM", CB: "TV", LB: "HVT", RB: "HVP", DM: "TVPN", CM: "TVTT", AM: "TVTC", LM: "TVT", RM: "TVP", LW: "TĐT", RW: "TĐP", ST: "TĐ" };
+  // mã vị trí kiểu quốc tế (tên đầy đủ tiếng Việt ở POS_NAME)
+  FM.POS_LABEL = { GK: "GK", CB: "CB", LB: "LB", RB: "RB", DM: "DM", CM: "CM", AM: "AM", LM: "LM", RM: "RM", LW: "LW", RW: "RW", ST: "ST" };
   FM.POS_NAME = {
     GK: "Thủ môn",
     CB: "Trung vệ",
@@ -109,7 +110,6 @@
     RW: "Tiền đạo cánh phải",
     ST: "Tiền đạo cắm",
   };
-  FM.POS_LABEL.CB = "TrV";
   FM.POS_GROUP = { GK: "GK", CB: "DF", LB: "DF", RB: "DF", DM: "MF", CM: "MF", AM: "MF", LM: "MF", RM: "MF", LW: "FW", RW: "FW", ST: "FW" };
 
   // ---------- Sơ đồ: vị trí từng ô, x 0→100 trái→phải, y 0→100 khung thành nhà → khung thành bạn ----------
@@ -163,11 +163,13 @@
     }
     return s / t;
   };
+  // mức thành thạo vị trí phụ (10–20)
+  FM.famLevel = (v) => (v >= 16 ? "thành thạo" : v >= 13 ? "khá" : "tạm được");
   // mức quen vị trí → hệ số hiệu quả
   FM.familiarity = function (p, role) {
     if (p.pos === role) return 1;
     const fam = p.alt && p.alt[role];
-    if (fam) return 0.72 + 0.28 * (fam / 20);
+    if (fam) return 0.86 + 0.14 * (fam / 20); // vị trí phụ: 93% (tạm được) → 100%
     if (role === "GK" || p.pos === "GK") return 0.25;
     return FM.POS_GROUP[role] === FM.POS_GROUP[p.pos] ? 0.82 : 0.66;
   };

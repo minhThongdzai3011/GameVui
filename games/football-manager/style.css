@@ -1065,3 +1065,109 @@ textarea.code {
   transform: translateX(-50%);
   animation: pop 0.2s ease-out;
 }
+
+/* tuyển trạch */
+.stars.est {
+  opacity: 0.6;
+  font-style: italic;
+}
+.attr b.range {
+  min-width: 44px;
+  font-size: 12px;
+  opacity: 0.85;
+}
+.attr b.fog {
+  color: var(--muted);
+}
+.scoutbox {
+  display: grid;
+  gap: 6px;
+  padding: 10px 12px;
+  border: 1px dashed var(--line);
+  border-radius: 10px;
+}
+.pill.grade {
+  font-weight: 800;
+  min-width: 22px;
+  text-align: center;
+}
+.pill.gA {
+  background: rgba(61, 220, 132, 0.25);
+  color: #6ff0a8;
+}
+.pill.gB {
+  background: rgba(120, 190, 255, 0.2);
+  color: #9fd0ff;
+}
+.pill.gC {
+  background: rgba(255, 216, 77, 0.18);
+  color: #ffd84d;
+}
+.pill.gD {
+  background: rgba(255, 90, 95, 0.18);
+  color: #ff8a8e;
+}
+/* thanh tab nhiều mục: điện thoại thì cuộn ngang thay vì xuống dòng */
+@media (max-width: 520px) {
+  .tabs {
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .tabs button {
+    flex: 1 0 auto;
+    padding: 0 10px;
+    white-space: nowrap;
+  }
+}
+.attr b .up {
+  font-style: normal;
+  font-size: 9px;
+  margin-right: 2px;
+  color: #6ff0a8;
+  vertical-align: 1px;
+}
+.flag.loan {
+  background: rgba(120, 190, 255, 0.18);
+  color: #9fd0ff;
+}
+table.career {
+  font-size: 12px;
+}
+table.career td,
+table.career th {
+  padding: 4px 6px;
+}
+.kv > div > span {
+  display: block;
+  font-weight: 600;
+}
+/* chỉ số tổng */
+.ovr {
+  display: inline-block;
+  min-width: 26px;
+  padding: 1px 5px;
+  border-radius: 6px;
+  font: 800 13px/1.3 var(--title);
+  text-align: center;
+  vertical-align: middle;
+}
+.ovr.o4 {
+  background: rgba(61, 220, 132, 0.22);
+  color: #6ff0a8;
+}
+.ovr.o3 {
+  background: rgba(183, 240, 201, 0.14);
+  color: #b7f0c9;
+}
+.ovr.o2 {
+  background: rgba(255, 216, 77, 0.14);
+  color: #ffd84d;
+}
+.ovr.o1 {
+  background: rgba(255, 138, 142, 0.14);
+  color: #ff8a8e;
+}
+.ovr.est {
+  opacity: 0.75;
+  font-style: italic;
+}

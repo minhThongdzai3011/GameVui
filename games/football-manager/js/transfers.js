@@ -90,7 +90,16 @@
     if (d.listed && d.c === s.user) return d.ask || T.value(s, p);
     return round1(T.value(s, p) * ROLE_MULT[T.role(s, p, cache)] * (d.listed ? 0.9 : 1));
   };
-  T.wageBill = (s, clubId) => W.squad(s, clubId).reduce((a, p) => a + p.wage, 0);
+  // quỹ lương thực trả (cầu thủ mượn / cho mượn tính theo phần lương mỗi bên chịu)
+  T.wageBill = function (s, clubId) {
+    let t = 0;
+    for (const id in s.p) {
+      const d = s.p[id];
+      const k = FM.Loans ? FM.Loans.wageShare(d, clubId) : d.c === clubId ? 1 : 0;
+      if (k) t += (d.wage ?? W.player(s, id).wage) * k;
+    }
+    return t;
+  };
   const contractEnd = (s, years) => `${s.season + years}-06-30`;
   const prefYears = (age) => (age <= 23 ? 4 : age <= 29 ? 3 : age <= 32 ? 2 : 1);
 
@@ -103,6 +112,7 @@
     if (kind === "renew") {
       wage = Math.max(Math.round(p.wage * 1.05), wage);
       if (p.mor < 45) wage = Math.round(wage * 1.15);
+      if (p.wantsOut) return { refuse: `${p.sn} đang đòi ra đi và không muốn gia hạn.` };
       if (p.mor < 28) return { refuse: "Cầu thủ không vui ở CLB và không muốn gia hạn." };
       if (p.ca >= W.strength(s, clubId) + 8 && age < 29 && FM.hash(p.id + s.season) % 2) return { refuse: "Cầu thủ muốn tìm thử thách ở CLB lớn hơn." };
     } else {
@@ -123,6 +133,7 @@
     T.ensure(s);
     const p = W.player(s, pid);
     if (!p || p.c === s.user) return { result: "rejected", reason: "Cầu thủ đã thuộc CLB của bạn." };
+    if (p.loan) return { result: "rejected", reason: `${p.sn} đang được cho mượn — chờ hết mùa rồi hỏi mua.` };
     if (p.c !== FREE && !T.window(s).open) return { result: "rejected", reason: "Kỳ chuyển nhượng đang đóng — chỉ ký được cầu thủ tự do." };
     if (fee > s.clubs[s.user].bal) return { result: "rejected", reason: `Không đủ tiền (số dư ${FM.fmtMoney(s.clubs[s.user].bal)}).` };
     const ask = T.asking(s, p);
@@ -136,12 +147,15 @@
 
   // ---------- Đàm phán hợp đồng ----------
   // trả về accepted / countered (kèm counterWage) / rejected
-  T.offerContract = function (s, pid, wage, years, kind) {
+  // promise: kèm lời hứa suất đá chính → cầu thủ chấp nhận lương thấp hơn 10%
+  T.offerContract = function (s, pid, wage, years, kind, promise) {
     T.ensure(s);
     const p = W.player(s, pid);
     const clubId = s.user;
+    if (kind === "renew" && p.loan && p.loan.from !== clubId) return { result: "rejected", reason: "Cầu thủ đang mượn — hợp đồng do CLB chủ quản quyết định." };
     const dem = T.demand(s, p, clubId, kind);
     if (dem.refuse) return { result: "rejected", reason: dem.refuse };
+    if (promise) dem.wage = Math.round(dem.wage * 0.9);
     if (kind !== "renew" && p.c !== FREE && !(s.tr.neg && s.tr.neg.pid === pid)) return { result: "rejected", reason: "Chưa thoả thuận phí chuyển nhượng với CLB chủ quản." };
     const c = s.clubs[clubId];
     const bill = T.wageBill(s, clubId) - (kind === "renew" ? p.wage : 0) + wage;
@@ -161,6 +175,7 @@
         T.complete(s, pid, clubId, fee, wage, years);
         s.tr.neg = null;
       }
+      if (promise && FM.Morale) FM.Morale.promise(s, pid);
       return { result: "accepted" };
     }
     if (talk.n >= 3) {
@@ -185,7 +200,11 @@
       if (oc.lineup) oc.lineup = oc.lineup.map((id) => (id === pid ? null : id));
       if (oc.bench) oc.bench = oc.bench.filter((id) => id !== pid);
     }
+    if (FM.History) FM.History.moved(d, from, toClub);
     d.c = toClub;
+    d.loan = null;
+    d.loanListed = false;
+    if (FM.Morale) FM.Morale.reset(d);
     d.wage = wage;
     d.ce = contractEnd(s, years);
     d.mor = 68;
@@ -216,6 +235,8 @@
       if (oc.bench) oc.bench = oc.bench.filter((id) => id !== pid);
     }
     d.c = FREE;
+    d.loan = null;
+    d.loanListed = false;
     d.ce = null;
     d.listed = false;
     d.mor = 45;
@@ -248,6 +269,14 @@
     const p = W.player(s, o.pid);
     if (action === "reject") {
       o.status = "rejected";
+      // chặn đường đến CLB lớn hơn → cầu thủ thất vọng
+      const fromRep = W.baseClub(s, o.from).rep;
+      if (o.type !== "loan" && fromRep > W.baseClub(s, s.user).rep + 4 && p.age <= 30 && FM.Morale) {
+        const d = s.p[o.pid];
+        d.mor = Math.max(0, d.mor - 12);
+        d.unhappy = (d.unhappy || 0) + 2;
+        W.mail(s, "morale", `${p.sn} thất vọng`, `${p.n} buồn vì CLB từ chối đề nghị của ${W.baseClub(s, o.from).name} — đội bóng lớn hơn mà cậu ấy muốn đến.`);
+      }
       return { result: "rejected" };
     }
     if (action === "counter") {
@@ -278,6 +307,7 @@
     if (win.open) {
       aiBidsForUser(s, rnd);
       for (const id of Object.keys(s.clubs)) if (id !== s.user && rnd() < 0.035) aiBuy(s, id, rnd);
+      if (FM.Loans) FM.Loans.daily(s, rnd);
     }
     // đội máy thiếu người thì ký cầu thủ tự do (cả ngoài kỳ chuyển nhượng)
     for (const id of Object.keys(s.clubs)) if (id !== s.user && rnd() < 0.02 && W.squad(s, id).length < 25) aiBuy(s, id, rnd, true);
@@ -299,10 +329,10 @@
   };
 
   function aiBidsForUser(s, rnd) {
-    const squad = W.squad(s, s.user).filter((p) => !p.joined || FM.daysBetween(p.joined, s.date) > 30);
-    const listed = squad.filter((p) => s.p[p.id].listed).length;
+    const squad = W.squad(s, s.user).filter((p) => !p.loan && (!p.joined || FM.daysBetween(p.joined, s.date) > 30));
+    const listed = squad.filter((p) => s.p[p.id].listed || s.p[p.id].wantsOut).length;
     if (rnd() > 0.05 + listed * 0.05) return;
-    const target = rnd.weighted(squad, (p) => Math.max(1, p.ca - 42) ** 2 * (s.p[p.id].listed ? 5 : 1));
+    const target = rnd.weighted(squad, (p) => Math.max(1, p.ca - 42) ** 2 * (s.p[p.id].listed || s.p[p.id].wantsOut ? 5 : 1));
     if (!target || s.tr.offers.some((o) => o.pid === target.id && o.status === "open")) return;
     const fee = s.p[target.id].listed ? round1(T.asking(s, target) * rnd.range(0.85, 1.05)) : round1(T.value(s, target) * rnd.range(0.8, 1.2));
     const buyers = Object.keys(s.clubs).filter((id) => id !== s.user && s.clubs[id].bal * 0.7 >= fee && W.strength(s, id) <= target.ca + 6);
@@ -340,7 +370,7 @@
     const cache = new Map();
     for (const id of Object.keys(s.p)) {
       const d = s.p[id];
-      if (d.c === clubId || d.c === s.user || (freeOnly && d.c !== FREE)) continue;
+      if (d.c === clubId || d.c === s.user || d.loan || (freeOnly && d.c !== FREE)) continue;
       const p = W.player(s, id);
       if (!p || p.age > 31 || p.ca < weakest.ca + 3 || FM.familiarity(p, weakest.role) < 0.85) continue;
       if (p.c !== FREE) {
@@ -362,7 +392,7 @@
     // thừa người thì thanh lý người yếu nhất
     const now = W.squad(s, clubId);
     if (now.length > 32) {
-      const worst = now.filter((p) => p.age > 21 && p.id !== x.p.id).sort((a, b) => a.ca - b.ca)[0];
+      const worst = now.filter((p) => p.age > 21 && p.id !== x.p.id && !p.loan).sort((a, b) => a.ca - b.ca)[0];
       if (worst) T.toFree(s, worst.id);
     }
   }
@@ -420,7 +450,13 @@
       if (f.maxFee && T.asking(s, p, cache) > f.maxFee) continue;
       out.push(p);
     }
-    const key = { ca: (p) => -p.ca, value: (p) => -p.val, age: (p) => p.age, pot: (p) => -p.pa }[f.sort || "ca"];
-    return out.sort((a, b) => key(a) - key(b));
+    // người chơi chỉ sắp xếp được theo những gì tuyển trạch biết (ước tính), không theo chỉ số thật
+    const SC = FM.Scout;
+    const ca = (p) => (SC ? SC.estCa(s, p) : p.ca);
+    const pa = (p) => (SC ? SC.estPa(s, p) : p.pa);
+    const val = (p) => (SC ? SC.estVal(s, p) : p.val);
+    const keyFn = { ca: (p) => -ca(p), value: (p) => -val(p), age: (p) => p.age, pot: (p) => -pa(p) }[f.sort || "ca"];
+    const keyed = out.map((p) => [keyFn(p), p]);
+    return keyed.sort((a, b) => a[0] - b[0]).map((x) => x[1]);
   };
 })();

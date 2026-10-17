@@ -57,7 +57,7 @@
   // ---------- Hiệu quả của một cầu thủ ở một vai trò ----------
   function effective(p, role, fit, morale) {
     const base = FM.roleScore(p.a, role) * FM.familiarity(p, role);
-    return base * (0.72 + 0.28 * FM.clamp(fit, 0, 100) / 100) * (0.96 + 0.08 * FM.clamp(morale ?? 50, 0, 100) / 100);
+    return base * (0.72 + 0.28 * FM.clamp(fit, 0, 100) / 100) * (0.93 + 0.14 * FM.clamp(morale ?? 50, 0, 100) / 100); // tâm lý: ±7%
   }
   FM.effective = effective;
 
@@ -80,6 +80,40 @@
       lineup[si] = p.id;
       used.add(p.id);
       if (p.fs) foreign++;
+    }
+    // ghép tham lam có thể để người sai vị trí (vd. tiền đạo cắm đá cánh trong khi người đá được
+    // cánh lại vào giữa) → thử đổi chỗ hai ô và thay bằng người ngoài cho tới khi không cải thiện được
+    const byId = new Map(avail.map((p) => [p.id, p]));
+    const val = (id, si) => {
+      if (!id) return 0;
+      const p = byId.get(id);
+      return effective(p, slots[si][0], p.fit, p.mor) * (p.fit < 75 ? 0.9 : 1);
+    };
+    for (let pass = 0, better = true; better && pass < 4; pass++) {
+      better = false;
+      for (let i = 0; i < slots.length; i++)
+        for (let j = i + 1; j < slots.length; j++) {
+          if (val(lineup[j], i) + val(lineup[i], j) > val(lineup[i], i) + val(lineup[j], j) + 1e-9) {
+            [lineup[i], lineup[j]] = [lineup[j], lineup[i]];
+            better = true;
+          }
+        }
+      for (let i = 0; i < slots.length; i++)
+        for (const q of avail) {
+          if (used.has(q.id)) continue;
+          const cur = lineup[i] && byId.get(lineup[i]);
+          if (q.fs && !(cur && cur.fs) && foreign >= FM.MAX_FOREIGN_ON_PITCH) continue;
+          if (val(q.id, i) > val(lineup[i], i) + 1e-9) {
+            if (cur) {
+              used.delete(cur.id);
+              if (cur.fs) foreign--;
+            }
+            lineup[i] = q.id;
+            used.add(q.id);
+            if (q.fs) foreign++;
+            better = true;
+          }
+        }
     }
     const rest = avail.filter((p) => !used.has(p.id)).sort((a, b) => b.ca - a.ca);
     const bench = [];
@@ -152,6 +186,7 @@
         code: s.code,
         formation: s.formation,
         tactics: { ...FM.DEFAULT_TACTICS, ...s.tactics },
+        fam: s.fam ?? 1, // độ ăn ý với sơ đồ (tập luyện)
         slots,
         bench: [...s.bench],
         live,
@@ -194,6 +229,9 @@
       u.att = (u.att / UNIT_BASE.att) * MENT[t.mentality].att;
       u.def = (u.def / UNIT_BASE.def) * MENT[t.mentality].def * PRESS[t.pressing].def;
       u.mid = u.mid / UNIT_BASE.mid;
+      u.att *= side.fam;
+      u.mid *= side.fam;
+      u.def *= side.fam;
       // thiếu người (thẻ đỏ / chấn thương hết quyền thay) → yếu hẳn
       const n = onPitch(side).length;
       if (n < 11) {
@@ -343,13 +381,14 @@
       }
     }
     function aiDecisions(side) {
-      if (!side.ai || side.subs >= FM.MAX_SUBS) return;
+      // đội người chơi khi mô phỏng nhanh: trợ lý thay người vì thể lực, giữ nguyên lối chơi
+      if ((!side.ai && m.live) || side.subs >= FM.MAX_SUBS) return;
       if (![58, 66, 74, 82].includes(m.minute)) return;
       const other = sides[1 - side.idx];
       const diff = side.goals - other.goals;
       // đang thua sau phút 70 → tấn công
-      if (m.minute >= 66 && diff < 0 && side.tactics.mentality < 4) side.tactics.mentality = Math.min(4, side.tactics.mentality + 1);
-      if (m.minute >= 74 && diff > 0 && side.tactics.mentality > 1) side.tactics.mentality = 1;
+      if (side.ai && m.minute >= 66 && diff < 0 && side.tactics.mentality < 4) side.tactics.mentality = Math.min(4, side.tactics.mentality + 1);
+      if (side.ai && m.minute >= 74 && diff > 0 && side.tactics.mentality > 1) side.tactics.mentality = 1;
       const tired = onPitch(side)
         .filter((s) => s.role !== "GK")
         .map((s) => ({ s, L: side.live[s.id] }))

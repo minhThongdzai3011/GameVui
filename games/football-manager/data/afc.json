@@ -1,0 +1,1419 @@
+{
+ "season": 2026,
+ "source": "Wikipedia 2026–27 AFC Champions League Elite / Two, the-afc.com, VOV, VFF (tra cứu 2026-10-17)",
+ "clubs": [
+  {
+   "id": "al-hilal",
+   "name": "Al-Hilal",
+   "country": "Ả Rập Xê Út",
+   "region": "West",
+   "code": "HIL",
+   "venue": "Kingdom Arena (Riyadh)",
+   "colors": [
+    "#0047ab",
+    "#ffffff"
+   ],
+   "tier": 5,
+   "rep": 80,
+   "capacity": 20000,
+   "coach": "—"
+  },
+  {
+   "id": "al-nassr",
+   "name": "Al-Nassr",
+   "country": "Ả Rập Xê Út",
+   "region": "West",
+   "code": "NSR",
+   "venue": "Al-Awwal Park (Riyadh)",
+   "colors": [
+    "#ffd100",
+    "#0033a0"
+   ],
+   "tier": 5,
+   "rep": 80,
+   "capacity": 20000,
+   "coach": "—"
+  },
+  {
+   "id": "al-ahli",
+   "name": "Al-Ahli",
+   "country": "Ả Rập Xê Út",
+   "region": "West",
+   "code": "AHL",
+   "venue": "King Abdullah Sports City (Jeddah)",
+   "colors": [
+    "#00703c",
+    "#ffffff"
+   ],
+   "tier": 5,
+   "rep": 80,
+   "capacity": 20000,
+   "coach": "—"
+  },
+  {
+   "id": "al-ittihad",
+   "name": "Al-Ittihad",
+   "country": "Ả Rập Xê Út",
+   "region": "West",
+   "code": "ITT",
+   "venue": "King Abdullah Sports City (Jeddah)",
+   "colors": [
+    "#ffd100",
+    "#1a1a1a"
+   ],
+   "tier": 5,
+   "rep": 80,
+   "capacity": 20000,
+   "coach": "—"
+  },
+  {
+   "id": "al-qadsiah",
+   "name": "Al-Qadsiah",
+   "country": "Ả Rập Xê Út",
+   "region": "West",
+   "code": "QAD",
+   "venue": "Prince Saud bin Jalawi Stadium (Khobar)",
+   "colors": [
+    "#e30613",
+    "#ffd200"
+   ],
+   "tier": 4,
+   "rep": 71,
+   "capacity": 20000,
+   "coach": "—"
+  },
+  {
+   "id": "al-ain",
+   "name": "Al Ain",
+   "country": "UAE",
+   "region": "West",
+   "code": "AIN",
+   "venue": "Hazza bin Zayed Stadium",
+   "colors": [
+    "#5b2c83",
+    "#ffffff"
+   ],
+   "tier": 4,
+   "rep": 71,
+   "capacity": 20000,
+   "coach": "—"
+  },
+  {
+   "id": "shabab-al-ahli",
+   "name": "Shabab Al Ahli",
+   "country": "UAE",
+   "region": "West",
+   "code": "SAH",
+   "venue": "Rashid Stadium (Dubai)",
+   "colors": [
+    "#d71920",
+    "#1a1a1a"
+   ],
+   "tier": 4,
+   "rep": 71,
+   "capacity": 20000,
+   "coach": "—"
+  },
+  {
+   "id": "al-wasl",
+   "name": "Al Wasl",
+   "country": "UAE",
+   "region": "West",
+   "code": "WAS",
+   "venue": "Zabeel Stadium (Dubai)",
+   "colors": [
+    "#ffd100",
+    "#1a1a1a"
+   ],
+   "tier": 4,
+   "rep": 71,
+   "capacity": 20000,
+   "coach": "—"
+  },
+  {
+   "id": "al-sadd",
+   "name": "Al Sadd",
+   "country": "Qatar",
+   "region": "West",
+   "code": "SAD",
+   "venue": "Jassim bin Hamad Stadium (Doha)",
+   "colors": [
+    "#f4f4f4",
+    "#1a1a1a"
+   ],
+   "tier": 4,
+   "rep": 71,
+   "capacity": 20000,
+   "coach": "—"
+  },
+  {
+   "id": "al-gharafa",
+   "name": "Al-Gharafa",
+   "country": "Qatar",
+   "region": "West",
+   "code": "GHA",
+   "venue": "Thani bin Jassim Stadium (Doha)",
+   "colors": [
+    "#ffd100",
+    "#003da5"
+   ],
+   "tier": 4,
+   "rep": 71,
+   "capacity": 20000,
+   "coach": "—"
+  },
+  {
+   "id": "al-shamal",
+   "name": "Al-Shamal",
+   "country": "Qatar",
+   "region": "West",
+   "code": "SHM",
+   "venue": "Al-Shamal SC Stadium",
+   "colors": [
+    "#1e73be",
+    "#ffffff"
+   ],
+   "tier": 3,
+   "rep": 62,
+   "capacity": 20000,
+   "coach": "—"
+  },
+  {
+   "id": "esteghlal",
+   "name": "Esteghlal",
+   "country": "Iran",
+   "region": "West",
+   "code": "EST",
+   "venue": "Azadi Stadium (Tehran)",
+   "colors": [
+    "#0033a0",
+    "#ffffff"
+   ],
+   "tier": 4,
+   "rep": 71,
+   "capacity": 20000,
+   "coach": "—"
+  },
+  {
+   "id": "tractor",
+   "name": "Tractor",
+   "country": "Iran",
+   "region": "West",
+   "code": "TRA",
+   "venue": "Yadegar-e Emam Stadium (Tabriz)",
+   "colors": [
+    "#e30613",
+    "#ffffff"
+   ],
+   "tier": 4,
+   "rep": 71,
+   "capacity": 20000,
+   "coach": "—"
+  },
+  {
+   "id": "neftchi-fergana",
+   "name": "Neftchi Fergana",
+   "country": "Uzbekistan",
+   "region": "West",
+   "code": "NEF",
+   "venue": "Istiqlol Stadium (Fergana)",
+   "colors": [
+    "#f4f4f4",
+    "#0057b8"
+   ],
+   "tier": 3,
+   "rep": 62,
+   "capacity": 20000,
+   "coach": "—"
+  },
+  {
+   "id": "pakhtakor",
+   "name": "Pakhtakor",
+   "country": "Uzbekistan",
+   "region": "West",
+   "code": "PAK",
+   "venue": "Pakhtakor Central Stadium (Tashkent)",
+   "colors": [
+    "#00a651",
+    "#ffffff"
+   ],
+   "tier": 3,
+   "rep": 62,
+   "capacity": 20000,
+   "coach": "—"
+  },
+  {
+   "id": "al-quwa-al-jawiya",
+   "name": "Al-Quwa Al-Jawiya",
+   "country": "Iraq",
+   "region": "West",
+   "code": "QWJ",
+   "venue": "Al-Madina Stadium (Baghdad)",
+   "colors": [
+    "#0072ce",
+    "#ffffff"
+   ],
+   "tier": 3,
+   "rep": 62,
+   "capacity": 20000,
+   "coach": "—"
+  },
+  {
+   "id": "kashima-antlers",
+   "name": "Kashima Antlers",
+   "country": "Nhật Bản",
+   "region": "East",
+   "code": "KAS",
+   "venue": "Mercari Stadium (Kashima)",
+   "colors": [
+    "#b0122b",
+    "#0b1f3f"
+   ],
+   "tier": 5,
+   "rep": 80,
+   "capacity": 20000,
+   "coach": "—"
+  },
+  {
+   "id": "kashiwa-reysol",
+   "name": "Kashiwa Reysol",
+   "country": "Nhật Bản",
+   "region": "East",
+   "code": "KSW",
+   "venue": "Sankyo Frontier Kashiwa Stadium",
+   "colors": [
+    "#ffe100",
+    "#1a1a1a"
+   ],
+   "tier": 4,
+   "rep": 71,
+   "capacity": 20000,
+   "coach": "—"
+  },
+  {
+   "id": "kyoto-sanga",
+   "name": "Kyoto Sanga",
+   "country": "Nhật Bản",
+   "region": "East",
+   "code": "KYO",
+   "venue": "Sanga Stadium by Kyocera",
+   "colors": [
+    "#5a1f7a",
+    "#ffffff"
+   ],
+   "tier": 4,
+   "rep": 71,
+   "capacity": 20000,
+   "coach": "—"
+  },
+  {
+   "id": "vissel-kobe",
+   "name": "Vissel Kobe",
+   "country": "Nhật Bản",
+   "region": "East",
+   "code": "KOB",
+   "venue": "Noevir Stadium Kobe",
+   "colors": [
+    "#8b0020",
+    "#1a1a1a"
+   ],
+   "tier": 5,
+   "rep": 80,
+   "capacity": 20000,
+   "coach": "—"
+  },
+  {
+   "id": "gamba-osaka",
+   "name": "Gamba Osaka",
+   "country": "Nhật Bản",
+   "region": "East",
+   "code": "GAM",
+   "venue": "Panasonic Stadium Suita",
+   "colors": [
+    "#0047ab",
+    "#1a1a1a"
+   ],
+   "tier": 4,
+   "rep": 71,
+   "capacity": 20000,
+   "coach": "—"
+  },
+  {
+   "id": "jeonbuk-hyundai-motors",
+   "name": "Jeonbuk Hyundai Motors",
+   "country": "Hàn Quốc",
+   "region": "East",
+   "code": "JEO",
+   "venue": "Jeonju World Cup Stadium",
+   "colors": [
+    "#00653a",
+    "#ffffff"
+   ],
+   "tier": 5,
+   "rep": 80,
+   "capacity": 20000,
+   "coach": "—"
+  },
+  {
+   "id": "daejeon-hana-citizen",
+   "name": "Daejeon Hana Citizen",
+   "country": "Hàn Quốc",
+   "region": "East",
+   "code": "DJN",
+   "venue": "Daejeon World Cup Stadium",
+   "colors": [
+    "#5b2b82",
+    "#00a651"
+   ],
+   "tier": 4,
+   "rep": 71,
+   "capacity": 20000,
+   "coach": "—"
+  },
+  {
+   "id": "pohang-steelers",
+   "name": "Pohang Steelers",
+   "country": "Hàn Quốc",
+   "region": "East",
+   "code": "POH",
+   "venue": "Pohang Steel Yard",
+   "colors": [
+    "#e2231a",
+    "#1a1a1a"
+   ],
+   "tier": 4,
+   "rep": 71,
+   "capacity": 20000,
+   "coach": "—"
+  },
+  {
+   "id": "shanghai-port",
+   "name": "Shanghai Port",
+   "country": "Trung Quốc",
+   "region": "East",
+   "code": "SHP",
+   "venue": "Pudong Football Stadium",
+   "colors": [
+    "#c8102e",
+    "#ffffff"
+   ],
+   "tier": 4,
+   "rep": 71,
+   "capacity": 20000,
+   "coach": "—"
+  },
+  {
+   "id": "beijing-guoan",
+   "name": "Beijing Guoan",
+   "country": "Trung Quốc",
+   "region": "East",
+   "code": "BJG",
+   "venue": "Workers' Stadium (Beijing)",
+   "colors": [
+    "#00843d",
+    "#ffffff"
+   ],
+   "tier": 4,
+   "rep": 71,
+   "capacity": 20000,
+   "coach": "—"
+  },
+  {
+   "id": "buriram-united",
+   "name": "Buriram United",
+   "country": "Thái Lan",
+   "region": "East",
+   "code": "BRU",
+   "venue": "Chang Arena (Buriram)",
+   "colors": [
+    "#0b2d84",
+    "#f5a800"
+   ],
+   "tier": 3,
+   "rep": 62,
+   "capacity": 20000,
+   "coach": "—"
+  },
+  {
+   "id": "port-fc",
+   "name": "Port FC",
+   "country": "Thái Lan",
+   "region": "East",
+   "code": "PFC",
+   "venue": "PAT Stadium (Bangkok)",
+   "colors": [
+    "#0055a4",
+    "#f47920"
+   ],
+   "tier": 3,
+   "rep": 62,
+   "capacity": 20000,
+   "coach": "—"
+  },
+  {
+   "id": "ratchaburi",
+   "name": "Ratchaburi",
+   "country": "Thái Lan",
+   "region": "East",
+   "code": "RAT",
+   "venue": "Dragon Solar Park (Ratchaburi)",
+   "colors": [
+    "#1d4e9e",
+    "#e31b23"
+   ],
+   "tier": 2,
+   "rep": 53,
+   "capacity": 20000,
+   "coach": "—"
+  },
+  {
+   "id": "newcastle-jets",
+   "name": "Newcastle Jets",
+   "country": "Úc",
+   "region": "East",
+   "code": "NEW",
+   "venue": "McDonald Jones Stadium (Newcastle)",
+   "colors": [
+    "#0b2a5b",
+    "#e11b22"
+   ],
+   "tier": 3,
+   "rep": 62,
+   "capacity": 20000,
+   "coach": "—"
+  },
+  {
+   "id": "johor-darul-tazim",
+   "name": "Johor Darul Ta'zim",
+   "country": "Malaysia",
+   "region": "East",
+   "code": "JDT",
+   "venue": "Sultan Ibrahim Stadium (Iskandar Puteri)",
+   "colors": [
+    "#e2231a",
+    "#002d72"
+   ],
+   "tier": 3,
+   "rep": 62,
+   "capacity": 20000,
+   "coach": "—"
+  },
+  {
+   "id": "al-wahda",
+   "name": "Al Wahda",
+   "country": "UAE",
+   "region": "West",
+   "code": "WAH",
+   "venue": "Al Nahyan Stadium (Abu Dhabi)",
+   "colors": [
+    "#8c1d40",
+    "#ffffff"
+   ],
+   "tier": 4,
+   "rep": 71,
+   "capacity": 20000,
+   "coach": "—"
+  },
+  {
+   "id": "al-kuwait",
+   "name": "Al-Kuwait",
+   "country": "Kuwait",
+   "region": "West",
+   "code": "KUW",
+   "venue": "Al-Kuwait SC Stadium (Kaifan)",
+   "colors": [
+    "#f4f4f4",
+    "#c8102e"
+   ],
+   "tier": 3,
+   "rep": 62,
+   "capacity": 20000,
+   "coach": "—"
+  },
+  {
+   "id": "nasaf",
+   "name": "Nasaf",
+   "country": "Uzbekistan",
+   "region": "West",
+   "code": "NSF",
+   "venue": "Markaziy Stadium (Qarshi)",
+   "colors": [
+    "#0066b3",
+    "#ffffff"
+   ],
+   "tier": 3,
+   "rep": 62,
+   "capacity": 20000,
+   "coach": "—"
+  },
+  {
+   "id": "al-khaldiya",
+   "name": "Al-Khaldiya",
+   "country": "Bahrain",
+   "region": "West",
+   "code": "KHL",
+   "venue": "Khalifa Sports City Stadium (Isa Town)",
+   "colors": [
+    "#006c35",
+    "#ffffff"
+   ],
+   "tier": 2,
+   "rep": 53,
+   "capacity": 20000,
+   "coach": "—"
+  },
+  {
+   "id": "al-jazira",
+   "name": "Al Jazira",
+   "country": "UAE",
+   "region": "West",
+   "code": "JAZ",
+   "venue": "Mohammed Bin Zayed Stadium (Abu Dhabi)",
+   "colors": [
+    "#d71920",
+    "#1a1a1a"
+   ],
+   "tier": 4,
+   "rep": 71,
+   "capacity": 20000,
+   "coach": "—"
+  },
+  {
+   "id": "al-muharraq",
+   "name": "Al-Muharraq",
+   "country": "Bahrain",
+   "region": "West",
+   "code": "MUH",
+   "venue": "Al Muharraq Stadium",
+   "colors": [
+    "#d71920",
+    "#ffffff"
+   ],
+   "tier": 2,
+   "rep": 53,
+   "capacity": 20000,
+   "coach": "—"
+  },
+  {
+   "id": "arkadag",
+   "name": "Arkadag",
+   "country": "Turkmenistan",
+   "region": "West",
+   "code": "ARK",
+   "venue": "Arkadag Stadium",
+   "colors": [
+    "#009a44",
+    "#ffffff"
+   ],
+   "tier": 2,
+   "rep": 53,
+   "capacity": 20000,
+   "coach": "—"
+  },
+  {
+   "id": "gol-gohar-sirjan",
+   "name": "Gol Gohar Sirjan",
+   "country": "Iran",
+   "region": "West",
+   "code": "GGS",
+   "venue": "Imam Ali Stadium (Sirjan)",
+   "colors": [
+    "#f47b20",
+    "#1a1a1a"
+   ],
+   "tier": 3,
+   "rep": 62,
+   "capacity": 20000,
+   "coach": "—"
+  },
+  {
+   "id": "al-taawoun",
+   "name": "Al-Taawoun",
+   "country": "Ả Rập Xê Út",
+   "region": "West",
+   "code": "TAA",
+   "venue": "King Abdullah Sport City (Buraydah)",
+   "colors": [
+    "#ffd100",
+    "#003da5"
+   ],
+   "tier": 4,
+   "rep": 71,
+   "capacity": 20000,
+   "coach": "—"
+  },
+  {
+   "id": "al-faisaly",
+   "name": "Al-Faisaly",
+   "country": "Jordan",
+   "region": "West",
+   "code": "FAI",
+   "venue": "Amman International Stadium",
+   "colors": [
+    "#0055a4",
+    "#ffffff"
+   ],
+   "tier": 3,
+   "rep": 62,
+   "capacity": 20000,
+   "coach": "—"
+  },
+  {
+   "id": "al-rayyan",
+   "name": "Al-Rayyan",
+   "country": "Qatar",
+   "region": "West",
+   "code": "RAY",
+   "venue": "Ahmad bin Ali Stadium (Al Rayyan)",
+   "colors": [
+    "#e30613",
+    "#1a1a1a"
+   ],
+   "tier": 4,
+   "rep": 71,
+   "capacity": 20000,
+   "coach": "—"
+  },
+  {
+   "id": "al-nahda",
+   "name": "Al-Nahda",
+   "country": "Oman",
+   "region": "West",
+   "code": "NAH",
+   "venue": "Al-Buraimi Stadium",
+   "colors": [
+    "#0b5fa5",
+    "#ffffff"
+   ],
+   "tier": 2,
+   "rep": 53,
+   "capacity": 20000,
+   "coach": "—"
+  },
+  {
+   "id": "al-shorta",
+   "name": "Al-Shorta",
+   "country": "Iraq",
+   "region": "West",
+   "code": "SHO",
+   "venue": "Al-Shorta Stadium (Baghdad)",
+   "colors": [
+    "#009739",
+    "#ffffff"
+   ],
+   "tier": 3,
+   "rep": 62,
+   "capacity": 20000,
+   "coach": "—"
+  },
+  {
+   "id": "al-hussein",
+   "name": "Al-Hussein",
+   "country": "Jordan",
+   "region": "West",
+   "code": "HUS",
+   "venue": "Al-Hassan Stadium (Irbid)",
+   "colors": [
+    "#ffd100",
+    "#003da5"
+   ],
+   "tier": 3,
+   "rep": 62,
+   "capacity": 20000,
+   "coach": "—"
+  },
+  {
+   "id": "east-bengal",
+   "name": "East Bengal",
+   "country": "Ấn Độ",
+   "region": "West",
+   "code": "EBG",
+   "venue": "Salt Lake Stadium (Kolkata)",
+   "colors": [
+    "#e30613",
+    "#ffd100"
+   ],
+   "tier": 2,
+   "rep": 53,
+   "capacity": 20000,
+   "coach": "—"
+  },
+  {
+   "id": "al-seeb",
+   "name": "Al-Seeb",
+   "country": "Oman",
+   "region": "West",
+   "code": "SEB",
+   "venue": "Al-Seeb Stadium",
+   "colors": [
+    "#1e5aa8",
+    "#ffd100"
+   ],
+   "tier": 2,
+   "rep": 53,
+   "capacity": 20000,
+   "coach": "—"
+  },
+  {
+   "id": "fc-seoul",
+   "name": "FC Seoul",
+   "country": "Hàn Quốc",
+   "region": "East",
+   "code": "SEO",
+   "venue": "Seoul World Cup Stadium",
+   "colors": [
+    "#c8102e",
+    "#1a1a1a"
+   ],
+   "tier": 4,
+   "rep": 71,
+   "capacity": 20000,
+   "coach": "—"
+  },
+  {
+   "id": "melbourne-victory",
+   "name": "Melbourne Victory",
+   "country": "Úc",
+   "region": "East",
+   "code": "MVC",
+   "venue": "AAMI Park (Melbourne)",
+   "colors": [
+    "#002b5c",
+    "#ffffff"
+   ],
+   "tier": 3,
+   "rep": 62,
+   "capacity": 20000,
+   "coach": "—"
+  },
+  {
+   "id": "persib-bandung",
+   "name": "Persib Bandung",
+   "country": "Indonesia",
+   "region": "East",
+   "code": "PSB",
+   "venue": "Gelora Bandung Lautan Api Stadium",
+   "colors": [
+    "#0055a4",
+    "#ffffff"
+   ],
+   "tier": 2,
+   "rep": 53,
+   "capacity": 20000,
+   "coach": "—"
+  },
+  {
+   "id": "bg-pathum-united",
+   "name": "BG Pathum United",
+   "country": "Thái Lan",
+   "region": "East",
+   "code": "BGP",
+   "venue": "BG Stadium (Pathum Thani)",
+   "colors": [
+    "#1a3c8f",
+    "#ffffff"
+   ],
+   "tier": 3,
+   "rep": 62,
+   "capacity": 20000,
+   "coach": "—"
+  },
+  {
+   "id": "adelaide-united",
+   "name": "Adelaide United",
+   "country": "Úc",
+   "region": "East",
+   "code": "ADL",
+   "venue": "Coopers Stadium (Adelaide)",
+   "colors": [
+    "#d71920",
+    "#0a1f44"
+   ],
+   "tier": 3,
+   "rep": 62,
+   "capacity": 20000,
+   "coach": "—"
+  },
+  {
+   "id": "lion-city-sailors",
+   "name": "Lion City Sailors",
+   "country": "Singapore",
+   "region": "East",
+   "code": "LCS",
+   "venue": "Bishan Stadium",
+   "colors": [
+    "#d71920",
+    "#ffffff"
+   ],
+   "tier": 3,
+   "rep": 62,
+   "capacity": 20000,
+   "coach": "—"
+  },
+  {
+   "id": "tai-po",
+   "name": "Tai Po",
+   "country": "Hồng Kông",
+   "region": "East",
+   "code": "TPO",
+   "venue": "Tai Po Sports Ground",
+   "colors": [
+    "#00843d",
+    "#f47920"
+   ],
+   "tier": 2,
+   "rep": 53,
+   "capacity": 20000,
+   "coach": "—"
+  },
+  {
+   "id": "machida-zelvia",
+   "name": "Machida Zelvia",
+   "country": "Nhật Bản",
+   "region": "East",
+   "code": "MAC",
+   "venue": "Machida GION Stadium",
+   "colors": [
+    "#002e6d",
+    "#ffffff"
+   ],
+   "tier": 4,
+   "rep": 71,
+   "capacity": 20000,
+   "coach": "—"
+  },
+  {
+   "id": "shanghai-shenhua",
+   "name": "Shanghai Shenhua",
+   "country": "Trung Quốc",
+   "region": "East",
+   "code": "SHS",
+   "venue": "Shanghai Stadium",
+   "colors": [
+    "#0033a0",
+    "#ffffff"
+   ],
+   "tier": 4,
+   "rep": 71,
+   "capacity": 20000,
+   "coach": "—"
+  },
+  {
+   "id": "tampines-rovers",
+   "name": "Tampines Rovers",
+   "country": "Singapore",
+   "region": "East",
+   "code": "TAM",
+   "venue": "Our Tampines Hub",
+   "colors": [
+    "#ffd100",
+    "#009a44"
+   ],
+   "tier": 2,
+   "rep": 53,
+   "capacity": 20000,
+   "coach": "—"
+  },
+  {
+   "id": "preah-khan-reach-svay-rieng",
+   "name": "Preah Khan Reach Svay Rieng",
+   "country": "Campuchia",
+   "region": "East",
+   "code": "PKR",
+   "venue": "Svay Rieng Stadium",
+   "colors": [
+    "#003da5",
+    "#ffffff"
+   ],
+   "tier": 2,
+   "rep": 53,
+   "capacity": 20000,
+   "coach": "—"
+  },
+  {
+   "id": "gangwon-fc",
+   "name": "Gangwon FC",
+   "country": "Hàn Quốc",
+   "region": "East",
+   "code": "GAN",
+   "venue": "Gangneung Stadium",
+   "colors": [
+    "#f26522",
+    "#002f6c"
+   ],
+   "tier": 4,
+   "rep": 71,
+   "capacity": 20000,
+   "coach": "—"
+  },
+  {
+   "id": "kuching-city",
+   "name": "Kuching City",
+   "country": "Malaysia",
+   "region": "East",
+   "code": "KCH",
+   "venue": "Sarawak State Stadium (Kuching)",
+   "colors": [
+    "#e30613",
+    "#ffd100"
+   ],
+   "tier": 2,
+   "rep": 53,
+   "capacity": 20000,
+   "coach": "—"
+  },
+  {
+   "id": "kitchee",
+   "name": "Kitchee",
+   "country": "Hồng Kông",
+   "region": "East",
+   "code": "KIT",
+   "venue": "Mong Kok Stadium",
+   "colors": [
+    "#0055a4",
+    "#ffffff"
+   ],
+   "tier": 2,
+   "rep": 53,
+   "capacity": 20000,
+   "coach": "—"
+  },
+  {
+   "id": "phnom-penh-crown",
+   "name": "Phnom Penh Crown",
+   "country": "Campuchia",
+   "region": "East",
+   "code": "PPC",
+   "venue": "RSN Stadium (Phnom Penh)",
+   "colors": [
+    "#c8102e",
+    "#ffd700"
+   ],
+   "tier": 2,
+   "rep": 53,
+   "capacity": 20000,
+   "coach": "—"
+  }
+ ],
+ "vn": {
+  "acle": [
+   "cong-an-ha-noi"
+  ],
+  "acl2": [
+   "the-cong-viettel"
+  ]
+ },
+ "acle": {
+  "east": [
+   "kashima-antlers",
+   "kashiwa-reysol",
+   "kyoto-sanga",
+   "vissel-kobe",
+   "gamba-osaka",
+   "jeonbuk-hyundai-motors",
+   "daejeon-hana-citizen",
+   "pohang-steelers",
+   "shanghai-port",
+   "beijing-guoan",
+   "buriram-united",
+   "port-fc",
+   "ratchaburi",
+   "newcastle-jets",
+   "johor-darul-tazim",
+   "cong-an-ha-noi"
+  ],
+  "west": [
+   "al-hilal",
+   "al-nassr",
+   "al-ahli",
+   "al-ittihad",
+   "al-qadsiah",
+   "al-ain",
+   "shabab-al-ahli",
+   "al-wasl",
+   "al-sadd",
+   "al-gharafa",
+   "al-shamal",
+   "esteghlal",
+   "tractor",
+   "neftchi-fergana",
+   "pakhtakor",
+   "al-quwa-al-jawiya"
+  ],
+  "eastSchedule": [
+   [
+    1,
+    "kashima-antlers",
+    "newcastle-jets"
+   ],
+   [
+    3,
+    "kashima-antlers",
+    "pohang-steelers"
+   ],
+   [
+    5,
+    "kashima-antlers",
+    "jeonbuk-hyundai-motors"
+   ],
+   [
+    8,
+    "kashima-antlers",
+    "ratchaburi"
+   ],
+   [
+    2,
+    "kashiwa-reysol",
+    "port-fc"
+   ],
+   [
+    4,
+    "kashiwa-reysol",
+    "daejeon-hana-citizen"
+   ],
+   [
+    6,
+    "kashiwa-reysol",
+    "cong-an-ha-noi"
+   ],
+   [
+    7,
+    "kashiwa-reysol",
+    "buriram-united"
+   ],
+   [
+    2,
+    "kyoto-sanga",
+    "ratchaburi"
+   ],
+   [
+    3,
+    "kyoto-sanga",
+    "newcastle-jets"
+   ],
+   [
+    5,
+    "kyoto-sanga",
+    "pohang-steelers"
+   ],
+   [
+    7,
+    "kyoto-sanga",
+    "jeonbuk-hyundai-motors"
+   ],
+   [
+    2,
+    "vissel-kobe",
+    "jeonbuk-hyundai-motors"
+   ],
+   [
+    4,
+    "vissel-kobe",
+    "ratchaburi"
+   ],
+   [
+    6,
+    "vissel-kobe",
+    "newcastle-jets"
+   ],
+   [
+    7,
+    "vissel-kobe",
+    "pohang-steelers"
+   ],
+   [
+    1,
+    "gamba-osaka",
+    "cong-an-ha-noi"
+   ],
+   [
+    3,
+    "gamba-osaka",
+    "buriram-united"
+   ],
+   [
+    5,
+    "gamba-osaka",
+    "port-fc"
+   ],
+   [
+    8,
+    "gamba-osaka",
+    "daejeon-hana-citizen"
+   ],
+   [
+    1,
+    "jeonbuk-hyundai-motors",
+    "kashiwa-reysol"
+   ],
+   [
+    4,
+    "jeonbuk-hyundai-motors",
+    "johor-darul-tazim"
+   ],
+   [
+    6,
+    "jeonbuk-hyundai-motors",
+    "gamba-osaka"
+   ],
+   [
+    8,
+    "jeonbuk-hyundai-motors",
+    "shanghai-port"
+   ],
+   [
+    1,
+    "daejeon-hana-citizen",
+    "kyoto-sanga"
+   ],
+   [
+    3,
+    "daejeon-hana-citizen",
+    "vissel-kobe"
+   ],
+   [
+    5,
+    "daejeon-hana-citizen",
+    "beijing-guoan"
+   ],
+   [
+    7,
+    "daejeon-hana-citizen",
+    "kashima-antlers"
+   ],
+   [
+    2,
+    "pohang-steelers",
+    "johor-darul-tazim"
+   ],
+   [
+    4,
+    "pohang-steelers",
+    "gamba-osaka"
+   ],
+   [
+    6,
+    "pohang-steelers",
+    "shanghai-port"
+   ],
+   [
+    8,
+    "pohang-steelers",
+    "kashiwa-reysol"
+   ],
+   [
+    2,
+    "shanghai-port",
+    "daejeon-hana-citizen"
+   ],
+   [
+    3,
+    "shanghai-port",
+    "cong-an-ha-noi"
+   ],
+   [
+    5,
+    "shanghai-port",
+    "buriram-united"
+   ],
+   [
+    7,
+    "shanghai-port",
+    "port-fc"
+   ],
+   [
+    1,
+    "beijing-guoan",
+    "pohang-steelers"
+   ],
+   [
+    3,
+    "beijing-guoan",
+    "jeonbuk-hyundai-motors"
+   ],
+   [
+    6,
+    "beijing-guoan",
+    "ratchaburi"
+   ],
+   [
+    8,
+    "beijing-guoan",
+    "newcastle-jets"
+   ],
+   [
+    2,
+    "buriram-united",
+    "beijing-guoan"
+   ],
+   [
+    4,
+    "buriram-united",
+    "kashima-antlers"
+   ],
+   [
+    6,
+    "buriram-united",
+    "kyoto-sanga"
+   ],
+   [
+    8,
+    "buriram-united",
+    "vissel-kobe"
+   ],
+   [
+    1,
+    "port-fc",
+    "vissel-kobe"
+   ],
+   [
+    4,
+    "port-fc",
+    "beijing-guoan"
+   ],
+   [
+    6,
+    "port-fc",
+    "kashima-antlers"
+   ],
+   [
+    8,
+    "port-fc",
+    "kyoto-sanga"
+   ],
+   [
+    1,
+    "ratchaburi",
+    "shanghai-port"
+   ],
+   [
+    3,
+    "ratchaburi",
+    "kashiwa-reysol"
+   ],
+   [
+    5,
+    "ratchaburi",
+    "johor-darul-tazim"
+   ],
+   [
+    7,
+    "ratchaburi",
+    "gamba-osaka"
+   ],
+   [
+    2,
+    "newcastle-jets",
+    "gamba-osaka"
+   ],
+   [
+    4,
+    "newcastle-jets",
+    "shanghai-port"
+   ],
+   [
+    5,
+    "newcastle-jets",
+    "kashiwa-reysol"
+   ],
+   [
+    7,
+    "newcastle-jets",
+    "johor-darul-tazim"
+   ],
+   [
+    1,
+    "johor-darul-tazim",
+    "buriram-united"
+   ],
+   [
+    3,
+    "johor-darul-tazim",
+    "port-fc"
+   ],
+   [
+    6,
+    "johor-darul-tazim",
+    "daejeon-hana-citizen"
+   ],
+   [
+    8,
+    "johor-darul-tazim",
+    "cong-an-ha-noi"
+   ],
+   [
+    2,
+    "cong-an-ha-noi",
+    "kashima-antlers"
+   ],
+   [
+    4,
+    "cong-an-ha-noi",
+    "kyoto-sanga"
+   ],
+   [
+    5,
+    "cong-an-ha-noi",
+    "vissel-kobe"
+   ],
+   [
+    7,
+    "cong-an-ha-noi",
+    "beijing-guoan"
+   ]
+  ],
+  "prelimOpp": "adelaide-united"
+ },
+ "acl2": {
+  "groups": {
+   "A": [
+    "al-wahda",
+    "al-kuwait",
+    "al-khaldiya",
+    "nasaf"
+   ],
+   "B": [
+    "al-jazira",
+    "arkadag",
+    "al-muharraq",
+    "gol-gohar-sirjan"
+   ],
+   "C": [
+    "al-taawoun",
+    "al-rayyan",
+    "al-faisaly",
+    "al-nahda"
+   ],
+   "D": [
+    "al-shorta",
+    "al-seeb",
+    "al-hussein",
+    "east-bengal"
+   ],
+   "E": [
+    "the-cong-viettel",
+    "melbourne-victory",
+    "fc-seoul",
+    "persib-bandung"
+   ],
+   "F": [
+    "adelaide-united",
+    "tai-po",
+    "lion-city-sailors",
+    "bg-pathum-united"
+   ],
+   "G": [
+    "machida-zelvia",
+    "preah-khan-reach-svay-rieng",
+    "shanghai-shenhua",
+    "tampines-rovers"
+   ],
+   "H": [
+    "phnom-penh-crown",
+    "kuching-city",
+    "kitchee",
+    "gangwon-fc"
+   ]
+  }
+ }
+}
