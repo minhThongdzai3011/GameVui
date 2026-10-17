@@ -25,35 +25,45 @@
       const c = s.clubs[id];
       if (!c.wageCap) c.wageCap = Math.round((W.baseClub(s, id).wageBudget || 400) * 1.15);
     }
-    if (s.windowsSeason !== s.season) {
-      // ngày các vòng V.League 1 của mùa hiện tại
+    if (s.windowsSeason !== s.season || Array.isArray(s.windows) || !s.windows.es) {
+      // Việt Nam: trước mùa → 2 tuần sau vòng 1, và đợt nghỉ Tết (giữa vòng 18 và 19 V.League 1)
       const rd = (n) => s.fx.find((f) => f.lg === V1 && f.rd === n)?.d;
       const r1 = rd(1);
-      s.windows = [
-        [FM.addDays(r1, -70), FM.addDays(r1, 14)],
-        [FM.addDays(rd(18), 1), FM.addDays(rd(19), -1)],
-      ];
+      // Anh: 14/6 → 1/9 và 1/1 → 2/2 như thật
+      s.windows = {
+        vn: r1 ? [[FM.addDays(r1, -70), FM.addDays(r1, 14)], [FM.addDays(rd(18), 1), FM.addDays(rd(19), -1)]] : [],
+        en: [[`${s.season}-06-14`, `${s.season}-09-01`], [`${s.season + 1}-01-01`, `${s.season + 1}-02-02`]],
+        // Tây Ban Nha: 1/7 → 1/9 và 2/1 → 2/2
+        es: [[`${s.season}-07-01`, `${s.season}-09-01`], [`${s.season + 1}-01-02`, `${s.season + 1}-02-02`]],
+      };
       s.windowsSeason = s.season;
     }
   };
-  T.window = function (s) {
+  // các kỳ chuyển nhượng của một quốc gia (mặc định: quốc gia của CLB người chơi)
+  T.windowsOf = (s, country) => {
     T.ensure(s);
-    const open = s.windows.find(([a, b]) => s.date >= a && s.date <= b);
+    return s.windows[country || W.countryOfClub(s, s.user)] || [];
+  };
+  T.window = function (s, country) {
+    const ws = T.windowsOf(s, country);
+    const open = ws.find(([a, b]) => s.date >= a && s.date <= b);
     if (open) return { open: true, until: open[1] };
-    const next = s.windows.find(([a]) => a > s.date);
+    const next = ws.find(([a]) => a > s.date);
     return { open: false, next: next ? next[0] : null };
   };
 
   // ---------- Định giá ----------
+  // quốc gia định giá cầu thủ: nơi CLB hiện tại thi đấu; tự do thì theo quốc tịch
+  const valueCountry = (s, p) => (p.c !== FREE && s.clubs[p.c] ? W.countryOfClub(s, p.c) : Object.keys(FM.COUNTRIES).find((k) => FM.natOf(k) === p.nat) || "en");
   T.value = function (s, p) {
-    let v = 0.4 * Math.exp((p.ca - 45) * 0.109);
+    let v = FM.econOf(valueCountry(s, p)).value(p.ca);
     const age = p.age ?? FM.ageOn(p, s.date);
     if (age <= 21) v *= 1 + Math.max(0, p.pa - p.ca) / 40;
     else if (age >= 33) v *= 0.3;
     else if (age >= 31) v *= 0.55;
     else if (age >= 28) v *= 0.8;
     const club = s.clubs[p.c];
-    if (club && club.league === V2) v *= 0.7;
+    if (club && club.league === V2) v *= 0.7; // V.League 2 kém hấp dẫn
     if (p.c === FREE || !p.ce) return Math.max(0.1, round1(v));
     const months = FM.daysBetween(s.date, p.ce) / 30.4;
     if (months <= 6) v *= 0.55;
@@ -62,9 +72,10 @@
   };
   // lương "đúng giá" (triệu/tháng) ở một giải
   T.fairWage = function (p, league) {
-    let w = 15 * Math.exp((p.ca - 45) * 0.0858);
-    if (league === V2) w *= 0.55;
-    if (p.fs) w *= 1.6;
+    const L = FM.LEAGUE[league] || FM.LEAGUE[V1];
+    const econ = FM.econOf(L.country);
+    let w = econ.wage(p.ca, L.tier);
+    if (p.fs) w *= econ.foreignWage;
     return Math.max(5, Math.round(w));
   };
   // vai trò trong đội: trụ cột / đá chính / dự bị / thừa
@@ -119,7 +130,10 @@
       const from = p.c !== FREE ? W.club(s, p.c) : null;
       if (from) {
         const gap = from.rep - club.rep;
-        if (from.league === V1 && club.league === V2 && p.ca >= 62 && age < 31) return { refuse: `${p.sn} không muốn xuống chơi ở V.League 2.` };
+        // không chịu xuống hạng dưới (cùng quốc gia) nếu còn đủ sức đá ở hạng trên
+        const fL = FM.LEAGUE[from.league];
+        const tL = FM.LEAGUE[club.league];
+        if (fL && tL && fL.country === tL.country && tL.tier > fL.tier && p.ca >= W.strength(s, clubId) + 4 && age < 31) return { refuse: `${p.sn} không muốn xuống chơi ở ${tL.name}.` };
         if (gap > 18 && p.ca >= 58) return { refuse: `${p.sn} không muốn rời ${from.name} sang một đội kém tên tuổi hơn.` };
         if (gap > 0) wage = Math.round(wage * (1 + gap / 40));
         wage = Math.max(wage, Math.round(p.wage * 1.1)); // chuyển CLB thì phải được tăng lương
@@ -135,6 +149,7 @@
     if (!p || p.c === s.user) return { result: "rejected", reason: "Cầu thủ đã thuộc CLB của bạn." };
     if (p.loan) return { result: "rejected", reason: `${p.sn} đang được cho mượn — chờ hết mùa rồi hỏi mua.` };
     if (p.c !== FREE && !T.window(s).open) return { result: "rejected", reason: "Kỳ chuyển nhượng đang đóng — chỉ ký được cầu thủ tự do." };
+    if (p.c !== FREE && !T.window(s, W.countryOfClub(s, p.c)).open) return { result: "rejected", reason: `Kỳ chuyển nhượng ở ${FM.COUNTRIES[W.countryOfClub(s, p.c)].name} đang đóng.` };
     if (fee > s.clubs[s.user].bal) return { result: "rejected", reason: `Không đủ tiền (số dư ${FM.fmtMoney(s.clubs[s.user].bal)}).` };
     const ask = T.asking(s, p);
     let res;
@@ -304,11 +319,10 @@
     for (const o of s.tr.offers) if (o.status === "open" && o.exp < s.date) o.status = "expired";
     s.tr.offers = s.tr.offers.filter((o) => o.status === "open" || FM.daysBetween(o.d, s.date) < 20);
     const win = T.window(s);
-    if (win.open) {
-      aiBidsForUser(s, rnd);
-      for (const id of Object.keys(s.clubs)) if (id !== s.user && rnd() < 0.035) aiBuy(s, id, rnd);
-      if (FM.Loans) FM.Loans.daily(s, rnd);
-    }
+    const openIn = Object.fromEntries(Object.keys(FM.COUNTRIES).map((k) => [k, T.window(s, k).open]));
+    if (win.open) aiBidsForUser(s, rnd);
+    for (const id of Object.keys(s.clubs)) if (id !== s.user && openIn[W.countryOfClub(s, id)] && rnd() < 0.035) aiBuy(s, id, rnd);
+    if (FM.Loans && Object.values(openIn).some(Boolean)) FM.Loans.daily(s, rnd, openIn);
     // đội máy thiếu người thì ký cầu thủ tự do (cả ngoài kỳ chuyển nhượng)
     for (const id of Object.keys(s.clubs)) if (id !== s.user && rnd() < 0.02 && W.squad(s, id).length < 25) aiBuy(s, id, rnd, true);
     trimFreeAgents(s);
@@ -319,7 +333,7 @@
       s.tr.news = [];
     }
     // ngày đầu kỳ chuyển nhượng
-    if (s.windows.some(([a]) => a === s.date)) W.mail(s, "transfer", "Kỳ chuyển nhượng mở cửa", `Kỳ chuyển nhượng mở đến ${FM.fmtDate(win.until, false)}. Vào mục Thị trường để tìm cầu thủ. Số dư: ${FM.fmtMoney(s.clubs[s.user].bal)}, quỹ lương ${FM.fmtWage(T.wageBill(s, s.user))} / ${FM.fmtWage(s.clubs[s.user].wageCap)}.`);
+    if (T.windowsOf(s).some(([a]) => a === s.date)) W.mail(s, "transfer", "Kỳ chuyển nhượng mở cửa", `Kỳ chuyển nhượng mở đến ${FM.fmtDate(win.until, false)}. Vào mục Thị trường để tìm cầu thủ. Số dư: ${FM.fmtMoney(s.clubs[s.user].bal)}, quỹ lương ${FM.fmtWage(T.wageBill(s, s.user))} / ${FM.fmtWage(s.clubs[s.user].wageCap)}.`);
     // nhắc hợp đồng sắp hết hạn: đầu tháng 1, 3, 5
     if (/-0[135]-01$/.test(s.date)) {
       const end = `${s.season + 1}-06-30`;
@@ -335,7 +349,7 @@
     const target = rnd.weighted(squad, (p) => Math.max(1, p.ca - 42) ** 2 * (s.p[p.id].listed || s.p[p.id].wantsOut ? 5 : 1));
     if (!target || s.tr.offers.some((o) => o.pid === target.id && o.status === "open")) return;
     const fee = s.p[target.id].listed ? round1(T.asking(s, target) * rnd.range(0.85, 1.05)) : round1(T.value(s, target) * rnd.range(0.8, 1.2));
-    const buyers = Object.keys(s.clubs).filter((id) => id !== s.user && s.clubs[id].bal * 0.7 >= fee && W.strength(s, id) <= target.ca + 6);
+    const buyers = Object.keys(s.clubs).filter((id) => id !== s.user && T.window(s, W.countryOfClub(s, id)).open && s.clubs[id].bal * 0.7 >= fee && W.strength(s, id) <= target.ca + 6 && W.strength(s, id) >= target.ca - 12);
     if (!buyers.length) return;
     const from = rnd.pick(buyers);
     const o = { id: ++s.tr.seq, pid: target.id, from, to: s.user, fee, d: s.date, exp: FM.addDays(s.date, 5), status: "open" };
@@ -349,7 +363,7 @@
     if (squad.length >= 34) return;
     const c = s.clubs[clubId];
     // tối đa 3 người mỗi kỳ chuyển nhượng (không tính cầu thủ tự do)
-    const win = s.windows.find(([a, b]) => s.date >= a && s.date <= b);
+    const win = T.windowsOf(s, W.countryOfClub(s, clubId)).find(([a, b]) => s.date >= a && s.date <= b);
     if (!freeOnly && win) {
       if (!c.buys || c.buys.w !== win[0]) c.buys = { w: win[0], n: 0 };
       if (c.buys.n >= 3) return;
@@ -442,7 +456,9 @@
       const d = s.p[id];
       if (d.c === s.user) continue;
       if (f.where === "free" && d.c !== FREE) continue;
-      if ((f.where === "v1" || f.where === "v2") && (d.c === FREE || s.clubs[d.c].league !== (f.where === "v1" ? V1 : V2))) continue;
+      // where: "all" | "free" | id giải | "country:vn" / "country:en"
+      if (FM.LEAGUE[f.where] && (d.c === FREE || s.clubs[d.c].league !== f.where)) continue;
+      if (f.where && f.where.startsWith("country:") && (d.c === FREE || W.countryOfClub(s, d.c) !== f.where.slice(8))) continue;
       const p = W.player(s, id);
       if (f.group && FM.POS_GROUP[p.pos] !== f.group) continue;
       if (f.maxAge && p.age > f.maxAge) continue;

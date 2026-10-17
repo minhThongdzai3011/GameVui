@@ -1,0 +1,16 @@
+[
+ {
+  "id": "spain-la-liga",
+  "name": "LaLiga",
+  "tier": 1,
+  "country": "Tây Ban Nha",
+  "fotmob": 87
+ },
+ {
+  "id": "spain-la-liga-2",
+  "name": "LaLiga 2",
+  "tier": 2,
+  "country": "Tây Ban Nha",
+  "fotmob": 140
+ }
+]

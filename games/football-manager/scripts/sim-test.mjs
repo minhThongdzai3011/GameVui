@@ -22,7 +22,7 @@ const D = ctx.window.FM_DATA;
 
 const league = args.league || "vietnam-v-league-1";
 const clubs = D.clubs.filter((c) => c.league === league);
-const squads = Object.fromEntries(clubs.map((c) => [c.id, D.players.filter((p) => p.c === c.id).map((p) => ({ ...p, fit: 100, mor: 55, available: true }))]));
+const squads = Object.fromEntries(clubs.map((c) => [c.id, D.players.filter((p) => p.c === c.id).map((p) => ({ ...p, fs: league.startsWith("vietnam") ? p.fs : 0, fit: 100, mor: 55, available: true }))]));
 const picks = Object.fromEntries(clubs.map((c) => [c.id, FM.bestFormation(squads[c.id])]));
 const side = (c) => ({ clubId: c.id, name: c.name, code: c.code, formation: picks[c.id].formation, tactics: {}, lineup: picks[c.id].lineup, bench: picks[c.id].bench, players: Object.fromEntries(squads[c.id].map((p) => [p.id, p])), ai: true });
 

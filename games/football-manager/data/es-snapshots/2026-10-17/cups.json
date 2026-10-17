@@ -1,0 +1,1112 @@
+{
+ "copa": {
+  "r1": [
+   {
+    "h": "g-cd-cuarte",
+    "a": "girona",
+    "d": "2026-10-27"
+   },
+   {
+    "h": "g-atletico-pinatarense",
+    "a": "elche",
+    "d": "2026-10-27"
+   },
+   {
+    "h": "g-cf-calamocha",
+    "a": "g-ce-europa",
+    "d": "2026-10-27"
+   },
+   {
+    "h": "g-sestao",
+    "a": "espanyol",
+    "d": "2026-10-27"
+   },
+   {
+    "h": "g-ce-manresa",
+    "a": "g-sant-andreu",
+    "d": "2026-10-27"
+   },
+   {
+    "h": "g-castellonense",
+    "a": "almeria",
+    "d": "2026-10-27"
+   },
+   {
+    "h": "g-atletico-tordesillas",
+    "a": "g-cd-mirandes",
+    "d": "2026-10-27"
+   },
+   {
+    "h": "g-cd-atletico-paso",
+    "a": "cordoba",
+    "d": "2026-10-27"
+   },
+   {
+    "h": "g-ciudad-lucena",
+    "a": "g-rayo-majadahonda",
+    "d": "2026-10-27"
+   },
+   {
+    "h": "g-gimnastica-segoviana",
+    "a": "g-cultural-leonesa",
+    "d": "2026-10-27"
+   },
+   {
+    "h": "g-rsd-alcala",
+    "a": "las-palmas",
+    "d": "2026-10-27"
+   },
+   {
+    "h": "g-ud-llanera",
+    "a": "g-ponferradina",
+    "d": "2026-10-27"
+   },
+   {
+    "h": "g-don-benito",
+    "a": "g-cd-extremadura",
+    "d": "2026-10-27"
+   },
+   {
+    "h": "g-arosa-sc",
+    "a": "g-pontevedra",
+    "d": "2026-10-27"
+   },
+   {
+    "h": "g-cd-manacor",
+    "a": "villarreal",
+    "d": "2026-10-27"
+   },
+   {
+    "h": "g-recreativo-huelva",
+    "a": "rayo-vallecano",
+    "d": "2026-10-27"
+   },
+   {
+    "h": "g-sporting-de-alcazar",
+    "a": "malaga",
+    "d": "2026-10-27"
+   },
+   {
+    "h": "g-tudelano",
+    "a": "g-real-zaragoza",
+    "d": "2026-10-27"
+   },
+   {
+    "h": "g-anaitasuna-ft",
+    "a": "deportivo-alaves",
+    "d": "2026-10-28"
+   },
+   {
+    "h": "g-coruxo-fc",
+    "a": "g-zamora",
+    "d": "2026-10-28"
+   },
+   {
+    "h": "g-pena-sport",
+    "a": "g-sd-huesca",
+    "d": "2026-10-28"
+   },
+   {
+    "h": "g-poblense",
+    "a": "ad-ceuta-fc",
+    "d": "2026-10-28"
+   },
+   {
+    "h": "g-portugalete",
+    "a": "g-real-union",
+    "d": "2026-10-28"
+   },
+   {
+    "h": "g-utebo",
+    "a": "sabadell",
+    "d": "2026-10-28"
+   },
+   {
+    "h": "g-alcoyano",
+    "a": "mallorca",
+    "d": "2026-10-28"
+   },
+   {
+    "h": "g-cd-badajoz",
+    "a": "tenerife",
+    "d": "2026-10-28"
+   },
+   {
+    "h": "g-cd-covadonga",
+    "a": "real-valladolid",
+    "d": "2026-10-28"
+   },
+   {
+    "h": "g-cd-tarancon",
+    "a": "levante",
+    "d": "2026-10-28"
+   },
+   {
+    "h": "g-cs-puertollano",
+    "a": "albacete",
+    "d": "2026-10-28"
+   },
+   {
+    "h": "g-mijas-las-lagunas",
+    "a": "g-real-jaen",
+    "d": "2026-10-28"
+   },
+   {
+    "h": "g-numancia",
+    "a": "real-oviedo",
+    "d": "2026-10-28"
+   },
+   {
+    "h": "g-pamplona",
+    "a": "eibar",
+    "d": "2026-10-28"
+   },
+   {
+    "h": "g-sd-amorebieta",
+    "a": "g-logrones",
+    "d": "2026-10-28"
+   },
+   {
+    "h": "g-trival-valderas",
+    "a": "leganes",
+    "d": "2026-10-28"
+   },
+   {
+    "h": "g-cieza",
+    "a": "granada",
+    "d": "2026-10-28"
+   },
+   {
+    "h": "g-deportiva-minera",
+    "a": "g-cartagena",
+    "d": "2026-10-28"
+   },
+   {
+    "h": "g-reus",
+    "a": "g-barakaldo",
+    "d": "2026-10-28"
+   },
+   {
+    "h": "g-rs-gimnastica",
+    "a": "g-ud-ourense",
+    "d": "2026-10-28"
+   },
+   {
+    "h": "g-navalcarnero",
+    "a": "real-betis",
+    "d": "2026-10-28"
+   },
+   {
+    "h": "g-salamanca-cf-uds",
+    "a": "celta-vigo",
+    "d": "2026-10-28"
+   },
+   {
+    "h": "g-tavernes-de-la-valldigna",
+    "a": "valencia",
+    "d": "2026-10-28"
+   },
+   {
+    "h": "g-xerez",
+    "a": "cadiz",
+    "d": "2026-10-28"
+   },
+   {
+    "h": "g-atletico-baleares",
+    "a": "eldense",
+    "d": "2026-10-29"
+   },
+   {
+    "h": "g-atletico-calatayud",
+    "a": "osasuna",
+    "d": "2026-10-29"
+   },
+   {
+    "h": "g-san-sebastian-de-los-reyes",
+    "a": "g-cd-coria",
+    "d": "2026-10-29"
+   },
+   {
+    "h": "g-ub-lebrijana",
+    "a": "getafe",
+    "d": "2026-10-29"
+   },
+   {
+    "h": "g-antequera",
+    "a": "g-cda-aguilas-fc",
+    "d": "2026-10-29"
+   },
+   {
+    "h": "g-cd-laredo",
+    "a": "burgos-cf",
+    "d": "2026-10-29"
+   },
+   {
+    "h": "g-cd-varea",
+    "a": "fc-andorra",
+    "d": "2026-10-29"
+   },
+   {
+    "h": "g-conquense",
+    "a": "castellon",
+    "d": "2026-10-29"
+   },
+   {
+    "h": "g-guijuelo",
+    "a": "sporting-gijon",
+    "d": "2026-10-29"
+   },
+   {
+    "h": "g-real-avila",
+    "a": "g-unionistas-de-salamanca",
+    "d": "2026-10-29"
+   },
+   {
+    "h": "g-ae-prat",
+    "a": "athletic-club",
+    "d": "2026-10-29"
+   },
+   {
+    "h": "g-auriense",
+    "a": "deportivo-a-coruna",
+    "d": "2026-10-29"
+   },
+   {
+    "h": "g-ribadesella-cf",
+    "a": "racing-santander",
+    "d": "2026-10-29"
+   },
+   {
+    "h": "g-sporting-hortaleza",
+    "a": "sevilla",
+    "d": "2026-10-29"
+   }
+  ],
+  "prevRounds": {
+   "1": [
+    "2025-10-28",
+    "2025-10-29",
+    "2025-10-30"
+   ],
+   "2": [
+    "2025-12-02",
+    "2025-12-03",
+    "2025-12-04"
+   ],
+   "Round of 32": [
+    "2025-12-16",
+    "2025-12-17",
+    "2025-12-18",
+    "2026-01-06"
+   ],
+   "Round of 16": [
+    "2026-01-13",
+    "2026-01-14",
+    "2026-01-15"
+   ],
+   "Quarter-Finals": [
+    "2026-02-03",
+    "2026-02-04",
+    "2026-02-05"
+   ],
+   "Semi-Finals": [
+    "2026-02-11",
+    "2026-02-12",
+    "2026-03-03",
+    "2026-03-04"
+   ],
+   "Final": [
+    "2026-04-18"
+   ]
+  },
+  "prevFinal": {
+   "h": "atletico-madrid",
+   "a": "real-sociedad",
+   "score": "2 - 2",
+   "pens": null,
+   "winner": null
+  }
+ },
+ "supercopa": [
+  {
+   "round": "Semi-Finals",
+   "h": "barcelona",
+   "a": "atletico-madrid",
+   "d": "2027-02-02"
+  },
+  {
+   "round": "Semi-Finals",
+   "h": "real-sociedad",
+   "a": "real-madrid",
+   "d": "2027-02-03"
+  },
+  {
+   "round": "Final",
+   "h": null,
+   "a": null,
+   "d": "2027-02-06"
+  }
+ ],
+ "guests": [
+  {
+   "id": "g-cd-cuarte",
+   "fotmob": 190105,
+   "name": "CD Cuarte",
+   "level": null,
+   "venue": "Estadio Municipal Juan Guerrero El Lobo",
+   "city": "Cuarte de Huerva",
+   "capacity": 1000,
+   "color": "#333333"
+  },
+  {
+   "id": "g-atletico-pinatarense",
+   "fotmob": 2341166,
+   "name": "Atletico Pinatarense",
+   "level": null,
+   "venue": null,
+   "city": null,
+   "capacity": null,
+   "color": "#333333"
+  },
+  {
+   "id": "g-cf-calamocha",
+   "fotmob": 2066167,
+   "name": "CF Calamocha",
+   "level": "Segunda Federacion - Group 2",
+   "venue": "Campo De Fútbol Jumaya Calamocha",
+   "city": "Calamocha",
+   "capacity": 1000,
+   "color": "#333333"
+  },
+  {
+   "id": "g-ce-europa",
+   "fotmob": 189639,
+   "name": "CE Europa",
+   "level": "Primera Federacion - Group 2",
+   "venue": "Camp Municipal de Fútbol Nou Sardenya",
+   "city": "Barcelona",
+   "capacity": 7000,
+   "color": "#266394"
+  },
+  {
+   "id": "g-sestao",
+   "fotmob": 8228,
+   "name": "Sestao",
+   "level": "Segunda Federacion - Group 1",
+   "venue": "Estadio Las Llanas",
+   "city": "Sestao",
+   "capacity": 8905,
+   "color": "#017431"
+  },
+  {
+   "id": "g-ce-manresa",
+   "fotmob": 1394294,
+   "name": "CE Manresa",
+   "level": "Segunda Federacion - Group 2",
+   "venue": "Estadio El Congost",
+   "city": "Manresa",
+   "capacity": 3660,
+   "color": "#333333"
+  },
+  {
+   "id": "g-sant-andreu",
+   "fotmob": 8229,
+   "name": "Sant Andreu",
+   "level": "Primera Federacion - Group 2",
+   "venue": "Camp Municipal Narcís Sala",
+   "city": "Barcelona",
+   "capacity": 6563,
+   "color": "#e19c00"
+  },
+  {
+   "id": "g-castellonense",
+   "fotmob": 2066184,
+   "name": "Castellonense",
+   "level": "Segunda Federacion - Group 3",
+   "venue": "Campo de Fútbol Eliseo Pla Ramírez",
+   "city": "Castelló",
+   "capacity": 1500,
+   "color": "#333333"
+  },
+  {
+   "id": "g-atletico-tordesillas",
+   "fotmob": 189690,
+   "name": "Atlético Tordesillas",
+   "level": "Segunda Federacion - Group 5",
+   "venue": "Estadio Las Salinas",
+   "city": "Tordesillas",
+   "capacity": 3500,
+   "color": "#333333"
+  },
+  {
+   "id": "g-cd-mirandes",
+   "fotmob": 4032,
+   "name": "CD Mirandés",
+   "level": "Primera Federacion - Group 1",
+   "venue": "Estadio Municipal de Anduva",
+   "city": "Miranda de Ebro",
+   "capacity": 6000,
+   "color": "#910000"
+  },
+  {
+   "id": "g-cd-atletico-paso",
+   "fotmob": 1394299,
+   "name": "CD Atlético Paso",
+   "level": "Segunda Federacion - Group 5",
+   "venue": "Campo Municipal de El Paso",
+   "city": "El Paso",
+   "capacity": 5000,
+   "color": "#333333"
+  },
+  {
+   "id": "g-ciudad-lucena",
+   "fotmob": 627898,
+   "name": "Ciudad Lucena",
+   "level": "Segunda Federacion - Group 4",
+   "venue": "Estadio Ciudad de Lucena",
+   "city": "Lucena",
+   "capacity": 5076,
+   "color": "#333333"
+  },
+  {
+   "id": "g-rayo-majadahonda",
+   "fotmob": 189674,
+   "name": "Rayo Majadahonda",
+   "level": "Primera Federacion - Group 2",
+   "venue": "Miniestadio Cerro del Espino",
+   "city": "Majadahonda",
+   "capacity": 3865,
+   "color": "#D81022"
+  },
+  {
+   "id": "g-gimnastica-segoviana",
+   "fotmob": 2244,
+   "name": "Gimnástica Segoviana",
+   "level": "Segunda Federacion - Group 5",
+   "venue": "Estadio Municipal de La Albuera",
+   "city": "Segovia",
+   "capacity": 6500,
+   "color": "#6F1E25"
+  },
+  {
+   "id": "g-cultural-leonesa",
+   "fotmob": 1753,
+   "name": "Cultural Leonesa",
+   "level": "Primera Federacion - Group 1",
+   "venue": "Estadio Municipal Reino de León",
+   "city": "León",
+   "capacity": 13451,
+   "color": "#AB2033"
+  },
+  {
+   "id": "g-rsd-alcala",
+   "fotmob": 8316,
+   "name": "RSD Alcalá",
+   "level": "Segunda Federacion - Group 5",
+   "venue": "Estadio Municipal Virgen del Val",
+   "city": "Alcalá de Henares",
+   "capacity": 8000,
+   "color": "#333333"
+  },
+  {
+   "id": "g-ud-llanera",
+   "fotmob": 770923,
+   "name": "UD Llanera",
+   "level": "Segunda Federacion - Group 1",
+   "venue": "Campo Municipal de Fútbol Pepe Quimarán",
+   "city": "Llanera",
+   "capacity": 2500,
+   "color": "#333333"
+  },
+  {
+   "id": "g-ponferradina",
+   "fotmob": 8005,
+   "name": "Ponferradina",
+   "level": "Primera Federacion - Group 1",
+   "venue": "Estadio Municipal El Toralín",
+   "city": "Ponferrada",
+   "capacity": 8544,
+   "color": "#023877"
+  },
+  {
+   "id": "g-don-benito",
+   "fotmob": 2243,
+   "name": "Don Benito",
+   "level": "Segunda Federacion - Group 4",
+   "venue": "Estadio Vicente Sanz",
+   "city": "Don Benito",
+   "capacity": 7000,
+   "color": "#333333"
+  },
+  {
+   "id": "g-cd-extremadura",
+   "fotmob": 1686598,
+   "name": "CD Extremadura",
+   "level": "Primera Federacion - Group 1",
+   "venue": "Estadio Francisco de la Hera",
+   "city": "Almendralejo",
+   "capacity": 11580,
+   "color": "#1a4aab"
+  },
+  {
+   "id": "g-arosa-sc",
+   "fotmob": 474525,
+   "name": "Arosa SC",
+   "level": "Segunda Federacion - Group 1",
+   "venue": "Estadio A Lomba",
+   "city": "Vilagarcía de Arousa",
+   "capacity": 5000,
+   "color": "#E2001A"
+  },
+  {
+   "id": "g-pontevedra",
+   "fotmob": 7862,
+   "name": "Pontevedra",
+   "level": "Primera Federacion - Group 1",
+   "venue": "Estadio Municipal de Pasarón",
+   "city": "Pontevedra",
+   "capacity": 10541,
+   "color": "#933538"
+  },
+  {
+   "id": "g-cd-manacor",
+   "fotmob": 209025,
+   "name": "CD Manacor",
+   "level": null,
+   "venue": "Poliesportiu Municipal Na Capellera",
+   "city": "Manacor",
+   "capacity": 3000,
+   "color": "#E5081B"
+  },
+  {
+   "id": "g-recreativo-huelva",
+   "fotmob": 8479,
+   "name": "Recreativo Huelva",
+   "level": "Segunda Federacion - Group 4",
+   "venue": "Estadio Nuevo Colombino",
+   "city": "Huelva",
+   "capacity": 19860,
+   "color": "#024AAA"
+  },
+  {
+   "id": "g-sporting-de-alcazar",
+   "fotmob": 190128,
+   "name": "Sporting de Alcazar",
+   "level": null,
+   "venue": null,
+   "city": null,
+   "capacity": null,
+   "color": "#333333"
+  },
+  {
+   "id": "g-tudelano",
+   "fotmob": 190055,
+   "name": "Tudelano",
+   "level": "Segunda Federacion - Group 2",
+   "venue": "Estadio Municipal Ciudad de Tudela",
+   "city": "Tudela",
+   "capacity": 11000,
+   "color": "#101010"
+  },
+  {
+   "id": "g-real-zaragoza",
+   "fotmob": 8394,
+   "name": "Real Zaragoza",
+   "level": "Primera Federacion - Group 2",
+   "venue": "Ibercaja Estadio",
+   "city": "Zaragoza",
+   "capacity": 20103,
+   "color": "#213E96"
+  },
+  {
+   "id": "g-anaitasuna-ft",
+   "fotmob": 357266,
+   "name": "Anaitasuna FT",
+   "level": null,
+   "venue": "Campo Txerloia",
+   "city": "Azkoitia",
+   "capacity": 1500,
+   "color": "#333333"
+  },
+  {
+   "id": "g-coruxo-fc",
+   "fotmob": 96929,
+   "name": "Coruxo FC",
+   "level": "Segunda Federacion - Group 1",
+   "venue": "Campo do Vao",
+   "city": "Vigo",
+   "capacity": 1500,
+   "color": "#333333"
+  },
+  {
+   "id": "g-zamora",
+   "fotmob": 4031,
+   "name": "Zamora",
+   "level": "Primera Federacion - Group 1",
+   "venue": "Estadio Ruta de la Plata",
+   "city": "Zamora",
+   "capacity": 7813,
+   "color": "#C9172A"
+  },
+  {
+   "id": "g-pena-sport",
+   "fotmob": 8211,
+   "name": "Peña Sport",
+   "level": "Segunda Federacion - Group 2",
+   "venue": "Campo San Francisco",
+   "city": "Tafalla",
+   "capacity": 3000,
+   "color": "#333333"
+  },
+  {
+   "id": "g-sd-huesca",
+   "fotmob": 96925,
+   "name": "SD Huesca",
+   "level": "Primera Federacion - Group 2",
+   "venue": "Estadio El Alcoraz",
+   "city": "Huesca",
+   "capacity": 9100,
+   "color": "#13324F"
+  },
+  {
+   "id": "g-poblense",
+   "fotmob": 189750,
+   "name": "Poblense",
+   "level": "Segunda Federacion - Group 3",
+   "venue": "Estadio Municipal de Sa Pobla",
+   "city": "La Puebla (Sa Pobla) (Mallorca)",
+   "capacity": 8000,
+   "color": "#1858AE"
+  },
+  {
+   "id": "g-portugalete",
+   "fotmob": 4701,
+   "name": "Portugalete",
+   "level": "Segunda Federacion - Group 1",
+   "venue": "Estadio La Florida",
+   "city": "Portugalete",
+   "capacity": 5000,
+   "color": "#333333"
+  },
+  {
+   "id": "g-real-union",
+   "fotmob": 8380,
+   "name": "Real Unión",
+   "level": "Primera Federacion - Group 1",
+   "venue": "Stadium Gal",
+   "city": "Irún",
+   "capacity": 6344,
+   "color": "#161616"
+  },
+  {
+   "id": "g-utebo",
+   "fotmob": 96923,
+   "name": "Utebo",
+   "level": "Segunda Federacion - Group 2",
+   "venue": "Estadio Santa Ana",
+   "city": "Utebo",
+   "capacity": 5000,
+   "color": "#333333"
+  },
+  {
+   "id": "g-alcoyano",
+   "fotmob": 4697,
+   "name": "Alcoyano",
+   "level": "Segunda Federacion - Group 3",
+   "venue": "Campo Municipal El Collao",
+   "city": "Alcoi (Alcoy)",
+   "capacity": 4850,
+   "color": "#1265A8"
+  },
+  {
+   "id": "g-cd-badajoz",
+   "fotmob": 7873,
+   "name": "CD Badajoz",
+   "level": "Segunda Federacion - Group 4",
+   "venue": "Estadio Municipal Nuevo Vivero",
+   "city": "Badajoz",
+   "capacity": 15198,
+   "color": "#333333"
+  },
+  {
+   "id": "g-cd-covadonga",
+   "fotmob": 189602,
+   "name": "CD Covadonga",
+   "level": null,
+   "venue": "Estadio Juan Antonio Alvarez Rabanal",
+   "city": "Oviedo",
+   "capacity": 2000,
+   "color": "#333333"
+  },
+  {
+   "id": "g-cd-tarancon",
+   "fotmob": 2341130,
+   "name": "CD Tarancon",
+   "level": null,
+   "venue": null,
+   "city": null,
+   "capacity": null,
+   "color": "#333333"
+  },
+  {
+   "id": "g-cs-puertollano",
+   "fotmob": 1315045,
+   "name": "CS Puertollano",
+   "level": "Segunda Federacion - Group 5",
+   "venue": "Estadio Ciudad de Puertollano",
+   "city": "Puertollano",
+   "capacity": 7240,
+   "color": "#333333"
+  },
+  {
+   "id": "g-mijas-las-lagunas",
+   "fotmob": 2066192,
+   "name": "Mijas-Las Lagunas",
+   "level": "Segunda Federacion - Group 4",
+   "venue": "Estadio Municipal Juan Gambero Culebra",
+   "city": "Las Lagunas de Mijas",
+   "capacity": 2000,
+   "color": "#333333"
+  },
+  {
+   "id": "g-real-jaen",
+   "fotmob": 7799,
+   "name": "Real Jaén",
+   "level": "Primera Federacion - Group 2",
+   "venue": "Estadio Caja Rural La Victoria",
+   "city": "Jaén",
+   "capacity": 12569,
+   "color": "#8C39AA"
+  },
+  {
+   "id": "g-numancia",
+   "fotmob": 8388,
+   "name": "Numancia",
+   "level": "Segunda Federacion - Group 5",
+   "venue": "Nuevo Estadio Los Pajaritos",
+   "city": "Soria",
+   "capacity": 8311,
+   "color": "#DF0000"
+  },
+  {
+   "id": "g-pamplona",
+   "fotmob": 190064,
+   "name": "Pamplona",
+   "level": null,
+   "venue": null,
+   "city": null,
+   "capacity": null,
+   "color": "#333333"
+  },
+  {
+   "id": "g-sd-amorebieta",
+   "fotmob": 189624,
+   "name": "SD Amorebieta",
+   "level": "Segunda Federacion - Group 1",
+   "venue": "Campo Municipal de Urritxe",
+   "city": "Amorebieta-Echano",
+   "capacity": 3000,
+   "color": "#22366A"
+  },
+  {
+   "id": "g-logrones",
+   "fotmob": 7880,
+   "name": "Logroñés",
+   "level": "Primera Federacion - Group 1",
+   "venue": "Estadio Municipal Las Gaunas",
+   "city": "Logroño",
+   "capacity": 15902,
+   "color": "#AF3325"
+  },
+  {
+   "id": "g-trival-valderas",
+   "fotmob": 189675,
+   "name": "Trival Valderas",
+   "level": null,
+   "venue": "Estadio La Canaleja",
+   "city": "Alcorcón",
+   "capacity": 2000,
+   "color": "#333333"
+  },
+  {
+   "id": "g-cieza",
+   "fotmob": 189778,
+   "name": "Cieza",
+   "level": "Segunda Federacion - Group 3",
+   "venue": "Estadio de La Arboleja",
+   "city": "Cieza",
+   "capacity": 5500,
+   "color": "#333333"
+  },
+  {
+   "id": "g-deportiva-minera",
+   "fotmob": 278805,
+   "name": "Deportiva Minera",
+   "level": "Segunda Federacion - Group 3",
+   "venue": "Estadio Municipal Ángel Celdrán",
+   "city": "El Llano del Beal",
+   "capacity": 2000,
+   "color": "#D41903"
+  },
+  {
+   "id": "g-cartagena",
+   "fotmob": 8554,
+   "name": "Cartagena",
+   "level": "Primera Federacion - Group 2",
+   "venue": "Estadio Municipal Cartagonova",
+   "city": "Cartagena",
+   "capacity": 15105,
+   "color": "#101010"
+  },
+  {
+   "id": "g-reus",
+   "fotmob": 96927,
+   "name": "Reus",
+   "level": "Segunda Federacion - Group 2",
+   "venue": "Estadio Camp Nou Municipal",
+   "city": "Reus",
+   "capacity": 4847,
+   "color": "#B90001"
+  },
+  {
+   "id": "g-barakaldo",
+   "fotmob": 7734,
+   "name": "Barakaldo",
+   "level": "Primera Federacion - Group 1",
+   "venue": "Estadio Nuevo Lasesarre",
+   "city": "Barakaldo",
+   "capacity": 7960,
+   "color": "#e09d00"
+  },
+  {
+   "id": "g-rs-gimnastica",
+   "fotmob": 8356,
+   "name": "RS Gimnástica",
+   "level": "Segunda Federacion - Group 1",
+   "venue": null,
+   "city": null,
+   "capacity": null,
+   "color": "#333333"
+  },
+  {
+   "id": "g-ud-ourense",
+   "fotmob": 1784666,
+   "name": "UD Ourense",
+   "level": "Primera Federacion - Group 1",
+   "venue": "Estadio do Couto",
+   "city": "Ourense",
+   "capacity": 5659,
+   "color": "#E40917"
+  },
+  {
+   "id": "g-navalcarnero",
+   "fotmob": 161758,
+   "name": "Navalcarnero",
+   "level": "Segunda Federacion - Group 5",
+   "venue": "Estadio Municipal Mariano González",
+   "city": "Navalcarnero",
+   "capacity": 1750,
+   "color": "#CB0000"
+  },
+  {
+   "id": "g-salamanca-cf-uds",
+   "fotmob": 490334,
+   "name": "Salamanca CF UDS",
+   "level": "Segunda Federacion - Group 5",
+   "venue": null,
+   "city": null,
+   "capacity": null,
+   "color": "#000000"
+  },
+  {
+   "id": "g-tavernes-de-la-valldigna",
+   "fotmob": 2341167,
+   "name": "Tavernes de la Valldigna",
+   "level": null,
+   "venue": null,
+   "city": null,
+   "capacity": null,
+   "color": "#333333"
+  },
+  {
+   "id": "g-xerez",
+   "fotmob": 9868,
+   "name": "Xerez",
+   "level": "Segunda Federacion - Group 4",
+   "venue": "Estadio Municipal de Chapín",
+   "city": "Jerez de la Frontera",
+   "capacity": 20742,
+   "color": "#333333"
+  },
+  {
+   "id": "g-atletico-baleares",
+   "fotmob": 141784,
+   "name": "Atlético Baleares",
+   "level": "Segunda Federacion - Group 3",
+   "venue": "Estadio Balear",
+   "city": "Palma de Mallorca",
+   "capacity": 6500,
+   "color": "#0082B0"
+  },
+  {
+   "id": "g-atletico-calatayud",
+   "fotmob": 190104,
+   "name": "Atletico Calatayud",
+   "level": null,
+   "venue": null,
+   "city": null,
+   "capacity": null,
+   "color": "#333333"
+  },
+  {
+   "id": "g-san-sebastian-de-los-reyes",
+   "fotmob": 2428,
+   "name": "San Sebastian de los Reyes",
+   "level": "Segunda Federacion - Group 5",
+   "venue": "Estadio Municipal Nuevo Matapiñonera",
+   "city": "San Sebastián de los Reyes",
+   "capacity": 3000,
+   "color": "#333333"
+  },
+  {
+   "id": "g-cd-coria",
+   "fotmob": 189807,
+   "name": "CD Coria",
+   "level": "Primera Federacion - Group 1",
+   "venue": "Estadio La Isla",
+   "city": "Coria",
+   "capacity": 4389,
+   "color": "#00b8ea"
+  },
+  {
+   "id": "g-ub-lebrijana",
+   "fotmob": 477697,
+   "name": "UB Lebrijana",
+   "level": null,
+   "venue": null,
+   "city": null,
+   "capacity": null,
+   "color": "#333333"
+  },
+  {
+   "id": "g-antequera",
+   "fotmob": 161849,
+   "name": "Antequera",
+   "level": "Primera Federacion - Group 2",
+   "venue": "Estadio El Maulí",
+   "city": "Antequera",
+   "capacity": 6000,
+   "color": "#20A000"
+  },
+  {
+   "id": "g-cda-aguilas-fc",
+   "fotmob": 278806,
+   "name": "CDA Águilas FC",
+   "level": "Primera Federacion - Group 2",
+   "venue": "Estadio El Rubial",
+   "city": "Águilas",
+   "capacity": 4000,
+   "color": "#0F6AAD"
+  },
+  {
+   "id": "g-cd-laredo",
+   "fotmob": 189609,
+   "name": "CD Laredo",
+   "level": null,
+   "venue": "Campo San Lorenzo",
+   "city": "Laredo",
+   "capacity": 2500,
+   "color": "#333333"
+  },
+  {
+   "id": "g-cd-varea",
+   "fotmob": 210848,
+   "name": "CD Varea",
+   "level": null,
+   "venue": "Estadio Municipal de Varea",
+   "city": "Varea",
+   "capacity": 2000,
+   "color": "#333333"
+  },
+  {
+   "id": "g-conquense",
+   "fotmob": 6256,
+   "name": "Conquense",
+   "level": "Segunda Federacion - Group 5",
+   "venue": "Estadio Municipal La Fuensanta",
+   "city": "Cuenca",
+   "capacity": 6700,
+   "color": "#333333"
+  },
+  {
+   "id": "g-guijuelo",
+   "fotmob": 161741,
+   "name": "Guijuelo",
+   "level": null,
+   "venue": "Estadio Municipal Luis Ramos",
+   "city": "Guijuelo",
+   "capacity": 1800,
+   "color": "#333333"
+  },
+  {
+   "id": "g-real-avila",
+   "fotmob": 189689,
+   "name": "Real Ávila",
+   "level": "Segunda Federacion - Group 5",
+   "venue": "Estadio Municipal Adolfo Suárez",
+   "city": "Ávila",
+   "capacity": 5500,
+   "color": "#CE1324"
+  },
+  {
+   "id": "g-unionistas-de-salamanca",
+   "fotmob": 780591,
+   "name": "Unionistas de Salamanca",
+   "level": "Primera Federacion - Group 1",
+   "venue": "Estadio Municipal Reina Sofía",
+   "city": "Salamanca",
+   "capacity": 4894,
+   "color": "#101010"
+  },
+  {
+   "id": "g-ae-prat",
+   "fotmob": 189638,
+   "name": "AE Prat",
+   "level": null,
+   "venue": "Estadio Municipal Sagnier",
+   "city": "El Prat de Llobregat",
+   "capacity": 500,
+   "color": "#333333"
+  },
+  {
+   "id": "g-auriense",
+   "fotmob": 2341117,
+   "name": "Auriense",
+   "level": null,
+   "venue": null,
+   "city": null,
+   "capacity": null,
+   "color": "#333333"
+  },
+  {
+   "id": "g-ribadesella-cf",
+   "fotmob": 189591,
+   "name": "Ribadesella CF",
+   "level": null,
+   "venue": null,
+   "city": null,
+   "capacity": null,
+   "color": "#333333"
+  },
+  {
+   "id": "g-sporting-hortaleza",
+   "fotmob": 2360741,
+   "name": "Sporting Hortaleza",
+   "level": null,
+   "venue": null,
+   "city": null,
+   "capacity": null,
+   "color": "#333333"
+  }
+ ]
+}

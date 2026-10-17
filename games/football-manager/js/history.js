@@ -30,7 +30,8 @@
   }
   H.awards = function (s) {
     const out = {};
-    for (const lg of [V1, V2]) {
+    for (const lg of FM.LEAGUES.map((l) => l.id)) {
+      if (!W.clubsIn(s, lg).length || !s.fx.some((f) => f.lg === lg)) continue; // giải chưa đá mùa này
       const all = Object.keys(s.p)
         .filter((id) => s.clubs[s.p[id].c]?.league === lg && s.p[id].st.ap >= 10)
         .map((id) => W.player(s, id));
@@ -83,13 +84,13 @@
       if (d.c !== "free" || d.st.ap || cap) {
         const clubs = d.sc && d.sc.length ? d.sc : [d.c];
         if (clubs[clubs.length - 1] !== d.c) clubs.push(d.c);
-        (d.car ||= []).push({ s: label, c: clubs, lo: d.loan ? 1 : 0, lg: lg === V1 ? 1 : lg === V2 ? 2 : 0, ap: d.st.ap, g: d.st.g, as: d.st.as, r: d.st.ap ? r1(d.st.rs / d.st.ap) : null, cap, cg: (d.cst ? d.cst.g : 0) + (d.ast ? d.ast.g : 0) });
+        (d.car ||= []).push({ s: label, c: clubs, lo: d.loan ? 1 : 0, lg: FM.leagueShort(lg) || 0, ap: d.st.ap, g: d.st.g, as: d.st.as, r: d.st.ap ? r1(d.st.rs / d.st.ap) : null, cap, cg: (d.cst ? d.cst.g : 0) + (d.ast ? d.ast.g : 0) });
       }
       d.sc = null;
     }
     // danh hiệu cá nhân
     const mine = [];
-    for (const lg of [V1, V2]) {
+    for (const lg of Object.keys(aw)) {
       const a = aw[lg];
       if (!a) continue;
       const lname = W.leagueName(lg);

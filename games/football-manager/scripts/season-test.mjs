@@ -17,7 +17,7 @@ const args = Object.fromEntries(process.argv.slice(2).map((a) => a.replace(/^--/
 const ctx = { window: {}, console };
 ctx.window.window = ctx.window;
 vm.createContext(ctx);
-for (const f of ["data/game-data.js", "js/core.js", "js/engine.js", "js/world.js", "js/transfers.js", "js/loans.js", "js/cups.js", "js/afc.js", "js/scout.js", "js/training.js", "js/morale.js", "js/history.js"]) vm.runInContext(await readFile(join(root, f), "utf8"), ctx, { filename: f });
+for (const f of ["data/game-data.js", "js/core.js", "js/engine.js", "js/world.js", "js/transfers.js", "js/loans.js", "js/cups.js", "js/afc.js", "js/cups-en.js", "js/cups-es.js", "js/ucl.js", "js/scout.js", "js/training.js", "js/morale.js", "js/history.js"]) vm.runInContext(await readFile(join(root, f), "utf8"), ctx, { filename: f });
 const { FM } = ctx.window;
 const W = FM.World;
 
@@ -31,14 +31,14 @@ for (let guard = 0; guard < 5000; guard++) {
   const r = W.advance(s);
   if (r.kind === "match") {
     const f = r.fixture;
-    const m = FM.createMatch(W.sideFor(s, f.h, f.h !== s.user), W.sideFor(s, f.a, f.a !== s.user), { seed: W.matchSeed(s, f), neutral: !!f.po }).runToEnd();
+    const m = FM.createMatch(W.sideFor(s, f.h, f.h !== s.user), W.sideFor(s, f.a, f.a !== s.user), { seed: W.matchSeed(s, f), neutral: !!(f.po || f.neutral) }).runToEnd();
     W.applyResult(s, f, m);
     userMatches++;
   } else if (r.kind === "seasonEnd") {
     const sum = s.summary;
     const name = (id) => W.baseClub(s, id).name;
     console.log(`\nHết mùa ${sum.season} (${s.date}):`);
-    console.log(`  Vô địch V1: ${name(sum.champions[FM.V1])} · V2: ${name(sum.champions[FM.V2])}`);
+    console.log(`  Vô địch V1: ${name(sum.champions[FM.V1])} · V2: ${name(sum.champions[FM.V2])} · ${FM.leaguesOf("en").map((L) => `${L.short}: ${name(sum.champions[L.id])}`).join(" · ")}`);
     console.log(`  Play-off: ${name(sum.playoff.home)} ${sum.playoff.hg}-${sum.playoff.ag}${sum.playoff.pens ? ` (pen ${sum.playoff.pens.join("-")})` : ""} ${name(sum.playoff.away)}`);
     console.log(`  Lên hạng: ${sum.promoted.map(name).join(", ")} · Xuống hạng: ${sum.relegated.map(name).join(", ")} · Xuống Hạng Nhì: ${name(sum.outOfGame)}`);
     console.log(`  Đội của bạn: hạng ${sum.user.pos} (mục tiêu ≤ ${sum.user.obj.target}) ${sum.user.achieved ? "ĐẠT" : "không đạt"}, tin tưởng ${Math.round(sum.user.conf)}`);
@@ -47,6 +47,49 @@ for (let guard = 0; guard < 5000; guard++) {
     console.log(`  Siêu Cúp: ${name(sc.h)} ${sc.hg}-${sc.ag}${sc.pens ? ` (pen ${sc.pens.join("-")})` : ""} ${name(sc.a)} → ${name(s.cup.superWinner)}`);
     console.log(`  Cúp QG: ${s.fx.filter((f) => f.lg === "cup").length} trận, chung kết ${name(cupF.h)} ${cupF.hg}-${cupF.ag}${cupF.pens ? ` (pen ${cupF.pens.join("-")})` : ""} ${name(cupF.a)} (${cupF.d}) → vô địch ${name(s.cup.winner)} · đội bạn: ${FM.Cups.userStatus(s)}`);
     if (s.afc) for (const [k, c] of Object.entries(s.afc.comps)) console.log(`  ${FM.AFC.COMPS[k].short}: vô địch ${c.winner ? name(c.winner) : "—"} · Việt Nam: ${s.afc.vn[k].map((id) => `${name(id)} (${FM.AFC.result(s, k, id)})`).join(", ") || "—"}`);
+    if (s.enc) {
+      const E = FM.EnCups;
+      for (const k of ["fac", "efl"]) {
+        const fin = E.rounds(s, k)[0].ties[0].legs[0];
+        const n = s.fx.filter((f) => f.lg === k).length;
+        console.log(`  ${E.COMPS[k].name}: ${n} trận, chung kết ${fin.d} ${name(fin.h)} ${fin.hg}-${fin.ag}${fin.pens ? ` (pen ${fin.pens.join("-")})` : ""} ${name(fin.a)} → ${name(s.enc[k].winner)} · đội bạn: ${E.userStatus(s, k)}`);
+      }
+      const cs = s.fx.find((f) => f.lg === "cs");
+      console.log(`  Community Shield ${cs.d}: ${name(cs.h)} ${cs.hg}-${cs.ag}${cs.pens ? ` (pen ${cs.pens.join("-")})` : ""} ${name(cs.a)}`);
+      // đội bán chuyên nghiệp loại đội chuyên nghiệp
+      const shocks = s.enc.fac.ties.filter((t) => E.isGuest(t.w) && !E.isGuest(t.w === t.a ? t.b : t.a)).map((t) => `${name(t.w)} loại ${name(t.w === t.a ? t.b : t.a)} (V${t.r + 1})`);
+      console.log(`  Bất ngờ FA Cup: ${shocks.length} — ${shocks.slice(0, 6).join(", ")}`);
+      const facR3 = s.enc.fac.ties.filter((t) => t.r === 2).length;
+      const eflR3 = s.enc.efl.ties.filter((t) => t.r === 2).length;
+      console.log(`  Vòng 3: FA Cup ${facR3} cặp, League Cup ${eflR3} cặp`);
+      // kẹt lịch: hai trận của một đội cách nhau ≤ 1 ngày
+      const by = {};
+      for (const f of s.fx) for (const id of [f.h, f.a]) if (s.clubs[id]) (by[id] ||= []).push(f);
+      let tight = 0;
+      const ex = [];
+      for (const [id, list] of Object.entries(by)) {
+        list.sort((a, b) => a.d.localeCompare(b.d));
+        for (let i = 1; i < list.length; i++) if (FM.daysBetween(list[i - 1].d, list[i].d) <= 1) { tight++; if (ex.length < 4) ex.push(`${W.baseClub(s, id).code} ${list[i - 1].lg}@${list[i - 1].d}/${list[i].lg}@${list[i].d}`); }
+      }
+      console.log(`  Kẹt lịch (≤1 ngày): ${tight} ${ex.join(" | ")}`);
+    }
+    if (s.esc) {
+      const C = FM.EsCups;
+      for (const k of ["copa", "sup"]) {
+        const fin = C.rounds(s, k)[0].ties[0].legs[0];
+        console.log(`  ${C.COMPS[k].name}: ${s.fx.filter((f) => f.lg === k).length} trận, chung kết ${fin.d} ${name(fin.h)} ${fin.hg}-${fin.ag}${fin.pens ? ` (pen ${fin.pens.join("-")})` : ""} ${name(fin.a)} → ${name(s.esc[k].winner)} · đội bạn: ${C.userStatus(s, k)}`);
+      }
+      const po = (sum.playoffs || []).filter((x) => x.twoLegs).map((x) => `${FM.leagueShort(x.league)}: ${name(x.home)} ${x.hg}-${x.ag} ${name(x.away)} → ${name(x.winner)}`);
+      console.log(`  Play-off hai lượt: ${po.join(" | ") || "—"} · B: ${["celta-fortuna", "real-sociedad-b"].map((id) => `${id} hạng ${W.position(s, id)}`).join(", ")}`);
+    }
+    if (s.ucl) {
+      const U = FM.UCL;
+      const t = U.table(s);
+      console.log(`  Champions League: vô địch ${name(s.ucl.winner)} (á quân ${name(s.ucl.runnerUp)}) · ${s.fx.filter((f) => f.lg === "ucl").length} trận · đầu bảng ${t.slice(0, 8).map((r) => `${W.baseClub(s, r.id).code} ${r.pts}`).join(" ")}`);
+      console.log(`  Đội trong game: ${s.ucl.local.map((id) => `${W.baseClub(s, id).code} (${U.result(s, id)})`).join(", ")}`);
+      console.log(`  Vua phá lưới C1: ${U.scorers(s, 3).map((x) => `${W.player(s, x.id).n} ${x.g}`).join(", ")}`);
+      console.log(`  Cặp loại trực tiếp: ${["po", "r16", "qf", "sf", "f"].map((st) => `${st} ${s.ucl.ties.filter((x) => x.stage === st).length}`).join(", ")}`);
+    }
     const cupGoals = Object.values(s.p).reduce((a, d) => a + (d.cst ? d.cst.g : 0), 0);
     console.log(`  Bàn thắng ở cúp (thống kê riêng): ${cupGoals}`);
     const ts = W.player(s, sum.topScorer[FM.V1]);

@@ -226,6 +226,7 @@
         u.def += e * w.def;
       }
       const t = side.tactics;
+      side.base = { att: u.att / UNIT_BASE.att, def: u.def / UNIT_BASE.def }; // trước chiến thuật
       u.att = (u.att / UNIT_BASE.att) * MENT[t.mentality].att;
       u.def = (u.def / UNIT_BASE.def) * MENT[t.mentality].def * PRESS[t.pressing].def;
       u.mid = u.mid / UNIT_BASE.mid;
@@ -248,6 +249,12 @@
       return rnd.weighted(list, (s) => (weights[s.role] || 0.1) * (attrBoost ? attrBoost(side.live[s.id].p) : 1));
     }
 
+    // tỉ lệ tấn công / phòng ngự hiệu dụng: mặt bằng chung quy về mức chuẩn 0,72 (≈ 2,5–2,7 bàn/trận),
+    // phần chênh lệch giữa hai đội khuếch đại theo độ nhạy (sens) của mặt bằng trận đấu
+    function effRatio(r) {
+      if (!m.k0) return r;
+      return 0.72 * Math.pow(r / m.k0, m.sens || 1);
+    }
     function chance(att, def) {
       const ua = att.units;
       const ud = def.units;
@@ -255,7 +262,7 @@
       const header = rnd() < 0.18 * PASS[ta.passing].header;
       const shooterSlot = pickPlayer(att, SHOOT_W, (p) => (header ? p.a[A.heading] + p.a[A.jumping] : p.a[A.finishing] + p.a[A.offTheBall]) / 20);
       const S = att.live[shooterSlot.id];
-      const ratio = ua.att / Math.max(4, ud.def);
+      const ratio = effRatio(ua.att / Math.max(4, ud.def));
       let xg = 0.145 * Math.pow(ratio, 0.6) * Math.exp(rnd.normal(0.75) - 0.28) * TEMPO[ta.tempo].xg;
       if (header) xg *= 0.75;
       xg = FM.clamp(xg, 0.015, 0.7);
@@ -408,6 +415,12 @@
       const start = m.events.length;
       if (m.minute === 0) {
         sides.forEach(computeUnits);
+        // độ nhạy với chênh lệch sức mạnh: hai đội cùng mặt bằng cao (Premier League) thì một chút hơn
+        // kém cũng quyết định nhiều hơn; mặt bằng V.League / hạng dưới nước Anh giữ nguyên (1)
+        const lvl = sides.reduce((a, x) => a + x.units.att + x.units.def, 0) / 4;
+        m.sens = FM.clamp(1 + 0.25 * (lvl - 15), 1, 2);
+        // mức cân bằng tấn công / phòng ngự chung của hai đội (k0) — xem effRatio
+        m.k0 = Math.sqrt(sides.reduce((a, x) => a * (x.base.att / Math.max(4, x.base.def)), 1));
         push("kickoff", null, fill(rnd.pick(T.kickoff), { home: sides[0].name, away: sides[1].name }));
       }
       m.minute++;
@@ -432,7 +445,7 @@
         [H, W, shareH],
         [W, H, 1 - shareH],
       ]) {
-        const ratio = att.units.att / Math.max(4, def.units.def);
+        const ratio = effRatio(att.units.att / Math.max(4, def.units.def));
         const rate =
           0.148 *
           Math.pow(ratio, 1.1) *

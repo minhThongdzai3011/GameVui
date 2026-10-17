@@ -21,6 +21,14 @@
   const V1 = FM.V1;
   A.enabled = !!DATA;
   A.isForeign = (id) => CLUB.has(id);
+  // CLB khách không thuộc hệ thống giải trong game (vd. đội bán chuyên nghiệp Anh ở FA Cup): đội hình
+  // sinh ra như CLB châu Á. Trường riêng: str (sức mạnh), imports (số ngoại binh), nat (quốc tịch), lgName
+  // full: luôn mô phỏng bằng engine; players: cầu thủ thật (id "ucl-…") thay cho đội hình sinh ra
+  const GUEST_PLAYER = new Map();
+  A.addGuest = (c) => {
+    CLUB.set(c.id, c);
+    for (const p of c.players || []) GUEST_PLAYER.set(p.id, c.id);
+  };
   A.club = (id) => CLUB.get(id);
   A.COMPS = { acle: { name: "AFC Champions League Elite", short: "C1" }, acl2: { name: "AFC Champions League Two", short: "C2" } };
   // tiền thưởng (tỷ VND)
@@ -35,8 +43,11 @@
 
   // ---------- Sức mạnh & đội hình sinh ra ----------
   // sức mạnh (thang năng lực 1–100 như cầu thủ V.League): CAHN ≈ 77, Viettel ≈ 72
-  const TIER_STR = [0, 56, 64, 72, 78, 83];
-  A.strengthOf = (id) => TIER_STR[CLUB.get(id).tier] + ((FM.hash(id) % 5) - 2);
+  const TIER_STR = [0, 56, 64, 72, 78, 83].map((x) => Math.round(34 + (x - 34) * 0.75)); // quy về thang chung
+  A.strengthOf = (id) => {
+    const c = CLUB.get(id);
+    return c.str != null ? c.str : TIER_STR[c.tier] + ((FM.hash(id) % 5) - 2);
+  };
   const POOLS = {
     jp: { nat: "Nhật Bản", f: ["Haruto", "Yuto", "Sota", "Ren", "Kaito", "Daiki", "Takumi", "Ryo", "Kenta", "Shota", "Yuki", "Kazuki", "Hiroki", "Tomoya", "Keisuke", "Ryota", "Shun", "Koki"], l: ["Sato", "Suzuki", "Takahashi", "Tanaka", "Watanabe", "Ito", "Yamamoto", "Nakamura", "Kobayashi", "Kato", "Yoshida", "Yamada", "Sasaki", "Matsumoto", "Inoue", "Kimura", "Hayashi", "Shimizu", "Mori", "Ikeda"] },
     kr: { nat: "Hàn Quốc", f: ["Min-jae", "Seung-ho", "Ji-sung", "Hyun-woo", "Jun-ho", "Dong-hyun", "Sang-min", "Tae-hwan", "Woo-young", "Jae-sung", "Young-gwon", "Kyung-won", "Sung-yong", "Hee-chan", "Jin-su", "Chang-hoon"], l: ["Kim", "Lee", "Park", "Choi", "Jung", "Kang", "Cho", "Yoon", "Jang", "Lim", "Han", "Oh", "Seo", "Shin", "Kwon", "Hwang"], surFirst: true },
@@ -45,6 +56,7 @@
     ir: { nat: "Iran", f: ["Ali", "Mehdi", "Reza", "Saeed", "Milad", "Ehsan", "Morteza", "Hossein", "Amir", "Sardar", "Omid", "Vahid"], l: ["Rezaei", "Mohammadi", "Hosseini", "Karimi", "Ahmadi", "Jafari", "Rahimi", "Nourollahi", "Hajsafi", "Kanaani", "Ghasemi", "Sadeghi"] },
     th: { nat: "Thái Lan", f: ["Chanathip", "Theerathon", "Supachok", "Ekanit", "Sarach", "Kritsada", "Pansa", "Weerathep", "Suphanat", "Bordin", "Patiwat", "Jakkaphan", "Peeradon", "Thitipan"], l: ["Songkrasin", "Bunmathan", "Sarachat", "Panya", "Yooyen", "Kaman", "Hemviboon", "Pomphan", "Mueanta", "Phala", "Khamyok", "Chamratsamee", "Puangchan", "Kraisorn"] },
     ma: { nat: null, f: ["Muhammad", "Ahmad", "Rizky", "Arif", "Safawi", "Faisal", "Hafiz", "Irfan", "Syahmi", "Egy", "Pratama", "Akmal", "Azri", "Dimas"], l: ["Rasid", "Ridwan", "Hakim", "Saputra", "Rahman", "Ismail", "Hasan", "Maulana", "Aziz", "Firdaus", "Nugroho", "Halim", "Yusof", "Hidayat"] },
+    es: { nat: null, f: ["Pablo", "Álvaro", "Hugo", "Mario", "Javier", "Sergio", "Adrián", "Diego", "Iker", "Marcos", "Raúl", "Rubén", "Dani", "Carlos", "Unai", "Aitor", "Jon", "Pol", "Marc", "Iván"], l: ["García", "Fernández", "González", "Rodríguez", "López", "Martínez", "Sánchez", "Pérez", "Gómez", "Martín", "Jiménez", "Ruiz", "Díaz", "Moreno", "Muñoz", "Navarro", "Torres", "Gil", "Serrano", "Ramos"] },
     en: { nat: null, f: ["Jack", "Lachlan", "Mitchell", "Riley", "Connor", "Jordan", "Nathan", "Thomas", "Ryan", "Josh", "Kyle", "Liam", "Callum", "Daniel"], l: ["Smith", "Brown", "Wilson", "Taylor", "Anderson", "Martin", "Thompson", "White", "Harris", "Clarke", "Walker", "King", "Wright", "Hughes"] },
     uz: { nat: null, f: ["Eldor", "Jaloliddin", "Otabek", "Abbosbek", "Oston", "Khojimat", "Dostonbek", "Azizbek", "Sherzod", "Ruslan", "Timur", "Bobur"], l: ["Shomurodov", "Masharipov", "Shukurov", "Fayzullaev", "Urunov", "Erkinov", "Khamdamov", "Turgunboev", "Sayfiev", "Alikulov", "Nasriddinov", "Tursunov"] },
     in: { nat: "Ấn Độ", f: ["Sunil", "Sandesh", "Anirudh", "Lallianzuala", "Manvir", "Sahal", "Gurpreet", "Rahul", "Akash", "Liston", "Brandon", "Naorem"], l: ["Chhetri", "Jhingan", "Thapa", "Chhangte", "Singh", "Samad", "Bheke", "Colaco", "Mishra", "Bose", "Fernandes", "Kumar"] },
@@ -67,19 +79,42 @@
     "Nhật Bản": "jp", "Hàn Quốc": "kr", "Trung Quốc": "cn", "Đài Loan": "cn", "Hồng Kông": "cn", "Ma Cao": "cn", "Mông Cổ": "cn",
     "Iran": "ir", "Thái Lan": "th", "Indonesia": "ma", "Malaysia": "ma", "Singapore": "ma", "Brunei": "ma", "Úc": "en",
     "Uzbekistan": "uz", "Tajikistan": "uz", "Kyrgyzstan": "uz", "Turkmenistan": "uz", "Ấn Độ": "in", "Bangladesh": "in", "Nepal": "in", "Bhutan": "in", "Maldives": "in",
+    "en": "en",
+    "es": "es",
     "Campuchia": "sea", "Myanmar": "sea", "Lào": "sea", "Philippines": "sea", "Đông Timor": "sea",
   };
   const poolFor = (country) => POOLS[POOL_OF[country] || "ar"];
   const TEMPLATE = ["GK", "CB", "CB", "LB", "RB", "DM", "CM", "AM", "LW", "RW", "ST", "GK", "CB", "CB", "LB", "RB", "DM", "CM", "AM", "LM", "RM", "ST", "ST"];
   const cache = new Map();
+  // cầu thủ thật của đội khách: mỗi mùa sau mùa gốc, cầu thủ trẻ tiến bộ (tới tiềm năng), lớn tuổi sa sút
+  function realSquad(s, c) {
+    const key = `${c.id}-${s.season}`;
+    if (cache.has(key)) return cache.get(key);
+    const k = Math.max(0, s.season - (c.season0 || s.season));
+    const out = c.players.map((b) => {
+      let ca = b.ca;
+      const age0 = FM.ageOn(b, `${c.season0 || s.season}-09-01`);
+      for (let y = 0; y < k; y++) {
+        const ag = age0 + y;
+        ca = Math.min(Math.max(ca, b.pa), ca + (ag <= 21 ? 3 : ag <= 24 ? 2 : ag <= 27 ? 0.5 : ag <= 30 ? 0 : ag <= 32 ? -1 : -2.5));
+      }
+      ca = Math.max(35, Math.round(ca));
+      const r = ca / b.ca;
+      const a = r === 1 ? b.a : b.a.map((v) => FM.clamp(Math.round(v * r), 1, 20));
+      return { ...b, ca, a, age: FM.ageOn(b, `${s.season}-09-01`), fs: false, foreignClub: true, fit: 100, mor: 60, available: true, free: false, st: { ap: 0, g: 0, as: 0, yc: 0, rc: 0, rs: 0, mm: 0, cs: 0 } };
+    });
+    cache.set(key, out);
+    return out;
+  }
   A.squad = function (s, clubId) {
     const key = `${clubId}-${s.season}-${s.seed}`;
     if (cache.has(key)) return cache.get(key);
     const c = CLUB.get(clubId);
+    if (c.players) return realSquad(s, c);
     const rnd = FM.rng(FM.hash(`afc-${key}`));
     const str = A.strengthOf(clubId);
     const pool = poolFor(c.country);
-    const imports = c.tier >= 4 && ["Ả Rập Xê Út", "Qatar", "UAE"].includes(c.country) ? 7 : c.tier >= 3 ? 4 : 3;
+    const imports = c.imports != null ? c.imports : c.tier >= 4 && ["Ả Rập Xê Út", "Qatar", "UAE"].includes(c.country) ? 7 : c.tier >= 3 ? 4 : 3;
     // ngoại binh: các vị trí đá chính (trừ thủ môn) chọn ngẫu nhiên
     const importSlots = new Set(shuffle(rnd, [...Array(10).keys()].map((i) => i + 1)).slice(0, imports));
     const usedNo = new Set();
@@ -98,7 +133,7 @@
       while (usedNo.has(no)) no++;
       usedNo.add(no);
       const alt = { [pos]: 20 };
-      const nat = P.nat || c.country;
+      const nat = P.nat || c.nat || c.country;
       const p = {
         id: `afc-${clubId}-${i}`,
         n,
@@ -134,6 +169,7 @@
     return out;
   };
   A.player = function (s, id) {
+    if (GUEST_PLAYER.has(id)) return realSquad(s, CLUB.get(GUEST_PLAYER.get(id))).find((p) => p.id === id) || null;
     const m = /^afc-(.+)-(\d+)$/.exec(id);
     if (!m || !CLUB.has(m[1])) return null;
     return A.squad(s, m[1])[+m[2]] || null;
@@ -282,7 +318,7 @@
     return k;
   }
   A.quickPlay = function (s, f) {
-    if (!(CLUB.has(f.h) && CLUB.has(f.a))) return false;
+    if (!(CLUB.has(f.h) && CLUB.has(f.a)) || CLUB.get(f.h).full || CLUB.get(f.a).full) return false;
     const rnd = FM.rng(W.matchSeed(s, f));
     const d = strength(s, f.h) - strength(s, f.a);
     const home = f.neutral ? 1 : 1.12;
@@ -414,7 +450,7 @@
     }
     const name = (id) => W.baseClub(s, id).name;
     const f = s.fx.find((x) => x.id === tie.legs[tie.legs.length - 1]);
-    W.mail(s, "afc", tie.w === s.user ? `🏆 VÔ ĐỊCH ${A.COMPS[comp].name.toUpperCase()}!` : `${name(tie.w)} vô địch ${A.COMPS[comp].short}`, `Chung kết ${A.COMPS[comp].name}: ${name(f.h)} ${f.hg}–${f.ag} ${name(f.a)}${f.pens ? ` (luân lưu ${f.pens.join("–")})` : ""}.${tie.w === s.user ? ` Thưởng ${FM.fmtMoney(PRIZE[comp].champ)}!` : ""}`);
+    if (W.countryOfClub(s, s.user) === "vn") W.mail(s, "afc", tie.w === s.user ? `🏆 VÔ ĐỊCH ${A.COMPS[comp].name.toUpperCase()}!` : `${name(tie.w)} vô địch ${A.COMPS[comp].short}`, `Chung kết ${A.COMPS[comp].name}: ${name(f.h)} ${f.hg}–${f.ag} ${name(f.a)}${f.pens ? ` (luân lưu ${f.pens.join("–")})` : ""}.${tie.w === s.user ? ` Thưởng ${FM.fmtMoney(PRIZE[comp].champ)}!` : ""}`);
   }
   function progressC1(s) {
     const st = s.afc.comps.acle;

@@ -1,6 +1,48 @@
 # Bóng Đá Việt Manager
 
-A football management game for V.League 1 and V.League 2 with real 2026/27 squads. Open `index.html` directly (no server or build step needed) or from the GameVui home page.
+A football management game in one shared world with three countries, using real 2026/27 squads. Open `index.html` directly (no server or build step needed) or from the GameVui home page.
+
+- **England:** Premier League, Championship, League One and League Two (92 clubs). Data comes from premierleague.com (detailed Premier League stats) and FotMob (squads, positions, market values, contracts, traits).
+- **Spain:** LaLiga and LaLiga 2 (42 clubs, 1,208 players). Data comes from FotMob, including the Copa del Rey and Supercopa draws.
+- **Vietnam:** V.League 1 and V.League 2. Data comes from vpf.vn.
+- The start screen picks a country, then a league and a club. All countries play on the same calendar and players can be bought and sold between them.
+- **Older saves still load:** a save from the two-country version is upgraded when it is opened. The Spanish clubs and players are added straight away (and can be bought when Spain's window is open), and the Spanish leagues and cups start the following season.
+- **One rating scale for everyone:** Vietnamese ratings are converted with `ca' = 34 + (ca − 34) × 0.75`, so the best Vietnamese clubs sit around Championship level.
+- **Money is shown in pounds** (£1 = 33,000 VND). Internally the game still uses billions of VND for fees and millions per month for wages. Each country has its own economy: values, wages, ticket prices, sponsorship, prize money and service costs.
+- **English rules:**
+  - Premier League: 3 down.
+  - Championship: 2 up plus a play-off for 3rd–6th (two-legged semi-finals, final at Wembley), 3 down.
+  - League One: 2 up plus a play-off for 3rd–6th, 4 down.
+  - League Two: 3 up plus a play-off for 4th–7th; the bottom 2 drop out and are replaced by National League clubs.
+  - Matches on Saturdays with some midweek rounds; the Premier League stops for FIFA breaks.
+  - Transfer windows are 14 June – 1 September and 1 January – 2 February.
+- **English cups** (every English club plays them, whichever country you manage; round dates follow the real 2025/26 calendar):
+  - Community Shield: the Sunday before Premier League round 1, at Wembley. Premier League champion vs FA Cup winner (or the league runner-up if one club won both); penalties straight after a draw. Season 1 is the real 2026 pairing, Arsenal vs Manchester City.
+  - FA Cup: round 1 in early November has the 48 League One and League Two clubs plus 32 non-league clubs. The non-league clubs have real names (National League, National League North/South) and generated squads. Premier League and Championship clubs enter in round 3 in January. Ties are single matches with no replays (penalties if level); the semi-finals and the final are at Wembley.
+  - League Cup: round 1 in August has the 72 EFL clubs. 12 Premier League clubs enter in round 2 and the 8 in Europe (the top 8 of last season's Premier League) in round 3. The semi-finals are two-legged and the final is at Wembley in late March.
+  - English league fixtures avoid cup dates. If a club in the cup still has a league match within a day of a cup tie, that league match moves to the nearest free Tuesday or Wednesday, with a mail if it is yours.
+  - Prize money follows the real prize funds (FA Cup winner £2m). Cup trophies count in the trophy room.
+- **UEFA Champions League** (36-club format):
+  - The 31 clubs from outside England have their real 2026/27 squads from FotMob (870 players: PSG, Real Madrid, Bayern…). Sabah FK and Shakhtar have no squad list on FotMob, so their players come from the line-ups of the Champions League matches they had already played.
+  - These clubs are not in any league in the game, so their players cannot be bought. Each season their young players improve towards their potential and older ones decline.
+  - English entrants: season 1 uses the real five (Arsenal, Manchester City, Manchester United, Aston Villa, Liverpool). Later seasons take the top 5 of the previous Premier League; they take the schedule slots of the original five, so English clubs never meet in the league phase.
+  - League phase: one table of 36, eight matches each, using the real 2026/27 draw and dates. Later seasons reuse that draw, moved to the same weekday of the new year. 1st–8th go to the round of 16, 9th–24th to the play-offs (9th v 24th … 16th v 17th), 25th–36th are out.
+  - Play-off, round of 16, quarter-finals and semi-finals are two-legged, with the higher-ranked club at home in the second leg; the bracket is fixed by league-phase rank. The final is a single match on a neutral ground on the last Saturday of May.
+  - Every match is fully simulated, so there is a top-scorer list. Prize money follows UEFA's 2025/26 amounts in pounds (£15.8m for taking part). The Premier League avoids Champions League midweeks, and a clash postpones the league match.
+- **Spanish rules:**
+  - LaLiga: 3 down.
+  - LaLiga 2: 2 up plus a play-off for 3rd–6th. Both the semi-finals and the final are two-legged, the higher-placed club is at home in the second leg, and a level aggregate sends the higher-placed club through (no penalties). The bottom 4 drop to Primera Federación and are replaced.
+  - B teams (Real Sociedad B, Celta Fortuna) cannot go up to their first team's division (the place passes to the next club) and do not enter the Copa del Rey.
+  - LaLiga is played on Sundays and LaLiga 2 on Saturdays, 15 August – 30 May; LaLiga stops for FIFA breaks.
+  - Transfer windows are 1 July – 1 September and 2 January – 2 February.
+  - Economy: same value scale as England; lower wages and TV money.
+- **Spanish cups:**
+  - Supercopa de España: four clubs (LaLiga champion and runner-up, the two Copa finalists) in the second week of January on neutral ground in Saudi Arabia. Season 1 is the real 2027 line-up and dates: Barcelona v Atlético and Real Sociedad v Real Madrid, 2–6 February 2027.
+  - Copa del Rey: round 1 has 112 clubs, which are 16 LaLiga clubs, 22 LaLiga 2 clubs and lower-division clubs from Primera, Segunda and Tercera Federación and the regional leagues. The lower-division clubs have real names, grounds and capacities, and generated squads. Season 1 uses the real 56 round-1 ties.
+  - Copa rounds: round 2, then the last 32 (where the Supercopa clubs enter and face the lowest-ranked teams left), last 16 and quarter-finals. These are single matches at the lower-division club's ground. The semi-finals are two-legged and the final is at La Cartuja (Seville). Dates follow the real 2025/26 calendar.
+- **Champions League for every country:** each country with clubs in the game keeps its number of places (England 5, Spain 5). From season 2 they go to the top of that country's first division, placed in the original schedule slots so clubs from the same country never meet in the league phase.
+- **Vietnamese rules stay as before:** play-off between 13th in V1 and 2nd in V2, Vietnamese transfer windows, and the 4-foreigners-on-the-pitch limit, which applies only to clubs in Vietnam.
+- **Match engine balance across levels:** each match is normalised to a common attack/defence baseline, and differences between the two teams are amplified when both play at a high level. The result is about 2.5–2.6 goals per game in every league, and table positions follow squad strength.
 
 ## The game
 
@@ -35,7 +77,11 @@ Code (plain scripts sharing `window.FM`, because ES modules and `fetch` do not w
 | `js/morale.js` | Morale: playing-time expectations, complaints and transfer requests, promises, player talks, team meetings |
 | `js/history.js` | Career history and end-of-season awards |
 | `js/afc.js` | AFC Champions League Elite / Two: entrants, schedule, generated foreign squads, quick sims, knockouts, prizes |
+| `scripts/import-pl.mjs` / `import-fotmob.mjs` / `build-ratings-en.mjs` | European data (premierleague.com, FotMob) → `data/pl-snapshots`, `data/en-snapshots`, `data/es-snapshots` and ratings. Use `--country=es` for Spain. Kit colours are in `data/en-club-colors.json` and `data/es-club-colors.json` |
 | `js/cups.js` | Super Cup and National Cup: draws, rounds, winners, prize money |
+| `js/ucl.js` | UEFA Champions League: entrants, league phase on the real draw, fixed knockout bracket, prizes, top scorers |
+| `js/cups-es.js` | Supercopa and Copa del Rey (with real lower-division clubs): dates, draws, B-team exclusion, prize money |
+| `js/cups-en.js` | Community Shield, FA Cup (with generated non-league clubs) and League Cup: dates, draws, postponements, prize money |
 | `js/training.js` | Training plans, weekly development, training injuries, formation familiarity |
 | `js/scout.js` | Scouting: how well you know each player, estimated stars / attribute ranges, scout assignments and reports |
 | `js/save.js` | IndexedDB saves and save codes |

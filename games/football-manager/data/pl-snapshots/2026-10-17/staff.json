@@ -1,0 +1,252 @@
+[
+ {
+  "clubId": "arsenal",
+  "name": "Mikel Arteta",
+  "role": "Manager"
+ },
+ {
+  "clubId": "arsenal",
+  "name": "Albert Stuivenberg",
+  "role": "Assistant Manager"
+ },
+ {
+  "clubId": "aston-villa",
+  "name": "Pako Ayestarán",
+  "role": "Assistant Manager"
+ },
+ {
+  "clubId": "aston-villa",
+  "name": "Unai Emery",
+  "role": "Manager"
+ },
+ {
+  "clubId": "aston-villa",
+  "name": "Pablo Villa",
+  "role": "Assistant Manager"
+ },
+ {
+  "clubId": "bournemouth",
+  "name": "Marco Rose",
+  "role": "Manager"
+ },
+ {
+  "clubId": "bournemouth",
+  "name": "Marco Kurth",
+  "role": "Assistant Manager"
+ },
+ {
+  "clubId": "brentford",
+  "name": "Keith Andrews",
+  "role": "Manager"
+ },
+ {
+  "clubId": "brentford",
+  "name": "Kevin O'Connor",
+  "role": "Assistant Manager"
+ },
+ {
+  "clubId": "brighton-and-hove-albion",
+  "name": "Fabian Hürzeler",
+  "role": "Manager"
+ },
+ {
+  "clubId": "brighton-and-hove-albion",
+  "name": "Jonas Scheuermann",
+  "role": "Assistant Manager"
+ },
+ {
+  "clubId": "chelsea",
+  "name": "Calum McFarlane",
+  "role": "Manager"
+ },
+ {
+  "clubId": "chelsea",
+  "name": "Xabi Alonso",
+  "role": "Manager"
+ },
+ {
+  "clubId": "chelsea",
+  "name": "Sebastián Parrilla",
+  "role": "Assistant Manager"
+ },
+ {
+  "clubId": "coventry-city",
+  "name": "Joe Edwards",
+  "role": "Assistant Manager"
+ },
+ {
+  "clubId": "coventry-city",
+  "name": "Frank Lampard",
+  "role": "Manager"
+ },
+ {
+  "clubId": "crystal-palace",
+  "name": "Oliver Glasner",
+  "role": "Manager"
+ },
+ {
+  "clubId": "crystal-palace",
+  "name": "Patrick McCarthy",
+  "role": "Assistant Manager"
+ },
+ {
+  "clubId": "crystal-palace",
+  "name": "Pierre Sage",
+  "role": "Manager"
+ },
+ {
+  "clubId": "everton",
+  "name": "Leighton Baines",
+  "role": "Assistant Manager"
+ },
+ {
+  "clubId": "everton",
+  "name": "Alan Irvine",
+  "role": "Assistant Manager"
+ },
+ {
+  "clubId": "everton",
+  "name": "Billy McKinlay",
+  "role": "Assistant Manager"
+ },
+ {
+  "clubId": "everton",
+  "name": "David Moyes",
+  "role": "Manager"
+ },
+ {
+  "clubId": "fulham",
+  "name": "Gonçalo José Assentis Pedro",
+  "role": "Assistant Manager"
+ },
+ {
+  "clubId": "fulham",
+  "name": "Álvaro Arbeloa",
+  "role": "Manager"
+ },
+ {
+  "clubId": "fulham",
+  "name": "Julián Carmona",
+  "role": "Assistant Manager"
+ },
+ {
+  "clubId": "hull-city",
+  "name": "Sergej Jakirovic",
+  "role": "Manager"
+ },
+ {
+  "clubId": "hull-city",
+  "name": "James Oliver-Pearce",
+  "role": "Assistant Manager"
+ },
+ {
+  "clubId": "hull-city",
+  "name": "Marko Salatovic",
+  "role": "Assistant Manager"
+ },
+ {
+  "clubId": "ipswich-town",
+  "name": "Kieran McKenna",
+  "role": "Manager"
+ },
+ {
+  "clubId": "ipswich-town",
+  "name": "Gary O'Neil",
+  "role": "Manager"
+ },
+ {
+  "clubId": "ipswich-town",
+  "name": "Tim Jenkins",
+  "role": "Assistant Manager"
+ },
+ {
+  "clubId": "leeds-united",
+  "name": "Daniel Farke",
+  "role": "Manager"
+ },
+ {
+  "clubId": "leeds-united",
+  "name": "Edmund Riemer",
+  "role": "Assistant Manager"
+ },
+ {
+  "clubId": "liverpool",
+  "name": "Sipke Hulshoff",
+  "role": "Assistant Manager"
+ },
+ {
+  "clubId": "liverpool",
+  "name": "Andoni Iraola",
+  "role": "Manager"
+ },
+ {
+  "clubId": "liverpool",
+  "name": "Pablo de la Torre",
+  "role": "Assistant Manager"
+ },
+ {
+  "clubId": "manchester-city",
+  "name": "Enzo Maresca",
+  "role": "Manager"
+ },
+ {
+  "clubId": "manchester-city",
+  "name": "Roberto Vitiello",
+  "role": "Assistant Manager"
+ },
+ {
+  "clubId": "manchester-united",
+  "name": "Michael Carrick",
+  "role": "Manager"
+ },
+ {
+  "clubId": "manchester-united",
+  "name": "Steve Holland",
+  "role": "Assistant Manager"
+ },
+ {
+  "clubId": "newcastle-united",
+  "name": "Matthias Jaissle",
+  "role": "Manager"
+ },
+ {
+  "clubId": "newcastle-united",
+  "name": "Florens Koch",
+  "role": "Assistant Manager"
+ },
+ {
+  "clubId": "nottingham-forest",
+  "name": "Vítor Manuel de Oliveira Lopes Pereira",
+  "role": "Manager"
+ },
+ {
+  "clubId": "nottingham-forest",
+  "name": "Oliver Glasner",
+  "role": "Manager"
+ },
+ {
+  "clubId": "nottingham-forest",
+  "name": "Michael Angerschmid",
+  "role": "Assistant Manager"
+ },
+ {
+  "clubId": "sunderland",
+  "name": "Régis Le Bris",
+  "role": "Manager"
+ },
+ {
+  "clubId": "sunderland",
+  "name": "Isidre Ramón Madir",
+  "role": "Assistant Manager"
+ },
+ {
+  "clubId": "tottenham-hotspur",
+  "name": "Roberto De Zerbi",
+  "role": "Manager"
+ },
+ {
+  "clubId": "tottenham-hotspur",
+  "name": "Bruno Saltor",
+  "role": "Assistant Manager"
+ }
+]

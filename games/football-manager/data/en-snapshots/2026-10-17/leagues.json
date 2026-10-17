@@ -1,0 +1,37 @@
+[
+ {
+  "id": "england-premier-league",
+  "name": "Premier League",
+  "tier": 1,
+  "country": "Anh",
+  "fotmob": 47
+ },
+ {
+  "id": "england-championship",
+  "name": "Championship",
+  "tier": 2,
+  "country": "Anh",
+  "fotmob": 48
+ },
+ {
+  "id": "england-league-one",
+  "name": "League One",
+  "tier": 3,
+  "country": "Anh",
+  "fotmob": 108
+ },
+ {
+  "id": "england-league-two",
+  "name": "League Two",
+  "tier": 4,
+  "country": "Anh",
+  "fotmob": 109
+ },
+ {
+  "id": "uefa-champions-league",
+  "name": "UEFA Champions League",
+  "tier": 0,
+  "country": "Châu Âu",
+  "fotmob": 42
+ }
+]

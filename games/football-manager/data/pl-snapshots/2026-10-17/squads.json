@@ -1,0 +1,6092 @@
+[
+ {
+  "clubId": "arsenal",
+  "playerId": "david-raya",
+  "number": 1,
+  "position": "G",
+  "positionInfo": "Goalkeeper",
+  "positionDetail": "GK",
+  "joined": "2024-07-04",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "arsenal",
+  "playerId": "kepa-arrizabalaga",
+  "number": 13,
+  "position": "G",
+  "positionInfo": "Goalkeeper",
+  "positionDetail": "GK",
+  "joined": "2025-07-01",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "arsenal",
+  "playerId": "william-saliba",
+  "number": 2,
+  "position": "D",
+  "positionInfo": "Centre Central Defender",
+  "positionDetail": "CB",
+  "joined": "2019-07-25",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "arsenal",
+  "playerId": "ben-white",
+  "number": 4,
+  "position": "D",
+  "positionInfo": "Centre/Right Central Defender",
+  "positionDetail": "CB",
+  "joined": "2021-07-30",
+  "appsSeason": 5
+ },
+ {
+  "clubId": "arsenal",
+  "playerId": "gabriel-magalhaes",
+  "number": 6,
+  "position": "D",
+  "positionInfo": "Centre Central Defender",
+  "positionDetail": "CB",
+  "joined": "2020-09-01",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "arsenal",
+  "playerId": "jurrien-timber",
+  "number": 12,
+  "position": "D",
+  "positionInfo": "Central Defender",
+  "positionDetail": "CB",
+  "joined": "2023-07-14",
+  "appsSeason": 3
+ },
+ {
+  "clubId": "arsenal",
+  "playerId": "riccardo-calafiori",
+  "number": 33,
+  "position": "D",
+  "positionInfo": "Left Full Back",
+  "positionDetail": "LB",
+  "joined": "2024-07-29",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "arsenal",
+  "playerId": "myles-lewis-skelly",
+  "number": 49,
+  "position": "D",
+  "positionInfo": "Left Full Back",
+  "positionDetail": "LB",
+  "joined": "2022-12-04",
+  "appsSeason": 5
+ },
+ {
+  "clubId": "arsenal",
+  "playerId": "marli-salmon",
+  "number": 89,
+  "position": "D",
+  "positionInfo": "Central Defender",
+  "positionDetail": "CB",
+  "joined": "2025-07-22",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "arsenal",
+  "playerId": "martin-degaard",
+  "number": 8,
+  "position": "M",
+  "positionInfo": "Left/Centre/Right Attacking Midfielder",
+  "positionDetail": "AM",
+  "joined": "2021-08-20",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "arsenal",
+  "playerId": "eberechi-eze",
+  "number": 10,
+  "position": "M",
+  "positionInfo": "Centre Attacking Midfielder",
+  "positionDetail": "AM",
+  "joined": "2025-08-23",
+  "appsSeason": 4
+ },
+ {
+  "clubId": "arsenal",
+  "playerId": "mikel-merino",
+  "number": 23,
+  "position": "M",
+  "positionInfo": "Centre Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2024-08-27",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "arsenal",
+  "playerId": "martin-zubimendi",
+  "number": 36,
+  "position": "M",
+  "positionInfo": "Defensive Midfielder",
+  "positionDetail": "DM",
+  "joined": "2025-07-06",
+  "appsSeason": 5
+ },
+ {
+  "clubId": "arsenal",
+  "playerId": "declan-rice",
+  "number": 41,
+  "position": "M",
+  "positionInfo": "Centre Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2023-07-15",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "arsenal",
+  "playerId": "max-dowman",
+  "number": 56,
+  "position": "F",
+  "positionInfo": "Right Winger",
+  "positionDetail": "RW",
+  "joined": "2025-07-22",
+  "appsSeason": 1
+ },
+ {
+  "clubId": "arsenal",
+  "playerId": "bukayo-saka",
+  "number": 7,
+  "position": "F",
+  "positionInfo": "Left Winger",
+  "positionDetail": "LW",
+  "joined": "2018-11-28",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "arsenal",
+  "playerId": "viktor-gyokeres",
+  "number": 14,
+  "position": "F",
+  "positionInfo": "Striker",
+  "positionDetail": "ST",
+  "joined": "2025-07-26",
+  "appsSeason": 3
+ },
+ {
+  "clubId": "arsenal",
+  "playerId": "noni-madueke",
+  "number": 20,
+  "position": "F",
+  "positionInfo": "Right Winger",
+  "positionDetail": "RW",
+  "joined": "2025-07-18",
+  "appsSeason": 3
+ },
+ {
+  "clubId": "arsenal",
+  "playerId": "kai-havertz",
+  "number": 29,
+  "position": "F",
+  "positionInfo": "Left/Centre/Right Second Striker",
+  "positionDetail": "ST",
+  "joined": "2023-06-28",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "arsenal",
+  "playerId": "ceadach-o-neill",
+  "number": 53,
+  "position": "F",
+  "positionInfo": "Forward",
+  "positionDetail": "ST",
+  "joined": "2026-02-14",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "arsenal",
+  "playerId": "piero-hincapie",
+  "number": 5,
+  "position": "D",
+  "positionInfo": "Centre Central Defender",
+  "positionDetail": "CB",
+  "joined": "2026-07-01",
+  "appsSeason": 3
+ },
+ {
+  "clubId": "arsenal",
+  "playerId": "illan-meslier",
+  "number": 30,
+  "position": "G",
+  "positionInfo": "Goalkeeper",
+  "positionDetail": "GK",
+  "joined": "2026-07-09",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "arsenal",
+  "playerId": "cristhian-mosquera",
+  "number": 3,
+  "position": "D",
+  "positionInfo": "Central Defender",
+  "positionDetail": "CB",
+  "joined": "2025-07-24",
+  "appsSeason": 2
+ },
+ {
+  "clubId": "arsenal",
+  "playerId": "christos-tzolis",
+  "number": 17,
+  "position": "F",
+  "positionInfo": "Left Winger",
+  "positionDetail": "LW",
+  "joined": "2026-07-23",
+  "appsSeason": 5
+ },
+ {
+  "clubId": "arsenal",
+  "playerId": "bruno-guimaraes",
+  "number": 39,
+  "position": "M",
+  "positionInfo": "Defensive Midfielder",
+  "positionDetail": "DM",
+  "joined": "2026-08-08",
+  "appsSeason": 4
+ },
+ {
+  "clubId": "arsenal",
+  "playerId": "ezri-konsa",
+  "number": 15,
+  "position": "D",
+  "positionInfo": "Centre Central Defender",
+  "positionDetail": "CB",
+  "joined": "2026-08-21",
+  "appsSeason": 5
+ },
+ {
+  "clubId": "arsenal",
+  "playerId": "ife-ibrahim",
+  "number": 44,
+  "position": "M",
+  "positionInfo": "Centre Defensive Midfielder",
+  "positionDetail": "DM",
+  "joined": "2025-02-06",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "arsenal",
+  "playerId": "theo-julienne",
+  "number": 45,
+  "position": "M",
+  "positionInfo": "Centre Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2024-10-04",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "arsenal",
+  "playerId": "maalik-hashi",
+  "number": 74,
+  "position": "M",
+  "positionInfo": "Midfielder",
+  "positionDetail": "CM",
+  "joined": "2026-10-12",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "aston-villa",
+  "playerId": "marco-bizot",
+  "number": 40,
+  "position": "G",
+  "positionInfo": "Goalkeeper",
+  "positionDetail": "GK",
+  "joined": "2025-07-15",
+  "appsSeason": 1
+ },
+ {
+  "clubId": "aston-villa",
+  "playerId": "matty-cash",
+  "number": 2,
+  "position": "D",
+  "positionInfo": "Right Full Back",
+  "positionDetail": "RB",
+  "joined": "2020-09-03",
+  "appsSeason": 5
+ },
+ {
+  "clubId": "aston-villa",
+  "playerId": "victor-lindelof",
+  "number": 3,
+  "position": "D",
+  "positionInfo": "Centre Central Defender",
+  "positionDetail": "CB",
+  "joined": "2025-09-01",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "aston-villa",
+  "playerId": "tyrone-mings",
+  "number": 5,
+  "position": "D",
+  "positionInfo": "Centre Central Defender",
+  "positionDetail": "CB",
+  "joined": "2019-07-08",
+  "appsSeason": 5
+ },
+ {
+  "clubId": "aston-villa",
+  "playerId": "pau-torres",
+  "number": 14,
+  "position": "D",
+  "positionInfo": "Central Defender",
+  "positionDetail": "CB",
+  "joined": "2023-07-12",
+  "appsSeason": 3
+ },
+ {
+  "clubId": "aston-villa",
+  "playerId": "ian-maatsen",
+  "number": 22,
+  "position": "D",
+  "positionInfo": "Left Full Back",
+  "positionDetail": "LB",
+  "joined": "2024-06-28",
+  "appsSeason": 4
+ },
+ {
+  "clubId": "aston-villa",
+  "playerId": "ross-barkley",
+  "number": 6,
+  "position": "M",
+  "positionInfo": "Centre Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2024-07-01",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "aston-villa",
+  "playerId": "john-mcginn",
+  "number": 7,
+  "position": "M",
+  "positionInfo": "Centre Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2018-08-08",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "aston-villa",
+  "playerId": "emiliano-buendia",
+  "number": 10,
+  "position": "M",
+  "positionInfo": "Left/Right Attacking Midfielder",
+  "positionDetail": "AM",
+  "joined": "2021-06-10",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "aston-villa",
+  "playerId": "amadou-onana",
+  "number": 24,
+  "position": "M",
+  "positionInfo": "Centre Defensive Midfielder",
+  "positionDetail": "DM",
+  "joined": "2024-07-22",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "aston-villa",
+  "playerId": "lamare-bogarde",
+  "number": 26,
+  "position": "M",
+  "positionInfo": "Centre Central Defender",
+  "positionDetail": "CM",
+  "joined": "2021-01-07",
+  "appsSeason": 1
+ },
+ {
+  "clubId": "aston-villa",
+  "playerId": "boubacar-kamara",
+  "number": 8,
+  "position": "M",
+  "positionInfo": "Centre Defensive Midfielder",
+  "positionDetail": "DM",
+  "joined": "2022-06-11",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "aston-villa",
+  "playerId": "tammy-abraham",
+  "number": 18,
+  "position": "F",
+  "positionInfo": "Centre Striker",
+  "positionDetail": "ST",
+  "joined": "2026-01-27",
+  "appsSeason": 4
+ },
+ {
+  "clubId": "aston-villa",
+  "playerId": "brian-madjo",
+  "number": 39,
+  "position": "F",
+  "positionInfo": "Centre Striker",
+  "positionDetail": "ST",
+  "joined": "2026-01-12",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "aston-villa",
+  "playerId": "alysson",
+  "number": 47,
+  "position": "F",
+  "positionInfo": "Right Winger",
+  "positionDetail": "RW",
+  "joined": "2026-01-01",
+  "appsSeason": 5
+ },
+ {
+  "clubId": "aston-villa",
+  "playerId": "modou-keba-cisse",
+  "number": 48,
+  "position": "D",
+  "positionInfo": "Central Defender",
+  "positionDetail": "CB",
+  "joined": "2026-07-01",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "aston-villa",
+  "playerId": "johan-manzambi",
+  "number": 44,
+  "position": "M",
+  "positionInfo": "Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2026-07-17",
+  "appsSeason": 3
+ },
+ {
+  "clubId": "aston-villa",
+  "playerId": "joao-gomes",
+  "number": 35,
+  "position": "M",
+  "positionInfo": "Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2026-07-20",
+  "appsSeason": 3
+ },
+ {
+  "clubId": "aston-villa",
+  "playerId": "alejandro-garnacho",
+  "number": 17,
+  "position": "F",
+  "positionInfo": "Winger",
+  "positionDetail": "ST",
+  "joined": "2026-07-23",
+  "appsSeason": 3
+ },
+ {
+  "clubId": "aston-villa",
+  "playerId": "owen-asemota",
+  "number": 60,
+  "position": "G",
+  "positionInfo": "Goalkeeper",
+  "positionDetail": "GK",
+  "joined": "2024-09-20",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "aston-villa",
+  "playerId": "james-wright",
+  "number": 42,
+  "position": "G",
+  "positionInfo": "Goalkeeper",
+  "positionDetail": "GK",
+  "joined": "2021-08-30",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "aston-villa",
+  "playerId": "george-hemmings",
+  "number": 53,
+  "position": "M",
+  "positionInfo": "Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2025-08-05",
+  "appsSeason": 5
+ },
+ {
+  "clubId": "aston-villa",
+  "playerId": "zion-suzuki",
+  "number": 1,
+  "position": "G",
+  "positionInfo": "Goalkeeper",
+  "positionDetail": "GK",
+  "joined": "2026-08-19",
+  "appsSeason": 5
+ },
+ {
+  "clubId": "aston-villa",
+  "playerId": "matteo-ruggeri",
+  "number": 13,
+  "position": "D",
+  "positionInfo": "Left Full Back",
+  "positionDetail": "LB",
+  "joined": "2026-08-19",
+  "appsSeason": 4
+ },
+ {
+  "clubId": "aston-villa",
+  "playerId": "aaron-wan-bissaka",
+  "number": 29,
+  "position": "D",
+  "positionInfo": "Right Full Back",
+  "positionDetail": "RB",
+  "joined": "2026-08-21",
+  "appsSeason": 5
+ },
+ {
+  "clubId": "aston-villa",
+  "playerId": "leon-goretzka",
+  "number": 27,
+  "position": "M",
+  "positionInfo": "Centre Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2026-08-27",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "aston-villa",
+  "playerId": "nicolas-jackson",
+  "number": 11,
+  "position": "F",
+  "positionInfo": "Striker",
+  "positionDetail": "ST",
+  "joined": "2026-08-28",
+  "appsSeason": 5
+ },
+ {
+  "clubId": "aston-villa",
+  "playerId": "ibrahim-mbaye",
+  "number": 19,
+  "position": "F",
+  "positionInfo": "Left/Right Winger",
+  "positionDetail": "RW",
+  "joined": "2026-09-01",
+  "appsSeason": 3
+ },
+ {
+  "clubId": "aston-villa",
+  "playerId": "taylor-harwood-bellis",
+  "number": 4,
+  "position": "D",
+  "positionInfo": "Centre Central Defender",
+  "positionDetail": "CB",
+  "joined": "2026-09-01",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "bournemouth",
+  "playerId": "djordje-petrovic",
+  "number": 1,
+  "position": "G",
+  "positionInfo": "Goalkeeper",
+  "positionDetail": "GK",
+  "joined": "2025-07-16",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "bournemouth",
+  "playerId": "fraser-forster",
+  "number": 17,
+  "position": "G",
+  "positionInfo": "Goalkeeper",
+  "positionDetail": "GK",
+  "joined": "2026-01-02",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "bournemouth",
+  "playerId": "adrien-truffert",
+  "number": 3,
+  "position": "D",
+  "positionInfo": "Left Full Back",
+  "positionDetail": "LB",
+  "joined": "2025-06-16",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "bournemouth",
+  "playerId": "julio-soler",
+  "number": 6,
+  "position": "D",
+  "positionInfo": "Left Full Back",
+  "positionDetail": "LB",
+  "joined": "2025-01-07",
+  "appsSeason": 1
+ },
+ {
+  "clubId": "bournemouth",
+  "playerId": "adam-smith",
+  "number": 15,
+  "position": "D",
+  "positionInfo": "Right Full Back",
+  "positionDetail": "RB",
+  "joined": "2014-01-28",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "bournemouth",
+  "playerId": "bafode-diakite",
+  "number": 18,
+  "position": "D",
+  "positionInfo": "Centre Central Defender",
+  "positionDetail": "CB",
+  "joined": "2025-08-13",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "bournemouth",
+  "playerId": "james-hill",
+  "number": 5,
+  "position": "D",
+  "positionInfo": "Centre Central Defender",
+  "positionDetail": "CB",
+  "joined": "2022-01-05",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "bournemouth",
+  "playerId": "veljko-milosavljevic",
+  "number": 44,
+  "position": "D",
+  "positionInfo": "Centre Central Defender",
+  "positionDetail": "CB",
+  "joined": "2025-09-01",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "bournemouth",
+  "playerId": "lewis-cook",
+  "number": 4,
+  "position": "M",
+  "positionInfo": "Centre Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2016-07-08",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "bournemouth",
+  "playerId": "david-brooks",
+  "number": 7,
+  "position": "M",
+  "positionInfo": "Left/Centre/Right Attacking Midfielder",
+  "positionDetail": "AM",
+  "joined": "2018-07-01",
+  "appsSeason": 5
+ },
+ {
+  "clubId": "bournemouth",
+  "playerId": "alex-scott",
+  "number": 8,
+  "position": "M",
+  "positionInfo": "Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2023-08-10",
+  "appsSeason": 5
+ },
+ {
+  "clubId": "bournemouth",
+  "playerId": "ryan-christie",
+  "number": 10,
+  "position": "M",
+  "positionInfo": "Left/Centre/Right Attacking Midfielder",
+  "positionDetail": "AM",
+  "joined": "2021-08-31",
+  "appsSeason": 5
+ },
+ {
+  "clubId": "bournemouth",
+  "playerId": "tyler-adams",
+  "number": 12,
+  "position": "M",
+  "positionInfo": "Defensive Midfielder",
+  "positionDetail": "DM",
+  "joined": "2023-08-20",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "bournemouth",
+  "playerId": "marcus-tavernier",
+  "number": 16,
+  "position": "M",
+  "positionInfo": "Left Winger",
+  "positionDetail": "LM",
+  "joined": "2022-08-01",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "bournemouth",
+  "playerId": "alex-toth",
+  "number": 27,
+  "position": "M",
+  "positionInfo": "Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2026-01-20",
+  "appsSeason": 2
+ },
+ {
+  "clubId": "bournemouth",
+  "playerId": "evanilson",
+  "number": 9,
+  "position": "F",
+  "positionInfo": "Centre Striker",
+  "positionDetail": "ST",
+  "joined": "2024-08-16",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "bournemouth",
+  "playerId": "ben-gannon-doak",
+  "number": 11,
+  "position": "F",
+  "positionInfo": "Left/Right Winger",
+  "positionDetail": "RW",
+  "joined": "2025-08-18",
+  "appsSeason": 5
+ },
+ {
+  "clubId": "bournemouth",
+  "playerId": "justin-kluivert",
+  "number": 19,
+  "position": "F",
+  "positionInfo": "Left/Right Winger",
+  "positionDetail": "RW",
+  "joined": "2023-07-01",
+  "appsSeason": 4
+ },
+ {
+  "clubId": "bournemouth",
+  "playerId": "amine-adli",
+  "number": 21,
+  "position": "F",
+  "positionInfo": "Left Winger",
+  "positionDetail": "LW",
+  "joined": "2025-08-21",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "bournemouth",
+  "playerId": "rayan",
+  "number": 37,
+  "position": "F",
+  "positionInfo": "Left/Centre/Right Striker",
+  "positionDetail": "ST",
+  "joined": "2026-01-27",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "bournemouth",
+  "playerId": "julian-araujo",
+  "number": 2,
+  "position": "D",
+  "positionInfo": "Right Full Back",
+  "positionDetail": "RB",
+  "joined": "2024-08-13",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "bournemouth",
+  "playerId": "daniel-jebbison",
+  "number": 29,
+  "position": "F",
+  "positionInfo": "Centre Striker",
+  "positionDetail": "ST",
+  "joined": "2024-07-10",
+  "appsSeason": 3
+ },
+ {
+  "clubId": "bournemouth",
+  "playerId": "alvaro-rodriguez",
+  "number": 30,
+  "position": "F",
+  "positionInfo": "Striker",
+  "positionDetail": "ST",
+  "joined": "2026-07-14",
+  "appsSeason": 3
+ },
+ {
+  "clubId": "bournemouth",
+  "playerId": "max-aarons",
+  "number": 28,
+  "position": "D",
+  "positionInfo": "Right Full Back",
+  "positionDetail": "RB",
+  "joined": "2023-08-10",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "bournemouth",
+  "playerId": "antonio-silva",
+  "number": 14,
+  "position": "D",
+  "positionInfo": "Centre Central Defender",
+  "positionDetail": "CB",
+  "joined": "2026-08-01",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "bournemouth",
+  "playerId": "juanlu-sanchez",
+  "number": 24,
+  "position": "M",
+  "positionInfo": "Left/Right Winger",
+  "positionDetail": "RM",
+  "joined": "2026-08-06",
+  "appsSeason": 1
+ },
+ {
+  "clubId": "bournemouth",
+  "playerId": "michele-di-gregorio",
+  "number": 20,
+  "position": "G",
+  "positionInfo": "Goalkeeper",
+  "positionDetail": "GK",
+  "joined": "2026-08-25",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "bournemouth",
+  "playerId": "mack-allan",
+  "number": 55,
+  "position": "G",
+  "positionInfo": "Goalkeeper",
+  "positionDetail": "GK",
+  "joined": "2026-09-16",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "brentford",
+  "playerId": "caoimhin-kelleher",
+  "number": 1,
+  "position": "G",
+  "positionInfo": "Goalkeeper",
+  "positionDetail": "GK",
+  "joined": "2025-06-03",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "brentford",
+  "playerId": "hakon-valdimarsson",
+  "number": 12,
+  "position": "G",
+  "positionInfo": "Goalkeeper",
+  "positionDetail": "GK",
+  "joined": "2024-01-26",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "brentford",
+  "playerId": "ellery-balcombe",
+  "number": 31,
+  "position": "G",
+  "positionInfo": "Goalkeeper",
+  "positionDetail": "GK",
+  "joined": "2016-11-02",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "brentford",
+  "playerId": "aaron-hickey",
+  "number": 2,
+  "position": "D",
+  "positionInfo": "Left Full Back",
+  "positionDetail": "LB",
+  "joined": "2022-07-09",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "brentford",
+  "playerId": "rico-henry",
+  "number": 3,
+  "position": "D",
+  "positionInfo": "Left Full Back",
+  "positionDetail": "LB",
+  "joined": "2016-08-31",
+  "appsSeason": 1
+ },
+ {
+  "clubId": "brentford",
+  "playerId": "sepp-van-den-berg",
+  "number": 4,
+  "position": "D",
+  "positionInfo": "Centre Central Defender",
+  "positionDetail": "CB",
+  "joined": "2024-08-22",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "brentford",
+  "playerId": "kristoffer-ajer",
+  "number": 20,
+  "position": "D",
+  "positionInfo": "Centre Central Defender",
+  "positionDetail": "CB",
+  "joined": "2021-07-21",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "brentford",
+  "playerId": "nathan-collins",
+  "number": 22,
+  "position": "D",
+  "positionInfo": "Centre Central Defender",
+  "positionDetail": "CB",
+  "joined": "2023-07-04",
+  "appsSeason": 3
+ },
+ {
+  "clubId": "brentford",
+  "playerId": "michael-kayode",
+  "number": 33,
+  "position": "D",
+  "positionInfo": "Right Full Back",
+  "positionDetail": "RB",
+  "joined": "2025-07-01",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "brentford",
+  "playerId": "kevin-schade",
+  "number": 7,
+  "position": "M",
+  "positionInfo": "Left/Right Winger",
+  "positionDetail": "RM",
+  "joined": "2023-07-01",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "brentford",
+  "playerId": "mathias-jensen",
+  "number": 8,
+  "position": "M",
+  "positionInfo": "Centre Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2019-07-10",
+  "appsSeason": 2
+ },
+ {
+  "clubId": "brentford",
+  "playerId": "josh-dasilva",
+  "number": 10,
+  "position": "M",
+  "positionInfo": "Centre Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2025-10-23",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "brentford",
+  "playerId": "fabio-carvalho",
+  "number": 14,
+  "position": "M",
+  "positionInfo": "Left/Centre/Right Attacking Midfielder",
+  "positionDetail": "AM",
+  "joined": "2025-10-15",
+  "appsSeason": 1
+ },
+ {
+  "clubId": "brentford",
+  "playerId": "antoni-milambo",
+  "number": 17,
+  "position": "M",
+  "positionInfo": "Attacking Midfielder",
+  "positionDetail": "AM",
+  "joined": "2025-07-03",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "brentford",
+  "playerId": "yehor-yarmoliuk",
+  "number": 6,
+  "position": "M",
+  "positionInfo": "Centre Attacking Midfielder",
+  "positionDetail": "AM",
+  "joined": "2022-10-28",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "brentford",
+  "playerId": "mikkel-damsgaard",
+  "number": 24,
+  "position": "M",
+  "positionInfo": "Left/Centre Attacking Midfielder",
+  "positionDetail": "AM",
+  "joined": "2022-08-10",
+  "appsSeason": 5
+ },
+ {
+  "clubId": "brentford",
+  "playerId": "vitaly-janelt",
+  "number": 27,
+  "position": "M",
+  "positionInfo": "Centre Defensive Midfielder",
+  "positionDetail": "DM",
+  "joined": "2020-10-03",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "brentford",
+  "playerId": "igor-thiago",
+  "number": 9,
+  "position": "F",
+  "positionInfo": "Striker",
+  "positionDetail": "ST",
+  "joined": "2024-07-01",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "brentford",
+  "playerId": "dango-ouattara",
+  "number": 11,
+  "position": "F",
+  "positionInfo": "Left/Right Winger",
+  "positionDetail": "RW",
+  "joined": "2025-08-16",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "brentford",
+  "playerId": "keane-lewis-potter",
+  "number": 23,
+  "position": "F",
+  "positionInfo": "Striker",
+  "positionDetail": "ST",
+  "joined": "2022-07-12",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "brentford",
+  "playerId": "kaye-furo",
+  "number": 47,
+  "position": "F",
+  "positionInfo": "Centre Striker",
+  "positionDetail": "ST",
+  "joined": "2026-01-11",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "brentford",
+  "playerId": "jannik-schuster",
+  "number": 44,
+  "position": "D",
+  "positionInfo": "Centre Central Defender",
+  "positionDetail": "CB",
+  "joined": "2026-06-15",
+  "appsSeason": 4
+ },
+ {
+  "clubId": "brentford",
+  "playerId": "kim-ji-soo",
+  "number": 36,
+  "position": "D",
+  "positionInfo": "Central Defender",
+  "positionDetail": "CB",
+  "joined": "2023-07-20",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "brentford",
+  "playerId": "gustavo-nunes",
+  "number": 39,
+  "position": "F",
+  "positionInfo": "Left Winger",
+  "positionDetail": "LW",
+  "joined": "2025-10-15",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "brentford",
+  "playerId": "benjamin-fredrick",
+  "number": 48,
+  "position": "D",
+  "positionInfo": "Centre Central Defender",
+  "positionDetail": "CB",
+  "joined": "2023-09-14",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "brentford",
+  "playerId": "jaidon-anthony",
+  "number": 19,
+  "position": "F",
+  "positionInfo": "Left Winger",
+  "positionDetail": "LW",
+  "joined": "2026-07-07",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "brentford",
+  "playerId": "callum-wilson",
+  "number": 13,
+  "position": "F",
+  "positionInfo": "Centre Striker",
+  "positionDetail": "ST",
+  "joined": "2026-07-09",
+  "appsSeason": 4
+ },
+ {
+  "clubId": "brentford",
+  "playerId": "mamadou-sangare",
+  "number": 18,
+  "position": "M",
+  "positionInfo": "Centre Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2026-08-01",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "brentford",
+  "playerId": "el-hadji-malick-diouf",
+  "number": 25,
+  "position": "D",
+  "positionInfo": "Left Full Back",
+  "positionDetail": "LB",
+  "joined": "2026-08-28",
+  "appsSeason": 3
+ },
+ {
+  "clubId": "brighton-and-hove-albion",
+  "playerId": "bart-verbruggen",
+  "number": 1,
+  "position": "G",
+  "positionInfo": "Goalkeeper",
+  "positionDetail": "GK",
+  "joined": "2023-07-03",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "brighton-and-hove-albion",
+  "playerId": "jason-steele",
+  "number": 23,
+  "position": "G",
+  "positionInfo": "Goalkeeper",
+  "positionDetail": "GK",
+  "joined": "2018-07-01",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "brighton-and-hove-albion",
+  "playerId": "tom-mcgill",
+  "number": 38,
+  "position": "G",
+  "positionInfo": "Goalkeeper",
+  "positionDetail": "GK",
+  "joined": "2021-02-02",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "brighton-and-hove-albion",
+  "playerId": "lewis-dunk",
+  "number": 5,
+  "position": "D",
+  "positionInfo": "Centre Central Defender",
+  "positionDetail": "CB",
+  "joined": "2009-07-01",
+  "appsSeason": 5
+ },
+ {
+  "clubId": "brighton-and-hove-albion",
+  "playerId": "olivier-boscagli",
+  "number": 21,
+  "position": "D",
+  "positionInfo": "Central Defender",
+  "positionDetail": "CB",
+  "joined": "2025-07-02",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "brighton-and-hove-albion",
+  "playerId": "ferdi-kadioglu",
+  "number": 24,
+  "position": "D",
+  "positionInfo": "Left Full Back",
+  "positionDetail": "LB",
+  "joined": "2024-08-27",
+  "appsSeason": 5
+ },
+ {
+  "clubId": "brighton-and-hove-albion",
+  "playerId": "maxim-de-cuyper",
+  "number": 29,
+  "position": "D",
+  "positionInfo": "Left Full Back",
+  "positionDetail": "LB",
+  "joined": "2025-07-05",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "brighton-and-hove-albion",
+  "playerId": "jack-hinshelwood",
+  "number": 8,
+  "position": "M",
+  "positionInfo": "Centre Defensive Midfielder",
+  "positionDetail": "DM",
+  "joined": "2022-12-30",
+  "appsSeason": 1
+ },
+ {
+  "clubId": "brighton-and-hove-albion",
+  "playerId": "kaoru-mitoma",
+  "number": 7,
+  "position": "M",
+  "positionInfo": "Left Winger",
+  "positionDetail": "LM",
+  "joined": "2021-08-09",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "brighton-and-hove-albion",
+  "playerId": "diego-gomez",
+  "number": 25,
+  "position": "M",
+  "positionInfo": "Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2025-01-01",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "brighton-and-hove-albion",
+  "playerId": "yasin-ayari",
+  "number": 26,
+  "position": "M",
+  "positionInfo": "Left/Centre/Right Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2023-01-30",
+  "appsSeason": 5
+ },
+ {
+  "clubId": "brighton-and-hove-albion",
+  "playerId": "mats-wieffer",
+  "number": 27,
+  "position": "M",
+  "positionInfo": "Centre Defensive Midfielder",
+  "positionDetail": "DM",
+  "joined": "2024-07-06",
+  "appsSeason": 2
+ },
+ {
+  "clubId": "brighton-and-hove-albion",
+  "playerId": "pascal-gross",
+  "number": 13,
+  "position": "M",
+  "positionInfo": "Centre Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2026-01-02",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "brighton-and-hove-albion",
+  "playerId": "matt-o-riley",
+  "number": 33,
+  "position": "M",
+  "positionInfo": "Centre Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2024-08-26",
+  "appsSeason": 2
+ },
+ {
+  "clubId": "brighton-and-hove-albion",
+  "playerId": "georginio-rutter",
+  "number": 10,
+  "position": "F",
+  "positionInfo": "Centre Striker",
+  "positionDetail": "ST",
+  "joined": "2024-08-19",
+  "appsSeason": 3
+ },
+ {
+  "clubId": "brighton-and-hove-albion",
+  "playerId": "yankuba-minteh",
+  "number": 11,
+  "position": "F",
+  "positionInfo": "Left/Centre/Right Winger",
+  "positionDetail": "RW",
+  "joined": "2024-07-01",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "brighton-and-hove-albion",
+  "playerId": "charalampos-kostoulas",
+  "number": 19,
+  "position": "F",
+  "positionInfo": "Striker",
+  "positionDetail": "ST",
+  "joined": "2025-07-01",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "brighton-and-hove-albion",
+  "playerId": "nehemiah-oriola",
+  "number": 49,
+  "position": "M",
+  "positionInfo": "Winger",
+  "positionDetail": "CM",
+  "joined": "2025-10-17",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "brighton-and-hove-albion",
+  "playerId": "costinha",
+  "number": 20,
+  "position": "D",
+  "positionInfo": "Right Full Back",
+  "positionDetail": "RB",
+  "joined": "2026-06-15",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "brighton-and-hove-albion",
+  "playerId": "zadok-yohanna",
+  "number": 36,
+  "position": "F",
+  "positionInfo": "Right Winger",
+  "positionDetail": "RW",
+  "joined": "2026-06-15",
+  "appsSeason": 1
+ },
+ {
+  "clubId": "brighton-and-hove-albion",
+  "playerId": "george-munday",
+  "number": 46,
+  "position": "F",
+  "positionInfo": "Centre Striker",
+  "positionDetail": "ST",
+  "joined": "2026-07-01",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "brighton-and-hove-albion",
+  "playerId": "pascal-struijk",
+  "number": 4,
+  "position": "D",
+  "positionInfo": "Central Defender",
+  "positionDetail": "CB",
+  "joined": "2026-06-30",
+  "appsSeason": 4
+ },
+ {
+  "clubId": "brighton-and-hove-albion",
+  "playerId": "brajan-gruda",
+  "number": 8,
+  "position": "M",
+  "positionInfo": "Centre/Right Attacking Midfielder",
+  "positionDetail": "AM",
+  "joined": "2024-08-14",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "brighton-and-hove-albion",
+  "playerId": "malick-yalcouye",
+  "number": 35,
+  "position": "M",
+  "positionInfo": "Centre/Right Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2024-07-12",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "brighton-and-hove-albion",
+  "playerId": "evan-ferguson",
+  "number": 28,
+  "position": "F",
+  "positionInfo": "Centre Striker",
+  "positionDetail": "ST",
+  "joined": "2021-08-23",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "brighton-and-hove-albion",
+  "playerId": "ibrahim-osman",
+  "number": 15,
+  "position": "F",
+  "positionInfo": "Left Winger",
+  "positionDetail": "LW",
+  "joined": "2024-07-01",
+  "appsSeason": 3
+ },
+ {
+  "clubId": "brighton-and-hove-albion",
+  "playerId": "michael-svoboda",
+  "number": 30,
+  "position": "D",
+  "positionInfo": "Centre Central Defender",
+  "positionDetail": "CB",
+  "joined": "2026-07-02",
+  "appsSeason": 1
+ },
+ {
+  "clubId": "brighton-and-hove-albion",
+  "playerId": "luka-vuskovic",
+  "number": 44,
+  "position": "D",
+  "positionInfo": "Central Defender",
+  "positionDetail": "CB",
+  "joined": "2026-07-14",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "brighton-and-hove-albion",
+  "playerId": "promise-david",
+  "number": 12,
+  "position": "F",
+  "positionInfo": "Striker",
+  "positionDetail": "ST",
+  "joined": "2026-08-18",
+  "appsSeason": 2
+ },
+ {
+  "clubId": "brighton-and-hove-albion",
+  "playerId": "jaouen-hadjam",
+  "number": 3,
+  "position": "D",
+  "positionInfo": "Left Full Back",
+  "positionDetail": "LB",
+  "joined": "2026-08-25",
+  "appsSeason": 1
+ },
+ {
+  "clubId": "brighton-and-hove-albion",
+  "playerId": "shane-nti",
+  "number": 51,
+  "position": "M",
+  "positionInfo": "Centre Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2026-08-26",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "brighton-and-hove-albion",
+  "playerId": "chema-andres",
+  "number": 14,
+  "position": "M",
+  "positionInfo": "Centre Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2026-09-01",
+  "appsSeason": 3
+ },
+ {
+  "clubId": "brighton-and-hove-albion",
+  "playerId": "femi-azeez",
+  "number": 39,
+  "position": "F",
+  "positionInfo": "Left/Right Winger",
+  "positionDetail": "RW",
+  "joined": "2026-09-01",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "brighton-and-hove-albion",
+  "playerId": "younes-ibrahim",
+  "number": 59,
+  "position": "M",
+  "positionInfo": "Centre Attacking Midfielder",
+  "positionDetail": "AM",
+  "joined": "2026-08-12",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "chelsea",
+  "playerId": "teddy-sharman-lowe",
+  "number": 28,
+  "position": "G",
+  "positionInfo": "Goalkeeper",
+  "positionDetail": "GK",
+  "joined": "2021-10-25",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "chelsea",
+  "playerId": "gabriel-slonina",
+  "number": 44,
+  "position": "G",
+  "positionInfo": "Goalkeeper",
+  "positionDetail": "GK",
+  "joined": "2022-08-02",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "chelsea",
+  "playerId": "levi-colwill",
+  "number": 6,
+  "position": "D",
+  "positionInfo": "Centre Central Defender",
+  "positionDetail": "CB",
+  "joined": "2022-07-01",
+  "appsSeason": 5
+ },
+ {
+  "clubId": "chelsea",
+  "playerId": "jorrel-hato",
+  "number": 21,
+  "position": "D",
+  "positionInfo": "Left Full Back",
+  "positionDetail": "LB",
+  "joined": "2025-08-03",
+  "appsSeason": 4
+ },
+ {
+  "clubId": "chelsea",
+  "playerId": "reece-james",
+  "number": 24,
+  "position": "D",
+  "positionInfo": "Right Full Back",
+  "positionDetail": "RB",
+  "joined": "2019-05-15",
+  "appsSeason": 4
+ },
+ {
+  "clubId": "chelsea",
+  "playerId": "malo-gusto",
+  "number": 27,
+  "position": "D",
+  "positionInfo": "Right Full Back",
+  "positionDetail": "RB",
+  "joined": "2023-01-28",
+  "appsSeason": 5
+ },
+ {
+  "clubId": "chelsea",
+  "playerId": "wesley-fofana",
+  "number": 3,
+  "position": "D",
+  "positionInfo": "Centre Central Defender",
+  "positionDetail": "CB",
+  "joined": "2022-08-31",
+  "appsSeason": 4
+ },
+ {
+  "clubId": "chelsea",
+  "playerId": "josh-acheampong",
+  "number": 34,
+  "position": "D",
+  "positionInfo": "Right Full Back",
+  "positionDetail": "RB",
+  "joined": "2024-03-10",
+  "appsSeason": 5
+ },
+ {
+  "clubId": "chelsea",
+  "playerId": "cole-palmer",
+  "number": 10,
+  "position": "M",
+  "positionInfo": "Attacking Midfielder",
+  "positionDetail": "AM",
+  "joined": "2023-09-01",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "chelsea",
+  "playerId": "moises-caicedo",
+  "number": 25,
+  "position": "M",
+  "positionInfo": "Centre Defensive Midfielder",
+  "positionDetail": "DM",
+  "joined": "2023-08-14",
+  "appsSeason": 2
+ },
+ {
+  "clubId": "chelsea",
+  "playerId": "romeo-lavia",
+  "number": 45,
+  "position": "M",
+  "positionInfo": "Centre Defensive Midfielder",
+  "positionDetail": "DM",
+  "joined": "2023-08-18",
+  "appsSeason": 5
+ },
+ {
+  "clubId": "chelsea",
+  "playerId": "pedro-neto",
+  "number": 7,
+  "position": "F",
+  "positionInfo": "Left/Right Winger",
+  "positionDetail": "RW",
+  "joined": "2024-08-11",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "chelsea",
+  "playerId": "jamie-gittens",
+  "number": 11,
+  "position": "F",
+  "positionInfo": "Left Winger",
+  "positionDetail": "LW",
+  "joined": "2025-07-05",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "chelsea",
+  "playerId": "joao-pedro",
+  "number": 9,
+  "position": "F",
+  "positionInfo": "Centre Striker",
+  "positionDetail": "ST",
+  "joined": "2025-07-02",
+  "appsSeason": 5
+ },
+ {
+  "clubId": "chelsea",
+  "playerId": "estevao",
+  "number": 41,
+  "position": "F",
+  "positionInfo": "Right Winger",
+  "positionDetail": "RW",
+  "joined": "2025-07-14",
+  "appsSeason": 5
+ },
+ {
+  "clubId": "chelsea",
+  "playerId": "geovany-quenda",
+  "number": 23,
+  "position": "M",
+  "positionInfo": "Right Winger",
+  "positionDetail": "RM",
+  "joined": "2026-06-15",
+  "appsSeason": 2
+ },
+ {
+  "clubId": "chelsea",
+  "playerId": "emmanuel-emegha",
+  "number": 22,
+  "position": "F",
+  "positionInfo": "Striker",
+  "positionDetail": "ST",
+  "joined": "2026-06-15",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "chelsea",
+  "playerId": "mike-penders",
+  "number": 39,
+  "position": "G",
+  "positionInfo": "Goalkeeper",
+  "positionDetail": "GK",
+  "joined": "2024-08-27",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "chelsea",
+  "playerId": "aaron-anselmino",
+  "number": 30,
+  "position": "D",
+  "positionInfo": "Centre Central Defender",
+  "positionDetail": "CB",
+  "joined": "2024-08-08",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "chelsea",
+  "playerId": "facundo-buonanotte",
+  "number": 40,
+  "position": "M",
+  "positionInfo": "Centre/Right Attacking Midfielder",
+  "positionDetail": "AM",
+  "joined": "2025-09-01",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "chelsea",
+  "playerId": "marco-palestra",
+  "number": 2,
+  "position": "D",
+  "positionInfo": "Right Full Back",
+  "positionDetail": "RB",
+  "joined": "2026-07-01",
+  "appsSeason": 1
+ },
+ {
+  "clubId": "chelsea",
+  "playerId": "morgan-rogers",
+  "number": 17,
+  "position": "M",
+  "positionInfo": "Attacking Midfielder",
+  "positionDetail": "AM",
+  "joined": "2026-07-21",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "chelsea",
+  "playerId": "olutayo-subuloye",
+  "number": 37,
+  "position": "D",
+  "positionInfo": "Centre Central Defender",
+  "positionDetail": "CB",
+  "joined": "2026-07-01",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "chelsea",
+  "playerId": "reggie-watson",
+  "number": 31,
+  "position": "M",
+  "positionInfo": "Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2026-07-01",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "chelsea",
+  "playerId": "mahdi-nicoll-jazuli",
+  "number": 32,
+  "position": "M",
+  "positionInfo": "Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2025-01-30",
+  "appsSeason": 1
+ },
+ {
+  "clubId": "chelsea",
+  "playerId": "maxence-lacroix",
+  "number": 5,
+  "position": "D",
+  "positionInfo": "Central Defender",
+  "positionDetail": "CB",
+  "joined": "2026-07-30",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "chelsea",
+  "playerId": "danny-welbeck",
+  "number": 18,
+  "position": "F",
+  "positionInfo": "Centre Striker",
+  "positionDetail": "ST",
+  "joined": "2026-08-01",
+  "appsSeason": 4
+ },
+ {
+  "clubId": "chelsea",
+  "playerId": "valentin-barco",
+  "number": 4,
+  "position": "M",
+  "positionInfo": "Left/Centre Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2026-08-02",
+  "appsSeason": 3
+ },
+ {
+  "clubId": "chelsea",
+  "playerId": "jordan-henderson",
+  "number": 14,
+  "position": "M",
+  "positionInfo": "Centre Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2026-08-03",
+  "appsSeason": 2
+ },
+ {
+  "clubId": "chelsea",
+  "playerId": "pep-chavarria",
+  "number": 29,
+  "position": "D",
+  "positionInfo": "Left Full Back",
+  "positionDetail": "LB",
+  "joined": "2026-08-12",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "chelsea",
+  "playerId": "emiliano-martinez",
+  "number": 1,
+  "position": "G",
+  "positionInfo": "Goalkeeper",
+  "positionDetail": "GK",
+  "joined": "2026-08-29",
+  "appsSeason": 5
+ },
+ {
+  "clubId": "coventry-city",
+  "playerId": "ben-wilson",
+  "number": 13,
+  "position": "G",
+  "positionInfo": "Goalkeeper",
+  "positionDetail": "GK",
+  "joined": "2019-07-01",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "coventry-city",
+  "playerId": "jay-dasilva",
+  "number": 3,
+  "position": "D",
+  "positionInfo": "Left Full Back",
+  "positionDetail": "LB",
+  "joined": "2023-07-01",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "coventry-city",
+  "playerId": "bobby-thomas",
+  "number": 4,
+  "position": "D",
+  "positionInfo": "Centre Central Defender",
+  "positionDetail": "CB",
+  "joined": "2023-07-22",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "coventry-city",
+  "playerId": "kaine-kesler-hayden",
+  "number": 20,
+  "position": "D",
+  "positionInfo": "Right Full Back",
+  "positionDetail": "RB",
+  "joined": "2025-07-01",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "coventry-city",
+  "playerId": "jake-bidwell",
+  "number": 21,
+  "position": "D",
+  "positionInfo": "Left Full Back",
+  "positionDetail": "LB",
+  "joined": "2026-10-12",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "coventry-city",
+  "playerId": "joel-latibeaudiere",
+  "number": 22,
+  "position": "D",
+  "positionInfo": "Centre Central Defender",
+  "positionDetail": "CB",
+  "joined": "2023-07-18",
+  "appsSeason": 1
+ },
+ {
+  "clubId": "coventry-city",
+  "playerId": "luke-woolfenden",
+  "number": 26,
+  "position": "D",
+  "positionInfo": "Centre Central Defender",
+  "positionDetail": "CB",
+  "joined": "2025-09-01",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "coventry-city",
+  "playerId": "milan-van-ewijk",
+  "number": 27,
+  "position": "D",
+  "positionInfo": "Right Full Back",
+  "positionDetail": "RB",
+  "joined": "2023-07-27",
+  "appsSeason": 5
+ },
+ {
+  "clubId": "coventry-city",
+  "playerId": "jack-rudoni",
+  "number": 5,
+  "position": "M",
+  "positionInfo": "Centre Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2024-06-20",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "coventry-city",
+  "playerId": "matt-grimes",
+  "number": 6,
+  "position": "M",
+  "positionInfo": "Defensive Midfielder",
+  "positionDetail": "DM",
+  "joined": "2025-01-31",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "coventry-city",
+  "playerId": "tatsuhiro-sakamoto",
+  "number": 7,
+  "position": "M",
+  "positionInfo": "Left/Centre/Right Attacking Midfielder",
+  "positionDetail": "AM",
+  "joined": "2023-07-10",
+  "appsSeason": 2
+ },
+ {
+  "clubId": "coventry-city",
+  "playerId": "josh-eccles",
+  "number": 28,
+  "position": "M",
+  "positionInfo": "Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2018-07-01",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "coventry-city",
+  "playerId": "victor-torp",
+  "number": 29,
+  "position": "M",
+  "positionInfo": "Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2024-01-11",
+  "appsSeason": 4
+ },
+ {
+  "clubId": "coventry-city",
+  "playerId": "ellis-simms",
+  "number": 9,
+  "position": "F",
+  "positionInfo": "Centre Striker",
+  "positionDetail": "ST",
+  "joined": "2023-07-07",
+  "appsSeason": 4
+ },
+ {
+  "clubId": "coventry-city",
+  "playerId": "ephron-mason-clark",
+  "number": 10,
+  "position": "M",
+  "positionInfo": "Left/Right Attacking Midfielder",
+  "positionDetail": "AM",
+  "joined": "2024-02-01",
+  "appsSeason": 5
+ },
+ {
+  "clubId": "coventry-city",
+  "playerId": "haji-wright",
+  "number": 11,
+  "position": "F",
+  "positionInfo": "Centre Striker",
+  "positionDetail": "ST",
+  "joined": "2023-08-04",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "coventry-city",
+  "playerId": "brandon-thomas-asante",
+  "number": 23,
+  "position": "F",
+  "positionInfo": "Centre Striker",
+  "positionDetail": "ST",
+  "joined": "2024-08-01",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "coventry-city",
+  "playerId": "frank-onyeka",
+  "number": 16,
+  "position": "M",
+  "positionInfo": "Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2026-07-01",
+  "appsSeason": 5
+ },
+ {
+  "clubId": "coventry-city",
+  "playerId": "loum-tchaouna",
+  "number": 17,
+  "position": "F",
+  "positionInfo": "Right Winger",
+  "positionDetail": "RW",
+  "joined": "2026-07-11",
+  "appsSeason": 4
+ },
+ {
+  "clubId": "coventry-city",
+  "playerId": "aurele-amenda",
+  "number": 24,
+  "position": "D",
+  "positionInfo": "Centre Central Defender",
+  "positionDetail": "CB",
+  "joined": "2026-07-16",
+  "appsSeason": 4
+ },
+ {
+  "clubId": "coventry-city",
+  "playerId": "carl-rushworth",
+  "number": 19,
+  "position": "G",
+  "positionInfo": "Goalkeeper",
+  "positionDetail": "GK",
+  "joined": "2026-08-04",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "coventry-city",
+  "playerId": "caleb-yirenkyi",
+  "number": 8,
+  "position": "M",
+  "positionInfo": "Centre Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2026-08-07",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "coventry-city",
+  "playerId": "gustavo-hamer",
+  "number": 38,
+  "position": "M",
+  "positionInfo": "Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2026-08-11",
+  "appsSeason": 3
+ },
+ {
+  "clubId": "coventry-city",
+  "playerId": "taiwo-awoniyi",
+  "number": 14,
+  "position": "F",
+  "positionInfo": "Centre Striker",
+  "positionDetail": "ST",
+  "joined": "2026-08-17",
+  "appsSeason": 4
+ },
+ {
+  "clubId": "coventry-city",
+  "playerId": "sidiki-cherif",
+  "number": 49,
+  "position": "F",
+  "positionInfo": "Centre Striker",
+  "positionDetail": "ST",
+  "joined": "2026-08-19",
+  "appsSeason": 2
+ },
+ {
+  "clubId": "coventry-city",
+  "playerId": "dan-bentley",
+  "number": 25,
+  "position": "G",
+  "positionInfo": "Goalkeeper",
+  "positionDetail": "GK",
+  "joined": "2026-08-21",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "coventry-city",
+  "playerId": "ethan-pinnock",
+  "number": 2,
+  "position": "D",
+  "positionInfo": "Centre Central Defender",
+  "positionDetail": "CB",
+  "joined": "2026-08-26",
+  "appsSeason": 5
+ },
+ {
+  "clubId": "coventry-city",
+  "playerId": "stephen-mfuni",
+  "number": 12,
+  "position": "D",
+  "positionInfo": "Central Defender",
+  "positionDetail": "CB",
+  "joined": "2026-08-30",
+  "appsSeason": 2
+ },
+ {
+  "clubId": "coventry-city",
+  "playerId": "yann-gboho",
+  "number": 34,
+  "position": "F",
+  "positionInfo": "Left/Right Winger",
+  "positionDetail": "RW",
+  "joined": "2026-09-01",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "crystal-palace",
+  "playerId": "dean-henderson",
+  "number": 1,
+  "position": "G",
+  "positionInfo": "Goalkeeper",
+  "positionDetail": "GK",
+  "joined": "2023-08-31",
+  "appsSeason": 3
+ },
+ {
+  "clubId": "crystal-palace",
+  "playerId": "remi-matthews",
+  "number": 31,
+  "position": "G",
+  "positionInfo": "Goalkeeper",
+  "positionDetail": "GK",
+  "joined": "2021-07-13",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "crystal-palace",
+  "playerId": "walter-benitez",
+  "number": 44,
+  "position": "G",
+  "positionInfo": "Goalkeeper",
+  "positionDetail": "GK",
+  "joined": "2025-07-01",
+  "appsSeason": 3
+ },
+ {
+  "clubId": "crystal-palace",
+  "playerId": "tyrick-mitchell",
+  "number": 3,
+  "position": "D",
+  "positionInfo": "Left Full Back",
+  "positionDetail": "LB",
+  "joined": "2019-12-15",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "crystal-palace",
+  "playerId": "jaydee-canvot",
+  "number": 6,
+  "position": "D",
+  "positionInfo": "Centre Central Defender",
+  "positionDetail": "CB",
+  "joined": "2025-09-01",
+  "appsSeason": 5
+ },
+ {
+  "clubId": "crystal-palace",
+  "playerId": "chris-richards",
+  "number": 26,
+  "position": "D",
+  "positionInfo": "Centre Central Defender",
+  "positionDetail": "CB",
+  "joined": "2022-07-27",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "crystal-palace",
+  "playerId": "chadi-riad",
+  "number": 4,
+  "position": "D",
+  "positionInfo": "Centre Central Defender",
+  "positionDetail": "CB",
+  "joined": "2024-07-02",
+  "appsSeason": 1
+ },
+ {
+  "clubId": "crystal-palace",
+  "playerId": "dean-benamar",
+  "number": 54,
+  "position": "D",
+  "positionInfo": "Defender",
+  "positionDetail": "CB",
+  "joined": "2025-07-31",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "crystal-palace",
+  "playerId": "jefferson-lerma",
+  "number": 8,
+  "position": "M",
+  "positionInfo": "Centre Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2023-07-01",
+  "appsSeason": 3
+ },
+ {
+  "clubId": "crystal-palace",
+  "playerId": "yeremy-pino",
+  "number": 10,
+  "position": "M",
+  "positionInfo": "Right Winger",
+  "positionDetail": "RM",
+  "joined": "2025-08-29",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "crystal-palace",
+  "playerId": "daichi-kamada",
+  "number": 18,
+  "position": "M",
+  "positionInfo": "Centre Attacking Midfielder",
+  "positionDetail": "AM",
+  "joined": "2024-07-01",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "crystal-palace",
+  "playerId": "will-hughes",
+  "number": 19,
+  "position": "M",
+  "positionInfo": "Centre Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2021-08-28",
+  "appsSeason": 2
+ },
+ {
+  "clubId": "crystal-palace",
+  "playerId": "adam-wharton",
+  "number": 20,
+  "position": "M",
+  "positionInfo": "Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2024-02-01",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "crystal-palace",
+  "playerId": "ismaila-sarr",
+  "number": 7,
+  "position": "F",
+  "positionInfo": "Right Winger",
+  "positionDetail": "RW",
+  "joined": "2024-08-01",
+  "appsSeason": 2
+ },
+ {
+  "clubId": "crystal-palace",
+  "playerId": "eddie-nketiah",
+  "number": 9,
+  "position": "F",
+  "positionInfo": "Centre Striker",
+  "positionDetail": "ST",
+  "joined": "2024-08-30",
+  "appsSeason": 5
+ },
+ {
+  "clubId": "crystal-palace",
+  "playerId": "jean-philippe-mateta",
+  "number": 14,
+  "position": "F",
+  "positionInfo": "Centre Striker",
+  "positionDetail": "ST",
+  "joined": "2022-01-31",
+  "appsSeason": 1
+ },
+ {
+  "clubId": "crystal-palace",
+  "playerId": "jorgen-strand-larsen",
+  "number": 22,
+  "position": "F",
+  "positionInfo": "Striker",
+  "positionDetail": "ST",
+  "joined": "2026-02-02",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "crystal-palace",
+  "playerId": "oscar-mingueza",
+  "number": 30,
+  "position": "D",
+  "positionInfo": "Central Defender",
+  "positionDetail": "CB",
+  "joined": "2026-07-09",
+  "appsSeason": 2
+ },
+ {
+  "clubId": "crystal-palace",
+  "playerId": "cheick-doucoure",
+  "number": 28,
+  "position": "M",
+  "positionInfo": "Centre Defensive Midfielder",
+  "positionDetail": "DM",
+  "joined": "2026-03-05",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "crystal-palace",
+  "playerId": "takehiro-tomiyasu",
+  "number": 17,
+  "position": "D",
+  "positionInfo": "Central Defender",
+  "positionDetail": "CB",
+  "joined": "2026-08-06",
+  "appsSeason": 4
+ },
+ {
+  "clubId": "crystal-palace",
+  "playerId": "dwight-mcneil",
+  "number": 11,
+  "position": "F",
+  "positionInfo": "Left Winger",
+  "positionDetail": "LW",
+  "joined": "2026-08-11",
+  "appsSeason": 3
+ },
+ {
+  "clubId": "crystal-palace",
+  "playerId": "evann-guessand",
+  "number": 29,
+  "position": "F",
+  "positionInfo": "Striker",
+  "positionDetail": "ST",
+  "joined": "2026-08-12",
+  "appsSeason": 2
+ },
+ {
+  "clubId": "crystal-palace",
+  "playerId": "anan-khalaili",
+  "number": 25,
+  "position": "D",
+  "positionInfo": "Right Full Back",
+  "positionDetail": "RB",
+  "joined": "2026-08-15",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "crystal-palace",
+  "playerId": "zavier-gozo",
+  "number": 12,
+  "position": "F",
+  "positionInfo": "Right Winger",
+  "positionDetail": "RW",
+  "joined": "2026-08-21",
+  "appsSeason": 2
+ },
+ {
+  "clubId": "crystal-palace",
+  "playerId": "axel-disasi",
+  "number": 5,
+  "position": "D",
+  "positionInfo": "Centre Central Defender",
+  "positionDetail": "CB",
+  "joined": "2026-08-26",
+  "appsSeason": 3
+ },
+ {
+  "clubId": "crystal-palace",
+  "playerId": "honest-ahanor",
+  "number": 21,
+  "position": "D",
+  "positionInfo": "Central Defender",
+  "positionDetail": "CB",
+  "joined": "2026-09-01",
+  "appsSeason": 2
+ },
+ {
+  "clubId": "crystal-palace",
+  "playerId": "ben-chilwell",
+  "number": 33,
+  "position": "D",
+  "positionInfo": "Left Full Back",
+  "positionDetail": "LB",
+  "joined": "2026-09-01",
+  "appsSeason": 2
+ },
+ {
+  "clubId": "crystal-palace",
+  "playerId": "dario-osorio",
+  "number": 24,
+  "position": "M",
+  "positionInfo": "Right Winger",
+  "positionDetail": "RM",
+  "joined": "2026-09-01",
+  "appsSeason": 1
+ },
+ {
+  "clubId": "crystal-palace",
+  "playerId": "quinten-timber",
+  "number": 23,
+  "position": "M",
+  "positionInfo": "Centre Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2026-09-01",
+  "appsSeason": 4
+ },
+ {
+  "clubId": "crystal-palace",
+  "playerId": "sebastian-williams",
+  "number": 8,
+  "position": "M",
+  "positionInfo": "Attacking Midfielder",
+  "positionDetail": "AM",
+  "joined": "2024-02-25",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "crystal-palace",
+  "playerId": "caleb-kporha",
+  "number": 38,
+  "position": "D",
+  "positionInfo": "Right Full Back",
+  "positionDetail": "RB",
+  "joined": "2023-01-20",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "everton",
+  "playerId": "jordan-pickford",
+  "number": 1,
+  "position": "G",
+  "positionInfo": "Goalkeeper",
+  "positionDetail": "GK",
+  "joined": "2017-07-01",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "everton",
+  "playerId": "mark-travers",
+  "number": 12,
+  "position": "G",
+  "positionInfo": "Goalkeeper",
+  "positionDetail": "GK",
+  "joined": "2025-07-15",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "everton",
+  "playerId": "tom-king",
+  "number": 31,
+  "position": "G",
+  "positionInfo": "Goalkeeper",
+  "positionDetail": "GK",
+  "joined": "2025-08-15",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "everton",
+  "playerId": "michael-keane",
+  "number": 5,
+  "position": "D",
+  "positionInfo": "Centre Central Defender",
+  "positionDetail": "CB",
+  "joined": "2017-07-03",
+  "appsSeason": 1
+ },
+ {
+  "clubId": "everton",
+  "playerId": "james-tarkowski",
+  "number": 6,
+  "position": "D",
+  "positionInfo": "Centre Central Defender",
+  "positionDetail": "CB",
+  "joined": "2022-07-01",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "everton",
+  "playerId": "jake-o-brien",
+  "number": 15,
+  "position": "D",
+  "positionInfo": "Centre Central Defender",
+  "positionDetail": "CB",
+  "joined": "2024-07-30",
+  "appsSeason": 3
+ },
+ {
+  "clubId": "everton",
+  "playerId": "vitalii-mykolenko",
+  "number": 16,
+  "position": "D",
+  "positionInfo": "Left Full Back",
+  "positionDetail": "LB",
+  "joined": "2022-01-01",
+  "appsSeason": 5
+ },
+ {
+  "clubId": "everton",
+  "playerId": "jarrad-branthwaite",
+  "number": 4,
+  "position": "D",
+  "positionInfo": "Centre Central Defender",
+  "positionDetail": "CB",
+  "joined": "2020-06-20",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "everton",
+  "playerId": "tyler-dibling",
+  "number": 20,
+  "position": "F",
+  "positionInfo": "Right Winger",
+  "positionDetail": "RW",
+  "joined": "2025-08-25",
+  "appsSeason": 2
+ },
+ {
+  "clubId": "everton",
+  "playerId": "kiernan-dewsbury-hall",
+  "number": 8,
+  "position": "M",
+  "positionInfo": "Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2025-08-06",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "everton",
+  "playerId": "charly-alcaraz",
+  "number": 24,
+  "position": "M",
+  "positionInfo": "Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2025-07-01",
+  "appsSeason": 3
+ },
+ {
+  "clubId": "everton",
+  "playerId": "james-garner",
+  "number": 37,
+  "position": "M",
+  "positionInfo": "Centre Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2022-09-01",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "everton",
+  "playerId": "harrison-armstrong",
+  "number": 45,
+  "position": "M",
+  "positionInfo": "Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2024-08-09",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "everton",
+  "playerId": "thierno-barry",
+  "number": 11,
+  "position": "F",
+  "positionInfo": "Centre Striker",
+  "positionDetail": "ST",
+  "joined": "2025-07-09",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "everton",
+  "playerId": "braiden-graham",
+  "number": 58,
+  "position": "F",
+  "positionInfo": "Left/Centre/Right Second Striker",
+  "positionDetail": "ST",
+  "joined": "2025-12-29",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "everton",
+  "playerId": "merlin-rohl",
+  "number": 34,
+  "position": "M",
+  "positionInfo": "Attacking Midfielder",
+  "positionDetail": "AM",
+  "joined": "2026-06-15",
+  "appsSeason": 3
+ },
+ {
+  "clubId": "everton",
+  "playerId": "martin-sherif",
+  "number": 67,
+  "position": "F",
+  "positionInfo": "Forward",
+  "positionDetail": "ST",
+  "joined": "2022-12-19",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "everton",
+  "playerId": "hayden-hackney",
+  "number": 30,
+  "position": "M",
+  "positionInfo": "Centre Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2026-07-02",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "everton",
+  "playerId": "tyrique-george",
+  "number": 19,
+  "position": "F",
+  "positionInfo": "Left Winger",
+  "positionDetail": "LW",
+  "joined": "2026-07-06",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "everton",
+  "playerId": "christian-norgaard",
+  "number": 23,
+  "position": "M",
+  "positionInfo": "Defensive Midfielder",
+  "positionDetail": "DM",
+  "joined": "2026-08-05",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "everton",
+  "playerId": "brennan-johnson",
+  "number": 22,
+  "position": "F",
+  "positionInfo": "Right Winger",
+  "positionDetail": "RW",
+  "joined": "2026-08-11",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "everton",
+  "playerId": "george-pickford",
+  "number": 50,
+  "position": "G",
+  "positionInfo": "Goalkeeper",
+  "positionDetail": "GK",
+  "joined": "2024-01-28",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "everton",
+  "playerId": "harvey-foster",
+  "number": 81,
+  "position": "M",
+  "positionInfo": "Centre Defensive Midfielder",
+  "positionDetail": "DM",
+  "joined": "2024-09-10",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "everton",
+  "playerId": "jack-grealish",
+  "number": 10,
+  "position": "M",
+  "positionInfo": "Left/Centre/Right Attacking Midfielder",
+  "positionDetail": "AM",
+  "joined": "2026-09-01",
+  "appsSeason": 4
+ },
+ {
+  "clubId": "everton",
+  "playerId": "ainsley-maitland-niles",
+  "number": 2,
+  "position": "M",
+  "positionInfo": "Centre/Right Wing Back",
+  "positionDetail": "RB",
+  "joined": "2026-09-01",
+  "appsSeason": 4
+ },
+ {
+  "clubId": "everton",
+  "playerId": "malik-olayiwola",
+  "number": 76,
+  "position": "M",
+  "positionInfo": "Centre Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2025-12-14",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "fulham",
+  "playerId": "bernd-leno",
+  "number": 1,
+  "position": "G",
+  "positionInfo": "Goalkeeper",
+  "positionDetail": "GK",
+  "joined": "2022-08-02",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "fulham",
+  "playerId": "benjamin-lecomte",
+  "number": 23,
+  "position": "G",
+  "positionInfo": "Goalkeeper",
+  "positionDetail": "GK",
+  "joined": "2025-07-26",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "fulham",
+  "playerId": "kenny-tete",
+  "number": 2,
+  "position": "D",
+  "positionInfo": "Right Full Back",
+  "positionDetail": "RB",
+  "joined": "2020-09-10",
+  "appsSeason": 2
+ },
+ {
+  "clubId": "fulham",
+  "playerId": "calvin-bassey",
+  "number": 3,
+  "position": "D",
+  "positionInfo": "Left Full Back",
+  "positionDetail": "LB",
+  "joined": "2023-07-28",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "fulham",
+  "playerId": "joachim-andersen",
+  "number": 5,
+  "position": "D",
+  "positionInfo": "Centre Central Defender",
+  "positionDetail": "CB",
+  "joined": "2024-08-23",
+  "appsSeason": 3
+ },
+ {
+  "clubId": "fulham",
+  "playerId": "jorge-cuenca",
+  "number": 4,
+  "position": "D",
+  "positionInfo": "Centre Central Defender",
+  "positionDetail": "CB",
+  "joined": "2024-08-03",
+  "appsSeason": 1
+ },
+ {
+  "clubId": "fulham",
+  "playerId": "timothy-castagne",
+  "number": 21,
+  "position": "D",
+  "positionInfo": "Right Full Back",
+  "positionDetail": "RB",
+  "joined": "2023-08-29",
+  "appsSeason": 5
+ },
+ {
+  "clubId": "fulham",
+  "playerId": "antonee-robinson",
+  "number": 33,
+  "position": "D",
+  "positionInfo": "Left Full Back",
+  "positionDetail": "LB",
+  "joined": "2020-08-20",
+  "appsSeason": 5
+ },
+ {
+  "clubId": "fulham",
+  "playerId": "harrison-reed",
+  "number": 6,
+  "position": "M",
+  "positionInfo": "Centre Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2020-08-30",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "fulham",
+  "playerId": "tom-cairney",
+  "number": 10,
+  "position": "M",
+  "positionInfo": "Left/Centre/Right Attacking Midfielder",
+  "positionDetail": "AM",
+  "joined": "2015-07-07",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "fulham",
+  "playerId": "oscar-bobb",
+  "number": 14,
+  "position": "M",
+  "positionInfo": "Left/Centre/Right Winger",
+  "positionDetail": "RM",
+  "joined": "2026-01-30",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "fulham",
+  "playerId": "sander-berge",
+  "number": 16,
+  "position": "M",
+  "positionInfo": "Centre Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2024-08-22",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "fulham",
+  "playerId": "josh-king",
+  "number": 24,
+  "position": "M",
+  "positionInfo": "Centre Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2024-02-02",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "fulham",
+  "playerId": "ryan-sessegnon",
+  "number": 30,
+  "position": "M",
+  "positionInfo": "Left/Right Winger",
+  "positionDetail": "RM",
+  "joined": "2024-07-26",
+  "appsSeason": 4
+ },
+ {
+  "clubId": "fulham",
+  "playerId": "emile-smith-rowe",
+  "number": 32,
+  "position": "M",
+  "positionInfo": "Centre Attacking Midfielder",
+  "positionDetail": "AM",
+  "joined": "2024-08-02",
+  "appsSeason": 4
+ },
+ {
+  "clubId": "fulham",
+  "playerId": "rodrigo-muniz",
+  "number": 9,
+  "position": "F",
+  "positionInfo": "Centre Striker",
+  "positionDetail": "ST",
+  "joined": "2021-08-20",
+  "appsSeason": 5
+ },
+ {
+  "clubId": "fulham",
+  "playerId": "alex-iwobi",
+  "number": 17,
+  "position": "F",
+  "positionInfo": "Left/Centre/Right Second Striker",
+  "positionDetail": "ST",
+  "joined": "2023-09-01",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "fulham",
+  "playerId": "kevin",
+  "number": 11,
+  "position": "F",
+  "positionInfo": "Left/Right Winger",
+  "positionDetail": "RW",
+  "joined": "2025-09-01",
+  "appsSeason": 5
+ },
+ {
+  "clubId": "fulham",
+  "playerId": "jonah-kusi-asare",
+  "number": 18,
+  "position": "F",
+  "positionInfo": "Striker",
+  "positionDetail": "ST",
+  "joined": "2025-11-24",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "fulham",
+  "playerId": "cesar-palacios",
+  "number": 8,
+  "position": "M",
+  "positionInfo": "Centre Attacking Midfielder",
+  "positionDetail": "AM",
+  "joined": "2026-08-03",
+  "appsSeason": 4
+ },
+ {
+  "clubId": "fulham",
+  "playerId": "gonzalo-garcia",
+  "number": 7,
+  "position": "F",
+  "positionInfo": "Left/Centre/Right Winger",
+  "positionDetail": "RW",
+  "joined": "2026-08-03",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "fulham",
+  "playerId": "alex-borto",
+  "number": 36,
+  "position": "G",
+  "positionInfo": "Goalkeeper",
+  "positionDetail": "GK",
+  "joined": "2023-07-19",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "fulham",
+  "playerId": "shea-charles",
+  "number": 19,
+  "position": "M",
+  "positionInfo": "Centre Defensive Midfielder",
+  "positionDetail": "DM",
+  "joined": "2026-08-11",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "fulham",
+  "playerId": "bradley-slade",
+  "number": 40,
+  "position": "D",
+  "positionInfo": "Left Full Back",
+  "positionDetail": "LB",
+  "joined": "2023-10-30",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "fulham",
+  "playerId": "chibby-nwoko",
+  "number": 34,
+  "position": "M",
+  "positionInfo": "Centre Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2022-12-15",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "fulham",
+  "playerId": "macaulay-zepa",
+  "number": 35,
+  "position": "F",
+  "positionInfo": "Right Winger",
+  "positionDetail": "RW",
+  "joined": "2024-09-23",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "fulham",
+  "playerId": "hugo-larsson",
+  "number": 15,
+  "position": "M",
+  "positionInfo": "Centre Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2026-09-01",
+  "appsSeason": 4
+ },
+ {
+  "clubId": "fulham",
+  "playerId": "manuel-angel",
+  "number": 20,
+  "position": "M",
+  "positionInfo": "Centre Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2026-09-01",
+  "appsSeason": 1
+ },
+ {
+  "clubId": "fulham",
+  "playerId": "david-affengruber",
+  "number": 22,
+  "position": "D",
+  "positionInfo": "Centre Central Defender",
+  "positionDetail": "CB",
+  "joined": "2026-09-01",
+  "appsSeason": 3
+ },
+ {
+  "clubId": "hull-city",
+  "playerId": "dillon-phillips",
+  "number": 12,
+  "position": "G",
+  "positionInfo": "Goalkeeper",
+  "positionDetail": "GK",
+  "joined": "2025-07-01",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "hull-city",
+  "playerId": "archie-howard",
+  "number": 55,
+  "position": "G",
+  "positionInfo": "Goalkeeper",
+  "positionDetail": "GK",
+  "joined": "2026-02-27",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "hull-city",
+  "playerId": "lewie-coyle",
+  "number": 2,
+  "position": "D",
+  "positionInfo": "Right Full Back",
+  "positionDetail": "RB",
+  "joined": "2020-08-07",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "hull-city",
+  "playerId": "ryan-giles",
+  "number": 3,
+  "position": "D",
+  "positionInfo": "Left Full Back",
+  "positionDetail": "LB",
+  "joined": "2024-06-27",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "hull-city",
+  "playerId": "charlie-hughes",
+  "number": 4,
+  "position": "D",
+  "positionInfo": "Centre Central Defender",
+  "positionDetail": "CB",
+  "joined": "2024-08-16",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "hull-city",
+  "playerId": "semi-ajayi",
+  "number": 6,
+  "position": "D",
+  "positionInfo": "Centre Central Defender",
+  "positionDetail": "CB",
+  "joined": "2025-07-01",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "hull-city",
+  "playerId": "john-egan",
+  "number": 15,
+  "position": "D",
+  "positionInfo": "Centre Central Defender",
+  "positionDetail": "CB",
+  "joined": "2025-02-03",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "hull-city",
+  "playerId": "paddy-mcnair",
+  "number": 17,
+  "position": "D",
+  "positionInfo": "Central Defender",
+  "positionDetail": "CB",
+  "joined": "2026-01-28",
+  "appsSeason": 1
+ },
+ {
+  "clubId": "hull-city",
+  "playerId": "eliot-matazo",
+  "number": 8,
+  "position": "M",
+  "positionInfo": "Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2025-01-23",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "hull-city",
+  "playerId": "darko-gyabi",
+  "number": 24,
+  "position": "M",
+  "positionInfo": "Centre Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2025-09-01",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "hull-city",
+  "playerId": "matt-crooks",
+  "number": 25,
+  "position": "M",
+  "positionInfo": "Centre Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2025-01-10",
+  "appsSeason": 4
+ },
+ {
+  "clubId": "hull-city",
+  "playerId": "kieran-dowell",
+  "number": 26,
+  "position": "M",
+  "positionInfo": "Attacking Midfielder",
+  "positionDetail": "AM",
+  "joined": "2026-01-23",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "hull-city",
+  "playerId": "regan-slater",
+  "number": 27,
+  "position": "M",
+  "positionInfo": "Centre Defensive Midfielder",
+  "positionDetail": "DM",
+  "joined": "2022-01-27",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "hull-city",
+  "playerId": "oliver-mcburnie",
+  "number": 9,
+  "position": "F",
+  "positionInfo": "Centre Striker",
+  "positionDetail": "ST",
+  "joined": "2025-08-06",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "hull-city",
+  "playerId": "mohamed-belloumi",
+  "number": 10,
+  "position": "F",
+  "positionInfo": "Right Winger",
+  "positionDetail": "RW",
+  "joined": "2024-08-30",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "hull-city",
+  "playerId": "abdulkadir-omur",
+  "number": 33,
+  "position": "M",
+  "positionInfo": "Centre Attacking Midfielder",
+  "positionDetail": "AM",
+  "joined": "2024-02-01",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "hull-city",
+  "playerId": "jack-butland",
+  "number": 1,
+  "position": "G",
+  "positionInfo": "Goalkeeper",
+  "positionDetail": "GK",
+  "joined": "2026-07-02",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "hull-city",
+  "playerId": "oscar-zambrano",
+  "number": 20,
+  "position": "M",
+  "positionInfo": "Defensive Midfielder",
+  "positionDetail": "DM",
+  "joined": "2026-07-21",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "hull-city",
+  "playerId": "matt-targett",
+  "number": 23,
+  "position": "D",
+  "positionInfo": "Left Full Back",
+  "positionDetail": "LB",
+  "joined": "2026-07-23",
+  "appsSeason": 1
+ },
+ {
+  "clubId": "hull-city",
+  "playerId": "hidemasa-morita",
+  "number": 5,
+  "position": "M",
+  "positionInfo": "Centre Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2026-07-24",
+  "appsSeason": 2
+ },
+ {
+  "clubId": "hull-city",
+  "playerId": "konstantinos-tzolakis",
+  "number": 19,
+  "position": "G",
+  "positionInfo": "Goalkeeper",
+  "positionDetail": "GK",
+  "joined": "2026-08-05",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "hull-city",
+  "playerId": "jens-hjerto-dahl",
+  "number": 14,
+  "position": "M",
+  "positionInfo": "Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2026-08-07",
+  "appsSeason": 1
+ },
+ {
+  "clubId": "hull-city",
+  "playerId": "elliot-stroud",
+  "number": 21,
+  "position": "M",
+  "positionInfo": "Left Winger",
+  "positionDetail": "LM",
+  "joined": "2026-08-09",
+  "appsSeason": 5
+ },
+ {
+  "clubId": "hull-city",
+  "playerId": "lucas-herrington",
+  "number": 22,
+  "position": "D",
+  "positionInfo": "Central Defender",
+  "positionDetail": "CB",
+  "joined": "2026-08-12",
+  "appsSeason": 5
+ },
+ {
+  "clubId": "hull-city",
+  "playerId": "nobel-mendy",
+  "number": 32,
+  "position": "D",
+  "positionInfo": "Central Defender",
+  "positionDetail": "CB",
+  "joined": "2026-08-12",
+  "appsSeason": 5
+ },
+ {
+  "clubId": "hull-city",
+  "playerId": "lucas-gourna-douath",
+  "number": 29,
+  "position": "M",
+  "positionInfo": "Centre Defensive Midfielder",
+  "positionDetail": "DM",
+  "joined": "2026-08-15",
+  "appsSeason": 3
+ },
+ {
+  "clubId": "hull-city",
+  "playerId": "joe-gelhardt",
+  "number": 11,
+  "position": "F",
+  "positionInfo": "Centre Striker",
+  "positionDetail": "ST",
+  "joined": "2026-08-15",
+  "appsSeason": 2
+ },
+ {
+  "clubId": "hull-city",
+  "playerId": "mohamed-ali-cho",
+  "number": 50,
+  "position": "F",
+  "positionInfo": "Right Winger",
+  "positionDetail": "RW",
+  "joined": "2026-08-27",
+  "appsSeason": 4
+ },
+ {
+  "clubId": "hull-city",
+  "playerId": "ilyas-ansah",
+  "number": 28,
+  "position": "F",
+  "positionInfo": "Centre Striker",
+  "positionDetail": "ST",
+  "joined": "2026-09-01",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "hull-city",
+  "playerId": "brooke-norton-cuffy",
+  "number": 18,
+  "position": "D",
+  "positionInfo": "Right Full Back",
+  "positionDetail": "RB",
+  "joined": "2026-09-01",
+  "appsSeason": 2
+ },
+ {
+  "clubId": "hull-city",
+  "playerId": "tim-iroegbunam",
+  "number": 42,
+  "position": "M",
+  "positionInfo": "Centre Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2026-09-01",
+  "appsSeason": 3
+ },
+ {
+  "clubId": "hull-city",
+  "playerId": "robinio-vaz",
+  "number": 47,
+  "position": "F",
+  "positionInfo": "Centre Striker",
+  "positionDetail": "ST",
+  "joined": "2026-09-01",
+  "appsSeason": 3
+ },
+ {
+  "clubId": "hull-city",
+  "playerId": "christos-mouzakitis",
+  "number": 36,
+  "position": "M",
+  "positionInfo": "Centre Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2026-09-01",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "hull-city",
+  "playerId": "sorba-thomas",
+  "number": 7,
+  "position": "F",
+  "positionInfo": "Winger",
+  "positionDetail": "ST",
+  "joined": "2026-09-01",
+  "appsSeason": 4
+ },
+ {
+  "clubId": "ipswich-town",
+  "playerId": "alex-palmer",
+  "number": 1,
+  "position": "G",
+  "positionInfo": "Goalkeeper",
+  "positionDetail": "GK",
+  "joined": "2025-02-03",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "ipswich-town",
+  "playerId": "david-button",
+  "number": 27,
+  "position": "G",
+  "positionInfo": "Centre Goalkeeper",
+  "positionDetail": "GK",
+  "joined": "2025-07-04",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "ipswich-town",
+  "playerId": "christian-walton",
+  "number": 28,
+  "position": "G",
+  "positionInfo": "Goalkeeper",
+  "positionDetail": "GK",
+  "joined": "2022-01-19",
+  "appsSeason": 2
+ },
+ {
+  "clubId": "ipswich-town",
+  "playerId": "leif-davis",
+  "number": 3,
+  "position": "D",
+  "positionInfo": "Left Full Back",
+  "positionDetail": "LB",
+  "joined": "2022-07-25",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "ipswich-town",
+  "playerId": "darnell-furlong",
+  "number": 2,
+  "position": "D",
+  "positionInfo": "Right Full Back",
+  "positionDetail": "RB",
+  "joined": "2025-08-28",
+  "appsSeason": 1
+ },
+ {
+  "clubId": "ipswich-town",
+  "playerId": "jacob-greaves",
+  "number": 24,
+  "position": "D",
+  "positionInfo": "Central Defender",
+  "positionDetail": "CB",
+  "joined": "2024-07-12",
+  "appsSeason": 4
+ },
+ {
+  "clubId": "ipswich-town",
+  "playerId": "dara-o-shea",
+  "number": 26,
+  "position": "D",
+  "positionInfo": "Centre Central Defender",
+  "positionDetail": "CB",
+  "joined": "2024-08-25",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "ipswich-town",
+  "playerId": "azor-matusiwa",
+  "number": 5,
+  "position": "M",
+  "positionInfo": "Centre Defensive Midfielder",
+  "positionDetail": "DM",
+  "joined": "2026-09-21",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "ipswich-town",
+  "playerId": "jack-taylor",
+  "number": 14,
+  "position": "M",
+  "positionInfo": "Centre Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2026-10-05",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "ipswich-town",
+  "playerId": "kasey-mcateer",
+  "number": 20,
+  "position": "M",
+  "positionInfo": "Right Attacking Midfielder",
+  "positionDetail": "AM",
+  "joined": "2025-08-22",
+  "appsSeason": 3
+ },
+ {
+  "clubId": "ipswich-town",
+  "playerId": "marcelino-nunez",
+  "number": 32,
+  "position": "M",
+  "positionInfo": "Centre Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2025-08-29",
+  "appsSeason": 2
+ },
+ {
+  "clubId": "ipswich-town",
+  "playerId": "anis-mehmeti",
+  "number": 33,
+  "position": "M",
+  "positionInfo": "Centre Attacking Midfielder",
+  "positionDetail": "AM",
+  "joined": "2026-01-23",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "ipswich-town",
+  "playerId": "sindre-egeli",
+  "number": 8,
+  "position": "F",
+  "positionInfo": "Right Winger",
+  "positionDetail": "RW",
+  "joined": "2025-08-29",
+  "appsSeason": 2
+ },
+ {
+  "clubId": "ipswich-town",
+  "playerId": "jaden-philogene",
+  "number": 11,
+  "position": "F",
+  "positionInfo": "Left Winger",
+  "positionDetail": "LW",
+  "joined": "2025-01-15",
+  "appsSeason": 3
+ },
+ {
+  "clubId": "ipswich-town",
+  "playerId": "jack-clarke",
+  "number": 47,
+  "position": "F",
+  "positionInfo": "Left Winger",
+  "positionDetail": "LW",
+  "joined": "2024-08-24",
+  "appsSeason": 5
+ },
+ {
+  "clubId": "ipswich-town",
+  "playerId": "cedric-kipre",
+  "number": 4,
+  "position": "D",
+  "positionInfo": "Central Defender",
+  "positionDetail": "CB",
+  "joined": "2026-07-01",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "ipswich-town",
+  "playerId": "dan-neil",
+  "number": null,
+  "position": "M",
+  "positionInfo": "Midfielder",
+  "positionDetail": "CM",
+  "joined": "2026-07-01",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "ipswich-town",
+  "playerId": "chuba-akpom",
+  "number": 29,
+  "position": "F",
+  "positionInfo": "Striker",
+  "positionDetail": "ST",
+  "joined": "2026-07-01",
+  "appsSeason": 4
+ },
+ {
+  "clubId": "ipswich-town",
+  "playerId": "emersonn",
+  "number": 19,
+  "position": "F",
+  "positionInfo": "Striker",
+  "positionDetail": "ST",
+  "joined": "2026-07-08",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "ipswich-town",
+  "playerId": "abdul-fatawu",
+  "number": 7,
+  "position": "F",
+  "positionInfo": "Right Winger",
+  "positionDetail": "RW",
+  "joined": "2026-07-21",
+  "appsSeason": 5
+ },
+ {
+  "clubId": "ipswich-town",
+  "playerId": "issa-diop",
+  "number": 6,
+  "position": "D",
+  "positionInfo": "Centre Central Defender",
+  "positionDetail": "CB",
+  "joined": "2026-07-22",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "ipswich-town",
+  "playerId": "daizen-maeda",
+  "number": 38,
+  "position": "F",
+  "positionInfo": "Left Winger",
+  "positionDetail": "LW",
+  "joined": "2026-07-25",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "ipswich-town",
+  "playerId": "kjell-scherpen",
+  "number": 37,
+  "position": "G",
+  "positionInfo": "Goalkeeper",
+  "positionDetail": "GK",
+  "joined": "2026-07-28",
+  "appsSeason": 4
+ },
+ {
+  "clubId": "ipswich-town",
+  "playerId": "florentino",
+  "number": 12,
+  "position": "M",
+  "positionInfo": "Centre Defensive Midfielder",
+  "positionDetail": "DM",
+  "joined": "2026-08-04",
+  "appsSeason": 3
+ },
+ {
+  "clubId": "ipswich-town",
+  "playerId": "sasa-lukic",
+  "number": 23,
+  "position": "M",
+  "positionInfo": "Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2026-08-08",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "ipswich-town",
+  "playerId": "abdoul-ouattara",
+  "number": 42,
+  "position": "D",
+  "positionInfo": "Right Full Back",
+  "positionDetail": "RB",
+  "joined": "2026-08-17",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "ipswich-town",
+  "playerId": "julio-enciso",
+  "number": 10,
+  "position": "M",
+  "positionInfo": "Centre Attacking Midfielder",
+  "positionDetail": "AM",
+  "joined": "2026-08-17",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "ipswich-town",
+  "playerId": "charlie-compton",
+  "number": 16,
+  "position": "M",
+  "positionInfo": "Centre Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2024-11-08",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "ipswich-town",
+  "playerId": "exequiel-palacios",
+  "number": 25,
+  "position": "M",
+  "positionInfo": "Centre Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2026-08-27",
+  "appsSeason": 5
+ },
+ {
+  "clubId": "ipswich-town",
+  "playerId": "jorja-fox",
+  "number": null,
+  "position": "D",
+  "positionInfo": "Defender",
+  "positionDetail": "CB",
+  "joined": "2026-08-28",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "ipswich-town",
+  "playerId": "zian-flemming",
+  "number": 9,
+  "position": "F",
+  "positionInfo": "Centre Striker",
+  "positionDetail": "ST",
+  "joined": "2026-09-01",
+  "appsSeason": 4
+ },
+ {
+  "clubId": "leeds-united",
+  "playerId": "alex-cairns",
+  "number": 21,
+  "position": "G",
+  "positionInfo": "Goalkeeper",
+  "positionDetail": "GK",
+  "joined": "2024-07-08",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "leeds-united",
+  "playerId": "jayden-bogle",
+  "number": 2,
+  "position": "D",
+  "positionInfo": "Right Full Back",
+  "positionDetail": "RB",
+  "joined": "2024-07-20",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "leeds-united",
+  "playerId": "gabriel-gudmundsson",
+  "number": 3,
+  "position": "D",
+  "positionInfo": "Left Full Back",
+  "positionDetail": "LB",
+  "joined": "2025-07-08",
+  "appsSeason": 4
+ },
+ {
+  "clubId": "leeds-united",
+  "playerId": "ethan-ampadu",
+  "number": 4,
+  "position": "M",
+  "positionInfo": "Centre Defensive Midfielder",
+  "positionDetail": "DM",
+  "joined": "2023-07-19",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "leeds-united",
+  "playerId": "joe-rodon",
+  "number": 6,
+  "position": "D",
+  "positionInfo": "Central Defender",
+  "positionDetail": "CB",
+  "joined": "2024-07-02",
+  "appsSeason": 2
+ },
+ {
+  "clubId": "leeds-united",
+  "playerId": "jaka-bijol",
+  "number": 15,
+  "position": "D",
+  "positionInfo": "Central Defender",
+  "positionDetail": "CB",
+  "joined": "2025-06-23",
+  "appsSeason": 4
+ },
+ {
+  "clubId": "leeds-united",
+  "playerId": "james-justin",
+  "number": 24,
+  "position": "D",
+  "positionInfo": "Right Full Back",
+  "positionDetail": "RB",
+  "joined": "2025-08-25",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "leeds-united",
+  "playerId": "jayden-lienou",
+  "number": 65,
+  "position": "D",
+  "positionInfo": "Left Full Back",
+  "positionDetail": "LB",
+  "joined": "2026-05-10",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "leeds-united",
+  "playerId": "daniel-james",
+  "number": 7,
+  "position": "F",
+  "positionInfo": "Left/Right Winger",
+  "positionDetail": "RW",
+  "joined": "2021-08-31",
+  "appsSeason": 3
+ },
+ {
+  "clubId": "leeds-united",
+  "playerId": "sean-longstaff",
+  "number": 8,
+  "position": "M",
+  "positionInfo": "Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2025-07-18",
+  "appsSeason": 2
+ },
+ {
+  "clubId": "leeds-united",
+  "playerId": "brenden-aaronson",
+  "number": 11,
+  "position": "M",
+  "positionInfo": "Centre Attacking Midfielder",
+  "positionDetail": "AM",
+  "joined": "2022-07-01",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "leeds-united",
+  "playerId": "anton-stach",
+  "number": 18,
+  "position": "M",
+  "positionInfo": "Centre Defensive Midfielder",
+  "positionDetail": "DM",
+  "joined": "2025-07-22",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "leeds-united",
+  "playerId": "ao-tanaka",
+  "number": 22,
+  "position": "M",
+  "positionInfo": "Centre Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2024-08-30",
+  "appsSeason": 5
+ },
+ {
+  "clubId": "leeds-united",
+  "playerId": "ilia-gruev",
+  "number": 44,
+  "position": "M",
+  "positionInfo": "Centre Defensive Midfielder",
+  "positionDetail": "DM",
+  "joined": "2023-08-31",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "leeds-united",
+  "playerId": "rhys-chadwick",
+  "number": 47,
+  "position": "M",
+  "positionInfo": "Centre Defensive Midfielder",
+  "positionDetail": "DM",
+  "joined": "2025-07-18",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "leeds-united",
+  "playerId": "alfie-cresswell",
+  "number": 50,
+  "position": "M",
+  "positionInfo": "Centre Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2026-05-16",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "leeds-united",
+  "playerId": "dominic-calvert-lewin",
+  "number": 9,
+  "position": "F",
+  "positionInfo": "Striker",
+  "positionDetail": "ST",
+  "joined": "2025-08-15",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "leeds-united",
+  "playerId": "lukas-nmecha",
+  "number": 14,
+  "position": "F",
+  "positionInfo": "Striker",
+  "positionDetail": "ST",
+  "joined": "2025-07-01",
+  "appsSeason": 5
+ },
+ {
+  "clubId": "leeds-united",
+  "playerId": "noah-okafor",
+  "number": 19,
+  "position": "F",
+  "positionInfo": "Winger",
+  "positionDetail": "ST",
+  "joined": "2025-08-21",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "leeds-united",
+  "playerId": "harry-wilson",
+  "number": 10,
+  "position": "F",
+  "positionInfo": "Right Winger",
+  "positionDetail": "RW",
+  "joined": "2026-07-08",
+  "appsSeason": 5
+ },
+ {
+  "clubId": "leeds-united",
+  "playerId": "tarik-muharemovic",
+  "number": 5,
+  "position": "D",
+  "positionInfo": "Central Defender",
+  "positionDetail": "CB",
+  "joined": "2026-07-17",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "leeds-united",
+  "playerId": "darryl-ombang",
+  "number": 49,
+  "position": "G",
+  "positionInfo": "Goalkeeper",
+  "positionDetail": "GK",
+  "joined": "2026-07-21",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "leeds-united",
+  "playerId": "rory-mahady",
+  "number": 48,
+  "position": "G",
+  "positionInfo": "Goalkeeper",
+  "positionDetail": "GK",
+  "joined": "2025-07-18",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "leeds-united",
+  "playerId": "callum-mills",
+  "number": 72,
+  "position": "M",
+  "positionInfo": "Centre Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2026-07-21",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "leeds-united",
+  "playerId": "james-trafford",
+  "number": 1,
+  "position": "G",
+  "positionInfo": "Goalkeeper",
+  "positionDetail": "GK",
+  "joined": "2026-08-06",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "leeds-united",
+  "playerId": "nico-elvedi",
+  "number": 30,
+  "position": "D",
+  "positionInfo": "Centre Central Defender",
+  "positionDetail": "CB",
+  "joined": "2026-08-19",
+  "appsSeason": 5
+ },
+ {
+  "clubId": "leeds-united",
+  "playerId": "michael-zetterer",
+  "number": 16,
+  "position": "G",
+  "positionInfo": "Goalkeeper",
+  "positionDetail": "GK",
+  "joined": "2026-08-29",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "leeds-united",
+  "playerId": "melvin-bard",
+  "number": 26,
+  "position": "D",
+  "positionInfo": "Left Full Back",
+  "positionDetail": "LB",
+  "joined": "2026-09-01",
+  "appsSeason": 1
+ },
+ {
+  "clubId": "leeds-united",
+  "playerId": "jean-matteo-bahoya",
+  "number": 23,
+  "position": "F",
+  "positionInfo": "Winger",
+  "positionDetail": "ST",
+  "joined": "2026-09-01",
+  "appsSeason": 2
+ },
+ {
+  "clubId": "liverpool",
+  "playerId": "alisson-becker",
+  "number": 1,
+  "position": "G",
+  "positionInfo": "Goalkeeper",
+  "positionDetail": "GK",
+  "joined": "2018-07-19",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "liverpool",
+  "playerId": "freddie-woodman",
+  "number": 28,
+  "position": "G",
+  "positionInfo": "Goalkeeper",
+  "positionDetail": "GK",
+  "joined": "2025-07-01",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "liverpool",
+  "playerId": "harvey-davies",
+  "number": 95,
+  "position": "G",
+  "positionInfo": "Goalkeeper",
+  "positionDetail": "GK",
+  "joined": "2021-03-09",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "liverpool",
+  "playerId": "joe-gomez",
+  "number": 2,
+  "position": "D",
+  "positionInfo": "Left/Centre/Right Central Defender",
+  "positionDetail": "CB",
+  "joined": "2015-06-20",
+  "appsSeason": 1
+ },
+ {
+  "clubId": "liverpool",
+  "playerId": "virgil-van-dijk",
+  "number": 4,
+  "position": "D",
+  "positionInfo": "Centre Central Defender",
+  "positionDetail": "CB",
+  "joined": "2018-01-01",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "liverpool",
+  "playerId": "milos-kerkez",
+  "number": 6,
+  "position": "D",
+  "positionInfo": "Left Full Back",
+  "positionDetail": "LB",
+  "joined": "2025-06-26",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "liverpool",
+  "playerId": "conor-bradley",
+  "number": 12,
+  "position": "D",
+  "positionInfo": "Right Full Back",
+  "positionDetail": "RB",
+  "joined": "2023-09-25",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "liverpool",
+  "playerId": "giovanni-leoni",
+  "number": 15,
+  "position": "D",
+  "positionInfo": "Central Defender",
+  "positionDetail": "CB",
+  "joined": "2025-08-15",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "liverpool",
+  "playerId": "jeremie-frimpong",
+  "number": 30,
+  "position": "D",
+  "positionInfo": "Right Full Back",
+  "positionDetail": "RB",
+  "joined": "2025-06-01",
+  "appsSeason": 4
+ },
+ {
+  "clubId": "liverpool",
+  "playerId": "wellity-lucky",
+  "number": 92,
+  "position": "D",
+  "positionInfo": "Right Central Defender",
+  "positionDetail": "CB",
+  "joined": "2025-08-01",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "liverpool",
+  "playerId": "wataru-endo",
+  "number": 3,
+  "position": "M",
+  "positionInfo": "Centre Defensive Midfielder",
+  "positionDetail": "DM",
+  "joined": "2023-08-18",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "liverpool",
+  "playerId": "florian-wirtz",
+  "number": 7,
+  "position": "M",
+  "positionInfo": "Left/Centre/Right Attacking Midfielder",
+  "positionDetail": "AM",
+  "joined": "2025-06-20",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "liverpool",
+  "playerId": "dominik-szoboszlai",
+  "number": 8,
+  "position": "M",
+  "positionInfo": "Left/Centre/Right Attacking Midfielder",
+  "positionDetail": "AM",
+  "joined": "2023-07-02",
+  "appsSeason": 5
+ },
+ {
+  "clubId": "liverpool",
+  "playerId": "alexis-mac-allister",
+  "number": 10,
+  "position": "M",
+  "positionInfo": "Left/Centre/Right Attacking Midfielder",
+  "positionDetail": "AM",
+  "joined": "2023-06-14",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "liverpool",
+  "playerId": "ryan-gravenberch",
+  "number": 38,
+  "position": "M",
+  "positionInfo": "Centre Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2023-09-01",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "liverpool",
+  "playerId": "trey-nyoni",
+  "number": 42,
+  "position": "M",
+  "positionInfo": "Centre Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2023-11-11",
+  "appsSeason": 4
+ },
+ {
+  "clubId": "liverpool",
+  "playerId": "james-mcconnell",
+  "number": 53,
+  "position": "M",
+  "positionInfo": "Centre Defensive Midfielder",
+  "positionDetail": "DM",
+  "joined": "2026-02-02",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "liverpool",
+  "playerId": "alexander-isak",
+  "number": 9,
+  "position": "F",
+  "positionInfo": "Centre Striker",
+  "positionDetail": "ST",
+  "joined": "2025-09-01",
+  "appsSeason": 5
+ },
+ {
+  "clubId": "liverpool",
+  "playerId": "federico-chiesa",
+  "number": 14,
+  "position": "F",
+  "positionInfo": "Left/Centre/Right Winger",
+  "positionDetail": "RW",
+  "joined": "2024-08-29",
+  "appsSeason": 1
+ },
+ {
+  "clubId": "liverpool",
+  "playerId": "cody-gakpo",
+  "number": 18,
+  "position": "F",
+  "positionInfo": "Centre Striker",
+  "positionDetail": "ST",
+  "joined": "2023-01-01",
+  "appsSeason": 5
+ },
+ {
+  "clubId": "liverpool",
+  "playerId": "hugo-ekitike",
+  "number": 22,
+  "position": "F",
+  "positionInfo": "Centre Striker",
+  "positionDetail": "ST",
+  "joined": "2025-07-23",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "liverpool",
+  "playerId": "rio-ngumoha",
+  "number": 73,
+  "position": "F",
+  "positionInfo": "Left Winger",
+  "positionDetail": "LW",
+  "joined": "2024-12-17",
+  "appsSeason": 4
+ },
+ {
+  "clubId": "liverpool",
+  "playerId": "jayden-danns",
+  "number": 76,
+  "position": "F",
+  "positionInfo": "Centre Striker",
+  "positionDetail": "ST",
+  "joined": "2024-02-20",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "liverpool",
+  "playerId": "will-wright",
+  "number": 79,
+  "position": "F",
+  "positionInfo": "Forward",
+  "positionDetail": "ST",
+  "joined": "2025-08-04",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "liverpool",
+  "playerId": "victor-munoz",
+  "number": 23,
+  "position": "F",
+  "positionInfo": "Left/Right Winger",
+  "positionDetail": "RW",
+  "joined": "2026-06-18",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "liverpool",
+  "playerId": "jeremy-jacquet",
+  "number": 5,
+  "position": "D",
+  "positionInfo": "Centre Central Defender",
+  "positionDetail": "CB",
+  "joined": "2026-07-01",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "liverpool",
+  "playerId": "vitezslav-jaros",
+  "number": 56,
+  "position": "G",
+  "positionInfo": "Goalkeeper",
+  "positionDetail": "GK",
+  "joined": "2019-07-10",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "liverpool",
+  "playerId": "kostas-tsimikas",
+  "number": 21,
+  "position": "D",
+  "positionInfo": "Left Full Back",
+  "positionDetail": "LB",
+  "joined": "2020-08-10",
+  "appsSeason": 2
+ },
+ {
+  "clubId": "liverpool",
+  "playerId": "luke-chambers",
+  "number": 44,
+  "position": "D",
+  "positionInfo": "Left Full Back",
+  "positionDetail": "LB",
+  "joined": "2022-07-11",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "liverpool",
+  "playerId": "joshua-sonni-lambie",
+  "number": 82,
+  "position": "F",
+  "positionInfo": "Centre Striker",
+  "positionDetail": "ST",
+  "joined": "2026-07-24",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "liverpool",
+  "playerId": "natalia-ramos",
+  "number": null,
+  "position": "D",
+  "positionInfo": "Centre Central Defender",
+  "positionDetail": "CB",
+  "joined": "2026-08-06",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "liverpool",
+  "playerId": "ronald-araujo",
+  "number": 33,
+  "position": "D",
+  "positionInfo": "Central Defender",
+  "positionDetail": "CB",
+  "joined": "2026-08-10",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "liverpool",
+  "playerId": "lewis-koumas",
+  "number": 67,
+  "position": "F",
+  "positionInfo": "Centre Striker",
+  "positionDetail": "ST",
+  "joined": "2026-08-22",
+  "appsSeason": 4
+ },
+ {
+  "clubId": "liverpool",
+  "playerId": "bradley-barcola",
+  "number": 29,
+  "position": "F",
+  "positionInfo": "Left/Right Winger",
+  "positionDetail": "RW",
+  "joined": "2026-08-31",
+  "appsSeason": 4
+ },
+ {
+  "clubId": "manchester-city",
+  "playerId": "marcus-bettinelli",
+  "number": 13,
+  "position": "G",
+  "positionInfo": "Goalkeeper",
+  "positionDetail": "GK",
+  "joined": "2025-06-10",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "manchester-city",
+  "playerId": "gianluigi-donnarumma",
+  "number": 1,
+  "position": "G",
+  "positionInfo": "Goalkeeper",
+  "positionDetail": "GK",
+  "joined": "2025-09-01",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "manchester-city",
+  "playerId": "ruben-dias",
+  "number": 3,
+  "position": "D",
+  "positionInfo": "Centre Central Defender",
+  "positionDetail": "CB",
+  "joined": "2020-09-29",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "manchester-city",
+  "playerId": "marc-guehi",
+  "number": 6,
+  "position": "D",
+  "positionInfo": "Centre Central Defender",
+  "positionDetail": "CB",
+  "joined": "2026-01-19",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "manchester-city",
+  "playerId": "rayan-ait-nouri",
+  "number": 21,
+  "position": "D",
+  "positionInfo": "Left Full Back",
+  "positionDetail": "LB",
+  "joined": "2025-06-09",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "manchester-city",
+  "playerId": "josko-gvardiol",
+  "number": 24,
+  "position": "D",
+  "positionInfo": "Left/Centre Central Defender",
+  "positionDetail": "CB",
+  "joined": "2023-08-05",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "manchester-city",
+  "playerId": "abdukodir-khusanov",
+  "number": 45,
+  "position": "D",
+  "positionInfo": "Central Defender",
+  "positionDetail": "CB",
+  "joined": "2025-01-20",
+  "appsSeason": 3
+ },
+ {
+  "clubId": "manchester-city",
+  "playerId": "rico-lewis",
+  "number": 82,
+  "position": "D",
+  "positionInfo": "Right Full Back",
+  "positionDetail": "RB",
+  "joined": "2022-07-16",
+  "appsSeason": 1
+ },
+ {
+  "clubId": "manchester-city",
+  "playerId": "mateo-kovacic",
+  "number": 8,
+  "position": "M",
+  "positionInfo": "Centre Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2023-06-27",
+  "appsSeason": 2
+ },
+ {
+  "clubId": "manchester-city",
+  "playerId": "rayan-cherki",
+  "number": 10,
+  "position": "M",
+  "positionInfo": "Attacking Midfielder",
+  "positionDetail": "AM",
+  "joined": "2025-06-10",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "manchester-city",
+  "playerId": "matheus-nunes",
+  "number": 27,
+  "position": "M",
+  "positionInfo": "Centre Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2023-09-01",
+  "appsSeason": 4
+ },
+ {
+  "clubId": "manchester-city",
+  "playerId": "nico-o-reilly",
+  "number": 33,
+  "position": "D",
+  "positionInfo": "Left/Centre Full Back",
+  "positionDetail": "CB",
+  "joined": "2022-12-16",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "manchester-city",
+  "playerId": "phil-foden",
+  "number": 47,
+  "position": "M",
+  "positionInfo": "Centre/Right Attacking Midfielder",
+  "positionDetail": "AM",
+  "joined": "2016-12-05",
+  "appsSeason": 4
+ },
+ {
+  "clubId": "manchester-city",
+  "playerId": "floyd-samba",
+  "number": 75,
+  "position": "M",
+  "positionInfo": "Midfielder",
+  "positionDetail": "CM",
+  "joined": "2025-09-22",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "manchester-city",
+  "playerId": "erling-haaland",
+  "number": 9,
+  "position": "F",
+  "positionInfo": "Centre Striker",
+  "positionDetail": "ST",
+  "joined": "2022-07-01",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "manchester-city",
+  "playerId": "jeremy-doku",
+  "number": 11,
+  "position": "F",
+  "positionInfo": "Left/Right Winger",
+  "positionDetail": "RW",
+  "joined": "2023-08-24",
+  "appsSeason": 2
+ },
+ {
+  "clubId": "manchester-city",
+  "playerId": "antoine-semenyo",
+  "number": 42,
+  "position": "F",
+  "positionInfo": "Left/Right Winger",
+  "positionDetail": "RW",
+  "joined": "2026-01-09",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "manchester-city",
+  "playerId": "ryan-mcaidoo",
+  "number": 56,
+  "position": "F",
+  "positionInfo": "Left/Right Winger",
+  "positionDetail": "RW",
+  "joined": "2024-10-28",
+  "appsSeason": 2
+ },
+ {
+  "clubId": "manchester-city",
+  "playerId": "vitor-reis",
+  "number": 22,
+  "position": "D",
+  "positionInfo": "Central Defender",
+  "positionDetail": "CB",
+  "joined": "2025-01-21",
+  "appsSeason": 1
+ },
+ {
+  "clubId": "manchester-city",
+  "playerId": "finley-burns",
+  "number": 94,
+  "position": "D",
+  "positionInfo": "Defender",
+  "positionDetail": "CB",
+  "joined": "2021-07-26",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "manchester-city",
+  "playerId": "elliot-anderson",
+  "number": 5,
+  "position": "M",
+  "positionInfo": "Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2026-07-02",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "manchester-city",
+  "playerId": "max-edgar-chabot",
+  "number": 94,
+  "position": "G",
+  "positionInfo": "Goalkeeper",
+  "positionDetail": "GK",
+  "joined": "2026-08-08",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "manchester-city",
+  "playerId": "geronimo-rulli",
+  "number": 28,
+  "position": "G",
+  "positionInfo": "Goalkeeper",
+  "positionDetail": "GK",
+  "joined": "2026-08-12",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "manchester-city",
+  "playerId": "ayyoub-bouaddi",
+  "number": 32,
+  "position": "M",
+  "positionInfo": "Centre Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2026-08-26",
+  "appsSeason": 3
+ },
+ {
+  "clubId": "manchester-city",
+  "playerId": "kaden-braithwaite",
+  "number": 61,
+  "position": "D",
+  "positionInfo": "Centre Central Defender",
+  "positionDetail": "CB",
+  "joined": "2024-09-23",
+  "appsSeason": 1
+ },
+ {
+  "clubId": "manchester-city",
+  "playerId": "allan",
+  "number": 37,
+  "position": "F",
+  "positionInfo": "Right Winger",
+  "positionDetail": "RW",
+  "joined": "2026-08-31",
+  "appsSeason": 1
+ },
+ {
+  "clubId": "manchester-city",
+  "playerId": "enzo-fernandez",
+  "number": 17,
+  "position": "M",
+  "positionInfo": "Centre Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2026-09-01",
+  "appsSeason": 3
+ },
+ {
+  "clubId": "manchester-city",
+  "playerId": "iliman-ndiaye",
+  "number": 7,
+  "position": "F",
+  "positionInfo": "Left/Right Winger",
+  "positionDetail": "RW",
+  "joined": "2026-09-01",
+  "appsSeason": 4
+ },
+ {
+  "clubId": "manchester-city",
+  "playerId": "floyd-samba",
+  "number": 75,
+  "position": "M",
+  "positionInfo": "Centre Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2026-02-13",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "manchester-united",
+  "playerId": "tom-heaton",
+  "number": 22,
+  "position": "G",
+  "positionInfo": "Goalkeeper",
+  "positionDetail": "GK",
+  "joined": "2021-07-02",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "manchester-united",
+  "playerId": "senne-lammens",
+  "number": 1,
+  "position": "G",
+  "positionInfo": "Goalkeeper",
+  "positionDetail": "GK",
+  "joined": "2025-09-01",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "manchester-united",
+  "playerId": "diogo-dalot",
+  "number": 2,
+  "position": "D",
+  "positionInfo": "Right Full Back",
+  "positionDetail": "RB",
+  "joined": "2018-06-08",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "manchester-united",
+  "playerId": "noussair-mazraoui",
+  "number": 3,
+  "position": "D",
+  "positionInfo": "Right Full Back",
+  "positionDetail": "RB",
+  "joined": "2024-08-13",
+  "appsSeason": 3
+ },
+ {
+  "clubId": "manchester-united",
+  "playerId": "matthijs-de-ligt",
+  "number": 4,
+  "position": "D",
+  "positionInfo": "Centre Central Defender",
+  "positionDetail": "CB",
+  "joined": "2024-08-13",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "manchester-united",
+  "playerId": "harry-maguire",
+  "number": 5,
+  "position": "D",
+  "positionInfo": "Centre Central Defender",
+  "positionDetail": "CB",
+  "joined": "2019-08-05",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "manchester-united",
+  "playerId": "lisandro-martinez",
+  "number": 6,
+  "position": "D",
+  "positionInfo": "Central Defender",
+  "positionDetail": "CB",
+  "joined": "2022-07-17",
+  "appsSeason": 5
+ },
+ {
+  "clubId": "manchester-united",
+  "playerId": "patrick-dorgu",
+  "number": 13,
+  "position": "D",
+  "positionInfo": "Left Full Back",
+  "positionDetail": "LB",
+  "joined": "2025-02-02",
+  "appsSeason": 5
+ },
+ {
+  "clubId": "manchester-united",
+  "playerId": "leny-yoro",
+  "number": 15,
+  "position": "D",
+  "positionInfo": "Centre Central Defender",
+  "positionDetail": "CB",
+  "joined": "2024-07-19",
+  "appsSeason": 3
+ },
+ {
+  "clubId": "manchester-united",
+  "playerId": "luke-shaw",
+  "number": 23,
+  "position": "D",
+  "positionInfo": "Left Full Back",
+  "positionDetail": "LB",
+  "joined": "2014-07-01",
+  "appsSeason": 5
+ },
+ {
+  "clubId": "manchester-united",
+  "playerId": "ayden-heaven",
+  "number": 26,
+  "position": "D",
+  "positionInfo": "Left Full Back",
+  "positionDetail": "LB",
+  "joined": "2025-02-01",
+  "appsSeason": 2
+ },
+ {
+  "clubId": "manchester-united",
+  "playerId": "diego-leon",
+  "number": 35,
+  "position": "D",
+  "positionInfo": "Left Full Back",
+  "positionDetail": "LB",
+  "joined": "2025-09-20",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "manchester-united",
+  "playerId": "mason-mount",
+  "number": 7,
+  "position": "M",
+  "positionInfo": "Centre Attacking Midfielder",
+  "positionDetail": "AM",
+  "joined": "2023-07-05",
+  "appsSeason": 1
+ },
+ {
+  "clubId": "manchester-united",
+  "playerId": "bruno-fernandes",
+  "number": 8,
+  "position": "M",
+  "positionInfo": "Left/Centre/Right Attacking Midfielder",
+  "positionDetail": "AM",
+  "joined": "2020-01-30",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "manchester-united",
+  "playerId": "manuel-ugarte",
+  "number": 25,
+  "position": "M",
+  "positionInfo": "Centre Defensive Midfielder",
+  "positionDetail": "DM",
+  "joined": "2024-08-30",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "manchester-united",
+  "playerId": "kobbie-mainoo",
+  "number": 37,
+  "position": "M",
+  "positionInfo": "Centre Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2022-10-15",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "manchester-united",
+  "playerId": "jack-fletcher",
+  "number": 38,
+  "position": "M",
+  "positionInfo": "Centre/Right Attacking Midfielder",
+  "positionDetail": "AM",
+  "joined": "2024-08-19",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "manchester-united",
+  "playerId": "tyler-fletcher",
+  "number": 39,
+  "position": "M",
+  "positionInfo": "Centre Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2024-09-30",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "manchester-united",
+  "playerId": "matheus-cunha",
+  "number": 10,
+  "position": "F",
+  "positionInfo": "Left/Centre Second Striker",
+  "positionDetail": "ST",
+  "joined": "2025-06-01",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "manchester-united",
+  "playerId": "joshua-zirkzee",
+  "number": 11,
+  "position": "F",
+  "positionInfo": "Centre Striker",
+  "positionDetail": "ST",
+  "joined": "2024-07-17",
+  "appsSeason": 3
+ },
+ {
+  "clubId": "manchester-united",
+  "playerId": "amad-diallo",
+  "number": 16,
+  "position": "F",
+  "positionInfo": "Right Winger",
+  "positionDetail": "RW",
+  "joined": "2021-01-07",
+  "appsSeason": 1
+ },
+ {
+  "clubId": "manchester-united",
+  "playerId": "bryan-mbeumo",
+  "number": 19,
+  "position": "F",
+  "positionInfo": "Right Winger",
+  "positionDetail": "RW",
+  "joined": "2025-07-21",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "manchester-united",
+  "playerId": "benjamin-sesko",
+  "number": 30,
+  "position": "F",
+  "positionInfo": "Striker",
+  "positionDetail": "ST",
+  "joined": "2025-08-09",
+  "appsSeason": 4
+ },
+ {
+  "clubId": "manchester-united",
+  "playerId": "andre-onana",
+  "number": 24,
+  "position": "G",
+  "positionInfo": "Goalkeeper",
+  "positionDetail": "GK",
+  "joined": "2023-07-20",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "manchester-united",
+  "playerId": "harry-amass",
+  "number": 41,
+  "position": "D",
+  "positionInfo": "Left Full Back",
+  "positionDetail": "LB",
+  "joined": "2024-02-18",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "manchester-united",
+  "playerId": "marcus-rashford",
+  "number": 9,
+  "position": "F",
+  "positionInfo": "Left/Centre Second Striker",
+  "positionDetail": "ST",
+  "joined": "2015-07-01",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "manchester-united",
+  "playerId": "andrey-santos",
+  "number": 17,
+  "position": "M",
+  "positionInfo": "Defensive Midfielder",
+  "positionDetail": "DM",
+  "joined": "2026-07-13",
+  "appsSeason": 3
+ },
+ {
+  "clubId": "manchester-united",
+  "playerId": "karl-darlow",
+  "number": 12,
+  "position": "G",
+  "positionInfo": "Goalkeeper",
+  "positionDetail": "GK",
+  "joined": "2026-06-14",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "manchester-united",
+  "playerId": "youri-tielemans",
+  "number": 18,
+  "position": "M",
+  "positionInfo": "Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2026-07-14",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "manchester-united",
+  "playerId": "dermot-mee",
+  "number": 45,
+  "position": "G",
+  "positionInfo": "Goalkeeper",
+  "positionDetail": "GK",
+  "joined": "2023-07-24",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "manchester-united",
+  "playerId": "daniel-armer",
+  "number": 57,
+  "position": "D",
+  "positionInfo": "Centre Central Defender",
+  "positionDetail": "CB",
+  "joined": "2025-05-26",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "manchester-united",
+  "playerId": "jim-thwaites",
+  "number": 77,
+  "position": "M",
+  "positionInfo": "Centre Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2024-02-28",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "manchester-united",
+  "playerId": "shea-lacey",
+  "number": 61,
+  "position": "F",
+  "positionInfo": "Right Winger",
+  "positionDetail": "RW",
+  "joined": "2023-01-23",
+  "appsSeason": 1
+ },
+ {
+  "clubId": "manchester-united",
+  "playerId": "carlos-baleba",
+  "number": 20,
+  "position": "M",
+  "positionInfo": "Centre Defensive Midfielder",
+  "positionDetail": "DM",
+  "joined": "2026-08-25",
+  "appsSeason": 1
+ },
+ {
+  "clubId": "newcastle-united",
+  "playerId": "nick-pope",
+  "number": 1,
+  "position": "G",
+  "positionInfo": "Goalkeeper",
+  "positionDetail": "GK",
+  "joined": "2022-06-23",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "newcastle-united",
+  "playerId": "mark-gillespie",
+  "number": 29,
+  "position": "G",
+  "positionInfo": "Goalkeeper",
+  "positionDetail": "GK",
+  "joined": "2020-07-27",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "newcastle-united",
+  "playerId": "aidan-harris",
+  "number": 1,
+  "position": "G",
+  "positionInfo": "Goalkeeper",
+  "positionDetail": "GK",
+  "joined": "2022-10-22",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "newcastle-united",
+  "playerId": "lewis-hall",
+  "number": 3,
+  "position": "D",
+  "positionInfo": "Left Full Back",
+  "positionDetail": "LB",
+  "joined": "2024-07-01",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "newcastle-united",
+  "playerId": "sven-botman",
+  "number": 4,
+  "position": "D",
+  "positionInfo": "Central Defender",
+  "positionDetail": "CB",
+  "joined": "2022-06-28",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "newcastle-united",
+  "playerId": "fabian-schar",
+  "number": 5,
+  "position": "D",
+  "positionInfo": "Centre Central Defender",
+  "positionDetail": "CB",
+  "joined": "2018-07-26",
+  "appsSeason": 2
+ },
+ {
+  "clubId": "newcastle-united",
+  "playerId": "malick-thiaw",
+  "number": 12,
+  "position": "D",
+  "positionInfo": "Centre Central Defender",
+  "positionDetail": "CB",
+  "joined": "2025-08-12",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "newcastle-united",
+  "playerId": "tino-livramento",
+  "number": 2,
+  "position": "D",
+  "positionInfo": "Right Full Back",
+  "positionDetail": "RB",
+  "joined": "2023-08-08",
+  "appsSeason": 2
+ },
+ {
+  "clubId": "newcastle-united",
+  "playerId": "dan-burn",
+  "number": 33,
+  "position": "D",
+  "positionInfo": "Centre Central Defender",
+  "positionDetail": "CB",
+  "joined": "2022-01-31",
+  "appsSeason": 1
+ },
+ {
+  "clubId": "newcastle-united",
+  "playerId": "joelinton",
+  "number": 7,
+  "position": "M",
+  "positionInfo": "Left Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2019-07-24",
+  "appsSeason": 1
+ },
+ {
+  "clubId": "newcastle-united",
+  "playerId": "harvey-barnes",
+  "number": 11,
+  "position": "M",
+  "positionInfo": "Left/Right Winger",
+  "positionDetail": "RM",
+  "joined": "2023-07-23",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "newcastle-united",
+  "playerId": "jacob-murphy",
+  "number": 23,
+  "position": "M",
+  "positionInfo": "Left/Right Winger",
+  "positionDetail": "RM",
+  "joined": "2017-07-19",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "newcastle-united",
+  "playerId": "joe-willock",
+  "number": 28,
+  "position": "M",
+  "positionInfo": "Centre Attacking Midfielder",
+  "positionDetail": "AM",
+  "joined": "2021-08-13",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "newcastle-united",
+  "playerId": "jacob-ramsey",
+  "number": 41,
+  "position": "M",
+  "positionInfo": "Left/Centre Winger",
+  "positionDetail": "CM",
+  "joined": "2025-08-17",
+  "appsSeason": 3
+ },
+ {
+  "clubId": "newcastle-united",
+  "playerId": "lewis-miley",
+  "number": 67,
+  "position": "M",
+  "positionInfo": "Centre Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2023-02-01",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "newcastle-united",
+  "playerId": "yoane-wissa",
+  "number": 9,
+  "position": "F",
+  "positionInfo": "Centre Striker",
+  "positionDetail": "ST",
+  "joined": "2025-09-01",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "newcastle-united",
+  "playerId": "william-osula",
+  "number": 10,
+  "position": "F",
+  "positionInfo": "Centre Striker",
+  "positionDetail": "ST",
+  "joined": "2024-08-08",
+  "appsSeason": 2
+ },
+ {
+  "clubId": "newcastle-united",
+  "playerId": "anthony-elanga",
+  "number": 19,
+  "position": "F",
+  "positionInfo": "Left Winger",
+  "positionDetail": "LW",
+  "joined": "2025-07-11",
+  "appsSeason": 3
+ },
+ {
+  "clubId": "newcastle-united",
+  "playerId": "ewen-jaouen",
+  "number": 24,
+  "position": "G",
+  "positionInfo": "Goalkeeper",
+  "positionDetail": "GK",
+  "joined": "2026-06-15",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "newcastle-united",
+  "playerId": "odysseas-vlachodimos",
+  "number": 19,
+  "position": "G",
+  "positionInfo": "Goalkeeper",
+  "positionDetail": "GK",
+  "joined": "2024-07-01",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "newcastle-united",
+  "playerId": "antonito-cordero",
+  "number": null,
+  "position": "F",
+  "positionInfo": "Winger",
+  "positionDetail": "ST",
+  "joined": "2025-07-01",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "newcastle-united",
+  "playerId": "bazoumana-toure",
+  "number": 17,
+  "position": "F",
+  "positionInfo": "Left Winger",
+  "positionDetail": "LW",
+  "joined": "2026-07-05",
+  "appsSeason": 4
+ },
+ {
+  "clubId": "newcastle-united",
+  "playerId": "sean-steur",
+  "number": 14,
+  "position": "M",
+  "positionInfo": "Centre Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2026-07-09",
+  "appsSeason": 5
+ },
+ {
+  "clubId": "newcastle-united",
+  "playerId": "aladji-bamba",
+  "number": 8,
+  "position": "M",
+  "positionInfo": "Centre Defensive Midfielder",
+  "positionDetail": "DM",
+  "joined": "2026-07-24",
+  "appsSeason": 3
+ },
+ {
+  "clubId": "newcastle-united",
+  "playerId": "miodrag-pivas",
+  "number": 48,
+  "position": "D",
+  "positionInfo": "Central Defender",
+  "positionDetail": "CB",
+  "joined": "2026-07-24",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "newcastle-united",
+  "playerId": "mason-miley",
+  "number": 76,
+  "position": "M",
+  "positionInfo": "Centre Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2026-07-24",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "newcastle-united",
+  "playerId": "vakhtang-salia",
+  "number": 49,
+  "position": "F",
+  "positionInfo": "Left/Centre Striker",
+  "positionDetail": "ST",
+  "joined": "2026-07-24",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "newcastle-united",
+  "playerId": "lukas-hornicek",
+  "number": 21,
+  "position": "G",
+  "positionInfo": "Goalkeeper",
+  "positionDetail": "GK",
+  "joined": "2026-08-03",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "newcastle-united",
+  "playerId": "amar-dedic",
+  "number": 37,
+  "position": "D",
+  "positionInfo": "Right Full Back",
+  "positionDetail": "RB",
+  "joined": "2026-08-18",
+  "appsSeason": 5
+ },
+ {
+  "clubId": "newcastle-united",
+  "playerId": "nico-gonzalez",
+  "number": 6,
+  "position": "M",
+  "positionInfo": "Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2026-08-26",
+  "appsSeason": 4
+ },
+ {
+  "clubId": "newcastle-united",
+  "playerId": "matias-fernandez-pardo",
+  "number": 20,
+  "position": "F",
+  "positionInfo": "Striker",
+  "positionDetail": "ST",
+  "joined": "2026-09-01",
+  "appsSeason": 4
+ },
+ {
+  "clubId": "newcastle-united",
+  "playerId": "kyran-thompson",
+  "number": 44,
+  "position": "F",
+  "positionInfo": "Right Winger",
+  "positionDetail": "RW",
+  "joined": "2026-09-18",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "newcastle-united",
+  "playerId": "michael-mills",
+  "number": 77,
+  "position": "F",
+  "positionInfo": "Left Winger",
+  "positionDetail": "LW",
+  "joined": "2026-02-05",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "nottingham-forest",
+  "playerId": "john-victor",
+  "number": 12,
+  "position": "G",
+  "positionInfo": "Goalkeeper",
+  "positionDetail": "GK",
+  "joined": "2025-08-31",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "nottingham-forest",
+  "playerId": "matz-sels",
+  "number": 26,
+  "position": "G",
+  "positionInfo": "Goalkeeper",
+  "positionDetail": "GK",
+  "joined": "2024-02-01",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "nottingham-forest",
+  "playerId": "neco-williams",
+  "number": 3,
+  "position": "D",
+  "positionInfo": "Right Full Back",
+  "positionDetail": "RB",
+  "joined": "2022-07-11",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "nottingham-forest",
+  "playerId": "murillo",
+  "number": 5,
+  "position": "D",
+  "positionInfo": "Left/Centre Central Defender",
+  "positionDetail": "CB",
+  "joined": "2023-08-31",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "nottingham-forest",
+  "playerId": "jair-cunha",
+  "number": 23,
+  "position": "D",
+  "positionInfo": "Central Defender",
+  "positionDetail": "CB",
+  "joined": "2025-07-11",
+  "appsSeason": 4
+ },
+ {
+  "clubId": "nottingham-forest",
+  "playerId": "luca-netz",
+  "number": 25,
+  "position": "D",
+  "positionInfo": "Left Full Back",
+  "positionDetail": "LB",
+  "joined": "2026-02-02",
+  "appsSeason": 3
+ },
+ {
+  "clubId": "nottingham-forest",
+  "playerId": "nikola-milenkovic",
+  "number": 31,
+  "position": "D",
+  "positionInfo": "Centre Central Defender",
+  "positionDetail": "CB",
+  "joined": "2024-07-18",
+  "appsSeason": 3
+ },
+ {
+  "clubId": "nottingham-forest",
+  "playerId": "ola-aina",
+  "number": 34,
+  "position": "D",
+  "positionInfo": "Right Full Back",
+  "positionDetail": "RB",
+  "joined": "2023-07-22",
+  "appsSeason": 5
+ },
+ {
+  "clubId": "nottingham-forest",
+  "playerId": "nicolo-savona",
+  "number": 37,
+  "position": "D",
+  "positionInfo": "Right Full Back",
+  "positionDetail": "RB",
+  "joined": "2025-08-30",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "nottingham-forest",
+  "playerId": "ibrahim-sangare",
+  "number": 6,
+  "position": "M",
+  "positionInfo": "Centre Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2023-09-01",
+  "appsSeason": 4
+ },
+ {
+  "clubId": "nottingham-forest",
+  "playerId": "morgan-gibbs-white",
+  "number": 10,
+  "position": "M",
+  "positionInfo": "Centre Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2022-08-19",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "nottingham-forest",
+  "playerId": "nicolas-dominguez",
+  "number": 8,
+  "position": "M",
+  "positionInfo": "Centre Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2023-09-01",
+  "appsSeason": 1
+ },
+ {
+  "clubId": "nottingham-forest",
+  "playerId": "ryan-yates",
+  "number": 22,
+  "position": "M",
+  "positionInfo": "Left/Centre/Right Attacking Midfielder",
+  "positionDetail": "AM",
+  "joined": "2018-08-01",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "nottingham-forest",
+  "playerId": "james-mcatee",
+  "number": 24,
+  "position": "M",
+  "positionInfo": "Centre/Right Attacking Midfielder",
+  "positionDetail": "AM",
+  "joined": "2025-08-16",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "nottingham-forest",
+  "playerId": "callum-hudson-odoi",
+  "number": 7,
+  "position": "F",
+  "positionInfo": "Left Winger",
+  "positionDetail": "LW",
+  "joined": "2023-09-01",
+  "appsSeason": 2
+ },
+ {
+  "clubId": "nottingham-forest",
+  "playerId": "chris-wood",
+  "number": 9,
+  "position": "F",
+  "positionInfo": "Centre Striker",
+  "positionDetail": "ST",
+  "joined": "2023-07-01",
+  "appsSeason": 5
+ },
+ {
+  "clubId": "nottingham-forest",
+  "playerId": "dan-ndoye",
+  "number": 14,
+  "position": "F",
+  "positionInfo": "Left/Right Winger",
+  "positionDetail": "RW",
+  "joined": "2025-07-31",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "nottingham-forest",
+  "playerId": "igor-jesus",
+  "number": 11,
+  "position": "F",
+  "positionInfo": "Striker",
+  "positionDetail": "ST",
+  "joined": "2025-07-05",
+  "appsSeason": 5
+ },
+ {
+  "clubId": "nottingham-forest",
+  "playerId": "douglas-luiz",
+  "number": 12,
+  "position": "M",
+  "positionInfo": "Centre Defensive Midfielder",
+  "positionDetail": "DM",
+  "joined": "2025-08-21",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "nottingham-forest",
+  "playerId": "arnaud-kalimuendo",
+  "number": 15,
+  "position": "F",
+  "positionInfo": "Centre Striker",
+  "positionDetail": "ST",
+  "joined": "2025-08-18",
+  "appsSeason": 2
+ },
+ {
+  "clubId": "nottingham-forest",
+  "playerId": "xaver-schlager",
+  "number": 21,
+  "position": "M",
+  "positionInfo": "Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2026-07-23",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "nottingham-forest",
+  "playerId": "ousmane-diomande",
+  "number": 2,
+  "position": "D",
+  "positionInfo": "Centre Central Defender",
+  "positionDetail": "CB",
+  "joined": "2026-08-11",
+  "appsSeason": 4
+ },
+ {
+  "clubId": "nottingham-forest",
+  "playerId": "steven-benda",
+  "number": 33,
+  "position": "G",
+  "positionInfo": "Goalkeeper",
+  "positionDetail": "GK",
+  "joined": "2026-08-15",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "nottingham-forest",
+  "playerId": "liam-delap",
+  "number": 19,
+  "position": "F",
+  "positionInfo": "Centre Striker",
+  "positionDetail": "ST",
+  "joined": "2026-08-27",
+  "appsSeason": 5
+ },
+ {
+  "clubId": "nottingham-forest",
+  "playerId": "daniel-munoz",
+  "number": 27,
+  "position": "D",
+  "positionInfo": "Right Full Back",
+  "positionDetail": "RB",
+  "joined": "2026-08-31",
+  "appsSeason": 4
+ },
+ {
+  "clubId": "sunderland",
+  "playerId": "simon-moore",
+  "number": 21,
+  "position": "G",
+  "positionInfo": "Goalkeeper",
+  "positionDetail": "GK",
+  "joined": "2024-07-01",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "sunderland",
+  "playerId": "robin-roefs",
+  "number": 22,
+  "position": "G",
+  "positionInfo": "Goalkeeper",
+  "positionDetail": "GK",
+  "joined": "2025-08-01",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "sunderland",
+  "playerId": "melker-ellborg",
+  "number": 31,
+  "position": "G",
+  "positionInfo": "Goalkeeper",
+  "positionDetail": "GK",
+  "joined": "2026-02-01",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "sunderland",
+  "playerId": "dan-ballard",
+  "number": 5,
+  "position": "D",
+  "positionInfo": "Centre Central Defender",
+  "positionDetail": "CB",
+  "joined": "2022-07-01",
+  "appsSeason": 5
+ },
+ {
+  "clubId": "sunderland",
+  "playerId": "omar-alderete",
+  "number": 15,
+  "position": "D",
+  "positionInfo": "Central Defender",
+  "positionDetail": "CB",
+  "joined": "2025-08-12",
+  "appsSeason": 1
+ },
+ {
+  "clubId": "sunderland",
+  "playerId": "reinildo-mandava",
+  "number": 17,
+  "position": "D",
+  "positionInfo": "Left Full Back",
+  "positionDetail": "LB",
+  "joined": "2025-07-08",
+  "appsSeason": 5
+ },
+ {
+  "clubId": "sunderland",
+  "playerId": "nordi-mukiele",
+  "number": 20,
+  "position": "D",
+  "positionInfo": "Right Full Back",
+  "positionDetail": "RB",
+  "joined": "2025-08-17",
+  "appsSeason": 5
+ },
+ {
+  "clubId": "sunderland",
+  "playerId": "trai-hume",
+  "number": 32,
+  "position": "D",
+  "positionInfo": "Right Full Back",
+  "positionDetail": "RB",
+  "joined": "2022-01-04",
+  "appsSeason": 5
+ },
+ {
+  "clubId": "sunderland",
+  "playerId": "chris-rigg",
+  "number": 11,
+  "position": "M",
+  "positionInfo": "Centre Attacking Midfielder",
+  "positionDetail": "AM",
+  "joined": "2022-12-31",
+  "appsSeason": 2
+ },
+ {
+  "clubId": "sunderland",
+  "playerId": "luke-o-nien",
+  "number": 13,
+  "position": "M",
+  "positionInfo": "Centre Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2023-01-29",
+  "appsSeason": 1
+ },
+ {
+  "clubId": "sunderland",
+  "playerId": "habib-diarra",
+  "number": 19,
+  "position": "M",
+  "positionInfo": "Centre Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2025-07-01",
+  "appsSeason": 2
+ },
+ {
+  "clubId": "sunderland",
+  "playerId": "noah-sadiki",
+  "number": 27,
+  "position": "M",
+  "positionInfo": "Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2025-07-04",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "sunderland",
+  "playerId": "enzo-le-fee",
+  "number": 28,
+  "position": "M",
+  "positionInfo": "Centre Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2025-07-01",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "sunderland",
+  "playerId": "granit-xhaka",
+  "number": 34,
+  "position": "M",
+  "positionInfo": "Defensive Midfielder",
+  "positionDetail": "DM",
+  "joined": "2025-07-30",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "sunderland",
+  "playerId": "abdoullah-ba",
+  "number": 46,
+  "position": "M",
+  "positionInfo": "Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2022-10-09",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "sunderland",
+  "playerId": "chemsdine-talbi",
+  "number": 7,
+  "position": "F",
+  "positionInfo": "Left/Right Winger",
+  "positionDetail": "RW",
+  "joined": "2025-07-09",
+  "appsSeason": 1
+ },
+ {
+  "clubId": "sunderland",
+  "playerId": "brian-brobbey",
+  "number": 9,
+  "position": "F",
+  "positionInfo": "Striker",
+  "positionDetail": "ST",
+  "joined": "2025-09-01",
+  "appsSeason": 5
+ },
+ {
+  "clubId": "sunderland",
+  "playerId": "nilson-angulo",
+  "number": 10,
+  "position": "F",
+  "positionInfo": "Left Winger",
+  "positionDetail": "LW",
+  "joined": "2026-02-02",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "sunderland",
+  "playerId": "romaine-mundle",
+  "number": 14,
+  "position": "F",
+  "positionInfo": "Left/Right Winger",
+  "positionDetail": "RW",
+  "joined": "2024-02-01",
+  "appsSeason": 1
+ },
+ {
+  "clubId": "sunderland",
+  "playerId": "wilson-isidor",
+  "number": 18,
+  "position": "F",
+  "positionInfo": "Centre Striker",
+  "positionDetail": "ST",
+  "joined": "2025-02-01",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "sunderland",
+  "playerId": "jocelin-ta-bi",
+  "number": 37,
+  "position": "F",
+  "positionInfo": "Right Winger",
+  "positionDetail": "RW",
+  "joined": "2026-01-16",
+  "appsSeason": 1
+ },
+ {
+  "clubId": "sunderland",
+  "playerId": "aji-alese",
+  "number": 42,
+  "position": "D",
+  "positionInfo": "Centre Central Defender",
+  "positionDetail": "CB",
+  "joined": "2023-12-17",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "sunderland",
+  "playerId": "alan-browne",
+  "number": 8,
+  "position": "M",
+  "positionInfo": "Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2024-07-11",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "sunderland",
+  "playerId": "trey-samuel-ogunsuyi",
+  "number": 47,
+  "position": "F",
+  "positionInfo": "Left/Centre/Right Striker",
+  "positionDetail": "ST",
+  "joined": "2022-09-13",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "sunderland",
+  "playerId": "thomas-meunier",
+  "number": 12,
+  "position": "D",
+  "positionInfo": "Right Full Back",
+  "positionDetail": "RB",
+  "joined": "2026-07-15",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "sunderland",
+  "playerId": "dayann-methalie",
+  "number": 6,
+  "position": "D",
+  "positionInfo": "Left Full Back",
+  "positionDetail": "LB",
+  "joined": "2026-08-21",
+  "appsSeason": 2
+ },
+ {
+  "clubId": "sunderland",
+  "playerId": "jules-ahoka",
+  "number": 29,
+  "position": "M",
+  "positionInfo": "Centre Defensive Midfielder",
+  "positionDetail": "DM",
+  "joined": "2026-08-24",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "sunderland",
+  "playerId": "kevin-danso",
+  "number": 4,
+  "position": "D",
+  "positionInfo": "Centre Central Defender",
+  "positionDetail": "CB",
+  "joined": "2026-09-01",
+  "appsSeason": 4
+ },
+ {
+  "clubId": "sunderland",
+  "playerId": "malick-fofana",
+  "number": 39,
+  "position": "F",
+  "positionInfo": "Winger",
+  "positionDetail": "ST",
+  "joined": "2026-09-01",
+  "appsSeason": 4
+ },
+ {
+  "clubId": "sunderland",
+  "playerId": "juan-angulo",
+  "number": 50,
+  "position": "F",
+  "positionInfo": "Centre Striker",
+  "positionDetail": "ST",
+  "joined": "2026-09-01",
+  "appsSeason": 1
+ },
+ {
+  "clubId": "sunderland",
+  "playerId": "jenson-jones",
+  "number": 48,
+  "position": "D",
+  "positionInfo": "Right Full Back",
+  "positionDetail": "RB",
+  "joined": "2022-07-01",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "sunderland",
+  "playerId": "jack-whittaker",
+  "number": 40,
+  "position": "M",
+  "positionInfo": "Centre Attacking Midfielder",
+  "positionDetail": "AM",
+  "joined": "2023-09-28",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "sunderland",
+  "playerId": "tom-proctor",
+  "number": 77,
+  "position": "M",
+  "positionInfo": "Attacking Midfielder",
+  "positionDetail": "AM",
+  "joined": "2025-08-27",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "sunderland",
+  "playerId": "tymur-tutierov",
+  "number": 57,
+  "position": "F",
+  "positionInfo": "Centre Striker",
+  "positionDetail": "ST",
+  "joined": "2023-04-13",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "tottenham-hotspur",
+  "playerId": "antonin-kinsky",
+  "number": 31,
+  "position": "G",
+  "positionInfo": "Goalkeeper",
+  "positionDetail": "GK",
+  "joined": "2025-01-05",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "tottenham-hotspur",
+  "playerId": "brandon-austin",
+  "number": 40,
+  "position": "G",
+  "positionInfo": "Goalkeeper",
+  "positionDetail": "GK",
+  "joined": "2017-07-22",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "tottenham-hotspur",
+  "playerId": "destiny-udogie",
+  "number": 13,
+  "position": "D",
+  "positionInfo": "Left Full Back",
+  "positionDetail": "LB",
+  "joined": "2022-08-16",
+  "appsSeason": 4
+ },
+ {
+  "clubId": "tottenham-hotspur",
+  "playerId": "pedro-porro",
+  "number": 23,
+  "position": "D",
+  "positionInfo": "Right Full Back",
+  "positionDetail": "RB",
+  "joined": "2023-07-01",
+  "appsSeason": 3
+ },
+ {
+  "clubId": "tottenham-hotspur",
+  "playerId": "ben-davies",
+  "number": 33,
+  "position": "D",
+  "positionInfo": "Left Full Back",
+  "positionDetail": "LB",
+  "joined": "2014-07-23",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "tottenham-hotspur",
+  "playerId": "micky-van-de-ven",
+  "number": 37,
+  "position": "D",
+  "positionInfo": "Central Defender",
+  "positionDetail": "CB",
+  "joined": "2023-08-08",
+  "appsSeason": 5
+ },
+ {
+  "clubId": "tottenham-hotspur",
+  "playerId": "xavi-simons",
+  "number": 7,
+  "position": "M",
+  "positionInfo": "Attacking Midfielder",
+  "positionDetail": "AM",
+  "joined": "2025-08-29",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "tottenham-hotspur",
+  "playerId": "james-maddison",
+  "number": 10,
+  "position": "M",
+  "positionInfo": "Left/Centre/Right Attacking Midfielder",
+  "positionDetail": "AM",
+  "joined": "2023-06-28",
+  "appsSeason": 4
+ },
+ {
+  "clubId": "tottenham-hotspur",
+  "playerId": "archie-gray",
+  "number": 14,
+  "position": "M",
+  "positionInfo": "Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2024-07-02",
+  "appsSeason": 5
+ },
+ {
+  "clubId": "tottenham-hotspur",
+  "playerId": "lucas-bergvall",
+  "number": 15,
+  "position": "M",
+  "positionInfo": "Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2024-07-01",
+  "appsSeason": 4
+ },
+ {
+  "clubId": "tottenham-hotspur",
+  "playerId": "mohammed-kudus",
+  "number": 20,
+  "position": "M",
+  "positionInfo": "Right Winger",
+  "positionDetail": "RM",
+  "joined": "2025-07-10",
+  "appsSeason": 5
+ },
+ {
+  "clubId": "tottenham-hotspur",
+  "playerId": "dejan-kulusevski",
+  "number": 21,
+  "position": "M",
+  "positionInfo": "Right Winger",
+  "positionDetail": "RM",
+  "joined": "2023-07-01",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "tottenham-hotspur",
+  "playerId": "conor-gallagher",
+  "number": 8,
+  "position": "M",
+  "positionInfo": "Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2026-01-14",
+  "appsSeason": 4
+ },
+ {
+  "clubId": "tottenham-hotspur",
+  "playerId": "rodrigo-bentancur",
+  "number": 30,
+  "position": "M",
+  "positionInfo": "Centre Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2022-01-31",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "tottenham-hotspur",
+  "playerId": "luca-williams-barnett",
+  "number": 68,
+  "position": "M",
+  "positionInfo": "Left/Centre/Right Attacking Midfielder",
+  "positionDetail": "AM",
+  "joined": "2025-07-25",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "tottenham-hotspur",
+  "playerId": "richarlison",
+  "number": 9,
+  "position": "F",
+  "positionInfo": "Left/Centre/Right Second Striker",
+  "positionDetail": "ST",
+  "joined": "2026-10-12",
+  "appsSeason": 1
+ },
+ {
+  "clubId": "tottenham-hotspur",
+  "playerId": "mathys-tel",
+  "number": 11,
+  "position": "F",
+  "positionInfo": "Left Winger",
+  "positionDetail": "LW",
+  "joined": "2025-07-01",
+  "appsSeason": 4
+ },
+ {
+  "clubId": "tottenham-hotspur",
+  "playerId": "dominic-solanke",
+  "number": 19,
+  "position": "F",
+  "positionInfo": "Striker",
+  "positionDetail": "ST",
+  "joined": "2024-08-10",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "tottenham-hotspur",
+  "playerId": "wilson-odobert",
+  "number": 28,
+  "position": "F",
+  "positionInfo": "Left Winger",
+  "positionDetail": "LW",
+  "joined": "2024-08-16",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "tottenham-hotspur",
+  "playerId": "jan-paul-van-hecke",
+  "number": 6,
+  "position": "D",
+  "positionInfo": "Central Defender",
+  "positionDetail": "CB",
+  "joined": "2026-06-18",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "tottenham-hotspur",
+  "playerId": "andy-robertson",
+  "number": 3,
+  "position": "D",
+  "positionInfo": "Left Full Back",
+  "positionDetail": "LB",
+  "joined": "2026-07-01",
+  "appsSeason": 5
+ },
+ {
+  "clubId": "tottenham-hotspur",
+  "playerId": "marcos-senesi",
+  "number": 5,
+  "position": "D",
+  "positionInfo": "Centre Central Defender",
+  "positionDetail": "CB",
+  "joined": "2026-07-01",
+  "appsSeason": 2
+ },
+ {
+  "clubId": "tottenham-hotspur",
+  "playerId": "martin-dubravka",
+  "number": 39,
+  "position": "G",
+  "positionInfo": "Goalkeeper",
+  "positionDetail": "GK",
+  "joined": "2026-07-01",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "tottenham-hotspur",
+  "playerId": "george-abbott",
+  "number": 50,
+  "position": "M",
+  "positionInfo": "Midfielder",
+  "positionDetail": "CM",
+  "joined": "2024-05-21",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "tottenham-hotspur",
+  "playerId": "mateus-fernandes",
+  "number": 18,
+  "position": "M",
+  "positionInfo": "Central Midfielder",
+  "positionDetail": "CM",
+  "joined": "2026-07-02",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "tottenham-hotspur",
+  "playerId": "sandro-tonali",
+  "number": 16,
+  "position": "M",
+  "positionInfo": "Centre Defensive Midfielder",
+  "positionDetail": "DM",
+  "joined": "2026-07-06",
+  "appsSeason": 6
+ },
+ {
+  "clubId": "tottenham-hotspur",
+  "playerId": "dylan-thompson",
+  "number": null,
+  "position": "G",
+  "positionInfo": "Goalkeeper",
+  "positionDetail": "GK",
+  "joined": "2026-07-01",
+  "appsSeason": 0
+ },
+ {
+  "clubId": "tottenham-hotspur",
+  "playerId": "savio",
+  "number": 17,
+  "position": "F",
+  "positionInfo": "Right Winger",
+  "positionDetail": "RW",
+  "joined": "2026-08-25",
+  "appsSeason": 4
+ },
+ {
+  "clubId": "tottenham-hotspur",
+  "playerId": "omar-marmoush",
+  "number": 22,
+  "position": "F",
+  "positionInfo": "Striker",
+  "positionDetail": "ST",
+  "joined": "2026-08-27",
+  "appsSeason": 5
+ },
+ {
+  "clubId": "tottenham-hotspur",
+  "playerId": "tosin-adarabioyo",
+  "number": 4,
+  "position": "D",
+  "positionInfo": "Centre Central Defender",
+  "positionDetail": "CB",
+  "joined": "2026-09-01",
+  "appsSeason": 1
+ },
+ {
+  "clubId": "tottenham-hotspur",
+  "playerId": "mykhailo-mudryk",
+  "number": 27,
+  "position": "M",
+  "positionInfo": "Left Winger",
+  "positionDetail": "LM",
+  "joined": "2026-09-01",
+  "appsSeason": 1
+ }
+]

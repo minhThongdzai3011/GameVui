@@ -21,6 +21,8 @@
   SC.EXACT = EXACT;
   SC.HIDDEN = HIDDEN;
   SC.COST = COST;
+  // chi phí theo mức chi của quốc gia người chơi (Anh đắt hơn nhiều)
+  SC.cost = (s, kind) => COST[kind] * FM.econOf(W.countryOfClub(s, s.user)).cost;
   const unit = (key) => (FM.hash(key) % 10007) / 10007; // 0..1 cố định theo khoá
 
   SC.ensure = (s) => (s.sc ||= { kn: {}, jobs: [], seq: 0, reports: {} });
@@ -81,7 +83,7 @@ SC.estVal = (s, p, k = SC.know(s, p)) => Math.max(0.1, Math.round(p.val * Math.e
     if (sc.jobs.length >= SC.slots(s)) return { error: `Cả ${SC.slots(s)} tuyển trạch viên đều đang bận. Huỷ bớt một việc hoặc chờ báo cáo.` };
     if (SC.jobFor(s, kind, target)) return { error: "Đã có người đang theo dõi." };
     const c = s.clubs[s.user];
-    if (c.bal < COST[kind]) return { error: "Không đủ tiền để cử người đi." };
+    if (c.bal < SC.cost(s, kind)) return { error: "Không đủ tiền để cử người đi." };
     const players = kind === "player" ? [W.player(s, target)] : W.squad(s, target);
     if (kind === "player" && (!players[0] || players[0].c === s.user)) return { error: "Không cần tuyển trạch cầu thủ của đội mình." };
     if (kind === "player" && players[0].foreignClub) return { error: "Cầu thủ CLB nước ngoài: hãy tuyển trạch cả đội." };
@@ -90,7 +92,7 @@ SC.estVal = (s, p, k = SC.know(s, p)) => Math.max(0.1, Math.round(p.val * Math.e
     const days = SC.duration(s, kind, target);
     const job = { id: ++sc.seq, kind, target, d0: s.date, end: FM.addDays(s.date, days), k0 };
     sc.jobs.push(job);
-    c.bal = Math.round((c.bal - COST[kind]) * 100) / 100;
+    c.bal = Math.round((c.bal - SC.cost(s, kind)) * 100) / 100;
     return { job, days };
   };
   SC.cancel = function (s, id) {

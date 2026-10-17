@@ -1,0 +1,866 @@
+[
+ {
+  "md": 1,
+  "h": "aek-athens",
+  "a": "lask",
+  "d": "2026-09-08"
+ },
+ {
+  "md": 1,
+  "h": "club-brugge",
+  "a": "aston-villa",
+  "d": "2026-09-08"
+ },
+ {
+  "md": 1,
+  "h": "borussia-dortmund",
+  "a": "villarreal",
+  "d": "2026-09-08"
+ },
+ {
+  "md": 1,
+  "h": "fc-porto",
+  "a": "manchester-city",
+  "d": "2026-09-08"
+ },
+ {
+  "md": 1,
+  "h": "lille",
+  "a": "real-betis",
+  "d": "2026-09-08"
+ },
+ {
+  "md": 1,
+  "h": "real-madrid",
+  "a": "inter",
+  "d": "2026-09-08"
+ },
+ {
+  "md": 1,
+  "h": "barcelona",
+  "a": "feyenoord",
+  "d": "2026-09-09"
+ },
+ {
+  "md": 1,
+  "h": "vfb-stuttgart",
+  "a": "viking",
+  "d": "2026-09-09"
+ },
+ {
+  "md": 1,
+  "h": "liverpool",
+  "a": "atletico-madrid",
+  "d": "2026-09-09"
+ },
+ {
+  "md": 1,
+  "h": "paris-saint-germain",
+  "a": "slovan-bratislava",
+  "d": "2026-09-09"
+ },
+ {
+  "md": 1,
+  "h": "sporting-cp",
+  "a": "galatasaray",
+  "d": "2026-09-09"
+ },
+ {
+  "md": 1,
+  "h": "napoli",
+  "a": "arsenal",
+  "d": "2026-09-09"
+ },
+ {
+  "md": 1,
+  "h": "fenerbahce",
+  "a": "roma",
+  "d": "2026-09-10"
+ },
+ {
+  "md": 1,
+  "h": "psv-eindhoven",
+  "a": "shakhtar-donetsk",
+  "d": "2026-09-10"
+ },
+ {
+  "md": 1,
+  "h": "bayern-munchen",
+  "a": "bodo-glimt",
+  "d": "2026-09-10"
+ },
+ {
+  "md": 1,
+  "h": "como",
+  "a": "rb-leipzig",
+  "d": "2026-09-10"
+ },
+ {
+  "md": 1,
+  "h": "manchester-united",
+  "a": "sabah-fk",
+  "d": "2026-09-10"
+ },
+ {
+  "md": 1,
+  "h": "slavia-prague",
+  "a": "lens",
+  "d": "2026-09-10"
+ },
+ {
+  "md": 2,
+  "h": "lens",
+  "a": "sporting-cp",
+  "d": "2026-10-13"
+ },
+ {
+  "md": 2,
+  "h": "sabah-fk",
+  "a": "slavia-prague",
+  "d": "2026-10-13"
+ },
+ {
+  "md": 2,
+  "h": "arsenal",
+  "a": "lille",
+  "d": "2026-10-13"
+ },
+ {
+  "md": 2,
+  "h": "atletico-madrid",
+  "a": "manchester-united",
+  "d": "2026-10-13"
+ },
+ {
+  "md": 2,
+  "h": "galatasaray",
+  "a": "barcelona",
+  "d": "2026-10-13"
+ },
+ {
+  "md": 2,
+  "h": "inter",
+  "a": "club-brugge",
+  "d": "2026-10-13"
+ },
+ {
+  "md": 2,
+  "h": "rb-leipzig",
+  "a": "psv-eindhoven",
+  "d": "2026-10-13"
+ },
+ {
+  "md": 2,
+  "h": "viking",
+  "a": "bayern-munchen",
+  "d": "2026-10-13"
+ },
+ {
+  "md": 2,
+  "h": "villarreal",
+  "a": "napoli",
+  "d": "2026-10-13"
+ },
+ {
+  "md": 2,
+  "h": "feyenoord",
+  "a": "como",
+  "d": "2026-10-14"
+ },
+ {
+  "md": 2,
+  "h": "lask",
+  "a": "liverpool",
+  "d": "2026-10-14"
+ },
+ {
+  "md": 2,
+  "h": "aston-villa",
+  "a": "fenerbahce",
+  "d": "2026-10-14"
+ },
+ {
+  "md": 2,
+  "h": "bodo-glimt",
+  "a": "borussia-dortmund",
+  "d": "2026-10-14"
+ },
+ {
+  "md": 2,
+  "h": "manchester-city",
+  "a": "paris-saint-germain",
+  "d": "2026-10-14"
+ },
+ {
+  "md": 2,
+  "h": "real-betis",
+  "a": "fc-porto",
+  "d": "2026-10-14"
+ },
+ {
+  "md": 2,
+  "h": "roma",
+  "a": "real-madrid",
+  "d": "2026-10-14"
+ },
+ {
+  "md": 2,
+  "h": "shakhtar-donetsk",
+  "a": "aek-athens",
+  "d": "2026-10-14"
+ },
+ {
+  "md": 2,
+  "h": "slovan-bratislava",
+  "a": "vfb-stuttgart",
+  "d": "2026-10-14"
+ },
+ {
+  "md": 3,
+  "h": "fenerbahce",
+  "a": "slavia-prague",
+  "d": "2026-10-20"
+ },
+ {
+  "md": 3,
+  "h": "sabah-fk",
+  "a": "borussia-dortmund",
+  "d": "2026-10-20"
+ },
+ {
+  "md": 3,
+  "h": "fc-porto",
+  "a": "psv-eindhoven",
+  "d": "2026-10-20"
+ },
+ {
+  "md": 3,
+  "h": "liverpool",
+  "a": "villarreal",
+  "d": "2026-10-20"
+ },
+ {
+  "md": 3,
+  "h": "manchester-city",
+  "a": "aek-athens",
+  "d": "2026-10-20"
+ },
+ {
+  "md": 3,
+  "h": "paris-saint-germain",
+  "a": "barcelona",
+  "d": "2026-10-20"
+ },
+ {
+  "md": 3,
+  "h": "roma",
+  "a": "slovan-bratislava",
+  "d": "2026-10-20"
+ },
+ {
+  "md": 3,
+  "h": "napoli",
+  "a": "bodo-glimt",
+  "d": "2026-10-20"
+ },
+ {
+  "md": 3,
+  "h": "vfb-stuttgart",
+  "a": "atletico-madrid",
+  "d": "2026-10-20"
+ },
+ {
+  "md": 3,
+  "h": "como",
+  "a": "manchester-united",
+  "d": "2026-10-21"
+ },
+ {
+  "md": 3,
+  "h": "lille",
+  "a": "galatasaray",
+  "d": "2026-10-21"
+ },
+ {
+  "md": 3,
+  "h": "aston-villa",
+  "a": "viking",
+  "d": "2026-10-21"
+ },
+ {
+  "md": 3,
+  "h": "bayern-munchen",
+  "a": "arsenal",
+  "d": "2026-10-21"
+ },
+ {
+  "md": 3,
+  "h": "club-brugge",
+  "a": "lens",
+  "d": "2026-10-21"
+ },
+ {
+  "md": 3,
+  "h": "inter",
+  "a": "shakhtar-donetsk",
+  "d": "2026-10-21"
+ },
+ {
+  "md": 3,
+  "h": "real-betis",
+  "a": "feyenoord",
+  "d": "2026-10-21"
+ },
+ {
+  "md": 3,
+  "h": "real-madrid",
+  "a": "rb-leipzig",
+  "d": "2026-10-21"
+ },
+ {
+  "md": 3,
+  "h": "sporting-cp",
+  "a": "lask",
+  "d": "2026-10-21"
+ },
+ {
+  "md": 4,
+  "h": "galatasaray",
+  "a": "vfb-stuttgart",
+  "d": "2026-11-03"
+ },
+ {
+  "md": 4,
+  "h": "shakhtar-donetsk",
+  "a": "sporting-cp",
+  "d": "2026-11-03"
+ },
+ {
+  "md": 4,
+  "h": "atletico-madrid",
+  "a": "bayern-munchen",
+  "d": "2026-11-03"
+ },
+ {
+  "md": 4,
+  "h": "barcelona",
+  "a": "aston-villa",
+  "d": "2026-11-03"
+ },
+ {
+  "md": 4,
+  "h": "bodo-glimt",
+  "a": "lille",
+  "d": "2026-11-03"
+ },
+ {
+  "md": 4,
+  "h": "feyenoord",
+  "a": "inter",
+  "d": "2026-11-03"
+ },
+ {
+  "md": 4,
+  "h": "lask",
+  "a": "slovan-bratislava",
+  "d": "2026-11-03"
+ },
+ {
+  "md": 4,
+  "h": "manchester-united",
+  "a": "roma",
+  "d": "2026-11-03"
+ },
+ {
+  "md": 4,
+  "h": "villarreal",
+  "a": "paris-saint-germain",
+  "d": "2026-11-03"
+ },
+ {
+  "md": 4,
+  "h": "aek-athens",
+  "a": "real-madrid",
+  "d": "2026-11-04"
+ },
+ {
+  "md": 4,
+  "h": "fenerbahce",
+  "a": "liverpool",
+  "d": "2026-11-04"
+ },
+ {
+  "md": 4,
+  "h": "borussia-dortmund",
+  "a": "real-betis",
+  "d": "2026-11-04"
+ },
+ {
+  "md": 4,
+  "h": "fc-porto",
+  "a": "napoli",
+  "d": "2026-11-04"
+ },
+ {
+  "md": 4,
+  "h": "lens",
+  "a": "como",
+  "d": "2026-11-04"
+ },
+ {
+  "md": 4,
+  "h": "psv-eindhoven",
+  "a": "club-brugge",
+  "d": "2026-11-04"
+ },
+ {
+  "md": 4,
+  "h": "rb-leipzig",
+  "a": "manchester-city",
+  "d": "2026-11-04"
+ },
+ {
+  "md": 4,
+  "h": "slavia-prague",
+  "a": "arsenal",
+  "d": "2026-11-04"
+ },
+ {
+  "md": 4,
+  "h": "viking",
+  "a": "sabah-fk",
+  "d": "2026-11-04"
+ },
+ {
+  "md": 5,
+  "h": "bodo-glimt",
+  "a": "lask",
+  "d": "2026-11-24"
+ },
+ {
+  "md": 5,
+  "h": "galatasaray",
+  "a": "aston-villa",
+  "d": "2026-11-24"
+ },
+ {
+  "md": 5,
+  "h": "arsenal",
+  "a": "borussia-dortmund",
+  "d": "2026-11-24"
+ },
+ {
+  "md": 5,
+  "h": "como",
+  "a": "aek-athens",
+  "d": "2026-11-24"
+ },
+ {
+  "md": 5,
+  "h": "feyenoord",
+  "a": "fc-porto",
+  "d": "2026-11-24"
+ },
+ {
+  "md": 5,
+  "h": "manchester-city",
+  "a": "napoli",
+  "d": "2026-11-24"
+ },
+ {
+  "md": 5,
+  "h": "rb-leipzig",
+  "a": "lens",
+  "d": "2026-11-24"
+ },
+ {
+  "md": 5,
+  "h": "real-madrid",
+  "a": "psv-eindhoven",
+  "d": "2026-11-24"
+ },
+ {
+  "md": 5,
+  "h": "slovan-bratislava",
+  "a": "real-betis",
+  "d": "2026-11-24"
+ },
+ {
+  "md": 5,
+  "h": "sabah-fk",
+  "a": "barcelona",
+  "d": "2026-11-25"
+ },
+ {
+  "md": 5,
+  "h": "slavia-prague",
+  "a": "villarreal",
+  "d": "2026-11-25"
+ },
+ {
+  "md": 5,
+  "h": "atletico-madrid",
+  "a": "viking",
+  "d": "2026-11-25"
+ },
+ {
+  "md": 5,
+  "h": "club-brugge",
+  "a": "liverpool",
+  "d": "2026-11-25"
+ },
+ {
+  "md": 5,
+  "h": "inter",
+  "a": "vfb-stuttgart",
+  "d": "2026-11-25"
+ },
+ {
+  "md": 5,
+  "h": "lille",
+  "a": "bayern-munchen",
+  "d": "2026-11-25"
+ },
+ {
+  "md": 5,
+  "h": "paris-saint-germain",
+  "a": "roma",
+  "d": "2026-11-25"
+ },
+ {
+  "md": 5,
+  "h": "shakhtar-donetsk",
+  "a": "fenerbahce",
+  "d": "2026-11-25"
+ },
+ {
+  "md": 5,
+  "h": "sporting-cp",
+  "a": "manchester-united",
+  "d": "2026-11-25"
+ },
+ {
+  "md": 6,
+  "h": "viking",
+  "a": "feyenoord",
+  "d": "2026-12-08"
+ },
+ {
+  "md": 6,
+  "h": "villarreal",
+  "a": "sabah-fk",
+  "d": "2026-12-08"
+ },
+ {
+  "md": 6,
+  "h": "aek-athens",
+  "a": "galatasaray",
+  "d": "2026-12-08"
+ },
+ {
+  "md": 6,
+  "h": "aston-villa",
+  "a": "paris-saint-germain",
+  "d": "2026-12-08"
+ },
+ {
+  "md": 6,
+  "h": "barcelona",
+  "a": "manchester-city",
+  "d": "2026-12-08"
+ },
+ {
+  "md": 6,
+  "h": "bayern-munchen",
+  "a": "slavia-prague",
+  "d": "2026-12-08"
+ },
+ {
+  "md": 6,
+  "h": "manchester-united",
+  "a": "rb-leipzig",
+  "d": "2026-12-08"
+ },
+ {
+  "md": 6,
+  "h": "roma",
+  "a": "sporting-cp",
+  "d": "2026-12-08"
+ },
+ {
+  "md": 6,
+  "h": "napoli",
+  "a": "club-brugge",
+  "d": "2026-12-08"
+ },
+ {
+  "md": 6,
+  "h": "real-betis",
+  "a": "como",
+  "d": "2026-12-09"
+ },
+ {
+  "md": 6,
+  "h": "slovan-bratislava",
+  "a": "shakhtar-donetsk",
+  "d": "2026-12-09"
+ },
+ {
+  "md": 6,
+  "h": "arsenal",
+  "a": "real-madrid",
+  "d": "2026-12-09"
+ },
+ {
+  "md": 6,
+  "h": "borussia-dortmund",
+  "a": "inter",
+  "d": "2026-12-09"
+ },
+ {
+  "md": 6,
+  "h": "lask",
+  "a": "fenerbahce",
+  "d": "2026-12-09"
+ },
+ {
+  "md": 6,
+  "h": "lens",
+  "a": "bodo-glimt",
+  "d": "2026-12-09"
+ },
+ {
+  "md": 6,
+  "h": "liverpool",
+  "a": "fc-porto",
+  "d": "2026-12-09"
+ },
+ {
+  "md": 6,
+  "h": "psv-eindhoven",
+  "a": "atletico-madrid",
+  "d": "2026-12-09"
+ },
+ {
+  "md": 6,
+  "h": "vfb-stuttgart",
+  "a": "lille",
+  "d": "2026-12-09"
+ },
+ {
+  "md": 7,
+  "h": "bodo-glimt",
+  "a": "atletico-madrid",
+  "d": "2027-01-19"
+ },
+ {
+  "md": 7,
+  "h": "galatasaray",
+  "a": "feyenoord",
+  "d": "2027-01-19"
+ },
+ {
+  "md": 7,
+  "h": "aek-athens",
+  "a": "roma",
+  "d": "2027-01-19"
+ },
+ {
+  "md": 7,
+  "h": "aston-villa",
+  "a": "borussia-dortmund",
+  "d": "2027-01-19"
+ },
+ {
+  "md": 7,
+  "h": "fc-porto",
+  "a": "slavia-prague",
+  "d": "2027-01-19"
+ },
+ {
+  "md": 7,
+  "h": "inter",
+  "a": "liverpool",
+  "d": "2027-01-19"
+ },
+ {
+  "md": 7,
+  "h": "lille",
+  "a": "slovan-bratislava",
+  "d": "2027-01-19"
+ },
+ {
+  "md": 7,
+  "h": "real-madrid",
+  "a": "lask",
+  "d": "2027-01-19"
+ },
+ {
+  "md": 7,
+  "h": "vfb-stuttgart",
+  "a": "club-brugge",
+  "d": "2027-01-19"
+ },
+ {
+  "md": 7,
+  "h": "fenerbahce",
+  "a": "villarreal",
+  "d": "2027-01-20"
+ },
+ {
+  "md": 7,
+  "h": "sabah-fk",
+  "a": "napoli",
+  "d": "2027-01-20"
+ },
+ {
+  "md": 7,
+  "h": "como",
+  "a": "paris-saint-germain",
+  "d": "2027-01-20"
+ },
+ {
+  "md": 7,
+  "h": "lens",
+  "a": "manchester-city",
+  "d": "2027-01-20"
+ },
+ {
+  "md": 7,
+  "h": "manchester-united",
+  "a": "bayern-munchen",
+  "d": "2027-01-20"
+ },
+ {
+  "md": 7,
+  "h": "rb-leipzig",
+  "a": "shakhtar-donetsk",
+  "d": "2027-01-20"
+ },
+ {
+  "md": 7,
+  "h": "real-betis",
+  "a": "arsenal",
+  "d": "2027-01-20"
+ },
+ {
+  "md": 7,
+  "h": "sporting-cp",
+  "a": "barcelona",
+  "d": "2027-01-20"
+ },
+ {
+  "md": 7,
+  "h": "viking",
+  "a": "psv-eindhoven",
+  "d": "2027-01-20"
+ },
+ {
+  "md": 8,
+  "h": "arsenal",
+  "a": "sabah-fk",
+  "d": "2027-01-27"
+ },
+ {
+  "md": 8,
+  "h": "atletico-madrid",
+  "a": "fenerbahce",
+  "d": "2027-01-27"
+ },
+ {
+  "md": 8,
+  "h": "barcelona",
+  "a": "como",
+  "d": "2027-01-27"
+ },
+ {
+  "md": 8,
+  "h": "bayern-munchen",
+  "a": "real-betis",
+  "d": "2027-01-27"
+ },
+ {
+  "md": 8,
+  "h": "borussia-dortmund",
+  "a": "aek-athens",
+  "d": "2027-01-27"
+ },
+ {
+  "md": 8,
+  "h": "club-brugge",
+  "a": "bodo-glimt",
+  "d": "2027-01-27"
+ },
+ {
+  "md": 8,
+  "h": "feyenoord",
+  "a": "rb-leipzig",
+  "d": "2027-01-27"
+ },
+ {
+  "md": 8,
+  "h": "lask",
+  "a": "fc-porto",
+  "d": "2027-01-27"
+ },
+ {
+  "md": 8,
+  "h": "liverpool",
+  "a": "lens",
+  "d": "2027-01-27"
+ },
+ {
+  "md": 8,
+  "h": "manchester-city",
+  "a": "sporting-cp",
+  "d": "2027-01-27"
+ },
+ {
+  "md": 8,
+  "h": "paris-saint-germain",
+  "a": "galatasaray",
+  "d": "2027-01-27"
+ },
+ {
+  "md": 8,
+  "h": "psv-eindhoven",
+  "a": "vfb-stuttgart",
+  "d": "2027-01-27"
+ },
+ {
+  "md": 8,
+  "h": "roma",
+  "a": "lille",
+  "d": "2027-01-27"
+ },
+ {
+  "md": 8,
+  "h": "shakhtar-donetsk",
+  "a": "real-madrid",
+  "d": "2027-01-27"
+ },
+ {
+  "md": 8,
+  "h": "slavia-prague",
+  "a": "aston-villa",
+  "d": "2027-01-27"
+ },
+ {
+  "md": 8,
+  "h": "slovan-bratislava",
+  "a": "inter",
+  "d": "2027-01-27"
+ },
+ {
+  "md": 8,
+  "h": "napoli",
+  "a": "viking",
+  "d": "2027-01-27"
+ },
+ {
+  "md": 8,
+  "h": "villarreal",
+  "a": "manchester-united",
+  "d": "2027-01-27"
+ }
+]

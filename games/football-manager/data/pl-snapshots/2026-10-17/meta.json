@@ -1,0 +1,15 @@
+{
+ "source": "premierleague.com (footballapi.pulselive.com)",
+ "importedAt": "2026-10-17T06:37:54.018Z",
+ "season": 2026,
+ "seasonLabel": "2026/27",
+ "history": [
+  "2025/26",
+  "2024/25"
+ ],
+ "competition": {
+  "id": "england-premier-league",
+  "name": "Premier League",
+  "country": "Anh"
+ }
+}

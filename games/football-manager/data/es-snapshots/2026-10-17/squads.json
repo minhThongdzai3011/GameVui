@@ -1,0 +1,10874 @@
+[
+ {
+  "clubId": "barcelona",
+  "playerId": "joan-garcia",
+  "number": 1,
+  "ratingNow": 7.14,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "barcelona",
+  "playerId": "wojciech-szczesny",
+  "number": 13,
+  "ratingNow": 4.92,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "barcelona",
+  "playerId": "dominik-livakovic",
+  "number": 25,
+  "ratingNow": 6.79,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "barcelona",
+  "playerId": "joao-cancelo",
+  "number": 2,
+  "ratingNow": 6.7,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "barcelona",
+  "playerId": "alejandro-balde",
+  "number": 3,
+  "ratingNow": 6.64,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "barcelona",
+  "playerId": "pau-cubarsi",
+  "number": 5,
+  "ratingNow": 7.34,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "barcelona",
+  "playerId": "xavi-espart",
+  "number": 12,
+  "ratingNow": 7.91,
+  "goalsNow": 1,
+  "assistsNow": 2,
+  "deep": true
+ },
+ {
+  "clubId": "barcelona",
+  "playerId": "andreas-christensen",
+  "number": 15,
+  "ratingNow": 7.05,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "barcelona",
+  "playerId": "gerard-martin",
+  "number": 18,
+  "ratingNow": 7.39,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "barcelona",
+  "playerId": "jules-kounde",
+  "number": 23,
+  "ratingNow": 7.05,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "barcelona",
+  "playerId": "eric-garcia",
+  "number": 24,
+  "ratingNow": 7.47,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "barcelona",
+  "playerId": "brian-farinas",
+  "number": 4,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "barcelona",
+  "playerId": "gavi",
+  "number": 6,
+  "ratingNow": 6.81,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "barcelona",
+  "playerId": "fermin-lopez",
+  "number": 7,
+  "ratingNow": 7.63,
+  "goalsNow": 4,
+  "assistsNow": 2,
+  "deep": true
+ },
+ {
+  "clubId": "barcelona",
+  "playerId": "pedri",
+  "number": 8,
+  "ratingNow": 7.57,
+  "goalsNow": 1,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "barcelona",
+  "playerId": "rodri",
+  "number": 16,
+  "ratingNow": 7.64,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "barcelona",
+  "playerId": "dani-olmo",
+  "number": 20,
+  "ratingNow": 7.2,
+  "goalsNow": 0,
+  "assistsNow": 3,
+  "deep": true
+ },
+ {
+  "clubId": "barcelona",
+  "playerId": "frenkie-de-jong",
+  "number": 21,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "barcelona",
+  "playerId": "marc-bernal",
+  "number": 22,
+  "ratingNow": 7.14,
+  "goalsNow": 0,
+  "assistsNow": 2,
+  "deep": true
+ },
+ {
+  "clubId": "barcelona",
+  "playerId": "gabriel-jesus",
+  "number": 9,
+  "ratingNow": 7.68,
+  "goalsNow": 2,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "barcelona",
+  "playerId": "lamine-yamal",
+  "number": 10,
+  "ratingNow": 8.65,
+  "goalsNow": 7,
+  "assistsNow": 5,
+  "deep": true
+ },
+ {
+  "clubId": "barcelona",
+  "playerId": "raphinha",
+  "number": 11,
+  "ratingNow": 9.01,
+  "goalsNow": 12,
+  "assistsNow": 3,
+  "deep": true
+ },
+ {
+  "clubId": "barcelona",
+  "playerId": "karim-adeyemi",
+  "number": 14,
+  "ratingNow": 7.13,
+  "goalsNow": 2,
+  "assistsNow": 2,
+  "deep": true
+ },
+ {
+  "clubId": "barcelona",
+  "playerId": "anthony-gordon",
+  "number": 17,
+  "ratingNow": 7.61,
+  "goalsNow": 1,
+  "assistsNow": 4,
+  "deep": true
+ },
+ {
+  "clubId": "barcelona",
+  "playerId": "roony-bardghji",
+  "number": 19,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "barcelona",
+  "playerId": "jesse-bisiwu",
+  "number": 27,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "barcelona",
+  "playerId": "hamza-abdelkarim",
+  "number": 29,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "atletico-madrid",
+  "playerId": "juan-musso",
+  "number": 1,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "atletico-madrid",
+  "playerId": "jan-oblak",
+  "number": 13,
+  "ratingNow": 6.8,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "atletico-madrid",
+  "playerId": "salvi-esquivel",
+  "number": 25,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "atletico-madrid",
+  "playerId": "marcos-llorente",
+  "number": 14,
+  "ratingNow": 7.33,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "atletico-madrid",
+  "playerId": "david-hancko",
+  "number": 17,
+  "ratingNow": 7.38,
+  "goalsNow": 0,
+  "assistsNow": 2,
+  "deep": true
+ },
+ {
+  "clubId": "atletico-madrid",
+  "playerId": "marc-pubill",
+  "number": 18,
+  "ratingNow": 6.83,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "atletico-madrid",
+  "playerId": "cristian-romero",
+  "number": 21,
+  "ratingNow": 7.61,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "atletico-madrid",
+  "playerId": "robin-le-normand",
+  "number": 24,
+  "ratingNow": 6.99,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "atletico-madrid",
+  "playerId": "dani-martinez",
+  "number": 30,
+  "ratingNow": 7.51,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "atletico-madrid",
+  "playerId": "obed-vargas",
+  "number": 3,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "atletico-madrid",
+  "playerId": "rodrigo-mendoza",
+  "number": 4,
+  "ratingNow": 6.89,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "atletico-madrid",
+  "playerId": "johnny-cardoso",
+  "number": 5,
+  "ratingNow": 7,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "atletico-madrid",
+  "playerId": "koke",
+  "number": 6,
+  "ratingNow": 7.18,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "atletico-madrid",
+  "playerId": "pablo-barrios",
+  "number": 8,
+  "ratingNow": 7.43,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "atletico-madrid",
+  "playerId": "alex-baena",
+  "number": 10,
+  "ratingNow": 7.5,
+  "goalsNow": 4,
+  "assistsNow": 2,
+  "deep": true
+ },
+ {
+  "clubId": "atletico-madrid",
+  "playerId": "ademola-lookman",
+  "number": 11,
+  "ratingNow": 6.77,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "atletico-madrid",
+  "playerId": "giuliano-simeone",
+  "number": 20,
+  "ratingNow": 7.24,
+  "goalsNow": 2,
+  "assistsNow": 2,
+  "deep": true
+ },
+ {
+  "clubId": "atletico-madrid",
+  "playerId": "alejandro-grimaldo",
+  "number": 22,
+  "ratingNow": 7.8,
+  "goalsNow": 3,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "atletico-madrid",
+  "playerId": "morten-hjulmand",
+  "number": 23,
+  "ratingNow": 7.23,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "atletico-madrid",
+  "playerId": "kang-in-lee",
+  "number": 7,
+  "ratingNow": 7.45,
+  "goalsNow": 2,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "atletico-madrid",
+  "playerId": "alexander-sorloth",
+  "number": 9,
+  "ratingNow": 6.04,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "atletico-madrid",
+  "playerId": "jonathan-david",
+  "number": 15,
+  "ratingNow": 7.8,
+  "goalsNow": 3,
+  "assistsNow": 2,
+  "deep": true
+ },
+ {
+  "clubId": "atletico-madrid",
+  "playerId": "arnau-ortiz",
+  "number": 16,
+  "ratingNow": 6.27,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "atletico-madrid",
+  "playerId": "julian-alvarez",
+  "number": 19,
+  "ratingNow": 6.6,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-betis",
+  "playerId": "alvaro-valles",
+  "number": 1,
+  "ratingNow": 7.95,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-betis",
+  "playerId": "diego-conde",
+  "number": 13,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-betis",
+  "playerId": "hector-bellerin",
+  "number": 2,
+  "ratingNow": 6.64,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "real-betis",
+  "playerId": "diego-llorente",
+  "number": 3,
+  "ratingNow": 6.97,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-betis",
+  "playerId": "natan",
+  "number": 4,
+  "ratingNow": 7.38,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-betis",
+  "playerId": "marc-bartra",
+  "number": 5,
+  "ratingNow": 7.27,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-betis",
+  "playerId": "fran-garcia",
+  "number": 11,
+  "ratingNow": 7.19,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "real-betis",
+  "playerId": "angel-ortiz",
+  "number": 12,
+  "ratingNow": 7.4,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-betis",
+  "playerId": "valentin-gomez",
+  "number": 16,
+  "ratingNow": 7.39,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-betis",
+  "playerId": "junior-firpo",
+  "number": 23,
+  "ratingNow": 7.28,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-betis",
+  "playerId": "aitor-ruibal",
+  "number": 24,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-betis",
+  "playerId": "facundo-bernal",
+  "number": 6,
+  "ratingNow": 7.02,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-betis",
+  "playerId": "pablo-fornals",
+  "number": 8,
+  "ratingNow": 7.37,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-betis",
+  "playerId": "iker-losada",
+  "number": 14,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-betis",
+  "playerId": "alvaro-fidalgo",
+  "number": 15,
+  "ratingNow": 6.15,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-betis",
+  "playerId": "nelson-deossa",
+  "number": 18,
+  "ratingNow": 7.06,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "real-betis",
+  "playerId": "giovani-lo-celso",
+  "number": 20,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-betis",
+  "playerId": "marc-roca",
+  "number": 21,
+  "ratingNow": 7.44,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "real-betis",
+  "playerId": "isco",
+  "number": 22,
+  "ratingNow": 7.21,
+  "goalsNow": 2,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-betis",
+  "playerId": "dani-ceballos",
+  "number": 25,
+  "ratingNow": 6.67,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-betis",
+  "playerId": "dylan-vanney",
+  "number": null,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-betis",
+  "playerId": "antony",
+  "number": 7,
+  "ratingNow": 7.34,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-betis",
+  "playerId": "juan-hernandez",
+  "number": 9,
+  "ratingNow": 7.03,
+  "goalsNow": 2,
+  "assistsNow": 2,
+  "deep": true
+ },
+ {
+  "clubId": "real-betis",
+  "playerId": "abdessamad-ezzalzouli",
+  "number": 10,
+  "ratingNow": 7.39,
+  "goalsNow": 2,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-betis",
+  "playerId": "rodrigo-riquelme",
+  "number": 17,
+  "ratingNow": 6.99,
+  "goalsNow": 2,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-betis",
+  "playerId": "troy-parrott",
+  "number": 19,
+  "ratingNow": 7.01,
+  "goalsNow": 1,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "real-madrid",
+  "playerId": "thibaut-courtois",
+  "number": 1,
+  "ratingNow": 7.05,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-madrid",
+  "playerId": "andriy-lunin",
+  "number": 13,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-madrid",
+  "playerId": "raul-asencio",
+  "number": 2,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-madrid",
+  "playerId": "eder-militao",
+  "number": 3,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-madrid",
+  "playerId": "dean-huijsen",
+  "number": 4,
+  "ratingNow": 7.06,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-madrid",
+  "playerId": "trent-alexander-arnold",
+  "number": 12,
+  "ratingNow": 7.19,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "real-madrid",
+  "playerId": "ibrahima-konate",
+  "number": 16,
+  "ratingNow": 6.99,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-madrid",
+  "playerId": "marc-cucurella",
+  "number": 17,
+  "ratingNow": 6.88,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-madrid",
+  "playerId": "alvaro-carreras",
+  "number": 18,
+  "ratingNow": 7.45,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-madrid",
+  "playerId": "antonio-rudiger",
+  "number": 22,
+  "ratingNow": 7.42,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-madrid",
+  "playerId": "ferland-mendy",
+  "number": 23,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-madrid",
+  "playerId": "denzel-dumfries",
+  "number": 24,
+  "ratingNow": 6.95,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-madrid",
+  "playerId": "jude-bellingham",
+  "number": 5,
+  "ratingNow": 7.88,
+  "goalsNow": 3,
+  "assistsNow": 2,
+  "deep": true
+ },
+ {
+  "clubId": "real-madrid",
+  "playerId": "eduardo-camavinga",
+  "number": 6,
+  "ratingNow": 6.59,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-madrid",
+  "playerId": "federico-valverde",
+  "number": 8,
+  "ratingNow": 7.36,
+  "goalsNow": 0,
+  "assistsNow": 2,
+  "deep": true
+ },
+ {
+  "clubId": "real-madrid",
+  "playerId": "aurelien-tchouameni",
+  "number": 14,
+  "ratingNow": 7.04,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-madrid",
+  "playerId": "arda-guler",
+  "number": 15,
+  "ratingNow": 7.62,
+  "goalsNow": 1,
+  "assistsNow": 2,
+  "deep": true
+ },
+ {
+  "clubId": "real-madrid",
+  "playerId": "bernardo-silva",
+  "number": 20,
+  "ratingNow": 6.84,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "real-madrid",
+  "playerId": "thiago-pitarch",
+  "number": 27,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-madrid",
+  "playerId": "vinicius-junior",
+  "number": 7,
+  "ratingNow": 7.29,
+  "goalsNow": 1,
+  "assistsNow": 3,
+  "deep": true
+ },
+ {
+  "clubId": "real-madrid",
+  "playerId": "endrick",
+  "number": 9,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-madrid",
+  "playerId": "kylian-mbappe",
+  "number": 10,
+  "ratingNow": 8.09,
+  "goalsNow": 7,
+  "assistsNow": 2,
+  "deep": true
+ },
+ {
+  "clubId": "real-madrid",
+  "playerId": "rodrygo",
+  "number": 11,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-madrid",
+  "playerId": "carlos-espi",
+  "number": 19,
+  "ratingNow": 7.53,
+  "goalsNow": 2,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-madrid",
+  "playerId": "brahim-diaz",
+  "number": 21,
+  "ratingNow": 6.7,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-madrid",
+  "playerId": "yan-diomande",
+  "number": 25,
+  "ratingNow": 7.18,
+  "goalsNow": 1,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "sevilla",
+  "playerId": "odysseas-vlachodimos",
+  "number": 1,
+  "ratingNow": 6.78,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "sevilla",
+  "playerId": "fran-gonzalez",
+  "number": 13,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "sevilla",
+  "playerId": "juan-iglesias",
+  "number": 2,
+  "ratingNow": 7.09,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "sevilla",
+  "playerId": "julio-diaz",
+  "number": 3,
+  "ratingNow": 6.36,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "sevilla",
+  "playerId": "kike-salas",
+  "number": 4,
+  "ratingNow": 6.93,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "sevilla",
+  "playerId": "andres-lopez",
+  "number": 5,
+  "ratingNow": 6.81,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "sevilla",
+  "playerId": "arouna-sangante",
+  "number": 12,
+  "ratingNow": 6.11,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "sevilla",
+  "playerId": "fabio-cardoso",
+  "number": 15,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "sevilla",
+  "playerId": "gabriel-suazo",
+  "number": 17,
+  "ratingNow": 7.11,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "sevilla",
+  "playerId": "jose-angel-carmona",
+  "number": 22,
+  "ratingNow": 6.37,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "sevilla",
+  "playerId": "marcao",
+  "number": 23,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "sevilla",
+  "playerId": "lucien-agoume",
+  "number": 6,
+  "ratingNow": 7.1,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "sevilla",
+  "playerId": "giorgi-kochorashvili",
+  "number": 8,
+  "ratingNow": 6.84,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "sevilla",
+  "playerId": "peque-fernandez",
+  "number": 10,
+  "ratingNow": 6.86,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "sevilla",
+  "playerId": "manu-bueno",
+  "number": 14,
+  "ratingNow": 6.28,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "sevilla",
+  "playerId": "jon-guridi",
+  "number": 18,
+  "ratingNow": 6.69,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "sevilla",
+  "playerId": "youssouf-fofana",
+  "number": 24,
+  "ratingNow": 7.43,
+  "goalsNow": 1,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "sevilla",
+  "playerId": "nico-guillen",
+  "number": 27,
+  "ratingNow": 6.68,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "sevilla",
+  "playerId": "alfon-gonzalez",
+  "number": 7,
+  "ratingNow": 6.05,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "sevilla",
+  "playerId": "robbie-ure",
+  "number": 9,
+  "ratingNow": 6.65,
+  "goalsNow": 1,
+  "assistsNow": 2,
+  "deep": true
+ },
+ {
+  "clubId": "sevilla",
+  "playerId": "ruben-vargas",
+  "number": 11,
+  "ratingNow": 6.3,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "sevilla",
+  "playerId": "isaac-romero",
+  "number": 16,
+  "ratingNow": 6.51,
+  "goalsNow": 2,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "sevilla",
+  "playerId": "lucas-stassin",
+  "number": 19,
+  "ratingNow": 7.11,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "sevilla",
+  "playerId": "felix-correia",
+  "number": 20,
+  "ratingNow": 7.39,
+  "goalsNow": 1,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "sevilla",
+  "playerId": "chidera-ejuke",
+  "number": 21,
+  "ratingNow": 6.58,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "sevilla",
+  "playerId": "miguel-sierra",
+  "number": 30,
+  "ratingNow": 7.25,
+  "goalsNow": 2,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-sociedad",
+  "playerId": "alex-remiro",
+  "number": 1,
+  "ratingNow": 7.13,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-sociedad",
+  "playerId": "unai-marrero",
+  "number": 13,
+  "ratingNow": 7.88,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-sociedad",
+  "playerId": "jon-aramburu",
+  "number": 2,
+  "ratingNow": 7.2,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-sociedad",
+  "playerId": "aihen-munoz",
+  "number": 3,
+  "ratingNow": 6.22,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-sociedad",
+  "playerId": "igor-zubeldia",
+  "number": 5,
+  "ratingNow": 6.88,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-sociedad",
+  "playerId": "jon-martin",
+  "number": 6,
+  "ratingNow": 6.8,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-sociedad",
+  "playerId": "jon-pacheco",
+  "number": 16,
+  "ratingNow": 6.4,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-sociedad",
+  "playerId": "sergio-gomez",
+  "number": 17,
+  "ratingNow": 7.14,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-sociedad",
+  "playerId": "mamadou-sarr",
+  "number": 19,
+  "ratingNow": 7.11,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-sociedad",
+  "playerId": "alvaro-odriozola",
+  "number": 20,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-sociedad",
+  "playerId": "hector-fort",
+  "number": 22,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-sociedad",
+  "playerId": "luken-beitia",
+  "number": 34,
+  "ratingNow": 5.76,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-sociedad",
+  "playerId": "jon-gorrotxategi",
+  "number": 4,
+  "ratingNow": 6.58,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-sociedad",
+  "playerId": "benat-turrientes",
+  "number": 8,
+  "ratingNow": 6.93,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-sociedad",
+  "playerId": "carlos-soler",
+  "number": 18,
+  "ratingNow": 7.35,
+  "goalsNow": 1,
+  "assistsNow": 3,
+  "deep": true
+ },
+ {
+  "clubId": "real-sociedad",
+  "playerId": "yangel-herrera",
+  "number": 21,
+  "ratingNow": 6.73,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-sociedad",
+  "playerId": "luka-sucic",
+  "number": 24,
+  "ratingNow": 7.28,
+  "goalsNow": 3,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-sociedad",
+  "playerId": "ander-barrenetxea",
+  "number": 7,
+  "ratingNow": 6.83,
+  "goalsNow": 2,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "real-sociedad",
+  "playerId": "orri-oskarsson",
+  "number": 9,
+  "ratingNow": 6.09,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-sociedad",
+  "playerId": "mikel-oyarzabal",
+  "number": 10,
+  "ratingNow": 6.77,
+  "goalsNow": 0,
+  "assistsNow": 2,
+  "deep": true
+ },
+ {
+  "clubId": "real-sociedad",
+  "playerId": "goncalo-guedes",
+  "number": 11,
+  "ratingNow": 6.76,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-sociedad",
+  "playerId": "job-ochieng",
+  "number": 12,
+  "ratingNow": 6.75,
+  "goalsNow": 1,
+  "assistsNow": 3,
+  "deep": true
+ },
+ {
+  "clubId": "real-sociedad",
+  "playerId": "takefusa-kubo",
+  "number": 14,
+  "ratingNow": 6.44,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-sociedad",
+  "playerId": "pablo-marin",
+  "number": 15,
+  "ratingNow": 5.04,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-sociedad",
+  "playerId": "arsen-zakharyan",
+  "number": 23,
+  "ratingNow": 7.78,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-sociedad",
+  "playerId": "alex-marchal",
+  "number": 29,
+  "ratingNow": 6.1,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-sociedad",
+  "playerId": "arkaitz-mariezkurrena",
+  "number": 34,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "deportivo-alaves",
+  "playerId": "antonio-sivera",
+  "number": 1,
+  "ratingNow": 7.42,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "deportivo-alaves",
+  "playerId": "adrian-rodriguez",
+  "number": 13,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "deportivo-alaves",
+  "playerId": "nicolas-valentini",
+  "number": 2,
+  "ratingNow": 6.5,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "deportivo-alaves",
+  "playerId": "youssef-enriquez",
+  "number": 3,
+  "ratingNow": 6.52,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "deportivo-alaves",
+  "playerId": "facundo-garces",
+  "number": 5,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "deportivo-alaves",
+  "playerId": "hugo-novoa",
+  "number": 12,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "deportivo-alaves",
+  "playerId": "nahuel-tenaglia",
+  "number": 14,
+  "ratingNow": 7.06,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "deportivo-alaves",
+  "playerId": "ville-koski",
+  "number": 16,
+  "ratingNow": 6.86,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "deportivo-alaves",
+  "playerId": "jonny-otto",
+  "number": 17,
+  "ratingNow": 6.99,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "deportivo-alaves",
+  "playerId": "carlos-protesoni",
+  "number": 23,
+  "ratingNow": 6.5,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "deportivo-alaves",
+  "playerId": "denis-suarez",
+  "number": 4,
+  "ratingNow": 6.74,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "deportivo-alaves",
+  "playerId": "ander-guevara",
+  "number": 6,
+  "ratingNow": 6.79,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "deportivo-alaves",
+  "playerId": "angel-perez",
+  "number": 7,
+  "ratingNow": 6.95,
+  "goalsNow": 0,
+  "assistsNow": 3,
+  "deep": true
+ },
+ {
+  "clubId": "deportivo-alaves",
+  "playerId": "antonio-blanco",
+  "number": 8,
+  "ratingNow": 6.86,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "deportivo-alaves",
+  "playerId": "carles-alena",
+  "number": 10,
+  "ratingNow": 6.71,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "deportivo-alaves",
+  "playerId": "mikel-rodriguez",
+  "number": 18,
+  "ratingNow": 7.33,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "deportivo-alaves",
+  "playerId": "pablo-ibanez",
+  "number": 19,
+  "ratingNow": 6.99,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "deportivo-alaves",
+  "playerId": "abderrahman-rebbach",
+  "number": 21,
+  "ratingNow": 6.81,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "deportivo-alaves",
+  "playerId": "selu-diallo",
+  "number": 24,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "deportivo-alaves",
+  "playerId": "mariano-diaz",
+  "number": 9,
+  "ratingNow": 6.9,
+  "goalsNow": 3,
+  "assistsNow": 3,
+  "deep": true
+ },
+ {
+  "clubId": "deportivo-alaves",
+  "playerId": "toni-martinez",
+  "number": 11,
+  "ratingNow": 6.61,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "deportivo-alaves",
+  "playerId": "lucas-boye",
+  "number": 15,
+  "ratingNow": 7.22,
+  "goalsNow": 5,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "deportivo-alaves",
+  "playerId": "aitor-manas",
+  "number": 20,
+  "ratingNow": 6.36,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "deportivo-alaves",
+  "playerId": "miguel-rodriguez",
+  "number": 22,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "deportivo-alaves",
+  "playerId": "lander-pinillos",
+  "number": 28,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "deportivo-a-coruna",
+  "playerId": "german-parreno",
+  "number": 1,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "deportivo-a-coruna",
+  "playerId": "leo-roman",
+  "number": 13,
+  "ratingNow": 6.59,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "deportivo-a-coruna",
+  "playerId": "alvaro-fernandez",
+  "number": 25,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "deportivo-a-coruna",
+  "playerId": "adria-altimira",
+  "number": 2,
+  "ratingNow": 6.48,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "deportivo-a-coruna",
+  "playerId": "arnau-comas",
+  "number": 3,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "deportivo-a-coruna",
+  "playerId": "lucas-noubi",
+  "number": 4,
+  "ratingNow": 7.15,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "deportivo-a-coruna",
+  "playerId": "dani-barcia",
+  "number": 5,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "deportivo-a-coruna",
+  "playerId": "giacomo-quagliata",
+  "number": 12,
+  "ratingNow": 6.92,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "deportivo-a-coruna",
+  "playerId": "miguel-loureiro",
+  "number": 15,
+  "ratingNow": 6.92,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "deportivo-a-coruna",
+  "playerId": "angelino",
+  "number": 17,
+  "ratingNow": 5.98,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "deportivo-a-coruna",
+  "playerId": "jose-gimenez",
+  "number": 20,
+  "ratingNow": 6.64,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "deportivo-a-coruna",
+  "playerId": "bright-ede",
+  "number": 22,
+  "ratingNow": 6.65,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "deportivo-a-coruna",
+  "playerId": "ximo-navarro",
+  "number": 23,
+  "ratingNow": 6.8,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "deportivo-a-coruna",
+  "playerId": "marc-casado",
+  "number": 6,
+  "ratingNow": 6.42,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "deportivo-a-coruna",
+  "playerId": "diego-villares",
+  "number": 8,
+  "ratingNow": 6.86,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "deportivo-a-coruna",
+  "playerId": "riki-rodriguez",
+  "number": 14,
+  "ratingNow": 6.51,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "deportivo-a-coruna",
+  "playerId": "lorenzo-amatucci",
+  "number": 16,
+  "ratingNow": 6.93,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "deportivo-a-coruna",
+  "playerId": "luismi-cruz",
+  "number": 19,
+  "ratingNow": 6.98,
+  "goalsNow": 1,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "deportivo-a-coruna",
+  "playerId": "mario-soriano",
+  "number": 21,
+  "ratingNow": 7.07,
+  "goalsNow": 1,
+  "assistsNow": 2,
+  "deep": true
+ },
+ {
+  "clubId": "deportivo-a-coruna",
+  "playerId": "yayo",
+  "number": 36,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "deportivo-a-coruna",
+  "playerId": "noe",
+  "number": 37,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "deportivo-a-coruna",
+  "playerId": "pierre-emerick-aubameyang",
+  "number": 7,
+  "ratingNow": 7.7,
+  "goalsNow": 5,
+  "assistsNow": 2,
+  "deep": true
+ },
+ {
+  "clubId": "deportivo-a-coruna",
+  "playerId": "zakaria-eddahchouri",
+  "number": 9,
+  "ratingNow": 6.39,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "deportivo-a-coruna",
+  "playerId": "yeremay-hernandez",
+  "number": 10,
+  "ratingNow": 6.88,
+  "goalsNow": 1,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "deportivo-a-coruna",
+  "playerId": "david-mella",
+  "number": 11,
+  "ratingNow": 6.26,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "deportivo-a-coruna",
+  "playerId": "jonathan-asp",
+  "number": 18,
+  "ratingNow": 6.4,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "deportivo-a-coruna",
+  "playerId": "adama-traore",
+  "number": 24,
+  "ratingNow": 6.06,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "deportivo-a-coruna",
+  "playerId": "bil-nsongo",
+  "number": 32,
+  "ratingNow": 6.67,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "celta-vigo",
+  "playerId": "altay-bay-nd-r",
+  "number": 1,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "celta-vigo",
+  "playerId": "ionut-radu",
+  "number": 13,
+  "ratingNow": 7.26,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "celta-vigo",
+  "playerId": "ivan-villar",
+  "number": 25,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "celta-vigo",
+  "playerId": "carl-starfelt",
+  "number": 2,
+  "ratingNow": 7.22,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "celta-vigo",
+  "playerId": "marcos-alonso",
+  "number": 3,
+  "ratingNow": 7.16,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "celta-vigo",
+  "playerId": "abdoulaye-faye",
+  "number": 4,
+  "ratingNow": 5.98,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "celta-vigo",
+  "playerId": "alvaro-nunez",
+  "number": 15,
+  "ratingNow": 7.1,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "celta-vigo",
+  "playerId": "yoel-lago",
+  "number": 18,
+  "ratingNow": 6.97,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "celta-vigo",
+  "playerId": "javi-rodriguez",
+  "number": 20,
+  "ratingNow": 6.6,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "celta-vigo",
+  "playerId": "sebastian-caceres",
+  "number": 21,
+  "ratingNow": 7.41,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "celta-vigo",
+  "playerId": "javi-galan",
+  "number": 22,
+  "ratingNow": 6.73,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "celta-vigo",
+  "playerId": "sergio-carreira",
+  "number": 5,
+  "ratingNow": 6.69,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "celta-vigo",
+  "playerId": "ilaix-moriba",
+  "number": 6,
+  "ratingNow": 6.83,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "celta-vigo",
+  "playerId": "miguel-roman",
+  "number": 8,
+  "ratingNow": 7.32,
+  "goalsNow": 1,
+  "assistsNow": 2,
+  "deep": true
+ },
+ {
+  "clubId": "celta-vigo",
+  "playerId": "aleix-febas",
+  "number": 14,
+  "ratingNow": 6.37,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "celta-vigo",
+  "playerId": "javi-rueda",
+  "number": 17,
+  "ratingNow": 6.71,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "celta-vigo",
+  "playerId": "jones-el-abdellaoui",
+  "number": 39,
+  "ratingNow": 6.05,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "celta-vigo",
+  "playerId": "borja-iglesias",
+  "number": 7,
+  "ratingNow": 6.32,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "celta-vigo",
+  "playerId": "ferran-jutgla",
+  "number": 9,
+  "ratingNow": 6.43,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "celta-vigo",
+  "playerId": "iago-aspas",
+  "number": 10,
+  "ratingNow": 6.71,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "celta-vigo",
+  "playerId": "pablo-duran",
+  "number": 11,
+  "ratingNow": 6.64,
+  "goalsNow": 2,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "celta-vigo",
+  "playerId": "hugo-gonzalez",
+  "number": 16,
+  "ratingNow": 7.35,
+  "goalsNow": 1,
+  "assistsNow": 2,
+  "deep": true
+ },
+ {
+  "clubId": "celta-vigo",
+  "playerId": "williot-swedberg",
+  "number": 19,
+  "ratingNow": 6.35,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "celta-vigo",
+  "playerId": "hugo-alvarez",
+  "number": 23,
+  "ratingNow": 6.57,
+  "goalsNow": 0,
+  "assistsNow": 2,
+  "deep": true
+ },
+ {
+  "clubId": "celta-vigo",
+  "playerId": "couhaib-driouech",
+  "number": 24,
+  "ratingNow": 6.4,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "athletic-club",
+  "playerId": "unai-simon",
+  "number": 1,
+  "ratingNow": 7.05,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "athletic-club",
+  "playerId": "alex-padilla",
+  "number": 13,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "athletic-club",
+  "playerId": "unai-eguiluz",
+  "number": null,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "athletic-club",
+  "playerId": "daniel-vivian",
+  "number": 3,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "athletic-club",
+  "playerId": "aitor-paredes",
+  "number": 4,
+  "ratingNow": 7.13,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "athletic-club",
+  "playerId": "yeray-alvarez",
+  "number": 5,
+  "ratingNow": 6.76,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "athletic-club",
+  "playerId": "jesus-areso",
+  "number": 12,
+  "ratingNow": 6.55,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "athletic-club",
+  "playerId": "aymeric-laporte",
+  "number": 14,
+  "ratingNow": 6.95,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "athletic-club",
+  "playerId": "hugo-rincon",
+  "number": 15,
+  "ratingNow": 6.03,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "athletic-club",
+  "playerId": "yuri-berchiche",
+  "number": 17,
+  "ratingNow": 7.01,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "athletic-club",
+  "playerId": "johaneko-louis-jean",
+  "number": 31,
+  "ratingNow": 6.83,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "athletic-club",
+  "playerId": "benat-prados",
+  "number": 6,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "athletic-club",
+  "playerId": "oihan-sancet",
+  "number": 8,
+  "ratingNow": 6.97,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "athletic-club",
+  "playerId": "inigo-ruiz-de-galarreta",
+  "number": 16,
+  "ratingNow": 6.97,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "athletic-club",
+  "playerId": "mikel-jauregizar",
+  "number": 18,
+  "ratingNow": 6.59,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "athletic-club",
+  "playerId": "alejandro-rego",
+  "number": 20,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "athletic-club",
+  "playerId": "benat-gerenabarrena",
+  "number": 24,
+  "ratingNow": 6.72,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "athletic-club",
+  "playerId": "alvaro-djalo",
+  "number": 25,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "athletic-club",
+  "playerId": "peio-canales",
+  "number": 28,
+  "ratingNow": 6.42,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "athletic-club",
+  "playerId": "alex-berenguer",
+  "number": 7,
+  "ratingNow": 6.68,
+  "goalsNow": 1,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "athletic-club",
+  "playerId": "inaki-williams",
+  "number": 9,
+  "ratingNow": 6.59,
+  "goalsNow": 1,
+  "assistsNow": 2,
+  "deep": true
+ },
+ {
+  "clubId": "athletic-club",
+  "playerId": "nico-williams",
+  "number": 10,
+  "ratingNow": 6.99,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "athletic-club",
+  "playerId": "gorka-guruzeta",
+  "number": 11,
+  "ratingNow": 6.11,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "athletic-club",
+  "playerId": "maroan-sannadi",
+  "number": 21,
+  "ratingNow": 6.25,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "athletic-club",
+  "playerId": "nico-serrano",
+  "number": 22,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "athletic-club",
+  "playerId": "robert-navarro",
+  "number": 23,
+  "ratingNow": 7.17,
+  "goalsNow": 2,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "villarreal",
+  "playerId": "luiz-junior",
+  "number": 1,
+  "ratingNow": 5.77,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "villarreal",
+  "playerId": "peter-gulacsi",
+  "number": 25,
+  "ratingNow": 7.24,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "villarreal",
+  "playerId": "logan-costa",
+  "number": 2,
+  "ratingNow": 6.07,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "villarreal",
+  "playerId": "alex-freeman",
+  "number": 3,
+  "ratingNow": 7.34,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "villarreal",
+  "playerId": "pau-navarro",
+  "number": 6,
+  "ratingNow": 6.93,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "villarreal",
+  "playerId": "juan-foyth",
+  "number": 8,
+  "ratingNow": 7.11,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "villarreal",
+  "playerId": "renato-veiga",
+  "number": 12,
+  "ratingNow": 6.93,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "villarreal",
+  "playerId": "santiago-mourino",
+  "number": 15,
+  "ratingNow": 6.63,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "villarreal",
+  "playerId": "carlos-romero",
+  "number": 20,
+  "ratingNow": 6.95,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "villarreal",
+  "playerId": "sergi-cardona",
+  "number": 23,
+  "ratingNow": 6.71,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "villarreal",
+  "playerId": "alassane-diatta",
+  "number": 5,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "villarreal",
+  "playerId": "alberto-moleiro",
+  "number": 10,
+  "ratingNow": 7.25,
+  "goalsNow": 2,
+  "assistsNow": 3,
+  "deep": true
+ },
+ {
+  "clubId": "villarreal",
+  "playerId": "santi-comesana",
+  "number": 14,
+  "ratingNow": 6.66,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "villarreal",
+  "playerId": "carlos-macia",
+  "number": 16,
+  "ratingNow": 6.5,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "villarreal",
+  "playerId": "tajon-buchanan",
+  "number": 17,
+  "ratingNow": 6.9,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "villarreal",
+  "playerId": "pape-gueye",
+  "number": 18,
+  "ratingNow": 7.29,
+  "goalsNow": 3,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "villarreal",
+  "playerId": "nicolas-pepe",
+  "number": 19,
+  "ratingNow": 7.2,
+  "goalsNow": 2,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "villarreal",
+  "playerId": "nathan-saliba",
+  "number": 24,
+  "ratingNow": 6.87,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "villarreal",
+  "playerId": "gerard-moreno",
+  "number": 7,
+  "ratingNow": 6.92,
+  "goalsNow": 2,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "villarreal",
+  "playerId": "georges-mikautadze",
+  "number": 9,
+  "ratingNow": 6.97,
+  "goalsNow": 2,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "villarreal",
+  "playerId": "ilias-akhomach",
+  "number": 11,
+  "ratingNow": 6.67,
+  "goalsNow": 0,
+  "assistsNow": 2,
+  "deep": true
+ },
+ {
+  "clubId": "villarreal",
+  "playerId": "tani-oluwaseyi",
+  "number": 21,
+  "ratingNow": 6.2,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "villarreal",
+  "playerId": "ayoze-perez",
+  "number": 22,
+  "ratingNow": 6.85,
+  "goalsNow": 1,
+  "assistsNow": 2,
+  "deep": true
+ },
+ {
+  "clubId": "espanyol",
+  "playerId": "angel-fortuno",
+  "number": 1,
+  "ratingNow": 7.34,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "espanyol",
+  "playerId": "marko-dmitrovic",
+  "number": 13,
+  "ratingNow": 6.64,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "espanyol",
+  "playerId": "andoni-gorosabel",
+  "number": 2,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "espanyol",
+  "playerId": "quilindschy-hartman",
+  "number": 3,
+  "ratingNow": 7.03,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "espanyol",
+  "playerId": "clemens-riedel",
+  "number": 5,
+  "ratingNow": 6.8,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "espanyol",
+  "playerId": "leandro-cabrera",
+  "number": 6,
+  "ratingNow": 6.8,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "espanyol",
+  "playerId": "unai-nunez",
+  "number": 14,
+  "ratingNow": 6.99,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "espanyol",
+  "playerId": "vanja-drkusic",
+  "number": 16,
+  "ratingNow": 6.48,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "espanyol",
+  "playerId": "roger-hinojo",
+  "number": 21,
+  "ratingNow": 6.68,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "espanyol",
+  "playerId": "omar-el-hilali",
+  "number": 23,
+  "ratingNow": 6.85,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "espanyol",
+  "playerId": "urko-gonzalez",
+  "number": 4,
+  "ratingNow": 6.28,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "espanyol",
+  "playerId": "edu-exposito",
+  "number": 8,
+  "ratingNow": 7.17,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "espanyol",
+  "playerId": "pol-lozano",
+  "number": 10,
+  "ratingNow": 6.57,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "espanyol",
+  "playerId": "jofre-carreras",
+  "number": 17,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "espanyol",
+  "playerId": "gabriel-moscardo",
+  "number": 20,
+  "ratingNow": 5.94,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "espanyol",
+  "playerId": "rafel-bauza",
+  "number": 26,
+  "ratingNow": 6.32,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "espanyol",
+  "playerId": "javi-puado",
+  "number": 7,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "espanyol",
+  "playerId": "roberto-fernandez",
+  "number": 9,
+  "ratingNow": 7.33,
+  "goalsNow": 6,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "espanyol",
+  "playerId": "pere-milla",
+  "number": 11,
+  "ratingNow": 6.17,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "espanyol",
+  "playerId": "bryan-zaragoza",
+  "number": 15,
+  "ratingNow": 6.87,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "espanyol",
+  "playerId": "marcos-fernandez",
+  "number": 18,
+  "ratingNow": 6.75,
+  "goalsNow": 1,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "espanyol",
+  "playerId": "kike-garcia",
+  "number": 19,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "espanyol",
+  "playerId": "alex-calatrava",
+  "number": 22,
+  "ratingNow": 6.46,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "espanyol",
+  "playerId": "tyrhys-dolan",
+  "number": 24,
+  "ratingNow": 6.73,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "espanyol",
+  "playerId": "javi-hernandez",
+  "number": 28,
+  "ratingNow": 6.97,
+  "goalsNow": 0,
+  "assistsNow": 5,
+  "deep": true
+ },
+ {
+  "clubId": "rayo-vallecano",
+  "playerId": "dani-cardenas",
+  "number": 1,
+  "ratingNow": 6.19,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "rayo-vallecano",
+  "playerId": "augusto-batalla",
+  "number": 13,
+  "ratingNow": 6.66,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "rayo-vallecano",
+  "playerId": "emil-audero",
+  "number": 25,
+  "ratingNow": 6.73,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "rayo-vallecano",
+  "playerId": "andrei-ratiu",
+  "number": 2,
+  "ratingNow": 6.82,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "rayo-vallecano",
+  "playerId": "marash-kumbulla",
+  "number": 3,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "rayo-vallecano",
+  "playerId": "luiz-felipe",
+  "number": 5,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "rayo-vallecano",
+  "playerId": "mujaid-sadick",
+  "number": 15,
+  "ratingNow": 6.47,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "rayo-vallecano",
+  "playerId": "adria-pedrosa",
+  "number": 17,
+  "ratingNow": 6.98,
+  "goalsNow": 1,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "rayo-vallecano",
+  "playerId": "ivan-balliu",
+  "number": 20,
+  "ratingNow": 5.82,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "rayo-vallecano",
+  "playerId": "pelayo-fernandez",
+  "number": 22,
+  "ratingNow": 6.27,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "rayo-vallecano",
+  "playerId": "florian-lejeune",
+  "number": 24,
+  "ratingNow": 6.29,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "rayo-vallecano",
+  "playerId": "jozhua-vertrouwd",
+  "number": 33,
+  "ratingNow": 6,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "rayo-vallecano",
+  "playerId": "pedro-diaz",
+  "number": 4,
+  "ratingNow": 6.74,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "rayo-vallecano",
+  "playerId": "pathe-ciss",
+  "number": 6,
+  "ratingNow": 6.71,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "rayo-vallecano",
+  "playerId": "isi-palazon",
+  "number": 7,
+  "ratingNow": 6.29,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "rayo-vallecano",
+  "playerId": "unai-lopez",
+  "number": 8,
+  "ratingNow": 7.06,
+  "goalsNow": 0,
+  "assistsNow": 3,
+  "deep": true
+ },
+ {
+  "clubId": "rayo-vallecano",
+  "playerId": "oscar-valentin",
+  "number": 23,
+  "ratingNow": 6.59,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "rayo-vallecano",
+  "playerId": "gnangoro-bouare",
+  "number": 36,
+  "ratingNow": 6.6,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "rayo-vallecano",
+  "playerId": "raul-de-tomas",
+  "number": null,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "rayo-vallecano",
+  "playerId": "alemao",
+  "number": 9,
+  "ratingNow": 5.98,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "rayo-vallecano",
+  "playerId": "sergio-camello",
+  "number": 10,
+  "ratingNow": 7.55,
+  "goalsNow": 7,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "rayo-vallecano",
+  "playerId": "randy-nteka",
+  "number": 11,
+  "ratingNow": 6.17,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "rayo-vallecano",
+  "playerId": "giorgi-tsitaishvili",
+  "number": 14,
+  "ratingNow": 6.22,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "rayo-vallecano",
+  "playerId": "alvaro-garcia",
+  "number": 18,
+  "ratingNow": 6.87,
+  "goalsNow": 2,
+  "assistsNow": 2,
+  "deep": true
+ },
+ {
+  "clubId": "rayo-vallecano",
+  "playerId": "jorge-de-frutos",
+  "number": 19,
+  "ratingNow": 6.51,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "rayo-vallecano",
+  "playerId": "fran-perez",
+  "number": 21,
+  "ratingNow": 6.05,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "rayo-vallecano",
+  "playerId": "rayane-belaid",
+  "number": 37,
+  "ratingNow": 5.97,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "getafe",
+  "playerId": "jiri-letacek",
+  "number": 1,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "getafe",
+  "playerId": "david-soria",
+  "number": 13,
+  "ratingNow": 7.18,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "getafe",
+  "playerId": "djene",
+  "number": 2,
+  "ratingNow": 6.78,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "getafe",
+  "playerId": "davinchi",
+  "number": 3,
+  "ratingNow": 6.23,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "getafe",
+  "playerId": "saba-sazonov",
+  "number": 4,
+  "ratingNow": 6.98,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "getafe",
+  "playerId": "abdelkabir-abqar",
+  "number": 5,
+  "ratingNow": 6.11,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "getafe",
+  "playerId": "nemanja-gudelj",
+  "number": 8,
+  "ratingNow": 6.47,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "getafe",
+  "playerId": "daniel-carvajal",
+  "number": 14,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "getafe",
+  "playerId": "sebastian-boselli",
+  "number": 15,
+  "ratingNow": 6.43,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "getafe",
+  "playerId": "kiko",
+  "number": 17,
+  "ratingNow": 5.91,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "getafe",
+  "playerId": "andres-garcia",
+  "number": 21,
+  "ratingNow": 6.88,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "getafe",
+  "playerId": "johan-mojica",
+  "number": 22,
+  "ratingNow": 6.94,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "getafe",
+  "playerId": "zaid-abner-romero",
+  "number": 24,
+  "ratingNow": 6.8,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "getafe",
+  "playerId": "jean-ives-valou",
+  "number": 26,
+  "ratingNow": 6.01,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "getafe",
+  "playerId": "mario-martin",
+  "number": 6,
+  "ratingNow": 6.09,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "getafe",
+  "playerId": "ramon-terrats",
+  "number": 11,
+  "ratingNow": 7.2,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "getafe",
+  "playerId": "francho-serrano",
+  "number": 16,
+  "ratingNow": 6.4,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "getafe",
+  "playerId": "orel-mangala",
+  "number": 23,
+  "ratingNow": 6.55,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "getafe",
+  "playerId": "alberto-risco",
+  "number": 28,
+  "ratingNow": 5.93,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "getafe",
+  "playerId": "juanmi",
+  "number": 7,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "getafe",
+  "playerId": "borja-mayoral",
+  "number": 9,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "getafe",
+  "playerId": "martin-satriano",
+  "number": 10,
+  "ratingNow": 6.59,
+  "goalsNow": 1,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "getafe",
+  "playerId": "christantus-uche",
+  "number": 18,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "getafe",
+  "playerId": "enes-unal",
+  "number": 19,
+  "ratingNow": 6.4,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "getafe",
+  "playerId": "ivan-azon",
+  "number": 20,
+  "ratingNow": 6.75,
+  "goalsNow": 1,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "racing-santander",
+  "playerId": "simon-eriksson",
+  "number": 1,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "racing-santander",
+  "playerId": "julen-agirrezabala",
+  "number": 13,
+  "ratingNow": 6.68,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "racing-santander",
+  "playerId": "alvaro-mantilla",
+  "number": 2,
+  "ratingNow": 6.58,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "racing-santander",
+  "playerId": "manu",
+  "number": 4,
+  "ratingNow": 6.17,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "racing-santander",
+  "playerId": "pablo-ramon",
+  "number": 5,
+  "ratingNow": 6.92,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "racing-santander",
+  "playerId": "facundo-gonzalez",
+  "number": 16,
+  "ratingNow": 5.92,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "racing-santander",
+  "playerId": "jorge-salinas",
+  "number": 17,
+  "ratingNow": 7.13,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "racing-santander",
+  "playerId": "pedro-felipe",
+  "number": 22,
+  "ratingNow": 5.27,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "racing-santander",
+  "playerId": "jeanuel-belocian",
+  "number": 24,
+  "ratingNow": 6.36,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "racing-santander",
+  "playerId": "aaron-martin",
+  "number": 3,
+  "ratingNow": 5.79,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "racing-santander",
+  "playerId": "inigo-sainz-maza",
+  "number": 6,
+  "ratingNow": 6.54,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "racing-santander",
+  "playerId": "andre-almeida",
+  "number": 8,
+  "ratingNow": 6.39,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "racing-santander",
+  "playerId": "maguette-gueye",
+  "number": 14,
+  "ratingNow": 6.52,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "racing-santander",
+  "playerId": "matteo-prati",
+  "number": 18,
+  "ratingNow": 6.79,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "racing-santander",
+  "playerId": "sergio-canales",
+  "number": 20,
+  "ratingNow": 6.71,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "racing-santander",
+  "playerId": "ivan-martin",
+  "number": 23,
+  "ratingNow": 7.14,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "racing-santander",
+  "playerId": "giorgi-guliashvili",
+  "number": 7,
+  "ratingNow": 6.1,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "racing-santander",
+  "playerId": "juan-carlos-arana",
+  "number": 9,
+  "ratingNow": 6.44,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "racing-santander",
+  "playerId": "inigo-vicente",
+  "number": 10,
+  "ratingNow": 7.47,
+  "goalsNow": 0,
+  "assistsNow": 3,
+  "deep": true
+ },
+ {
+  "clubId": "racing-santander",
+  "playerId": "andres-martin",
+  "number": 11,
+  "ratingNow": 7.01,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "racing-santander",
+  "playerId": "asier-villalibre",
+  "number": 12,
+  "ratingNow": 6.09,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "racing-santander",
+  "playerId": "pablo-garcia",
+  "number": 15,
+  "ratingNow": 6.56,
+  "goalsNow": 2,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "racing-santander",
+  "playerId": "iker-luque",
+  "number": 19,
+  "ratingNow": 6.09,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "racing-santander",
+  "playerId": "yassir-zabiri",
+  "number": 21,
+  "ratingNow": 7.13,
+  "goalsNow": 7,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "osasuna",
+  "playerId": "sergio-herrera",
+  "number": 1,
+  "ratingNow": 6.28,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "osasuna",
+  "playerId": "aitor-fernandez",
+  "number": 13,
+  "ratingNow": 6.32,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "osasuna",
+  "playerId": "jorge-herrando",
+  "number": 5,
+  "ratingNow": 6.83,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "osasuna",
+  "playerId": "diego-rico",
+  "number": 15,
+  "ratingNow": 6.1,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "osasuna",
+  "playerId": "valentin-rosier",
+  "number": 19,
+  "ratingNow": 6.54,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "osasuna",
+  "playerId": "flavien-boyomo",
+  "number": 22,
+  "ratingNow": 5.94,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "osasuna",
+  "playerId": "abel-bretones",
+  "number": 23,
+  "ratingNow": 6.35,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "osasuna",
+  "playerId": "alejandro-catena",
+  "number": 24,
+  "ratingNow": 6.37,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "osasuna",
+  "playerId": "inigo-arguibide",
+  "number": 27,
+  "ratingNow": 6.28,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "osasuna",
+  "playerId": "asier-osambela",
+  "number": 29,
+  "ratingNow": 6.54,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "osasuna",
+  "playerId": "unai-santos",
+  "number": 35,
+  "ratingNow": 5.53,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "osasuna",
+  "playerId": "rockson-yeboah",
+  "number": 48,
+  "ratingNow": 6.38,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "osasuna",
+  "playerId": "lucas-torro",
+  "number": 6,
+  "ratingNow": 6.46,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "osasuna",
+  "playerId": "jon-moncayola",
+  "number": 7,
+  "ratingNow": 6.51,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "osasuna",
+  "playerId": "iker-munoz",
+  "number": 8,
+  "ratingNow": 6.49,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "osasuna",
+  "playerId": "aimar-oroz",
+  "number": 10,
+  "ratingNow": 6.57,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "osasuna",
+  "playerId": "moi-gomez",
+  "number": 16,
+  "ratingNow": 7.07,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "osasuna",
+  "playerId": "raul-garcia",
+  "number": 9,
+  "ratingNow": 6.53,
+  "goalsNow": 1,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "osasuna",
+  "playerId": "enrique-barja",
+  "number": 11,
+  "ratingNow": 6.49,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "osasuna",
+  "playerId": "ruben-garcia",
+  "number": 14,
+  "ratingNow": 6.78,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "osasuna",
+  "playerId": "ante-budimir",
+  "number": 17,
+  "ratingNow": 7.3,
+  "goalsNow": 6,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "osasuna",
+  "playerId": "raul-moro",
+  "number": 18,
+  "ratingNow": 6.2,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "osasuna",
+  "playerId": "romain-del-castillo",
+  "number": 20,
+  "ratingNow": 6.27,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "osasuna",
+  "playerId": "jonathan-dubasin",
+  "number": 21,
+  "ratingNow": 6.17,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "levante",
+  "playerId": "pablo-campos",
+  "number": 1,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "levante",
+  "playerId": "mathew-ryan",
+  "number": 13,
+  "ratingNow": 6.91,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "levante",
+  "playerId": "aissa-mandi",
+  "number": 2,
+  "ratingNow": 6.76,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "levante",
+  "playerId": "ifeanyi-ndukwe",
+  "number": 3,
+  "ratingNow": 6.42,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "levante",
+  "playerId": "adrian-de-la-fuente",
+  "number": 4,
+  "ratingNow": 6.96,
+  "goalsNow": 2,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "levante",
+  "playerId": "jorge-cabello",
+  "number": 14,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "levante",
+  "playerId": "axel-tape",
+  "number": 16,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "levante",
+  "playerId": "jeremy-toljan",
+  "number": 22,
+  "ratingNow": 6.16,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "levante",
+  "playerId": "manuel-sanchez",
+  "number": 23,
+  "ratingNow": 6.64,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "levante",
+  "playerId": "nacho-perez",
+  "number": 29,
+  "ratingNow": 6.6,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "levante",
+  "playerId": "marc-santos",
+  "number": 33,
+  "ratingNow": 6.35,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "levante",
+  "playerId": "hugo-sotelo",
+  "number": 5,
+  "ratingNow": 6.27,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "levante",
+  "playerId": "dani-requena",
+  "number": 6,
+  "ratingNow": 6.72,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "levante",
+  "playerId": "jon-olasagasti",
+  "number": 8,
+  "ratingNow": 6.85,
+  "goalsNow": 1,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "levante",
+  "playerId": "enzo-bardeli",
+  "number": 18,
+  "ratingNow": 6.71,
+  "goalsNow": 1,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "levante",
+  "playerId": "oriol-rey",
+  "number": 20,
+  "ratingNow": 6.43,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "levante",
+  "playerId": "jorge-de-asis",
+  "number": null,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "levante",
+  "playerId": "roger-brugue",
+  "number": 7,
+  "ratingNow": 7.18,
+  "goalsNow": 3,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "levante",
+  "playerId": "ivan-romero",
+  "number": 9,
+  "ratingNow": 6.98,
+  "goalsNow": 3,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "levante",
+  "playerId": "petar-ratkov",
+  "number": 10,
+  "ratingNow": 6.34,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "levante",
+  "playerId": "yanis-musuayi",
+  "number": 11,
+  "ratingNow": 6.12,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "levante",
+  "playerId": "victor-garcia",
+  "number": 17,
+  "ratingNow": 6.24,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "levante",
+  "playerId": "etta-eyong",
+  "number": 21,
+  "ratingNow": 6.3,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "levante",
+  "playerId": "thiago-fernandez",
+  "number": 24,
+  "ratingNow": 6.7,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "levante",
+  "playerId": "paco-cortes",
+  "number": 27,
+  "ratingNow": 6.14,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "elche",
+  "playerId": "matias-dituro",
+  "number": 1,
+  "ratingNow": 6.07,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "elche",
+  "playerId": "alejandro-iturbe",
+  "number": 13,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "elche",
+  "playerId": "buba-sangare",
+  "number": 2,
+  "ratingNow": 6.31,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "elche",
+  "playerId": "roy-revivo",
+  "number": 3,
+  "ratingNow": 7.13,
+  "goalsNow": 0,
+  "assistsNow": 2,
+  "deep": true
+ },
+ {
+  "clubId": "elche",
+  "playerId": "bambo-diaby",
+  "number": 4,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "elche",
+  "playerId": "federico-redondo",
+  "number": 5,
+  "ratingNow": 6.67,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "elche",
+  "playerId": "pedro-bigas",
+  "number": 6,
+  "ratingNow": 5.48,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "elche",
+  "playerId": "kevin-lomonaco",
+  "number": 15,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "elche",
+  "playerId": "ruben-sanchez",
+  "number": 22,
+  "ratingNow": 6.82,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "elche",
+  "playerId": "victor-chust",
+  "number": 23,
+  "ratingNow": 6.48,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "elche",
+  "playerId": "matia-barzic",
+  "number": 26,
+  "ratingNow": 6.2,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "elche",
+  "playerId": "marc-aguado",
+  "number": 8,
+  "ratingNow": 6.69,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "elche",
+  "playerId": "facundo-buonanotte",
+  "number": 10,
+  "ratingNow": 6.62,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "elche",
+  "playerId": "german-valera",
+  "number": 11,
+  "ratingNow": 6.9,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "elche",
+  "playerId": "gonzalo-villar",
+  "number": 12,
+  "ratingNow": 6.98,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "elche",
+  "playerId": "martim-neto",
+  "number": 16,
+  "ratingNow": 6.44,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "elche",
+  "playerId": "thomas-lemar",
+  "number": 18,
+  "ratingNow": 6.99,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "elche",
+  "playerId": "grady-diangana",
+  "number": 19,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "elche",
+  "playerId": "ali-houary",
+  "number": 29,
+  "ratingNow": 6.12,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "elche",
+  "playerId": "javi-morcillo",
+  "number": 47,
+  "ratingNow": 6.75,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "elche",
+  "playerId": "yago-santiago",
+  "number": 7,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "elche",
+  "playerId": "ezequiel-ponce",
+  "number": 9,
+  "ratingNow": 6.24,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "elche",
+  "playerId": "fer-nino",
+  "number": 14,
+  "ratingNow": 7.04,
+  "goalsNow": 5,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "elche",
+  "playerId": "josan",
+  "number": 17,
+  "ratingNow": 6.86,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "elche",
+  "playerId": "tete-morente",
+  "number": 20,
+  "ratingNow": 6.68,
+  "goalsNow": 0,
+  "assistsNow": 3,
+  "deep": true
+ },
+ {
+  "clubId": "elche",
+  "playerId": "lucas-cepeda",
+  "number": 21,
+  "ratingNow": 6.89,
+  "goalsNow": 0,
+  "assistsNow": 2,
+  "deep": true
+ },
+ {
+  "clubId": "elche",
+  "playerId": "abiel-osorio",
+  "number": 24,
+  "ratingNow": 6.34,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "elche",
+  "playerId": "adam-boayar",
+  "number": 32,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "valencia",
+  "playerId": "stole-dimitrievski",
+  "number": 1,
+  "ratingNow": 6.91,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "valencia",
+  "playerId": "cristian-rivero",
+  "number": 13,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "valencia",
+  "playerId": "kayne-van-oevelen",
+  "number": 25,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "valencia",
+  "playerId": "jose-copete",
+  "number": 3,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "valencia",
+  "playerId": "mouctar-diakhaby",
+  "number": 4,
+  "ratingNow": 6.14,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "valencia",
+  "playerId": "cesar-tarrega",
+  "number": 5,
+  "ratingNow": 6.42,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "valencia",
+  "playerId": "justin-de-haas",
+  "number": 12,
+  "ratingNow": 7,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "valencia",
+  "playerId": "jose-gaya",
+  "number": 14,
+  "ratingNow": 6.93,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "valencia",
+  "playerId": "dimitri-foulquier",
+  "number": 20,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "valencia",
+  "playerId": "jesus-vazquez",
+  "number": 21,
+  "ratingNow": 6.44,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "valencia",
+  "playerId": "arnau-martinez",
+  "number": 22,
+  "ratingNow": 5.48,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "valencia",
+  "playerId": "pablo-maffeo",
+  "number": 24,
+  "ratingNow": 6.57,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "valencia",
+  "playerId": "iker-cordoba",
+  "number": 36,
+  "ratingNow": 6.39,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "valencia",
+  "playerId": "guido-rodriguez",
+  "number": 2,
+  "ratingNow": 7.3,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "valencia",
+  "playerId": "arnaut-danjuma",
+  "number": 7,
+  "ratingNow": 6.55,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "valencia",
+  "playerId": "javier-guerra",
+  "number": 8,
+  "ratingNow": 6.64,
+  "goalsNow": 0,
+  "assistsNow": 2,
+  "deep": true
+ },
+ {
+  "clubId": "valencia",
+  "playerId": "harvey-elliott",
+  "number": 10,
+  "ratingNow": 6.34,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "valencia",
+  "playerId": "luis-rioja",
+  "number": 11,
+  "ratingNow": 6.71,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "valencia",
+  "playerId": "aliou-dieng",
+  "number": 15,
+  "ratingNow": 6.51,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "valencia",
+  "playerId": "pepelu",
+  "number": 18,
+  "ratingNow": 6.65,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "valencia",
+  "playerId": "dani-raba",
+  "number": 19,
+  "ratingNow": 7.19,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "valencia",
+  "playerId": "filip-ugrinic",
+  "number": 23,
+  "ratingNow": 6.61,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "valencia",
+  "playerId": "david-otorbi",
+  "number": 27,
+  "ratingNow": 6.77,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "valencia",
+  "playerId": "aaron-mayol",
+  "number": 33,
+  "ratingNow": 7.3,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "valencia",
+  "playerId": "ryunosuke-sato",
+  "number": 39,
+  "ratingNow": 5.97,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "valencia",
+  "playerId": "sergi-canos",
+  "number": null,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "valencia",
+  "playerId": "umar-sadiq",
+  "number": 6,
+  "ratingNow": 6.46,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "valencia",
+  "playerId": "hugo-duro",
+  "number": 9,
+  "ratingNow": 6.33,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "valencia",
+  "playerId": "diego-lopez",
+  "number": 16,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "malaga",
+  "playerId": "alfonso-herrero",
+  "number": 1,
+  "ratingNow": 6.81,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "malaga",
+  "playerId": "carlos-lopez",
+  "number": 13,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "malaga",
+  "playerId": "carlos-puga",
+  "number": 3,
+  "ratingNow": 6.88,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "malaga",
+  "playerId": "einar-galilea",
+  "number": 4,
+  "ratingNow": 6.67,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "malaga",
+  "playerId": "alex-pastor",
+  "number": 5,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "malaga",
+  "playerId": "jose-salinas",
+  "number": 12,
+  "ratingNow": 6.53,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "malaga",
+  "playerId": "diego-murillo",
+  "number": 16,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "malaga",
+  "playerId": "dani-sanchez",
+  "number": 18,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "malaga",
+  "playerId": "fernando-calero",
+  "number": 20,
+  "ratingNow": 6.55,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "malaga",
+  "playerId": "juan-berrocal",
+  "number": 25,
+  "ratingNow": 7.13,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "malaga",
+  "playerId": "rafita",
+  "number": 31,
+  "ratingNow": 7.1,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "malaga",
+  "playerId": "adam-aznou",
+  "number": 39,
+  "ratingNow": 6.35,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "malaga",
+  "playerId": "jens-lys-cajuste",
+  "number": 2,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "malaga",
+  "playerId": "ramon-enriquez",
+  "number": 6,
+  "ratingNow": 6.48,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "malaga",
+  "playerId": "haitam-abaida",
+  "number": 7,
+  "ratingNow": 6.33,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "malaga",
+  "playerId": "carlos-dotor",
+  "number": 8,
+  "ratingNow": 6.89,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "malaga",
+  "playerId": "david-larrubia",
+  "number": 10,
+  "ratingNow": 6.76,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "malaga",
+  "playerId": "joaquin-munoz",
+  "number": 11,
+  "ratingNow": 6.28,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "malaga",
+  "playerId": "rafa-rodriguez",
+  "number": 14,
+  "ratingNow": 6.45,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "malaga",
+  "playerId": "pablo-martinez",
+  "number": 18,
+  "ratingNow": 6.8,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "malaga",
+  "playerId": "dani-lorenzo",
+  "number": 22,
+  "ratingNow": 6.84,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "malaga",
+  "playerId": "izan-merino",
+  "number": 23,
+  "ratingNow": 6.32,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "malaga",
+  "playerId": "aaron-ochoa",
+  "number": 35,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "malaga",
+  "playerId": "chupe",
+  "number": 9,
+  "ratingNow": 6.48,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "malaga",
+  "playerId": "eneko-jauregi",
+  "number": 17,
+  "ratingNow": 5.8,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "malaga",
+  "playerId": "juan-cruz",
+  "number": 19,
+  "ratingNow": 6.3,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "malaga",
+  "playerId": "adrian-nino",
+  "number": 21,
+  "ratingNow": 6.57,
+  "goalsNow": 2,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "malaga",
+  "playerId": "julen-lobete",
+  "number": 24,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "almeria",
+  "playerId": "andres-fernandez",
+  "number": 1,
+  "ratingNow": 7.41,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "almeria",
+  "playerId": "fernando-martinez",
+  "number": 13,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "almeria",
+  "playerId": "jesus-lopez",
+  "number": 30,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "almeria",
+  "playerId": "aron-yaakobishvili",
+  "number": 31,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "almeria",
+  "playerId": "marcos-luna",
+  "number": 2,
+  "ratingNow": 6.9,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "almeria",
+  "playerId": "alex-munoz",
+  "number": 3,
+  "ratingNow": 7.01,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "almeria",
+  "playerId": "jorge-pulido",
+  "number": 5,
+  "ratingNow": 6.9,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "almeria",
+  "playerId": "federico-bonini",
+  "number": 18,
+  "ratingNow": 7.06,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "almeria",
+  "playerId": "rodrigo-ely",
+  "number": 19,
+  "ratingNow": 7.09,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "almeria",
+  "playerId": "chumi",
+  "number": 21,
+  "ratingNow": 7.25,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "almeria",
+  "playerId": "daijiro-chirino",
+  "number": 22,
+  "ratingNow": 6.78,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "almeria",
+  "playerId": "andrej-popovic",
+  "number": 32,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "almeria",
+  "playerId": "pedro-cedillo",
+  "number": 32,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "almeria",
+  "playerId": "mikel-vesga",
+  "number": 6,
+  "ratingNow": 6.66,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "almeria",
+  "playerId": "gui-guedes",
+  "number": 8,
+  "ratingNow": 7.69,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "almeria",
+  "playerId": "sergio-arribas",
+  "number": 11,
+  "ratingNow": 7.2,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "almeria",
+  "playerId": "javi-munoz",
+  "number": 14,
+  "ratingNow": 7.49,
+  "goalsNow": 2,
+  "assistsNow": 2,
+  "deep": true
+ },
+ {
+  "clubId": "almeria",
+  "playerId": "leonardo-lelo",
+  "number": 15,
+  "ratingNow": 6.99,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "almeria",
+  "playerId": "brian-cipenga",
+  "number": 17,
+  "ratingNow": 7.64,
+  "goalsNow": 2,
+  "assistsNow": 4,
+  "deep": true
+ },
+ {
+  "clubId": "almeria",
+  "playerId": "kassoum-kone",
+  "number": 26,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "almeria",
+  "playerId": "stefan-dzodic",
+  "number": 29,
+  "ratingNow": 7.36,
+  "goalsNow": 1,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "almeria",
+  "playerId": "quim-junyent",
+  "number": 33,
+  "ratingNow": 6.8,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "almeria",
+  "playerId": "ibrahima-kone",
+  "number": null,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "almeria",
+  "playerId": "ivan-parra",
+  "number": null,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "almeria",
+  "playerId": "marciano-tchami",
+  "number": null,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "almeria",
+  "playerId": "jon-morcillo",
+  "number": 7,
+  "ratingNow": 6.17,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "almeria",
+  "playerId": "thalys",
+  "number": 9,
+  "ratingNow": 7.17,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "almeria",
+  "playerId": "nico-melamed",
+  "number": 10,
+  "ratingNow": 6.79,
+  "goalsNow": 2,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "almeria",
+  "playerId": "leo-baptistao",
+  "number": 12,
+  "ratingNow": 7.12,
+  "goalsNow": 1,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "almeria",
+  "playerId": "alex-sola",
+  "number": 20,
+  "ratingNow": 6.18,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "almeria",
+  "playerId": "adrian-embarba",
+  "number": 23,
+  "ratingNow": 6.66,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "almeria",
+  "playerId": "miguel-de-la-fuente",
+  "number": 24,
+  "ratingNow": 7.31,
+  "goalsNow": 5,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "eibar",
+  "playerId": "luis-lopez",
+  "number": 1,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "eibar",
+  "playerId": "jonmi-magunagoitia",
+  "number": 13,
+  "ratingNow": 7.24,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "eibar",
+  "playerId": "sergio-cubero",
+  "number": 2,
+  "ratingNow": 6.68,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "eibar",
+  "playerId": "imanol-garcia-de-albeniz",
+  "number": 3,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "eibar",
+  "playerId": "unai-elgezabal",
+  "number": 4,
+  "ratingNow": 7,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "eibar",
+  "playerId": "peru-nolaskoain",
+  "number": 5,
+  "ratingNow": 6.73,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "eibar",
+  "playerId": "jair-amador",
+  "number": 15,
+  "ratingNow": 6,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "eibar",
+  "playerId": "markel-arana",
+  "number": 18,
+  "ratingNow": 6.69,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "eibar",
+  "playerId": "alvaro-rodriguez",
+  "number": 22,
+  "ratingNow": 7.01,
+  "goalsNow": 2,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "eibar",
+  "playerId": "anaitz-arbilla",
+  "number": 23,
+  "ratingNow": 6.86,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "eibar",
+  "playerId": "juan-bernat",
+  "number": 24,
+  "ratingNow": 6.89,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "eibar",
+  "playerId": "oier-llorente",
+  "number": 34,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "eibar",
+  "playerId": "haritz-ortuzar",
+  "number": 36,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "eibar",
+  "playerId": "sergio-alvarez",
+  "number": 6,
+  "ratingNow": 6.21,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "eibar",
+  "playerId": "ander-madariaga",
+  "number": 8,
+  "ratingNow": 7.46,
+  "goalsNow": 2,
+  "assistsNow": 2,
+  "deep": true
+ },
+ {
+  "clubId": "eibar",
+  "playerId": "jon-magunazelaia",
+  "number": 11,
+  "ratingNow": 6.95,
+  "goalsNow": 2,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "eibar",
+  "playerId": "lander-olaetxea",
+  "number": 14,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "eibar",
+  "playerId": "pejino",
+  "number": 17,
+  "ratingNow": 6.61,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "eibar",
+  "playerId": "lucas-nunez",
+  "number": 28,
+  "ratingNow": 6.39,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "eibar",
+  "playerId": "aleix-garrido",
+  "number": 30,
+  "ratingNow": 7.35,
+  "goalsNow": 1,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "eibar",
+  "playerId": "lucas-sarasketa",
+  "number": 35,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "eibar",
+  "playerId": "adu-ares",
+  "number": 7,
+  "ratingNow": 7.45,
+  "goalsNow": 2,
+  "assistsNow": 3,
+  "deep": true
+ },
+ {
+  "clubId": "eibar",
+  "playerId": "jon-bautista",
+  "number": 9,
+  "ratingNow": 6.76,
+  "goalsNow": 1,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "eibar",
+  "playerId": "iker-zubiria",
+  "number": 10,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "eibar",
+  "playerId": "jon-guruzeta",
+  "number": 10,
+  "ratingNow": 7.58,
+  "goalsNow": 3,
+  "assistsNow": 2,
+  "deep": true
+ },
+ {
+  "clubId": "eibar",
+  "playerId": "eric-perez",
+  "number": 19,
+  "ratingNow": 6.91,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "eibar",
+  "playerId": "javi-marton",
+  "number": 20,
+  "ratingNow": 6.57,
+  "goalsNow": 1,
+  "assistsNow": 2,
+  "deep": true
+ },
+ {
+  "clubId": "eibar",
+  "playerId": "ivan-gil",
+  "number": 21,
+  "ratingNow": 7.11,
+  "goalsNow": 3,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "eibar",
+  "playerId": "elijah-gift",
+  "number": 27,
+  "ratingNow": 6.31,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "eibar",
+  "playerId": "carlos-lumbreras",
+  "number": 32,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "castellon",
+  "playerId": "amir-saipi",
+  "number": 1,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "castellon",
+  "playerId": "romain-matthys",
+  "number": 13,
+  "ratingNow": 7.73,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "castellon",
+  "playerId": "sergi-torner",
+  "number": 35,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "castellon",
+  "playerId": "juanjo-nieto",
+  "number": 2,
+  "ratingNow": 7.39,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "castellon",
+  "playerId": "fabrizio-brignani",
+  "number": 3,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "castellon",
+  "playerId": "agustin-sienra",
+  "number": 4,
+  "ratingNow": 7.48,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "castellon",
+  "playerId": "alberto-jimenez",
+  "number": 5,
+  "ratingNow": 7.64,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "castellon",
+  "playerId": "federico-ceccherini",
+  "number": 11,
+  "ratingNow": 7.24,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "castellon",
+  "playerId": "lucas-alcazar",
+  "number": 12,
+  "ratingNow": 6.52,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "castellon",
+  "playerId": "ilias-kostis",
+  "number": 15,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "castellon",
+  "playerId": "tincho-conde",
+  "number": 20,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "castellon",
+  "playerId": "jeremy-mellot",
+  "number": 22,
+  "ratingNow": 7.35,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "castellon",
+  "playerId": "matias-orozco",
+  "number": 6,
+  "ratingNow": 7.12,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "castellon",
+  "playerId": "barri",
+  "number": 8,
+  "ratingNow": 7.49,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "castellon",
+  "playerId": "inigo-cordoba",
+  "number": 14,
+  "ratingNow": 6.84,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "castellon",
+  "playerId": "fran-castillo",
+  "number": 17,
+  "ratingNow": 6.91,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "castellon",
+  "playerId": "pablo-santiago",
+  "number": 18,
+  "ratingNow": 6.88,
+  "goalsNow": 2,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "castellon",
+  "playerId": "alvaro-martin",
+  "number": 21,
+  "ratingNow": 7.13,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "castellon",
+  "playerId": "jari-vlak",
+  "number": 25,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "castellon",
+  "playerId": "antonio-gala",
+  "number": 27,
+  "ratingNow": 6.64,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "castellon",
+  "playerId": "raul-sanchez",
+  "number": 7,
+  "ratingNow": 6.26,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "castellon",
+  "playerId": "ousmane-nana-camara",
+  "number": 9,
+  "ratingNow": 7.6,
+  "goalsNow": 4,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "castellon",
+  "playerId": "israel-suero",
+  "number": 10,
+  "ratingNow": 7.54,
+  "goalsNow": 3,
+  "assistsNow": 2,
+  "deep": true
+ },
+ {
+  "clubId": "castellon",
+  "playerId": "adam-jakobsen",
+  "number": 16,
+  "ratingNow": 7.09,
+  "goalsNow": 1,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "castellon",
+  "playerId": "hamza-bellari",
+  "number": 19,
+  "ratingNow": 6.47,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "castellon",
+  "playerId": "alvaro-garcia-1205428",
+  "number": 23,
+  "ratingNow": 6.48,
+  "goalsNow": 1,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "castellon",
+  "playerId": "david-nzanza",
+  "number": 24,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "castellon",
+  "playerId": "rodrigo-rego",
+  "number": 26,
+  "ratingNow": 6.23,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "mallorca",
+  "playerId": "arnau-tenas",
+  "number": 1,
+  "ratingNow": 7.12,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "mallorca",
+  "playerId": "lucas-bergstrom",
+  "number": 13,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "mallorca",
+  "playerId": "ivan-cuellar",
+  "number": 25,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "mallorca",
+  "playerId": "toni-dols",
+  "number": 37,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "mallorca",
+  "playerId": "toni-lato",
+  "number": 3,
+  "ratingNow": 7.3,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "mallorca",
+  "playerId": "david-lopez",
+  "number": 4,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "mallorca",
+  "playerId": "alberto-moreno",
+  "number": 5,
+  "ratingNow": 6.99,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "mallorca",
+  "playerId": "john-donald",
+  "number": 15,
+  "ratingNow": 7.12,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "mallorca",
+  "playerId": "antonio-raillo",
+  "number": 21,
+  "ratingNow": 7.43,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "mallorca",
+  "playerId": "aboubaka-soumahoro",
+  "number": 22,
+  "ratingNow": 6.87,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "mallorca",
+  "playerId": "martin-valjent",
+  "number": 24,
+  "ratingNow": 7.28,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "mallorca",
+  "playerId": "luis-orejuela",
+  "number": 29,
+  "ratingNow": 5.97,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "mallorca",
+  "playerId": "leo-sanchez",
+  "number": 32,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "mallorca",
+  "playerId": "miguel-calatayud",
+  "number": 34,
+  "ratingNow": 7.14,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "mallorca",
+  "playerId": "jan-salas",
+  "number": null,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "mallorca",
+  "playerId": "guille-fernandez",
+  "number": 2,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "mallorca",
+  "playerId": "antonio-sanchez",
+  "number": 6,
+  "ratingNow": 6.59,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "mallorca",
+  "playerId": "alex-sala",
+  "number": 7,
+  "ratingNow": 7.31,
+  "goalsNow": 2,
+  "assistsNow": 2,
+  "deep": true
+ },
+ {
+  "clubId": "mallorca",
+  "playerId": "manu-morlanes",
+  "number": 8,
+  "ratingNow": 7.33,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "mallorca",
+  "playerId": "sergi-darder",
+  "number": 10,
+  "ratingNow": 7.06,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "mallorca",
+  "playerId": "pablo-torre",
+  "number": 20,
+  "ratingNow": 7.04,
+  "goalsNow": 2,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "mallorca",
+  "playerId": "antoniu-roca",
+  "number": 23,
+  "ratingNow": 6.55,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "mallorca",
+  "playerId": "adrian-liso",
+  "number": 33,
+  "ratingNow": 6.49,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "mallorca",
+  "playerId": "jandro-garcia",
+  "number": 39,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "mallorca",
+  "playerId": "abdon-prats",
+  "number": 9,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "mallorca",
+  "playerId": "zito-luvumbo",
+  "number": 11,
+  "ratingNow": 6.58,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "mallorca",
+  "playerId": "adam-buksa",
+  "number": 16,
+  "ratingNow": 6.26,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "mallorca",
+  "playerId": "arnau-puigmal",
+  "number": 17,
+  "ratingNow": 6,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "mallorca",
+  "playerId": "adrian-fuentes",
+  "number": 18,
+  "ratingNow": 7.12,
+  "goalsNow": 5,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "mallorca",
+  "playerId": "josep-cerda",
+  "number": 19,
+  "ratingNow": 6.69,
+  "goalsNow": 0,
+  "assistsNow": 2,
+  "deep": true
+ },
+ {
+  "clubId": "mallorca",
+  "playerId": "justin-kalumba",
+  "number": 30,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "mallorca",
+  "playerId": "aimar-pena",
+  "number": 36,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "sabadell",
+  "playerId": "diego-fuoli",
+  "number": 1,
+  "ratingNow": 6.95,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "sabadell",
+  "playerId": "jose-ortega",
+  "number": 13,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "sabadell",
+  "playerId": "marc-vidal",
+  "number": 25,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "sabadell",
+  "playerId": "manel-estevez",
+  "number": 31,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "sabadell",
+  "playerId": "carlos-aleman",
+  "number": null,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "sabadell",
+  "playerId": "genar-fornes",
+  "number": null,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "sabadell",
+  "playerId": "hudson-davis",
+  "number": null,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "sabadell",
+  "playerId": "pipa",
+  "number": 2,
+  "ratingNow": 6.25,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "sabadell",
+  "playerId": "miquel-codina",
+  "number": 4,
+  "ratingNow": 6.58,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "sabadell",
+  "playerId": "arthur",
+  "number": 5,
+  "ratingNow": 7.04,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "sabadell",
+  "playerId": "edgar-gonzalez",
+  "number": 6,
+  "ratingNow": 7.06,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "sabadell",
+  "playerId": "oscar-sanz",
+  "number": 14,
+  "ratingNow": 7.57,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "sabadell",
+  "playerId": "kaiser",
+  "number": 15,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "sabadell",
+  "playerId": "eneko-aguilar",
+  "number": 24,
+  "ratingNow": 6.45,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "sabadell",
+  "playerId": "jose-luis-catala",
+  "number": 27,
+  "ratingNow": 6.7,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "sabadell",
+  "playerId": "xavi-moreno",
+  "number": 30,
+  "ratingNow": 6.2,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "sabadell",
+  "playerId": "lluis-estebe",
+  "number": null,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "sabadell",
+  "playerId": "yussif-owusu",
+  "number": null,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "sabadell",
+  "playerId": "ton-ripoll",
+  "number": 7,
+  "ratingNow": 7.28,
+  "goalsNow": 0,
+  "assistsNow": 3,
+  "deep": true
+ },
+ {
+  "clubId": "sabadell",
+  "playerId": "pere-pons",
+  "number": 8,
+  "ratingNow": 6.62,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "sabadell",
+  "playerId": "javi-lopez-pinto",
+  "number": 11,
+  "ratingNow": 6.81,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "sabadell",
+  "playerId": "yanis-rahmani",
+  "number": 19,
+  "ratingNow": 5.91,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "sabadell",
+  "playerId": "albert-orriols",
+  "number": 20,
+  "ratingNow": 7.15,
+  "goalsNow": 1,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "sabadell",
+  "playerId": "quadri-liameed",
+  "number": 22,
+  "ratingNow": 7.46,
+  "goalsNow": 0,
+  "assistsNow": 3,
+  "deep": true
+ },
+ {
+  "clubId": "sabadell",
+  "playerId": "patrick-nuamah",
+  "number": 29,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "sabadell",
+  "playerId": "peque",
+  "number": null,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "sabadell",
+  "playerId": "nikolay-obolskiy",
+  "number": 9,
+  "ratingNow": 6.3,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "sabadell",
+  "playerId": "angel-baena",
+  "number": 10,
+  "ratingNow": 6.99,
+  "goalsNow": 3,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "sabadell",
+  "playerId": "gaston-valles",
+  "number": 12,
+  "ratingNow": 6.36,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "sabadell",
+  "playerId": "nicholas-gioacchini",
+  "number": 16,
+  "ratingNow": 7.03,
+  "goalsNow": 3,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "sabadell",
+  "playerId": "alain-ribeiro",
+  "number": 21,
+  "ratingNow": 6.2,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "sabadell",
+  "playerId": "joel-priego",
+  "number": 23,
+  "ratingNow": 6.89,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "sabadell",
+  "playerId": "quim-utges",
+  "number": 33,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "sporting-gijon",
+  "playerId": "ruben-yanez",
+  "number": 1,
+  "ratingNow": 6.96,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "sporting-gijon",
+  "playerId": "arana",
+  "number": 13,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "sporting-gijon",
+  "playerId": "guille-rosas",
+  "number": 2,
+  "ratingNow": 7.3,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "sporting-gijon",
+  "playerId": "emanuel-gularte",
+  "number": 4,
+  "ratingNow": 7.42,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "sporting-gijon",
+  "playerId": "diego-sanchez",
+  "number": 5,
+  "ratingNow": 7.02,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "sporting-gijon",
+  "playerId": "pablo-vazquez",
+  "number": 15,
+  "ratingNow": 7.07,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "sporting-gijon",
+  "playerId": "jorge-saenz",
+  "number": 23,
+  "ratingNow": 7.2,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "sporting-gijon",
+  "playerId": "aimar-dunabeitia",
+  "number": 24,
+  "ratingNow": 7.36,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "sporting-gijon",
+  "playerId": "iker-martinez",
+  "number": 26,
+  "ratingNow": 6.23,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "sporting-gijon",
+  "playerId": "alex-diego",
+  "number": 34,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "sporting-gijon",
+  "playerId": "andres-cuenca",
+  "number": 44,
+  "ratingNow": 7.1,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "sporting-gijon",
+  "playerId": "pablo-garcia-1091369",
+  "number": 3,
+  "ratingNow": 6.61,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "sporting-gijon",
+  "playerId": "nacho-martin",
+  "number": 6,
+  "ratingNow": 6.33,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "sporting-gijon",
+  "playerId": "manu-rodriguez",
+  "number": 8,
+  "ratingNow": 6.86,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "sporting-gijon",
+  "playerId": "cesar-gelabert",
+  "number": 10,
+  "ratingNow": 6.4,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "sporting-gijon",
+  "playerId": "alex-corredera",
+  "number": 14,
+  "ratingNow": 7.44,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "sporting-gijon",
+  "playerId": "mamadou-loum-ndiaye",
+  "number": 21,
+  "ratingNow": 6.35,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "sporting-gijon",
+  "playerId": "hugo-guillamon",
+  "number": 22,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "sporting-gijon",
+  "playerId": "diego-matabuena",
+  "number": 34,
+  "ratingNow": 6.81,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "sporting-gijon",
+  "playerId": "bruno-rubio",
+  "number": 36,
+  "ratingNow": 6.32,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "sporting-gijon",
+  "playerId": "andres-ferrari",
+  "number": null,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "sporting-gijon",
+  "playerId": "gaspar-campos",
+  "number": 7,
+  "ratingNow": 6.7,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "sporting-gijon",
+  "playerId": "konrad-de-la-fuente",
+  "number": 11,
+  "ratingNow": 6.09,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "sporting-gijon",
+  "playerId": "alejo-sarco",
+  "number": 16,
+  "ratingNow": 6.57,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "sporting-gijon",
+  "playerId": "antonio-casas",
+  "number": 17,
+  "ratingNow": 6.93,
+  "goalsNow": 3,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "sporting-gijon",
+  "playerId": "juan-otero",
+  "number": 19,
+  "ratingNow": 6.94,
+  "goalsNow": 1,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "sporting-gijon",
+  "playerId": "nikita-iosifov",
+  "number": 20,
+  "ratingNow": 6.96,
+  "goalsNow": 1,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "sporting-gijon",
+  "playerId": "miguel-conde",
+  "number": 28,
+  "ratingNow": 5.93,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "sporting-gijon",
+  "playerId": "christian-ferreres",
+  "number": 35,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "girona",
+  "playerId": "sergi-puig",
+  "number": 1,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "girona",
+  "playerId": "paulo-gazzaniga",
+  "number": 13,
+  "ratingNow": 7.2,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "girona",
+  "playerId": "vladyslav-krapyvtsov",
+  "number": 25,
+  "ratingNow": 6.18,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "girona",
+  "playerId": "jordi-danso",
+  "number": 44,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "girona",
+  "playerId": "abdul-mumin",
+  "number": 2,
+  "ratingNow": 6.28,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "girona",
+  "playerId": "mateu-morey",
+  "number": 3,
+  "ratingNow": 6.5,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "girona",
+  "playerId": "javier-bonar",
+  "number": 4,
+  "ratingNow": 7.11,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "girona",
+  "playerId": "david-lopez-215584",
+  "number": 5,
+  "ratingNow": 6.73,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "girona",
+  "playerId": "alex-moreno",
+  "number": 11,
+  "ratingNow": 7.39,
+  "goalsNow": 0,
+  "assistsNow": 2,
+  "deep": true
+ },
+ {
+  "clubId": "girona",
+  "playerId": "alejandro-frances",
+  "number": 16,
+  "ratingNow": 7.41,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "girona",
+  "playerId": "gibert-jordana",
+  "number": 28,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "girona",
+  "playerId": "mauro-furtado",
+  "number": 33,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "girona",
+  "playerId": "holmes-zamorano",
+  "number": 38,
+  "ratingNow": 7.1,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "girona",
+  "playerId": "guillem-badia",
+  "number": 39,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "girona",
+  "playerId": "donny-van-de-beek",
+  "number": 6,
+  "ratingNow": 6.69,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "girona",
+  "playerId": "fran-beltran",
+  "number": 8,
+  "ratingNow": 6.98,
+  "goalsNow": 1,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "girona",
+  "playerId": "portu",
+  "number": 10,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "girona",
+  "playerId": "ivan-morante",
+  "number": 14,
+  "ratingNow": 7.03,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "girona",
+  "playerId": "izan-gonzalez",
+  "number": 24,
+  "ratingNow": 7.19,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "girona",
+  "playerId": "lass-kourouma",
+  "number": 29,
+  "ratingNow": 6.12,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "girona",
+  "playerId": "unai-hernandez",
+  "number": 30,
+  "ratingNow": 6.18,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "girona",
+  "playerId": "mohammed-hamony",
+  "number": 35,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "girona",
+  "playerId": "cristhian-stuani",
+  "number": 7,
+  "ratingNow": 6.03,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "girona",
+  "playerId": "abel-ruiz",
+  "number": 9,
+  "ratingNow": 6.75,
+  "goalsNow": 2,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "girona",
+  "playerId": "oleksandr-pyshchur",
+  "number": 15,
+  "ratingNow": 6.1,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "girona",
+  "playerId": "bryan-gil",
+  "number": 17,
+  "ratingNow": 6.64,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "girona",
+  "playerId": "vladyslav-vanat",
+  "number": 19,
+  "ratingNow": 7.01,
+  "goalsNow": 1,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "girona",
+  "playerId": "jastin-garcia",
+  "number": 21,
+  "ratingNow": 7.24,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "girona",
+  "playerId": "yaser-asprilla",
+  "number": 22,
+  "ratingNow": 7.35,
+  "goalsNow": 5,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "girona",
+  "playerId": "carles-perez",
+  "number": 23,
+  "ratingNow": 6.98,
+  "goalsNow": 2,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "girona",
+  "playerId": "juan-arango",
+  "number": 32,
+  "ratingNow": 6.27,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "girona",
+  "playerId": "javier-sarasa",
+  "number": 36,
+  "ratingNow": 6.6,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "burgos-cf",
+  "playerId": "bruno-iribarne",
+  "number": 1,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "burgos-cf",
+  "playerId": "ander-cantero",
+  "number": 13,
+  "ratingNow": 7.2,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "burgos-cf",
+  "playerId": "marc-monedero",
+  "number": 30,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "burgos-cf",
+  "playerId": "diego-gonzalez",
+  "number": 35,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "burgos-cf",
+  "playerId": "cristian-torrelavid",
+  "number": 37,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "burgos-cf",
+  "playerId": "alex-lizancos",
+  "number": 2,
+  "ratingNow": 6.71,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "burgos-cf",
+  "playerId": "ignasi-vilarrasa",
+  "number": 3,
+  "ratingNow": 6.74,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "burgos-cf",
+  "playerId": "sergio-gonzalez",
+  "number": 6,
+  "ratingNow": 7.18,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "burgos-cf",
+  "playerId": "grego-sierra",
+  "number": 8,
+  "ratingNow": 6.97,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "burgos-cf",
+  "playerId": "oier-luengo",
+  "number": 15,
+  "ratingNow": 7.01,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "burgos-cf",
+  "playerId": "saul-del-cerro",
+  "number": 18,
+  "ratingNow": 6.68,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "burgos-cf",
+  "playerId": "brais-martinez",
+  "number": 22,
+  "ratingNow": 6.84,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "burgos-cf",
+  "playerId": "alberto-dadie",
+  "number": 23,
+  "ratingNow": 7.04,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "burgos-cf",
+  "playerId": "ivan-martinez",
+  "number": 36,
+  "ratingNow": 6.27,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "burgos-cf",
+  "playerId": "david-hernaiz",
+  "number": 39,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "burgos-cf",
+  "playerId": "hugo-sedano",
+  "number": null,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "burgos-cf",
+  "playerId": "pablo-galdames",
+  "number": 4,
+  "ratingNow": 6.48,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "burgos-cf",
+  "playerId": "marcelo-exposito",
+  "number": 5,
+  "ratingNow": 6.54,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "burgos-cf",
+  "playerId": "kevin-appin",
+  "number": 10,
+  "ratingNow": 6.42,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "burgos-cf",
+  "playerId": "unai-vencedor",
+  "number": 12,
+  "ratingNow": 6.74,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "burgos-cf",
+  "playerId": "david-gonzalez",
+  "number": 14,
+  "ratingNow": 7.38,
+  "goalsNow": 3,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "burgos-cf",
+  "playerId": "mario-cantero",
+  "number": 17,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "burgos-cf",
+  "playerId": "jose-gragera",
+  "number": 20,
+  "ratingNow": 6.78,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "burgos-cf",
+  "playerId": "fermin-garcia",
+  "number": 21,
+  "ratingNow": 6.34,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "burgos-cf",
+  "playerId": "santiago-lencina",
+  "number": 24,
+  "ratingNow": 6.18,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "burgos-cf",
+  "playerId": "jon-karrikaburu",
+  "number": 7,
+  "ratingNow": 6.76,
+  "goalsNow": 2,
+  "assistsNow": 2,
+  "deep": true
+ },
+ {
+  "clubId": "burgos-cf",
+  "playerId": "alex-fores",
+  "number": 9,
+  "ratingNow": 6.63,
+  "goalsNow": 3,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "burgos-cf",
+  "playerId": "victor-mollejo",
+  "number": 11,
+  "ratingNow": 6.39,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "burgos-cf",
+  "playerId": "curro-sanchez",
+  "number": 16,
+  "ratingNow": 6.94,
+  "goalsNow": 1,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "burgos-cf",
+  "playerId": "javi-llabres",
+  "number": 19,
+  "ratingNow": 7.09,
+  "goalsNow": 1,
+  "assistsNow": 2,
+  "deep": true
+ },
+ {
+  "clubId": "burgos-cf",
+  "playerId": "irian-ribas",
+  "number": 31,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-oviedo",
+  "playerId": "miguel-narvaez",
+  "number": 1,
+  "ratingNow": 6.86,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-oviedo",
+  "playerId": "aaron-escandell",
+  "number": 13,
+  "ratingNow": 7.3,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-oviedo",
+  "playerId": "samu-franganillo",
+  "number": 27,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-oviedo",
+  "playerId": "aisar-ahmed",
+  "number": 2,
+  "ratingNow": 6.57,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-oviedo",
+  "playerId": "juan-cruz-243419",
+  "number": 3,
+  "ratingNow": 6.59,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-oviedo",
+  "playerId": "david-costas",
+  "number": 4,
+  "ratingNow": 7.49,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-oviedo",
+  "playerId": "dani-calvo",
+  "number": 12,
+  "ratingNow": 7.1,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-oviedo",
+  "playerId": "samu-rodriguez",
+  "number": 15,
+  "ratingNow": 6.81,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-oviedo",
+  "playerId": "david-jimenez",
+  "number": 21,
+  "ratingNow": 7,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "real-oviedo",
+  "playerId": "nacho-vidal",
+  "number": 22,
+  "ratingNow": 6.61,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-oviedo",
+  "playerId": "carlos-dominguez",
+  "number": 23,
+  "ratingNow": 7.47,
+  "goalsNow": 3,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-oviedo",
+  "playerId": "marco-esteban",
+  "number": 30,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-oviedo",
+  "playerId": "youness-lachhab",
+  "number": 5,
+  "ratingNow": 6.84,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-oviedo",
+  "playerId": "dani-villahermosa",
+  "number": 6,
+  "ratingNow": 6.84,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-oviedo",
+  "playerId": "mikel-goti",
+  "number": 8,
+  "ratingNow": 7.67,
+  "goalsNow": 1,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "real-oviedo",
+  "playerId": "alberto-reina",
+  "number": 10,
+  "ratingNow": 7.17,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-oviedo",
+  "playerId": "aritz-aldasoro",
+  "number": 16,
+  "ratingNow": 6.71,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "real-oviedo",
+  "playerId": "estanis-pedrola",
+  "number": 17,
+  "ratingNow": 6.73,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-oviedo",
+  "playerId": "enzo-perez",
+  "number": 32,
+  "ratingNow": 7.01,
+  "goalsNow": 1,
+  "assistsNow": 2,
+  "deep": true
+ },
+ {
+  "clubId": "real-oviedo",
+  "playerId": "brandon-domingues",
+  "number": null,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-oviedo",
+  "playerId": "ilyas-chaira",
+  "number": 7,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-oviedo",
+  "playerId": "christopher-ramos",
+  "number": 9,
+  "ratingNow": 6.35,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-oviedo",
+  "playerId": "jacobo-gonzalez",
+  "number": 11,
+  "ratingNow": 6.27,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-oviedo",
+  "playerId": "carlos-fernandez",
+  "number": 14,
+  "ratingNow": 5.9,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-oviedo",
+  "playerId": "victor-mingo",
+  "number": 18,
+  "ratingNow": 6.33,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "real-oviedo",
+  "playerId": "pablo-saenz",
+  "number": 20,
+  "ratingNow": 7.04,
+  "goalsNow": 2,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-oviedo",
+  "playerId": "alexandru-isfan",
+  "number": 24,
+  "ratingNow": 6.45,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "real-oviedo",
+  "playerId": "jose-luis-morales",
+  "number": 25,
+  "ratingNow": 5.87,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "granada",
+  "playerId": "alberto-flores",
+  "number": 1,
+  "ratingNow": 7.94,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "granada",
+  "playerId": "raul-lizoain",
+  "number": 13,
+  "ratingNow": 6.9,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "granada",
+  "playerId": "pau-casadesus",
+  "number": 2,
+  "ratingNow": 6.57,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "granada",
+  "playerId": "diego-hormigo",
+  "number": 3,
+  "ratingNow": 5.97,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "granada",
+  "playerId": "manu-lama",
+  "number": 5,
+  "ratingNow": 7.34,
+  "goalsNow": 1,
+  "assistsNow": 2,
+  "deep": true
+ },
+ {
+  "clubId": "granada",
+  "playerId": "diego-pampin",
+  "number": 16,
+  "ratingNow": 6.48,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "granada",
+  "playerId": "sergio-lopez",
+  "number": 18,
+  "ratingNow": 7.18,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "granada",
+  "playerId": "baila-diallo",
+  "number": 22,
+  "ratingNow": 7.1,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "granada",
+  "playerId": "benedikt-gimber",
+  "number": 23,
+  "ratingNow": 6.9,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "granada",
+  "playerId": "juanjo",
+  "number": 30,
+  "ratingNow": 6.83,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "granada",
+  "playerId": "angelo-garcia",
+  "number": 33,
+  "ratingNow": 6.2,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "granada",
+  "playerId": "bourama-dembele",
+  "number": 35,
+  "ratingNow": 6.77,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "granada",
+  "playerId": "ruben-alcaraz",
+  "number": 4,
+  "ratingNow": 7,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "granada",
+  "playerId": "gerard-gumbau",
+  "number": 6,
+  "ratingNow": 7.13,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "granada",
+  "playerId": "pedro-aleman",
+  "number": 8,
+  "ratingNow": 6.72,
+  "goalsNow": 2,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "granada",
+  "playerId": "abdoul-kader-bamba",
+  "number": 17,
+  "ratingNow": 6.15,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "granada",
+  "playerId": "dylan-rodriguez",
+  "number": 32,
+  "ratingNow": 6.59,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "granada",
+  "playerId": "sergio-rodelas",
+  "number": 7,
+  "ratingNow": 6.65,
+  "goalsNow": 0,
+  "assistsNow": 2,
+  "deep": true
+ },
+ {
+  "clubId": "granada",
+  "playerId": "alejandro-marques",
+  "number": 9,
+  "ratingNow": 6.54,
+  "goalsNow": 2,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "granada",
+  "playerId": "jorge-pascual",
+  "number": 10,
+  "ratingNow": 6.52,
+  "goalsNow": 2,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "granada",
+  "playerId": "jose-arnaiz",
+  "number": 11,
+  "ratingNow": 6.8,
+  "goalsNow": 2,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "granada",
+  "playerId": "chinaza-onouha",
+  "number": 19,
+  "ratingNow": 6.2,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "granada",
+  "playerId": "mario-jimenez",
+  "number": 27,
+  "ratingNow": 6.43,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "granada",
+  "playerId": "owen-emeka",
+  "number": 36,
+  "ratingNow": 6.41,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-valladolid",
+  "playerId": "alvaro-aceves",
+  "number": 1,
+  "ratingNow": 6.68,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-valladolid",
+  "playerId": "dani-martin",
+  "number": 13,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-valladolid",
+  "playerId": "lucas-lavagnino",
+  "number": 26,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-valladolid",
+  "playerId": "hugo-wauthier",
+  "number": 31,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-valladolid",
+  "playerId": "dani-martin-1112759",
+  "number": null,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-valladolid",
+  "playerId": "trilli",
+  "number": 2,
+  "ratingNow": 7.44,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-valladolid",
+  "playerId": "guille-bueno",
+  "number": 3,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-valladolid",
+  "playerId": "homam-elamin",
+  "number": 3,
+  "ratingNow": 6.3,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-valladolid",
+  "playerId": "david-torres",
+  "number": 4,
+  "ratingNow": 6.95,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-valladolid",
+  "playerId": "ramon-martinez",
+  "number": 5,
+  "ratingNow": 6.38,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-valladolid",
+  "playerId": "miguel-rubio",
+  "number": 12,
+  "ratingNow": 6.7,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-valladolid",
+  "playerId": "ivan-alejo",
+  "number": 14,
+  "ratingNow": 7.03,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-valladolid",
+  "playerId": "pablo-tomeo",
+  "number": 15,
+  "ratingNow": 6.99,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-valladolid",
+  "playerId": "carlos-clerc",
+  "number": 18,
+  "ratingNow": 7.03,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-valladolid",
+  "playerId": "ivan-garriel",
+  "number": 27,
+  "ratingNow": 7.29,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "real-valladolid",
+  "playerId": "ryotaro-ito",
+  "number": null,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-valladolid",
+  "playerId": "mathis-lachuer",
+  "number": 6,
+  "ratingNow": 6.58,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-valladolid",
+  "playerId": "thiago-ojeda",
+  "number": 8,
+  "ratingNow": 6.83,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "real-valladolid",
+  "playerId": "alex-balboa",
+  "number": 16,
+  "ratingNow": 5.91,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-valladolid",
+  "playerId": "julien-ponceau",
+  "number": 21,
+  "ratingNow": 7.18,
+  "goalsNow": 2,
+  "assistsNow": 3,
+  "deep": true
+ },
+ {
+  "clubId": "real-valladolid",
+  "playerId": "stanko-juric",
+  "number": 24,
+  "ratingNow": 6.88,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-valladolid",
+  "playerId": "dani-perez",
+  "number": 28,
+  "ratingNow": 6.2,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-valladolid",
+  "playerId": "victor-fernandez",
+  "number": 30,
+  "ratingNow": 7.2,
+  "goalsNow": 1,
+  "assistsNow": 4,
+  "deep": true
+ },
+ {
+  "clubId": "real-valladolid",
+  "playerId": "marcos-parriego",
+  "number": 32,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-valladolid",
+  "playerId": "luis-chacon",
+  "number": 7,
+  "ratingNow": 7.34,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-valladolid",
+  "playerId": "juanmi-latasa",
+  "number": 9,
+  "ratingNow": 6.62,
+  "goalsNow": 3,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-valladolid",
+  "playerId": "yeray-cabanzon",
+  "number": 11,
+  "ratingNow": 6.52,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "real-valladolid",
+  "playerId": "victor-barbera",
+  "number": 17,
+  "ratingNow": 6.46,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-valladolid",
+  "playerId": "adrian-arnuncio",
+  "number": 19,
+  "ratingNow": 7.34,
+  "goalsNow": 3,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "real-valladolid",
+  "playerId": "robin-van-duiven",
+  "number": 20,
+  "ratingNow": 6.26,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-valladolid",
+  "playerId": "kaj-de-rooij",
+  "number": 22,
+  "ratingNow": 6.19,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-valladolid",
+  "playerId": "tay-abed",
+  "number": 23,
+  "ratingNow": 6.16,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-valladolid",
+  "playerId": "brain-obosso",
+  "number": 34,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-valladolid",
+  "playerId": "hugo-calvo",
+  "number": 37,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "tenerife",
+  "playerId": "dani-martin-882408",
+  "number": 1,
+  "ratingNow": 6.59,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "tenerife",
+  "playerId": "gabriel-lozano",
+  "number": 40,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "tenerife",
+  "playerId": "david-rodriguez",
+  "number": 2,
+  "ratingNow": 6.89,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "tenerife",
+  "playerId": "roko-jureskin",
+  "number": 3,
+  "ratingNow": 6.29,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "tenerife",
+  "playerId": "jose-leon",
+  "number": 4,
+  "ratingNow": 6.67,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "tenerife",
+  "playerId": "jorge-moreno",
+  "number": 5,
+  "ratingNow": 6.42,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "tenerife",
+  "playerId": "anthony-landazuri",
+  "number": 12,
+  "ratingNow": 6.37,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "tenerife",
+  "playerId": "cesar-alvarez",
+  "number": 19,
+  "ratingNow": 6.86,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "tenerife",
+  "playerId": "marc-mateu",
+  "number": 21,
+  "ratingNow": 5.92,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "tenerife",
+  "playerId": "neal-viereck",
+  "number": 27,
+  "ratingNow": 6.7,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "tenerife",
+  "playerId": "juanjo-1292813",
+  "number": 6,
+  "ratingNow": 6.69,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "tenerife",
+  "playerId": "nacho-gil",
+  "number": 10,
+  "ratingNow": 7.57,
+  "goalsNow": 0,
+  "assistsNow": 3,
+  "deep": true
+ },
+ {
+  "clubId": "tenerife",
+  "playerId": "gerard-valentin",
+  "number": 14,
+  "ratingNow": 6.44,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "tenerife",
+  "playerId": "fabricio",
+  "number": 15,
+  "ratingNow": 6.77,
+  "goalsNow": 1,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "tenerife",
+  "playerId": "jesus-alvarez",
+  "number": 16,
+  "ratingNow": 7.23,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "tenerife",
+  "playerId": "mauro-pitton",
+  "number": 20,
+  "ratingNow": 6.32,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "tenerife",
+  "playerId": "anes-krdzalic",
+  "number": 23,
+  "ratingNow": 6.42,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "tenerife",
+  "playerId": "ivan-chapela",
+  "number": 24,
+  "ratingNow": 6.68,
+  "goalsNow": 1,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "tenerife",
+  "playerId": "dani-fernandez",
+  "number": 29,
+  "ratingNow": 6.18,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "tenerife",
+  "playerId": "alassan-manjam",
+  "number": null,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "tenerife",
+  "playerId": "martin-pecar",
+  "number": 7,
+  "ratingNow": 6.32,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "tenerife",
+  "playerId": "victor-moreno",
+  "number": 8,
+  "ratingNow": 7.05,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "tenerife",
+  "playerId": "jesus-de-miguel",
+  "number": 9,
+  "ratingNow": 6.02,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "tenerife",
+  "playerId": "noel-lopez",
+  "number": 11,
+  "ratingNow": 6.49,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "tenerife",
+  "playerId": "christian-gomis",
+  "number": 17,
+  "ratingNow": 6.72,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "tenerife",
+  "playerId": "enric-gallego",
+  "number": 18,
+  "ratingNow": 7.48,
+  "goalsNow": 6,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "tenerife",
+  "playerId": "grant-leon-ranos",
+  "number": 22,
+  "ratingNow": 6.54,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "tenerife",
+  "playerId": "baba-diocou",
+  "number": 26,
+  "ratingNow": 6.31,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "cordoba",
+  "playerId": "iker-alvarez",
+  "number": 1,
+  "ratingNow": 6.34,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "cordoba",
+  "playerId": "guilherme-fernandes",
+  "number": 13,
+  "ratingNow": 6.32,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "cordoba",
+  "playerId": "dani-tasende",
+  "number": 3,
+  "ratingNow": 6.95,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "cordoba",
+  "playerId": "alex-martin",
+  "number": 4,
+  "ratingNow": 6.78,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "cordoba",
+  "playerId": "juan-gutierrez",
+  "number": 5,
+  "ratingNow": 7,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "cordoba",
+  "playerId": "franck-fomeyem",
+  "number": 12,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "cordoba",
+  "playerId": "ruben-alves",
+  "number": 16,
+  "ratingNow": 6.68,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "cordoba",
+  "playerId": "nelson-monte",
+  "number": 20,
+  "ratingNow": 6.35,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "cordoba",
+  "playerId": "carlos-albarran",
+  "number": 21,
+  "ratingNow": 5.77,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "cordoba",
+  "playerId": "egoitz-munoz",
+  "number": 27,
+  "ratingNow": 6.42,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "cordoba",
+  "playerId": "daniel-budesca",
+  "number": 30,
+  "ratingNow": 6.77,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "cordoba",
+  "playerId": "dani-garcia",
+  "number": 37,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "cordoba",
+  "playerId": "damian-caceres",
+  "number": 6,
+  "ratingNow": 6.44,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "cordoba",
+  "playerId": "theo-zidane",
+  "number": 7,
+  "ratingNow": 6.38,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "cordoba",
+  "playerId": "ismael-ruiz",
+  "number": 8,
+  "ratingNow": 7.47,
+  "goalsNow": 2,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "cordoba",
+  "playerId": "adnane-ghailan",
+  "number": 14,
+  "ratingNow": 6.74,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "cordoba",
+  "playerId": "adilson",
+  "number": 17,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "cordoba",
+  "playerId": "youssouf-diarra",
+  "number": 22,
+  "ratingNow": 6.43,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "cordoba",
+  "playerId": "eder-garcia",
+  "number": 28,
+  "ratingNow": 7.01,
+  "goalsNow": 3,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "cordoba",
+  "playerId": "jacobo-marti",
+  "number": null,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "cordoba",
+  "playerId": "percan",
+  "number": 9,
+  "ratingNow": 6.97,
+  "goalsNow": 3,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "cordoba",
+  "playerId": "kevin-medina",
+  "number": 10,
+  "ratingNow": 6.37,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "cordoba",
+  "playerId": "diego-bri",
+  "number": 11,
+  "ratingNow": 7.07,
+  "goalsNow": 1,
+  "assistsNow": 2,
+  "deep": true
+ },
+ {
+  "clubId": "cordoba",
+  "playerId": "victor-sanchez",
+  "number": 15,
+  "ratingNow": 6.55,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "cordoba",
+  "playerId": "enol-rodriguez",
+  "number": 18,
+  "ratingNow": 6.28,
+  "goalsNow": 1,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "cordoba",
+  "playerId": "ibai-sanz",
+  "number": 19,
+  "ratingNow": 5.88,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "cordoba",
+  "playerId": "cristian-carracedo",
+  "number": 23,
+  "ratingNow": 7.67,
+  "goalsNow": 1,
+  "assistsNow": 3,
+  "deep": true
+ },
+ {
+  "clubId": "cordoba",
+  "playerId": "salim-el-jebari",
+  "number": 24,
+  "ratingNow": 6.18,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "celta-fortuna",
+  "playerId": "coke-carrillo",
+  "number": 1,
+  "ratingNow": 7.01,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "celta-fortuna",
+  "playerId": "caio-barone",
+  "number": 13,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "celta-fortuna",
+  "playerId": "marcos-gonzalez",
+  "number": 25,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "celta-fortuna",
+  "playerId": "kike-ribes",
+  "number": 3,
+  "ratingNow": 6.95,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "celta-fortuna",
+  "playerId": "seyni-ndiaye",
+  "number": 4,
+  "ratingNow": 6.73,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "celta-fortuna",
+  "playerId": "pablo-meixus",
+  "number": 6,
+  "ratingNow": 6.05,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "celta-fortuna",
+  "playerId": "jan-oliveras",
+  "number": 14,
+  "ratingNow": 6.54,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "celta-fortuna",
+  "playerId": "anxo-rodriguez",
+  "number": 20,
+  "ratingNow": 6.42,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "celta-fortuna",
+  "playerId": "alexis-olmedo",
+  "number": 21,
+  "ratingNow": 5.72,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "celta-fortuna",
+  "playerId": "anthony-khayat",
+  "number": 32,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "celta-fortuna",
+  "playerId": "david-sueiro",
+  "number": 33,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "celta-fortuna",
+  "playerId": "pablo-gavian",
+  "number": 2,
+  "ratingNow": 6.87,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "celta-fortuna",
+  "playerId": "hugo-burcio",
+  "number": 5,
+  "ratingNow": 6.84,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "celta-fortuna",
+  "playerId": "adria-capdevila",
+  "number": 16,
+  "ratingNow": 6.99,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "celta-fortuna",
+  "playerId": "hugo-cuenca",
+  "number": 17,
+  "ratingNow": 6.72,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "celta-fortuna",
+  "playerId": "joel-lopez",
+  "number": 18,
+  "ratingNow": 6.78,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "celta-fortuna",
+  "playerId": "stefan-bajcetic",
+  "number": 22,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "celta-fortuna",
+  "playerId": "germain-milla",
+  "number": 23,
+  "ratingNow": 6.68,
+  "goalsNow": 0,
+  "assistsNow": 2,
+  "deep": true
+ },
+ {
+  "clubId": "celta-fortuna",
+  "playerId": "noah-rodriguez",
+  "number": 27,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "celta-fortuna",
+  "playerId": "mateo-sobral",
+  "number": 29,
+  "ratingNow": 6.57,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "celta-fortuna",
+  "playerId": "hugo-lopez",
+  "number": 32,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "celta-fortuna",
+  "playerId": "bernard-somuah",
+  "number": 7,
+  "ratingNow": 6.56,
+  "goalsNow": 2,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "celta-fortuna",
+  "playerId": "andres-antanon",
+  "number": 8,
+  "ratingNow": 7.2,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "celta-fortuna",
+  "playerId": "alvaro-marin",
+  "number": 9,
+  "ratingNow": 6.92,
+  "goalsNow": 5,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "celta-fortuna",
+  "playerId": "oscar-marcos",
+  "number": 10,
+  "ratingNow": 7.05,
+  "goalsNow": 2,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "celta-fortuna",
+  "playerId": "angel-arcos",
+  "number": 11,
+  "ratingNow": 6.84,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "celta-fortuna",
+  "playerId": "aldrine-kibet",
+  "number": 15,
+  "ratingNow": 7.25,
+  "goalsNow": 2,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "celta-fortuna",
+  "playerId": "angel-davila",
+  "number": 19,
+  "ratingNow": 5.83,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "celta-fortuna",
+  "playerId": "jorge-perez-lafuente",
+  "number": 26,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "celta-fortuna",
+  "playerId": "vladimir-silva",
+  "number": 28,
+  "ratingNow": 6.53,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "eldense",
+  "playerId": "ramon-vila",
+  "number": 1,
+  "ratingNow": 6.92,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "eldense",
+  "playerId": "juanpa-palomares",
+  "number": 13,
+  "ratingNow": 8.02,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "eldense",
+  "playerId": "david-bernabeu",
+  "number": 36,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "eldense",
+  "playerId": "iker-recio",
+  "number": 2,
+  "ratingNow": 6.24,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "eldense",
+  "playerId": "juan-larios",
+  "number": 3,
+  "ratingNow": 7.11,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "eldense",
+  "playerId": "floris-smand",
+  "number": 4,
+  "ratingNow": 6.83,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "eldense",
+  "playerId": "alex-serra",
+  "number": 5,
+  "ratingNow": 7.18,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "eldense",
+  "playerId": "jesus-clemente",
+  "number": 17,
+  "ratingNow": 6.75,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "eldense",
+  "playerId": "alejandro-ibarrondo",
+  "number": 19,
+  "ratingNow": 6.69,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "eldense",
+  "playerId": "david-ruiz",
+  "number": 21,
+  "ratingNow": 6.69,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "eldense",
+  "playerId": "julien-yanda",
+  "number": 22,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "eldense",
+  "playerId": "iker-carbonell",
+  "number": 26,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "eldense",
+  "playerId": "antonio-david",
+  "number": 31,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "eldense",
+  "playerId": "alejandro-iniesta",
+  "number": 33,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "eldense",
+  "playerId": "javier-olaizola",
+  "number": 34,
+  "ratingNow": 6.1,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "eldense",
+  "playerId": "borja-calvo",
+  "number": 6,
+  "ratingNow": 6.26,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "eldense",
+  "playerId": "marcos-bustillo",
+  "number": 8,
+  "ratingNow": 6.55,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "eldense",
+  "playerId": "roberto-lopez",
+  "number": 12,
+  "ratingNow": 6.51,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "eldense",
+  "playerId": "justin-smith",
+  "number": 14,
+  "ratingNow": 7.06,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "eldense",
+  "playerId": "carlos-guirao",
+  "number": 15,
+  "ratingNow": 6.91,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "eldense",
+  "playerId": "guille-macho",
+  "number": 18,
+  "ratingNow": 6.72,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "eldense",
+  "playerId": "javi-martinez",
+  "number": 24,
+  "ratingNow": 6.57,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "eldense",
+  "playerId": "cristian-amarillo",
+  "number": 27,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "eldense",
+  "playerId": "david-rodriguez-2144602",
+  "number": 30,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "eldense",
+  "playerId": "jorge-rastrojo",
+  "number": 7,
+  "ratingNow": 6.94,
+  "goalsNow": 2,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "eldense",
+  "playerId": "mariano-carmona",
+  "number": 9,
+  "ratingNow": 6.37,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "eldense",
+  "playerId": "fidel-chaves",
+  "number": 10,
+  "ratingNow": 6.91,
+  "goalsNow": 2,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "eldense",
+  "playerId": "manu-nieto",
+  "number": 11,
+  "ratingNow": 6.41,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "eldense",
+  "playerId": "pau-cabanes",
+  "number": 16,
+  "ratingNow": 6.93,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "eldense",
+  "playerId": "waldo-rubio",
+  "number": 20,
+  "ratingNow": 6.68,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "eldense",
+  "playerId": "jordi-martin",
+  "number": 23,
+  "ratingNow": 6.57,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "eldense",
+  "playerId": "dinis-rodrigues",
+  "number": 29,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "eldense",
+  "playerId": "aingeru-olabarrieta",
+  "number": 33,
+  "ratingNow": 6.74,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "las-palmas",
+  "playerId": "jose-antonio-caro",
+  "number": 13,
+  "ratingNow": 6.64,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "las-palmas",
+  "playerId": "adri-suarez",
+  "number": 35,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "las-palmas",
+  "playerId": "jorge-valverde",
+  "number": 41,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "las-palmas",
+  "playerId": "eduard-mohedano",
+  "number": 43,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "las-palmas",
+  "playerId": "marvin-park",
+  "number": 2,
+  "ratingNow": 6.18,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "las-palmas",
+  "playerId": "nicholas-opoku",
+  "number": 3,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "las-palmas",
+  "playerId": "alex-suarez",
+  "number": 4,
+  "ratingNow": 6.22,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "las-palmas",
+  "playerId": "enrique-clemente",
+  "number": 5,
+  "ratingNow": 6.52,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "las-palmas",
+  "playerId": "juanma-herzog",
+  "number": 15,
+  "ratingNow": 6.58,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "las-palmas",
+  "playerId": "viti",
+  "number": 17,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "las-palmas",
+  "playerId": "giovanni-bonfanti",
+  "number": 21,
+  "ratingNow": 6.69,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "las-palmas",
+  "playerId": "andres-rodriguez",
+  "number": 23,
+  "ratingNow": 6.05,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "las-palmas",
+  "playerId": "valentin-pezzolesi",
+  "number": 25,
+  "ratingNow": 7.15,
+  "goalsNow": 2,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "las-palmas",
+  "playerId": "aidan-perez",
+  "number": 40,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "las-palmas",
+  "playerId": "rachid-saiah",
+  "number": 42,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "las-palmas",
+  "playerId": "adrian-vazquez",
+  "number": 44,
+  "ratingNow": 5.87,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "las-palmas",
+  "playerId": "edward-cedeno",
+  "number": null,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "las-palmas",
+  "playerId": "inaki-gonzalez",
+  "number": 6,
+  "ratingNow": 6.7,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "las-palmas",
+  "playerId": "sergio-ruiz",
+  "number": 8,
+  "ratingNow": 6.53,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "las-palmas",
+  "playerId": "jeremia-recoba",
+  "number": 9,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "las-palmas",
+  "playerId": "taisei-miyashiro",
+  "number": 11,
+  "ratingNow": 7.04,
+  "goalsNow": 2,
+  "assistsNow": 2,
+  "deep": true
+ },
+ {
+  "clubId": "las-palmas",
+  "playerId": "enzo-loiodice",
+  "number": 12,
+  "ratingNow": 6.65,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "las-palmas",
+  "playerId": "manu-fuster",
+  "number": 14,
+  "ratingNow": 7,
+  "goalsNow": 1,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "las-palmas",
+  "playerId": "mateo-acimovic",
+  "number": 16,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "las-palmas",
+  "playerId": "kirian-rodriguez",
+  "number": 20,
+  "ratingNow": 6.6,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "las-palmas",
+  "playerId": "ale-garcia",
+  "number": 22,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "las-palmas",
+  "playerId": "aimar-dominguez",
+  "number": 28,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "las-palmas",
+  "playerId": "jefte-betancor",
+  "number": 7,
+  "ratingNow": 6.52,
+  "goalsNow": 1,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "las-palmas",
+  "playerId": "jese",
+  "number": 10,
+  "ratingNow": 6.97,
+  "goalsNow": 2,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "las-palmas",
+  "playerId": "sandro-ramirez",
+  "number": 19,
+  "ratingNow": 6.49,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "las-palmas",
+  "playerId": "ivan-jaime",
+  "number": 24,
+  "ratingNow": 7.3,
+  "goalsNow": 2,
+  "assistsNow": 2,
+  "deep": true
+ },
+ {
+  "clubId": "las-palmas",
+  "playerId": "aboubacar-bassinga",
+  "number": 26,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "las-palmas",
+  "playerId": "adam-arvelo",
+  "number": 29,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "las-palmas",
+  "playerId": "elias-romero",
+  "number": 29,
+  "ratingNow": 6.56,
+  "goalsNow": 1,
+  "assistsNow": 2,
+  "deep": true
+ },
+ {
+  "clubId": "las-palmas",
+  "playerId": "ivan-medina",
+  "number": 30,
+  "ratingNow": 6.31,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "las-palmas",
+  "playerId": "rafa-cruz",
+  "number": 32,
+  "ratingNow": 6.3,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "las-palmas",
+  "playerId": "jorge-cruz",
+  "number": 33,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "leganes",
+  "playerId": "raul-fernandez",
+  "number": 1,
+  "ratingNow": 6.07,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "leganes",
+  "playerId": "luca-zidane",
+  "number": 13,
+  "ratingNow": 6.86,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "leganes",
+  "playerId": "ale-gorrin",
+  "number": 38,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "leganes",
+  "playerId": "marvel",
+  "number": 2,
+  "ratingNow": 6.86,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "leganes",
+  "playerId": "francisco-montero",
+  "number": 3,
+  "ratingNow": 6.47,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "leganes",
+  "playerId": "ruben-pulido",
+  "number": 4,
+  "ratingNow": 6.36,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "leganes",
+  "playerId": "ignasi-miquel",
+  "number": 5,
+  "ratingNow": 6.73,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "leganes",
+  "playerId": "lalo-aguilar",
+  "number": 6,
+  "ratingNow": 6.64,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "leganes",
+  "playerId": "ruben-pena",
+  "number": 7,
+  "ratingNow": 6.64,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "leganes",
+  "playerId": "naim-garcia",
+  "number": 11,
+  "ratingNow": 6.76,
+  "goalsNow": 2,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "leganes",
+  "playerId": "enric-franquesa",
+  "number": 15,
+  "ratingNow": 6.3,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "leganes",
+  "playerId": "alvaro-tejero",
+  "number": 23,
+  "ratingNow": 6.58,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "leganes",
+  "playerId": "alex-fita",
+  "number": 28,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "leganes",
+  "playerId": "marcos-leiva",
+  "number": 36,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "leganes",
+  "playerId": "sulaiman-mulumba",
+  "number": 36,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "leganes",
+  "playerId": "yassine-kechta",
+  "number": 8,
+  "ratingNow": 6.49,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "leganes",
+  "playerId": "zico-buurmeester",
+  "number": 10,
+  "ratingNow": 6.68,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "leganes",
+  "playerId": "dani-rodriguez",
+  "number": 14,
+  "ratingNow": 6.15,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "leganes",
+  "playerId": "ismael-gharbi",
+  "number": 17,
+  "ratingNow": 7.17,
+  "goalsNow": 2,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "leganes",
+  "playerId": "miguel-atienza",
+  "number": 20,
+  "ratingNow": 6.69,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "leganes",
+  "playerId": "alex-sancris",
+  "number": 22,
+  "ratingNow": 6.67,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "leganes",
+  "playerId": "amadou-diawara",
+  "number": 24,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "leganes",
+  "playerId": "jorge-herrero",
+  "number": 33,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "leganes",
+  "playerId": "alex-millan",
+  "number": 9,
+  "ratingNow": 6.21,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "leganes",
+  "playerId": "unax-del-cura",
+  "number": 16,
+  "ratingNow": 6.47,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "leganes",
+  "playerId": "andres-campos",
+  "number": 18,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "leganes",
+  "playerId": "patrick-soko",
+  "number": 19,
+  "ratingNow": 6.38,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "leganes",
+  "playerId": "alvaro-morata",
+  "number": 21,
+  "ratingNow": 5.91,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "leganes",
+  "playerId": "suleiman-el-haddadi",
+  "number": 32,
+  "ratingNow": 6.25,
+  "goalsNow": 0,
+  "assistsNow": 2,
+  "deep": true
+ },
+ {
+  "clubId": "fc-andorra",
+  "playerId": "nico-ratti",
+  "number": 1,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "fc-andorra",
+  "playerId": "pau-lopez",
+  "number": 13,
+  "ratingNow": 6.12,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "fc-andorra",
+  "playerId": "jesus-owono",
+  "number": 25,
+  "ratingNow": 7.52,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "fc-andorra",
+  "playerId": "jan-lagunas",
+  "number": 31,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "fc-andorra",
+  "playerId": "javier-vicario",
+  "number": null,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "fc-andorra",
+  "playerId": "juan-sebastian",
+  "number": 2,
+  "ratingNow": 6.07,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "fc-andorra",
+  "playerId": "lautaro-spatz",
+  "number": 3,
+  "ratingNow": 6.87,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "fc-andorra",
+  "playerId": "gael-alonso",
+  "number": 4,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "fc-andorra",
+  "playerId": "bomba",
+  "number": 5,
+  "ratingNow": 6.67,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "fc-andorra",
+  "playerId": "alex-calvo",
+  "number": 7,
+  "ratingNow": 6.51,
+  "goalsNow": 1,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "fc-andorra",
+  "playerId": "thomas-carrique",
+  "number": 17,
+  "ratingNow": 6.72,
+  "goalsNow": 1,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "fc-andorra",
+  "playerId": "andoni-lopez",
+  "number": 18,
+  "ratingNow": 6.69,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "fc-andorra",
+  "playerId": "marti-vila",
+  "number": 20,
+  "ratingNow": 6.64,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "fc-andorra",
+  "playerId": "diego-alende",
+  "number": 23,
+  "ratingNow": 6.82,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "fc-andorra",
+  "playerId": "hugo-solozabal",
+  "number": 6,
+  "ratingNow": 6.53,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "fc-andorra",
+  "playerId": "efe-akman",
+  "number": 8,
+  "ratingNow": 6.73,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "fc-andorra",
+  "playerId": "julian-rijkhoff",
+  "number": 9,
+  "ratingNow": 6.27,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "fc-andorra",
+  "playerId": "marc-domenech",
+  "number": 10,
+  "ratingNow": 7.18,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "fc-andorra",
+  "playerId": "sergio-molina",
+  "number": 14,
+  "ratingNow": 6.8,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "fc-andorra",
+  "playerId": "randy-schneider",
+  "number": 16,
+  "ratingNow": 6.65,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "fc-andorra",
+  "playerId": "diego-diaz",
+  "number": 22,
+  "ratingNow": 6.45,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "fc-andorra",
+  "playerId": "theo-le-normand",
+  "number": 24,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "fc-andorra",
+  "playerId": "tiago-olmedo",
+  "number": 28,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "fc-andorra",
+  "playerId": "saba-samushia",
+  "number": null,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "fc-andorra",
+  "playerId": "lautaro-de-leon",
+  "number": 11,
+  "ratingNow": 6.47,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "fc-andorra",
+  "playerId": "enes-sali",
+  "number": 12,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "fc-andorra",
+  "playerId": "jordi-cano",
+  "number": 15,
+  "ratingNow": 7.28,
+  "goalsNow": 4,
+  "assistsNow": 2,
+  "deep": true
+ },
+ {
+  "clubId": "fc-andorra",
+  "playerId": "nacho-quintana",
+  "number": 19,
+  "ratingNow": 6.78,
+  "goalsNow": 2,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "fc-andorra",
+  "playerId": "moro-sidibe",
+  "number": 21,
+  "ratingNow": 7.04,
+  "goalsNow": 1,
+  "assistsNow": 2,
+  "deep": true
+ },
+ {
+  "clubId": "fc-andorra",
+  "playerId": "stefan-golubovic",
+  "number": 27,
+  "ratingNow": 6.28,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "fc-andorra",
+  "playerId": "hugo-lopez-1807857",
+  "number": 29,
+  "ratingNow": 6.77,
+  "goalsNow": 2,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-sociedad-b",
+  "playerId": "aitor-fraga",
+  "number": 1,
+  "ratingNow": 6.68,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-sociedad-b",
+  "playerId": "theo-folgado",
+  "number": 13,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-sociedad-b",
+  "playerId": "lander-olasagasti",
+  "number": 32,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-sociedad-b",
+  "playerId": "daniel-galilea",
+  "number": 35,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-sociedad-b",
+  "playerId": "jon-garro",
+  "number": 2,
+  "ratingNow": 6.6,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-sociedad-b",
+  "playerId": "jon-balda",
+  "number": 3,
+  "ratingNow": 6.99,
+  "goalsNow": 1,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "real-sociedad-b",
+  "playerId": "kazunari-kita",
+  "number": 5,
+  "ratingNow": 6.91,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-sociedad-b",
+  "playerId": "iker-calderon",
+  "number": 15,
+  "ratingNow": 6.64,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-sociedad-b",
+  "playerId": "inaki-ruperez",
+  "number": 22,
+  "ratingNow": 6.79,
+  "goalsNow": 1,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "real-sociedad-b",
+  "playerId": "unax-agote",
+  "number": 23,
+  "ratingNow": 6.8,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-sociedad-b",
+  "playerId": "unax-ayo",
+  "number": 24,
+  "ratingNow": 6.33,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-sociedad-b",
+  "playerId": "benat-isasa",
+  "number": 26,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-sociedad-b",
+  "playerId": "eneko-astigarraga",
+  "number": 27,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-sociedad-b",
+  "playerId": "iker-ropero",
+  "number": 29,
+  "ratingNow": 6.26,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-sociedad-b",
+  "playerId": "peru-larranaga",
+  "number": 30,
+  "ratingNow": 6.25,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-sociedad-b",
+  "playerId": "alex-lebarbier",
+  "number": 6,
+  "ratingNow": 6.5,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-sociedad-b",
+  "playerId": "ibai-aguirre",
+  "number": 8,
+  "ratingNow": 6.37,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-sociedad-b",
+  "playerId": "joan-oleaga",
+  "number": 12,
+  "ratingNow": 6.43,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-sociedad-b",
+  "playerId": "tomy-carbonell",
+  "number": 14,
+  "ratingNow": 6.52,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-sociedad-b",
+  "playerId": "gorka-gorosabel",
+  "number": 16,
+  "ratingNow": 6.96,
+  "goalsNow": 3,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "real-sociedad-b",
+  "playerId": "lander-astiazaran",
+  "number": 17,
+  "ratingNow": 7.08,
+  "goalsNow": 1,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "real-sociedad-b",
+  "playerId": "jon-eceizabarrena",
+  "number": 21,
+  "ratingNow": 6.54,
+  "goalsNow": 0,
+  "assistsNow": 2,
+  "deep": true
+ },
+ {
+  "clubId": "real-sociedad-b",
+  "playerId": "oihan-telletxea",
+  "number": 31,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-sociedad-b",
+  "playerId": "dani-diaz",
+  "number": 7,
+  "ratingNow": 6.9,
+  "goalsNow": 1,
+  "assistsNow": 3,
+  "deep": true
+ },
+ {
+  "clubId": "real-sociedad-b",
+  "playerId": "ekain-orobengoa",
+  "number": 9,
+  "ratingNow": 6.05,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-sociedad-b",
+  "playerId": "gorka-carrera",
+  "number": 18,
+  "ratingNow": 6.66,
+  "goalsNow": 2,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-sociedad-b",
+  "playerId": "javier-soroeta",
+  "number": 19,
+  "ratingNow": 6.37,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-sociedad-b",
+  "playerId": "sydney-osazuwa",
+  "number": 20,
+  "ratingNow": 5.09,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-sociedad-b",
+  "playerId": "andrews-adjabeng",
+  "number": 34,
+  "ratingNow": 6.21,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-sociedad-b",
+  "playerId": "hodei-garitaonaindia-uriarte",
+  "number": 36,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "real-sociedad-b",
+  "playerId": "xuban-fernandez",
+  "number": 38,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "cadiz",
+  "playerId": "david-gil",
+  "number": 1,
+  "ratingNow": 6.49,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "cadiz",
+  "playerId": "jokin-ezkieta",
+  "number": 13,
+  "ratingNow": 6.89,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "cadiz",
+  "playerId": "ruben-dominguez",
+  "number": 26,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "cadiz",
+  "playerId": "benat-de-jesus",
+  "number": 2,
+  "ratingNow": 6.24,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "cadiz",
+  "playerId": "sergio-arribas-1701546",
+  "number": 3,
+  "ratingNow": 7.22,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "cadiz",
+  "playerId": "javi-castro",
+  "number": 4,
+  "ratingNow": 6.93,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "cadiz",
+  "playerId": "manu-fernandez",
+  "number": 6,
+  "ratingNow": 6.63,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "cadiz",
+  "playerId": "bojan-kovacevic",
+  "number": 14,
+  "ratingNow": 6.55,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "cadiz",
+  "playerId": "kenan-toibibou",
+  "number": 15,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "cadiz",
+  "playerId": "cristian-gutierrez",
+  "number": 22,
+  "ratingNow": 6.37,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "cadiz",
+  "playerId": "juan-diaz",
+  "number": 27,
+  "ratingNow": 7.24,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "cadiz",
+  "playerId": "cesar-diaz",
+  "number": 30,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "cadiz",
+  "playerId": "noah-obioma",
+  "number": 31,
+  "ratingNow": 6.35,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "cadiz",
+  "playerId": "roberto-rosado",
+  "number": 32,
+  "ratingNow": 5.81,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "cadiz",
+  "playerId": "manuel-rivera",
+  "number": 33,
+  "ratingNow": 6.37,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "cadiz",
+  "playerId": "david-garcia",
+  "number": null,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "cadiz",
+  "playerId": "marc-olivier-doue",
+  "number": 5,
+  "ratingNow": 6.81,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "cadiz",
+  "playerId": "giorgi-gocholeishvili",
+  "number": 12,
+  "ratingNow": 6.25,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "cadiz",
+  "playerId": "aimen-moueffek",
+  "number": 17,
+  "ratingNow": 7.57,
+  "goalsNow": 1,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "cadiz",
+  "playerId": "jandro-orellana",
+  "number": 18,
+  "ratingNow": 6.69,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "cadiz",
+  "playerId": "damian-rodriguez",
+  "number": 23,
+  "ratingNow": 6.93,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "cadiz",
+  "playerId": "ibon-sanchez",
+  "number": 24,
+  "ratingNow": 6.75,
+  "goalsNow": 1,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "cadiz",
+  "playerId": "dilan-zarate",
+  "number": 28,
+  "ratingNow": 6.81,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "cadiz",
+  "playerId": "francisco-mwepu",
+  "number": null,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "cadiz",
+  "playerId": "efe-aghama",
+  "number": 8,
+  "ratingNow": 6.56,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "cadiz",
+  "playerId": "alvaro-pascual",
+  "number": 9,
+  "ratingNow": 6.32,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "cadiz",
+  "playerId": "javi-ontiveros",
+  "number": 10,
+  "ratingNow": 6.42,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "cadiz",
+  "playerId": "suso",
+  "number": 10,
+  "ratingNow": 6.11,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "cadiz",
+  "playerId": "iuri-tabatadze",
+  "number": 12,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "cadiz",
+  "playerId": "antonito-cordero",
+  "number": 16,
+  "ratingNow": 6.9,
+  "goalsNow": 3,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "cadiz",
+  "playerId": "urko-izeta",
+  "number": 19,
+  "ratingNow": 6.6,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "cadiz",
+  "playerId": "borja-vazquez",
+  "number": 20,
+  "ratingNow": 6.52,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "cadiz",
+  "playerId": "vladyslav-kopotun",
+  "number": 21,
+  "ratingNow": 6.77,
+  "goalsNow": 2,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "cadiz",
+  "playerId": "gonzalo-petit",
+  "number": 25,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "ad-ceuta-fc",
+  "playerId": "ayoub-akabou",
+  "number": null,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "ad-ceuta-fc",
+  "playerId": "pedro-lopez",
+  "number": 1,
+  "ratingNow": 6,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "ad-ceuta-fc",
+  "playerId": "guillermo-vallejo",
+  "number": 13,
+  "ratingNow": 5.99,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "ad-ceuta-fc",
+  "playerId": "toni-abad",
+  "number": 2,
+  "ratingNow": 6.66,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "ad-ceuta-fc",
+  "playerId": "jose-matos",
+  "number": 3,
+  "ratingNow": 6.19,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "ad-ceuta-fc",
+  "playerId": "albert-caparros",
+  "number": 4,
+  "ratingNow": 6.64,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "ad-ceuta-fc",
+  "playerId": "adrian-lapena",
+  "number": 5,
+  "ratingNow": 5.54,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "ad-ceuta-fc",
+  "playerId": "carlos-hernandez",
+  "number": 6,
+  "ratingNow": 6.7,
+  "goalsNow": 4,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "ad-ceuta-fc",
+  "playerId": "carlos-redruello",
+  "number": 16,
+  "ratingNow": 6.42,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "ad-ceuta-fc",
+  "playerId": "alex-petxa",
+  "number": 18,
+  "ratingNow": 6.77,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "ad-ceuta-fc",
+  "playerId": "anuar",
+  "number": 23,
+  "ratingNow": 6.33,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "ad-ceuta-fc",
+  "playerId": "dani-mas",
+  "number": 34,
+  "ratingNow": 5.2,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "ad-ceuta-fc",
+  "playerId": "josemi-gomez",
+  "number": 36,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "ad-ceuta-fc",
+  "playerId": "jamelli",
+  "number": null,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "ad-ceuta-fc",
+  "playerId": "kuki-zalazar",
+  "number": 8,
+  "ratingNow": 6.72,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "ad-ceuta-fc",
+  "playerId": "marino-illescas",
+  "number": 10,
+  "ratingNow": 6.91,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "ad-ceuta-fc",
+  "playerId": "yann-bodiger",
+  "number": 14,
+  "ratingNow": 6.31,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "ad-ceuta-fc",
+  "playerId": "joaquin",
+  "number": 15,
+  "ratingNow": 6.71,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "ad-ceuta-fc",
+  "playerId": "mawuli-mensah",
+  "number": 17,
+  "ratingNow": 6.52,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "ad-ceuta-fc",
+  "playerId": "alejandro-melendez",
+  "number": 20,
+  "ratingNow": 6.37,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "ad-ceuta-fc",
+  "playerId": "jose-campana",
+  "number": 20,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "ad-ceuta-fc",
+  "playerId": "victor-corral",
+  "number": 24,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "ad-ceuta-fc",
+  "playerId": "abraham-bueno",
+  "number": 28,
+  "ratingNow": 5.84,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "ad-ceuta-fc",
+  "playerId": "adrian-romero",
+  "number": 31,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "ad-ceuta-fc",
+  "playerId": "chidiebere-okoro",
+  "number": 32,
+  "ratingNow": 6.74,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "ad-ceuta-fc",
+  "playerId": "josema",
+  "number": 36,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "ad-ceuta-fc",
+  "playerId": "manu-vallejo",
+  "number": null,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "ad-ceuta-fc",
+  "playerId": "alex-camacho",
+  "number": 7,
+  "ratingNow": 6.92,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "ad-ceuta-fc",
+  "playerId": "jordi-escobar",
+  "number": 9,
+  "ratingNow": 6.74,
+  "goalsNow": 4,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "ad-ceuta-fc",
+  "playerId": "cedric-teguia",
+  "number": 11,
+  "ratingNow": 6.6,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "ad-ceuta-fc",
+  "playerId": "adri-rueda",
+  "number": 16,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "ad-ceuta-fc",
+  "playerId": "edgar-sevikyan",
+  "number": 19,
+  "ratingNow": 6.9,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "ad-ceuta-fc",
+  "playerId": "kenneth-obinna-mamah",
+  "number": 21,
+  "ratingNow": 6.14,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "ad-ceuta-fc",
+  "playerId": "kialy-abdoul-kone",
+  "number": 22,
+  "ratingNow": 7.34,
+  "goalsNow": 0,
+  "assistsNow": 3,
+  "deep": true
+ },
+ {
+  "clubId": "ad-ceuta-fc",
+  "playerId": "salvi-sanchez",
+  "number": 25,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "ad-ceuta-fc",
+  "playerId": "arick-betancourt",
+  "number": 26,
+  "ratingNow": 6.25,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "ad-ceuta-fc",
+  "playerId": "umaru-konare",
+  "number": 27,
+  "ratingNow": 5.75,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "ad-ceuta-fc",
+  "playerId": "omar-sadik",
+  "number": 29,
+  "ratingNow": 6.19,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "albacete",
+  "playerId": "mario-ramos",
+  "number": null,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "albacete",
+  "playerId": "carlos-marin",
+  "number": 1,
+  "ratingNow": 6.41,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "albacete",
+  "playerId": "diego-marino",
+  "number": 13,
+  "ratingNow": 5.87,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "albacete",
+  "playerId": "lorenzo-aguado",
+  "number": 2,
+  "ratingNow": 6.66,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "albacete",
+  "playerId": "javi-moreno",
+  "number": 5,
+  "ratingNow": 6.83,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "albacete",
+  "playerId": "fran-gamez",
+  "number": 15,
+  "ratingNow": 6.83,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "albacete",
+  "playerId": "carlos-neva",
+  "number": 21,
+  "ratingNow": 6.48,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "albacete",
+  "playerId": "lluis-lopez",
+  "number": 22,
+  "ratingNow": 6.22,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "albacete",
+  "playerId": "pepe-sanchez",
+  "number": 23,
+  "ratingNow": 6.46,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "albacete",
+  "playerId": "jesus-vallejo",
+  "number": 24,
+  "ratingNow": 5.98,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "albacete",
+  "playerId": "daniel-bernabeu",
+  "number": 27,
+  "ratingNow": 6.38,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "albacete",
+  "playerId": "antonio-velilla",
+  "number": 28,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "albacete",
+  "playerId": "vicente-vidal",
+  "number": 34,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "albacete",
+  "playerId": "jota",
+  "number": 40,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "albacete",
+  "playerId": "alonso-chilleron",
+  "number": null,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "albacete",
+  "playerId": "hugo-busto",
+  "number": null,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "albacete",
+  "playerId": "antonio-pacheco",
+  "number": 6,
+  "ratingNow": 6.46,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "albacete",
+  "playerId": "javi-villar",
+  "number": 8,
+  "ratingNow": 5.85,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "albacete",
+  "playerId": "roberto-gonzalez",
+  "number": 10,
+  "ratingNow": 6.39,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "albacete",
+  "playerId": "victor-valverde",
+  "number": 11,
+  "ratingNow": 6.64,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "albacete",
+  "playerId": "victor-san-bartolome",
+  "number": 14,
+  "ratingNow": 6.79,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "albacete",
+  "playerId": "munir-el-haddadi",
+  "number": 16,
+  "ratingNow": 6.06,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "albacete",
+  "playerId": "sergio-ortuno",
+  "number": 18,
+  "ratingNow": 6.59,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "albacete",
+  "playerId": "capi",
+  "number": 26,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "albacete",
+  "playerId": "agustin-albarracin",
+  "number": 32,
+  "ratingNow": 6.26,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "albacete",
+  "playerId": "diego-rodriguez",
+  "number": 38,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "albacete",
+  "playerId": "antonio-david-1796527",
+  "number": 44,
+  "ratingNow": 6.09,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "albacete",
+  "playerId": "alberto-morientes",
+  "number": null,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "albacete",
+  "playerId": "fran-gomez",
+  "number": null,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "albacete",
+  "playerId": "agus-medina",
+  "number": 4,
+  "ratingNow": 6.21,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "albacete",
+  "playerId": "antonio-puertas",
+  "number": 7,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "albacete",
+  "playerId": "mario-soberon",
+  "number": 9,
+  "ratingNow": 6.54,
+  "goalsNow": 0,
+  "assistsNow": 1,
+  "deep": true
+ },
+ {
+  "clubId": "albacete",
+  "playerId": "higinio-marin",
+  "number": 12,
+  "ratingNow": 6.14,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "albacete",
+  "playerId": "jose-corpas",
+  "number": 17,
+  "ratingNow": 6.68,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "albacete",
+  "playerId": "alex-rubio",
+  "number": 19,
+  "ratingNow": 6.26,
+  "goalsNow": 1,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "albacete",
+  "playerId": "samuel-obeng",
+  "number": 20,
+  "ratingNow": 6.27,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "albacete",
+  "playerId": "tomas-ingles",
+  "number": 33,
+  "ratingNow": 6,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ },
+ {
+  "clubId": "albacete",
+  "playerId": "fabio-garcia",
+  "number": 39,
+  "ratingNow": null,
+  "goalsNow": 0,
+  "assistsNow": 0,
+  "deep": true
+ }
+]

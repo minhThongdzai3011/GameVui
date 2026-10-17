@@ -1,0 +1,15 @@
+{
+ "source": "fotmob.com",
+ "importedAt": "2026-10-17T08:16:09.182Z",
+ "season": 2026,
+ "seasonLabel": "2026/27",
+ "previous": "2025/26",
+ "currency": "EUR (giá trị chuyển nhượng ước tính của FotMob)",
+ "leagues": [
+  "england-premier-league",
+  "england-championship",
+  "england-league-one",
+  "england-league-two",
+  "uefa-champions-league"
+ ]
+}

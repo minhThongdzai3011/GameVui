@@ -109,7 +109,7 @@
     const p = W.player(s, pid);
     if (!p || p.c === s.user || p.c === FREE) return { result: "rejected", reason: "Không thể mượn cầu thủ này." };
     if (p.loan) return { result: "rejected", reason: `${p.sn} đang được cho mượn rồi.` };
-    if (!T.window(s).open) return { result: "rejected", reason: "Kỳ chuyển nhượng đang đóng." };
+    if (!T.window(s).open || !T.window(s, W.countryOfClub(s, p.c)).open) return { result: "rejected", reason: "Kỳ chuyển nhượng đang đóng." };
     const t = L.terms(s, p);
     if (t.refuse) return { result: "rejected", reason: t.refuse };
     if (withBuy && !t.buy) return { result: "rejected", reason: `${name(s, p.c)} không đồng ý điều khoản mua đứt cho ${p.sn}.` };
@@ -162,8 +162,9 @@
   // các đội có chỗ cho p (không tính CLB chủ quản)
   function takers(s, p, rnd) {
     const out = [];
+    const country = W.countryOfClub(s, p.c);
     for (const id of Object.keys(s.clubs)) {
-      if (id === p.c || id === s.user) continue;
+      if (id === p.c || id === s.user || W.countryOfClub(s, id) !== country) continue;
       if (W.squad(s, id).length >= 32) continue;
       const role = L.roleAt(s, p, id);
       if (!role) continue;
@@ -176,9 +177,9 @@
   }
 
   // ---------- Mỗi ngày trong kỳ chuyển nhượng ----------
-  L.daily = function (s, rnd) {
+  L.daily = function (s, rnd, openIn = { vn: true, en: true }) {
     // đề nghị mượn cầu thủ người chơi đã đánh dấu cho mượn
-    for (const p of W.squad(s, s.user)) {
+    for (const p of openIn[W.countryOfClub(s, s.user)] ? W.squad(s, s.user) : []) {
       const d = s.p[p.id];
       if (!d.loanListed || d.loan || rnd() > 0.2) continue;
       if (s.tr.offers.filter((o) => o.pid === p.id && o.status === "open").length >= 3) continue;
@@ -190,9 +191,9 @@
       W.mail(s, "transfer", `${name(s, x.id)} muốn mượn ${p.sn}`, `${name(s, x.id)} đề nghị mượn ${p.n} đến hết mùa, trả ${Math.round(x.share * 100)}% lương. Vai trò dự kiến: ${L.ROLE_LABEL[x.role].toLowerCase()}. Trả lời trong Thị trường → Đề nghị trước ${FM.fmtDate(o.exp, false)}.`);
     }
     // đội máy cho nhau mượn cầu thủ trẻ ít được dùng
-    const win = s.windows.find(([a, b]) => s.date >= a && s.date <= b);
     for (const id of Object.keys(s.clubs)) {
-      if (id === s.user || rnd() > 0.012) continue;
+      if (id === s.user || !openIn[W.countryOfClub(s, id)] || rnd() > 0.012) continue;
+      const win = T.windowsOf(s, W.countryOfClub(s, id)).find(([a, b]) => s.date >= a && s.date <= b);
       const c = s.clubs[id];
       if (!c.loansOut || c.loansOut.w !== win[0]) c.loansOut = { w: win[0], n: 0 };
       if (c.loansOut.n >= 2) continue;

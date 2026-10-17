@@ -28,7 +28,7 @@
   C.start = function (s) {
     const rnd = FM.rng(FM.hash(`cup-${s.season}-${s.seed}`));
     const v1 = W.clubsIn(s, V1).sort((a, b) => W.strength(s, b) - W.strength(s, a));
-    s.cup = { season: s.season, round: 0, alive: Object.keys(s.clubs), byes: v1.slice(0, BYES), winner: null, runnerUp: null, superWinner: null, out: {} };
+    s.cup = { season: s.season, round: 0, alive: [...W.clubsIn(s, V1), ...W.clubsIn(s, FM.V2)], byes: v1.slice(0, BYES), winner: null, runnerUp: null, superWinner: null, out: {} };
     // Siêu Cúp
     const exists = (id) => id && s.clubs[id];
     let a = exists(s.prevChamp) ? s.prevChamp : null;
@@ -97,7 +97,7 @@
       s.clubs[cup.runnerUp].bal += PRIZE.runnerUp;
       const pens = fin.pens ? ` (luân lưu ${fin.pens.join("–")})` : "";
       if (cup.winner === s.user) s.clubs[s.user].conf = Math.min(100, s.clubs[s.user].conf + 10);
-      W.mail(s, "cup", cup.winner === s.user ? "🏆 VÔ ĐỊCH CÚP QUỐC GIA!" : `${name(s, cup.winner)} vô địch Cúp Quốc gia`, `Chung kết: ${name(s, fin.h)} ${fin.hg}–${fin.ag} ${name(s, fin.a)}${pens}.${cup.winner === s.user ? ` Thưởng ${FM.fmtMoney(PRIZE.winner)}, ban lãnh đạo rất hài lòng!` : cup.runnerUp === s.user ? ` Á quân được thưởng ${FM.fmtMoney(PRIZE.runnerUp)}.` : ""}`);
+      if (W.countryOfClub(s, s.user) === "vn") W.mail(s, "cup", cup.winner === s.user ? "🏆 VÔ ĐỊCH CÚP QUỐC GIA!" : `${name(s, cup.winner)} vô địch Cúp Quốc gia`, `Chung kết: ${name(s, fin.h)} ${fin.hg}–${fin.ag} ${name(s, fin.a)}${pens}.${cup.winner === s.user ? ` Thưởng ${FM.fmtMoney(PRIZE.winner)}, ban lãnh đạo rất hài lòng!` : cup.runnerUp === s.user ? ` Á quân được thưởng ${FM.fmtMoney(PRIZE.runnerUp)}.` : ""}`);
       return;
     }
     cup.alive = cup.round === 0 ? [...winners, ...cup.byes] : winners;

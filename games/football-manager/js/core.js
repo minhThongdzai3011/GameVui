@@ -48,13 +48,23 @@
     const [, m, d] = iso.split("-");
     return `${+d}/${+m}`;
   };
-  // tiền: lương tính bằng triệu VND, giá trị / ngân sách bằng tỷ VND
-  FM.fmtMoney = (ty) => {
-    const v = Math.abs(ty);
-    const s = v >= 1 ? `${(Math.round(v * 10) / 10).toLocaleString("vi-VN")} tỷ` : `${Math.round(v * 1000).toLocaleString("vi-VN")} triệu`;
-    return (ty < 0 ? "−" : "") + s;
+  // ---------- Tiền ----------
+  // Đơn vị nội bộ giữ như bản V.League: giá trị / phí / số dư = tỷ VND, lương = triệu VND / tháng.
+  // Giao diện quy hết ra bảng Anh (một thế giới chung Anh – Việt Nam): 1 £ = 33.000 VND.
+  FM.VND_PER_GBP = 33000;
+  FM.tyToGbp = (ty) => (ty * 1e9) / FM.VND_PER_GBP;
+  FM.gbpToTy = (g) => (g * FM.VND_PER_GBP) / 1e9;
+  FM.trToGbpWeek = (tr) => (tr * 1e6 * 12) / 52 / FM.VND_PER_GBP;
+  FM.gbpWeekToTr = (g) => (g * 52 * FM.VND_PER_GBP) / 12 / 1e6;
+  const gbp = (g) => {
+    const v = Math.abs(g);
+    if (v >= 1e6) return `£${(v / 1e6).toLocaleString("en-GB", { maximumFractionDigits: v >= 1e8 ? 0 : v >= 1e7 ? 1 : 2 })}m`;
+    if (v >= 1e3) return `£${(v / 1e3).toLocaleString("en-GB", { maximumFractionDigits: v >= 1e5 ? 0 : 1 })}k`;
+    return `£${Math.round(v)}`;
   };
-  FM.fmtWage = (tr) => `${Math.round(tr).toLocaleString("vi-VN")} tr/th`;
+  FM.fmtMoney = (ty) => (ty < 0 ? "−" : "") + gbp(FM.tyToGbp(ty));
+  FM.fmtWage = (tr) => `${gbp(FM.trToGbpWeek(tr))}/tuần`;
+  FM.fmtGbp = gbp;
   FM.esc = (s) =>
     String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
 
@@ -178,5 +188,74 @@
     if (p.bd) return Math.floor((Date.parse(iso) - Date.parse(p.bd)) / 31557600000);
     return +iso.slice(0, 4) - p.by - (iso.slice(5) < "07-01" ? 1 : 0);
   };
-  FM.stars = (ca) => Math.max(0.5, Math.min(5, Math.round(((ca - 30) / 55) * 10) / 2)); // 0,5–5 sao
+  FM.stars = (ca) => Math.max(0.5, Math.min(5, Math.round(((ca - 35) / 52) * 10) / 2)); // 0,5–5 sao (thang chung: 87+ = 5 sao)
+
+  // ---------- Giải đấu & quốc gia ----------
+  // up / po / down / out: số đội lên thẳng, khoảng hạng đá play-off, xuống hạng, rời hệ thống giải.
+  // poFinal: "neutral" (Anh: một trận ở Wembley) | "twoLegs" (Tây Ban Nha); poTie: "pens" | "seed"
+  // (hoà tổng tỉ số thì đội xếp trên đi tiếp, như play-off LaLiga 2)
+  const RULES = {
+    "vietnam-v-league-1": { down: 1, vnPlayoff: 13 },
+    "vietnam-v-league-2": { up: 1, vnPlayoff: 2, out: 1 },
+    "england-premier-league": { down: 3 },
+    "england-championship": { up: 2, po: [3, 6], down: 3 },
+    "england-league-one": { up: 2, po: [3, 6], down: 4 },
+    "england-league-two": { up: 3, po: [4, 7], out: 2 },
+    "spain-la-liga": { down: 3 },
+    "spain-la-liga-2": { up: 2, po: [3, 6], poFinal: "twoLegs", poTie: "seed", out: 4 },
+  };
+  FM.LEAGUES = D.leagues.map((l) => ({ ...l, rules: RULES[l.id] || {} }));
+  FM.LEAGUE = Object.fromEntries(FM.LEAGUES.map((l) => [l.id, l]));
+  FM.COUNTRIES = D.countries;
+  FM.leaguesOf = (country) => FM.LEAGUES.filter((l) => l.country === country).sort((a, b) => a.tier - b.tier);
+  FM.countryOf = (leagueId) => (FM.LEAGUE[leagueId] ? FM.LEAGUE[leagueId].country : null);
+  FM.leagueName = (id) => (FM.LEAGUE[id] ? FM.LEAGUE[id].name : "");
+  FM.leagueShort = (id) => (FM.LEAGUE[id] ? FM.LEAGUE[id].short : "");
+  // giải trên / dưới cùng quốc gia
+  FM.leagueAbove = (id) => FM.LEAGUES.find((l) => l.country === FM.LEAGUE[id].country && l.tier === FM.LEAGUE[id].tier - 1) || null;
+  FM.leagueBelow = (id) => FM.LEAGUES.find((l) => l.country === FM.LEAGUE[id].country && l.tier === FM.LEAGUE[id].tier + 1) || null;
+  // hạng đấu ngay dưới hệ thống giải trong game (đội rớt khỏi giải thấp nhất), quốc tịch mặc định
+  FM.lowerName = (country) => (FM.COUNTRIES[country] && FM.COUNTRIES[country].lower) || "hạng dưới";
+  FM.natOf = (country) => (FM.COUNTRIES[country] && FM.COUNTRIES[country].nat) || "";
+
+  // ---------- Mức chi tiêu theo quốc gia (đơn vị nội bộ: tỷ VND / triệu VND mỗi tháng) ----------
+  // Việt Nam: công thức gốc của bản V.League, tính trên thang năng lực cũ (trước khi quy về thang
+  // chung: cũ = 34 + (mới − 34) / 0,75). Anh: theo giá trị thị trường thật (FotMob) và lương £/tuần.
+  const oldVn = (ca) => 34 + (ca - 34) / 0.75;
+  const EN_PAY = { 1: 2.2, 2: 1.8, 3: 1, 4: 0.8 };
+  const ES_PAY = { 1: 1.3, 2: 1.2 };
+  FM.ECON = {
+    vn: {
+      value: (ca) => 0.4 * Math.exp((oldVn(ca) - 45) * 0.109),
+      wage: (ca, tier) => 15 * Math.exp((oldVn(ca) - 45) * 0.0858) * (tier >= 2 ? 0.55 : 1),
+      foreignWage: 1.6, // ngoại binh đòi lương cao hơn
+      ticket: 60000, // VND / vé
+      startCash: 2.5, // số dư đầu game = ngân sách × hệ số
+      prize: (tier, i, n) => (tier === 1 ? 5 : 1.5) * Math.max(0.1, 1 - i / (n - 1)),
+      sponsorPerRep: 1 / 120,
+      cost: 1, // hệ số chi phí dịch vụ (tuyển trạch…)
+    },
+    en: {
+      value: (ca) => FM.gbpToTy(0.86 * 10 ** ((ca + 12.6) / 12.8)),
+      wage: (ca, tier) => FM.gbpWeekToTr(500 * Math.exp((ca - 50) * 0.13) * (EN_PAY[tier] || 1)),
+      foreignWage: 1,
+      ticket: [0, 1485000, 825000, 660000, 594000], // £45 / £25 / £20 / £18 theo hạng
+      startCash: 1,
+      prize: (tier, i, n) => [0, 900, 90, 20, 8][tier] * Math.max(0.15, 1 - i / (n - 1)),
+      sponsorPerRep: 30 / 120,
+      cost: 25,
+    },
+    // Tây Ban Nha: cùng thang giá trị với Anh, lương và tiền bản quyền thấp hơn
+    es: {
+      value: (ca) => FM.gbpToTy(0.86 * 10 ** ((ca + 12.6) / 12.8)),
+      wage: (ca, tier) => FM.gbpWeekToTr(500 * Math.exp((ca - 50) * 0.13) * (ES_PAY[tier] || 1.2)),
+      foreignWage: 1,
+      ticket: [0, 1155000, 495000], // £35 / £15
+      startCash: 1,
+      prize: (tier, i, n) => [0, 600, 45][tier] * Math.max(0.2, 1 - i / (n - 1)),
+      sponsorPerRep: 20 / 120,
+      cost: 20,
+    },
+  };
+  FM.econOf = (country) => FM.ECON[country] || FM.ECON.vn;
 })();
